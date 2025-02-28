@@ -14,20 +14,20 @@ export const createCourseController = async (
     console.log("Controller triggered");
 
     let extractedFilesText: string[] = [];
+    let title = "Untitled Course"; // Default title
+    let description = "No description provided"; // Default description
 
-    console.log("Processing uploaded files...");
+    console.log("Processing request data...");
 
     for await (const part of request.parts()) {
       if ("file" in part) {
         console.log("Processing file:", part.filename, part.mimetype);
 
-        // Use temporary directory
         const tempDir = os.tmpdir();
         const tempFilePath = path.join(tempDir, part.filename);
 
         console.log("Saving file temporarily:", tempFilePath);
 
-        // Write file to temp location
         const fileBuffer = await part.toBuffer();
         await fs.writeFile(tempFilePath, fileBuffer);
 
@@ -43,7 +43,6 @@ export const createCourseController = async (
           fileExtractedText = (await fs.readFile(tempFilePath, "utf8")).toString();
         }
 
-        // Delete temp file after processing
         console.log("Deleting temporary file:", tempFilePath);
         await fs.unlink(tempFilePath);
 
@@ -51,10 +50,14 @@ export const createCourseController = async (
           extractedFilesText.push(fileExtractedText);
         }
       } else {
-        // Handle text input fields (optional)
+        // Handle additional fields (title, description, etc.)
         const textPart = part as { fieldname: string; value: string };
         if (textPart.fieldname === "content" && textPart.value.trim()) {
           extractedFilesText.push(textPart.value);
+        } else if (textPart.fieldname === "title" && textPart.value.trim()) {
+          title = textPart.value;
+        } else if (textPart.fieldname === "description" && textPart.value.trim()) {
+          description = textPart.value;
         }
       }
     }
@@ -65,8 +68,10 @@ export const createCourseController = async (
     }
 
     console.log(`Processing ${extractedFilesText.length} extracted texts separately...`);
+    console.log(`📝 Title: ${title}`);
+    console.log(`📖 Description: ${description}`);
 
-    // Call OpenAI for each extracted file separately and log output counts
+    // Call OpenAI for each extracted file separately
     const courseContentArray = await Promise.all(
       extractedFilesText.map(async (text, index) => {
         console.log(`\n🔹 Processing File ${index + 1} (Length: ${text.length} chars)`);
@@ -93,7 +98,8 @@ export const createCourseController = async (
     return reply.status(201).send({
       message: "Course created successfully",
       course: {
-        name: "Lumi Course",
+        title,
+        description,
         flashcards: mergedFlashcards,
         fillInTheBlankQuestions: mergedFillInTheBlanks,
         multipleChoiceQuestions: mergedMultipleChoice,

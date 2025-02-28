@@ -42,9 +42,9 @@ Instructions:
 * For every flashcard you generate, you MUST also generate at least:
     * One fill-in-the-blank question related to that flashcard.
     * One multiple-choice question related to that flashcard.
-* If you generate 24 flashcards, you MUST generate at least:
-    * 25 fill-in-the-blank questions or more
-    * 25 multiple-choice questions or more
+* If you generate 24 flashcards, you MUST generate AT LEAST:
+    * 25 fill-in-the-blank questions
+    * 25 multiple-choice questions
 * Expand on concepts when necessary. If a statement lacks explanation (e.g., "The Nile River was the key to the success of Egyptian civilization."), provide additional information to clarify why or how it was important.
 * In some problems, use clear, self-made definitions that are simpler and easier to understand, avoiding overly technical or complex language.
 * Ensure completeness: If a topic is mentioned but not fully explained, expand it logically to provide full context.
@@ -61,10 +61,8 @@ Generate the following:
 * Multiple-choice questions
     * Write multiple-choice questions that test critical thinking and understanding, not just memorization.
     * Each question should have 4 options, with one correct answer and reasonable incorrect choices.
-
-Important:
-* Ensure the output JSON includes a top-level "name" field set to "Lumi".
-
+     
+    
 Content to Use:
 `;
 
