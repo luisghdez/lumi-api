@@ -9,6 +9,8 @@ interface CourseRequest {
   title: string;
   description: string;
   instructor: string;
+  // Optional field for direct text input
+  content?: string;
 }
 
 export const createCourseController = async (
@@ -16,30 +18,38 @@ export const createCourseController = async (
   reply: FastifyReply
 ) => {
   try {
-    // Extract uploaded file
-    const data = await request.file();
-    console.log("File data:", data);
-
-    if (!data) {
-      return reply.status(400).send({ error: "No file uploaded" });
-    }
-
-    // Define upload directory
-    const uploadDir = path.join(__dirname, "../../uploads");
-    await fs.mkdir(uploadDir, { recursive: true });
-
-    // Save the uploaded file
-    const filePath = path.join(uploadDir, data.filename);
-    const fileBuffer = await data.toBuffer();
-    await fs.writeFile(filePath, fileBuffer);
-
     let extractedText = "";
-    if (data.mimetype === "application/pdf") {
-      extractedText = await extractTextFromPDF(filePath);
-    } else if (data.mimetype.startsWith("image/")) {
-      extractedText = await extractTextFromImage(filePath);
+
+    // Check if text content is provided directly in the body
+    const { content } = request.body as CourseRequest;
+    if (content && content.trim().length > 0) {
+      extractedText = content;
     } else {
-      extractedText = (await fs.readFile(filePath, "utf8")).toString();
+      // Otherwise, try to extract file if available
+      const data = await request.file();
+      console.log("File data:", data);
+
+      if (!data) {
+        return reply
+          .status(400)
+          .send({ error: "No file uploaded or content provided" });
+      }
+
+      // Define upload directory and save the file
+      const uploadDir = path.join(__dirname, "../../uploads");
+      await fs.mkdir(uploadDir, { recursive: true });
+
+      const filePath = path.join(uploadDir, data.filename);
+      const fileBuffer = await data.toBuffer();
+      await fs.writeFile(filePath, fileBuffer);
+
+      if (data.mimetype === "application/pdf") {
+        extractedText = await extractTextFromPDF(filePath);
+      } else if (data.mimetype.startsWith("image/")) {
+        extractedText = await extractTextFromImage(filePath);
+      } else {
+        extractedText = (await fs.readFile(filePath, "utf8")).toString();
+      }
     }
 
     // Call the OpenAI service with the extracted text
@@ -48,17 +58,8 @@ export const createCourseController = async (
     return reply.status(201).send({
       message: "Course created successfully",
       course: {
-        // title: "title", // Replace with actual title if needed
-        // description: "description", // Replace with actual description if needed
-        // instructor: "instructor", // Replace with actual instructor if needed
         courseContent, // The structured content returned by GPT-4‑o
       },
-      // file: {
-      //   filename: data.filename,
-      //   mimetype: data.mimetype,
-      //   size: data.file.bytesRead,
-      //   path: filePath,
-      // },
     });
   } catch (error) {
     console.error("Error in course creation:", error);
