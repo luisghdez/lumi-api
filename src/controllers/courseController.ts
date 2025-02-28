@@ -5,6 +5,8 @@ import os from "os";
 import { extractTextFromPDF } from "../services/pdfService";
 import { extractTextFromImage } from "../services/visionService";
 import { openAiCourseContent } from "../services/openAICourseContentService";
+// import { saveCourseToFirebase } from "../services/courseService";
+import { generateLessons } from "../services/lessonService";
 
 export const createCourseController = async (
   request: FastifyRequest,
@@ -14,8 +16,8 @@ export const createCourseController = async (
     console.log("Controller triggered");
 
     let extractedFilesText: string[] = [];
-    let title = "Untitled Course"; // Default title
-    let description = "No description provided"; // Default description
+    let title = "Untitled Course"; 
+    let description = "No description provided"; 
 
     console.log("Processing request data...");
 
@@ -87,22 +89,33 @@ export const createCourseController = async (
     );
 
     // Merge results from all files
-    const mergedFlashcards = courseContentArray.flatMap(c => c?.flashcards);
-    const mergedFillInTheBlanks = courseContentArray.flatMap(c => c?.fillInTheBlankQuestions);
-    const mergedMultipleChoice = courseContentArray.flatMap(c => c?.multipleChoiceQuestions);
+    const mergedFlashcards = courseContentArray.flatMap(c => c?.flashcards || []);
+    const mergedFillInTheBlanks = courseContentArray.flatMap(c => c?.fillInTheBlankQuestions || []);
+    const mergedMultipleChoice = courseContentArray.flatMap(c => c?.multipleChoiceQuestions || []);
 
     console.log(`\n🎯 Total Flashcards Generated: ${mergedFlashcards.length}`);
     console.log(`🎯 Total Multiple Choice Questions: ${mergedMultipleChoice.length}`);
     console.log(`🎯 Total Fill in the Blanks: ${mergedFillInTheBlanks.length}`);
 
+    // Generate lessons dynamically
+    const lessons = generateLessons(mergedFlashcards, mergedMultipleChoice, mergedFillInTheBlanks);
+
+    console.log(`📚 Total Lessons Created: ${Object.keys(lessons).length}`);
+
+    // Save the structured course to Firebase
+    // const courseId = await saveCourseToFirebase({
+    //   title,
+    //   description,
+    //   lessons
+    // });
+
     return reply.status(201).send({
       message: "Course created successfully",
+      // courseId,
       course: {
         title,
         description,
-        flashcards: mergedFlashcards,
-        fillInTheBlankQuestions: mergedFillInTheBlanks,
-        multipleChoiceQuestions: mergedMultipleChoice,
+        lessons,
       },
     });
   } catch (error) {
