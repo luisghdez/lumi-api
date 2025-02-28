@@ -38,12 +38,13 @@ Based on the following content, generate a structured set of flashcards, fill-in
 
 Instructions:
 * Dynamically determine the appropriate number of questions based on the depth and importance of the content. Some topics may require more reinforcement than others.
+* Generate at least **one flashcard per key concept or topic**.
 * For every flashcard you generate, you MUST also generate at least:
     * One fill-in-the-blank question related to that flashcard.
     * One multiple-choice question related to that flashcard.
 * If you generate 24 flashcards, you MUST generate at least:
-    * 24 fill-in-the-blank questions or more
-    * 24 multiple-choice questions or more
+    * 25 fill-in-the-blank questions or more
+    * 25 multiple-choice questions or more
 * Expand on concepts when necessary. If a statement lacks explanation (e.g., "The Nile River was the key to the success of Egyptian civilization."), provide additional information to clarify why or how it was important.
 * In some problems, use clear, self-made definitions that are simpler and easier to understand, avoiding overly technical or complex language.
 * Ensure completeness: If a topic is mentioned but not fully explained, expand it logically to provide full context.
@@ -69,11 +70,12 @@ Content to Use:
 
   try {
     const completion = await openai.beta.chat.completions.parse({
-      model: "gpt-4o-2024-08-06",
+      model: "gpt-4o-mini",
       messages: [
         { role: "system", content: promptInstructions },
         { role: "user", content: extractedText },
       ],
+      max_tokens: 5000,
       response_format: zodResponseFormat(courseContentSchema, "courseContent"),
     });
 
