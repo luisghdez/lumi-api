@@ -5,61 +5,77 @@ import { extractTextFromPDF } from "../services/pdfService";
 import { extractTextFromImage } from "../services/visionService";
 import { openAiCourseContent } from "../services/openAICourseContentService";
 
-interface CourseRequest {
-  title: string;
-  description: string;
-  instructor: string;
-  // Optional field for direct text input
-  content?: string;
-}
-
 export const createCourseController = async (
   request: FastifyRequest,
   reply: FastifyReply
 ) => {
   try {
+    console.log("Controller triggered");
     let extractedText = "";
 
-    // Check if text content is provided directly in the body
-    const { content } = request.body as CourseRequest;
-    if (content && content.trim().length > 0) {
-      extractedText = content;
-    } else {
-      // Otherwise, try to extract file if available
-      const data = await request.file();
-      console.log("File data:", data);
+    // Create or ensure the upload directory exists
+    const uploadDir = path.join(__dirname, "../../uploads");
+    console.log("Creating upload directory:", uploadDir);
+    await fs.mkdir(uploadDir, { recursive: true });
 
-      if (!data) {
-        return reply
-          .status(400)
-          .send({ error: "No file uploaded or content provided" });
-      }
+    console.log("Iterating over request parts...");
+    for await (const part of request.parts()) {
+      if ("file" in part) {
+        // This is a file part
+        console.log(
+          "Processing file part:",
+          part.fieldname,
+          part.filename,
+          part.mimetype
+        );
 
-      // Define upload directory and save the file
-      const uploadDir = path.join(__dirname, "../../uploads");
-      await fs.mkdir(uploadDir, { recursive: true });
+        // Get file buffer and define the file path
+        const fileBuffer = await part.toBuffer();
+        const filePath = path.join(uploadDir, part.filename);
+        console.log("Saving file to:", filePath);
+        await fs.writeFile(filePath, fileBuffer);
+        console.log("File saved successfully.");
 
-      const filePath = path.join(uploadDir, data.filename);
-      const fileBuffer = await data.toBuffer();
-      await fs.writeFile(filePath, fileBuffer);
-
-      if (data.mimetype === "application/pdf") {
-        extractedText = await extractTextFromPDF(filePath);
-      } else if (data.mimetype.startsWith("image/")) {
-        extractedText = await extractTextFromImage(filePath);
+        let fileExtractedText = "";
+        if (part.mimetype === "application/pdf") {
+          console.log("Extracting text from PDF...");
+          fileExtractedText = await extractTextFromPDF(filePath);
+          console.log("Extracted text from PDF:", fileExtractedText);
+        } else if (part.mimetype.startsWith("image/")) {
+          console.log("Extracting text from image...");
+          fileExtractedText = await extractTextFromImage(filePath);
+          console.log("Extracted text from image:", fileExtractedText);
+        } else {
+          console.log("Reading file as plain text...");
+          fileExtractedText = (await fs.readFile(filePath, "utf8")).toString();
+          console.log("Extracted text from plain file:", fileExtractedText);
+        }
+        extractedText += fileExtractedText ? `\n${fileExtractedText}` : "";
       } else {
-        extractedText = (await fs.readFile(filePath, "utf8")).toString();
+        // This is a text field
+        const textPart = part as { fieldname: string; value: string };
+        if (textPart.fieldname === "content" && textPart.value) {
+          console.log("Processing text part 'content':", textPart.value);
+          extractedText += textPart.value + "\n";
+        }
       }
     }
 
-    // Call the OpenAI service with the extracted text
+    console.log("Final extracted text:", extractedText);
+    if (!extractedText.trim()) {
+      console.log("No text extracted, sending error response");
+      return reply
+        .status(400)
+        .send({ error: "No text content or valid file provided" });
+    }
+
+    console.log("Calling OpenAI service with extracted text...");
     const courseContent = await openAiCourseContent(extractedText);
+    console.log("Received course content from OpenAI:", courseContent);
 
     return reply.status(201).send({
       message: "Course created successfully",
-      course: {
-        courseContent, // The structured content returned by GPT-4‑o
-      },
+      course: { courseContent },
     });
   } catch (error) {
     console.error("Error in course creation:", error);
