@@ -1,6 +1,6 @@
 import { FastifyInstance } from "fastify";
 import { createCourseController } from "../controllers/courseController";
-// import { authenticateUser } from '../utils/authUser';
+import { authenticateUser } from '../middleware/authUser';
 
 
 async function courseRoutes(fastify: FastifyInstance) {
@@ -8,7 +8,7 @@ async function courseRoutes(fastify: FastifyInstance) {
     method: "POST",
     url: "/courses",
     // schema: createCourseSchema,
-    // preHandler: authenticateUser,
+    preHandler: authenticateUser,
     handler: createCourseController,
   });
 }

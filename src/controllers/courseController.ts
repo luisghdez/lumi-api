@@ -14,7 +14,6 @@ export const createCourseController = async (
   reply: FastifyReply
 ) => {
   try {
-    await authenticateUser(request, reply);
     const user = (request as any).user;
 
     if (!user || !user.uid) {
