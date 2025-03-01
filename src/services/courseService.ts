@@ -53,3 +53,26 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
       throw new Error("Failed to fetch courses.");
     }
   };
+  
+  export const getLessonsFromFirebase = async (courseId: string) => {
+    try {
+      const lessonsRef = db.collection("courses").doc(courseId).collection("lessons");
+      const snapshot = await lessonsRef.get();
+  
+      if (snapshot.empty) {
+        console.log(`❌ No lessons found for course: ${courseId}`);
+        return [];
+      }
+  
+      const lessons = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+  
+      return lessons;
+    } catch (error) {
+      console.error("Error retrieving lessons:", error);
+      throw new Error("Failed to fetch lessons.");
+    }
+  };
+  

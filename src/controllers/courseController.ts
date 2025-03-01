@@ -8,7 +8,8 @@ import os from "os";
 import { extractTextFromPDF } from "../services/pdfService";
 import { extractTextFromImage } from "../services/visionService";
 import { openAiCourseContent } from "../services/openAICourseContentService";
-import { getUserCoursesFromFirebase } from "../services/courseService";
+import { getUserCoursesFromFirebase, getLessonsFromFirebase } from "../services/courseService";
+
 
 export const createCourseController = async (
   request: FastifyRequest,
@@ -138,3 +139,39 @@ export const getCoursesController = async (
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
+
+export const getLessonsController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { courseId } = request.params as { courseId: string };
+
+    if (!courseId) {
+      return reply.status(400).send({ error: "Missing courseId parameter" });
+    }
+
+    console.log(`📚 Fetching lessons for Course: ${courseId} (User: ${user.uid})`);
+
+    // Fetch lessons from Firebase
+    const lessons = await getLessonsFromFirebase(courseId);
+
+    if (!lessons.length) {
+      return reply.status(404).send({ error: "No lessons found for this course" });
+    }
+
+    return reply.status(200).send({
+      message: "Lessons retrieved successfully",
+      lessons,
+    });
+  } catch (error) {
+    console.error("Error fetching lessons:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
