@@ -8,6 +8,7 @@ import os from "os";
 import { extractTextFromPDF } from "../services/pdfService";
 import { extractTextFromImage } from "../services/visionService";
 import { openAiCourseContent } from "../services/openAICourseContentService";
+import { getUserCoursesFromFirebase } from "../services/courseService";
 
 export const createCourseController = async (
   request: FastifyRequest,
@@ -109,6 +110,31 @@ export const createCourseController = async (
     });
   } catch (error) {
     console.error("Error creating course:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getCoursesController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    console.log(`📚 Fetching courses for User: ${user.uid}`);
+
+    // Call Firebase service to fetch user's courses
+    const userCourses = await getUserCoursesFromFirebase(user.uid);
+
+    return reply.status(200).send({
+      message: "Courses retrieved successfully",
+      courses: userCourses,
+    });
+  } catch (error) {
+    console.error("Error fetching courses:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };

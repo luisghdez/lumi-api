@@ -32,16 +32,24 @@ export async function saveCourseToFirebase(courseData: CourseData): Promise<stri
   }
 }
 
-// export async function verifyFirebaseToken(token: string) {
-//     try {
-//       const decodedToken = await auth.verifyIdToken(token);
-//       return {
-//         uid: decodedToken.uid,
-//         email: decodedToken.email,
-//         name: decodedToken.name || null,
-//       };
-//     } catch (error) {
-//       console.error("🔥 Error verifying Firebase token:", error);
-//       throw new Error("Invalid Firebase token");
-//     }
-//   }
+export const getUserCoursesFromFirebase = async (userId: string) => {
+    try {
+      const coursesRef = db.collection("courses").where("createdBy", "==", userId);
+      const snapshot = await coursesRef.get();
+  
+      if (snapshot.empty) {
+        console.log("No courses found for this user.");
+        return [];
+      }
+  
+      const courses = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+  
+      return courses;
+    } catch (error) {
+      console.error("Error retrieving courses:", error);
+      throw new Error("Failed to fetch courses.");
+    }
+  };
