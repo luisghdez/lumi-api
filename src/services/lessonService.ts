@@ -10,6 +10,7 @@ interface Flashcard {
   }
   
   interface Lesson {
+    lessonNumber?: number;
     flashcards: Flashcard[];
     multipleChoice?: Question[];
     fillInTheBlank?: Question[];
@@ -62,6 +63,7 @@ interface Flashcard {
       const end = Math.min(start + flashcardsPerLesson, totalFlashcards);
   
       lessons[`lesson${lessonCount}`] = {
+        lessonNumber: lessonCount,
         flashcards: repeatedFlashcards.slice(start, end), // Repeated flashcards
       };
   
@@ -73,6 +75,7 @@ interface Flashcard {
     while (multipleChoiceIndex < repeatedMultipleChoice.length || fillInBlankIndex < repeatedFillInBlank.length) {
       const flashcardsToInclude = totalFlashcards < 28 ? 4 : Math.min(repeatedFlashcards.length - flashcardIndex, 8);
       lessons[`lesson${lessonCount}`] = {
+        lessonNumber: lessonCount,
         flashcards: repeatedFlashcards.slice(flashcardIndex, flashcardIndex + flashcardsToInclude), 
         multipleChoice: repeatedMultipleChoice.slice(multipleChoiceIndex, multipleChoiceIndex + 4),
         fillInTheBlank: repeatedFillInBlank.slice(fillInBlankIndex, fillInBlankIndex + 4),
@@ -87,6 +90,7 @@ interface Flashcard {
     while (multipleChoiceIndex < repeatedMultipleChoice.length || fillInBlankIndex < repeatedFillInBlank.length) {
       const flashcardsToInclude = totalFlashcards < 28 ? 4 : Math.min(repeatedFlashcards.length - flashcardIndex, 8);
       lessons[`lesson${lessonCount}`] = {
+        lessonNumber: lessonCount,
         flashcards: repeatedFlashcards.slice(flashcardIndex, flashcardIndex + flashcardsToInclude),
         multipleChoice: repeatedMultipleChoice.slice(multipleChoiceIndex, multipleChoiceIndex + 5),
         fillInTheBlank: repeatedFillInBlank.slice(fillInBlankIndex, fillInBlankIndex + 5),

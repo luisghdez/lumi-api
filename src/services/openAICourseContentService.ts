@@ -45,7 +45,7 @@ Instructions:
 * If you generate 24 flashcards, you MUST generate AT LEAST:
     * 25 fill-in-the-blank questions
     * 25 multiple-choice questions
-* Expand on concepts when necessary. If a statement lacks explanation (e.g., "The Nile River was the key to the success of Egyptian civilization."), provide additional information to clarify why or how it was important.
+* Expand on concepts when necessary.
 * In some problems, use clear, self-made definitions that are simpler and easier to understand, avoiding overly technical or complex language.
 * Ensure completeness: If a topic is mentioned but not fully explained, expand it logically to provide full context.
 * Use engaging, well-structured wording to make learning interactive and effective.

@@ -56,7 +56,7 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
   
   export const getLessonsFromFirebase = async (courseId: string) => {
     try {
-      const lessonsRef = db.collection("courses").doc(courseId).collection("lessons");
+      const lessonsRef = db.collection("courses").doc(courseId).collection("lessons").orderBy("lessonNumber", "asc");
       const snapshot = await lessonsRef.get();
   
       if (snapshot.empty) {

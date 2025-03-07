@@ -84,6 +84,7 @@ export const createCourseController = async (
     const courseContentArray = await Promise.all(
       extractedFilesText.map(async (text, index) => {
         console.log(`\n🔹 Processing File ${index + 1} (Length: ${text.length} chars)`);
+
         return await openAiCourseContent(text);
       })
     );
