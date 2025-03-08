@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { authenticateUser } from "../middleware/authUser";
-import { saveCourseToFirebase } from "../services/courseService";
+import { getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, saveCourseToFirebase } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import fs from "fs/promises";
 import path from "path";
@@ -8,7 +8,8 @@ import os from "os";
 import { extractTextFromPDF } from "../services/pdfService";
 import { extractTextFromImage } from "../services/visionService";
 import { openAiCourseContent } from "../services/openAICourseContentService";
-import { getUserCoursesFromFirebase, getLessonsFromFirebase } from "../services/courseService";
+import { getUserCoursesFromFirebase } from "../services/courseService";
+import { createSavedCourse } from "../services/savedCourseService";
 
 
 export const createCourseController = async (
@@ -97,14 +98,20 @@ export const createCourseController = async (
     console.log(`🎯 Total Multiple Choice Questions: ${mergedMultipleChoice.length}`);
     console.log(`🎯 Total Fill in the Blanks: ${mergedFillInTheBlanks.length}`);
 
-    const lessons = generateLessons(mergedFlashcards, mergedMultipleChoice, mergedFillInTheBlanks);
-    
+    const { lessons, lessonCount } = generateLessons(
+      mergedFlashcards,
+      mergedMultipleChoice,
+      mergedFillInTheBlanks
+    );
+        
     const courseId = await saveCourseToFirebase({
       title,
       description,
       createdBy: user.uid,
-      lessons
+      lessons,
     });
+
+    await createSavedCourse(user.uid, { courseId, lessonCount: lessonCount });
 
     return reply.status(201).send({
       message: "Course created successfully",
@@ -129,7 +136,7 @@ export const getCoursesController = async (
     console.log(`📚 Fetching courses for User: ${user.uid}`);
 
     // Call Firebase service to fetch user's courses
-    const userCourses = await getUserCoursesFromFirebase(user.uid);
+    const userCourses = await getUsersSavedCoursesFromFirebase(user.uid);
 
     return reply.status(200).send({
       message: "Courses retrieved successfully",
@@ -159,8 +166,8 @@ export const getLessonsController = async (
 
     console.log(`📚 Fetching lessons for Course: ${courseId} (User: ${user.uid})`);
 
-    // Fetch lessons from Firebase
-    const lessons = await getLessonsFromFirebase(courseId);
+    // Fetch lessons along with the user's progress from Firebase
+    const lessons = await getLessonsWithProgressFromFirebase(user.uid, courseId);
 
     if (!lessons.length) {
       return reply.status(404).send({ error: "No lessons found for this course" });
@@ -175,4 +182,5 @@ export const getLessonsController = async (
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
+
 

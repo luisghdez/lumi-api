@@ -74,7 +74,7 @@ export function generateLessons(
   flashcards: Flashcard[],
   multipleChoice: Question[],
   fillInTheBlanks: Question[]
-): { [key: string]: Lesson } {
+): { lessons: { [key: string]: Lesson }, lessonCount: number } {
   const lessons: { [key: string]: Lesson } = {};
   let lessonCount = 1;
 
@@ -191,5 +191,5 @@ export function generateLessons(
     //     lessonCount++;
     //   }
     
-      return lessons;
+      return { lessons, lessonCount: lessonCount - 1 };
     }
