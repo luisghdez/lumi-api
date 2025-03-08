@@ -1,0 +1,49 @@
+{
+    "planets": [
+      "Primus", "Velorum", "Umbra", "Astralis", "Lumora", "Obscura",
+      "Tempestra", "Infernia", "Nexus", "Zephyria", "Ecliptia", "Nebularis",
+      "Solara", "Cryon", "Ignis", "Aetheris", "Tydora", "Chronis", "Nyxara",
+      "Thalassa", "Ophira", "Verdantia", "Xyphos", "Zenithra", "Aurora",
+      "Terra", "Lunara", "Stellara", "Vortexia", "Avalon", "Elysium",
+      "Serenia", "Auriga", "Astra", "Orion", "Nebula", "Galaxia"
+    ],
+    "descriptions": {
+      "StrongReview": [
+        "Welcome to Planet {planet}! Begin your adventure by reviewing {term1}, {term2}, and {term3}. Your journey starts here.",
+        "Planet {planet} is your launch pad into learning. Explore and reinforce {term1}, {term2}, and {term3} to fuel your journey.",
+        "Orbit Planet {planet} and review key ideas: {term1}, {term2}, and {term3}. Build a solid base for future quests.",
+        "Your learning begins at Planet {planet}. Master {term1}, {term2}, and {term3} as you prepare for deeper exploration.",
+        "Planet {planet} lights the way to foundational knowledge. Engage with {term1}, {term2}, and {term3} on your first step.",
+        "Step onto Planet {planet} and absorb core ideas: {term1}, {term2}, and {term3}. Build your base before advancing.",
+        "Landing on Planet {planet} boosts your grasp of {term1}, {term2}, and {term3}. Every mission begins with a strong start.",
+        "Planet {planet} is a haven for explorers. Secure your understanding of {term1}, {term2}, and {term3} before moving on.",
+        "At Planet {planet}, absorb the basics: {term1}, {term2}, and {term3}. Let these ideas fuel your journey to new realms.",
+        "Touch down on Planet {planet} and review {term1}, {term2}, and {term3}. Your adventure starts with a strong foundation."
+      ],
+      "Balanced": [
+        "You’ve reached Planet {planet}—a mix of challenge and discovery. Master {term1}, {term2}, and {term3} while solving fun puzzles.",
+        "Planet {planet} is a waypoint in your journey. Review {term1}, {term2}, and {term3} as you tackle engaging puzzles.",
+        "Navigate Planet {planet} by balancing study and challenge. Grasp {term1}, {term2}, and {term3} as you solve intriguing problems.",
+        "On Planet {planet}, merge review with challenge. Dive into {term1}, {term2}, and {term3} as you work through problems.",
+        "Orbiting Planet {planet}, you apply knowledge of {term1}, {term2}, and {term3} while facing balanced challenges.",
+        "The cosmic winds of Planet {planet} mix review with puzzles. Use your grasp of {term1}, {term2}, and {term3} to stay on course.",
+        "Explore Planet {planet} and balance learning with problem-solving. Strengthen your skills in {term1}, {term2}, and {term3}.",
+        "Planet {planet} blends review with challenge. Solidify {term1}, {term2}, and {term3} as you tackle engaging questions.",
+        "Feel the pull of Planet {planet}: review {term1}, {term2}, and {term3} while solving thought-provoking puzzles.",
+        "Prepare for a balanced journey on Planet {planet}. Master {term1}, {term2}, and {term3} through review and challenge."
+      ],
+      "Challenge": [
+        "Planet {planet} tests your limits! Conquer {term1}, {term2}, and {term3} through tough puzzles and bold challenges.",
+        "You've arrived at Planet {planet}. Only the bold overcome its trials—master {term1}, {term2}, and {term3} to advance.",
+        "Welcome to stormy Planet {planet}! Tackle intense puzzles on {term1}, {term2}, and {term3} to prove your mettle.",
+        "Planet {planet} pulls you into a fierce test. Show mastery of {term1}, {term2}, and {term3} to break free from its grip.",
+        "The legendary Planet {planet} isn’t for the faint-hearted. Conquer {term1}, {term2}, and {term3} under relentless pressure.",
+        "On Planet {planet}, cosmic storms demand mastery. Solve {term1}, {term2}, and {term3} to survive the trial ahead.",
+        "Only the bravest reach Planet {planet}. Tackle challenging puzzles in {term1}, {term2}, and {term3} to push forward.",
+        "Planet {planet} is a gauntlet of trials. Prove your expertise in {term1}, {term2}, and {term3} through rigorous challenges.",
+        "Face the harsh terrain of Planet {planet}. Your command of {term1}, {term2}, and {term3} is key to overcoming obstacles.",
+        "Final preparations complete—Planet {planet} awaits. Apply your skills in {term1}, {term2}, and {term3} to conquer the ultimate test."
+      ]
+    }
+  }
+  
