@@ -5,6 +5,7 @@ import Fastify from "fastify";
 import cors from "@fastify/cors";
 import multipart from "@fastify/multipart";
 import courseRoutes from "../src/routes/courseRoutes";
+import userRoutes from './routes/userRoutes';
 
 
 const fastify = Fastify({ logger: true });
@@ -17,6 +18,7 @@ fastify.register(multipart, {
     },
   });
 fastify.register(courseRoutes);
+fastify.register(userRoutes);
 
 // Health check route
 fastify.get("/", async () => {
