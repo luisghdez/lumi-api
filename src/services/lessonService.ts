@@ -52,6 +52,18 @@ interface Question {
   correctAnswer: string;
 }
 
+interface SpeakQuestion {
+  prompt: string;
+  options: string[];
+  lessonType: string; // e.g., 'speakAll'
+}
+
+interface WriteQuestion {
+  prompt: string;
+  options: string[];
+  lessonType: string; // e.g., 'writeAll'
+}
+
 interface Lesson {
   lessonNumber?: number;
   flashcards: Flashcard[];
@@ -59,7 +71,10 @@ interface Lesson {
   fillInTheBlank?: Question[];
   planetName?: string;
   planetDescription?: string;
+  speakQuestion?: SpeakQuestion;
+  writeQuestion?: WriteQuestion;
 }
+
 
 // Function to repeat questions and flashcards across lessons
 function repeatItems<T>(items: T[], repetitions: number): T[] {
@@ -88,8 +103,8 @@ export function generateLessons(
   const repeatedFillInBlank = repeatItems(fillInTheBlanks, 3);
 
   let flashcardIndex = 0,
-    multipleChoiceIndex = 0,
-    fillInBlankIndex = 0;
+      multipleChoiceIndex = 0,
+      fillInBlankIndex = 0;
 
   // Determine number of Strong Review Lessons
   let strongReviewLessons = 1;
@@ -131,11 +146,16 @@ export function generateLessons(
     lessonCount++;
   }
 
-  // 🟡 Balanced Section: Mix of Problems + Flashcards
+  // 🟡 Balanced Section: Mix of Problems + Flashcards + Speak/Write-All Questions
+  let balancedLessonCount = 0;
+  let questionIndex = 0;       // Used to alternate between speakAll and writeAll
+
   while (
     multipleChoiceIndex < repeatedMultipleChoice.length ||
     fillInBlankIndex < repeatedFillInBlank.length
   ) {
+    balancedLessonCount++; // Count lessons within the balanced section
+
     const flashcardsToInclude =
       totalFlashcards < 28
         ? 4
@@ -155,7 +175,8 @@ export function generateLessons(
       topThreeTerms
     );
 
-    lessons[`lesson${lessonCount}`] = {
+    // Build the lesson object
+    const lessonObj: Lesson = {
       lessonNumber: lessonCount,
       flashcards: currentFlashcards,
       multipleChoice: repeatedMultipleChoice.slice(
@@ -170,26 +191,70 @@ export function generateLessons(
       planetDescription
     };
 
+
+    // Determine if we should add a speak/write question:
+    // - If totalFlashcards is UNDER 5, add a question every lesson (alternating each lesson).
+    // - Otherwise, add a question only every 2 balanced lessons.
+    if (totalFlashcards < 5) {
+      // Always add a question and alternate each lesson.
+      if (questionIndex % 2 === 0) {
+        lessonObj.speakQuestion = {
+          prompt: "Explain everything you remember about this lesson.",
+          options: currentFlashcards.map(fc => fc.term),
+          lessonType: "speakAll"
+        };
+      } else {
+        lessonObj.writeQuestion = {
+          prompt: "Write everything you remember about this lesson.",
+          options: currentFlashcards.map(fc => fc.term),
+          lessonType: "writeAll"
+        };
+      }
+      questionIndex++;
+    } else {
+      // For totalFlashcards >= 5, add a question only every 2 balanced lessons.
+      if (balancedLessonCount % 2 === 0) {
+        if (questionIndex % 2 === 0) {
+          lessonObj.speakQuestion = {
+            prompt: "Explain everything you remember about this lesson.",
+            options: currentFlashcards.map(fc => fc.term),
+            lessonType: "speakAll"
+          };
+        } else {
+          lessonObj.writeQuestion = {
+            prompt: "Write everything you remember about this lesson.",
+            options: currentFlashcards.map(fc => fc.term),
+            lessonType: "writeAll"
+          };
+        }
+        questionIndex++;
+      }
+    }
+
+    lessons[`lesson${lessonCount}`] = lessonObj;
+
     flashcardIndex += flashcardsToInclude;
     multipleChoiceIndex += 4;
     fillInBlankIndex += 4;
-        lessonCount++;
-      }
+    lessonCount++;
+  }
 
-    // // 🔴 **Challenge Section: More Problems, Flashcards for Match the Term**
-    // while (multipleChoiceIndex < repeatedMultipleChoice.length || fillInBlankIndex < repeatedFillInBlank.length) {
-    //     const flashcardsToInclude = totalFlashcards < 28 ? 4 : Math.min(repeatedFlashcards.length - flashcardIndex, 8);
-    //     lessons[`lesson${lessonCount}`] = {
-    //       lessonNumber: lessonCount,
-    //       flashcards: repeatedFlashcards.slice(flashcardIndex, flashcardIndex + flashcardsToInclude),
-    //       multipleChoice: repeatedMultipleChoice.slice(multipleChoiceIndex, multipleChoiceIndex + 5),
-    //       fillInTheBlank: repeatedFillInBlank.slice(fillInBlankIndex, fillInBlankIndex + 5),
-    //     };
-    //     flashcardIndex += flashcardsToInclude;
-    //     multipleChoiceIndex += 5;
-    //     fillInBlankIndex += 5;
-    //     lessonCount++;
-    //   }
+  return { lessons, lessonCount: lessonCount - 1 };
+}
+
     
-      return { lessons, lessonCount: lessonCount - 1 };
-    }
+    
+        // // 🔴 **Challenge Section: More Problems, Flashcards for Match the Term**
+        // while (multipleChoiceIndex < repeatedMultipleChoice.length || fillInBlankIndex < repeatedFillInBlank.length) {
+        //     const flashcardsToInclude = totalFlashcards < 28 ? 4 : Math.min(repeatedFlashcards.length - flashcardIndex, 8);
+        //     lessons[`lesson${lessonCount}`] = {
+        //       lessonNumber: lessonCount,
+        //       flashcards: repeatedFlashcards.slice(flashcardIndex, flashcardIndex + flashcardsToInclude),
+        //       multipleChoice: repeatedMultipleChoice.slice(multipleChoiceIndex, multipleChoiceIndex + 5),
+        //       fillInTheBlank: repeatedFillInBlank.slice(fillInBlankIndex, fillInBlankIndex + 5),
+        //     };
+        //     flashcardIndex += flashcardsToInclude;
+        //     multipleChoiceIndex += 5;
+        //     fillInBlankIndex += 5;
+        //     lessonCount++;
+        //   }
