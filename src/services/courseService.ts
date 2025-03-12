@@ -57,7 +57,7 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
   export const getUsersSavedCoursesFromFirebase = async (userId: string) => {
     try {
       // Reference the "savedCourses" subcollection under the user's document
-      const savedCoursesRef = db.collection("users").doc(userId).collection("savedCourses");
+      const savedCoursesRef = db.collection("users").doc(userId).collection("savedCourses").orderBy("createdAt", "desc");
       const snapshot = await savedCoursesRef.get();
   
       if (snapshot.empty) {
