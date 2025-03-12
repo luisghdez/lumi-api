@@ -111,8 +111,8 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
       // 3. Map over each lesson and merge the completed status from saved progress.
       const lessons = lessonsSnapshot.docs.map((doc) => {
         const lessonData = doc.data();
-        // Assume the lesson's document ID is used as key in the progress object.
         const lessonProgress = progress[doc.id];
+
         return {
           id: doc.id,
           ...lessonData,
@@ -120,7 +120,7 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         };
       });
 
-      console.log('Lessons:', lessons);
+      // console.log('Lessons:', lessons);
   
       return lessons;
     } catch (error) {

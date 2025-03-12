@@ -1,4 +1,5 @@
 import { db } from "../config/firebaseConfig";
+import admin from "firebase-admin";
 
 interface SavedCourseInput {
   courseId: string;
@@ -21,7 +22,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
     // Build the lessons progress object with empty progress (completed: false)
     const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
     for (let i = 1; i <= data.lessonCount; i++) {
-      lessonsProgress[`lesson_${i}`] = { completed: false };
+      lessonsProgress[`lesson${i}`] = { completed: false };
     }
 
     const savedCourseId = data.courseId; // Matching ID for saved course and course
@@ -55,3 +56,40 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
     throw error;
   }
 }
+
+export const markLessonAsCompleted = async (
+  userId: string,
+  courseId: string,
+  lessonId: string,
+  xp: number
+): Promise<void> => {
+  try {
+    // Reference the saved course document under the user's subcollection
+    const savedCourseRef = db
+      .collection("users")
+      .doc(userId)
+      .collection("savedCourses")
+      .doc(courseId);
+
+    console.log(`Marking lesson ${savedCourseRef}`);
+
+    // Update the specific lesson's completed flag to true.
+    // Also update lastAttempt to record the timestamp of this update.
+    await savedCourseRef.update({
+      [`progress.lessons.${lessonId}.completed`]: true,
+      lastAttempt: new Date().toISOString(),
+    });
+
+    // Now update the user's document by incrementing the xpCount field.
+    // Make sure that your Firebase admin SDK is initialized and supports FieldValue.increment.
+    const userRef = db.collection("users").doc(userId);
+    await userRef.update({
+      xpCount: admin.firestore.FieldValue.increment(xp),
+    });
+
+    console.log(`Lesson ${lessonId} in course ${courseId} marked as completed for user ${userId}. Added ${xp} XP.`);
+  } catch (error) {
+    console.error("Error updating lesson progress and user XP:", error);
+    throw new Error("Failed to mark lesson as completed and update XP.");
+  }
+};

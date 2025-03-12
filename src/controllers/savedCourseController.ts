@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createSavedCourse } from "../services/savedCourseService";
+import { createSavedCourse, markLessonAsCompleted } from "../services/savedCourseService";
 
 interface CreateSavedCourseRequestBody {
   courseId: string;
@@ -24,3 +24,35 @@ export async function createSavedCourseController(request: FastifyRequest, reply
     reply.code(500).send({ error: "Failed to create saved course" });
   }
 }
+
+export const markLessonCompletedController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    // Extract courseId and lessonId from the URL parameters
+    const { courseId, lessonId } = request.params as { courseId: string; lessonId: string };
+    if (!courseId || !lessonId) {
+      return reply.status(400).send({ error: "Missing courseId or lessonId parameter" });
+    }
+
+    // Extract xp from the request body (allowing frontend to decide the XP count)
+    const { xp } = request.body as { xp: number };
+    if (xp === undefined) {
+      return reply.status(400).send({ error: "Missing XP value in request body" });
+    }
+
+    // Call the service to mark the lesson as completed and update user XP
+    await markLessonAsCompleted(user.uid, courseId, lessonId, xp);
+
+    return reply.status(200).send({ message: "Lesson marked as completed and XP updated." });
+  } catch (error) {
+    console.error("Error marking lesson as completed:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
