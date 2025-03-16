@@ -66,3 +66,34 @@ export async function createFriendRequest(senderId: string, recipientId: string)
     throw error;
   }
 }
+
+export async function getFriendRequests(userId: string): Promise<{ sent: any[]; received: any[] }> {
+  try {
+    const friendRequestsRef = db.collection("friendRequests");
+
+    // Query for sent friend requests.
+    const sentSnapshot = await friendRequestsRef.where("senderId", "==", userId).get();
+
+    // Query for friend requests where the current user is included in the userIds array.
+    const receivedSnapshot = await friendRequestsRef.where("userIds", "array-contains", userId).get();
+
+    const sentRequests: any[] = [];
+    sentSnapshot.forEach((doc) => {
+      sentRequests.push({ id: doc.id, ...doc.data() });
+    });
+
+    const receivedRequests: any[] = [];
+    receivedSnapshot.forEach((doc) => {
+      const data = doc.data();
+      // Exclude requests sent by the current user (as these are already in sentRequests)
+      if (data.senderId !== userId) {
+        receivedRequests.push({ id: doc.id, ...data });
+      }
+    });
+
+    return { sent: sentRequests, received: receivedRequests };
+  } catch (error) {
+    console.error("Error retrieving friend requests:", error);
+    throw error;
+  }
+}
