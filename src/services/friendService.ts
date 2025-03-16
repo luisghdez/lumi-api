@@ -137,28 +137,56 @@ export async function respondFriendRequest(requestId: string, accept: boolean, u
   }
 }
 
-export async function getFriends(userId: string): Promise<string[]> {
+interface Friend {
+  id: string;
+  xpCount?: number; // optional, default to 0 when sorting if missing
+  [key: string]: any; // include any other fields from the document
+}
+
+// Retrieves a list of friend user information for the given user.
+// It queries accepted friend requests where the current user is in "userIds",
+// extracts the other user's id, then fetches full user information.
+// If orderByXp is true, the results are sorted in descending order of xpCount.
+export async function getFriends(userId: string, orderByXp?: boolean): Promise<Friend[]> {
   try {
     const friendRequestsRef = db.collection("friendRequests");
     
     // Query accepted friend requests that include the current user.
-    // Note: This query may require a composite index in Firestore.
     const snapshot = await friendRequestsRef
       .where("userIds", "array-contains", userId)
       .where("status", "==", "accepted")
       .get();
 
-    const friends: string[] = [];
+    const friendIds: string[] = [];
     snapshot.forEach((doc) => {
       const data = doc.data();
       if (data.userIds && Array.isArray(data.userIds) && data.userIds.length === 2) {
         // Determine the friend id: the id that is not equal to the current user's id.
         const friendId = data.userIds.find((id: string) => id !== userId);
         if (friendId) {
-          friends.push(friendId);
+          friendIds.push(friendId);
         }
       }
     });
+
+    // Retrieve full user information for each friend ID.
+    const friendsInfo = await Promise.all(
+      friendIds.map(async (friendId) => {
+        const userDoc = await db.collection("users").doc(friendId).get();
+        if (!userDoc.exists) {
+          return null;
+        }
+        return { id: userDoc.id, ...userDoc.data() } as Friend;
+      })
+    );
+
+    // Filter out any null results.
+    const friends = friendsInfo.filter((friend): friend is Friend => friend !== null);
+
+    // Optionally sort friends by xpCount in descending order.
+    if (orderByXp) {
+      friends.sort((a, b) => (b.xpCount || 0) - (a.xpCount || 0));
+    }
 
     return friends;
   } catch (error) {

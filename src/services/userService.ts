@@ -40,3 +40,16 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       throw error;
     }
   }
+
+  export async function getUserProfile(userId: string): Promise<any> {
+    try {
+      const userDoc = await db.collection("users").doc(userId).get();
+      if (!userDoc.exists) {
+        return null;
+      }
+      return { id: userDoc.id, ...userDoc.data() };
+    } catch (error) {
+      console.error("Error fetching user profile from Firestore:", error);
+      throw error;
+    }
+  }

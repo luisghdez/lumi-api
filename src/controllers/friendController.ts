@@ -83,7 +83,6 @@ export async function respondFriendRequestController(request: FastifyRequest, re
     return reply.status(500).send({ error: "Failed to respond to friend request" });
   }
 }
-
 export async function getFriendsController(request: FastifyRequest, reply: FastifyReply) {
   try {
     const user = (request as any).user;
@@ -91,7 +90,12 @@ export async function getFriendsController(request: FastifyRequest, reply: Fasti
       return reply.status(401).send({ error: "Unauthorized" });
     }
     const userId = user.uid;
-    const friends = await getFriends(userId);
+
+    // Optional query parameter: ?order=xp to order friends by xp
+    const { order } = request.query as { order?: string };
+    const orderByXp = order === "xp";
+
+    const friends = await getFriends(userId, orderByXp);
     return reply.status(200).send({ friends });
   } catch (error) {
     console.error("Error retrieving friends:", error);

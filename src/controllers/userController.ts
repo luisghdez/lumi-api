@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createFireStoreUser } from "../services/userService";
+import { createFireStoreUser, getUserProfile } from "../services/userService";
 
 interface CreateUserRequestBody {
   email: string;
@@ -31,5 +31,24 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
     } catch (error) {
       console.error("🔥 Error ensuring user exists:", error);
       reply.code(500).send({ error: "Error ensuring user exists" });
+    }
+  }
+
+  export async function getUserProfileController(request: FastifyRequest, reply: FastifyReply) {
+    try {
+      const { userId } = request.params as { userId: string };
+      if (!userId) {
+        return reply.status(400).send({ error: "Missing userId parameter" });
+      }
+  
+      const userProfile = await getUserProfile(userId);
+      if (!userProfile) {
+        return reply.status(404).send({ error: "User not found" });
+      }
+      
+      return reply.status(200).send({ user: userProfile });
+    } catch (error) {
+      console.error("Error fetching user profile:", error);
+      return reply.status(500).send({ error: "Failed to fetch user profile" });
     }
   }
