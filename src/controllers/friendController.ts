@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createFriendRequest, getFriendRequests, searchUsers } from "../services/friendService";
+import { createFriendRequest, getFriendRequests, respondFriendRequest, searchUsers } from "../services/friendService";
 
 // Controller for handling user search requests.
 export async function searchUsersController(request: FastifyRequest, reply: FastifyReply) {
@@ -54,5 +54,32 @@ export async function getFriendRequestsController(request: FastifyRequest, reply
   } catch (error) {
     console.error("Error retrieving friend requests:", error);
     return reply.status(500).send({ error: "Failed to retrieve friend requests" });
+  }
+}
+
+export async function respondFriendRequestController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    // Get friend request id from URL parameters.
+    const { id } = request.params as { id: string };
+    // Get the "accept" parameter from query (should be "true" or "false").
+    const { accept } = request.query as { accept?: string };
+
+    if (accept === undefined) {
+      return reply.status(400).send({ error: "Missing accept query parameter" });
+    }
+    // Convert the query parameter to a boolean.
+    const acceptBoolean = accept === "true";
+
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+    const userId = user.uid;
+
+    const result = await respondFriendRequest(id, acceptBoolean, userId);
+    return reply.status(200).send(result);
+  } catch (error) {
+    console.error("Error responding to friend request:", error);
+    return reply.status(500).send({ error: "Failed to respond to friend request" });
   }
 }
