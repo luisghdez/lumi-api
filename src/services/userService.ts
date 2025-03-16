@@ -23,6 +23,8 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
         await userRef.set({
           email: data.email || "",
           name: data.name || "",
+          emailLower: data.email?.toLowerCase() || "",
+          nameLower: data.name?.toLowerCase() || "",
           profilePicture: data.profilePicture || "default",
           xpCount: 0,
           streakCount: 0,
