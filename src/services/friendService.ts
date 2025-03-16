@@ -41,3 +41,28 @@ export async function searchUsers(query: string): Promise<any[]> {
     throw error;
   }
 }
+
+interface FriendRequestInput {
+  userIds: string[];
+  senderId: string;
+  status: string;
+}
+
+export async function createFriendRequest(senderId: string, recipientId: string): Promise<any> {
+  try {
+    const friendRequest = {
+      userIds: [senderId, recipientId],
+      senderId,
+      status: "pending",
+      createdAt: new Date().toISOString(),
+    };
+
+    // Store the friend request in the "friendRequests" collection.
+    const friendRequestRef = await db.collection("friendRequests").add(friendRequest);
+    console.log(`Friend request created with id: ${friendRequestRef.id}`);
+    return { id: friendRequestRef.id, ...friendRequest };
+  } catch (error) {
+    console.error("Error saving friend request:", error);
+    throw error;
+  }
+}
