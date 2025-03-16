@@ -136,3 +136,33 @@ export async function respondFriendRequest(requestId: string, accept: boolean, u
     throw error;
   }
 }
+
+export async function getFriends(userId: string): Promise<string[]> {
+  try {
+    const friendRequestsRef = db.collection("friendRequests");
+    
+    // Query accepted friend requests that include the current user.
+    // Note: This query may require a composite index in Firestore.
+    const snapshot = await friendRequestsRef
+      .where("userIds", "array-contains", userId)
+      .where("status", "==", "accepted")
+      .get();
+
+    const friends: string[] = [];
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      if (data.userIds && Array.isArray(data.userIds) && data.userIds.length === 2) {
+        // Determine the friend id: the id that is not equal to the current user's id.
+        const friendId = data.userIds.find((id: string) => id !== userId);
+        if (friendId) {
+          friends.push(friendId);
+        }
+      }
+    });
+
+    return friends;
+  } catch (error) {
+    console.error("Error getting friends:", error);
+    throw error;
+  }
+}

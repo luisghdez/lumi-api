@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createFriendRequest, getFriendRequests, respondFriendRequest, searchUsers } from "../services/friendService";
+import { createFriendRequest, getFriendRequests, getFriends, respondFriendRequest, searchUsers } from "../services/friendService";
 
 // Controller for handling user search requests.
 export async function searchUsersController(request: FastifyRequest, reply: FastifyReply) {
@@ -81,5 +81,20 @@ export async function respondFriendRequestController(request: FastifyRequest, re
   } catch (error) {
     console.error("Error responding to friend request:", error);
     return reply.status(500).send({ error: "Failed to respond to friend request" });
+  }
+}
+
+export async function getFriendsController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+    const userId = user.uid;
+    const friends = await getFriends(userId);
+    return reply.status(200).send({ friends });
+  } catch (error) {
+    console.error("Error retrieving friends:", error);
+    return reply.status(500).send({ error: "Failed to retrieve friends" });
   }
 }
