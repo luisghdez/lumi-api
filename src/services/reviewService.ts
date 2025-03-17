@@ -1,0 +1,120 @@
+import OpenAI from "openai";
+import { zodResponseFormat } from "openai/helpers/zod";
+import { z } from "zod";
+
+/**
+ * We create a Zod schema to parse the GPT output:
+ * [
+ *   {
+ *     term: string;
+ *     status: 'unattempted' | 'needs_improvement' | 'mastered';
+ *   },
+ * ]
+ */
+const termStatusSchema = z.object({
+  term: z.string(),
+  status: z.enum(["unattempted", "needs_improvement", "mastered"]),
+});
+
+const reviewResponseSchema = z.object({
+  updatedTerms: z.array(termStatusSchema),
+  feedbackMessage: z.string(),
+});
+
+// Create OpenAI client
+const openai = new OpenAI();
+
+// TypeScript interface for the service params
+interface ProcessReviewParams {
+  transcript: string;
+  terms: Array<{
+    term: string;
+    status: string;
+  }>;
+  attemptNumber: number;
+}
+
+/**
+ * This function calls the OpenAI API with a structured prompt 
+ * and returns updated terms & feedback message.
+ */
+export async function processReviewService({
+  transcript,
+  terms,
+  attemptNumber,
+}: ProcessReviewParams) {
+  try {
+    // Construct a system message that instructs GPT to return valid JSON
+    const systemInstructions = `
+        You are a helpful, friendly tutor who encourages and supports the user. 
+        Your responses should feel positive and motivating.
+        You must output valid JSON (no extra keys) with this shape:
+        {
+        "updatedTerms": [
+            { "term": string, "status": "unattempted" | "needs_improvement" | "mastered" },
+            ...
+        ],
+        "feedbackMessage": string
+        }
+
+        Rules:
+        1. "updatedTerms" must be exactly the same length as the incoming terms array.
+        2. You must re-evaluate each term based on the user's current explanation in the transcript and assign a new status:
+        - Use "mastered" if the explanation shows clear and accurate understanding.
+        - Use "needs_improvement" if the explanation is partially correct, unclear, or missing key details.
+        - Use "unattempted" only if the user made no effort to explain the term at all.
+        Do not reuse the previous statuses — always reassess based on the latest transcript.
+        3. "feedbackMessage" should follow these rules depending on the attempt number:
+        - If attemptNumber < 3:
+            • Begin with a positive comment about what the user did well.
+            • Ask a kind, supportive follow-up question to guide the user to improve their explanation for 1–2 terms marked as "needs_improvement".
+            • If any term is marked as "unattempted", include a helpful hint or clue to encourage the user to try it.
+        - If attemptNumber === 3:
+            • Begin with positive feedback.
+            • Ask one final reflective or summarizing question that helps the user review the big picture or key concepts.
+        
+            `;
+
+    // Build a short user message combining the current terms and transcript
+    const userMessage = `
+        Attempt Number: ${attemptNumber}
+
+        Current Terms and Statuses:
+        ${terms
+        .map((t) => `- ${t.term} (status: ${t.status})`)
+        .join("\n")}
+
+        User's explanation:
+        "${transcript}"
+        `;
+
+    // Call GPT with Zod-based structured output
+    const response = await openai.beta.chat.completions.parse({
+      model: "gpt-4o-mini", // or whichever model you want
+      messages: [
+        { role: "system", content: systemInstructions },
+        { role: "user", content: userMessage },
+      ],
+      // Increase tokens if needed
+      max_tokens: 1000,
+      response_format: zodResponseFormat(reviewResponseSchema, "reviewResponse"),
+      temperature: 0.7,
+    });
+
+    // Extract structured result from GPT
+    const parsed = response.choices[0].message.parsed;
+
+    console.log("Parsed response:", parsed);
+
+    // parsed will be { updatedTerms: [...], feedbackMessage: "..." }
+    return parsed;
+  } catch (error) {
+    console.error("Error in processReviewService:", error);
+    // fallback: just return something safe
+    return {
+      updatedTerms: terms, // fallback to same statuses
+      feedbackMessage:
+        "There was an error processing your request. Please try again later.",
+    };
+  }
+}
