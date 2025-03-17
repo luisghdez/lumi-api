@@ -271,6 +271,57 @@ Fetch a user by ID.
 
 ---
 
+
+---
+
+## 📌 4. Submit Review for AI Feedback
+### ➡️ POST `/review`
+Process user explanation of terms and get guided AI feedback.
+
+#### 📥 Request (JSON)
+```json
+{
+  "transcript": "My explanation of osmosis and mitosis...",
+  "terms": [
+    { "term": "osmosis", "status": "unattempted" },
+    { "term": "mitosis", "status": "needs_improvement" },
+    { "term": "photosynthesis", "status": "unattempted" }
+  ],
+  "attemptNumber": 1
+}
+```
+
+#### 📤 Response
+```json
+{
+  "sessionId": "abc123-session-id",
+  "updatedTerms": [
+    { "term": "osmosis", "status": "mastered" },
+    { "term": "mitosis", "status": "needs_improvement" },
+    { "term": "photosynthesis", "status": "unattempted" }
+  ],
+  "feedbackMessage": "Great job! You explained osmosis and mitosis well..."
+}
+```
+
+---
+
+## 📌 5. Get AI Feedback Audio
+### ➡️ GET `/review/audio?sessionId=abc123-session-id`
+Retrieve the TTS audio for the AI feedback associated with a previous review session.
+
+#### 📤 Response
+- Returns an `audio/mpeg` file (MP3).
+- Can be streamed or downloaded by the client.
+
+#### ⚠️ Possible Errors
+| HTTP Code | Error Message |
+|-----------|----------------|
+| 400       | "Missing sessionId parameter" |
+| 404       | "Audio not found or expired." |
+
+---
+
 ## 📌 Summary of Available Routes
 | Method | Endpoint | Description | Requires Auth |
 |--------|-----------------------------|-------------------------------|----------------|
@@ -283,3 +334,5 @@ Fetch a user by ID.
 | PATCH  | `/friend-requests/:id` | Accept a friend request | ✅ Yes |
 | GET    | `/friends` | Get list of friends | ✅ Yes |
 | GET    | `/users/:userId` | Get user profile by ID | ✅ Yes |
+| POST   | `/review`                            | Submit transcript for review + feedback     | ✅ Yes |
+| GET    | `/review/audio?sessionId=...`        | Retrieve audio feedback (MP3)               | ✅ Yes |
