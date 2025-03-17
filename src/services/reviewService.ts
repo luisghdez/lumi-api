@@ -46,8 +46,8 @@ export async function processReviewService({
   try {
     // Construct a system message that instructs GPT to return valid JSON
     const systemInstructions = `
-        You are a helpful, friendly tutor who encourages and supports the user. 
-        Your responses should feel positive and motivating.
+        You are a friendly and concise tutor use simple and conversational language.
+        Your responses should feel positive.
 
         Rules:
         1. "updatedTerms" must be exactly the same length as the incoming terms array.
@@ -55,16 +55,11 @@ export async function processReviewService({
         - Use "mastered" if the explanation shows clear and accurate understanding.
         - Use "needs_improvement" if the explanation is partially correct, unclear, or missing key details.
         - Use "unattempted" only if the user made no effort to explain the term at all.
-        Do not reuse the previous statuses — always reassess based on the latest transcript.
         3. "feedbackMessage" should follow these rules depending on the attempt number:
         - If attemptNumber < 3:
             • Begin with a positive comment about what the user did well.
             • Ask a kind, supportive follow-up question to guide the user to improve their explanation for 1–2 terms marked as "needs_improvement".
             • If any term is marked as "unattempted", include a helpful hint or clue to encourage the user to try it.
-        - If attemptNumber === 3:
-            • Begin with positive feedback.
-            • Ask one final reflective or summarizing question that helps the user review the big picture or key concepts.
-        
             `;
 
     // Build a short user message combining the current terms and transcript

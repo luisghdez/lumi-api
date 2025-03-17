@@ -15,6 +15,7 @@ export async function generateTtsAudioBuffer(text: string): Promise<Buffer> {
     model: "tts-1",
     voice: "echo",
     input: text,
+    // speed: 1.2,
   });
 
   // 2) Convert result to a Node.js Buffer
