@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { processReviewService } from "../services/reviewService";
-import { generateTtsAudioBuffer } from "../services/textToSpeechService";
+import { generateElevenLabsTtsAudioBuffer, generateTtsAudioBuffer } from "../services/textToSpeechService";
 import { v4 as uuidv4 } from "uuid";
 import { storeAudio } from "../services/audioCacheService";
 
@@ -44,14 +44,22 @@ export const reviewController = async (
     });
 
     // Fire-and-forget TTS generation in the background (don’t await)
-    generateTtsAudioBuffer(feedbackMessage)
+    generateElevenLabsTtsAudioBuffer(feedbackMessage)
       .then((audioBuffer) => {
         storeAudio(sessionId, audioBuffer);
       })
       .catch((err) => {
-        console.error("Error generating TTS audio in background:", err);
+        console.error("Error generating TTS audio with ElevenLabs:", err);
+        // Fallback to OpenAI TTS
+        generateTtsAudioBuffer(feedbackMessage)
+          .then((audioBuffer) => {
+            storeAudio(sessionId, audioBuffer);
+          })
+          .catch((err) => {
+            console.error("Error generating TTS audio with OpenAI:", err);
+          });
       });
-    
+
   } catch (error) {
     console.error("Error in reviewController:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
