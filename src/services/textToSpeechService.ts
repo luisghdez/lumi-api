@@ -31,7 +31,10 @@ export async function generateTtsAudioBuffer(text: string): Promise<Buffer> {
  */
 export async function generateElevenLabsTtsAudioBuffer(text: string): Promise<Buffer> {
   // Define the voice and model you want to use. These IDs are examples.
-  const voiceId = "UgBBYS2sOqTuMpoF3BR0";
+  const voiceIdMarkNormal = "UgBBYS2sOqTuMpoF3BR0";
+  const voiceIdStuartAus = "HDA9tsk27wYi3uq0fPcK";
+
+  const voiceId = voiceIdMarkNormal;
   const modelId = "eleven_flash_v2_5";
 
   // Call the ElevenLabs TTS endpoint
