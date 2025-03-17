@@ -33,21 +33,25 @@ export const reviewController = async (
     }
     const { updatedTerms, feedbackMessage } = result;
 
-    // Generate TTS audio buffer for the feedback message
-    const audioBuffer = await generateTtsAudioBuffer(feedbackMessage);
-
-    // Generate a unique session ID for this audio response
+    // Generate a unique session ID for this review session
     const sessionId = uuidv4();
 
-    // Store the audio buffer in our in-memory cache
-    storeAudio(sessionId, audioBuffer);
-
-    // Return JSON response with sessionId, updated terms, and feedback
-    return reply.status(200).send({
+    // Immediately respond with JSON so the client can proceed
+    reply.status(200).send({
       sessionId,
       updatedTerms,
       feedbackMessage,
     });
+
+    // Fire-and-forget TTS generation in the background (don’t await)
+    generateTtsAudioBuffer(feedbackMessage)
+      .then((audioBuffer) => {
+        storeAudio(sessionId, audioBuffer);
+      })
+      .catch((err) => {
+        console.error("Error generating TTS audio in background:", err);
+      });
+    
   } catch (error) {
     console.error("Error in reviewController:", error);
     return reply.status(500).send({ error: "Internal Server Error" });

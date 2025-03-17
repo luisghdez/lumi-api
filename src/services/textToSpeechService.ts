@@ -13,7 +13,7 @@ export async function generateTtsAudioBuffer(text: string): Promise<Buffer> {
   // 1) Call the TTS endpoint
   const mp3 = await openai.audio.speech.create({
     model: "tts-1",
-    voice: "alloy",
+    voice: "echo",
     input: text,
   });
 

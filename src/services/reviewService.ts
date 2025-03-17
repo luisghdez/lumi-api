@@ -48,14 +48,6 @@ export async function processReviewService({
     const systemInstructions = `
         You are a helpful, friendly tutor who encourages and supports the user. 
         Your responses should feel positive and motivating.
-        You must output valid JSON (no extra keys) with this shape:
-        {
-        "updatedTerms": [
-            { "term": string, "status": "unattempted" | "needs_improvement" | "mastered" },
-            ...
-        ],
-        "feedbackMessage": string
-        }
 
         Rules:
         1. "updatedTerms" must be exactly the same length as the incoming terms array.
@@ -90,13 +82,13 @@ export async function processReviewService({
 
     // Call GPT with Zod-based structured output
     const response = await openai.beta.chat.completions.parse({
-      model: "gpt-4o-mini", // or whichever model you want
+      model: "gpt-4o-mini",
       messages: [
         { role: "system", content: systemInstructions },
         { role: "user", content: userMessage },
       ],
       // Increase tokens if needed
-      max_tokens: 1000,
+      max_tokens: 250,
       response_format: zodResponseFormat(reviewResponseSchema, "reviewResponse"),
       temperature: 0.7,
     });
