@@ -14,11 +14,13 @@ export const reviewController = async (
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    const { transcript, terms, attemptNumber } = request.body as {
+    const { transcript, terms, attemptNumber, conversationHistory } = request.body as {
       transcript: string;
       terms: Array<{ term: string; status: string }>;
       attemptNumber: number;
+      conversationHistory?: Array<{ role: "user" | "tutor"; message: string }>;
     };
+    
 
     if (!transcript || !Array.isArray(terms) || typeof attemptNumber !== "number") {
       return reply.status(400).send({
@@ -27,7 +29,7 @@ export const reviewController = async (
     }
 
     // Process the review using GPT-based logic
-    const result = await processReviewService({ transcript, terms, attemptNumber });
+    const result = await processReviewService({ transcript, terms, attemptNumber, conversationHistory });
     if (!result) {
       return reply.status(500).send({ error: "Failed to process review" });
     }
