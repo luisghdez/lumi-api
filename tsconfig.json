@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",                 // or "ES2019", "ES2022", etc. 
+    "target": "ES2016",
     "module": "commonjs",
-    "rootDir": "src",                   // where your .ts files live
-    "outDir": "dist",                   // where the compiled .js files go
+    "rootDir": "src",
+    "outDir": "dist",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src"]                    // explicitly include your source folder
+  "include": ["src"]
 }

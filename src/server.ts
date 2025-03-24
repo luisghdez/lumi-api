@@ -4,7 +4,7 @@ dotenv.config();
 import Fastify from "fastify";
 import cors from "@fastify/cors";
 import multipart from "@fastify/multipart";
-import courseRoutes from "../src/routes/courseRoutes";
+import courseRoutes from "./routes/courseRoutes";
 import userRoutes from './routes/userRoutes';
 import savedCourseRoutes from './routes/savedCourseRoutes';
 import friendRoutes from './routes/friendRoutes';
