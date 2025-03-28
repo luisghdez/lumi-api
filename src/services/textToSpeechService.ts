@@ -12,17 +12,29 @@ const elevenLabsClient = new ElevenLabsClient({ apiKey: process.env.ELEVENLABS_A
  * Generate a TTS mp3 buffer from OpenAI.
  * This function returns a raw Buffer so we can embed it in Base64.
  */
-export async function generateTtsAudioBuffer(text: string): Promise<Buffer> {
-  // Call the OpenAI TTS endpoint
-  const mp3 = await openai.audio.speech.create({
-    model: "tts-1",
-    voice: "echo",
-    input: text,
-    // Optional: speed: 1.2,
-  });
-  // Convert result to a Node.js Buffer
-  const audioBuffer = Buffer.from(await mp3.arrayBuffer());
-  return audioBuffer;
+export async function generateTtsAudioBuffer(text: string): Promise<any> {
+  const startTime = Date.now(); // Record start time
+
+  try {
+    // Call the OpenAI TTS endpoint
+    const mp3 = await openai.audio.speech.create({
+      model: "gpt-4o-mini-tts", 
+      voice: "echo",
+      input: text,
+    });
+
+    const endTime = Date.now(); // Record end time
+    const duration = endTime - startTime; // Calculate duration in milliseconds
+
+    console.log(`TTS generation with OpenAI took ${duration}ms`); // Log the time taken
+
+    // You could return mp3 or stream it directly here
+    return mp3;
+
+  } catch (err) {
+    console.error("Error generating TTS audio with OpenAI:", err);
+    throw err; // Re-throw the error so it can be caught in the caller
+  }
 }
 
 /**

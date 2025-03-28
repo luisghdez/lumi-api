@@ -16,7 +16,7 @@ export const reviewController = async (
 
     const { transcript, terms, attemptNumber, conversationHistory } = request.body as {
       transcript: string;
-      terms: Array<{ term: string; status: string }>;
+      terms: Array<{ term: string; score: number }>;
       attemptNumber: number;
       conversationHistory?: Array<{ role: "user" | "tutor"; message: string }>;
     };
@@ -46,19 +46,19 @@ export const reviewController = async (
     });
 
     // Fire-and-forget TTS generation in the background (don’t await)
-    generateElevenLabsTtsAudioBuffer(feedbackMessage)
+    generateTtsAudioBuffer(feedbackMessage)
       .then((audioBuffer) => {
         storeAudio(sessionId, audioBuffer);
       })
       .catch((err) => {
-        console.error("Error generating TTS audio with ElevenLabs:", err);
-        // Fallback to OpenAI TTS
-        generateTtsAudioBuffer(feedbackMessage)
+        console.error("Error generating TTS audio with OpenAI:", err);
+        // Fallback to ElevenLabs TTS
+        generateElevenLabsTtsAudioBuffer(feedbackMessage)
           .then((audioBuffer) => {
             storeAudio(sessionId, audioBuffer);
           })
           .catch((err) => {
-            console.error("Error generating TTS audio with OpenAI:", err);
+            console.error("Error generating TTS audio with ElevenLabs:", err);
           });
       });
 
