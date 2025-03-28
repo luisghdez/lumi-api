@@ -109,6 +109,7 @@ export const createCourseController = async (
       description,
       createdBy: user.uid,
       lessons,
+      mergedFlashcards,
     });
 
     await createSavedCourse(user.uid, { courseId, lessonCount: lessonCount });
@@ -167,7 +168,9 @@ export const getLessonsController = async (
     console.log(`📚 Fetching lessons for Course: ${courseId} (User: ${user.uid})`);
 
     // Fetch lessons along with the user's progress from Firebase
-    const lessons = await getLessonsWithProgressFromFirebase(user.uid, courseId);
+    const courseData = await getLessonsWithProgressFromFirebase(user.uid, courseId);
+    const { lessons, mergedFlashcards } = courseData;
+
 
     if (!lessons.length) {
       return reply.status(404).send({ error: "No lessons found for this course" });
@@ -176,6 +179,7 @@ export const getLessonsController = async (
     return reply.status(200).send({
       message: "Lessons retrieved successfully",
       lessons,
+      mergedFlashcards,
     });
   } catch (error) {
     console.error("Error fetching lessons:", error);

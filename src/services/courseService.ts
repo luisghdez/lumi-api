@@ -5,6 +5,7 @@ interface CourseData {
   description: string;
   createdBy: string;
   lessons: { [key: string]: any };
+  mergedFlashcards: any[];
 }
 
 // 🔹 Save Course in Firestore
@@ -16,6 +17,7 @@ export async function saveCourseToFirebase(courseData: CourseData): Promise<stri
       description: courseData.description,
       createdAt: new Date().toISOString(),
       createdBy: courseData.createdBy, // Store the creator
+      mergedFlashcards: courseData.mergedFlashcards,
     });
 
     const lessonsRef = courseRef.collection("lessons");
@@ -105,28 +107,32 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
   
       if (lessonsSnapshot.empty) {
         console.log(`No lessons found for course: ${courseId}`);
-        return [];
+        return { lessons: [], mergedFlashcards: [] };
       }
   
       // 3. Map over each lesson and merge the completed status from saved progress.
       const lessons = lessonsSnapshot.docs.map((doc) => {
         const lessonData = doc.data();
         const lessonProgress = progress[doc.id];
-
         return {
           id: doc.id,
           ...lessonData,
           completed: lessonProgress ? lessonProgress.completed : false,
         };
       });
-
-      // console.log('Lessons:', lessons);
   
-      return lessons;
+      // 4. Retrieve the course document to get the merged flashcards.
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      const mergedFlashcards = courseDoc.exists
+        ? courseDoc.data()?.mergedFlashcards || []
+        : [];
+  
+      return { lessons, mergedFlashcards };
     } catch (error) {
       console.error("Error retrieving lessons with progress:", error);
       throw new Error("Failed to fetch lessons with progress.");
     }
   };
+  
   
   

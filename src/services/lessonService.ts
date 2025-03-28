@@ -106,45 +106,6 @@ export function generateLessons(
       multipleChoiceIndex = 0,
       fillInBlankIndex = 0;
 
-  // Determine number of Strong Review Lessons
-  let strongReviewLessons = 1;
-  if (totalFlashcards > 12 && totalFlashcards <= 20) {
-    strongReviewLessons = 2;
-  } else if (totalFlashcards > 20 && totalFlashcards <= 30) {
-    strongReviewLessons = 3;
-  } else if (totalFlashcards > 30 && totalFlashcards <= 50) {
-    strongReviewLessons = 4;
-  } else if (totalFlashcards > 50) {
-    strongReviewLessons = 5;
-  }
-
-  // 🔹 Strong Review Phase: Flashcards + Match the Term
-  const flashcardsPerLesson = Math.ceil(totalFlashcards / strongReviewLessons);
-
-  for (let i = 0; i < strongReviewLessons; i++) {
-    const start = flashcardIndex;
-    const end = Math.min(start + flashcardsPerLesson, totalFlashcards);
-
-    // Grab planet name & build description
-    const planetName = shuffledPlanets.pop() || 'Unknown';
-    const currentFlashcards = repeatedFlashcards.slice(start, end);
-    const topThreeTerms = currentFlashcards.slice(0, 3).map(fc => fc.term);
-    const planetDescription = buildPlanetDescription(
-      'StrongReview',
-      planetName,
-      topThreeTerms
-    );
-
-    lessons[`lesson${lessonCount}`] = {
-      lessonNumber: lessonCount,
-      flashcards: currentFlashcards,
-      planetName,
-      planetDescription
-    };
-
-    flashcardIndex = end;
-    lessonCount++;
-  }
 
   // 🟡 Balanced Section: Mix of Problems + Flashcards + Speak/Write-All Questions
   let balancedLessonCount = 0;
