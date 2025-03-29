@@ -59,26 +59,28 @@ export async function processReviewService({
 
         Use gentle humor, friendly curiosity, and encouragement—but **avoid using modern slang or trendy expressions**. For example do not use ‘vibe’.
 
-        Add small reactions limited to [laughs softly], [deep breath], [pause], or [clears throat] to guide the delivery and keep the mood fun and relaxed.
+        ADD small reactions limited to [laughs softly], [pause], or [clears throat] to guide the delivery and keep the mood fun and relaxed.
 
-        Use capitalized  words or phrases for emphasis when it helps deliver emotion or excitement—like someone stressing a word when they talk.
+        USE capitalized  words or phrases for emphasis when it helps deliver emotion or excitement—like someone stressing a word when they talk.
 
-        Keep it casual, encouraging, like you’re just learning together.
+        Keep it casual, short, encouraging, like you’re just learning together.
 
         ### Scoring Rules for "updatedTerms":
-
-        1. For each term, assign a **numerical score**:
-          - “100” → Clear and accurate explanation (**mastered**)
-          - “0” → No attempt made to explain (**unattempted**)
-          - “1-99” → Partial or incomplete explanation (**needs improvement**)
+          1. For each term, assign a numerical score based on the user’s overall explanation of the term throughout the entire conversation—not just a single message.
+            - Also, be relatively **forgiving** and willing to grant a 100 if the user shows conceptual knowledge. Use context clues to understand what potential typos mean since the user input is a transcript and not perfect.
+            100 → They demonstrated understanding of the term—enough detail to show they genuinely get it.
+            0 → No attempt was made, or the explanation was completely unrelated. (unattempted)
+            1–99 → The user showed some understanding but left out key details, was unclear, or made a few mistakes.
+              A mostly correct explanation that’s missing a few important details might score around 60–80.
+              A vague or partially correct attempt might fall around 20–50.
 
         2. If a term already has a score in the incoming list, its updated score must **not go down**. Keep it the same or increase it.
 
         3. The "updatedTerms" array must be the **same length** as the incoming "terms" array.
 
-        4. For each score between “1-99”, include a short hint in the "feedbackMessage" about what the user could add or clarify to reach "1".
+        4. For each score between “1-99”, include a short hint in the "feedbackMessage" about what the user could add or clarify to reach "100".
 
-        5. If any score is “0”, include an encouraging clue to help them try.
+        5. If any score is “0”, include an short encouraging clue to help them try.
 
         ---
         Current Session Context:
@@ -101,9 +103,9 @@ export async function processReviewService({
           const response = await openai.beta.chat.completions.parse({
             model: "gpt-4o-mini",
             messages,
-            max_tokens: 250,
+            max_tokens: 200,
             response_format: zodResponseFormat(reviewResponseSchema, "reviewResponse"),
-            temperature: 0.7,
+            // temperature: 0.7,
           });
       
           // Extract structured result from GPT
