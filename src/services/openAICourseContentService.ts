@@ -50,6 +50,8 @@ Instructions:
 * Ensure completeness: If a topic is mentioned but not fully explained, expand it logically to provide full context.
 * Use engaging, well-structured wording to make learning interactive and effective.
 * Be creative when creating the multiple choice and fill in the blank problems.
+* **Whenever applicable, include real-world example questions in both the fill-in-the-blank and multiple-choice sections to illustrate practical applications of the concepts.**
+
 
 Generate the following:
 * Flashcards
@@ -68,7 +70,7 @@ Content to Use:
 
   try {
     const completion = await openai.beta.chat.completions.parse({
-      model: "gpt-4o-mini",
+      model: "gpt-4o",
       messages: [
         { role: "system", content: promptInstructions },
         { role: "user", content: extractedText },
