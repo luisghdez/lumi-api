@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { authenticateUser } from "../middleware/authUser";
-import { getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, saveCourseToFirebase } from "../services/courseService";
+import { getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, saveCourseToFirebase } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import fs from "fs/promises";
 import path from "path";
@@ -108,6 +108,7 @@ export const createCourseController = async (
       title,
       description,
       createdBy: user.uid,
+      // createdByName: user.,
       lessons,
       mergedFlashcards,
     });
@@ -142,6 +143,31 @@ export const getCoursesController = async (
     return reply.status(200).send({
       message: "Courses retrieved successfully",
       courses: userCourses,
+    });
+  } catch (error) {
+    console.error("Error fetching courses:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getFeaturedCoursesController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    console.log(`📚 Fetching featured courses`);
+
+    // Call Firebase service to fetch user's courses
+    const featuredCourses = await getFeaturedCoursesFromFirebase(user.uid);
+
+    return reply.status(200).send({
+      message: "Courses retrieved successfully",
+      courses: featuredCourses,
     });
   } catch (error) {
     console.error("Error fetching courses:", error);

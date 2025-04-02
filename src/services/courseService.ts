@@ -98,7 +98,37 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
       throw new Error("Failed to fetch saved courses.");
     }
   };
+
+  export const getFeaturedCoursesFromFirebase = async (userId: string) => {
+    try {
+      // Query for courses NOT created by this user, ordered by creation date descending
+      // and limited to 5.
+      const snapshot = await db
+        .collection("courses")
+        .where("createdBy", "!=", userId)   // Firestore now supports "!=" queries 
+        .orderBy("createdAt", "desc")       // Make sure "createdAt" is indexed
+        .limit(5)
+        .get();
   
+      if (snapshot.empty) {
+        console.log("No courses found that weren't created by this user.");
+        return [];
+      }
+  
+      // Convert snapshots to a usable array
+      const courses = snapshot.docs.map((doc) => {
+        return {
+          id: doc.id,
+          ...doc.data(),
+        };
+      });
+  
+      return courses;
+    } catch (error) {
+      console.error("Error retrieving courses:", error);
+      throw new Error("Failed to fetch courses.");
+    }
+  };    
 
   export const getLessonsWithProgressFromFirebase = async (
     userId: string,
