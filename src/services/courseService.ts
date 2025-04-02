@@ -62,7 +62,7 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         .collection("users")
         .doc(userId)
         .collection("savedCourses")
-        .orderBy("createdAt", "desc");
+        .orderBy("lastAttempt", "desc");
   
       const snapshot = await savedCoursesRef.get();
   
@@ -119,6 +119,14 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         .doc(userId)
         .collection("savedCourses")
         .doc(courseId);
+
+        await savedCourseRef.set(
+          {
+            lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
+          },
+          { merge: true }
+        );
+        
       const savedCourseSnapshot = await savedCourseRef.get();
   
       // Get the progress object (if exists) or default to an empty object.
