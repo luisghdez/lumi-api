@@ -1,4 +1,4 @@
-import { db } from "../config/firebaseConfig";
+import { admin, db } from "../config/firebaseConfig";
 
 interface CourseData {
   title: string;
@@ -58,8 +58,12 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
 
   export const getUsersSavedCoursesFromFirebase = async (userId: string) => {
     try {
-      // Reference the "savedCourses" subcollection under the user's document
-      const savedCoursesRef = db.collection("users").doc(userId).collection("savedCourses").orderBy("createdAt", "desc");
+      const savedCoursesRef = db
+        .collection("users")
+        .doc(userId)
+        .collection("savedCourses")
+        .orderBy("createdAt", "desc");
+  
       const snapshot = await savedCoursesRef.get();
   
       if (snapshot.empty) {
@@ -67,10 +71,26 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         return [];
       }
   
-      const courses = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+      const courses = snapshot.docs.map((doc) => {
+        const data = doc.data();
+  
+        // Safely extract lessons. Adjust the path below if your Firestore structure differs.
+        const lessons = data?.progress?.lessons || {};
+  
+        // If `lessons` is an object where each key is a lesson,
+        // and each lesson has a structure like { completed: boolean }:
+        const totalLessons = Object.keys(lessons).length;
+        const completedLessons = Object.values(lessons).filter(
+          (lesson: any) => lesson.completed
+        ).length;
+  
+        return {
+          id: doc.id,
+          ...data,
+          totalLessons,
+          completedLessons,
+        };
+      });
   
       return courses;
     } catch (error) {
@@ -78,6 +98,7 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
       throw new Error("Failed to fetch saved courses.");
     }
   };
+  
 
   export const getLessonsWithProgressFromFirebase = async (
     userId: string,
