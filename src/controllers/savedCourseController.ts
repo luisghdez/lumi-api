@@ -1,5 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { createSavedCourse, markLessonAsCompleted } from "../services/savedCourseService";
+import { updateUserStreak } from "../services/streakService";
 
 interface CreateSavedCourseRequestBody {
   courseId: string;
@@ -49,8 +50,14 @@ export const markLessonCompletedController = async (
 
     // Call the service to mark the lesson as completed and update user XP
     await markLessonAsCompleted(user.uid, courseId, lessonId, xp);
+    // 2) Update the user streak and capture the result
+    const streakResult = await updateUserStreak(user.uid);
 
-    return reply.status(200).send({ message: "Lesson marked as completed and XP updated." });
+    // 3) Return response, including whether the streak was extended
+    return reply.status(200).send({
+      message: "Lesson marked as completed, XP updated, and streak checked.",
+      streakInfo: streakResult,
+    });
   } catch (error) {
     console.error("Error marking lesson as completed:", error);
     return reply.status(500).send({ error: "Internal Server Error" });

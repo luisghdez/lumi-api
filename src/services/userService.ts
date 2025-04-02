@@ -1,4 +1,5 @@
 import { db } from "../config/firebaseConfig";
+import { checkStreakOnLogin } from "./streakService";
 
 interface UserData {
   uid: string;
@@ -43,11 +44,16 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
 
   export async function getUserProfile(userId: string): Promise<any> {
     try {
-      const userDoc = await db.collection("users").doc(userId).get();
-      if (!userDoc.exists) {
+      // Step 1: Check if user missed a day -> possibly reset streak
+      const possiblyUpdatedUserData = await checkStreakOnLogin(userId);
+  
+      // Step 2: If user doc not found, return null
+      if (!possiblyUpdatedUserData) {
         return null;
       }
-      return { id: userDoc.id, ...userDoc.data() };
+  
+      // Step 3: Return the (possibly updated) user data
+      return possiblyUpdatedUserData;
     } catch (error) {
       console.error("Error fetching user profile from Firestore:", error);
       throw error;

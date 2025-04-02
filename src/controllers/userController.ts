@@ -34,18 +34,23 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
     }
   }
 
-  export async function getUserProfileController(request: FastifyRequest, reply: FastifyReply) {
+  export async function getUserProfileController(
+    request: FastifyRequest,
+    reply: FastifyReply
+  ) {
     try {
       const { userId } = request.params as { userId: string };
       if (!userId) {
         return reply.status(400).send({ error: "Missing userId parameter" });
       }
   
+      // 1) getUserProfile now includes the streak check
       const userProfile = await getUserProfile(userId);
       if (!userProfile) {
         return reply.status(404).send({ error: "User not found" });
       }
-      
+
+      // userProfile now looks like: { id: "abc", streakCount: 0, streakLost: true, ... }
       return reply.status(200).send({ user: userProfile });
     } catch (error) {
       console.error("Error fetching user profile:", error);
