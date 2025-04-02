@@ -57,6 +57,64 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
   }
 }
 
+export async function createSharedSavedCourse(userId: string, courseId: string): Promise<string> {
+  try {
+    // Validate that the course exists
+    const courseRef = db.collection("courses").doc(courseId);
+    const courseSnapshot = await courseRef.get();
+    if (!courseSnapshot.exists) {
+      throw new Error("Course does not exist");
+    }
+
+    const courseData = courseSnapshot.data();
+    const courseTitle = courseData?.title || null;
+    const courseDescription = courseData?.description || null;
+
+    // Retrieve lessons count from the course's "lessons" subcollection
+    const lessonsSnapshot = await courseRef.collection("lessons").get();
+    const lessonCount = lessonsSnapshot.size;
+
+    // Build the lessons progress object with empty progress (completed: false)
+    const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
+    for (let i = 1; i <= lessonCount; i++) {
+      lessonsProgress[`lesson${i}`] = { completed: false };
+    }
+
+    // Use the courseId as the saved course ID for consistency
+    const savedCourseId = courseId;
+
+    // Create a reference to the user's savedCourses subcollection
+    const savedCourseRef = db
+      .collection("users")
+      .doc(userId)
+      .collection("savedCourses")
+      .doc(savedCourseId);
+
+    const timestamp = new Date().toISOString();
+
+    await savedCourseRef.set({
+      courseId: courseId,
+      title: courseTitle,
+      description: courseDescription,
+      saved: true, // Indicates that the user has saved this course
+      progress: {
+        overallScore: 0, // Default overall score; update later if needed
+        lessons: lessonsProgress,
+      },
+      lastAttempt: timestamp,
+      createdAt: timestamp,
+    });
+
+    console.log(`Saved course created under user ${userId} with ID: ${savedCourseRef.id}`);
+    return savedCourseRef.id;
+  } catch (error) {
+    console.error("Error saving course:", error);
+    throw error;
+  }
+}
+
+
+
 export const markLessonAsCompleted = async (
   userId: string,
   courseId: string,
