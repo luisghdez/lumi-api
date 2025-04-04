@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createSavedCourse, markLessonAsCompleted } from "../services/savedCourseService";
+import { createSavedCourse, createSharedSavedCourse, markLessonAsCompleted } from "../services/savedCourseService";
 import { updateUserStreak } from "../services/streakService";
 
 interface CreateSavedCourseRequestBody {
@@ -9,7 +9,7 @@ interface CreateSavedCourseRequestBody {
 
 export async function createSavedCourseController(request: FastifyRequest, reply: FastifyReply) {
   try {
-    const { courseId, lessonCount } = request.body as CreateSavedCourseRequestBody;
+    const { courseId } = request.body as CreateSavedCourseRequestBody;
     const user = (request as any).user;
 
     if (!user || !user.uid) {
@@ -18,8 +18,8 @@ export async function createSavedCourseController(request: FastifyRequest, reply
 
     const userId = user.uid;
 
-    const savedCourseId = await createSavedCourse(userId, { courseId, lessonCount });
-    reply.code(201).send({ savedCourseId });
+    const savedCourse = await createSharedSavedCourse(userId, courseId);
+    reply.code(201).send(savedCourse);
   } catch (error) {
     console.error("Error creating saved course:", error);
     reply.code(500).send({ error: "Failed to create saved course" });

@@ -57,7 +57,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
   }
 }
 
-export async function createSharedSavedCourse(userId: string, courseId: string): Promise<string> {
+export async function createSharedSavedCourse(userId: string, courseId: string): Promise<{ id: string, lessonCount: number }> {
   try {
     // Validate that the course exists
     const courseRef = db.collection("courses").doc(courseId);
@@ -73,7 +73,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
     // Retrieve lessons count from the course's "lessons" subcollection
     const lessonsSnapshot = await courseRef.collection("lessons").get();
     const lessonCount = lessonsSnapshot.size;
-
+    
     // Build the lessons progress object with empty progress (completed: false)
     const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
     for (let i = 1; i <= lessonCount; i++) {
@@ -106,8 +106,11 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
     });
 
     console.log(`Saved course created under user ${userId} with ID: ${savedCourseRef.id}`);
-    return savedCourseRef.id;
-  } catch (error) {
+    return {
+      id: savedCourseRef.id,
+      lessonCount: lessonCount,
+    };
+    } catch (error) {
     console.error("Error saving course:", error);
     throw error;
   }
