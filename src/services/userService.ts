@@ -27,6 +27,13 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
           emailLower: data.email?.toLowerCase() || "",
           nameLower: data.name?.toLowerCase() || "",
           profilePicture: data.profilePicture || "default",
+  
+          // New fields for freemium control
+          isPremium: false,
+          courseSlotsUsed: 0,
+          maxCourseSlots: 2,
+  
+          // Gamification
           xpCount: 0,
           streakCount: 0,
           createdAt: new Date().toISOString(),
