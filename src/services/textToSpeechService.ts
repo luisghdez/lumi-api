@@ -15,12 +15,15 @@ const elevenLabsClient = new ElevenLabsClient({ apiKey: process.env.ELEVENLABS_A
 export async function generateTtsAudioBuffer(text: string): Promise<any> {
   const startTime = Date.now(); // Record start time
 
+  const instructions = "Delivery: Fast-paced and conversational, like a friend cracking up while telling you a hilarious story. Includes quick pauses for effect and occasional bursts of laughter or mock seriousness.\n\nVoice: Upbeat, clever, and a little cheeky — like someone who’s always in on the joke and loves making you laugh without trying too hard.\n\nTone: Playful and informal, with a hint of 'can you believe this?' attitude. Think of a stand-up comic riffing off something wild.\n\nPronunciation: Clear and expressive, but casual — words may run together a bit when the excitement ramps up, with dramatic emphasis on the punchlines.\n";
+
   try {
     // Call the OpenAI TTS endpoint
     const mp3 = await openai.audio.speech.create({
       model: "gpt-4o-mini-tts", 
       voice: "echo",
       input: text,
+      instructions: instructions,
     });
 
     const endTime = Date.now(); // Record end time

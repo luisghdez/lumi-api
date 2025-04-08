@@ -22,6 +22,8 @@ export const reviewController = async (
       attemptNumber: number;
       conversationHistory?: Array<{ role: "user" | "tutor"; message: string }>;
     };
+
+    console.log("Received request body:", request.body);
     
 
     if (!transcript || !Array.isArray(terms) || typeof attemptNumber !== "number") {
