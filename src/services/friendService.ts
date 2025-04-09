@@ -70,26 +70,60 @@ export async function createFriendRequest(senderId: string, recipientId: string)
 export async function getFriendRequests(userId: string): Promise<{ sent: any[]; received: any[] }> {
   try {
     const friendRequestsRef = db.collection("friendRequests");
+    const usersCollection = db.collection("users");
 
-    // Query for sent friend requests.
+    // Query for sent friend request we can remove if needed, removed from fronteddsss
     const sentSnapshot = await friendRequestsRef.where("senderId", "==", userId).get();
 
-    // Query for friend requests where the current user is included in the userIds array.
-    const receivedSnapshot = await friendRequestsRef.where("userIds", "array-contains", userId).get();
-
+    const receivedSnapshot = await friendRequestsRef
+    .where("userIds", "array-contains", userId)
+    .where("status", "==", "pending")
+    .get();
+  
     const sentRequests: any[] = [];
-    sentSnapshot.forEach((doc) => {
-      sentRequests.push({ id: doc.id, ...doc.data() });
-    });
+    for (const doc of sentSnapshot.docs) {
+      const data = doc.data();
+      const recipientId = data.userIds.find((id: string) => id !== userId);
+      let recipientData = null;
+
+      if (recipientId) {
+        const recipientSnap = await usersCollection.doc(recipientId).get();
+        if (recipientSnap.exists) {
+          recipientData = recipientSnap.data();
+        }
+      }
+
+      sentRequests.push({
+        id: doc.id,
+        ...data,
+        name: recipientData?.name ?? null,
+        email: recipientData?.email ?? null,
+        avatarUrl: recipientData?.avatarUrl ?? null,
+      });
+    }
 
     const receivedRequests: any[] = [];
-    receivedSnapshot.forEach((doc) => {
+    for (const doc of receivedSnapshot.docs) {
       const data = doc.data();
-      // Exclude requests sent by the current user (as these are already in sentRequests)
+      
+      // Exclude requests sent by the current user
       if (data.senderId !== userId) {
-        receivedRequests.push({ id: doc.id, ...data });
+        const senderSnap = await usersCollection.doc(data.senderId).get();
+        let senderData = null;
+
+        if (senderSnap.exists) {
+          senderData = senderSnap.data();
+        }
+
+        receivedRequests.push({
+          id: doc.id,
+          ...data,
+          name: senderData?.name ?? null,
+          email: senderData?.email ?? null,
+          avatarUrl: senderData?.avatarUrl ?? null,
+        });
       }
-    });
+    }
 
     return { sent: sentRequests, received: receivedRequests };
   } catch (error) {
