@@ -49,10 +49,6 @@ export async function processReviewService({
   attemptNumber,
   conversationHistory,
 }: ProcessReviewParams) {
-  console.log("log the progress passed in the function", terms);
-
-  const currentScore = terms.find(t => t.term === focusTerm)?.score ?? 0;
-  const termsListString = terms.map(t => `- ${t.term} (score: ${t.score})`).join("\n");
 
   try {
     // Construct a system message that instructs GPT to return valid JSON
@@ -63,7 +59,7 @@ export async function processReviewService({
     Use filler words naturally, like "ummm", “uh,” "Weeeellll...", "Like" “you know,” or “I mean…”.  
     The speech should feel spontaneous, cheerful, and humorous, toss in jokes and funny metaphors.
     Think 5% BeReal, 20% Ms. Frizzle, 25% SNL Weekend Update, and 50% nerdy best friend.  
-    
+
     🎯 Focus ONLY on **${focusTerm}** (ignore all others unless transitioning).
     • Score from 0–100 (never lower existing scores).
     • If score = 100: CELEBRATE and transition to the NEXT TERM in the list (the one right after **${focusTerm}**), asking a follow-up question about it.
@@ -75,7 +71,6 @@ export async function processReviewService({
     💡 When transitioning to a new term:
     - Always ask a SPECIFIC question about the new term — give a clue or example.
     - You are guiding the user, not quizzing them in the dark.
-
     
     📤 OUTPUT (JSON format):
     - **updatedTerms**: return ALL terms, only modify **${focusTerm}**’s score.
