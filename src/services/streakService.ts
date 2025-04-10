@@ -73,56 +73,57 @@ export const updateUserStreak = async (userId: string): Promise<UpdateStreakResu
  * If missed, resets streak to 0 and returns streakLost: true.
  * Otherwise, returns streakLost: false.
  */
-export async function checkStreakOnLogin(userId: string) {
-  try {
-    const userRef = db.collection("users").doc(userId);
-    const userSnap = await userRef.get();
 
-    if (!userSnap.exists) {
-      console.warn(`User ${userId} not found, cannot reset streak.`);
+export async function checkStreakOnLogin(userData: any): Promise<any> {
+  try {
+    // Ensure userData is provided and has an ID.
+    if (!userData || !userData.id) {
+      console.warn("User data is missing or incomplete; cannot check streak.");
       return null;
     }
 
-    const userData = userSnap.data() || {};
+    const userId = userData.id;
     const currentStreak = userData.streakCount || 0;
-    const lastCheckIn = userData.lastCheckIn; // Could be an ISO string or Timestamp
+    const lastCheckIn = userData.lastCheckIn; // Could be an ISO string or a Firestore Timestamp
 
+    // If there's no lastCheckIn, there's no streak check to perform.
     if (!lastCheckIn) {
-      // No lastCheckIn, so no streak to lose
       return {
-        id: userId,
         ...userData,
         streakLost: false,
       };
     }
 
-    //storing as Firestore Timestamp:
-    const lastCheckInDate = (lastCheckIn as admin.firestore.Timestamp).toDate();
+    // Convert lastCheckIn to a Date instance.
+    // If lastCheckIn is a Firestore Timestamp, use its toDate() method; otherwise assume it's a date string.
+    const lastCheckInDate =
+      typeof lastCheckIn.toDate === "function"
+        ? lastCheckIn.toDate()
+        : new Date(lastCheckIn);
+
     const now = new Date();
     const msInADay = 24 * 60 * 60 * 1000;
     const dayDiff = Math.floor((now.getTime() - lastCheckInDate.getTime()) / msInADay);
 
-    // If user hasn't done anything today (dayDiff >= 1) and they had a streak
+    // If the user missed a day (dayDiff >= 1) and had a positive streak,
+    // we reset the streak.
     if (dayDiff >= 1 && currentStreak > 0) {
-      // Reset the streak
-      await userRef.update({
+      await db.collection("users").doc(userId).update({
         streakCount: 0,
       });
       console.log(`User ${userId}'s streak reset from ${currentStreak} to 0.`);
 
       return {
-        id: userId,
         ...userData,
         streakCount: 0,
-        streakLost: true, // <-- indicate streak was lost
+        streakLost: true, // Indicate that a streak was lost.
       };
     }
 
-    // Otherwise, no change to the streak
+    // Otherwise, no change is needed.
     return {
-      id: userId,
       ...userData,
-      streakLost: false, // <-- no streak lost
+      streakLost: false,
     };
   } catch (error) {
     console.error("Error checking user streak on login:", error);

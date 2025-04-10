@@ -1,5 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { createFireStoreUser, getUserProfile } from "../services/userService";
+import { checkStreakOnLogin } from "../services/streakService";
 
 interface CreateUserRequestBody {
   email: string;
@@ -44,14 +45,19 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
         return reply.status(400).send({ error: "Missing userId parameter" });
       }
   
-      // 1) getUserProfile now includes the streak check
-      const userProfile = await getUserProfile(userId);
-      if (!userProfile) {
+      // 1) Retrieve the user data from the database.
+      const userData = await getUserProfile(userId);
+      if (!userData) {
         return reply.status(404).send({ error: "User not found" });
       }
-
-      // userProfile now looks like: { id: "abc", streakCount: 0, streakLost: true, ... }
-      return reply.status(200).send({ user: userProfile });
+  
+      // 2) Check and update the user's streak if necessary.
+      // TODO fix streak or remove for now
+      const updatedUserData = await checkStreakOnLogin(userData);
+  
+      // The response object now might look like:
+      // { id: "abc", streakCount: 0, streakLost: true, name: "Example User", ... }
+      return reply.status(200).send({ user: updatedUserData });
     } catch (error) {
       console.error("Error fetching user profile:", error);
       return reply.status(500).send({ error: "Failed to fetch user profile" });

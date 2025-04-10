@@ -1,4 +1,4 @@
-import { db } from "../config/firebaseConfig";
+import { admin, db } from "../config/firebaseConfig";
 
 // Service that queries Firestore for users matching the given string.
 // Uses lowercased fields for case-insensitive prefix matches.
@@ -132,36 +132,51 @@ export async function getFriendRequests(userId: string): Promise<{ sent: any[]; 
   }
 }
 
-// Responds to a friend request.
-// If "accept" is true, updates the status to "accepted" and sets an optional "acceptedAt" timestamp.
-// If "accept" is false, deletes the friend request.
-export async function respondFriendRequest(requestId: string, accept: boolean, userId: string): Promise<any> {
-  try {
-    const friendRequestRef = db.collection("friendRequests").doc(requestId);
-    const doc = await friendRequestRef.get();
-    if (!doc.exists) {
-      throw new Error("Friend request not found");
-    }
-    const data = doc.data();
-    if (!data) {
-      throw new Error("Friend request data is undefined");
-    }
+export async function respondFriendRequest(
+  requestId: string,
+  accept: boolean,
+  userId: string
+): Promise<any> {
+  const friendRequestRef = db.collection("friendRequests").doc(requestId);
 
-    // Verify the current user is a participant in the friend request.
-    if (!data.userIds.includes(userId)) {
+  try {
+    const doc = await friendRequestRef.get();
+
+    if (!doc.exists) throw new Error("Friend request not found");
+    const data = doc.data();
+    if (!data) throw new Error("Friend request data is undefined");
+
+    const userIds: string[] = data.userIds;
+    if (!userIds.includes(userId)) {
       throw new Error("Unauthorized: You are not a participant in this friend request");
     }
-    
+
     if (accept) {
-      // Update the friend request status to "accepted".
-      await friendRequestRef.update({
-        status: "accepted",
-        acceptedAt: new Date().toISOString(),
+      // Start a Firestore transaction
+      await db.runTransaction(async (transaction) => {
+        // Update friend request
+        transaction.update(friendRequestRef, {
+          status: "accepted",
+          acceptedAt: new Date().toISOString(),
+        });
+
+        // Increment friend count for both users
+        const userRefs = userIds.map((id) => db.collection("users").doc(id));
+
+        userRefs.forEach((ref) => {
+          transaction.update(ref, {
+            friendCount: admin.firestore.FieldValue.increment(1),
+          });
+        });
       });
+
       const updatedDoc = await friendRequestRef.get();
-      return { message: "Friend request accepted", friendRequest: { id: updatedDoc.id, ...updatedDoc.data() } };
+      return {
+        message: "Friend request accepted",
+        friendRequest: { id: updatedDoc.id, ...updatedDoc.data() },
+      };
     } else {
-      // Delete the friend request to decline/cancel it.
+      // Decline or cancel
       await friendRequestRef.delete();
       return { message: "Friend request declined/cancelled and removed" };
     }
