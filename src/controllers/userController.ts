@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createFireStoreUser, getUserProfile } from "../services/userService";
+import { createFireStoreUser, deleteFireStoreUser, getUserProfile } from "../services/userService";
 import { checkStreakOnLogin } from "../services/streakService";
 
 interface CreateUserRequestBody {
@@ -61,5 +61,23 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
     } catch (error) {
       console.error("Error fetching user profile:", error);
       return reply.status(500).send({ error: "Failed to fetch user profile" });
+    }
+  }
+
+  export async function deleteUserController(request: FastifyRequest, reply: FastifyReply) {
+    try {
+      // The user object is set by your authenticateUser middleware
+      const user = (request as any).user;
+      if (!user?.uid) {
+        return reply.status(401).send({ error: "Unauthorized - no user data" });
+      }
+  
+      // Delete the doc from Firestore (or any other store).
+      await deleteFireStoreUser(user.uid);
+  
+      return reply.status(200).send({ message: `User doc ${user.uid} deleted.` });
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      return reply.status(500).send({ error: "Failed to delete user" });
     }
   }

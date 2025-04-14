@@ -61,3 +61,47 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       throw error;
     }
   }
+
+  export async function deleteFireStoreUser(uid: string): Promise<void> {
+    try {
+      // Reference to the main user document
+      const userDocRef = db.collection("users").doc(uid);
+      const docSnap = await userDocRef.get();
+  
+      if (!docSnap.exists) {
+        console.log(`User doc ${uid} does not exist.`);
+        return; // Or throw an error if needed.
+      }
+  
+      // -------------------------------
+      // Step 1: Delete Documents in Subcollections
+      // -------------------------------
+  
+      // Example: Delete all documents in the 'savedCourses' subcollection.
+      const savedCoursesCollectionRef = userDocRef.collection("savedCourses");
+      const savedCoursesSnapshot = await savedCoursesCollectionRef.get();
+  
+      // Use a batch to delete all documents (up to 500 at a time)
+      const batch = db.batch();
+      savedCoursesSnapshot.forEach((doc) => {
+        batch.delete(doc.ref);
+      });
+  
+      // Commit the batch if there were any documents to delete.
+      if (!savedCoursesSnapshot.empty) {
+        await batch.commit();
+        console.log(`✅ Deleted ${savedCoursesSnapshot.size} savedCourses for UID: ${uid}`);
+      } else {
+        console.log("ℹ️ No savedCourses to delete for UID:", uid);
+      }
+  
+      // -------------------------------
+      // Step 2: Delete the main user document
+      // -------------------------------
+      await userDocRef.delete();
+      console.log(`✅ Deleted user doc for UID: ${uid}`);
+    } catch (error) {
+      console.error("🔥 Error deleting user profile and subcollections:", error);
+      throw error; // Propagate the error to be handled by the controller.
+    }
+  }
