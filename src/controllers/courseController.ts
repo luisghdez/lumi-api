@@ -1,21 +1,27 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { authenticateUser } from "../middleware/authUser";
 import { getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, saveCourseToFirebase } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
-import fs from "fs/promises";
-import path from "path";
-import os from "os";
-import { extractTextFromPDF } from "../services/pdfService";
 import { extractTextFromImage } from "../services/visionService";
 import { openAiCourseContent } from "../services/openAICourseContentService";
-import { getUserCoursesFromFirebase } from "../services/courseService";
 import { createSavedCourse } from "../services/savedCourseService";
+import { parseOfficeAsync } from "officeparser";
 
+
+const OFFICE_MIME_TYPES = new Set([
+  "application/pdf",
+  "application/vnd.openxmlformats-officedocument.presentationml.presentation", // pptx
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",   // docx
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",         // xlsx
+  "application/msword",                                                        // legacy .doc
+  "application/vnd.ms-powerpoint",                                             // legacy .ppt
+  "application/vnd.ms-excel"                                                   // legacy .xls
+]);
 
 export const createCourseController = async (
   request: FastifyRequest,
   reply: FastifyReply
 ) => {
+
   try {
     const user = (request as any).user;
 
@@ -35,28 +41,22 @@ export const createCourseController = async (
       if ("file" in part) {
         console.log("Processing file:", part.filename, part.mimetype);
 
-        const tempDir = os.tmpdir();
-        const tempFilePath = path.join(tempDir, part.filename);
-
-        console.log("Saving file temporarily:", tempFilePath);
-
         const fileBuffer = await part.toBuffer();
-        await fs.writeFile(tempFilePath, fileBuffer);
 
         let fileExtractedText = "";
-        if (part.mimetype === "application/pdf") {
-          console.log("Extracting text from PDF...");
-          fileExtractedText = await extractTextFromPDF(tempFilePath);
+
+        if (OFFICE_MIME_TYPES.has(part.mimetype)) {
+          console.log("Extracting text from Office/PDF...");
+          fileExtractedText = await parseOfficeAsync(fileBuffer);
+    
         } else if (part.mimetype.startsWith("image/")) {
           console.log("Extracting text from image...");
-          fileExtractedText = await extractTextFromImage(tempFilePath);
+          fileExtractedText = await extractTextFromImage(fileBuffer);
+    
         } else {
           console.log("Reading file as plain text...");
-          fileExtractedText = (await fs.readFile(tempFilePath, "utf8")).toString();
+          fileExtractedText = fileBuffer.toString("utf8");
         }
-
-        console.log("Deleting temporary file:", tempFilePath);
-        await fs.unlink(tempFilePath);
 
         if (fileExtractedText.trim()) {
           extractedFilesText.push(fileExtractedText);
