@@ -12,9 +12,6 @@ function shuffleArray<T>(array: T[]): T[] {
   return arr;
 }
 
-// 3. Create a queue of planet names to ensure no duplicates
-const shuffledPlanets = shuffleArray(planetThemes.planets);
-
 // 4. Function to get a random description template
 function getRandomDescription(category: string): string {
   const templates = (planetThemes.descriptions as any)[category] || [];
@@ -92,6 +89,8 @@ export function generateLessons(
 ): { lessons: { [key: string]: Lesson }, lessonCount: number } {
   const lessons: { [key: string]: Lesson } = {};
   let lessonCount = 1;
+
+  const shuffledPlanets = shuffleArray(planetThemes.planets);
 
   const totalFlashcards = flashcards.length;
   const totalMultipleChoice = multipleChoice.length;

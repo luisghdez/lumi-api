@@ -108,7 +108,7 @@ export const createCourseController = async (
       title,
       description,
       createdBy: user.uid,
-      // createdByName: user.,
+      // createdByName: user.name,
       lessons,
       mergedFlashcards,
     });
@@ -118,6 +118,7 @@ export const createCourseController = async (
     return reply.status(201).send({
       message: "Course created successfully",
       courseId,
+      lessonCount
     });
   } catch (error) {
     console.error("Error creating course:", error);
