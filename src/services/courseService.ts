@@ -97,38 +97,37 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
       console.error("Error retrieving saved courses:", error);
       throw new Error("Failed to fetch saved courses.");
     }
-  };
+  }; 
 
-  export const getFeaturedCoursesFromFirebase = async (userId: string) => {
+  // fixed featured courses for now
+  export const getFeaturedCoursesFromFirebase = async () => {
     try {
-      // Query for courses NOT created by this user, ordered by creation date descending
-      // and limited to 5.
+      // Query for courses CREATED BY a specific user, ordered by creation date descending and limited to 8.
       const snapshot = await db
         .collection("courses")
-        .where("createdBy", "!=", userId)   // Firestore now supports "!=" queries 
-        .orderBy("createdAt", "desc")       // Make sure "createdAt" is indexed
-        .limit(5)
+        .where("createdBy", "==", "QE4WkIOW1gXzN0gGPZFvOX65Cpr2")
+        .orderBy("createdAt", "asc")   // ensure you have an index on createdAt
+        .limit(8)
         .get();
+
+      console.log("ascccc:", snapshot);
   
       if (snapshot.empty) {
-        console.log("No courses found that weren't created by this user.");
+        console.log("No courses found for that creator.");
         return [];
       }
   
       // Convert snapshots to a usable array
-      const courses = snapshot.docs.map((doc) => {
-        return {
-          id: doc.id,
-          ...doc.data(),
-        };
-      });
-  
-      return courses;
+      return snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
     } catch (error) {
       console.error("Error retrieving courses:", error);
       throw new Error("Failed to fetch courses.");
     }
-  };    
+  };
+  
 
   export const getLessonsWithProgressFromFirebase = async (
     userId: string,

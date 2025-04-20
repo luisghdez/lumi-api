@@ -27,7 +27,7 @@ export const extractTextFromImage = async (
   const dataUrl = `data:${mimeType};base64,${base64Image}`;
 
   const response = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: "gpt-4.1-nano",
     messages: [
       {
         role: "user",

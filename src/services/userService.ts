@@ -62,6 +62,32 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
     }
   }
 
+  export async function updateFireStoreUser(
+    uid: string,
+    data: Partial<UserProfileData>
+  ): Promise<void> {
+    try {
+      const userRef = db.collection("users").doc(uid);
+      // Build the update payload.
+      const updateData: any = {};
+  
+      if (data.name) {
+        updateData.name = data.name;
+        updateData.nameLower = data.name.toLowerCase();
+      }
+      if (data.profilePicture) {
+        updateData.profilePicture = data.profilePicture;
+      }
+  
+      await userRef.update(updateData);
+      console.log(`✅ Updated user doc for UID: ${uid}`);
+    } catch (error) {
+      console.error("Error updating Firestore user:", error);
+      throw error;
+    }
+  }
+  
+
   export async function deleteFireStoreUser(uid: string): Promise<void> {
     try {
       // Reference to the main user document

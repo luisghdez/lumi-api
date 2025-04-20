@@ -196,7 +196,7 @@ export const getFeaturedCoursesController = async (
     console.log(`📚 Fetching featured courses`);
 
     // Call Firebase service to fetch user's courses
-    const featuredCourses = await getFeaturedCoursesFromFirebase(user.uid);
+    const featuredCourses = await getFeaturedCoursesFromFirebase();
 
     return reply.status(200).send({
       message: "Courses retrieved successfully",

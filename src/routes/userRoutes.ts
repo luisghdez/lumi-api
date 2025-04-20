@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { deleteUserController, ensureUserExistsController, getUserProfileController } from "../controllers/userController";
+import { deleteUserController, ensureUserExistsController, getUserProfileController, updateUserProfileController } from "../controllers/userController";
 import { authenticateUser } from "../middleware/authUser";
 
 async function userRoutes(fastify: FastifyInstance) {
@@ -15,6 +15,13 @@ async function userRoutes(fastify: FastifyInstance) {
     url: "/users/:userId",
     preHandler: authenticateUser, // Ensures the request is authenticated.
     handler: getUserProfileController,
+  });
+
+  fastify.route({
+    method: "PATCH",
+    url: "/users/me",
+    preHandler: authenticateUser,
+    handler: updateUserProfileController,
   });
 
   fastify.route({

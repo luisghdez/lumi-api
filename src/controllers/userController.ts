@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createFireStoreUser, deleteFireStoreUser, getUserProfile } from "../services/userService";
+import { createFireStoreUser, deleteFireStoreUser, getUserProfile, updateFireStoreUser } from "../services/userService";
 import { checkStreakOnLogin } from "../services/streakService";
 
 interface CreateUserRequestBody {
@@ -61,6 +61,35 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
     } catch (error) {
       console.error("Error fetching user profile:", error);
       return reply.status(500).send({ error: "Failed to fetch user profile" });
+    }
+  }
+
+  export async function updateUserProfileController(request: FastifyRequest, reply: FastifyReply) {
+    try {
+      const user = (request as any).user;
+      if (!user || !user.uid) {
+        return reply.status(401).send({ error: "Unauthorized" });
+      }
+  
+      // Extract the fields from the request body.
+      // Only name and profilePicture are allowed for updates.
+      const { name, profilePicture } = request.body as {
+        name?: string;
+        profilePicture?: string;
+      };
+  
+      // Validate that at least one field is provided.
+      if (!name && !profilePicture) {
+        return reply.status(400).send({ error: "No update fields provided." });
+      }
+  
+      // Update the Firestore user document using the service.
+      await updateFireStoreUser(user.uid, { name, profilePicture });
+  
+      reply.code(200).send({ message: "User profile updated successfully." });
+    } catch (error) {
+      console.error("Error updating user profile:", error);
+      reply.code(500).send({ error: "Failed to update user profile" });
     }
   }
 
