@@ -17,42 +17,61 @@ const OFFICE_MIME_TYPES = new Set([
   "application/vnd.ms-excel"                                                   // legacy .xls
 ]);
 
+/**
+ * Splits `text` into chunks ≤ maxLen, breaking at the last `.` before the limit.
+ */
+function splitIntoChunks(text: string, maxLen = 1500): string[] {
+  const chunks: string[] = [];
+  let start = 0;
+
+  while (start < text.length) {
+    if (text.length - start <= maxLen) {
+      chunks.push(text.slice(start).trim());
+      break;
+    }
+
+    const end = start + maxLen;
+    const periodIdx = text.lastIndexOf(".", end);
+    const splitPos = periodIdx > start ? periodIdx + 1 : end;
+
+    chunks.push(text.slice(start, splitPos).trim());
+    start = splitPos;
+  }
+
+  return chunks;
+}
+
 export const createCourseController = async (
   request: FastifyRequest,
   reply: FastifyReply
 ) => {
-
   try {
     const user = (request as any).user;
-
-    if (!user || !user.uid) {
+    if (!user?.uid) {
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
     console.log("Controller triggered");
 
-    let extractedFilesText: string[] = [];
-    let title = "Untitled Course"; 
-    let description = "No description provided"; 
+    const extractedFilesText: string[] = [];
+    let title = "Untitled Course";
+    let description = "No description provided";
 
-    console.log("Processing request data...");
-
+    // 1️⃣ Extract raw text from all parts
     for await (const part of request.parts()) {
       if ("file" in part) {
         console.log("Processing file:", part.filename, part.mimetype);
-
         const fileBuffer = await part.toBuffer();
-
         let fileExtractedText = "";
 
         if (OFFICE_MIME_TYPES.has(part.mimetype)) {
           console.log("Extracting text from Office/PDF...");
           fileExtractedText = await parseOfficeAsync(fileBuffer);
-    
+
         } else if (part.mimetype.startsWith("image/")) {
           console.log("Extracting text from image...");
           fileExtractedText = await extractTextFromImage(fileBuffer);
-    
+
         } else {
           console.log("Reading file as plain text...");
           fileExtractedText = fileBuffer.toString("utf8");
@@ -61,65 +80,78 @@ export const createCourseController = async (
         if (fileExtractedText.trim()) {
           extractedFilesText.push(fileExtractedText);
         }
+
       } else {
-        const textPart = part as { fieldname: string; value: string };
-        if (textPart.fieldname === "content" && textPart.value.trim()) {
-          extractedFilesText.push(textPart.value);
-        } else if (textPart.fieldname === "title" && textPart.value.trim()) {
-          title = textPart.value;
-        } else if (textPart.fieldname === "description" && textPart.value.trim()) {
-          description = textPart.value;
+        const { fieldname, value } = part as any;
+        if (fieldname === "title" && value.trim()) {
+          title = value;
+        } else if (fieldname === "description" && value.trim()) {
+          description = value;
+        } else if (fieldname === "content" && value.trim()) {
+          extractedFilesText.push(value);
         }
       }
     }
 
     if (extractedFilesText.length === 0) {
-      console.log("No valid text extracted.");
       return reply.status(400).send({ error: "No valid text provided" });
     }
 
-    console.log(`Processing ${extractedFilesText.length} extracted texts separately...`);
-    console.log(`📝 Title: ${title}`);
-    console.log(`📖 Description: ${description}`);
+    console.log(
+      `Extracted text from ${extractedFilesText.length} part(s), now chunking...`
+    );
 
-    const courseContentArray = await Promise.all(
-      extractedFilesText.map(async (text, index) => {
-        console.log(`\n🔹 Processing File ${index + 1} (Length: ${text.length} chars)`);
+    // 2️⃣ Break every file’s text into sentence‑safe chunks
+    const allChunks = extractedFilesText.flatMap((text) =>
+      splitIntoChunks(text, 1500)
+    );
+    console.log(`→ ${allChunks.length} chunks ready for OpenAI.`);
 
-        return await openAiCourseContent(text);
+    // 3️⃣ Call OpenAI in parallel on each chunk
+    const chunkedResponses = await Promise.all(
+      allChunks.map((chunk, idx) => {
+        console.log(`  • processing chunk ${idx + 1}/${allChunks.length}`);
+        return openAiCourseContent(chunk);
       })
     );
 
-    const mergedFlashcards = courseContentArray.flatMap(c => c?.flashcards || []);
-    const mergedFillInTheBlanks = courseContentArray.flatMap(c => c?.fillInTheBlankQuestions || []);
-    const mergedMultipleChoice = courseContentArray.flatMap(c => c?.multipleChoiceQuestions || []);
+    // 4️⃣ Merge all question arrays
+    const mergedFlashcards = chunkedResponses.flatMap((r) => r?.flashcards || []);
+    const mergedFillInTheBlanks = chunkedResponses.flatMap(
+      (r) => r?.fillInTheBlankQuestions || []
+    );
+    const mergedMultipleChoice = chunkedResponses.flatMap(
+      (r) => r?.multipleChoiceQuestions || []
+    );
 
-    console.log(`\n🎯 Total Flashcards: ${mergedFlashcards.length}`);
-    console.log(`🎯 Total Multiple Choice Questions: ${mergedMultipleChoice.length}`);
-    console.log(`🎯 Total Fill in the Blanks: ${mergedFillInTheBlanks.length}`);
+    console.log(
+      `🎯 Totals → Flashcards: ${mergedFlashcards.length}, MCQs: ${mergedMultipleChoice.length}, FITBs: ${mergedFillInTheBlanks.length}`
+    );
 
+    // 5️⃣ Generate lessons & save
     const { lessons, lessonCount } = generateLessons(
       mergedFlashcards,
       mergedMultipleChoice,
       mergedFillInTheBlanks
     );
-        
+
     const courseId = await saveCourseToFirebase({
       title,
       description,
       createdBy: user.uid,
-      // createdByName: user.name,
       lessons,
       mergedFlashcards,
     });
 
-    await createSavedCourse(user.uid, { courseId, lessonCount: lessonCount });
+    await createSavedCourse(user.uid, { courseId, lessonCount });
 
+    // 6️⃣ Respond
     return reply.status(201).send({
       message: "Course created successfully",
       courseId,
-      lessonCount
+      lessonCount,
     });
+
   } catch (error) {
     console.error("Error creating course:", error);
     return reply.status(500).send({ error: "Internal Server Error" });

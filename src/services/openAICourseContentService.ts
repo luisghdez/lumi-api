@@ -34,48 +34,27 @@ const courseContentSchema = z.object({
 export async function openAiCourseContent(extractedText: string) {
   // Define the detailed instructional prompt including the content guidelines.
   const promptInstructions = `
-Based on the following content, generate a structured set of flashcards, fill-in-the-blank questions, and multiple-choice questions designed to help a learner fully grasp, memorize, and understand the key concepts.
-
-Instructions:
-* Dynamically determine the appropriate number of questions based on the depth and importance of the content. Some topics may require more reinforcement than others.
-* Generate at least **one flashcard per key concept or topic**.
-* For every flashcard you generate, you MUST also generate at least:
-    * One fill-in-the-blank question related to that flashcard.
-    * One multiple-choice question related to that flashcard.
-* If you generate 24 flashcards, you MUST generate AT LEAST:
-    * 25 fill-in-the-blank questions
-    * 25 multiple-choice questions
-* Expand on concepts when necessary.
-* In some problems, use clear, self-made definitions that are simpler and easier to understand, avoiding overly technical or complex language.
-* Ensure completeness: If a topic is mentioned but not fully explained, expand it logically to provide full context.
-* Use engaging, well-structured wording to make learning interactive and effective.
-* Be creative when creating the multiple choice and fill in the blank problems.
-* **Whenever applicable, include real-world example questions in both the fill-in-the-blank and multiple-choice sections to illustrate practical applications of the concepts.**
-
-
-Generate the following:
-* Flashcards
-    * Create a sufficient number of flashcards to cover key facts.
-    * The number of flashcards should be proportional to the content complexity.
-* Fill-in-the-blank questions
-    * Design fill-in-the-blank exercises that challenge learners to recall details.
-    * Provide 7 options, including one correct answer and well-thought-out distractors.
-* Multiple-choice questions
-    * Write multiple-choice questions that test critical thinking and understanding, not just memorization.
-    * Each question should have 4 options, with one correct answer and reasonable incorrect choices.
-     
-    
-Content to Use:
-`;
+  Generate structured course content.
+  
+  Rules:
+  - One flashcard per key concept.
+  - Definition must NOT include the term word.
+  - For each flashcard, create 1 fill-in-the-blank and 1 multiple-choice question.
+  - MCQs: 4 options (1 correct, 3 distractors).
+  - Fill-in-the-blanks: 7 options (1 correct, 6 distractors).
+  - Use clear, simple language and real-world examples when helpful.
+  
+  Content:
+  `;
 
   try {
     const completion = await openai.beta.chat.completions.parse({
-      model: "gpt-4o",
+      model: "gpt-4.1-nano",
       messages: [
         { role: "system", content: promptInstructions },
         { role: "user", content: extractedText },
       ],
-      max_tokens: 5000,
+      max_tokens: 1500,
       response_format: zodResponseFormat(courseContentSchema, "courseContent"),
     });
 
