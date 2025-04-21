@@ -43,7 +43,11 @@ export async function openAiCourseContent(extractedText: string) {
   - MCQs: 4 options (1 correct, 3 distractors).
   - Fill-in-the-blanks: 7 options (1 correct, 6 distractors).
   - Use clear, simple language and real-world examples when helpful.
-  
+  - ALWAYS wrap every math expression, no matter how small, in $$…$$.
+    NEVER use Unicode math symbols (√, ∫, ½, …) – write them in LaTeX.
+    Allowed LaTeX commands: \\sqrt, \\frac, \\int, ^, _, \\times, \\cdot, \\pi.
+    If a line has no math, do NOT add $$.
+
   Content:
   `;
 
