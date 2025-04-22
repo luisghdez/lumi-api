@@ -109,8 +109,6 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         .orderBy("createdAt", "asc")   // ensure you have an index on createdAt
         .limit(8)
         .get();
-
-      console.log("ascccc:", snapshot);
   
       if (snapshot.empty) {
         console.log("No courses found for that creator.");

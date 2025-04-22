@@ -42,18 +42,17 @@ export async function openAiCourseContent(extractedText: string) {
   - For each flashcard, create 1 fill-in-the-blank and 1 multiple-choice question.
   - MCQs: 4 options (1 correct, 3 distractors).
   - Fill-in-the-blanks: 7 options (1 correct, 6 distractors).
-  - Use clear, simple language and real-world examples when helpful.
-  - ALWAYS wrap every math expression, no matter how small, in $$…$$.
+    Every math symbol or expression—no matter how small—must be enclosed within the $$ … $$ math delimiters; absolutely no other delimiters are allowed.
+    NEVER use \`\\(\` … \`\\)\`, \`\\[\` … \`\\]\`, single \`$\`, back‑ticks, or raw LaTeX without delimiters.  **Only** \`$$ … $$\`.
     NEVER use Unicode math symbols (√, ∫, ½, …) – write them in LaTeX.
-    Allowed LaTeX commands: \\sqrt, \\frac, \\int, ^, _, \\times, \\cdot, \\pi.
-    If a line has no math, do NOT add $$.
+    Write LaTeX commands **with a doubled back‑slash** (e.g. \`\\\\sqrt\`) so the frontend receives a single back‑slash after JSON escaping.
 
   Content:
   `;
 
   try {
     const completion = await openai.beta.chat.completions.parse({
-      model: "gpt-4.1-nano",
+      model: "gpt-4.1-mini",
       messages: [
         { role: "system", content: promptInstructions },
         { role: "user", content: extractedText },
