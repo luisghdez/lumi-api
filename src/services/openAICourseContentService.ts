@@ -57,7 +57,7 @@ export async function openAiCourseContent(extractedText: string) {
         { role: "system", content: promptInstructions },
         { role: "user", content: extractedText },
       ],
-      max_tokens: 1500,
+      max_tokens: 2048,
       response_format: zodResponseFormat(courseContentSchema, "courseContent"),
     });
 
