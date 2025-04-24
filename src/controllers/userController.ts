@@ -1,6 +1,8 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { createFireStoreUser, deleteFireStoreUser, getUserProfile, updateFireStoreUser } from "../services/userService";
 import { checkStreakOnLogin } from "../services/streakService";
+import { applyReferralCode } from "../services/userService";
+
 
 interface CreateUserRequestBody {
   email: string;
@@ -17,15 +19,16 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
         }
       
       // Optionally, you might also pass user email, name, etc. from the client body:
-      const { email, name, profilePicture } = request.body as {
+      const { email, name, profilePicture, referrerCode } = request.body as {
         email?: string;
         name?: string;
         profilePicture?: string;
+        referrerCode?: string;
       };
 
       const uid = user.uid;
   
-      await createFireStoreUser(uid, { email, name, profilePicture });
+      await createFireStoreUser(uid, { email, name, profilePicture, referrerCode });
   
       // Return success (could also return the user doc if you like)
       reply.code(200).send({ message: "User ensured/created successfully." });
@@ -108,5 +111,27 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
     } catch (error) {
       console.error("Error deleting user:", error);
       return reply.status(500).send({ error: "Failed to delete user" });
+    }
+  }
+
+  // This function applies a referral code to the user.
+  export async function applyReferralCodeController(request: FastifyRequest, reply: FastifyReply) {
+    try {
+      const user = (request as any).user;
+      if (!user?.uid) {
+        return reply.status(401).send({ error: "Unauthorized" });
+      }
+  
+      const { referrerCode } = request.body as { referrerCode?: string };
+      if (!referrerCode) {
+        return reply.status(400).send({ error: "Missing referral code" });
+      }
+  
+      await applyReferralCode(user.uid, referrerCode);
+  
+      return reply.status(200).send({ message: "Referral code applied successfully." });
+    } catch (error) {
+      console.error("Error applying referral code:", error);
+      return reply.status(500).send({ error: "Failed to apply referral code" });
     }
   }

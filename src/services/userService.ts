@@ -12,6 +12,7 @@ interface UserProfileData {
     email?: string;
     name?: string;
     profilePicture?: string;
+    referrerCode?: string;
   }
 
 export async function createFireStoreUser(uid: string, data: UserProfileData) {
@@ -37,6 +38,9 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
           xpCount: 0,
           streakCount: 0,
           createdAt: new Date().toISOString(),
+
+          //referrer code
+          referrerCode: data.referrerCode || null,
         });
         console.log(`✅ Created user doc for UID: ${uid}`);
       } else {
@@ -131,3 +135,17 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       throw error; // Propagate the error to be handled by the controller.
     }
   }
+
+
+  //refferal code
+  export async function applyReferralCode(uid: string, referrerCode: string): Promise<void> {
+    try {
+      const userRef = db.collection("users").doc(uid);
+      await userRef.update({ referrerCode });
+      console.log(`✅ Applied referral code ${referrerCode} to UID: ${uid}`);
+    } catch (error) {
+      console.error("🔥 Error applying referral code:", error);
+      throw error;
+    }
+  }
+  
