@@ -4,8 +4,9 @@ import {
     createClass,
     getClassesForUser,
     ClassSummary,
+    getCoursesForClass,
   } from "../services/classService";
-  
+
 interface CreateClassBody {
   name: string;
   identifier: string;    // e.g. CRN or teacher’s own ID
@@ -56,5 +57,27 @@ export async function getClassesController(
       return reply
         .status(500)
         .send({ error: "Failed to fetch classrooms" });
+    }
+  }
+
+  export async function getClassCoursesController(
+    request: FastifyRequest,
+    reply: FastifyReply
+  ) {
+    try {
+      const user = (request as any).user;
+      if (!user?.uid) {
+        return reply.status(401).send({ error: "Unauthorized" });
+      }
+  
+      const classId = (request.params as { id: string }).id;
+      const courses = await getCoursesForClass(user.uid, classId);
+  
+      return reply.status(200).send(courses);
+    } catch (err) {
+      console.error("Error fetching class courses:", err);
+      return reply
+        .status(500)
+        .send({ error: "Failed to fetch class courses" });
     }
   }

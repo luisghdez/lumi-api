@@ -1,13 +1,13 @@
 // src/routes/classRoutes.ts
 import { FastifyInstance } from "fastify";
 import { authenticateUser } from "../middleware/authUser";
-import { createClassController, getClassesController } from "../controllers/classController";
+import { createClassController, getClassCoursesController, getClassesController } from "../controllers/classController";
 
 export default async function classRoutes(fastify: FastifyInstance) {
   fastify.route({
     method: "POST",
     url: "/class",
-    preHandler: authenticateUser,          // ensure JWT / Firebase token
+    preHandler: authenticateUser,
     handler: createClassController,
   });
 
@@ -16,6 +16,13 @@ export default async function classRoutes(fastify: FastifyInstance) {
     url: "/classes",
     preHandler: authenticateUser,
     handler: getClassesController,
+  });
+
+  fastify.route({
+    method: "GET",
+    url: "/class/:id/courses",
+    preHandler: authenticateUser,
+    handler: getClassCoursesController,
   });
 
 }

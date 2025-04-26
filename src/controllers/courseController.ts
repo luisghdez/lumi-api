@@ -3,7 +3,7 @@ import { getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, get
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
 import { openAiCourseContent } from "../services/openAICourseContentService";
-import { createSavedCourse } from "../services/savedCourseService";
+import { assignCourseToClass, createSavedCourse } from "../services/savedCourseService";
 import { parseOfficeAsync } from "officeparser";
 
 
@@ -56,6 +56,8 @@ export const createCourseController = async (
     const extractedFilesText: string[] = [];
     let title = "Untitled Course";
     let description = "No description provided";
+    let classId: string | undefined;
+    let dueDate: string | undefined;
 
     // 1️⃣ Extract raw text from all parts
     for await (const part of request.parts()) {
@@ -83,12 +85,26 @@ export const createCourseController = async (
 
       } else {
         const { fieldname, value } = part as any;
-        if (fieldname === "title" && value.trim()) {
-          title = value;
-        } else if (fieldname === "description" && value.trim()) {
-          description = value;
-        } else if (fieldname === "content" && value.trim()) {
-          extractedFilesText.push(value);
+        switch (fieldname) {
+          case "title":
+            if (value.trim()) title = value;
+            break;
+          case "description":
+            if (value.trim()) description = value;
+            break;
+          case "content":
+            if (value.trim()) extractedFilesText.push(value);
+            break;
+          case "classId":
+            if (value.trim()) classId = value;
+            break;
+          case "dueDate":
+            // parse & normalize into ISO
+            const parsed = new Date(value);
+            if (!isNaN(parsed.getTime())) {
+              dueDate = parsed.toISOString();
+            }
+            break;
         }
       }
     }
@@ -142,6 +158,10 @@ export const createCourseController = async (
       lessons,
       mergedFlashcards,
     });
+
+    if (classId) {
+      await assignCourseToClass(classId, courseId, title, dueDate);
+    }
 
     await createSavedCourse(user.uid, { courseId, lessonCount });
 

@@ -15,6 +15,11 @@ export interface ClassInput {
     courseCount: number;
   }
 
+  export interface CourseBrief {
+    id: string;
+    title: string;
+  }
+
 export async function createClass(
   ownerId: string,
   data: ClassInput
@@ -96,4 +101,38 @@ export async function getClassesForUser(
     );
   
     return results;
+  }
+
+  /**
+ * Returns all courses assigned to a classroom, with just id + title.
+ */
+export async function getCoursesForClass(
+    userId: string,
+    classId: string
+  ): Promise<CourseBrief[]> {
+    const classRef = db.collection("classrooms").doc(classId);
+  
+    // 1) Optional: verify user is a member (teacher or student)
+    const memberDoc = await classRef.collection("members").doc(userId).get();
+    if (!memberDoc.exists) {
+      throw new Error("Access denied: not a class member");
+    }
+  
+    // 2) Fetch all assigned course IDs
+    const assignedSnap = await classRef.collection("courses").get();
+    const courseIds = assignedSnap.docs.map((d) => d.id);
+  
+    // 3) Fetch each course’s metadata in parallel
+    const courses = await Promise.all(
+      courseIds.map(async (courseId) => {
+        const courseSnap = await db.collection("courses").doc(courseId).get();
+        const data = courseSnap.data() || {};
+        return {
+          id: courseId,
+          title: data.title || "Untitled",
+        };
+      })
+    );
+  
+    return courses;
   }

@@ -166,3 +166,30 @@ export const markLessonAsCompleted = async (
     throw new Error("Failed to mark lesson as completed and update XP.");
   }
 };
+
+export async function assignCourseToClass(
+  classId: string,
+  courseId: string,
+  title: string,
+  dueAt?: string
+) {
+  const now = new Date().toISOString();
+  const classRef = db.collection("classrooms").doc(classId);
+
+  // ensure classroom exists
+  const snap = await classRef.get();
+  if (!snap.exists) {
+    throw new Error(`Classroom ${classId} not found`);
+  }
+
+  // add course under the class
+  await classRef
+    .collection("courses")
+    .doc(courseId)
+    .set({
+      courseId,
+      title,
+      assignedAt: now,
+      dueAt: dueAt ?? null,
+    });
+}
