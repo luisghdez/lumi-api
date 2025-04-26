@@ -10,6 +10,8 @@ import {
     ClassCourseRecord,
     getOrCreateClassCourse,
     joinClass,
+    getUpcomingAssignments,
+    UpcomingAssignment,
   } from "../services/classService";
 
 interface CreateClassBody {
@@ -168,5 +170,27 @@ export async function getClassesController(
         return reply.status(404).send({ error: "Class not found" });
       }
       return reply.status(500).send({ error: "Failed to join class" });
+    }
+  }
+
+  export async function getUpcomingAssignmentsController(
+    request: FastifyRequest,
+    reply: FastifyReply
+  ) {
+    try {
+      const user = (request as any).user;
+      if (!user?.uid) {
+        return reply.status(401).send({ error: "Unauthorized" });
+      }
+  
+      const assignments: UpcomingAssignment[] = await getUpcomingAssignments(
+        user.uid
+      );
+      return reply.status(200).send(assignments);
+    } catch (err) {
+      console.error("Error fetching upcoming assignments:", err);
+      return reply
+        .status(500)
+        .send({ error: "Failed to fetch upcoming assignments" });
     }
   }

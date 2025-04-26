@@ -409,4 +409,70 @@ export async function joinClass(
       courseCount,
     };
   }
+
+  export interface UpcomingAssignment {
+    classId:     string;
+    className:   string;
+    courseId:    string;
+    courseTitle: string;
+    dueAt:       string;    // ISO string
+  }
+
+  /**
+ * Returns all class-course assignments for the user with a due date ≥ now,
+ * ordered by ascending dueAt.
+ */
+export async function getUpcomingAssignments(
+    userId: string
+  ): Promise<UpcomingAssignment[]> {
+    const now = new Date().toISOString();
+  
+    // 1) Query only those classCourses with a dueAt in the future
+    const snap = await db
+      .collection("users")
+      .doc(userId)
+      .collection("classCourses")
+      .where("dueAt", ">", now)
+      .orderBy("dueAt", "asc")
+      .get();
+  
+    // 2) For each, fetch class name + course title
+    const assignments = await Promise.all(
+      snap.docs.map(async (doc) => {
+        const {
+          classId,
+          courseId,
+          dueAt,
+        } = doc.data() as {
+          classId: string;
+          courseId: string;
+          dueAt:   string;
+        };
+  
+        // fetch class name
+        const classSnap = await db
+          .collection("classrooms")
+          .doc(classId)
+          .get();
+        const className = classSnap.data()?.name || "Unknown Class";
+  
+        // fetch course title
+        const courseSnap = await db
+          .collection("courses")
+          .doc(courseId)
+          .get();
+        const courseTitle = courseSnap.data()?.title || "Untitled Course";
+  
+        return {
+          classId,
+          className,
+          courseId,
+          courseTitle,
+          dueAt,
+        };
+      })
+    );
+  
+    return assignments;
+  }
   
