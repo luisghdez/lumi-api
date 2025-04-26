@@ -7,6 +7,9 @@ import {
     getCoursesForClass,
     getStudentsForClass,
     StudentBrief,
+    ClassCourseRecord,
+    getOrCreateClassCourse,
+    joinClass,
   } from "../services/classService";
 
 interface CreateClassBody {
@@ -14,6 +17,10 @@ interface CreateClassBody {
   identifier: string;    // e.g. CRN or teacher’s own ID
   colorCode: string;     // e.g. "#FF33AA"
 }
+
+interface JoinClassBody {
+    code: string;
+  }
 
 export async function createClassController(
   request: FastifyRequest,
@@ -108,4 +115,58 @@ export async function getClassesController(
         .send({ error: "Failed to fetch class students" });
     }
   }
+
+  export async function getOrCreateClassCourseController(
+    request: FastifyRequest,
+    reply: FastifyReply
+  ) {
+    try {
+      const user = (request as any).user;
+      if (!user?.uid) {
+        return reply.status(401).send({ error: "Unauthorized" });
+      }
   
+      const { classId, courseId } = request.params as {
+        classId: string;
+        courseId: string;
+      };
+  
+      const record: ClassCourseRecord = await getOrCreateClassCourse(
+        user.uid,
+        classId,
+        courseId
+      );
+      return reply.status(200).send(record);
+    } catch (err) {
+      console.error("Error fetching/creating classCourse:", err);
+      return reply
+        .status(500)
+        .send({ error: "Failed to load course for this classroom" });
+    }
+  }
+
+  export async function joinClassController(
+    request: FastifyRequest,
+    reply: FastifyReply
+  ) {
+    try {
+      const user = (request as any).user;
+      if (!user?.uid) {
+        return reply.status(401).send({ error: "Unauthorized" });
+      }
+  
+      const { code } = request.body as JoinClassBody;
+      if (!code) {
+        return reply.status(400).send({ error: "Missing class code" });
+      }
+  
+      const classInfo: ClassSummary = await joinClass(user.uid, code);
+      return reply.status(200).send(classInfo);
+    } catch (err: any) {
+      console.error("Error joining class:", err);
+      if (err.message.includes("not found")) {
+        return reply.status(404).send({ error: "Class not found" });
+      }
+      return reply.status(500).send({ error: "Failed to join class" });
+    }
+  }

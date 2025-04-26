@@ -25,6 +25,30 @@ export interface ClassInput {
     name: string;
   }
 
+  export interface StudentClassSummary {
+    id: string;
+    name: string;
+    identifier: string;
+    studentCount: number;
+    courseCount: number;
+    totalCourses: number;
+    completedCourses: number;
+    // optional detailed progress per course:
+    // courses?: CourseProgress[];
+  }
+
+  export interface ClassCourseProgress {
+    lessons: { [lessonId: string]: { completed: boolean } };
+  }
+  export interface ClassCourseRecord {
+    classId: string;
+    courseId: string;
+    assignedAt: string;
+    dueAt: string | null;
+    progress: ClassCourseProgress;
+  }
+  
+
 export async function createClass(
   ownerId: string,
   data: ClassInput
@@ -175,3 +199,214 @@ export async function getCoursesForClass(
   
     return students;
   }
+
+  /**
+ * Returns all classes for which `userId` is a member (student or teacher),
+ * plus the student’s completion stats in each.
+ */
+export async function getStudentClassesForUser(
+    userId: string
+  ): Promise<StudentClassSummary[]> {
+    // 1) Find all classes where the user is listed in members
+    const membershipSnaps = await db
+      .collectionGroup("members")
+      .where("__name__", "==", userId)
+      .get();
+  
+    // membershipSnaps.docs[i].ref.parent.parent is the classRef
+    const classRefs = membershipSnaps.docs.map((m) => m.ref.parent.parent!);
+  
+    const results = await Promise.all(
+      classRefs.map(async (classRef) => {
+        const classId = classRef.id;
+        const { name, identifier } = (await classRef.get()).data()!;
+  
+        // 2) Count students
+        const studentsSnap = await classRef
+          .collection("members")
+          .where("role", "==", "student")
+          .get();
+        const studentCount = studentsSnap.size;
+  
+        // 3) Count assigned courses
+        const assignedSnap = await classRef.collection("courses").get();
+        const courseCount = assignedSnap.size;
+  
+        // 4) Compute this user’s progress:
+        //    look up savedCourses/userId/{courseId} for each assigned course
+        let completedCourses = 0;
+        for (const courseDoc of assignedSnap.docs) {
+          const courseId = courseDoc.id;
+          const savedSnap = await db
+            .collection("users")
+            .doc(userId)
+            .collection("savedCourses")
+            .doc(courseId)
+            .get();
+  
+          if (savedSnap.exists) {
+            const prog = savedSnap.data()!.progress;
+            // assume overallScore field (0–100)
+            if (prog?.overallScore >= 100) {
+              completedCourses++;
+            }
+          }
+        }
+  
+        return {
+          id: classId,
+          name,
+          identifier,
+          studentCount,
+          courseCount,
+          totalCourses: courseCount,
+          completedCourses,
+          // Optionally: build CourseProgress[] here if you need per-lesson data
+        };
+      })
+    );
+  
+    return results;
+  }
+
+/**
+ * Fetches—or if missing, creates—a classCourse record for a user.
+ */
+export async function getOrCreateClassCourse(
+    userId: string,
+    classId: string,
+    courseId: string
+  ): Promise<ClassCourseRecord> {
+    const userCourseRef = db
+      .collection("users")
+      .doc(userId)
+      .collection("classCourses")
+      .doc(`${classId}_${courseId}`);
+  
+    const existing = await userCourseRef.get();
+    if (existing.exists) {
+      return existing.data() as ClassCourseRecord;
+    }
+  
+    // 1) Fetch class assignment metadata
+    const assignRef = db
+      .collection("classrooms")
+      .doc(classId)
+      .collection("courses")
+      .doc(courseId);
+    const assignSnap = await assignRef.get();
+    if (!assignSnap.exists) {
+      throw new Error("Course not assigned to this classroom");
+    }
+    const { assignedAt, dueAt = null } = assignSnap.data()!;
+  
+    // 2) Fetch all lesson IDs from the master course
+    const lessonSnap = await db
+      .collection("courses")
+      .doc(courseId)
+      .collection("lessons")
+      .get();
+    const lessons: ClassCourseProgress["lessons"] = {};
+    lessonSnap.docs.forEach((doc) => {
+      lessons[doc.id] = { completed: false };
+    });
+  
+    // 3) Seed the user’s classCourses entry
+    const record: ClassCourseRecord = {
+      classId,
+      courseId,
+      assignedAt,
+      dueAt,
+      progress: { lessons },
+    };
+    await userCourseRef.set(record);
+  
+    return record;
+  }
+
+  /**
+ * Adds the user as a 'student' to the classroom matching inviteCode.
+ * Seeds any existing class->course assignments into users/{userId}/classCourses.
+ * Returns summary info for front‐end display.
+ */
+export async function joinClass(
+    userId: string,
+    inviteCode: string
+  ): Promise<ClassSummary> {
+    // 1) Find the class by code
+    const snap = await db
+      .collection("classrooms")
+      .where("inviteCode", "==", inviteCode)
+      .limit(1)
+      .get();
+  
+    if (snap.empty) {
+      throw new Error("Classroom not found");
+    }
+    const classDoc = snap.docs[0];
+    const classRef = classDoc.ref;
+    const { name, identifier } = classDoc.data();
+  
+    // 2) Create membership record
+    const joinedAt = new Date().toISOString();
+    await classRef
+      .collection("members")
+      .doc(userId)
+      .set({
+        userId,
+        role: "student",
+        joinedAt,
+      });
+  
+    // 3) Seed classCourses entries for all assigned courses
+    const assignedSnap = await classRef.collection("courses").get();
+    for (const assDoc of assignedSnap.docs) {
+      const { assignedAt, dueAt = null } = assDoc.data();
+      // fetch lessons for initial progress
+      const lessonSnap = await db
+        .collection("courses")
+        .doc(assDoc.id)
+        .collection("lessons")
+        .get();
+  
+      const lessons: { [key: string]: { completed: boolean } } = {};
+      lessonSnap.docs.forEach((l) => {
+        lessons[l.id] = { completed: false };
+      });
+  
+      const userClassCourseRef = db
+        .collection("users")
+        .doc(userId)
+        .collection("classCourses")
+        .doc(`${classDoc.id}_${assDoc.id}`);
+  
+      const exists = await userClassCourseRef.get();
+      if (!exists.exists) {
+        await userClassCourseRef.set({
+          classId: classDoc.id,
+          courseId: assDoc.id,
+          assignedAt,
+          dueAt,
+          progress: { lessons },
+        });
+      }
+    }
+  
+    // 4) Compute counts to send back
+    const studentCount = (
+      await classRef
+        .collection("members")
+        .where("role", "==", "student")
+        .get()
+    ).size;
+    const courseCount = assignedSnap.size;
+  
+    return {
+      id: classDoc.id,
+      name,
+      identifier,
+      studentCount,
+      courseCount,
+    };
+  }
+  
