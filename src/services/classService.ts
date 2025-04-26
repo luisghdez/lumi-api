@@ -20,6 +20,11 @@ export interface ClassInput {
     title: string;
   }
 
+  export interface StudentBrief {
+    id: string;
+    name: string;
+  }
+
 export async function createClass(
   ownerId: string,
   data: ClassInput
@@ -135,4 +140,38 @@ export async function getCoursesForClass(
     );
   
     return courses;
+  }
+
+  export async function getStudentsForClass(
+    userId: string,
+    classId: string
+  ): Promise<StudentBrief[]> {
+    const classRef = db.collection("classrooms").doc(classId);
+  
+    // 1) Verify caller is teacher in this class
+    const me = await classRef.collection("members").doc(userId).get();
+    if (!me.exists || me.data()?.role !== "teacher") {
+      throw new Error("Access denied: only teachers may list students");
+    }
+  
+    // 2) Query all student-member docs
+    const studentsSnap = await classRef
+      .collection("members")
+      .where("role", "==", "student")
+      .get();
+  
+    // 3) For each, fetch the user's name
+    const students = await Promise.all(
+      studentsSnap.docs.map(async (memberDoc) => {
+        const studentId = memberDoc.data().userId;
+        const userSnap = await db.collection("users").doc(studentId).get();
+        const userData = userSnap.data() || {};
+        return {
+          id: studentId,
+          name: userData.name || userData.displayName || "Unknown",
+        };
+      })
+    );
+  
+    return students;
   }
