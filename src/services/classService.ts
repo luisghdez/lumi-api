@@ -476,3 +476,97 @@ export async function getUpcomingAssignments(
     return assignments;
   }
   
+  /**
+ * Marks a lesson complete in the user’s `classCourses` record.
+ */
+
+  export async function markClassLessonCompleted(
+    userId: string,
+    classId: string,
+    courseId: string,
+    lessonId: string
+  ): Promise<void> {
+    const now = new Date().toISOString();
+    const userCourseRef = db
+      .collection("users")
+      .doc(userId)
+      .collection("classCourses")
+      .doc(`${classId}_${courseId}`);
+  
+    // 1) Ensure the record exists
+    const snap = await userCourseRef.get();
+    if (!snap.exists) {
+      throw new Error("Class-course record not found");
+    }
+  
+    // 2) Mark lesson complete
+    await userCourseRef.update({
+      [`progress.lessons.${lessonId}.completed`]: true,
+      lastAttempt: now,
+    });
+  
+    // 3) Log a submission into the classroom’s submissions feed
+    const submissionRef = db
+      .collection("classrooms")
+      .doc(classId)
+      .collection("submissions")
+      .doc(); // auto‐ID
+  
+    await submissionRef.set({
+      userId,
+      courseId,
+      lessonId,
+      completedAt: now,
+    });
+  }
+
+  export interface SubmissionRecord {
+    classId:     string;
+    userId:      string;
+    courseId:    string;
+    lessonId:    string;
+    completedAt: string;
+  }
+
+  /**
+ * Returns every submission (lesson-complete event) across all classrooms
+ * owned by the given teacher, sorted by most recent.
+ */
+export async function getAllClassSubmissions(
+    ownerId: string
+  ): Promise<SubmissionRecord[]> {
+    // 1) Fetch all classes this user owns
+    const classSnap = await db
+      .collection("classrooms")
+      .where("ownerId", "==", ownerId)
+      .get();
+  
+    const submissions: SubmissionRecord[] = [];
+  
+    // 2) For each class, pull its submissions
+    for (const classDoc of classSnap.docs) {
+      const classId = classDoc.id;
+      const subsSnap = await classDoc.ref
+        .collection("submissions")
+        .orderBy("completedAt", "desc")
+        .get();
+  
+      subsSnap.docs.forEach((doc) => {
+        const data = doc.data();
+        submissions.push({
+          classId,
+          userId:      data.userId,
+          courseId:    data.courseId,
+          lessonId:    data.lessonId,
+          completedAt: data.completedAt,
+        });
+      });
+    }
+  
+    // 3) Already sorted per-class; if you need a global sort:
+    submissions.sort(
+      (a, b) => new Date(b.completedAt).getTime() - new Date(a.completedAt).getTime()
+    );
+  
+    return submissions;
+  }

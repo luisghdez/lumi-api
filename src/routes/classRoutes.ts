@@ -1,7 +1,7 @@
 // src/routes/classRoutes.ts
 import { FastifyInstance } from "fastify";
 import { authenticateUser } from "../middleware/authUser";
-import { createClassController, getClassCoursesController, getClassesController, getClassStudentsController, getOrCreateClassCourseController, getUpcomingAssignmentsController, joinClassController } from "../controllers/classController";
+import { createClassController, getAllClassSubmissionsController, getClassCoursesController, getClassesController, getClassStudentsController, getOrCreateClassCourseController, getUpcomingAssignmentsController, joinClassController, markClassLessonCompletedController } from "../controllers/classController";
 
 export default async function classRoutes(fastify: FastifyInstance) {
   fastify.route({
@@ -53,5 +53,18 @@ export default async function classRoutes(fastify: FastifyInstance) {
     handler: getUpcomingAssignmentsController,
   });
 
+  fastify.route({
+    method: "PATCH",
+    url: "/class/:classId/course/:courseId/lessons/:lessonId/complete",
+    preHandler: authenticateUser,
+    handler: markClassLessonCompletedController,
+  });
+
+  fastify.route({
+    method: "GET",
+    url: "/classes/submissions",
+    preHandler: authenticateUser,
+    handler: getAllClassSubmissionsController,
+  });
 }
 

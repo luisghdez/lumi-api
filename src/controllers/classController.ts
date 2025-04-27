@@ -12,6 +12,9 @@ import {
     joinClass,
     getUpcomingAssignments,
     UpcomingAssignment,
+    markClassLessonCompleted,
+    getAllClassSubmissions,
+    SubmissionRecord,
   } from "../services/classService";
 
 interface CreateClassBody {
@@ -192,5 +195,67 @@ export async function getClassesController(
       return reply
         .status(500)
         .send({ error: "Failed to fetch upcoming assignments" });
+    }
+  }
+
+  export async function markClassLessonCompletedController(
+    request: FastifyRequest,
+    reply: FastifyReply
+  ) {
+    try {
+      const user = (request as any).user;
+      if (!user?.uid) {
+        return reply.status(401).send({ error: "Unauthorized" });
+      }
+  
+      const { classId, courseId, lessonId } = request.params as {
+        classId: string;
+        courseId: string;
+        lessonId: string;
+      };
+  
+      if (!classId || !courseId || !lessonId) {
+        return reply
+          .status(400)
+          .send({ error: "Missing classId, courseId, or lessonId" });
+      }
+  
+      await markClassLessonCompleted(
+        user.uid,
+        classId,
+        courseId,
+        lessonId
+      );
+  
+      return reply
+        .status(200)
+        .send({ message: "Lesson marked complete." });
+    } catch (err) {
+      console.error("Error marking class lesson complete:", err);
+      return reply
+        .status(500)
+        .send({ error: "Failed to mark lesson as completed" });
+    }
+  }
+
+  export async function getAllClassSubmissionsController(
+    request: FastifyRequest,
+    reply: FastifyReply
+  ) {
+    try {
+      const user = (request as any).user;
+      if (!user?.uid) {
+        return reply.status(401).send({ error: "Unauthorized" });
+      }
+  
+      const submissions: SubmissionRecord[] = await getAllClassSubmissions(
+        user.uid
+      );
+      return reply.status(200).send(submissions);
+    } catch (err) {
+      console.error("Error fetching all class submissions:", err);
+      return reply
+        .status(500)
+        .send({ error: "Failed to fetch submissions" });
     }
   }
