@@ -260,7 +260,7 @@ export async function getStudentsWithProgress(
  * Returns all classes for which `userId` is a member (student or teacher),
  * plus the student’s completion stats in each.
  */
-export async function getStudentClassesForUser(
+  export async function getStudentClassesForUser(
     userId: string
   ): Promise<StudentClassSummary[]> {
     // 1) Find all classes where the user is listed in members
@@ -268,7 +268,6 @@ export async function getStudentClassesForUser(
       .collectionGroup("members")
       .where("userId", "==", userId)
       .orderBy("joinedAt", "desc")
-
       .get();
   
     // membershipSnaps.docs[i].ref.parent.parent is the classRef
@@ -290,8 +289,7 @@ export async function getStudentClassesForUser(
         const assignedSnap = await classRef.collection("courses").get();
         const courseCount = assignedSnap.size;
   
-        // 4) Compute this user’s progress:
-        //    look up savedCourses/userId/{courseId} for each assigned course
+        // 4) Compute this user’s completed courses
         let completedCourses = 0;
         for (const courseDoc of assignedSnap.docs) {
           const courseId = courseDoc.id;
@@ -304,29 +302,31 @@ export async function getStudentClassesForUser(
   
           if (savedSnap.exists) {
             const prog = savedSnap.data()!.progress;
-            // assume overallScore field (0–100)
             if (prog?.overallScore >= 100) {
               completedCourses++;
             }
           }
         }
   
+        const joinedAt = membershipSnaps.docs.find((m) => m.ref.parent.parent?.id === classId)?.data()?.joinedAt || "Unknown";
+
         return {
-          id: classId,
+          id: classRef.id,
           name,
           identifier,
           studentCount,
           courseCount,
           totalCourses: courseCount,
           completedCourses,
+          joinedAt, // 🆕 Include it here!
           colorCode,
-          // Optionally: build CourseProgress[] here if you need per-lesson data
         };
       })
     );
   
     return results;
   }
+  
 
 //   when click on course
 /**
@@ -496,8 +496,6 @@ export async function getUpcomingAssignments(
       .collection("users")
       .doc(userId)
       .collection("classCourses")
-      .where("dueAt", ">", now)
-      .orderBy("dueAt", "asc")
       .get();
   
     // 2) For each, fetch class name + course title
