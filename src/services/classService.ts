@@ -7,14 +7,6 @@ export interface ClassInput {
   colorCode: string;
 }
 
-  export interface ClassSummary {
-    id: string;
-    name: string;
-    identifier: string;
-    studentCount: number;
-    courseCount: number;
-  }
-
   export interface CourseBrief {
     id: string;
     title: string;
@@ -92,32 +84,42 @@ export async function createClass(
   };
 }
 
-export async function getClassesForUser(
+export interface ClassSummary {
+    id: string;
+    name: string;
+    identifier: string;
+    studentCount: number;
+    courseCount: number;
+    colorCode: string;   // new
+    inviteCode: string;  // new
+    ownerName: string;   // new
+  }
+  
+  export async function getClassesForUser(
     ownerId: string
   ): Promise<ClassSummary[]> {
-    // 1) fetch all classrooms owned by this user
     const snap = await db
       .collection("classrooms")
       .where("ownerId", "==", ownerId)
       .get();
   
-    // 2) for each class, count members & courses
     const results = await Promise.all(
       snap.docs.map(async (doc) => {
-        const { name, identifier } = doc.data();
+        const data = doc.data();
+        const { name, identifier, colorCode, inviteCode, ownerId: oid } = data;
   
-        // count students (role === 'student')
-        const studentSnap = await doc.ref
-          .collection("members")
-          .where("role", "==", "student")
-          .get();
-        const studentCount = studentSnap.size;
+        // count students & courses
+        const studentCount = (
+          await doc.ref.collection("members").where("role", "==", "student").get()
+        ).size;
+        const courseCount = (await doc.ref.collection("courses").get()).size;
   
-        // count assigned courses
-        const courseSnap = await doc.ref
-          .collection("courses")
-          .get();
-        const courseCount = courseSnap.size;
+        // fetch owner’s name
+        const ownerSnap = await db.collection("users").doc(oid).get();
+        const ownerName =
+          ownerSnap.data()?.name ||
+          ownerSnap.data()?.displayName ||
+          "Unknown";
   
         return {
           id: doc.id,
@@ -125,6 +127,9 @@ export async function getClassesForUser(
           identifier,
           studentCount,
           courseCount,
+          colorCode,
+          inviteCode,
+          ownerName,
         };
       })
     );
@@ -457,6 +462,10 @@ export async function joinClass(
       identifier,
       studentCount,
       courseCount,
+        colorCode: classDoc.data().colorCode,
+        inviteCode: classDoc.data().inviteCode,
+        ownerName: classDoc.data().ownerName,
+
     };
   }
 
@@ -570,19 +579,18 @@ export async function getUpcomingAssignments(
     });
   }
 
-  export interface SubmissionRecord {
+// Extend the SubmissionRecord type:
+export interface SubmissionRecord {
     classId:     string;
+    className:   string;   // ← new
+    classColor:  string;   // ← new (hex code)
     userId:      string;
     courseId:    string;
     lessonId:    string;
     completedAt: string;
   }
-
-  /**
- * Returns every submission (lesson-complete event) across all classrooms
- * owned by the given teacher, sorted by most recent.
- */
-export async function getAllClassSubmissions(
+  
+  export async function getAllClassSubmissions(
     ownerId: string
   ): Promise<SubmissionRecord[]> {
     // 1) Fetch all classes this user owns
@@ -596,6 +604,10 @@ export async function getAllClassSubmissions(
     // 2) For each class, pull its submissions
     for (const classDoc of classSnap.docs) {
       const classId = classDoc.id;
+      // grab name + colorCode from the class document
+      const { name: className, colorCode: classColor = "#000000" } =
+        classDoc.data();
+  
       const subsSnap = await classDoc.ref
         .collection("submissions")
         .orderBy("completedAt", "desc")
@@ -605,6 +617,8 @@ export async function getAllClassSubmissions(
         const data = doc.data();
         submissions.push({
           classId,
+          className,      // pass it through
+          classColor,     // pass it through
           userId:      data.userId,
           courseId:    data.courseId,
           lessonId:    data.lessonId,
@@ -613,10 +627,13 @@ export async function getAllClassSubmissions(
       });
     }
   
-    // 3) Already sorted per-class; if you need a global sort:
+    // 3) Globally sort by time, if desired
     submissions.sort(
-      (a, b) => new Date(b.completedAt).getTime() - new Date(a.completedAt).getTime()
+      (a, b) =>
+        new Date(b.completedAt).getTime() -
+        new Date(a.completedAt).getTime()
     );
   
     return submissions;
   }
+  
