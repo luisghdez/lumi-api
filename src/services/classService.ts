@@ -137,6 +137,7 @@ export interface ClassSummary {
     return results;
   }
 
+//  FOCUS ROUTE
   /**
  * Returns all courses assigned to a classroom, with just id + title.
  */
@@ -275,7 +276,7 @@ export async function getStudentsWithProgress(
     const results = await Promise.all(
       classRefs.map(async (classRef) => {
         const classId = classRef.id;
-        const { name, identifier } = (await classRef.get()).data()!;
+        const { name, identifier, colorCode } = (await classRef.get()).data()!;
   
         // 2) Count students
         const studentsSnap = await classRef
@@ -318,6 +319,7 @@ export async function getStudentsWithProgress(
           totalCourses: courseCount,
           completedCourses,
           joinedAt, // 🆕 Include it here!
+          colorCode,
         };
       })
     );
@@ -326,6 +328,7 @@ export async function getStudentsWithProgress(
   }
   
 
+//   when click on course
 /**
  * Fetches—or if missing, creates—a classCourse record for a user.
  */
