@@ -259,13 +259,14 @@ export async function getStudentsWithProgress(
  * Returns all classes for which `userId` is a member (student or teacher),
  * plus the student’s completion stats in each.
  */
-export async function getStudentClassesForUser(
+  export async function getStudentClassesForUser(
     userId: string
   ): Promise<StudentClassSummary[]> {
     // 1) Find all classes where the user is listed in members
     const membershipSnaps = await db
       .collectionGroup("members")
-      .where("__name__", "==", userId)
+      .where("userId", "==", userId)
+      .orderBy("joinedAt", "desc")
       .get();
   
     // membershipSnaps.docs[i].ref.parent.parent is the classRef
@@ -287,42 +288,43 @@ export async function getStudentClassesForUser(
         const assignedSnap = await classRef.collection("courses").get();
         const courseCount = assignedSnap.size;
   
-        // 4) Compute this user’s progress:
-        //    look up savedCourses/userId/{courseId} for each assigned course
+        // 4) Compute this user’s completed courses
         let completedCourses = 0;
         for (const courseDoc of assignedSnap.docs) {
           const courseId = courseDoc.id;
           const savedSnap = await db
             .collection("users")
             .doc(userId)
-            .collection("savedCourses")
+            .collection("classCourses")
             .doc(courseId)
             .get();
   
           if (savedSnap.exists) {
             const prog = savedSnap.data()!.progress;
-            // assume overallScore field (0–100)
             if (prog?.overallScore >= 100) {
               completedCourses++;
             }
           }
         }
   
+        const joinedAt = membershipSnaps.docs.find((m) => m.ref.parent.parent?.id === classId)?.data()?.joinedAt || "Unknown";
+
         return {
-          id: classId,
+          id: classRef.id,
           name,
           identifier,
           studentCount,
           courseCount,
           totalCourses: courseCount,
           completedCourses,
-          // Optionally: build CourseProgress[] here if you need per-lesson data
+          joinedAt, // 🆕 Include it here!
         };
       })
     );
   
     return results;
   }
+  
 
 /**
  * Fetches—or if missing, creates—a classCourse record for a user.
