@@ -496,7 +496,6 @@ export async function getUpcomingAssignments(
       .collection("users")
       .doc(userId)
       .collection("classCourses")
-      .where("dueAt", ">", now)
       .orderBy("dueAt", "asc")
       .get();
   
@@ -518,7 +517,9 @@ export async function getUpcomingAssignments(
           .collection("classrooms")
           .doc(classId)
           .get();
+
         const className = classSnap.data()?.name || "Unknown Class";
+
   
         // fetch course title
         const courseSnap = await db
@@ -532,6 +533,7 @@ export async function getUpcomingAssignments(
           className,
           courseId,
           courseTitle,
+          colorCode: classSnap.data()?.colorCode,
           dueAt,
         };
       })
