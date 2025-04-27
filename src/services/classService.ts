@@ -166,38 +166,88 @@ export async function getCoursesForClass(
     return courses;
   }
 
-  export async function getStudentsForClass(
-    userId: string,
+  export interface StudentWithProgress {
+    id: string;
+    name: string;
+    progress: Array<{
+      courseId: string;
+      totalLessons: number;
+      completedLessons: number;
+    }>;
+  }
+  
+/**
+ * Returns all ‘student’ members of a class, plus their progress
+ * in every course assigned to that class.
+ * Only teachers may call this.
+ */
+export async function getStudentsWithProgress(
+    teacherId: string,
     classId: string
-  ): Promise<StudentBrief[]> {
+  ): Promise<StudentWithProgress[]> {
     const classRef = db.collection("classrooms").doc(classId);
   
-    // 1) Verify caller is teacher in this class
-    const me = await classRef.collection("members").doc(userId).get();
+    // 1) Verify caller is teacher
+    const me = await classRef.collection("members").doc(teacherId).get();
     if (!me.exists || me.data()?.role !== "teacher") {
       throw new Error("Access denied: only teachers may list students");
     }
   
-    // 2) Query all student-member docs
-    const studentsSnap = await classRef
+    // 2) Load all student member IDs
+    const memberSnap = await classRef
       .collection("members")
       .where("role", "==", "student")
       .get();
   
-    // 3) For each, fetch the user's name
-    const students = await Promise.all(
-      studentsSnap.docs.map(async (memberDoc) => {
-        const studentId = memberDoc.data().userId;
+    // 3) Load all course IDs assigned to this class
+    const courseSnap = await classRef.collection("courses").get();
+    const courseIds = courseSnap.docs.map((d) => d.id);
+  
+    // 4) For each student, fetch their name + each course’s progress
+    const results: StudentWithProgress[] = await Promise.all(
+      memberSnap.docs.map(async (memDoc) => {
+        const studentId = memDoc.id;
+        // fetch student name
         const userSnap = await db.collection("users").doc(studentId).get();
         const userData = userSnap.data() || {};
-        return {
-          id: studentId,
-          name: userData.name || userData.displayName || "Unknown",
-        };
+        const name = userData.name || userData.displayName || "Unknown";
+  
+        // fetch classCourses for this student & class
+        const progSnap = await db
+          .collection("users")
+          .doc(studentId)
+          .collection("classCourses")
+          .where("classId", "==", classId)
+          .get();
+  
+        // build a map courseId -> lessons object
+        const progMap: Record<string, { total: number; completed: number }> = {};
+        progSnap.docs.forEach((doc) => {
+          const { courseId, progress } = doc.data() as any;
+          const lessons: Record<string, { completed: boolean }> =
+            progress.lessons || {};
+          const total = Object.keys(lessons).length;
+          const completed = Object.values(lessons).filter(
+            (l) => l.completed
+          ).length;
+          progMap[courseId] = { total, completed };
+        });
+  
+        // for any course that has no entry (maybe just assigned), default 0/0
+        const progress = courseIds.map((cid) => {
+          const stats = progMap[cid] || { total: 0, completed: 0 };
+          return {
+            courseId: cid,
+            totalLessons: stats.total,
+            completedLessons: stats.completed,
+          };
+        });
+  
+        return { id: studentId, name, progress };
       })
     );
   
-    return students;
+    return results;
   }
 
   /**

@@ -5,7 +5,6 @@ import {
     getClassesForUser,
     ClassSummary,
     getCoursesForClass,
-    getStudentsForClass,
     StudentBrief,
     ClassCourseRecord,
     getOrCreateClassCourse,
@@ -15,6 +14,8 @@ import {
     markClassLessonCompleted,
     getAllClassSubmissions,
     SubmissionRecord,
+    getStudentsWithProgress,
+    StudentWithProgress,
   } from "../services/classService";
 
 interface CreateClassBody {
@@ -107,14 +108,14 @@ export async function getClassesController(
       }
   
       const classId = (request.params as { id: string }).id;
-      const students: StudentBrief[] = await getStudentsForClass(
+      const students: StudentWithProgress[] = await getStudentsWithProgress(
         user.uid,
         classId
       );
   
       return reply.status(200).send(students);
     } catch (err) {
-      console.error("Error fetching class students:", err);
+      console.error("Error fetching class students with progress:", err);
       return reply
         .status(500)
         .send({ error: "Failed to fetch class students" });
