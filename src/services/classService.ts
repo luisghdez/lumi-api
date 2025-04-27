@@ -137,6 +137,7 @@ export interface ClassSummary {
     return results;
   }
 
+//  FOCUS ROUTE
   /**
  * Returns all courses assigned to a classroom, with just id + title.
  */
@@ -265,7 +266,9 @@ export async function getStudentClassesForUser(
     // 1) Find all classes where the user is listed in members
     const membershipSnaps = await db
       .collectionGroup("members")
-      .where("__name__", "==", userId)
+      .where("userId", "==", userId)
+      .orderBy("joinedAt", "desc")
+
       .get();
   
     // membershipSnaps.docs[i].ref.parent.parent is the classRef
@@ -274,7 +277,7 @@ export async function getStudentClassesForUser(
     const results = await Promise.all(
       classRefs.map(async (classRef) => {
         const classId = classRef.id;
-        const { name, identifier } = (await classRef.get()).data()!;
+        const { name, identifier, colorCode } = (await classRef.get()).data()!;
   
         // 2) Count students
         const studentsSnap = await classRef
@@ -295,7 +298,7 @@ export async function getStudentClassesForUser(
           const savedSnap = await db
             .collection("users")
             .doc(userId)
-            .collection("savedCourses")
+            .collection("classCourses")
             .doc(courseId)
             .get();
   
@@ -316,6 +319,7 @@ export async function getStudentClassesForUser(
           courseCount,
           totalCourses: courseCount,
           completedCourses,
+          colorCode,
           // Optionally: build CourseProgress[] here if you need per-lesson data
         };
       })
@@ -324,6 +328,7 @@ export async function getStudentClassesForUser(
     return results;
   }
 
+//   when click on course
 /**
  * Fetches—or if missing, creates—a classCourse record for a user.
  */
