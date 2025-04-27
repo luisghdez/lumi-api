@@ -493,8 +493,6 @@ export async function getUpcomingAssignments(
       .collection("users")
       .doc(userId)
       .collection("classCourses")
-      .where("dueAt", ">", now)
-      .orderBy("dueAt", "asc")
       .get();
   
     // 2) For each, fetch class name + course title
