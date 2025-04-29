@@ -97,9 +97,9 @@ export function generateLessons(
   const totalFillInBlank = fillInTheBlanks.length;
 
   // ✅ Ensure each item appears 3-4 times across lessons
-  const repeatedFlashcards = repeatItems(flashcards, 5);
-  const repeatedMultipleChoice = repeatItems(multipleChoice, 3);
-  const repeatedFillInBlank = repeatItems(fillInTheBlanks, 3);
+  const repeatedFlashcards = repeatItems(flashcards, 3);
+  const repeatedMultipleChoice = repeatItems(multipleChoice, 2);
+  const repeatedFillInBlank = repeatItems(fillInTheBlanks, 2);
 
   let flashcardIndex = 0,
       multipleChoiceIndex = 0,
@@ -141,22 +141,18 @@ export function generateLessons(
       flashcards: currentFlashcards,
       multipleChoice: repeatedMultipleChoice.slice(
         multipleChoiceIndex,
-        multipleChoiceIndex + 4
+        multipleChoiceIndex + 2
       ),
       fillInTheBlank: repeatedFillInBlank.slice(
         fillInBlankIndex,
-        fillInBlankIndex + 4
+        fillInBlankIndex + 2
       ),
       planetName,
       planetDescription
     };
 
 
-    // Determine if we should add a speak/write question:
-    // - If totalFlashcards is UNDER 5, add a question every lesson (alternating each lesson).
-    // - Otherwise, add a question only every 2 balanced lessons.
-    if (totalFlashcards < 5) {
-      // Always add a question and alternate each lesson.
+
       if (questionIndex % 2 === 0) {
         lessonObj.speakQuestion = {
           prompt: "Explain everything you remember about this lesson.",
@@ -171,25 +167,6 @@ export function generateLessons(
         };
       }
       questionIndex++;
-    } else {
-      // For totalFlashcards >= 5, add a question only every 2 balanced lessons.
-      if (balancedLessonCount % 2 === 0) {
-        if (questionIndex % 2 === 0) {
-          lessonObj.speakQuestion = {
-            prompt: "Explain everything you remember about this lesson.",
-            options: currentFlashcards.map(fc => fc.term),
-            lessonType: "speakAll"
-          };
-        } else {
-          lessonObj.writeQuestion = {
-            prompt: "Write everything you remember about this lesson.",
-            options: currentFlashcards.map(fc => fc.term),
-            lessonType: "writeAll"
-          };
-        }
-        questionIndex++;
-      }
-    }
 
     lessons[`lesson${lessonCount}`] = lessonObj;
 
