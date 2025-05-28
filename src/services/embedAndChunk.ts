@@ -5,85 +5,105 @@ import { v4 as uuid } from "uuid";
 
 const openai = new OpenAI();
 
-export const EMBED_DIM = 1536;                      // text-embedding-3-small
+export const EMBED_DIM = 1536;           // text-embedding-3-small
+
+// ==== tunables =============================================================
+const MAX_CHARS_PER_BLOCK = 2_000;       // if a paragraph is bigger, split by sentence
+const MIN_CHARS_PER_CHUNK = 500;         // ~125 tokens  (lower bound)
+const MAX_CHARS_PER_CHUNK = 1_200;       // ~300 tokens  (upper bound)
+const OVERLAP_SENTENCES   = 1;           // sentence overlap between chunks
+const BATCH_SIZE          = 100;         // embedding batch size
+const COARSE_LLM_MAX      = 1_500;       // merge chunks for LLM prompts (< ~375 tokens)
+// ===========================================================================
+
+const sentenceRegex = /[^.!?]+[.!?]+/g;
+const tokenCount = (s: string) => Math.ceil(s.length / 4);  // rough heuristic
 
 export async function embedAndStore(
   courseId: string,
   rawText: string[],
 ) {
-
-    // bump sim threshold down and allow larger chunks
-    const SIM_THRESHOLD = 0.6;
-    const MAX_TOKENS    = 1500;
-    const SENTENCES_PER_CHUNK = 3; // Group N sentences for each initial chunk
-
-  // A – Split text into individual sentences first
-  const individualSentences = rawText
+  /* --------------------------------------------------------------------- */
+  /* 1 ── Build SEMANTIC chunks (paragraph → sentence → sliding window)     */
+  /* --------------------------------------------------------------------- */
+  const paragraphs = rawText
     .join("\n")
-    .replace(/\s+/g, ' ') // Normalize whitespace
-    .match(/[^.!?]+[.!?]+/g) ?? [];
+    .split(/\n{2,}/g)          // break on blank lines / slide breaks
+    .map(p => p.trim())
+    .filter(Boolean);
 
-  // A.1 - Group individual sentences into desired chunk size
-  const sentences: string[] = []; // This will now hold chunks of ~SENTENCES_PER_CHUNK sentences
-  if (individualSentences.length > 0) {
-    for (let i = 0; i < individualSentences.length; i += SENTENCES_PER_CHUNK) {
-      const chunk = individualSentences.slice(i, i + SENTENCES_PER_CHUNK).join(" ").trim();
-      if (chunk) { // Ensure chunk is not empty
-        sentences.push(chunk);
-      }
+  // Step 1b – explode over-long paragraphs into sentences
+  const smallBlocks: string[] = [];
+  for (const p of paragraphs) {
+    if (p.length <= MAX_CHARS_PER_BLOCK) {
+      smallBlocks.push(p);
+    } else {
+      const sents = p.match(sentenceRegex) ?? [p];
+      smallBlocks.push(...sents.map(s => s.trim()));
     }
   }
 
-  // Helper function for token counting - defined in an outer scope
-  const tokenCount = (s: string) => Math.ceil(s.length / 4); // rough
+  // Step 1c – sliding window accumulation with overlap
+  const chunks: string[] = [];
+  let buf = "";
+  let bufSents: string[] = [];
 
-  // B – embed in batches of 100 chunks (previously sentences)
-  const allVectors: number[][] = [];
-  if (sentences.length > 0) {
-    for (let i = 0; i < sentences.length; i += 100) {
-      const batch = sentences.slice(i, i + 100);
-      const res = await openai.embeddings.create({
-        model: "text-embedding-3-small",
-        input: batch,
-      });
-      allVectors.push(...res.data.map((d) => d.embedding as number[]));
+  for (let i = 0; i < smallBlocks.length; i++) {
+    const block = smallBlocks[i];
+
+    // If the block alone is gigantic (rare), hard-split by sentences
+    if (block.length > MAX_CHARS_PER_CHUNK) {
+      const sents = block.match(sentenceRegex) ?? [block];
+      smallBlocks.splice(i, 1, ...sents);       // replace in-place
+      i--;                                      // re-evaluate
+      continue;
     }
-  }
 
-  // C – merge adjacent sentences if cosine sim > SIM_THRESHOLD or len < MAX_TOKENS
-  const topicChunks: { text: string; embedding: number[] }[] = [];
-  
-  // Ensure we have sentences and vectors to process, and they are of the same length
-  if (sentences.length > 0 && allVectors.length > 0 && sentences.length === allVectors.length) {
-    let buf = sentences[0]; // sentences[0] is now a multi-sentence chunk
-    let bufVec = allVectors[0]; // embedding of that multi-sentence chunk
-
-    const cosine = (a: number[], b: number[]) =>
-      a.reduce((s, v, idx) => s + v * b[idx], 0) /
-      (Math.hypot(...a) * Math.hypot(...b));
-
-    for (let i = 1; i < sentences.length; i++) {
-      const sim = cosine(bufVec, allVectors[i]);
-      const merged = `${buf} ${sentences[i]}`; // Merging two multi-sentence chunks
-      if (sim > SIM_THRESHOLD && tokenCount(merged) < MAX_TOKENS) {
-        buf = merged;
-        bufVec = bufVec.map(
-          (v, idx) => (v + allVectors[i][idx]) / 2,
-        );
+    // Try to add the block to the current buffer
+    if ((buf + " " + block).length <= MAX_CHARS_PER_CHUNK) {
+      buf += (buf ? "\n" : "") + block;
+      bufSents.push(...(block.match(sentenceRegex) ?? [block]));
+    } else {
+      // Flush buffer if it meets the min size
+      if (buf.length >= MIN_CHARS_PER_CHUNK) {
+        chunks.push(buf.trim());
+        // keep overlap
+        const overlap = bufSents.slice(-OVERLAP_SENTENCES).join(" ");
+        buf = overlap;
+        bufSents = overlap ? [overlap] : [];
       } else {
-        topicChunks.push({ text: buf, embedding: bufVec });
-        buf = sentences[i];
-        bufVec = allVectors[i];
+        // buffer too small – force-add current block
+        buf += (buf ? "\n" : "") + block;
       }
     }
-    // Push the last buffered chunk if it exists
-    if (buf && bufVec) {
-        topicChunks.push({ text: buf, embedding: bufVec });
-    }
+  }
+  if (buf.trim().length) chunks.push(buf.trim());
+
+  if (chunks.length === 0) return [];
+
+  /* --------------------------------------------------------------------- */
+  /* 2 ── Embed in batches and build topicChunks for Qdrant                */
+  /* --------------------------------------------------------------------- */
+  const allVectors: number[][] = [];
+  for (let i = 0; i < chunks.length; i += BATCH_SIZE) {
+    const batch = chunks.slice(i, i + BATCH_SIZE);
+    const res = await openai.embeddings.create({
+      model: "text-embedding-3-small",
+      input: batch,
+    });
+    allVectors.push(...res.data.map(d => d.embedding as number[]));
   }
 
-  // D – ensure collection exists once per course
+  const topicChunks = chunks.map((text, idx) => ({
+    text,
+    embedding: allVectors[idx],
+  }));
+
+  /* --------------------------------------------------------------------- */
+  /* 3 ── Upsert into (or create) the per-course Qdrant collection         */
+  /* --------------------------------------------------------------------- */
   const collection = `course_${courseId}`;
+
   try {
     await qdrant.getCollection(collection);
   } catch {
@@ -92,32 +112,29 @@ export async function embedAndStore(
     });
   }
 
-  // E – upsert points only if there are topicChunks to upsert
-  if (topicChunks.length > 0) {
-    await qdrant.upsert(collection, {
-        points: topicChunks.map(({ text, embedding }, idx) => ({
-        id: uuid(),
-        vector: embedding,
-        payload: { text, idx },
-        })),
-    });
-  }           
+  await qdrant.upsert(collection, {
+    points: topicChunks.map(({ text, embedding }, idx) => ({
+      id: uuid(),
+      vector: embedding,
+      payload: { text, idx },
+    })),
+  });
 
-    const LLM_MAX = 1500;               
-    const coarseChunks: string[] = [];
+  /* --------------------------------------------------------------------- */
+  /* 4 ── Build “coarse” chunks for the LLM question-generation step       */
+  /* --------------------------------------------------------------------- */
+  const coarseChunks: string[] = [];
+  let bufText = "";
 
-    let bufText = '';
-    // Ensure topicChunks is not empty before processing for coarseChunks
-    if (topicChunks.length > 0) {
-        for (const { text } of topicChunks) {
-        if (tokenCount(bufText) + tokenCount(text) > LLM_MAX) {
-            coarseChunks.push(bufText.trim());
-            bufText = text;
-        } else {
-            bufText += '\n' + text;
-        }
-        }
-        if (bufText.trim()) coarseChunks.push(bufText.trim());
+  for (const { text } of topicChunks) {
+    if (tokenCount(bufText) + tokenCount(text) > COARSE_LLM_MAX) {
+      coarseChunks.push(bufText.trim());
+      bufText = text;
+    } else {
+      bufText += "\n" + text;
     }
-    return coarseChunks;
+  }
+  if (bufText.trim()) coarseChunks.push(bufText.trim());
+
+  return coarseChunks;
 }
