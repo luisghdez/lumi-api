@@ -1,36 +1,77 @@
 import { admin, db } from "../config/firebaseConfig";
 
-interface CourseData {
+export interface LessonData {
+  [key: string]: any;
+}
+
+export interface Flashcard {
+  term: string;
+  definition: string;
+}
+
+export interface CourseMeta {
   title: string;
   description: string;
   createdBy: string;
-  lessons: { [key: string]: any };
-  mergedFlashcards: any[];
 }
 
-// 🔹 Save Course in Firestore
-export async function saveCourseToFirebase(courseData: CourseData): Promise<string> {
+export interface CourseContent {
+  lessons: Record<string, LessonData>;
+  mergedFlashcards: Flashcard[];
+}
+
+/**
+ * Creates an empty course document in Firestore and returns its new ID.
+ * Only metadata fields are written here; lessons & flashcards come later.
+ */
+export async function createCourseMeta(meta: CourseMeta): Promise<string> {
   try {
-    const courseRef = db.collection("courses").doc(); // Generate a new course ID
+    const courseRef = db.collection("courses").doc();
     await courseRef.set({
-      title: courseData.title,
-      description: courseData.description,
-      createdAt: new Date().toISOString(),
-      createdBy: courseData.createdBy, // Store the creator
-      mergedFlashcards: courseData.mergedFlashcards,
+      title:        meta.title,
+      description:  meta.description,
+      createdBy:    meta.createdBy,
+      createdAt:    admin.firestore.FieldValue.serverTimestamp(),
+      // leave lessons & mergedFlashcards empty for now
     });
-
-    const lessonsRef = courseRef.collection("lessons");
-
-    for (const [lessonKey, lessonData] of Object.entries(courseData.lessons)) {
-      await lessonsRef.doc(lessonKey).set(lessonData);
-    }
-
-    console.log(`✅ Course saved with ID: ${courseRef.id}`);
+    console.log(`📖 Reserved Course ID: ${courseRef.id}`);
     return courseRef.id;
   } catch (error) {
-    console.error("🔥 Error saving course to Firebase:", error);
-    throw new Error("Failed to save course");
+    console.error("❌ createCourseMeta failed:", error);
+    throw new Error("Failed to create course metadata");
+  }
+}
+
+/**
+ * Populates the already-reserved course with lessons & flashcards.
+ * Uses a batch write to ensure atomicity of sub-collection writes.
+ */
+export async function updateCourseContent(
+  courseId: string,
+  content: CourseContent
+): Promise<void> {
+  try {
+    const courseRef  = db.collection("courses").doc(courseId);
+    const lessonsRef = courseRef.collection("lessons");
+    const batch      = db.batch();
+
+    // 1️⃣ write mergedFlashcards array on the root document
+    batch.update(courseRef, {
+      mergedFlashcards: content.mergedFlashcards,
+      updatedAt:        admin.firestore.FieldValue.serverTimestamp(),
+    });
+
+    // 2️⃣ write each lesson into the sub-collection
+    for (const [lessonId, lessonData] of Object.entries(content.lessons)) {
+      const lessonDoc = lessonsRef.doc(lessonId);
+      batch.set(lessonDoc, lessonData);
+    }
+
+    await batch.commit();
+    console.log(`✅ Course ${courseId} content updated (lessons + flashcards).`);
+  } catch (error) {
+    console.error("❌ updateCourseContent failed:", error);
+    throw new Error("Failed to update course content");
   }
 }
 

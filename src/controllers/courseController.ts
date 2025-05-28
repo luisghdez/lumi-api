@@ -1,10 +1,11 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, saveCourseToFirebase } from "../services/courseService";
+import { createCourseMeta, getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
 import { openAiCourseContent } from "../services/openAICourseContentService";
 import { assignCourseToClass, createSavedCourse } from "../services/savedCourseService";
 import { parseOfficeAsync } from "officeparser";
+import { embedAndStore } from "../services/embedAndChunk";
 
 
 const OFFICE_MIME_TYPES = new Set([
@@ -117,19 +118,15 @@ export const createCourseController = async (
       `Extracted text from ${extractedFilesText.length} part(s), now chunking...`
     );
 
-    // 2️⃣ Break every file’s text into sentence‑safe chunks
-    const allChunks = extractedFilesText.flatMap((text) =>
-      splitIntoChunks(text, 1500)
-    );
-    console.log(`→ ${allChunks.length} chunks ready for OpenAI.`);
-
-    // 3️⃣ Call OpenAI in parallel on each chunk
+    const courseId = await createCourseMeta({ title, description, createdBy: user.uid });
+    const chunkTexts = await embedAndStore(courseId, extractedFilesText);
+    
     const chunkedResponses = await Promise.all(
-      allChunks.map((chunk, idx) => {
-        console.log(`  • processing chunk ${idx + 1}/${allChunks.length}`);
+      chunkTexts.map((chunk, idx) => {
+        console.log(`  • processing chunk ${idx + 1}/${chunkTexts.length}`);
         return openAiCourseContent(chunk);
       })
-    );
+    );    
 
     // 4️⃣ Merge all question arrays
     const mergedFlashcards = chunkedResponses.flatMap((r) => r?.flashcards || []);
@@ -151,13 +148,7 @@ export const createCourseController = async (
       mergedFillInTheBlanks
     );
 
-    const courseId = await saveCourseToFirebase({
-      title,
-      description,
-      createdBy: user.uid,
-      lessons,
-      mergedFlashcards,
-    });
+    await updateCourseContent(courseId, { lessons, mergedFlashcards });
 
     if (classId) {
       await assignCourseToClass(classId, courseId, title, dueDate);

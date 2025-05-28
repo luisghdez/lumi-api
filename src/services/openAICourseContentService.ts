@@ -52,7 +52,7 @@ export async function openAiCourseContent(extractedText: string) {
 
   try {
     const completion = await openai.beta.chat.completions.parse({
-      model: "gpt-4.1-mini",
+      model: "gpt-4.1",
       messages: [
         { role: "system", content: promptInstructions },
         { role: "user", content: extractedText },
