@@ -18,6 +18,7 @@ export interface CourseMeta {
 export interface CourseContent {
   lessons: Record<string, LessonData>;
   mergedFlashcards: Flashcard[];
+  summary: string;
 }
 
 /**
@@ -59,6 +60,7 @@ export async function updateCourseContent(
     batch.update(courseRef, {
       mergedFlashcards: content.mergedFlashcards,
       updatedAt:        admin.firestore.FieldValue.serverTimestamp(),
+      summary:          content.summary,
     });
 
     // 2️⃣ write each lesson into the sub-collection

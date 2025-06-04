@@ -68,3 +68,33 @@ export async function openAiCourseContent(extractedText: string) {
     throw error;
   }
 }
+
+
+export async function generateMarkdownSummaryFromTerms(title: string, terms: string[]) {
+  const openai = new OpenAI();
+
+  const prompt = `
+  Create a **Markdown** study guide.
+  
+  1. Start with one catchy intro line.
+  2. Explain each term in plain, student‑friendly words.
+  3. Use Markdown formatting: headings, bullet lists, tables, etc.
+  4. Show links between related terms.
+  5. Add helpful context—don’t just repeat the list.
+  
+  Terms:
+  ${terms.map(t => `- ${t}`).join("\n")}
+  `;
+  
+
+  const completion = await openai.chat.completions.create({
+    model: "gpt-4.1",
+    messages: [
+      { role: "system", content: "You generate readable Markdown summaries for students." },
+      { role: "user", content: prompt },
+    ],
+    max_tokens: 1500,
+  });
+
+  return completion.choices[0].message.content;
+}

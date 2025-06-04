@@ -2,7 +2,7 @@ import { FastifyRequest, FastifyReply } from "fastify";
 import { createCourseMeta, getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
-import { openAiCourseContent } from "../services/openAICourseContentService";
+import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
 import { assignCourseToClass, createSavedCourse } from "../services/savedCourseService";
 import { parseOfficeAsync } from "officeparser";
 import { embedAndStore } from "../services/embedAndChunk";
@@ -17,30 +17,6 @@ const OFFICE_MIME_TYPES = new Set([
   "application/vnd.ms-powerpoint",                                             // legacy .ppt
   "application/vnd.ms-excel"                                                   // legacy .xls
 ]);
-
-/**
- * Splits `text` into chunks ≤ maxLen, breaking at the last `.` before the limit.
- */
-function splitIntoChunks(text: string, maxLen = 1500): string[] {
-  const chunks: string[] = [];
-  let start = 0;
-
-  while (start < text.length) {
-    if (text.length - start <= maxLen) {
-      chunks.push(text.slice(start).trim());
-      break;
-    }
-
-    const end = start + maxLen;
-    const periodIdx = text.lastIndexOf(".", end);
-    const splitPos = periodIdx > start ? periodIdx + 1 : end;
-
-    chunks.push(text.slice(start, splitPos).trim());
-    start = splitPos;
-  }
-
-  return chunks;
-}
 
 export const createCourseController = async (
   request: FastifyRequest,
@@ -148,7 +124,9 @@ export const createCourseController = async (
       mergedFillInTheBlanks
     );
 
-    await updateCourseContent(courseId, { lessons, mergedFlashcards });
+    const summary = await generateMarkdownSummaryFromTerms(title, mergedFlashcards.map(f => f.term)) || '';
+
+    await updateCourseContent(courseId, { lessons, mergedFlashcards, summary });
 
     if (classId) {
       await assignCourseToClass(classId, courseId, title, dueDate);
@@ -161,6 +139,7 @@ export const createCourseController = async (
       message: "Course created successfully",
       courseId,
       lessonCount,
+      summary,
     });
 
   } catch (error) {
