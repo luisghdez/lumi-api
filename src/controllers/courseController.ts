@@ -1,21 +1,21 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createCourseMeta, getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent } from "../services/courseService";
+import { createCourseMeta, getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
 import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
 import { assignCourseToClass, createSavedCourse } from "../services/savedCourseService";
 import { parseOfficeAsync } from "officeparser";
 import { embedAndStore } from "../services/embedAndChunk";
+import { uploadFileToFirebaseStorage, UploadedFile } from "../services/firebaseStorageService";
+import { db, admin } from "../config/firebaseConfig";
 
 
 const OFFICE_MIME_TYPES = new Set([
   "application/pdf",
   "application/vnd.openxmlformats-officedocument.presentationml.presentation", // pptx
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",   // docx
-  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",         // xlsx
   "application/msword",                                                        // legacy .doc
   "application/vnd.ms-powerpoint",                                             // legacy .ppt
-  "application/vnd.ms-excel"                                                   // legacy .xls
 ]);
 
 export const createCourseController = async (
@@ -31,17 +31,33 @@ export const createCourseController = async (
     console.log("Controller triggered");
 
     const extractedFilesText: string[] = [];
+    const uploadedFiles: UploadedFile[] = [];
     let title = "Untitled Course";
     let description = "No description provided";
     let classId: string | undefined;
     let dueDate: string | undefined;
 
-    // 1️⃣ Extract raw text from all parts
+    // 1️⃣ Extract raw text from all parts and upload files to Firebase Storage
     for await (const part of request.parts()) {
       if ("file" in part) {
         console.log("Processing file:", part.filename, part.mimetype);
         const fileBuffer = await part.toBuffer();
         let fileExtractedText = "";
+
+        // Upload file to Firebase Storage
+        try {
+          const uploadedFile = await uploadFileToFirebaseStorage(
+            fileBuffer,
+            part.filename || "unknown",
+            part.mimetype,
+            "courses"
+          );
+          uploadedFiles.push(uploadedFile);
+          console.log(`✅ File uploaded to Firebase Storage: ${uploadedFile.fileName}`);
+        } catch (uploadError) {
+          console.error("❌ Failed to upload file to Firebase Storage:", uploadError);
+          // Continue processing even if upload fails
+        }
 
         if (OFFICE_MIME_TYPES.has(part.mimetype)) {
           console.log("Extracting text from Office/PDF...");
@@ -95,6 +111,21 @@ export const createCourseController = async (
     );
 
     const courseId = await createCourseMeta({ title, description, createdBy: user.uid });
+    
+    // Store uploaded files metadata in the course document
+    if (uploadedFiles.length > 0) {
+      try {
+        const courseRef = db.collection("courses").doc(courseId);
+        await courseRef.update({
+          uploadedFiles: uploadedFiles,
+          updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        });
+        console.log(`✅ Uploaded ${uploadedFiles.length} files metadata to course ${courseId}`);
+      } catch (error) {
+        console.error("❌ Failed to store uploaded files metadata:", error);
+      }
+    }
+    
     const chunkTexts = await embedAndStore(courseId, extractedFilesText);
     
     const chunkedResponses = await Promise.all(
@@ -140,6 +171,7 @@ export const createCourseController = async (
       courseId,
       lessonCount,
       summary,
+      uploadedFiles: uploadedFiles.length > 0 ? uploadedFiles : undefined,
     });
 
   } catch (error) {
@@ -232,6 +264,36 @@ export const getLessonsController = async (
     });
   } catch (error) {
     console.error("Error fetching lessons:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getCourseFilesController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { courseId } = request.params as { courseId: string };
+
+    if (!courseId) {
+      return reply.status(400).send({ error: "Missing courseId parameter" });
+    }
+
+    console.log(`📁 Fetching uploaded files for Course: ${courseId} (User: ${user.uid})`);
+
+    const uploadedFiles = await getCourseUploadedFiles(courseId);
+
+    return reply.status(200).send({
+      message: "Uploaded files retrieved successfully",
+      uploadedFiles,
+    });
+  } catch (error) {
+    console.error("Error fetching uploaded files:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };

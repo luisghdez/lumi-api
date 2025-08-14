@@ -232,6 +232,23 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
       throw new Error("Failed to fetch lessons with progress.");
     }
   };
+
+  export const getCourseUploadedFiles = async (courseId: string) => {
+    try {
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      
+      if (!courseDoc.exists) {
+        throw new Error("Course not found");
+      }
+      
+      const courseData = courseDoc.data();
+      return courseData?.uploadedFiles || [];
+      
+    } catch (error) {
+      console.error("Error retrieving uploaded files:", error);
+      throw new Error("Failed to fetch uploaded files.");
+    }
+  };
   
   
   
