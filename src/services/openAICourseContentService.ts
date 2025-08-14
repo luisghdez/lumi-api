@@ -52,12 +52,12 @@ export async function openAiCourseContent(extractedText: string) {
 
   try {
     const completion = await openai.beta.chat.completions.parse({
-      model: "gpt-4.1",
+      model: "gpt-5-mini",
       messages: [
         { role: "system", content: promptInstructions },
         { role: "user", content: extractedText },
       ],
-      max_tokens: 2048,
+      // max_tokens: 2048,
       response_format: zodResponseFormat(courseContentSchema, "courseContent"),
     });
 
@@ -88,12 +88,12 @@ export async function generateMarkdownSummaryFromTerms(title: string, terms: str
   
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-4.1",
+    model: "gpt-5-mini",
     messages: [
       { role: "system", content: "You generate readable Markdown summaries for students." },
       { role: "user", content: prompt },
     ],
-    max_tokens: 1500,
+    // max_tokens: 1500,
   });
 
   return completion.choices[0].message.content;
