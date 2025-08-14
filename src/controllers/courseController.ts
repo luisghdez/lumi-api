@@ -5,7 +5,7 @@ import { extractTextFromImage } from "../services/visionService";
 import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
 import { assignCourseToClass, createSavedCourse } from "../services/savedCourseService";
 import { parseOfficeAsync } from "officeparser";
-import { embedAndStore } from "../services/embedAndChunk";
+import { embedAndStoreWithMetadata } from "../services/enhancedEmbedAndChunk";
 import { uploadFileToFirebaseStorage, UploadedFile } from "../services/firebaseStorageService";
 import { db, admin } from "../config/firebaseConfig";
 
@@ -30,19 +30,23 @@ export const createCourseController = async (
 
     console.log("Controller triggered");
 
-    const extractedFilesText: string[] = [];
     const uploadedFiles: UploadedFile[] = [];
+    const filesForEmbedding: Array<{
+      buffer: Buffer;
+      fileName: string;
+      originalName: string;
+      mimeType: string;
+    }> = [];
     let title = "Untitled Course";
     let description = "No description provided";
     let classId: string | undefined;
     let dueDate: string | undefined;
 
-    // 1️⃣ Extract raw text from all parts and upload files to Firebase Storage
+    // 1️⃣ Process all parts and collect files for embedding
     for await (const part of request.parts()) {
       if ("file" in part) {
         console.log("Processing file:", part.filename, part.mimetype);
         const fileBuffer = await part.toBuffer();
-        let fileExtractedText = "";
 
         // Upload file to Firebase Storage
         try {
@@ -59,89 +63,88 @@ export const createCourseController = async (
           // Continue processing even if upload fails
         }
 
-        if (OFFICE_MIME_TYPES.has(part.mimetype)) {
-          console.log("Extracting text from Office/PDF...");
-          fileExtractedText = await parseOfficeAsync(fileBuffer);
-
-        } else if (part.mimetype.startsWith("image/")) {
-          console.log("Extracting text from image...");
-          fileExtractedText = await extractTextFromImage(fileBuffer);
-
-        } else {
-          console.log("Reading file as plain text...");
-          fileExtractedText = fileBuffer.toString("utf8");
-        }
-
-        if (fileExtractedText.trim()) {
-          extractedFilesText.push(fileExtractedText);
-        }
-
-      } else {
-        const { fieldname, value } = part as any;
-        switch (fieldname) {
-          case "title":
-            if (value.trim()) title = value;
-            break;
-          case "description":
-            if (value.trim()) description = value;
-            break;
-          case "content":
-            if (value.trim()) extractedFilesText.push(value);
-            break;
-          case "classId":
-            if (value.trim()) classId = value;
-            break;
-          case "dueDate":
-            // parse & normalize into ISO
-            const parsed = new Date(value);
-            if (!isNaN(parsed.getTime())) {
-              dueDate = parsed.toISOString();
-            }
-            break;
-        }
-      }
-    }
-
-    if (extractedFilesText.length === 0) {
-      return reply.status(400).send({ error: "No valid text provided" });
-    }
-
-    console.log(
-      `Extracted text from ${extractedFilesText.length} part(s), now chunking...`
-    );
-
-    const courseId = await createCourseMeta({ title, description, createdBy: user.uid });
-    
-    // Store uploaded files metadata in the course document
-    if (uploadedFiles.length > 0) {
-      try {
-        const courseRef = db.collection("courses").doc(courseId);
-        await courseRef.update({
-          uploadedFiles: uploadedFiles,
-          updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        // Add file for enhanced embedding processing
+        filesForEmbedding.push({
+          buffer: fileBuffer,
+          fileName: uploadedFiles[uploadedFiles.length - 1]?.fileName || `file_${filesForEmbedding.length}`,
+          originalName: part.filename || "unknown",
+          mimeType: part.mimetype
         });
-        console.log(`✅ Uploaded ${uploadedFiles.length} files metadata to course ${courseId}`);
-      } catch (error) {
-        console.error("❌ Failed to store uploaded files metadata:", error);
+
+              } else {
+          const { fieldname, value } = part as any;
+          switch (fieldname) {
+            case "title":
+              if (value.trim()) title = value;
+              break;
+            case "description":
+              if (value.trim()) description = value;
+              break;
+            case "content":
+              // Handle plain text content as a file
+              if (value.trim()) {
+                filesForEmbedding.push({
+                  buffer: Buffer.from(value, 'utf8'),
+                  fileName: `text_content_${filesForEmbedding.length}`,
+                  originalName: `text_content_${filesForEmbedding.length}`,
+                  mimeType: "text/plain"
+                });
+              }
+              break;
+            case "classId":
+              if (value.trim()) classId = value;
+              break;
+            case "dueDate":
+              // parse & normalize into ISO
+              const parsed = new Date(value);
+              if (!isNaN(parsed.getTime())) {
+                dueDate = parsed.toISOString();
+              }
+              break;
+          }
+        }
       }
-    }
-    
-    const chunkTexts = await embedAndStore(courseId, extractedFilesText);
+
+      if (filesForEmbedding.length === 0) {
+        return reply.status(400).send({ error: "No valid files or content provided" });
+      }
+
+      console.log(
+        `Processing ${filesForEmbedding.length} file(s) with enhanced embedding...`
+      );
+
+      const courseId = await createCourseMeta({ title, description, createdBy: user.uid });
+      
+      // Store uploaded files metadata in the course document
+      if (uploadedFiles.length > 0) {
+        try {
+          const courseRef = db.collection("courses").doc(courseId);
+          await courseRef.update({
+            uploadedFiles: uploadedFiles,
+            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+          });
+          console.log(`✅ Uploaded ${uploadedFiles.length} files metadata to course ${courseId}`);
+        } catch (error) {
+          console.error("❌ Failed to store uploaded files metadata:", error);
+        }
+      }
+      
+      const { coarseChunks: chunkTexts, processedFiles } = await embedAndStoreWithMetadata(courseId, filesForEmbedding);
     
     const chunkedResponses = await Promise.all(
-      chunkTexts.map((chunk, idx) => {
+      chunkTexts.map((chunk: string, idx: number) => {
         console.log(`  • processing chunk ${idx + 1}/${chunkTexts.length}`);
         return openAiCourseContent(chunk);
       })
     );    
 
     // 4️⃣ Merge all question arrays
-    const mergedFlashcards = chunkedResponses.flatMap((r) => r?.flashcards || []);
+    const mergedFlashcards = chunkedResponses.flatMap((r: any) => r?.flashcards || []);
     const mergedFillInTheBlanks = chunkedResponses.flatMap(
-      (r) => r?.fillInTheBlankQuestions || []
+      (r: any) => r?.fillInTheBlankQuestions || []
     );
     const mergedMultipleChoice = chunkedResponses.flatMap(
-      (r) => r?.multipleChoiceQuestions || []
+      (r: any) => r?.multipleChoiceQuestions || []
     );
 
     console.log(
@@ -155,9 +158,29 @@ export const createCourseController = async (
       mergedFillInTheBlanks
     );
 
-    const summary = await generateMarkdownSummaryFromTerms(title, mergedFlashcards.map(f => f.term)) || '';
+    const summary = await generateMarkdownSummaryFromTerms(title, mergedFlashcards.map((f: any) => f.term)) || '';
 
     await updateCourseContent(courseId, { lessons, mergedFlashcards, summary });
+
+    // Store processed files metadata for RAG source tracking
+    if (processedFiles.length > 0) {
+      try {
+        const courseRef = db.collection("courses").doc(courseId);
+        await courseRef.update({
+          processedFiles: processedFiles.map(file => ({
+            fileName: file.fileName,
+            originalName: file.originalName,
+            mimeType: file.mimeType,
+            fileIndex: file.fileIndex,
+            totalChunks: file.chunks.length
+          })),
+          updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        });
+        console.log(`✅ Stored processed files metadata for course ${courseId}`);
+      } catch (error) {
+        console.error("❌ Failed to store processed files metadata:", error);
+      }
+    }
 
     if (classId) {
       await assignCourseToClass(classId, courseId, title, dueDate);

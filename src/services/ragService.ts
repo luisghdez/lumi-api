@@ -6,6 +6,13 @@ interface RetrievedChunk {
   text: string;
   idx?: number;
   score: number;
+  fileIndex?: number;
+  fileName?: string;
+  originalName?: string;
+  mimeType?: string;
+  slideNumber?: number;
+  pageNumber?: number;
+  chunkIndex?: number;
 }
 
 interface RetrievalResult {
@@ -52,10 +59,35 @@ export async function searchCourseContext(
     text: r?.payload?.text ?? "",
     idx: r?.payload?.idx,
     score: typeof r?.score === "number" ? r.score : 0,
+    fileIndex: r?.payload?.fileIndex,
+    fileName: r?.payload?.fileName,
+    originalName: r?.payload?.originalName,
+    mimeType: r?.payload?.mimeType,
+    slideNumber: r?.payload?.slideNumber,
+    pageNumber: r?.payload?.pageNumber,
+    chunkIndex: r?.payload?.chunkIndex,
   })).filter(c => c.text);
 
   const context = chunks
-    .map((c, i) => `Source ${i + 1}${typeof c.idx === "number" ? ` (#${c.idx})` : ""}:\n${c.text}`)
+    .map((c, i) => {
+      let sourceInfo = `Source ${i + 1}`;
+      
+      if (c.originalName) {
+        sourceInfo += ` (${c.originalName})`;
+        
+        if (c.slideNumber) {
+          sourceInfo += ` - Slide ${c.slideNumber}`;
+        } else if (c.pageNumber) {
+          sourceInfo += ` - Page ${c.pageNumber}`;
+        } else if (c.chunkIndex) {
+          sourceInfo += ` - Chunk ${c.chunkIndex}`;
+        }
+      } else if (typeof c.idx === "number") {
+        sourceInfo += ` (#${c.idx})`;
+      }
+      
+      return `${sourceInfo}:\n${c.text}`;
+    })
     .join("\n\n---\n\n");
 
   return { context, chunks };
