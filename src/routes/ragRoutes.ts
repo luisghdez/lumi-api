@@ -1,6 +1,6 @@
 import { FastifyInstance } from "fastify";
 import { authenticateUser } from "../middleware/authUser";
-import { courseChatController } from "../controllers/ragController";
+import { courseChatController, createThreadController } from "../controllers/ragController";
 
 async function ragRoutes(fastify: FastifyInstance) {
   fastify.route({
@@ -8,6 +8,13 @@ async function ragRoutes(fastify: FastifyInstance) {
     url: "/courses/:courseId/chat",
     preHandler: authenticateUser,
     handler: courseChatController,
+  });
+
+  fastify.route({
+    method: "POST",
+    url: "/threads",
+    preHandler: authenticateUser,
+    handler: createThreadController,
   });
 }
 
