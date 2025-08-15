@@ -197,3 +197,70 @@ export const getThreadByCourseId = async (
 
   return snapshot.docs[0].id;
 };
+
+export const createMessageInThread = async (
+  uid: string,
+  threadId: string,
+  userMessage: string,
+  aiResponse: string,
+  sources?: any[]
+): Promise<{ messageId: string; message: ThreadMessage }> => {
+  // Save the user's message
+  const userMessageRef = await db
+    .collection("users")
+    .doc(uid)
+    .collection("threads")
+    .doc(threadId)
+    .collection("messages")
+    .add({
+      role: "user",
+      content: userMessage.trim(),
+      timestamp: new Date(),
+    });
+
+  // Save the AI's response (with cleaned sources if available)
+  const messageData: any = {
+    role: "assistant",
+    content: aiResponse,
+    timestamp: new Date(),
+  };
+
+  if (sources && sources.length > 0) {
+    messageData.sources = cleanSourcesForFirestore(sources);
+  }
+
+  const aiMessageRef = await db
+    .collection("users")
+    .doc(uid)
+    .collection("threads")
+    .doc(threadId)
+    .collection("messages")
+    .add(messageData);
+
+  // Update thread metadata
+  const threadRef = db
+    .collection("users")
+    .doc(uid)
+    .collection("threads")
+    .doc(threadId);
+
+  const threadDoc = await threadRef.get();
+  const currentData = threadDoc.data();
+  
+  await threadRef.update({
+    lastMessageAt: new Date(),
+    messageCount: (currentData?.messageCount || 0) + 2, // User message + AI response
+    updatedAt: new Date(),
+  });
+
+  return {
+    messageId: aiMessageRef.id,
+    message: {
+      messageId: aiMessageRef.id,
+      role: "assistant",
+      content: aiResponse,
+      timestamp: new Date(),
+      ...(sources && { sources: cleanSourcesForFirestore(sources) }),
+    },
+  };
+};

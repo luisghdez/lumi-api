@@ -1,7 +1,7 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { answerCourseQuestion } from "../services/ragService";
-import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId } from "../services/threadService";
-import { processGeneralMessage } from "../services/generalChatService";
+import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread } from "../services/threadService";
+import { processGeneralMessage, processGeneralMessageWithHistory } from "../services/generalChatService";
 
 export const courseChatController = async (
   request: FastifyRequest,
@@ -181,6 +181,62 @@ export const getCourseMessagesController = async (
     });
   } catch (error: any) {
     console.error("Error in getCourseMessagesController:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const createMessageController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { threadId } = request.params as { threadId: string };
+    const { message, courseId } = request.body as {
+      message: string;
+      courseId?: string;
+    };
+
+    if (!message?.trim()) {
+      return reply.status(400).send({ error: "Missing message" });
+    }
+
+    // Get conversation history for context
+    const historyResult = await getThreadMessages(user.uid, threadId, 50); // Get last 50 messages for context
+    const conversationHistory = historyResult.messages.map(msg => ({
+      role: msg.role,
+      content: msg.content,
+    }));
+
+    // Controller decides which service to call for message processing
+    let aiResponse: string;
+    let sources: any[] | undefined;
+    
+    if (courseId) {
+      // Use course-specific RAG service with conversation history
+      const result = await answerCourseQuestion(courseId, message, {
+        conversationHistory
+      });
+      aiResponse = result.answer;
+      sources = result.sources;
+    } else {
+      // Use general chat service with conversation history
+      aiResponse = await processGeneralMessageWithHistory(message, conversationHistory);
+    }
+
+    // Create message in thread
+    const result = await createMessageInThread(user.uid, threadId, message.trim(), aiResponse, sources);
+
+    return reply.status(201).send({
+      ...result.message,
+      ...(sources && { sources }),
+    });
+  } catch (error: any) {
+    console.error("Error in createMessageController:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
