@@ -98,7 +98,7 @@ export async function answerCourseQuestion(
   question: string,
   options?: { topK?: number; conversationHistory?: Array<{ role: "user" | "assistant"; content: string }> }
 ): Promise<{ answer: string; sources: RetrievedChunk[] }> {
-  const topK = options?.topK ?? 8;
+  const topK = options?.topK ?? 5;
   const retrieval = await searchCourseContext(courseId, question, topK);
 
   const systemPrompt = `You are a helpful tutor for this specific course. Answer the user's question using ONLY the provided sources.\n\nIf the answer isn't in the sources, say you don't find it in the course materials and offer a brief next step. Keep answers concise and cite where relevant as [Source N].`;

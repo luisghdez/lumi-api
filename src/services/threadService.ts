@@ -14,13 +14,28 @@ export interface MessageData {
   role: "user" | "assistant";
   content: string;
   timestamp: Date;
+  sources?: any[]; // Sources from RAG
 }
+
+// Helper function to clean sources data for Firestore
+const cleanSourcesForFirestore = (sources: any[]): any[] => {
+  return sources.map(source => {
+    const cleanedSource: any = {};
+    Object.entries(source).forEach(([key, value]) => {
+      if (value !== undefined && value !== null) {
+        cleanedSource[key] = value;
+      }
+    });
+    return cleanedSource;
+  });
+};
 
 export const createThread = async (
   uid: string, 
   initialMessage: string,
   initialResponse: string,
-  courseId?: string
+  courseId?: string,
+  sources?: any[]
 ): Promise<{ threadId: string; thread: ThreadData }> => {
   const threadData = {
     initialMessage: initialMessage.trim(),
@@ -46,12 +61,18 @@ export const createThread = async (
     timestamp: new Date(),
   });
 
-  // Save the AI's response
-  await threadRef.collection("messages").add({
+  // Save the AI's response (with cleaned sources if available)
+  const messageData: any = {
     role: "assistant",
     content: initialResponse,
     timestamp: new Date(),
-  });
+  };
+
+  if (sources && sources.length > 0) {
+    messageData.sources = cleanSourcesForFirestore(sources);
+  }
+
+  await threadRef.collection("messages").add(messageData);
 
   return {
     threadId: threadRef.id,

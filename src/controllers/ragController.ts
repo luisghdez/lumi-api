@@ -57,6 +57,7 @@ export const createThreadController = async (
 
     // Controller decides which service to call for message processing
     let initialResponse: string;
+    let sources: any[] | undefined;
     
     if (courseId) {
       // Use course-specific RAG service
@@ -64,17 +65,19 @@ export const createThreadController = async (
         conversationHistory: [] // Empty conversation history for first message
       });
       initialResponse = result.answer;
+      sources = result.sources;
     } else {
       // Use general chat service
       initialResponse = await processGeneralMessage(initialMessage);
     }
 
     // Create thread with the processed response
-    const result = await createThread(user.uid, initialMessage.trim(), initialResponse, courseId);
+    const result = await createThread(user.uid, initialMessage.trim(), initialResponse, courseId, sources);
 
     return reply.status(201).send({
       threadId: result.threadId,
       ...result.thread,
+      ...(sources && { sources }), // Include sources in response if available
     });
   } catch (error: any) {
     console.error("Error in createThreadController:", error);
