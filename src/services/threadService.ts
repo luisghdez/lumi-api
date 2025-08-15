@@ -24,6 +24,14 @@ export interface ThreadSummary {
   messageCount: number;
 }
 
+export interface ThreadMessage {
+  messageId: string;
+  role: "user" | "assistant";
+  content: string;
+  timestamp: Date;
+  sources?: any[];
+}
+
 // Helper function to clean sources data for Firestore
 const cleanSourcesForFirestore = (sources: any[]): any[] => {
   return sources.map(source => {
@@ -125,4 +133,67 @@ export const getUserThreads = async (
     hasMore,
     lastDoc: lastVisibleDoc,
   };
+};
+
+export const getThreadMessages = async (
+  uid: string,
+  threadId: string,
+  limit: number = 20,
+  lastDoc?: any
+): Promise<{ messages: ThreadMessage[]; hasMore: boolean; lastDoc?: any }> => {
+  let query = db
+    .collection("users")
+    .doc(uid)
+    .collection("threads")
+    .doc(threadId)
+    .collection("messages")
+    .orderBy("timestamp", "asc")
+    .limit(limit);
+
+  if (lastDoc) {
+    query = query.startAfter(lastDoc);
+  }
+
+  const snapshot = await query.get();
+  const messages: ThreadMessage[] = [];
+
+  snapshot.forEach((doc) => {
+    const data = doc.data();
+    messages.push({
+      messageId: doc.id,
+      role: data.role,
+      content: data.content,
+      timestamp: data.timestamp.toDate(),
+      ...(data.sources && { sources: data.sources }),
+    });
+  });
+
+  const hasMore = snapshot.docs.length === limit;
+  const lastVisibleDoc = hasMore ? snapshot.docs[snapshot.docs.length - 1] : null;
+
+  return {
+    messages,
+    hasMore,
+    lastDoc: lastVisibleDoc,
+  };
+};
+
+export const getThreadByCourseId = async (
+  uid: string,
+  courseId: string
+): Promise<string | null> => {
+  const snapshot = await db
+    .collection("users")
+    .doc(uid)
+    .collection("threads")
+    .where("courseId", "==", courseId)
+    .orderBy("lastMessageAt", "desc")
+    .limit(1)
+    .get();
+
+  if (snapshot.empty) {
+    return null;
+  }
+
+  return snapshot.docs[0].id;
 };

@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { answerCourseQuestion } from "../services/ragService";
-import { createThread, getUserThreads } from "../services/threadService";
+import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId } from "../services/threadService";
 import { processGeneralMessage } from "../services/generalChatService";
 
 export const courseChatController = async (
@@ -112,6 +112,75 @@ export const getUserThreadsController = async (
     });
   } catch (error: any) {
     console.error("Error in getUserThreadsController:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getThreadMessagesController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { threadId } = request.params as { threadId: string };
+    const { limit = 20, lastDoc } = request.query as {
+      limit?: number;
+      lastDoc?: string;
+    };
+
+    const validatedLimit = Math.min(Math.max(limit || 20, 1), 100);
+    const result = await getThreadMessages(user.uid, threadId, validatedLimit, lastDoc);
+
+    return reply.status(200).send({
+      threadId,
+      messages: result.messages,
+      hasMore: result.hasMore,
+      ...(result.lastDoc && { lastDoc: result.lastDoc.id }),
+    });
+  } catch (error: any) {
+    console.error("Error in getThreadMessagesController:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getCourseMessagesController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { courseId } = request.params as { courseId: string };
+    const { limit = 20, lastDoc } = request.query as {
+      limit?: number;
+      lastDoc?: string;
+    };
+
+    const validatedLimit = Math.min(Math.max(limit || 20, 1), 100);
+    const threadId = await getThreadByCourseId(user.uid, courseId);
+    
+    if (!threadId) {
+      return reply.status(404).send({ error: "No thread found for this course" });
+    }
+
+    const result = await getThreadMessages(user.uid, threadId, validatedLimit, lastDoc);
+
+    return reply.status(200).send({
+      threadId,
+      courseId,
+      messages: result.messages,
+      hasMore: result.hasMore,
+      ...(result.lastDoc && { lastDoc: result.lastDoc.id }),
+    });
+  } catch (error: any) {
+    console.error("Error in getCourseMessagesController:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
