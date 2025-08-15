@@ -3,6 +3,8 @@ import { qdrant } from "./qdrant";
 import { v4 as uuid } from "uuid";
 import pdfParse from 'pdf-parse';
 import { parseOfficeAsync } from "officeparser";
+import JSZip from "jszip";
+import { XMLParser } from "fast-xml-parser";
 
 const openai = new OpenAI();
 
@@ -73,74 +75,136 @@ async function extractPDFWithPages(fileBuffer: Buffer): Promise<{ text: string; 
   }
 }
 
-/**
- * Extract text from PPTX with slide information
- */
-async function extractPPTXWithSlides(fileBuffer: Buffer): Promise<{ text: string; slideNumber: number }[]> {
-  try {
-    const extractedText = await parseOfficeAsync(fileBuffer);
-    const slides: { text: string; slideNumber: number }[] = [];
-    
-    // Split by slide breaks (common patterns in PPTX extraction)
-    // Look for patterns that indicate slide breaks
-    const slidePatterns = [
-      /\n\s*Slide\s+\d+\s*\n/gi,
-      /\n\s*Page\s+\d+\s*\n/gi,
-      /\n{3,}/g, // Multiple newlines often indicate slide breaks
-    ];
-    
-    let slideTexts = [extractedText];
-    
-    // Try different patterns to split slides
-    for (const pattern of slidePatterns) {
-      if (slideTexts.length === 1) {
-        slideTexts = extractedText.split(pattern);
+type SlideOut = { text: string; slideNumber: number };
+
+// ---- Parser (UPDATED: easier attribute handling) ----
+const xmlParser = new XMLParser({
+  ignoreAttributes: false,
+  removeNSPrefix: true,
+  attributeNamePrefix: "",                    // attrs like "Id", "Target", "r:id"
+  transformAttributeName: (n) => n.replace(/^@_/, ""), // drop "@_"
+});
+
+// ---- Helpers (NEW/UPDATED) ----
+function getArray<T>(x: T | T[] | undefined): T[] {
+  if (!x) return [];
+  return Array.isArray(x) ? x : [x];
+}
+
+function getAttr(o: any, ...keys: string[]) {
+  for (const k of keys) {
+    if (o && o[k] != null) return o[k];
+  }
+  return undefined;
+}
+
+async function mustRead(zip: JSZip, path: string): Promise<string> {
+  const f = zip.file(path);
+  if (!f) throw new Error(`Missing ${path} in PPTX`);
+  return f.async("string");
+}
+
+function normalizeTargetPath(target: string): string {
+  // handles "slides/slide1.xml", "./slides/slide1.xml", "../slides/slide1.xml", "/ppt/slides/slide1.xml"
+  let t = (target || "").replace(/^[.\/]+/, ""); // strip leading ./, ../, /
+  if (!t.startsWith("ppt/")) t = `ppt/${t}`;
+  return t;
+}
+
+function collectSlideText(node: any, out: string[]) {
+  if (node == null) return;
+  if (Array.isArray(node)) {
+    for (const n of node) collectSlideText(n, out);
+    return;
+  }
+  if (typeof node === "object") {
+    for (const [k, v] of Object.entries(node)) {
+      if (k === "t") {
+        if (typeof v === "string") out.push(v);
+        else if (v && typeof (v as any)["#text"] === "string") out.push((v as any)["#text"]);
+        continue;
       }
+      if (k === "br") {
+        out.push("\n");
+        continue;
+      }
+      if (k === "p") out.push("\n"); // paragraph boundary
+      collectSlideText(v, out);
     }
-    
-    // If we still have only one slide, try to split by common slide indicators
-    if (slideTexts.length === 1) {
-      const lines = extractedText.split('\n');
-      const newSlides: string[] = [];
-      let currentSlide = '';
-      
-      for (const line of lines) {
-        // Check if line indicates a new slide
-        if (line.match(/^(Slide|Page)\s+\d+/i) || 
-            line.match(/^[A-Z][A-Z\s]{10,}$/) || // All caps titles often indicate slide titles
-            line.trim().length === 0) {
-          if (currentSlide.trim()) {
-            newSlides.push(currentSlide.trim());
-            currentSlide = '';
-          }
-        }
-        currentSlide += line + '\n';
-      }
-      
-      if (currentSlide.trim()) {
-        newSlides.push(currentSlide.trim());
-      }
-      
-      if (newSlides.length > 1) {
-        slideTexts = newSlides;
-      }
-    }
-    
-    slideTexts.forEach((slideText, index) => {
-      if (slideText.trim()) {
-        slides.push({
-          text: slideText.trim(),
-          slideNumber: index + 1
-        });
-      }
-    });
-    
-    return slides;
-  } catch (error) {
-    console.error("Error extracting PPTX with slides:", error);
-    throw new Error(`Failed to extract PPTX text: ${error}`);
   }
 }
+
+// ---- MAIN (UPDATED) ----
+export async function extractPPTXWithSlides(fileBuffer: Buffer): Promise<SlideOut[]> {
+  const zip = await JSZip.loadAsync(fileBuffer);
+
+  // presentation.xml -> slide ids
+  const presXml = await mustRead(zip, "ppt/presentation.xml");
+  const pres = xmlParser.parse(presXml);
+  const sldIdNodes = getArray(pres?.presentation?.sldIdLst?.sldId);
+
+  // presentation.xml.rels -> rId -> Target
+  const relsXml = await mustRead(zip, "ppt/_rels/presentation.xml.rels");
+  const rels = xmlParser.parse(relsXml);
+  const relList = getArray(rels?.Relationships?.Relationship);
+
+  const relMap = new Map<string, string>();
+  for (const r of relList) {
+    const id = getAttr(r, "Id", "ID", "id");                    // flexible casing
+    const target = getAttr(r, "Target", "target", "TARGET");
+    if (id && target) relMap.set(id, target);
+  }
+
+  const results: SlideOut[] = [];
+
+  // Prefer declared order via r:id mapping; fallback if missing
+  if (sldIdNodes.length) {
+    let slideIndex = 0;
+    for (const sld of sldIdNodes) {
+      // different decks expose r:id as "r:id", or sometimes just "Id"/"id"
+      const rid = getAttr(sld, "r:id", "rId", "Id", "id") as string | undefined;
+      if (!rid) continue;
+
+      const target = relMap.get(rid);
+      if (!target) continue;
+
+      const slidePath = normalizeTargetPath(target);
+      const slideXml = await mustRead(zip, slidePath);
+      const slideDoc = xmlParser.parse(slideXml);
+
+      const chunks: string[] = [];
+      collectSlideText(slideDoc, chunks);
+
+      const text = chunks.join("").replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+      slideIndex += 1;
+      results.push({ text, slideNumber: slideIndex });
+    }
+  }
+
+  // Fallback: enumerate slide files directly if mapping failed
+  if (results.length === 0) {
+    const slideFiles = Object.keys(zip.files).filter((p) => /^ppt\/slides\/slide\d+\.xml$/.test(p));
+    slideFiles.sort((a, b) => {
+      const na = parseInt(a.match(/slide(\d+)\.xml/)?.[1] || "0", 10);
+      const nb = parseInt(b.match(/slide(\d+)\.xml/)?.[1] || "0", 10);
+      return na - nb;
+    });
+
+    let slideIndex = 0;
+    for (const slidePath of slideFiles) {
+      const slideXml = await mustRead(zip, slidePath);
+      const slideDoc = xmlParser.parse(slideXml);
+      const chunks: string[] = [];
+      collectSlideText(slideDoc, chunks);
+      const text = chunks.join("").replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+      slideIndex += 1;
+      results.push({ text, slideNumber: slideIndex });
+    }
+  }
+
+  return results;
+}
+
 
 /**
  * Process text chunks with metadata for regular text files
