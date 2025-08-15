@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { answerCourseQuestion } from "../services/ragService";
-import { createThread } from "../services/threadService";
+import { createThread, getUserThreads } from "../services/threadService";
 import { processGeneralMessage } from "../services/generalChatService";
 
 export const courseChatController = async (
@@ -44,7 +44,7 @@ export const createThreadController = async (
     const user = (request as any).user;
     if (!user || !user.uid) {
       return reply.status(401).send({ error: "Unauthorized" });
-    }    
+    }
 
     const { initialMessage, courseId } = request.body as {
       initialMessage: string;
@@ -71,7 +71,7 @@ export const createThreadController = async (
       initialResponse = await processGeneralMessage(initialMessage);
     }
 
-    // Create thread with the processed response
+    // Create thread with the processed response and sources
     const result = await createThread(user.uid, initialMessage.trim(), initialResponse, courseId, sources);
 
     return reply.status(201).send({
@@ -81,6 +81,37 @@ export const createThreadController = async (
     });
   } catch (error: any) {
     console.error("Error in createThreadController:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getUserThreadsController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { limit = 10, lastDoc } = request.query as {
+      limit?: number;
+      lastDoc?: string;
+    };
+
+    // Validate limit
+    const validatedLimit = Math.min(Math.max(limit || 10, 1), 50); // Between 1 and 50
+
+    const result = await getUserThreads(user.uid, validatedLimit, lastDoc);
+
+    return reply.status(200).send({
+      threads: result.threads,
+      hasMore: result.hasMore,
+      ...(result.lastDoc && { lastDoc: result.lastDoc.id }),
+    });
+  } catch (error: any) {
+    console.error("Error in getUserThreadsController:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
