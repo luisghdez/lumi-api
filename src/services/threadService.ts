@@ -4,6 +4,7 @@ export interface ThreadData {
   initialMessage: string;
   initialResponse: string;
   courseId?: string | null;
+  courseTitle?: string | null;
   lastMessageAt: Date;
   messageCount: number;
   createdAt: Date;
@@ -50,12 +51,14 @@ export const createThread = async (
   initialMessage: string,
   initialResponse: string,
   courseId?: string,
+  courseTitle?: string,
   sources?: any[]
 ): Promise<{ threadId: string; thread: ThreadData }> => {
   const threadData = {
     initialMessage: initialMessage.trim(),
     initialResponse,
     courseId: courseId || null,
+    courseTitle: courseTitle || null,
     lastMessageAt: new Date(),
     messageCount: 2, // User message + AI response
     createdAt: new Date(),

@@ -169,6 +169,20 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
     }
   };
   
+  export async function getCourseTitleById(courseId: string): Promise<string | null> {
+    try {
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      if (!courseDoc.exists) {
+        return null;
+      }
+      const data = courseDoc.data();
+      return (data && (data as any).title) || null;
+    } catch (error) {
+      console.error("Error retrieving course title:", error);
+      throw new Error("Failed to fetch course title.");
+    }
+  }
+
 
   export const getLessonsWithProgressFromFirebase = async (
     userId: string,

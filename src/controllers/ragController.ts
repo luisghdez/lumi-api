@@ -1,6 +1,7 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { answerCourseQuestion } from "../services/ragService";
 import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread } from "../services/threadService";
+import { getCourseTitleById } from "../services/courseService";
 import { processGeneralMessage, processGeneralMessageWithHistory } from "../services/generalChatService";
 
 export const courseChatController = async (
@@ -58,8 +59,15 @@ export const createThreadController = async (
     // Controller decides which service to call for message processing
     let initialResponse: string;
     let sources: any[] | undefined;
+    let courseTitle: string | undefined;
     
     if (courseId) {
+      // Validate the course and get title
+      const fetchedCourseTitle = await getCourseTitleById(courseId);
+      if (!fetchedCourseTitle) {
+        return reply.status(400).send({ error: "Invalid courseId: course not found" });
+      }
+      courseTitle = fetchedCourseTitle;
       // Use course-specific RAG service
       const result = await answerCourseQuestion(courseId, initialMessage, {
         conversationHistory: [] // Empty conversation history for first message
@@ -72,7 +80,14 @@ export const createThreadController = async (
     }
 
     // Create thread with the processed response and sources
-    const result = await createThread(user.uid, initialMessage.trim(), initialResponse, courseId, sources);
+    const result = await createThread(
+      user.uid,
+      initialMessage.trim(),
+      initialResponse,
+      courseId,
+      courseTitle,
+      sources
+    );
 
     return reply.status(201).send({
       threadId: result.threadId,
