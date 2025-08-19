@@ -57,46 +57,100 @@ export const createThreadController = async (
       return reply.status(400).send({ error: "Missing initial message" });
     }
 
+    // Prepare streaming NDJSON response
+    reply.raw.writeHead(200, {
+      "Content-Type": "application/x-ndjson; charset=utf-8",
+      "Cache-Control": "no-cache, no-transform",
+      "Connection": "keep-alive",
+      "X-Accel-Buffering": "no",
+      "Transfer-Encoding": "chunked",
+    });
+    // @ts-ignore
+    if (typeof reply.raw.flushHeaders === "function") reply.raw.flushHeaders();
+
+    const writeObject = (obj: any) => {
+      try { reply.raw.write(`${JSON.stringify(obj)}\n`); } catch {}
+    };
+
     // Controller decides which service to call for message processing
-    let initialResponse: string;
     let sources: any[] | undefined;
     let courseTitle: string | undefined;
-    
+
+    const openai = new OpenAI();
+    let messages: Array<{ role: "system" | "user" | "assistant"; content: string }> = [];
+
     if (courseId) {
-      // Validate the course and get title
       const fetchedCourseTitle = await getCourseTitleById(courseId);
       if (!fetchedCourseTitle) {
-        return reply.status(400).send({ error: "Invalid courseId: course not found" });
+        writeObject({ type: "error", error: "Invalid courseId: course not found" });
+        try { reply.raw.end(); } catch {}
+        return;
       }
       courseTitle = fetchedCourseTitle;
-      // Use course-specific RAG service
-      const result = await answerCourseQuestion(courseId, initialMessage, {
-        conversationHistory: [] // Empty conversation history for first message
-      });
-      initialResponse = result.answer;
-      sources = result.sources;
+
+      const retrieval = await searchCourseContext(courseId, initialMessage, 5);
+      sources = retrieval.chunks;
+
+      messages.push(
+        { role: "system", content: "You are a helpful tutor for this specific course. Answer the user's question using ONLY the provided sources. If the answer isn't in the sources, say you don't find it in the course materials and offer a brief next step. Keep answers concise and cite where relevant as [Source N]." },
+        { role: "system", content: `Sources (most relevant first):\n\n${retrieval.context}` },
+      );
     } else {
-      // Use general chat service
-      initialResponse = await processGeneralMessage(initialMessage);
+      messages.push({ role: "system", content: "You are a helpful AI assistant. Provide clear, concise, and helpful responses to user questions." });
     }
 
-    // Create thread with the processed response and sources
-    const result = await createThread(
-      user.uid,
-      initialMessage.trim(),
-      initialResponse,
-      courseId,
-      courseTitle,
-      sources
-    );
+    messages.push({ role: "user", content: initialMessage });
 
-    return reply.status(201).send({
-      threadId: result.threadId,
-      ...result.thread,
-      ...(sources && { sources }), // Include sources in response if available
-    });
+    writeObject({ type: "start", role: "assistant", ...(sources && { sources }) });
+
+    const stream = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages,
+      temperature: courseId ? 0.2 : 0.7,
+      stream: true,
+    } as any);
+
+    let fullText = "";
+    for await (const chunk of stream as any) {
+      if (reply.raw.writableEnded) break;
+      const delta = chunk?.choices?.[0]?.delta?.content || "";
+      if (delta) {
+        fullText += delta;
+        writeObject({ type: "delta", delta });
+      }
+    }
+
+    try {
+      const result = await createThread(
+        user.uid,
+        initialMessage.trim(),
+        fullText,
+        courseId,
+        courseTitle,
+        sources
+      );
+
+      writeObject({ type: "thread", threadId: result.threadId, ...result.thread });
+      writeObject({ type: "message", ...result.assistantMessage, ...(sources && { sources }) });
+      writeObject({ type: "done" });
+    } catch (persistErr: any) {
+      writeObject({ type: "error", error: "Failed to create thread", details: persistErr?.message || String(persistErr) });
+    } finally {
+      try { reply.raw.end(); } catch {}
+    }
+
+    return;
   } catch (error: any) {
     console.error("Error in createThreadController:", error);
+    try {
+      if (reply.raw.headersSent) {
+        try {
+          reply.raw.write(`${JSON.stringify({ type: "error", error: "Internal Server Error" })}\n`);
+          reply.raw.end();
+          return;
+        } catch {}
+      }
+    } catch {}
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };

@@ -55,7 +55,7 @@ export const createThread = async (
   courseId?: string,
   courseTitle?: string,
   sources?: any[]
-): Promise<{ threadId: string; thread: ThreadData }> => {
+): Promise<{ threadId: string; thread: ThreadData; assistantMessage: ThreadMessage }> => {
   const threadData = {
     initialMessage: initialMessage.trim(),
     initialResponse,
@@ -92,11 +92,18 @@ export const createThread = async (
     messageData.sources = cleanSourcesForFirestore(sources);
   }
 
-  await threadRef.collection("messages").add(messageData);
+  const aiMessageRef = await threadRef.collection("messages").add(messageData);
 
   return {
     threadId: threadRef.id,
     thread: threadData,
+    assistantMessage: {
+      messageId: aiMessageRef.id,
+      role: "assistant",
+      content: initialResponse,
+      timestamp: new Date(),
+      ...(sources && { sources: cleanSourcesForFirestore(sources) }),
+    },
   };
 };
 
