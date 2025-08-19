@@ -1,8 +1,9 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { answerCourseQuestion } from "../services/ragService";
+import { answerCourseQuestion, searchCourseContext } from "../services/ragService";
 import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread } from "../services/threadService";
 import { getCourseTitleById } from "../services/courseService";
 import { processGeneralMessage, processGeneralMessageWithHistory } from "../services/generalChatService";
+import OpenAI from "openai";
 
 export const courseChatController = async (
   request: FastifyRequest,
@@ -221,37 +222,114 @@ export const createMessageController = async (
     }
 
     // Get conversation history for context
-    const historyResult = await getThreadMessages(user.uid, threadId, 50); // Get last 50 messages for context
+    const historyResult = await getThreadMessages(user.uid, threadId, 50);
     const conversationHistory = historyResult.messages.map(msg => ({
       role: msg.role,
       content: msg.content,
     }));
 
-    // Controller decides which service to call for message processing
-    let aiResponse: string;
+    // Prepare streaming NDJSON response (works with POST + fetch streaming)
+    reply.raw.writeHead(200, {
+      "Content-Type": "application/x-ndjson; charset=utf-8",
+      "Cache-Control": "no-cache, no-transform",
+      "Connection": "keep-alive",
+      "X-Accel-Buffering": "no",
+      "Transfer-Encoding": "chunked",
+    });
+    // @ts-ignore flushHeaders exists on Node's ServerResponse
+    if (typeof reply.raw.flushHeaders === "function") reply.raw.flushHeaders();
+
+    const writeObject = (obj: any) => {
+      try {
+        reply.raw.write(`${JSON.stringify(obj)}\n`);
+      } catch (err) {
+        // ignore write errors (client may have disconnected)
+      }
+    };
+
+    const openai = new OpenAI();
     let sources: any[] | undefined;
-    
+
+    // Build messages for the model
+    let messages: Array<{ role: "system" | "user" | "assistant"; content: string }> = [];
     if (courseId) {
-      // Use course-specific RAG service with conversation history
-      const result = await answerCourseQuestion(courseId, message, {
-        conversationHistory
-      });
-      aiResponse = result.answer;
-      sources = result.sources;
+      // RAG: retrieve relevant context and include as system content
+      const retrieval = await searchCourseContext(courseId, message, 5);
+      sources = retrieval.chunks;
+
+      messages.push(
+        { role: "system", content: "You are a helpful tutor for this specific course. Answer the user's question using ONLY the provided sources. If the answer isn't in the sources, say you don't find it in the course materials and offer a brief next step. Keep answers concise and cite where relevant as [Source N]." },
+        { role: "system", content: `Sources (most relevant first):\n\n${retrieval.context}` },
+      );
     } else {
-      // Use general chat service with conversation history
-      aiResponse = await processGeneralMessageWithHistory(message, conversationHistory);
+      // General chat system prompt
+      messages.push({
+        role: "system",
+        content: "You are a helpful AI assistant. Provide clear, concise, and helpful responses to user questions. Maintain context from the conversation history.",
+      });
     }
 
-    // Create message in thread
-    const result = await createMessageInThread(user.uid, threadId, message.trim(), aiResponse, sources);
+    // Add conversation history
+    for (const msg of conversationHistory) {
+      messages.push({ role: msg.role, content: msg.content });
+    }
+    // Add the current user message
+    messages.push({ role: "user", content: message });
 
-    return reply.status(201).send({
-      ...result.message,
-      ...(sources && { sources }),
-    });
+    // Inform client of start and any metadata (e.g., sources)
+    writeObject({ type: "start", threadId, role: "assistant", ...(sources && { sources }) });
+
+    const stream = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages,
+      temperature: courseId ? 0.2 : 0.7,
+      stream: true,
+    } as any);
+
+    let fullText = "";
+
+    for await (const chunk of stream as any) {
+      if ((request as any).raw?.aborted || reply.raw.writableEnded) {
+        break;
+      }
+      const delta = chunk?.choices?.[0]?.delta?.content || "";
+      if (delta) {
+        fullText += delta;
+        writeObject({ type: "delta", delta });
+      }
+    }
+
+    // Persist the final message and then announce completion
+    try {
+      const result = await createMessageInThread(
+        user.uid,
+        threadId,
+        message.trim(),
+        fullText,
+        sources,
+      );
+
+      writeObject({ type: "message", ...result.message, ...(sources && { sources }) });
+      writeObject({ type: "done" });
+    } catch (persistErr: any) {
+      writeObject({ type: "error", error: "Failed to save message", details: persistErr?.message || String(persistErr) });
+    } finally {
+      try { reply.raw.end(); } catch {}
+    }
+
+    return; // We have handled the response via streaming
   } catch (error: any) {
     console.error("Error in createMessageController:", error);
+    try {
+      // If headers already sent for SSE, emit error event; otherwise send JSON error
+      if (reply.raw.headersSent) {
+        try {
+          reply.raw.write(`${JSON.stringify({ type: "error", error: "Internal Server Error" })}\n`);
+          reply.raw.end();
+          return;
+        } catch {}
+      }
+    } catch {}
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
