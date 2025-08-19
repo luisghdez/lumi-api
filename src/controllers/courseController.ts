@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createCourseMeta, getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles } from "../services/courseService";
+import { createCourseMeta, getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
 import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
@@ -113,7 +113,12 @@ export const createCourseController = async (
         `Processing ${filesForEmbedding.length} file(s) with enhanced embedding...`
       );
 
-      const courseId = await createCourseMeta({ title, description, createdBy: user.uid });
+      const courseId = await createCourseMeta({ 
+        title, 
+        description, 
+        createdBy: user.uid,
+        hasEmbeddings: false 
+      });
       
       // Store uploaded files metadata in the course document
       if (uploadedFiles.length > 0) {
@@ -130,6 +135,9 @@ export const createCourseController = async (
       }
       
       const { coarseChunks: chunkTexts, processedFiles } = await embedAndStoreWithMetadata(courseId, filesForEmbedding);
+      
+      // Mark embeddings as complete
+      await updateCourseEmbeddingsStatus(courseId, true);
     
     const chunkedResponses = await Promise.all(
       chunkTexts.map((chunk: string, idx: number) => {
@@ -320,5 +328,7 @@ export const getCourseFilesController = async (
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
+
+
 
 

@@ -17,6 +17,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
     const courseData = courseSnapshot.data();
     const courseTitle = courseData?.title || null;
     const courseDescription = courseData?.description || null;
+    const hasEmbeddings = courseData?.hasEmbeddings || false;
 
     const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
     for (let i = 1; i <= data.lessonCount; i++) {
@@ -35,6 +36,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       courseId: data.courseId,
       title: courseTitle,
       description: courseDescription,
+      hasEmbeddings,
       saved: true,
       progress: {
         overallScore: 0,
@@ -75,6 +77,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
     const courseData = courseSnapshot.data();
     const courseTitle = courseData?.title || null;
     const courseDescription = courseData?.description || null;
+    const hasEmbeddings = courseData?.hasEmbeddings || false;
 
     const lessonsSnapshot = await courseRef.collection("lessons").get();
     const lessonCount = lessonsSnapshot.size;
@@ -96,6 +99,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       courseId: courseId,
       title: courseTitle,
       description: courseDescription,
+      hasEmbeddings,
       saved: true,
       progress: {
         overallScore: 0,

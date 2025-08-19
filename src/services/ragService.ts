@@ -2,6 +2,7 @@ import OpenAI from "openai";
 import { qdrant } from "./qdrant";
 import { EMBED_DIM } from "./embedAndChunk";
 
+
 interface RetrievedChunk {
   text: string;
   idx?: number;

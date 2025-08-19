@@ -13,6 +13,7 @@ export interface CourseMeta {
   title: string;
   description: string;
   createdBy: string;
+  hasEmbeddings?: boolean;
 }
 
 export interface CourseContent {
@@ -32,6 +33,7 @@ export async function createCourseMeta(meta: CourseMeta): Promise<string> {
       title:        meta.title,
       description:  meta.description,
       createdBy:    meta.createdBy,
+      hasEmbeddings: meta.hasEmbeddings || false,
       createdAt:    admin.firestore.FieldValue.serverTimestamp(),
       // leave lessons & mergedFlashcards empty for now
     });
@@ -77,7 +79,7 @@ export async function updateCourseContent(
   }
 }
 
-export const getUserCoursesFromFirebase = async (userId: string) => {
+  export const getUserCoursesFromFirebase = async (userId: string) => {
     try {
       const coursesRef = db.collection("courses").where("createdBy", "==", userId);
       const snapshot = await coursesRef.get();
@@ -87,10 +89,14 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         return [];
       }
   
-      const courses = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+      const courses = snapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          ...data,
+          hasEmbeddings: data.hasEmbeddings || false,
+        };
+      });
   
       return courses;
     } catch (error) {
@@ -130,6 +136,7 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         return {
           id: doc.id,
           ...data,
+          hasEmbeddings: data.hasEmbeddings || false,
           totalLessons,
           completedLessons,
         };
@@ -159,10 +166,14 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
       }
   
       // Convert snapshots to a usable array
-      return snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+      return snapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          ...data,
+          hasEmbeddings: data.hasEmbeddings || false,
+        };
+      });
     } catch (error) {
       console.error("Error retrieving courses:", error);
       throw new Error("Failed to fetch courses.");
@@ -263,6 +274,39 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
       throw new Error("Failed to fetch uploaded files.");
     }
   };
+
+  export const updateCourseEmbeddingsStatus = async (courseId: string, hasEmbeddings: boolean) => {
+    try {
+      const courseRef = db.collection("courses").doc(courseId);
+      await courseRef.update({
+        hasEmbeddings,
+        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+      console.log(`✅ Updated embeddings status for course ${courseId}: ${hasEmbeddings}`);
+    } catch (error) {
+      console.error("❌ Failed to update embeddings status:", error);
+      throw new Error("Failed to update embeddings status");
+    }
+  };
+
+  export const checkCourseHasEmbeddings = async (courseId: string): Promise<boolean> => {
+    try {
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      
+      if (!courseDoc.exists) {
+        return false;
+      }
+      
+      const courseData = courseDoc.data();
+      return courseData?.hasEmbeddings || false;
+      
+    } catch (error) {
+      console.error("Error checking embeddings status:", error);
+      return false;
+    }
+  };
+
+
   
   
   

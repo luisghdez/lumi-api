@@ -23,6 +23,8 @@ export interface ThreadSummary {
   initialMessage: string;
   lastMessageAt: Date;
   messageCount: number;
+  courseId?: string | null;
+  courseTitle?: string | null;
 }
 
 export interface ThreadMessage {
@@ -125,6 +127,8 @@ export const getUserThreads = async (
       initialMessage: data.initialMessage.substring(0, 20) + (data.initialMessage.length > 20 ? "..." : ""),
       lastMessageAt: data.lastMessageAt.toDate(),
       messageCount: data.messageCount,
+      courseId: data.courseId ?? null,
+      courseTitle: data.courseTitle ?? null,
     });
   });
 

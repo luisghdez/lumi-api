@@ -39,6 +39,7 @@ async function courseRoutes(fastify: FastifyInstance) {
     preHandler: authenticateUser,
     handler: getCourseFilesController,
   });
+
 }
 
 export default courseRoutes;
