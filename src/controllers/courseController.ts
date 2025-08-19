@@ -281,7 +281,7 @@ export const getLessonsController = async (
 
     // Fetch lessons along with the user's progress from Firebase
     const courseData = await getLessonsWithProgressFromFirebase(user.uid, courseId);
-    const { lessons, mergedFlashcards } = courseData;
+    const { lessons, mergedFlashcards, summary } = courseData;
 
 
     if (!lessons.length) {
@@ -292,6 +292,7 @@ export const getLessonsController = async (
       message: "Lessons retrieved successfully",
       lessons,
       mergedFlashcards,
+      summary,
     });
   } catch (error) {
     console.error("Error fetching lessons:", error);

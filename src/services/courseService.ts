@@ -245,13 +245,13 @@ export async function updateCourseContent(
         };
       });
   
-      // 4. Retrieve the course document to get the merged flashcards.
+      // 4. Retrieve the course document to get the merged flashcards and summary.
       const courseDoc = await db.collection("courses").doc(courseId).get();
-      const mergedFlashcards = courseDoc.exists
-        ? courseDoc.data()?.mergedFlashcards || []
-        : [];
+      const courseData = courseDoc.exists ? courseDoc.data() : {};
+      const mergedFlashcards = courseData?.mergedFlashcards || [];
+      const summary = courseData?.summary || '';
   
-      return { lessons, mergedFlashcards };
+      return { lessons, mergedFlashcards, summary };
     } catch (error) {
       console.error("Error retrieving lessons with progress:", error);
       throw new Error("Failed to fetch lessons with progress.");
