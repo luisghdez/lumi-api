@@ -104,7 +104,7 @@ export const createThreadController = async (
     writeObject({ type: "start", role: "assistant", ...(sources && { sources }) });
 
     const stream = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-4.1-mini",
       messages,
       temperature: courseId ? 0.2 : 0.7,
       stream: true,
@@ -334,9 +334,9 @@ export const createMessageController = async (
     writeObject({ type: "start", threadId, role: "assistant", ...(sources && { sources }) });
 
     const stream = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-4.1-mini",
       messages,
-      temperature: courseId ? 0.2 : 0.7,
+      // temperature: courseId ? 0.2 : 0.7,
       stream: true,
     } as any);
 

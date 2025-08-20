@@ -161,7 +161,7 @@ export const getThreadMessages = async (
     .collection("threads")
     .doc(threadId)
     .collection("messages")
-    .orderBy("timestamp", "asc")
+    .orderBy("timestamp", "desc")
     .limit(limit);
 
   if (lastDoc) {
@@ -181,6 +181,9 @@ export const getThreadMessages = async (
       ...(data.sources && { sources: data.sources }),
     });
   });
+
+  // Reverse the messages to maintain chronological order (oldest to newest)
+  messages.reverse();
 
   const hasMore = snapshot.docs.length === limit;
   const lastVisibleDoc = hasMore ? snapshot.docs[snapshot.docs.length - 1] : null;

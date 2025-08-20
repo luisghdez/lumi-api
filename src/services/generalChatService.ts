@@ -4,7 +4,7 @@ const openai = new OpenAI();
 
 export const processGeneralMessage = async (message: string): Promise<string> => {
   const completion = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-4.1-mini",
     messages: [
       {
         role: "system",
@@ -41,9 +41,9 @@ export const processGeneralMessageWithHistory = async (
   messages.push({ role: "user", content: message });
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-4.1-mini",
     messages,
-    temperature: 0.7,
+    // temperature: 0.7,
   });
 
   return completion.choices?.[0]?.message?.content || "I'm sorry, I couldn't generate a response.";

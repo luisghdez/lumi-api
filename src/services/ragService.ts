@@ -118,9 +118,9 @@ export async function answerCourseQuestion(
   messages.push({ role: "user", content: question });
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-4.1-mini",
     messages,
-    temperature: 0.2,
+    // temperature: 0.2,
   });
 
   const answer = completion.choices?.[0]?.message?.content || "";
