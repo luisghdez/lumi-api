@@ -1,10 +1,11 @@
 import OpenAI from "openai";
 import { qdrant } from "./qdrant";
 import { v4 as uuid } from "uuid";
-import pdfParse from 'pdf-parse';
 import { parseOfficeAsync } from "officeparser";
 import JSZip from "jszip";
 import { XMLParser } from "fast-xml-parser";
+import pdfParse from 'pdf-parse';
+
 
 const openai = new OpenAI();
 
@@ -42,38 +43,39 @@ export interface ProcessedFile {
 }
 
 /**
- * Extract text from PDF with page information
+ * Reliable per-page PDF text using pdf-parse's pagerender hook.
+ * No ESM/CJS issues; works in Node/ts-node out of the box.
  */
-async function extractPDFWithPages(fileBuffer: Buffer): Promise<{ text: string; pageNumber: number }[]> {
-  try {
-    const data = await pdfParse(fileBuffer, {
-      // Enable page extraction
-      max: 0, // No page limit
-    });
-    
-    // If pdf-parse doesn't provide page-by-page text, we'll split by page breaks
-    // This is a fallback approach
-    const pages: { text: string; pageNumber: number }[] = [];
-    
-    if (data.text) {
-      // Split by potential page breaks (multiple newlines)
-      const pageTexts = data.text.split(/\n{3,}/);
-      pageTexts.forEach((pageText, index) => {
-        if (pageText.trim()) {
-          pages.push({
-            text: pageText.trim(),
-            pageNumber: index + 1
-          });
-        }
+async function extractPDFWithPages(
+  fileBuffer: Buffer
+): Promise<Array<{ text: string; pageNumber: number }>> {
+  const pageBuckets: Array<{ text: string; pageNumber: number } | undefined> = [];
+
+  await pdfParse(fileBuffer, {
+    max: 0, // no page limit
+    // Synchronous pagerender
+    pagerender: (pageData: any) => {
+      // pdf-parse calls this with a PageProxy from pdf.js
+      return pageData.getTextContent().then((content: any) => {
+        const text = (content.items as any[])
+          .map((it: any) => (typeof it?.str === "string" ? it.str : ""))
+          .join(" ")
+          .replace(/\s{2,}/g, " ")
+          .trim();
+
+        const pageNumber = (pageData.pageIndex ?? 0) + 1;
+        pageBuckets[pageData.pageIndex ?? 0] = { text, pageNumber };
+
+        return text;
       });
-    }
-    
-    return pages;
-  } catch (error) {
-    console.error("Error extracting PDF with pages:", error);
-    throw new Error(`Failed to extract PDF text: ${error}`);
-  }
+    },
+  });
+
+  return pageBuckets.filter(Boolean) as Array<{ text: string; pageNumber: number }>;
 }
+
+
+
 
 type SlideOut = { text: string; slideNumber: number };
 
