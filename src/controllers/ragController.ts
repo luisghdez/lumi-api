@@ -165,20 +165,22 @@ export const getUserThreadsController = async (
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    const { limit = 10, lastDoc } = request.query as {
+    const { limit = 10, cursor, lastDoc } = request.query as {
       limit?: number;
-      lastDoc?: string;
+      cursor?: string; // preferred param
+      lastDoc?: string; // legacy
     };
 
     // Validate limit
     const validatedLimit = Math.min(Math.max(limit || 10, 1), 50); // Between 1 and 50
 
-    const result = await getUserThreads(user.uid, validatedLimit, lastDoc);
+    const result = await getUserThreads(user.uid, validatedLimit, cursor || lastDoc);
 
     return reply.status(200).send({
       threads: result.threads,
       hasMore: result.hasMore,
-      ...(result.lastDoc && { lastDoc: result.lastDoc.id }),
+      ...(result.lastDoc && { lastDoc: result.lastDoc.id }), // legacy
+      ...(result.nextCursor && { nextCursor: result.nextCursor }),
     });
   } catch (error: any) {
     console.error("Error in getUserThreadsController:", error);
@@ -197,19 +199,23 @@ export const getThreadMessagesController = async (
     }
 
     const { threadId } = request.params as { threadId: string };
-    const { limit = 20, lastDoc } = request.query as {
+    const { limit = 10, cursor, lastDoc } = request.query as {
       limit?: number;
+      cursor?: string;
       lastDoc?: string;
     };
 
-    const validatedLimit = Math.min(Math.max(limit || 20, 1), 100);
-    const result = await getThreadMessages(user.uid, threadId, validatedLimit, lastDoc);
+    // Validate limit for lazy loading (smaller chunks)
+    const validatedLimit = Math.min(Math.max(limit || 10, 1), 50);
+    const result = await getThreadMessages(user.uid, threadId, validatedLimit, cursor || lastDoc);
 
     return reply.status(200).send({
       threadId,
       messages: result.messages,
       hasMore: result.hasMore,
       ...(result.lastDoc && { lastDoc: result.lastDoc.id }),
+      ...(result.nextCursor && { nextCursor: result.nextCursor }),
+      ...(result.totalCount !== undefined && { totalCount: result.totalCount }),
     });
   } catch (error: any) {
     console.error("Error in getThreadMessagesController:", error);
@@ -228,19 +234,21 @@ export const getCourseMessagesController = async (
     }
 
     const { courseId } = request.params as { courseId: string };
-    const { limit = 20, lastDoc } = request.query as {
+    const { limit = 10, cursor, lastDoc } = request.query as {
       limit?: number;
+      cursor?: string;
       lastDoc?: string;
     };
 
-    const validatedLimit = Math.min(Math.max(limit || 20, 1), 100);
+    // Validate limit for lazy loading (smaller chunks)
+    const validatedLimit = Math.min(Math.max(limit || 10, 1), 50);
     const threadId = await getThreadByCourseId(user.uid, courseId);
     
     if (!threadId) {
       return reply.status(404).send({ error: "No thread found for this course" });
     }
 
-    const result = await getThreadMessages(user.uid, threadId, validatedLimit, lastDoc);
+    const result = await getThreadMessages(user.uid, threadId, validatedLimit, cursor || lastDoc);
 
     return reply.status(200).send({
       threadId,
@@ -248,6 +256,8 @@ export const getCourseMessagesController = async (
       messages: result.messages,
       hasMore: result.hasMore,
       ...(result.lastDoc && { lastDoc: result.lastDoc.id }),
+      ...(result.nextCursor && { nextCursor: result.nextCursor }),
+      ...(result.totalCount !== undefined && { totalCount: result.totalCount }),
     });
   } catch (error: any) {
     console.error("Error in getCourseMessagesController:", error);
@@ -275,7 +285,7 @@ export const createMessageController = async (
       return reply.status(400).send({ error: "Missing message" });
     }
 
-    // Get conversation history for context
+    // Get conversation history for context (using larger limit for AI context)
     const historyResult = await getThreadMessages(user.uid, threadId, 50);
     const conversationHistory = historyResult.messages.map(msg => ({
       role: msg.role,

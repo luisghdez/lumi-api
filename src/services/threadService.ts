@@ -111,7 +111,7 @@ export const getUserThreads = async (
   uid: string,
   limit: number = 10,
   lastDoc?: any
-): Promise<{ threads: ThreadSummary[]; hasMore: boolean; lastDoc?: any }> => {
+): Promise<{ threads: ThreadSummary[]; hasMore: boolean; lastDoc?: any; nextCursor?: string }> => {
   let query = db
     .collection("users")
     .doc(uid)
@@ -121,7 +121,20 @@ export const getUserThreads = async (
 
   // Add pagination cursor if provided
   if (lastDoc) {
-    query = query.startAfter(lastDoc);
+    // Support passing a DocumentSnapshot or a document ID (string)
+    if (typeof lastDoc === "string") {
+      const cursorSnap = await db
+        .collection("users")
+        .doc(uid)
+        .collection("threads")
+        .doc(lastDoc)
+        .get();
+      if (cursorSnap.exists) {
+        query = query.startAfter(cursorSnap);
+      }
+    } else {
+      query = query.startAfter(lastDoc);
+    }
   }
 
   const snapshot = await query.get();
@@ -141,20 +154,22 @@ export const getUserThreads = async (
 
   const hasMore = snapshot.docs.length === limit;
   const lastVisibleDoc = hasMore ? snapshot.docs[snapshot.docs.length - 1] : null;
+  const nextCursor = lastVisibleDoc ? lastVisibleDoc.id : undefined;
 
   return {
     threads,
     hasMore,
     lastDoc: lastVisibleDoc,
+    ...(nextCursor && { nextCursor }),
   };
 };
 
 export const getThreadMessages = async (
   uid: string,
   threadId: string,
-  limit: number = 20,
+  limit: number = 10, // Reduced default for lazy loading
   lastDoc?: any
-): Promise<{ messages: ThreadMessage[]; hasMore: boolean; lastDoc?: any }> => {
+): Promise<{ messages: ThreadMessage[]; hasMore: boolean; lastDoc?: any; nextCursor?: string; totalCount?: number }> => {
   let query = db
     .collection("users")
     .doc(uid)
@@ -165,7 +180,22 @@ export const getThreadMessages = async (
     .limit(limit);
 
   if (lastDoc) {
-    query = query.startAfter(lastDoc);
+    // Support passing a DocumentSnapshot or a document ID (string)
+    if (typeof lastDoc === "string") {
+      const cursorSnap = await db
+        .collection("users")
+        .doc(uid)
+        .collection("threads")
+        .doc(threadId)
+        .collection("messages")
+        .doc(lastDoc)
+        .get();
+      if (cursorSnap.exists) {
+        query = query.startAfter(cursorSnap);
+      }
+    } else {
+      query = query.startAfter(lastDoc);
+    }
   }
 
   const snapshot = await query.get();
@@ -187,11 +217,28 @@ export const getThreadMessages = async (
 
   const hasMore = snapshot.docs.length === limit;
   const lastVisibleDoc = hasMore ? snapshot.docs[snapshot.docs.length - 1] : null;
+  const nextCursor = lastVisibleDoc ? lastVisibleDoc.id : undefined;
+
+  // Get total count for the first request (when no cursor is provided)
+  let totalCount: number | undefined;
+  if (!lastDoc) {
+    const countSnapshot = await db
+      .collection("users")
+      .doc(uid)
+      .collection("threads")
+      .doc(threadId)
+      .collection("messages")
+      .count()
+      .get();
+    totalCount = countSnapshot.data().count;
+  }
 
   return {
     messages,
     hasMore,
     lastDoc: lastVisibleDoc,
+    ...(nextCursor && { nextCursor }),
+    ...(totalCount !== undefined && { totalCount }),
   };
 };
 
