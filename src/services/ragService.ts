@@ -2,10 +2,18 @@ import OpenAI from "openai";
 import { qdrant } from "./qdrant";
 import { EMBED_DIM } from "./embedAndChunk";
 
+
 interface RetrievedChunk {
   text: string;
   idx?: number;
   score: number;
+  fileIndex?: number;
+  fileName?: string;
+  originalName?: string;
+  mimeType?: string;
+  slideNumber?: number;
+  pageNumber?: number;
+  chunkIndex?: number;
 }
 
 interface RetrievalResult {
@@ -52,10 +60,35 @@ export async function searchCourseContext(
     text: r?.payload?.text ?? "",
     idx: r?.payload?.idx,
     score: typeof r?.score === "number" ? r.score : 0,
+    fileIndex: r?.payload?.fileIndex,
+    fileName: r?.payload?.fileName,
+    originalName: r?.payload?.originalName,
+    mimeType: r?.payload?.mimeType,
+    slideNumber: r?.payload?.slideNumber,
+    pageNumber: r?.payload?.pageNumber,
+    chunkIndex: r?.payload?.chunkIndex,
   })).filter(c => c.text);
 
   const context = chunks
-    .map((c, i) => `Source ${i + 1}${typeof c.idx === "number" ? ` (#${c.idx})` : ""}:\n${c.text}`)
+    .map((c, i) => {
+      let sourceInfo = `Source ${i + 1}`;
+      
+      if (c.originalName) {
+        sourceInfo += ` (${c.originalName})`;
+        
+        if (c.slideNumber) {
+          sourceInfo += ` - Slide ${c.slideNumber}`;
+        } else if (c.pageNumber) {
+          sourceInfo += ` - Page ${c.pageNumber}`;
+        } else if (c.chunkIndex) {
+          sourceInfo += ` - Chunk ${c.chunkIndex}`;
+        }
+      } else if (typeof c.idx === "number") {
+        sourceInfo += ` (#${c.idx})`;
+      }
+      
+      return `${sourceInfo}:\n${c.text}`;
+    })
     .join("\n\n---\n\n");
 
   return { context, chunks };
@@ -66,7 +99,7 @@ export async function answerCourseQuestion(
   question: string,
   options?: { topK?: number; conversationHistory?: Array<{ role: "user" | "assistant"; content: string }> }
 ): Promise<{ answer: string; sources: RetrievedChunk[] }> {
-  const topK = options?.topK ?? 8;
+  const topK = options?.topK ?? 5;
   const retrieval = await searchCourseContext(courseId, question, topK);
 
   const systemPrompt = `You are a helpful tutor for this specific course. Answer the user's question using ONLY the provided sources.\n\nIf the answer isn't in the sources, say you don't find it in the course materials and offer a brief next step. Keep answers concise and cite where relevant as [Source N].`;
@@ -85,9 +118,9 @@ export async function answerCourseQuestion(
   messages.push({ role: "user", content: question });
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-4.1-mini",
     messages,
-    temperature: 0.2,
+    // temperature: 0.2,
   });
 
   const answer = completion.choices?.[0]?.message?.content || "";
