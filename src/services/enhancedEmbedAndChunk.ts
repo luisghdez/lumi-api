@@ -402,23 +402,39 @@ export async function embedAndStoreWithMetadata(
   
   // Embed all chunks
   const allVectors: number[][] = [];
+  const embeddingStartTime = Date.now();
+  console.log(`⏱️ Starting embedding generation for ${allChunks.length} chunks (${Math.ceil(allChunks.length / BATCH_SIZE)} batches)`);
+  
   for (let i = 0; i < allChunks.length; i += BATCH_SIZE) {
     const batch = allChunks.slice(i, i + BATCH_SIZE);
     const batchTexts = batch.map(chunk => chunk.text);
+    const batchStartTime = Date.now();
+    
+    console.log(`  ⏱️ Processing embedding batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(allChunks.length / BATCH_SIZE)} (${batch.length} chunks)`);
     
     const res = await openai.embeddings.create({
       model: "text-embedding-3-small",
       input: batchTexts,
     });
+    
+    const batchDuration = Date.now() - batchStartTime;
+    console.log(`    ✅ Batch completed in ${batchDuration}ms`);
+    
     allVectors.push(...res.data.map(d => d.embedding as number[]));
   }
   
+  const embeddingDuration = Date.now() - embeddingStartTime;
+  console.log(`✅ All embeddings completed in ${embeddingDuration}ms (avg: ${Math.round(embeddingDuration / Math.ceil(allChunks.length / BATCH_SIZE))}ms per batch)`);
+  
   // Store in Qdrant with enhanced metadata
   const collection = `course_${courseId}`;
+  const qdrantStartTime = Date.now();
+  console.log(`⏱️ Starting Qdrant storage for ${allChunks.length} vectors`);
   
   try {
     await qdrant.getCollection(collection);
   } catch {
+    console.log(`  📦 Creating new Qdrant collection: ${collection}`);
     await qdrant.createCollection(collection, {
       vectors: { size: EMBED_DIM, distance: "Cosine" },
     });
@@ -441,6 +457,9 @@ export async function embedAndStoreWithMetadata(
       },
     })),
   });
+  
+  const qdrantDuration = Date.now() - qdrantStartTime;
+  console.log(`✅ Qdrant storage completed in ${qdrantDuration}ms`);
   
   // Build coarse chunks for LLM
   const coarseChunks: string[] = [];
