@@ -3,7 +3,7 @@ import { FastifyInstance } from "fastify";
 import { authenticateUser } from "../middleware/authUser";
 import { updateFcmTokenController } from "../controllers/userController";
 
-async function userRoutes(fastify: FastifyInstance) {
+async function notiRoutes(fastify: FastifyInstance) {
   fastify.route({
     method: "PATCH",
     url: "/users/token",
@@ -12,4 +12,4 @@ async function userRoutes(fastify: FastifyInstance) {
   });
 }
 
-export default userRoutes;
+export default notiRoutes;
