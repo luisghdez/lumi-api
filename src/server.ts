@@ -12,6 +12,7 @@ import reviewRoutes from './routes/reviewRoutes';
 import classRoutes from './routes/classRoutes';
 import studentRoutes from './routes/studentRoutes';
 import ragRoutes from './routes/ragRoutes';
+import notiRoutes from './routes/notifRoutes';
 
 
 const fastify = Fastify({ logger: true });
@@ -31,6 +32,7 @@ fastify.register(reviewRoutes)
 fastify.register(classRoutes);
 fastify.register(studentRoutes);
 fastify.register(ragRoutes);
+fastify.register(notiRoutes)
 
 // Health check route
 fastify.get("/", async () => {
