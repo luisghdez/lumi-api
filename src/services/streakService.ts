@@ -1,4 +1,5 @@
 import { admin, db } from "../config/firebaseConfig";
+import {sendPushToUser} from "../services/notification_service"
 
 interface UpdateStreakResult {
   previousStreak: number;
@@ -27,6 +28,12 @@ export const updateUserStreak = async (userId: string): Promise<UpdateStreakResu
     if (lastCheckIn) {
       // If lastCheckIn is a Firestore Timestamp, convert it
       const lastCheckInDate = lastCheckIn.toDate();
+
+      if (newStreakCount === 5 || newStreakCount === 10) {
+          const title = `🔥 ${newStreakCount}-Day Streak!`;
+          const body = "You're on fire! Keep it going.";
+        await sendPushToUser(userId, title, body);
+      }
 
       // Calculate day difference (rounded down)
       const msInADay = 24 * 60 * 60 * 1000;

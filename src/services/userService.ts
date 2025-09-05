@@ -131,3 +131,18 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       throw error; // Propagate the error to be handled by the controller.
     }
   }
+
+
+  export async function updateFcmTokenForUser(uid: string, fcmToken: string): Promise<void> {
+    try {
+      const userRef = db.collection("users").doc(uid);
+      await userRef.update({
+        fcmToken,
+      });
+      console.log(`✅ FCM token updated for user ${uid}`);
+    } catch (error) {
+      console.error("❌ Error updating FCM token:", error);
+      throw error;
+    }
+  }
+  

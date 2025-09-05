@@ -1,6 +1,7 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { createFireStoreUser, deleteFireStoreUser, getUserProfile, updateFireStoreUser } from "../services/userService";
 import { checkStreakOnLogin } from "../services/streakService";
+import { updateFcmTokenForUser } from "../services/userService";
 
 interface CreateUserRequestBody {
   email: string;
@@ -110,3 +111,25 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
       return reply.status(500).send({ error: "Failed to delete user" });
     }
   }
+
+
+
+export async function updateFcmTokenController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { fcmToken } = request.body as { fcmToken: string };
+    if (!fcmToken) {
+      return reply.status(400).send({ error: "Missing FCM token" });
+    }
+
+    await updateFcmTokenForUser(user.uid, fcmToken);
+    reply.code(200).send({ message: "FCM token updated successfully." });
+  } catch (error) {
+    console.error("Error updating FCM token:", error);
+    reply.code(500).send({ error: "Failed to update FCM token" });
+  }
+}
