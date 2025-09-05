@@ -31,6 +31,12 @@ const courseContentSchema = z.object({
   ),
 });
 
+const courseSummarySchema = z.object({
+  title: z.string(),
+  subject: z.enum(["Math", "Science", "History", "Finance", "English", "Computer Science", "Physics", "Chemistry", "Biology", "Economics", "Psychology", "Philosophy", "Art", "Music", "Language", "Geography", "Sociology", "Political Science", "Engineering", "Business", "Medicine", "Law", "Other"]),
+  summary: z.string(),
+});
+
 export async function openAiCourseContent(extractedText: string) {
   // Define the detailed instructional prompt including the content guidelines.
   const promptInstructions = `
@@ -76,36 +82,40 @@ export async function openAiCourseContent(extractedText: string) {
 }
 
 
-export async function generateMarkdownSummaryFromTerms(title: string, terms: string[]) {
-  const openai = new OpenAI();
-
+export async function generateMarkdownSummaryFromTerms(terms: string[]) {
   const prompt = `
-  Create a **Markdown** study guide.
+  Based on the provided terms, generate:
   
-  1. Start with one catchy intro line.
-  2. Explain each term in plain, student‑friendly words.
-  3. Use Markdown formatting: headings, bullet lists, tables, etc.
-  4. Show links between related terms.
-  5. Add helpful context—don't just repeat the list.
+  1. A short, engaging title for the course (4-8 words)
+  2. The most appropriate subject from the predefined list
+  3. A comprehensive Markdown study guide
+  
+  For the study guide:
+  - Start with one catchy intro line
+  - Explain each term in plain, student‑friendly words  
+  - Use Markdown formatting: headings, bullet lists, tables, etc.
+  - Show links between related terms
+  - Add helpful context—don't just repeat the list
   
   Terms:
   ${terms.map(t => `- ${t}`).join("\n")}
   `;
 
   const startTime = Date.now();
-  console.log(`⏱️ Starting summary generation for ${terms.length} terms`);
+  console.log(`⏱️ Starting enhanced summary generation for ${terms.length} terms`);
 
-  const completion = await openai.chat.completions.create({
+  const completion = await openai.beta.chat.completions.parse({
     model: "gpt-4.1-mini",
     messages: [
-      { role: "system", content: "You generate readable Markdown summaries for students." },
+      { role: "system", content: "You generate course titles, categorize subjects, and create readable Markdown summaries for students. Choose the most appropriate subject from the predefined list." },
       { role: "user", content: prompt },
     ],
-    // max_tokens: 1500,
+    response_format: zodResponseFormat(courseSummarySchema, "courseSummary"),
   });
 
   const duration = Date.now() - startTime;
-  console.log(`✅ Summary generation completed in ${duration}ms`);
+  console.log(`✅ Enhanced summary generation completed in ${duration}ms`);
 
-  return completion.choices[0].message.content;
+  const result = completion.choices[0].message.parsed;
+  return result;
 }

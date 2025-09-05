@@ -14,6 +14,7 @@ export interface CourseMeta {
   description: string;
   createdBy: string;
   hasEmbeddings?: boolean;
+  visibility?: string;
 }
 
 export interface CourseContent {
@@ -34,6 +35,7 @@ export async function createCourseMeta(meta: CourseMeta): Promise<string> {
       description:  meta.description,
       createdBy:    meta.createdBy,
       hasEmbeddings: meta.hasEmbeddings || false,
+      visibility:   meta.visibility || "Private",
       createdAt:    admin.firestore.FieldValue.serverTimestamp(),
       // leave lessons & mergedFlashcards empty for now
     });

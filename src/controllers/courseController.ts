@@ -108,8 +108,6 @@ export const createCourseController = async (
       originalName: string;
       mimeType: string;
     }> = [];
-    let title = "Untitled Course";
-    let description = "No description provided";
     let classId: string | undefined;
     let dueDate: string | undefined;
 
@@ -139,12 +137,6 @@ export const createCourseController = async (
       } else {
         const { fieldname, value } = part as any;
         switch (fieldname) {
-          case "title":
-            if (value.trim()) title = value;
-            break;
-          case "description":
-            if (value.trim()) description = value;
-            break;
           case "content":
             // Handle plain text content as a file
             if (value.trim()) {
@@ -178,12 +170,13 @@ export const createCourseController = async (
         `🚀 Processing ${filesForEmbedding.length} file(s) with optimized parallel processing...`
       );
 
-      // 2️⃣ Create course metadata first
+      // 2️⃣ Create course metadata first with temporary values
       const courseId = await createCourseMeta({ 
-        title, 
-        description, 
+        title: "Generating Course...", 
+        description: "Course content is being generated...", 
         createdBy: user.uid,
-        hasEmbeddings: false 
+        hasEmbeddings: false,
+        visibility: "Private"
       });
       
       // 3️⃣ Start parallel operations: Firebase upload AND document processing
@@ -254,11 +247,11 @@ export const createCourseController = async (
 
     // 9️⃣ Parallel operations: Summary generation and course content update prep
     console.log("🔄 Starting parallel final operations");
-    const [summary] = await Promise.all([
-      // Generate summary
-      generateMarkdownSummaryFromTerms(title, mergedFlashcards.map((f: any) => f.term)).catch(error => {
+    const [summaryData] = await Promise.all([
+      // Generate summary with title and subject
+      generateMarkdownSummaryFromTerms(mergedFlashcards.map((f: any) => f.term)).catch(error => {
         console.error("❌ Failed to generate summary:", error);
-        return '';
+        return { title: "Course", subject: "Other", summary: "" };
       }),
       // Prepare processed files metadata for storage (async operation)
       (async () => {
@@ -283,8 +276,29 @@ export const createCourseController = async (
       })()
     ]);
 
-    // 🔟 Update course content
-    await updateCourseContent(courseId, { lessons, mergedFlashcards, summary: summary || '' });
+    // Extract generated data
+    const { title, subject, summary } = summaryData || { title: "Course", subject: "Other", summary: "" };
+
+    // 🔟 Update course content and metadata
+    await Promise.all([
+      // Update course content
+      updateCourseContent(courseId, { lessons, mergedFlashcards, summary }),
+      // Update course metadata with generated title and description
+      (async () => {
+        try {
+          const courseRef = db.collection("courses").doc(courseId);
+          await courseRef.update({
+            title,
+            description: `A ${subject} course covering key concepts and skills.`,
+            subject,
+            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+          });
+          console.log(`✅ Updated course metadata with generated title: "${title}" and subject: "${subject}"`);
+        } catch (error) {
+          console.error("❌ Failed to update course metadata:", error);
+        }
+      })()
+    ]);
 
     // 1️⃣1️⃣ Final parallel operations: class assignment and saved course creation
     const finalOperations = [];
@@ -321,10 +335,12 @@ export const createCourseController = async (
     `);
 
     return reply.status(201).send({
-      message: "Course created successfully with optimized parallel processing",
+      message: "Course created successfully with AI-generated title and content",
       courseId,
+      title,
+      subject,
       lessonCount,
-      summary: summary || '',
+      summary,
       uploadedFiles: uploadedFiles.length > 0 ? uploadedFiles : undefined,
       stats: {
         filesProcessed: filesForEmbedding.length,
