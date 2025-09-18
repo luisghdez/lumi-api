@@ -86,7 +86,7 @@ export async function generateMarkdownSummaryFromTerms(terms: string[]) {
   const prompt = `
   Based on the provided terms, generate:
   
-  1. A short, engaging title for the course (4-8 words)
+  1. A short, engaging title for the course (15-25 characters)
   2. The most appropriate subject from the predefined list
   3. A comprehensive Markdown study guide
   

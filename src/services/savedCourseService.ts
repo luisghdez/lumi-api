@@ -18,6 +18,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
     const courseTitle = courseData?.title || null;
     const courseDescription = courseData?.description || null;
     const hasEmbeddings = courseData?.hasEmbeddings || false;
+    const subject = courseData?.subject || null;
 
     const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
     for (let i = 1; i <= data.lessonCount; i++) {
@@ -30,20 +31,19 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       .collection("savedCourses")
       .doc(data.courseId);
 
-    const timestamp = new Date().toISOString();
-
     await savedCourseRef.set({
       courseId: data.courseId,
       title: courseTitle,
       description: courseDescription,
       hasEmbeddings,
       saved: true,
+      subject: subject,
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,
       },
-      lastAttempt: timestamp,
-      createdAt: timestamp,
+      lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
     // Increment courseSlotsUsed on the user document
@@ -78,6 +78,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
     const courseTitle = courseData?.title || null;
     const courseDescription = courseData?.description || null;
     const hasEmbeddings = courseData?.hasEmbeddings || false;
+    const subject = courseData?.subject || null;
 
     const lessonsSnapshot = await courseRef.collection("lessons").get();
     const lessonCount = lessonsSnapshot.size;
@@ -93,20 +94,19 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       .collection("savedCourses")
       .doc(courseId);
 
-    const timestamp = new Date().toISOString();
-
     await savedCourseRef.set({
       courseId: courseId,
       title: courseTitle,
       description: courseDescription,
       hasEmbeddings,
       saved: true,
+      subject: subject,
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,
       },
-      lastAttempt: timestamp,
-      createdAt: timestamp,
+      lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
     // Increment courseSlotsUsed
@@ -154,7 +154,7 @@ export const markLessonAsCompleted = async (
     // Also update lastAttempt to record the timestamp of this update.
     await savedCourseRef.update({
       [`progress.lessons.${lessonId}.completed`]: true,
-      lastAttempt: new Date().toISOString(),
+      lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
     // Now update the user's document by incrementing the xpCount field.
