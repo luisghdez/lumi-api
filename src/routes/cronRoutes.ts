@@ -1,30 +1,22 @@
 // routes/cronRoutes.ts
 import { FastifyInstance } from "fastify";
-import { db } from "../config/firebaseConfig";
-import { sendPushToUser } from "../services/notification_service";
+import cron from "node-cron";
+import { runReengagementJob } from "../jobs/reengagement";
 
 export default async function cronRoutes(fastify: FastifyInstance) {
+  // Manual trigger via API
   fastify.get("/cron/reengagement", async (request, reply) => {
-    const cutoff = new Date();
-    cutoff.setDate(cutoff.getDate() - 3);
+    const sent = await runReengagementJob();
+    return { sent };
+  });
 
-    const inactiveUsers = await db
-      .collection("users")
-      .where("lastCheckIn", "<", cutoff)
-      .get();
-
-    const tasks: Promise<void>[] = [];
-    inactiveUsers.forEach(doc => {
-      tasks.push(
-        sendPushToUser(
-          doc.id,
-          "👋 We miss you!",
-          "Come back today and continue your streak 💪"
-        )
-      );
-    });
-
-    await Promise.all(tasks);
-    return { sent: inactiveUsers.size };
+  // Automatic trigger at 12:00 PM every day
+  cron.schedule("0 12 * * *", async () => {
+    console.log("⏰ Running scheduled reengagement cron (12 PM daily)...");
+    try {
+      await runReengagementJob();
+    } catch (err) {
+      console.error("🔥 Reengagement cron failed:", err);
+    }
   });
 }

@@ -25,21 +25,18 @@ export const updateUserStreak = async (
 
     const now = new Date();
     let newStreakCount = 1;
-
+    
     if (lastCheckIn) {
       const lastCheckInDate = lastCheckIn.toDate();
-      const msInADay = 24 * 60 * 60 * 1000;
-      const dayDiff = Math.floor(
-        (now.getTime() - lastCheckInDate.getTime()) / msInADay
-      );
-
+      const dayDiff = calendarDayDiff(lastCheckInDate, now, "UTC"); // or user-specific TZ
+    
       if (dayDiff === 0) {
-        newStreakCount = currentStreak; // Same day
+        newStreakCount = currentStreak;      // Same calendar day
       } else if (dayDiff === 1) {
-        newStreakCount = currentStreak + 1; // Consecutive day
+        newStreakCount = currentStreak + 1;  // Next calendar day
       } else {
-        newStreakCount = 1; // Missed days
-      }
+        newStreakCount = 1;                  // Missed 2+ days
+      }    
     }
 
     const streakExtended = newStreakCount > currentStreak;
@@ -75,6 +72,24 @@ export const updateUserStreak = async (
   }
 };
 
+
+
+function calendarDayDiff(d1: Date, d2: Date, tz: string = "UTC"): number {
+  // Convert both dates into yyyy-mm-dd in the same timezone
+  const d1Str = d1.toLocaleDateString("en-CA", { timeZone: tz }); // "YYYY-MM-DD"
+  const d2Str = d2.toLocaleDateString("en-CA", { timeZone: tz });
+
+  const d1Parts = d1Str.split("-").map(Number);
+  const d2Parts = d2Str.split("-").map(Number);
+
+  const start = new Date(Date.UTC(d1Parts[0], d1Parts[1] - 1, d1Parts[2]));
+  const end = new Date(Date.UTC(d2Parts[0], d2Parts[1] - 1, d2Parts[2]));
+
+  const msInADay = 24 * 60 * 60 * 1000;
+  return Math.round((end.getTime() - start.getTime()) / msInADay);
+}
+
+
 /**
  * Checks if the user has missed a day since lastCheckIn.
  * If missed, resets streak to 0 and updates lastCheckIn.
@@ -100,10 +115,7 @@ export async function checkStreakOnLogin(userData: any): Promise<any> {
         : new Date(lastCheckIn);
 
     const now = new Date();
-    const msInADay = 24 * 60 * 60 * 1000;
-    const dayDiff = Math.floor(
-      (now.getTime() - lastCheckInDate.getTime()) / msInADay
-    );
+    const dayDiff = calendarDayDiff(lastCheckInDate, now, "UTC");
 
     if (dayDiff >= 1 && currentStreak > 0) {
       // ❌ Reset streak and update lastCheckIn
