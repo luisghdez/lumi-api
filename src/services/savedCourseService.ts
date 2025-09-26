@@ -6,6 +6,15 @@ interface SavedCourseInput {
   lessonCount: number;
 }
 
+interface SavedCourseOptimizedInput {
+  courseId: string;
+  lessonCount: number;
+  title: string;
+  description: string;
+  subject: string;
+  hasEmbeddings: boolean;
+}
+
 export async function createSavedCourse(userId: string, data: SavedCourseInput): Promise<string> {
   try {
     const courseRef = db.collection("courses").doc(data.courseId);
@@ -18,6 +27,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
     const courseTitle = courseData?.title || null;
     const courseDescription = courseData?.description || null;
     const hasEmbeddings = courseData?.hasEmbeddings || false;
+    const subject = courseData?.subject || null;
 
     const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
     for (let i = 1; i <= data.lessonCount; i++) {
@@ -30,20 +40,19 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       .collection("savedCourses")
       .doc(data.courseId);
 
-    const timestamp = new Date().toISOString();
-
     await savedCourseRef.set({
       courseId: data.courseId,
       title: courseTitle,
       description: courseDescription,
       hasEmbeddings,
       saved: true,
+      subject: subject,
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,
       },
-      lastAttempt: timestamp,
-      createdAt: timestamp,
+      lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
     // Increment courseSlotsUsed on the user document
@@ -78,6 +87,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
     const courseTitle = courseData?.title || null;
     const courseDescription = courseData?.description || null;
     const hasEmbeddings = courseData?.hasEmbeddings || false;
+    const subject = courseData?.subject || null;
 
     const lessonsSnapshot = await courseRef.collection("lessons").get();
     const lessonCount = lessonsSnapshot.size;
@@ -93,20 +103,19 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       .collection("savedCourses")
       .doc(courseId);
 
-    const timestamp = new Date().toISOString();
-
     await savedCourseRef.set({
       courseId: courseId,
       title: courseTitle,
       description: courseDescription,
       hasEmbeddings,
       saved: true,
+      subject: subject,
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,
       },
-      lastAttempt: timestamp,
-      createdAt: timestamp,
+      lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
     // Increment courseSlotsUsed
@@ -128,6 +137,61 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
     };
   } catch (error) {
     console.error("Error saving course:", error);
+    throw error;
+  }
+}
+
+/**
+ * 🚀 LEVEL 1 OPTIMIZATION: Create saved course without redundant database reads
+ * Uses data already available in memory instead of fetching from database
+ */
+export async function createSavedCourseOptimized(userId: string, data: SavedCourseOptimizedInput): Promise<string> {
+  try {
+    console.log(`🚀 Creating OPTIMIZED saved course for user ${userId} without DB reads`);
+    
+    const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
+    for (let i = 1; i <= data.lessonCount; i++) {
+      lessonsProgress[`lesson${i}`] = { completed: false };
+    }
+
+    const savedCourseRef = db
+      .collection("users")
+      .doc(userId)
+      .collection("savedCourses")
+      .doc(data.courseId);
+
+    // Create saved course document with provided data (no DB read required)
+    await savedCourseRef.set({
+      courseId: data.courseId,
+      title: data.title,
+      description: data.description,
+      hasEmbeddings: data.hasEmbeddings,
+      saved: true,
+      subject: data.subject,
+      progress: {
+        overallScore: 0,
+        lessons: lessonsProgress,
+      },
+      lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
+
+    // Increment courseSlotsUsed on the user document
+    await db.runTransaction(async (transaction) => {
+      const userRef = db.collection("users").doc(userId);
+      const userSnap = await transaction.get(userRef);
+      const userData = userSnap.data() || {};
+      const currentCount = userData.courseSlotsUsed ?? 0;
+
+      transaction.update(userRef, {
+        courseSlotsUsed: currentCount + 1,
+      });
+    });
+
+    console.log(`✅ OPTIMIZED saved course created under user ${userId} with ID: ${savedCourseRef.id}`);
+    return savedCourseRef.id;
+  } catch (error) {
+    console.error("Error creating optimized saved course:", error);
     throw error;
   }
 }
@@ -154,7 +218,7 @@ export const markLessonAsCompleted = async (
     // Also update lastAttempt to record the timestamp of this update.
     await savedCourseRef.update({
       [`progress.lessons.${lessonId}.completed`]: true,
-      lastAttempt: new Date().toISOString(),
+      lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
     // Now update the user's document by incrementing the xpCount field.

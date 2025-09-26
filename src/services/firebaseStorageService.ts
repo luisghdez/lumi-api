@@ -1,5 +1,4 @@
 import { storage } from "../config/firebaseConfig";
-import { nanoid } from "nanoid";
 
 export interface UploadedFile {
   originalName: string;
@@ -11,6 +10,7 @@ export interface UploadedFile {
 
 export const uploadFileToFirebaseStorage = async (
   fileBuffer: Buffer,
+  fileId: string,
   originalName: string,
   mimeType: string,
   folder: string = "courses"
@@ -18,9 +18,9 @@ export const uploadFileToFirebaseStorage = async (
   try {
     const bucket = storage.bucket();
     
-    // Generate unique filename
+    // Use provided fileId as filename
     const fileExtension = originalName.split('.').pop() || '';
-    const uniqueFileName = `${folder}/${nanoid()}.${fileExtension}`;
+    const uniqueFileName = `${folder}/${fileId}.${fileExtension}`;
     
     // Create file reference
     const file = bucket.file(uniqueFileName);
