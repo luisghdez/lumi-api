@@ -236,12 +236,25 @@ export const createCourseController = async (
         const { fieldname, value } = part as any;
         switch (fieldname) {
           case "content":
-            // Handle plain text content as a file
+            // Handle plain text content as a file - store as .txt in Firebase Storage
             if (value.trim()) {
+              const fileId = nanoid();
+              const expectedFileName = `courses/${fileId}.txt`;
+              const textBuffer = Buffer.from(value, 'utf8');
+              
+              // Add to upload queue
+              filesToUpload.push({
+                buffer: textBuffer,
+                filename: "text_input.txt",
+                mimeType: "text/plain",
+                fileId: fileId
+              });
+
+              // Add for enhanced embedding processing with correct filename
               filesForEmbedding.push({
-                buffer: Buffer.from(value, 'utf8'),
-                fileName: `text_content_${filesForEmbedding.length}`,
-                originalName: `text_content_${filesForEmbedding.length}`,
+                buffer: textBuffer,
+                fileName: expectedFileName, // Use the actual Firebase filename
+                originalName: "text_input.txt",
                 mimeType: "text/plain"
               });
             }
