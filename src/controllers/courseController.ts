@@ -88,6 +88,16 @@ const OFFICE_MIME_TYPES = new Set([
   "application/vnd.ms-powerpoint",                                             // legacy .ppt
 ]);
 
+const IMAGE_MIME_TYPES = new Set([
+  "image/jpeg",
+  "image/jpg", 
+  "image/png",
+  "image/gif",
+  "image/webp",
+  "image/bmp",
+  "image/tiff"
+]);
+
 // Configuration for optimized processing
 const OPTIMIZATION_CONFIG = {
   // Maximum concurrent Firebase uploads
@@ -188,6 +198,17 @@ export const createCourseController = async (
     for await (const part of request.parts()) {
       if ("file" in part) {
         console.log("Processing file:", part.filename, part.mimetype);
+        
+        // Check if file type is supported (PDF, images, or text)
+        const isSupported = part.mimetype === "application/pdf" || 
+                           part.mimetype.startsWith("image/") || 
+                           part.mimetype === "text/plain";
+        
+        if (!isSupported) {
+          console.log(`⚠️ Unsupported file type: ${part.mimetype}. Skipping ${part.filename}`);
+          continue;
+        }
+        
         const fileBuffer = await part.toBuffer();
 
         // Generate the nanoid that will be used for upload

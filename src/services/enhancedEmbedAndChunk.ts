@@ -5,6 +5,7 @@ import { parseOfficeAsync } from "officeparser";
 import JSZip from "jszip";
 import { XMLParser } from "fast-xml-parser";
 import pdfParse from 'pdf-parse';
+import { extractTextFromImage } from "./visionService";
 
 
 const openai = new OpenAI();
@@ -349,8 +350,13 @@ async function processSingleFile(
     
     if (file.mimeType === "application/pdf") {
       fileChunks = await processPDFFile(file.buffer, fileIndex, file.fileName, file.originalName);
-    } else if (file.mimeType === "application/vnd.openxmlformats-officedocument.presentationml.presentation") {
-      fileChunks = await processPPTXFile(file.buffer, fileIndex, file.fileName, file.originalName);
+    // } else if (file.mimeType === "application/vnd.openxmlformats-officedocument.presentationml.presentation") {
+    //   fileChunks = await processPPTXFile(file.buffer, fileIndex, file.fileName, file.originalName);
+    } else if (file.mimeType.startsWith("image/")) {
+      // Process image files using vision service
+      console.log(`📷 Extracting text from image: ${file.originalName}`);
+      const extractedText = await extractTextFromImage(file.buffer);
+      fileChunks = processTextChunks(extractedText, fileIndex, file.fileName, file.originalName, file.mimeType);
     } else {
       // For other file types (DOCX, plain text, etc.), extract text and chunk normally
       let extractedText = "";
