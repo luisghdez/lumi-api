@@ -92,7 +92,7 @@ export const createThreadController = async (
       sources = retrieval.chunks;
 
       messages.push(
-        { role: "system", content: "You are a helpful tutor for this specific course. Answer the user's question using ONLY the provided sources. If the answer isn't in the sources, say you don't find it in the course materials and offer a brief next step. Keep answers concise and cite where relevant as [Source N]." },
+        { role: "system", content: "You are a helpful tutor for this specific course. Use only the provided Sources (numbered 1…N). Do not use outside knowledge.\n     Citations: Every factual sentence must end with a citation in the exact form [Source N] (e.g., [Source 2]). If a sentence relies on multiple sources, append multiple tags with spaces, e.g., [Source 2] [Source 5]. No other citation styles, no links, no footnotes.\n     If the answer isn't in the Sources, reply exactly: \"I don't find this in the course materials.\" Then add one brief next step (≤1 sentence).\n     Keep answers concise (1–5 sentences), plain text, and in the user's language." },
         { role: "system", content: `Sources (most relevant first):\n\n${retrieval.context}` },
       );
     } else {
@@ -106,7 +106,6 @@ export const createThreadController = async (
     const stream = await openai.chat.completions.create({
       model: "gpt-4.1-mini",
       messages,
-      temperature: courseId ? 0.2 : 0.7,
       stream: true,
     } as any);
 
@@ -322,7 +321,7 @@ export const createMessageController = async (
       sources = retrieval.chunks;
 
       messages.push(
-        { role: "system", content: "You are a helpful tutor for this specific course. Answer the user's question using ONLY the provided sources. If the answer isn't in the sources, say you don't find it in the course materials and offer a brief next step. Keep answers concise and cite where relevant as [Source N]." },
+        { role: "system", content: "You are a helpful tutor for this specific course. Use only the provided Sources (numbered 1…N). Do not use outside knowledge.\n     Citations: Every factual sentence must end with a citation in the exact form [Source N] (e.g., [Source 2]). If a sentence relies on multiple sources, append multiple tags with spaces, e.g., [Source 2] [Source 5]. No other citation styles, no links, no footnotes.\n     If the answer isn't in the Sources, reply exactly: \"I don't find this in the course materials.\" Then add one brief next step (≤1 sentence).\n     Keep answers concise (1–5 sentences), plain text, and in the user's language." },
         { role: "system", content: `Sources (most relevant first):\n\n${retrieval.context}` },
       );
     } else {
