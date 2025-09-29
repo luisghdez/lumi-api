@@ -43,7 +43,7 @@ export const updateUserStreak = async (
 
     // 🎉 Send milestone push (with route for Flutter navigation)
     if ([5, 10, 20, 30].includes(newStreakCount)) {
-      const title = `🔥 ${newStreakCount}-Day Streak!`;
+      const title = `${newStreakCount}-Day Streak!`;
       const body = "You're on fire! Keep it going.";
       await sendPushToUser(userId, title, body, {
         route: "/",
@@ -57,17 +57,13 @@ export const updateUserStreak = async (
       lastCheckIn: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    console.log(
-      `✅ User ${userId} streak updated: ${currentStreak} → ${newStreakCount}`
-    );
-
     return {
       previousStreak: currentStreak,
       newStreak: newStreakCount,
       streakExtended,
     };
   } catch (error) {
-    console.error("🔥 Error updating user streak:", error);
+    console.error("Error updating user streak:", error);
     throw error;
   }
 };
