@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createCourseMeta, getFeaturedCoursesFromFirebase, getAllCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus, PaginatedCoursesResponse } from "../services/courseService";
+import { createCourseMeta, getFeaturedCoursesFromFirebase, getAllCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus, PaginatedCoursesResponse, PaginatedAllCoursesResponse } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
 import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
@@ -516,6 +516,8 @@ export const getFeaturedCoursesController = async (
 
 interface AllCoursesQuery {
   subject?: string;
+  page?: string;
+  limit?: string;
 }
 
 export const getAllCoursesController = async (
@@ -528,9 +530,22 @@ export const getAllCoursesController = async (
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    const { subject } = request.query;
+    const { subject, page: pageParam, limit: limitParam } = request.query;
 
-    console.log(`📚 Fetching all courses${subject ? ` for subject: ${subject}` : ''}`);
+    // Parse pagination parameters with defaults
+    const page = parseInt(pageParam || '1', 10);
+    const limit = parseInt(limitParam || '10', 10);
+
+    // Validate pagination parameters
+    if (page < 1) {
+      return reply.status(400).send({ error: "Page must be greater than 0" });
+    }
+
+    if (limit < 1 || limit > 100) {
+      return reply.status(400).send({ error: "Limit must be between 1 and 100" });
+    }
+
+    console.log(`📚 Fetching all courses${subject ? ` for subject: ${subject}` : ''} (page: ${page}, limit: ${limit})`);
 
     // If no subject is provided, return featured courses (same as getFeaturedCoursesFromFirebase)
     if (!subject || !subject.trim()) {
@@ -538,15 +553,31 @@ export const getAllCoursesController = async (
       return reply.status(200).send({
         message: "All courses retrieved successfully",
         courses: featuredCourses,
+        pagination: {
+          page: 1,
+          limit: featuredCourses.length,
+          totalCount: featuredCourses.length,
+          totalPages: 1,
+          hasNextPage: false,
+          hasPreviousPage: false
+        }
       });
     }
 
-    // Call Firebase service to fetch all courses with subject filter
-    const allCourses = await getAllCoursesFromFirebase(subject);
+    // Call Firebase service to fetch all courses with subject filter and pagination
+    const { courses, totalCount, hasNextPage } = await getAllCoursesFromFirebase(subject, page, limit);
 
     return reply.status(200).send({
       message: "All courses retrieved successfully",
-      courses: allCourses,
+      courses,
+      pagination: {
+        page,
+        limit,
+        totalCount,
+        totalPages: Math.ceil(totalCount / limit),
+        hasNextPage,
+        hasPreviousPage: page > 1
+      }
     });
   } catch (error) {
     console.error("Error fetching all courses:", error);

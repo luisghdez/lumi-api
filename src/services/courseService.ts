@@ -37,6 +37,19 @@ export interface PaginatedCoursesResponse {
   hasNextPage: boolean;
 }
 
+export interface AllCourse {
+  id: string;
+  hasEmbeddings: boolean;
+  lessonCount: number;
+  [key: string]: any;
+}
+
+export interface PaginatedAllCoursesResponse {
+  courses: AllCourse[];
+  totalCount: number;
+  hasNextPage: boolean;
+}
+
 /**
  * Creates an empty course document in Firestore and returns its new ID.
  * Only metadata fields are written here; lessons & flashcards come later.
@@ -233,33 +246,47 @@ export async function updateCourseContent(
     }
   };
 
-  // Get all courses from any users with optional subject filtering
-  export const getAllCoursesFromFirebase = async (subject?: string) => {
+  // Get all courses from any users with optional subject filtering and pagination
+  export const getAllCoursesFromFirebase = async (subject?: string, page: number = 1, limit: number = 10): Promise<PaginatedAllCoursesResponse> => {
     try {
       // Build query based on whether subject filter is provided
-      let snapshot;
+      let query;
       
       if (subject && subject.trim()) {
         // Query with subject filter
-        snapshot = await db
+        query = db
           .collection("courses")
           .where("subject", "==", subject.trim())
-          .orderBy("createdAt", "desc")
-          .limit(50)
-          .get();
+          .orderBy("createdAt", "desc");
       } else {
         // Query without subject filter
-        snapshot = await db
+        query = db
           .collection("courses")
-          .orderBy("createdAt", "desc")
-          .limit(50)
-          .get();
+          .orderBy("createdAt", "desc");
       }
 
-      if (snapshot.empty) {
+      // Get total count for pagination metadata
+      const totalSnapshot = await query.get();
+      const totalCount = totalSnapshot.size;
+
+      if (totalCount === 0) {
         console.log(subject ? `No courses found for subject: ${subject}` : "No courses found.");
-        return [];
+        return {
+          courses: [],
+          totalCount: 0,
+          hasNextPage: false
+        };
       }
+
+      // Calculate offset
+      const offset = (page - 1) * limit;
+
+      // Get paginated results
+      const paginatedQuery = query
+        .offset(offset)
+        .limit(limit);
+
+      const snapshot = await paginatedQuery.get();
 
       // Convert snapshots to a usable array with lesson count
       const coursesWithLessonCount = await Promise.all(
@@ -279,7 +306,14 @@ export async function updateCourseContent(
         })
       );
 
-      return coursesWithLessonCount;
+      // Calculate if there are more pages
+      const hasNextPage = offset + limit < totalCount;
+
+      return {
+        courses: coursesWithLessonCount,
+        totalCount,
+        hasNextPage
+      };
     } catch (error) {
       console.error("Error retrieving all courses:", error);
       throw new Error("Failed to fetch all courses.");
