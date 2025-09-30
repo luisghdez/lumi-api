@@ -208,15 +208,25 @@ export async function updateCourseContent(
         return [];
       }
   
-      // Convert snapshots to a usable array
-      return snapshot.docs.map((doc) => {
-        const data = doc.data();
-        return {
-          id: doc.id,
-          ...data,
-          hasEmbeddings: data.hasEmbeddings || false,
-        };
-      });
+      // Convert snapshots to a usable array with lesson count
+      const coursesWithLessonCount = await Promise.all(
+        snapshot.docs.map(async (doc) => {
+          const data = doc.data();
+          
+          // Get lesson count by querying the lessons subcollection
+          const lessonsSnapshot = await doc.ref.collection("lessons").get();
+          const lessonCount = lessonsSnapshot.size;
+
+          return {
+            id: doc.id,
+            ...data,
+            hasEmbeddings: data.hasEmbeddings || false,
+            lessonCount,
+          };
+        })
+      );
+
+      return coursesWithLessonCount;
     } catch (error) {
       console.error("Error retrieving courses:", error);
       throw new Error("Failed to fetch courses.");
@@ -251,15 +261,25 @@ export async function updateCourseContent(
         return [];
       }
 
-      // Convert snapshots to a usable array
-      return snapshot.docs.map((doc) => {
-        const data = doc.data();
-        return {
-          id: doc.id,
-          ...data,
-          hasEmbeddings: data.hasEmbeddings || false,
-        };
-      });
+      // Convert snapshots to a usable array with lesson count
+      const coursesWithLessonCount = await Promise.all(
+        snapshot.docs.map(async (doc) => {
+          const data = doc.data();
+          
+          // Get lesson count by querying the lessons subcollection
+          const lessonsSnapshot = await doc.ref.collection("lessons").get();
+          const lessonCount = lessonsSnapshot.size;
+
+          return {
+            id: doc.id,
+            ...data,
+            hasEmbeddings: data.hasEmbeddings || false,
+            lessonCount,
+          };
+        })
+      );
+
+      return coursesWithLessonCount;
     } catch (error) {
       console.error("Error retrieving all courses:", error);
       throw new Error("Failed to fetch all courses.");
