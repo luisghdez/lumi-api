@@ -33,7 +33,35 @@ const courseContentSchema = z.object({
 
 const courseSummarySchema = z.object({
   title: z.string(),
-  subject: z.enum(["Math", "Science", "History", "Finance", "English", "Computer Science", "Physics", "Chemistry", "Biology", "Economics", "Psychology", "Philosophy", "Art", "Music", "Language", "Geography", "Sociology", "Political Science", "Engineering", "Business", "Medicine", "Law", "Other"]),
+  subject: z.enum([
+    "Algebra",
+    "Geometry", 
+    "Statistics",
+    "Calculus",
+    "Biology",
+    "Chemistry",
+    "Physics",
+    "Earth & Space Science",
+    "Environmental Science",
+    "Computer Science",
+    "World History",
+    "U.S. History",
+    "European History",
+    "Art History",
+    "Psychology",
+    "Sociology",
+    "Philosophy",
+    "Accounting",
+    "Finance",
+    "Marketing",
+    "General Business",
+    "Microeconomics",
+    "Macroeconomics",
+    "Music",
+    "Art & Design",
+    "Foreign Languages",
+    "Other"
+  ]),
   summary: z.string(),
 });
 
