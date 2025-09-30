@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createCourseMeta, getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus } from "../services/courseService";
+import { createCourseMeta, getFeaturedCoursesFromFirebase, getAllCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus, PaginatedCoursesResponse } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
 import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
@@ -434,8 +434,13 @@ export const createCourseController = async (
   }
 };
 
+interface PaginationQuery {
+  page?: string;
+  limit?: string;
+}
+
 export const getCoursesController = async (
-  request: FastifyRequest,
+  request: FastifyRequest<{ Querystring: PaginationQuery }>,
   reply: FastifyReply
 ) => {
   try {
@@ -444,14 +449,39 @@ export const getCoursesController = async (
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    console.log(`📚 Fetching courses for User: ${user.uid}`);
+    // Parse pagination parameters with defaults
+    const page = parseInt(request.query.page || '1', 10);
+    const limit = parseInt(request.query.limit || '10', 10);
 
-    // Call Firebase service to fetch user's courses
-    const userCourses = await getUsersSavedCoursesFromFirebase(user.uid);
+    // Validate pagination parameters
+    if (page < 1) {
+      return reply.status(400).send({ error: "Page must be greater than 0" });
+    }
+
+    if (limit < 1 || limit > 100) {
+      return reply.status(400).send({ error: "Limit must be between 1 and 100" });
+    }
+
+    console.log(`📚 Fetching courses for User: ${user.uid} (page: ${page}, limit: ${limit})`);
+
+    // Call Firebase service to fetch user's courses with pagination
+    const { courses, totalCount, hasNextPage } = await getUsersSavedCoursesFromFirebase(
+      user.uid, 
+      page, 
+      limit
+    );
 
     return reply.status(200).send({
       message: "Courses retrieved successfully",
-      courses: userCourses,
+      courses,
+      pagination: {
+        page,
+        limit,
+        totalCount,
+        totalPages: Math.ceil(totalCount / limit),
+        hasNextPage,
+        hasPreviousPage: page > 1
+      }
     });
   } catch (error) {
     console.error("Error fetching courses:", error);
@@ -480,6 +510,46 @@ export const getFeaturedCoursesController = async (
     });
   } catch (error) {
     console.error("Error fetching courses:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+interface AllCoursesQuery {
+  subject?: string;
+}
+
+export const getAllCoursesController = async (
+  request: FastifyRequest<{ Querystring: AllCoursesQuery }>,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { subject } = request.query;
+
+    console.log(`📚 Fetching all courses${subject ? ` for subject: ${subject}` : ''}`);
+
+    // If no subject is provided, return featured courses (same as getFeaturedCoursesFromFirebase)
+    if (!subject || !subject.trim()) {
+      const featuredCourses = await getFeaturedCoursesFromFirebase();
+      return reply.status(200).send({
+        message: "All courses retrieved successfully",
+        courses: featuredCourses,
+      });
+    }
+
+    // Call Firebase service to fetch all courses with subject filter
+    const allCourses = await getAllCoursesFromFirebase(subject);
+
+    return reply.status(200).send({
+      message: "All courses retrieved successfully",
+      courses: allCourses,
+    });
+  } catch (error) {
+    console.error("Error fetching all courses:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };

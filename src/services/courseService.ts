@@ -23,6 +23,20 @@ export interface CourseContent {
   summary: string;
 }
 
+export interface SavedCourse {
+  id: string;
+  hasEmbeddings: boolean;
+  totalLessons: number;
+  completedLessons: number;
+  [key: string]: any;
+}
+
+export interface PaginatedCoursesResponse {
+  courses: SavedCourse[];
+  totalCount: number;
+  hasNextPage: boolean;
+}
+
 /**
  * Creates an empty course document in Firestore and returns its new ID.
  * Only metadata fields are written here; lessons & flashcards come later.
@@ -107,21 +121,41 @@ export async function updateCourseContent(
     }
   };
 
-  export const getUsersSavedCoursesFromFirebase = async (userId: string) => {
+  export const getUsersSavedCoursesFromFirebase = async (
+    userId: string, 
+    page: number = 1, 
+    limit: number = 10
+  ): Promise<PaginatedCoursesResponse> => {
     try {
       const savedCoursesRef = db
         .collection("users")
         .doc(userId)
         .collection("savedCourses")
         .orderBy("lastAttempt", "desc");
-  
-      const snapshot = await savedCoursesRef.get();
-  
-      if (snapshot.empty) {
+
+      // Get total count for pagination metadata
+      const totalSnapshot = await savedCoursesRef.get();
+      const totalCount = totalSnapshot.size;
+
+      if (totalCount === 0) {
         console.log("No saved courses found for this user.");
-        return [];
+        return {
+          courses: [],
+          totalCount: 0,
+          hasNextPage: false
+        };
       }
-  
+
+      // Calculate offset
+      const offset = (page - 1) * limit;
+
+      // Get paginated results
+      const paginatedQuery = savedCoursesRef
+        .offset(offset)
+        .limit(limit);
+
+      const snapshot = await paginatedQuery.get();
+      
       const courses = snapshot.docs.map((doc) => {
         const data = doc.data();
   
@@ -143,8 +177,15 @@ export async function updateCourseContent(
           completedLessons,
         };
       });
+
+      // Calculate if there are more pages
+      const hasNextPage = offset + limit < totalCount;
   
-      return courses;
+      return {
+        courses,
+        totalCount,
+        hasNextPage
+      };
     } catch (error) {
       console.error("Error retrieving saved courses:", error);
       throw new Error("Failed to fetch saved courses.");
@@ -179,6 +220,49 @@ export async function updateCourseContent(
     } catch (error) {
       console.error("Error retrieving courses:", error);
       throw new Error("Failed to fetch courses.");
+    }
+  };
+
+  // Get all courses from any users with optional subject filtering
+  export const getAllCoursesFromFirebase = async (subject?: string) => {
+    try {
+      // Build query based on whether subject filter is provided
+      let snapshot;
+      
+      if (subject && subject.trim()) {
+        // Query with subject filter
+        snapshot = await db
+          .collection("courses")
+          .where("subject", "==", subject.trim())
+          .orderBy("createdAt", "desc")
+          .limit(50)
+          .get();
+      } else {
+        // Query without subject filter
+        snapshot = await db
+          .collection("courses")
+          .orderBy("createdAt", "desc")
+          .limit(50)
+          .get();
+      }
+
+      if (snapshot.empty) {
+        console.log(subject ? `No courses found for subject: ${subject}` : "No courses found.");
+        return [];
+      }
+
+      // Convert snapshots to a usable array
+      return snapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          ...data,
+          hasEmbeddings: data.hasEmbeddings || false,
+        };
+      });
+    } catch (error) {
+      console.error("Error retrieving all courses:", error);
+      throw new Error("Failed to fetch all courses.");
     }
   };
   
