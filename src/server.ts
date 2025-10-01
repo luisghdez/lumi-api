@@ -14,6 +14,7 @@ import studentRoutes from './routes/studentRoutes';
 import ragRoutes from './routes/ragRoutes';
 import notiRoutes from './routes/notifRoutes';
 import cronRoutes from './routes/cronRoutes';
+import AASARoutes from './routes/AASARoutes';
 
 
 const fastify = Fastify({ logger: true });
@@ -35,6 +36,7 @@ fastify.register(studentRoutes);
 fastify.register(ragRoutes);
 fastify.register(notiRoutes)
 fastify.register(cronRoutes);
+fastify.register(AASARoutes);
 
 // Health check route
 fastify.get("/", async () => {
