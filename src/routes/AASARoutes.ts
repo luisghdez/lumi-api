@@ -1,51 +1,38 @@
 import { FastifyInstance } from "fastify";
 
 async function appleAppSiteAssociationRoutes(fastify: FastifyInstance) {
-  // Apple App Site Association (AASA) JSON
+  // AASA content — replace APP_STORE_ID with your real App Store ID
   const aasa = {
     applinks: {
       apps: [],
       details: [
         {
-          appID: "D7FAZ4W8U9.com.herlop.lumilearn", // 👈 TeamID.BundleID
+          appID: "D7FAZ4W8U9.com.herlop.lumilearn", // 👈 TeamID + BundleID
           paths: ["/invite/*"],
         },
       ],
     },
   };
 
-  // Serve at /apple-app-site-association
-  fastify.route({
-    method: "GET",
-    url: "/apple-app-site-association",
-    handler: async (_, reply) => {
-      reply.header("Content-Type", "application/json").send(aasa);
-    },
+  // Main route: /apple-app-site-association
+  fastify.get("/apple-app-site-association", async (_, reply) => {
+    reply.header("Content-Type", "application/json").send(aasa);
   });
 
-  // Serve at /.well-known/apple-app-site-association
-  fastify.route({
-    method: "GET",
-    url: "/.well-known/apple-app-site-association",
-    handler: async (_, reply) => {
-      reply.header("Content-Type", "application/json").send(aasa);
-    },
+  // Well-known route: /.well-known/apple-app-site-association
+  fastify.get("/.well-known/apple-app-site-association", async (_, reply) => {
+    reply.header("Content-Type", "application/json").send(aasa);
   });
 
-  // Optional: Redirect route for when app is not installed
-  fastify.route({
-    method: "GET",
-    url: "/invite/:uid",
-    handler: async (request, reply) => {
-      const { uid } = request.params as { uid: string };
+  // Optional: /invite/:uid route (redirect to App Store if app not installed)
+  fastify.get<{ Params: { uid: string } }>("/invite/:uid", async (req, reply) => {
+    const { uid } = req.params;
+    console.log(`Invite link clicked for UID: ${uid}`);
 
-      // You can log or use uid for analytics if you want
-      console.log(`Invite link clicked for UID: ${uid}`);
-
-      // Direct to App Store (replace with your real App Store ID URL)
-      const APP_STORE_URL = "https://apps.apple.com/app/idYOUR_APP_STORE_ID";
-      reply.redirect(APP_STORE_URL);
-    },
+    // Replace with your real App Store ID
+    const APP_STORE_URL =
+      "https://apps.apple.com/app/id6743999003"; // ✅ your app’s URL
+    return reply.redirect(APP_STORE_URL);
   });
 }
 
