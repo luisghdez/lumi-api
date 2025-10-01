@@ -437,6 +437,7 @@ export const createCourseController = async (
 interface PaginationQuery {
   page?: string;
   limit?: string;
+  subject?: string;
 }
 
 export const getCoursesController = async (
@@ -452,6 +453,7 @@ export const getCoursesController = async (
     // Parse pagination parameters with defaults
     const page = parseInt(request.query.page || '1', 10);
     const limit = parseInt(request.query.limit || '10', 10);
+    const subject = request.query.subject;
 
     // Validate pagination parameters
     if (page < 1) {
@@ -462,13 +464,14 @@ export const getCoursesController = async (
       return reply.status(400).send({ error: "Limit must be between 1 and 100" });
     }
 
-    console.log(`📚 Fetching courses for User: ${user.uid} (page: ${page}, limit: ${limit})`);
+    console.log(`📚 Fetching courses for User: ${user.uid}${subject ? ` (subject: ${subject})` : ''} (page: ${page}, limit: ${limit})`);
 
-    // Call Firebase service to fetch user's courses with pagination
+    // Call Firebase service to fetch user's courses with pagination and optional subject filtering
     const { courses, totalCount, hasNextPage } = await getUsersSavedCoursesFromFirebase(
       user.uid, 
       page, 
-      limit
+      limit,
+      subject
     );
 
     return reply.status(200).send({

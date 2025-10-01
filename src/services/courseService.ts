@@ -137,21 +137,37 @@ export async function updateCourseContent(
   export const getUsersSavedCoursesFromFirebase = async (
     userId: string, 
     page: number = 1, 
-    limit: number = 10
+    limit: number = 10,
+    subject?: string
   ): Promise<PaginatedCoursesResponse> => {
     try {
-      const savedCoursesRef = db
-        .collection("users")
-        .doc(userId)
-        .collection("savedCourses")
-        .orderBy("lastAttempt", "desc");
+      // Build query based on whether subject filter is provided
+      let totalSnapshot;
+      let paginatedQuery;
+      
+      if (subject && subject.trim()) {
+        // Query with subject filter
+        totalSnapshot = await db
+          .collection("users")
+          .doc(userId)
+          .collection("savedCourses")
+          .where("subject", "==", subject.trim())
+          .orderBy("lastAttempt", "desc")
+          .get();
+      } else {
+        // Query without subject filter
+        totalSnapshot = await db
+          .collection("users")
+          .doc(userId)
+          .collection("savedCourses")
+          .orderBy("lastAttempt", "desc")
+          .get();
+      }
 
-      // Get total count for pagination metadata
-      const totalSnapshot = await savedCoursesRef.get();
       const totalCount = totalSnapshot.size;
 
       if (totalCount === 0) {
-        console.log("No saved courses found for this user.");
+        console.log(subject ? `No saved courses found for subject: ${subject}` : "No saved courses found for this user.");
         return {
           courses: [],
           totalCount: 0,
@@ -163,9 +179,26 @@ export async function updateCourseContent(
       const offset = (page - 1) * limit;
 
       // Get paginated results
-      const paginatedQuery = savedCoursesRef
-        .offset(offset)
-        .limit(limit);
+      if (subject && subject.trim()) {
+        // Paginated query with subject filter
+        paginatedQuery = db
+          .collection("users")
+          .doc(userId)
+          .collection("savedCourses")
+          .where("subject", "==", subject.trim())
+          .orderBy("lastAttempt", "desc")
+          .offset(offset)
+          .limit(limit);
+      } else {
+        // Paginated query without subject filter
+        paginatedQuery = db
+          .collection("users")
+          .doc(userId)
+          .collection("savedCourses")
+          .orderBy("lastAttempt", "desc")
+          .offset(offset)
+          .limit(limit);
+      }
 
       const snapshot = await paginatedQuery.get();
       
