@@ -13,6 +13,7 @@ export interface CourseMeta {
   title: string;
   description: string;
   createdBy: string;
+  createdByName?: string;
   hasEmbeddings?: boolean;
   visibility?: string;
 }
@@ -29,6 +30,8 @@ export interface SavedCourse {
   totalLessons: number;
   completedLessons: number;
   savedCount: number;
+  createdBy?: string;
+  createdByName?: string;
   [key: string]: any;
 }
 
@@ -43,6 +46,8 @@ export interface AllCourse {
   hasEmbeddings: boolean;
   lessonCount: number;
   savedCount: number;
+  createdBy?: string;
+  createdByName?: string;
   [key: string]: any;
 }
 
@@ -58,17 +63,31 @@ export interface PaginatedAllCoursesResponse {
  */
 export async function createCourseMeta(meta: CourseMeta): Promise<string> {
   try {
+    // Fetch the creator's name from the users collection
+    let createdByName = "Unknown User";
+    try {
+      const userDoc = await db.collection("users").doc(meta.createdBy).get();
+      if (userDoc.exists) {
+        const userData = userDoc.data();
+        createdByName = userData?.name || userData?.displayName || "Unknown User";
+      }
+    } catch (userError) {
+      console.warn(`⚠️ Could not fetch user name for ${meta.createdBy}:`, userError);
+      // Continue with default value
+    }
+
     const courseRef = db.collection("courses").doc();
     await courseRef.set({
       title:        meta.title,
       description:  meta.description,
       createdBy:    meta.createdBy,
+      createdByName: createdByName,
       hasEmbeddings: meta.hasEmbeddings || false,
       visibility:   meta.visibility || "Private",
       createdAt:    admin.firestore.FieldValue.serverTimestamp(),
       // leave lessons & mergedFlashcards empty for now
     });
-    console.log(`📖 Reserved Course ID: ${courseRef.id}`);
+    console.log(`📖 Reserved Course ID: ${courseRef.id} (created by: ${createdByName})`);
     return courseRef.id;
   } catch (error) {
     console.error("❌ createCourseMeta failed:", error);
@@ -219,17 +238,21 @@ export async function updateCourseContent(
             (lesson: any) => lesson.completed
           ).length;
 
-          // Fetch savedCount from the original course document
+          // Fetch savedCount, createdBy, and createdByName from the original course document
           let savedCount = 0;
+          let createdBy = undefined;
+          let createdByName = undefined;
           try {
             const courseRef = db.collection("courses").doc(data.courseId || doc.id);
             const courseSnapshot = await courseRef.get();
             if (courseSnapshot.exists) {
               const courseData = courseSnapshot.data();
               savedCount = courseData?.savedCount || 0;
+              createdBy = courseData?.createdBy;
+              createdByName = courseData?.createdByName;
             }
           } catch (error) {
-            console.error(`Error fetching savedCount for course ${data.courseId || doc.id}:`, error);
+            console.error(`Error fetching course data for ${data.courseId || doc.id}:`, error);
           }
     
           return {
@@ -239,6 +262,8 @@ export async function updateCourseContent(
             totalLessons,
             completedLessons,
             savedCount,
+            createdBy,
+            createdByName,
           };
         })
       );
@@ -257,19 +282,19 @@ export async function updateCourseContent(
     }
   }; 
 
-  // fixed featured courses for now
+  // Featured courses: Top 20 most saved courses
   export const getFeaturedCoursesFromFirebase = async () => {
     try {
-      // Query for courses CREATED BY a specific user, ordered by creation date descending and limited to 8.
+      // Query for top 20 courses ordered by savedCount (most saved first)
+      // Note: Ensure you have a Firestore index on savedCount in descending order
       const snapshot = await db
         .collection("courses")
-        .where("createdBy", "==", "QE4WkIOW1gXzN0gGPZFvOX65Cpr2")
-        .orderBy("createdAt", "asc")   // ensure you have an index on createdAt
-        .limit(8)
+        .orderBy("savedCount", "desc")
+        .limit(20)
         .get();
   
       if (snapshot.empty) {
-        console.log("No courses found for that creator.");
+        console.log("No featured courses found.");
         return [];
       }
   
