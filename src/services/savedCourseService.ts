@@ -15,7 +15,7 @@ interface SavedCourseOptimizedInput {
   hasEmbeddings: boolean;
 }
 
-export async function createSavedCourse(userId: string, data: SavedCourseInput): Promise<string> {
+export async function createSavedCourse(userId: string, data: SavedCourseInput): Promise<{ id: string, hasEmbeddings: boolean, subject: string }> {
   try {
     const courseRef = db.collection("courses").doc(data.courseId);
     const courseSnapshot = await courseRef.get();
@@ -55,7 +55,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed on the user document
+    // Increment courseSlotsUsed on the user document and savedCount on the course document
     await db.runTransaction(async (transaction) => {
       const userRef = db.collection("users").doc(userId);
       const userSnap = await transaction.get(userRef);
@@ -65,17 +65,27 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       transaction.update(userRef, {
         courseSlotsUsed: currentCount + 1,
       });
+
+      // Increment savedCount on the course document
+      const courseRef = db.collection("courses").doc(data.courseId);
+      transaction.update(courseRef, {
+        savedCount: admin.firestore.FieldValue.increment(1),
+      });
     });
 
     console.log(`Saved course created under user ${userId} with ID: ${savedCourseRef.id}`);
-    return savedCourseRef.id;
+    return {
+      id: savedCourseRef.id,
+      hasEmbeddings: hasEmbeddings,
+      subject: subject || "Other",
+    };
   } catch (error) {
     console.error("Error saving course:", error);
     throw error;
   }
 }
 
-export async function createSharedSavedCourse(userId: string, courseId: string): Promise<{ id: string, lessonCount: number }> {
+export async function createSharedSavedCourse(userId: string, courseId: string): Promise<{ id: string, lessonCount: number, hasEmbeddings: boolean, subject: string }> {
   try {
     const courseRef = db.collection("courses").doc(courseId);
     const courseSnapshot = await courseRef.get();
@@ -118,7 +128,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed
+    // Increment courseSlotsUsed on the user document and savedCount on the course document
     await db.runTransaction(async (transaction) => {
       const userRef = db.collection("users").doc(userId);
       const userSnap = await transaction.get(userRef);
@@ -128,12 +138,20 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       transaction.update(userRef, {
         courseSlotsUsed: currentCount + 1,
       });
+
+      // Increment savedCount on the course document
+      const courseRef = db.collection("courses").doc(courseId);
+      transaction.update(courseRef, {
+        savedCount: admin.firestore.FieldValue.increment(1),
+      });
     });
 
     console.log(`Saved course created under user ${userId} with ID: ${savedCourseRef.id}`);
     return {
       id: savedCourseRef.id,
       lessonCount: lessonCount,
+      hasEmbeddings: hasEmbeddings,
+      subject: subject || "Other",
     };
   } catch (error) {
     console.error("Error saving course:", error);
@@ -145,7 +163,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
  * 🚀 LEVEL 1 OPTIMIZATION: Create saved course without redundant database reads
  * Uses data already available in memory instead of fetching from database
  */
-export async function createSavedCourseOptimized(userId: string, data: SavedCourseOptimizedInput): Promise<string> {
+export async function createSavedCourseOptimized(userId: string, data: SavedCourseOptimizedInput): Promise<{ id: string, hasEmbeddings: boolean, subject: string }> {
   try {
     console.log(`🚀 Creating OPTIMIZED saved course for user ${userId} without DB reads`);
     
@@ -176,7 +194,7 @@ export async function createSavedCourseOptimized(userId: string, data: SavedCour
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed on the user document
+    // Increment courseSlotsUsed on the user document and savedCount on the course document
     await db.runTransaction(async (transaction) => {
       const userRef = db.collection("users").doc(userId);
       const userSnap = await transaction.get(userRef);
@@ -186,10 +204,20 @@ export async function createSavedCourseOptimized(userId: string, data: SavedCour
       transaction.update(userRef, {
         courseSlotsUsed: currentCount + 1,
       });
+
+      // Increment savedCount on the course document
+      const courseRef = db.collection("courses").doc(data.courseId);
+      transaction.update(courseRef, {
+        savedCount: admin.firestore.FieldValue.increment(1),
+      });
     });
 
     console.log(`✅ OPTIMIZED saved course created under user ${userId} with ID: ${savedCourseRef.id}`);
-    return savedCourseRef.id;
+    return {
+      id: savedCourseRef.id,
+      hasEmbeddings: data.hasEmbeddings,
+      subject: data.subject || "Other",
+    };
   } catch (error) {
     console.error("Error creating optimized saved course:", error);
     throw error;
