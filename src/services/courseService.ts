@@ -28,6 +28,7 @@ export interface SavedCourse {
   hasEmbeddings: boolean;
   totalLessons: number;
   completedLessons: number;
+  savedCount: number;
   [key: string]: any;
 }
 
@@ -41,6 +42,7 @@ export interface AllCourse {
   id: string;
   hasEmbeddings: boolean;
   lessonCount: number;
+  savedCount: number;
   [key: string]: any;
 }
 
@@ -202,27 +204,44 @@ export async function updateCourseContent(
 
       const snapshot = await paginatedQuery.get();
       
-      const courses = snapshot.docs.map((doc) => {
-        const data = doc.data();
-  
-        // Safely extract lessons. Adjust the path below if your Firestore structure differs.
-        const lessons = data?.progress?.lessons || {};
-  
-        // If `lessons` is an object where each key is a lesson,
-        // and each lesson has a structure like { completed: boolean }:
-        const totalLessons = Object.keys(lessons).length;
-        const completedLessons = Object.values(lessons).filter(
-          (lesson: any) => lesson.completed
-        ).length;
-  
-        return {
-          id: doc.id,
-          ...data,
-          hasEmbeddings: data.hasEmbeddings || false,
-          totalLessons,
-          completedLessons,
-        };
-      });
+      // Fetch savedCount from original course documents in parallel
+      const courses = await Promise.all(
+        snapshot.docs.map(async (doc) => {
+          const data = doc.data();
+    
+          // Safely extract lessons. Adjust the path below if your Firestore structure differs.
+          const lessons = data?.progress?.lessons || {};
+    
+          // If `lessons` is an object where each key is a lesson,
+          // and each lesson has a structure like { completed: boolean }:
+          const totalLessons = Object.keys(lessons).length;
+          const completedLessons = Object.values(lessons).filter(
+            (lesson: any) => lesson.completed
+          ).length;
+
+          // Fetch savedCount from the original course document
+          let savedCount = 0;
+          try {
+            const courseRef = db.collection("courses").doc(data.courseId || doc.id);
+            const courseSnapshot = await courseRef.get();
+            if (courseSnapshot.exists) {
+              const courseData = courseSnapshot.data();
+              savedCount = courseData?.savedCount || 0;
+            }
+          } catch (error) {
+            console.error(`Error fetching savedCount for course ${data.courseId || doc.id}:`, error);
+          }
+    
+          return {
+            id: doc.id,
+            ...data,
+            hasEmbeddings: data.hasEmbeddings || false,
+            totalLessons,
+            completedLessons,
+            savedCount,
+          };
+        })
+      );
 
       // Calculate if there are more pages
       const hasNextPage = offset + limit < totalCount;
@@ -268,6 +287,7 @@ export async function updateCourseContent(
             ...data,
             hasEmbeddings: data.hasEmbeddings || false,
             lessonCount,
+            savedCount: data.savedCount || 0,
           };
         })
       );
@@ -335,6 +355,7 @@ export async function updateCourseContent(
             ...data,
             hasEmbeddings: data.hasEmbeddings || false,
             lessonCount,
+            savedCount: data.savedCount || 0,
           };
         })
       );

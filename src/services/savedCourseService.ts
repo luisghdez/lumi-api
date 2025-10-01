@@ -55,7 +55,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed on the user document
+    // Increment courseSlotsUsed on the user document and savedCount on the course document
     await db.runTransaction(async (transaction) => {
       const userRef = db.collection("users").doc(userId);
       const userSnap = await transaction.get(userRef);
@@ -64,6 +64,12 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
 
       transaction.update(userRef, {
         courseSlotsUsed: currentCount + 1,
+      });
+
+      // Increment savedCount on the course document
+      const courseRef = db.collection("courses").doc(data.courseId);
+      transaction.update(courseRef, {
+        savedCount: admin.firestore.FieldValue.increment(1),
       });
     });
 
@@ -122,7 +128,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed
+    // Increment courseSlotsUsed on the user document and savedCount on the course document
     await db.runTransaction(async (transaction) => {
       const userRef = db.collection("users").doc(userId);
       const userSnap = await transaction.get(userRef);
@@ -131,6 +137,12 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
 
       transaction.update(userRef, {
         courseSlotsUsed: currentCount + 1,
+      });
+
+      // Increment savedCount on the course document
+      const courseRef = db.collection("courses").doc(courseId);
+      transaction.update(courseRef, {
+        savedCount: admin.firestore.FieldValue.increment(1),
       });
     });
 
@@ -182,7 +194,7 @@ export async function createSavedCourseOptimized(userId: string, data: SavedCour
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed on the user document
+    // Increment courseSlotsUsed on the user document and savedCount on the course document
     await db.runTransaction(async (transaction) => {
       const userRef = db.collection("users").doc(userId);
       const userSnap = await transaction.get(userRef);
@@ -191,6 +203,12 @@ export async function createSavedCourseOptimized(userId: string, data: SavedCour
 
       transaction.update(userRef, {
         courseSlotsUsed: currentCount + 1,
+      });
+
+      // Increment savedCount on the course document
+      const courseRef = db.collection("courses").doc(data.courseId);
+      transaction.update(courseRef, {
+        savedCount: admin.firestore.FieldValue.increment(1),
       });
     });
 
