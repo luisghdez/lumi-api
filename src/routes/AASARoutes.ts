@@ -34,6 +34,15 @@ async function appleAppSiteAssociationRoutes(fastify: FastifyInstance) {
       "https://apps.apple.com/app/id6743999003"; // ✅ your app’s URL
     return reply.redirect(APP_STORE_URL);
   });
+
+  fastify.get<{ Params: { courseId: string } }>("/course/:courseId", async (req, reply) => {
+    const { courseId } = req.params;
+    console.log(`Course link clicked for Course ID: ${courseId}`);
+
+    // Replace with your real App Store URL
+    const APP_STORE_URL = `https://apps.apple.com/app/id6743999003`;
+    return reply.redirect(APP_STORE_URL);
+  });
 }
 
 export default appleAppSiteAssociationRoutes;
