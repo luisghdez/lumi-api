@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { answerCourseQuestion, searchCourseContext } from "../services/ragService";
-import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread, createImageThread } from "../services/threadService";
+import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread, createImageThread, saveImageThreadResponse } from "../services/threadService";
 import { getCourseTitleById } from "../services/courseService";
 import { processGeneralMessage, processGeneralMessageWithHistory } from "../services/generalChatService";
 import OpenAI from "openai";
@@ -419,9 +419,10 @@ export const createImageThreadController = async (
       return reply.status(400).send({ error: "File must be an image" });
     }
 
-    // Get the file buffer
+    // Get the file buffer and metadata
     const imageBuffer = await data.toBuffer();
     const imageMimeType = data.mimetype;
+    const originalFileName = data.filename;
 
     // Prepare streaming NDJSON response
     reply.raw.writeHead(200, {
@@ -439,15 +440,57 @@ export const createImageThreadController = async (
     };
 
     try {
-      // Create the image thread
+      // Create the image thread (processes image and uploads to storage)
       const result = await createImageThread(
         user.uid,
         imageBuffer,
-        imageMimeType
+        imageMimeType,
+        originalFileName
       );
 
       writeObject({ type: "thread", threadId: result.threadId, ...result.thread });
-      writeObject({ type: "message", ...result.assistantMessage });
+
+      // Now stream the AI response generation
+      const openai = new OpenAI();
+      
+      // Build the message for AI processing
+      const messages = [
+        { 
+          role: "system", 
+          content: "You are a helpful AI assistant. Provide clear, concise, and helpful responses to user questions. Explain things in very simple terms like you're explaining to a 5 year old but do not mention you are explaining to a 5 year old." 
+        },
+        { 
+          role: "user", 
+          content: `I've analyzed this image and extracted the following text: "${result.extractedText}". Please provide insights, analysis, or answer any questions about this content.` 
+        }
+      ];
+
+      writeObject({ type: "start", role: "assistant" });
+
+      const stream = await openai.chat.completions.create({
+        model: "gpt-4.1-mini",
+        messages,
+        stream: true,
+      } as any);
+
+      let fullText = "";
+      for await (const chunk of stream as any) {
+        if (reply.raw.writableEnded) break;
+        const delta = chunk?.choices?.[0]?.delta?.content || "";
+        if (delta) {
+          fullText += delta;
+          writeObject({ type: "delta", delta });
+        }
+      }
+
+      // Save the final response to the database
+      const assistantMessage = await saveImageThreadResponse(
+        user.uid,
+        result.threadId,
+        fullText
+      );
+
+      writeObject({ type: "message", ...assistantMessage.message });
       writeObject({ type: "done" });
     } catch (persistErr: any) {
       writeObject({ type: "error", error: "Failed to create image thread", details: persistErr?.message || String(persistErr) });

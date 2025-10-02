@@ -1,6 +1,8 @@
 import { db } from "../config/firebaseConfig";
 import { extractTextFromImage } from "./visionService";
 import { processGeneralMessage } from "./generalChatService";
+import { uploadFileToFirebaseStorage } from "./firebaseStorageService";
+import { v4 as uuidv4 } from "uuid";
 
 export interface ThreadData {
   initialMessage: string;
@@ -334,23 +336,32 @@ export const createMessageInThread = async (
 export const createImageThread = async (
   uid: string,
   imageBuffer: Buffer,
-  imageMimeType: string
-): Promise<{ threadId: string; thread: ThreadData; assistantMessage: ThreadMessage }> => {
+  imageMimeType: string,
+  originalFileName?: string
+): Promise<{ threadId: string; thread: ThreadData; extractedText: string; uploadedFile: any }> => {
   try {
+    // Generate a unique file ID for the image
+    const fileId = uuidv4();
+    const fileName = originalFileName || `image_${Date.now()}.${imageMimeType.split('/')[1]}`;
+    
+    // Upload image to Firebase Storage
+    const uploadedFile = await uploadFileToFirebaseStorage(
+      imageBuffer,
+      fileId,
+      fileName,
+      imageMimeType,
+      "files" // Save to files/ folder as requested
+    );
+
     // Extract text from the image using vision service
     const extractedText = await extractTextFromImage(imageBuffer);
     
     // Create a descriptive initial message for the image
     const initialMessage = `[Image Analysis] ${extractedText}`;
-    
-    // Process the extracted text with general chat service
-    const initialResponse = await processGeneralMessage(
-      `I've analyzed this image and extracted the following text: "${extractedText}". Please provide insights, analysis, or answer any questions about this content explained in very simple terms like your explaining to a 5 year old but do not mention you are explaining to a 5 year old.`
-    );
 
     const threadData = {
       initialMessage: initialMessage.trim(),
-      initialResponse,
+      initialResponse: "", // Will be filled after streaming
       courseId: null, // No course ID for image threads
       courseTitle: null,
       lastMessageAt: new Date(),
@@ -366,33 +377,75 @@ export const createImageThread = async (
       .collection("threads")
       .add(threadData);
 
-    // Save the user's initial message (with image context)
+    // Save the user's initial message (with image context and file info)
     await threadRef.collection("messages").add({
       role: "user",
       content: initialMessage.trim(),
       timestamp: new Date(),
       imageMimeType, // Store the image type for reference
-    });
-
-    // Save the AI's response
-    const aiMessageRef = await threadRef.collection("messages").add({
-      role: "assistant",
-      content: initialResponse,
-      timestamp: new Date(),
+      imageFile: {
+        fileId: uploadedFile.fileName,
+        fileUrl: uploadedFile.fileUrl,
+        originalName: uploadedFile.originalName,
+        mimeType: uploadedFile.mimeType,
+        size: uploadedFile.size
+      }
     });
 
     return {
       threadId: threadRef.id,
       thread: threadData,
-      assistantMessage: {
+      extractedText,
+      uploadedFile
+    };
+  } catch (error) {
+    console.error("Error creating image thread:", error);
+    throw error;
+  }
+};
+
+export const saveImageThreadResponse = async (
+  uid: string,
+  threadId: string,
+  fullResponse: string
+): Promise<{ messageId: string; message: ThreadMessage }> => {
+  try {
+    // Save the AI's response
+    const aiMessageRef = await db
+      .collection("users")
+      .doc(uid)
+      .collection("threads")
+      .doc(threadId)
+      .collection("messages")
+      .add({
+        role: "assistant",
+        content: fullResponse,
+        timestamp: new Date(),
+      });
+
+    // Update thread with the final response
+    await db
+      .collection("users")
+      .doc(uid)
+      .collection("threads")
+      .doc(threadId)
+      .update({
+        initialResponse: fullResponse,
+        lastMessageAt: new Date(),
+        updatedAt: new Date(),
+      });
+
+    return {
+      messageId: aiMessageRef.id,
+      message: {
         messageId: aiMessageRef.id,
         role: "assistant",
-        content: initialResponse,
+        content: fullResponse,
         timestamp: new Date(),
       },
     };
   } catch (error) {
-    console.error("Error creating image thread:", error);
+    console.error("Error saving image thread response:", error);
     throw error;
   }
 };
