@@ -7,8 +7,19 @@ async function appleAppSiteAssociationRoutes(fastify: FastifyInstance) {
       apps: [],
       details: [
         {
-          appID: "D7FAZ4W8U9.com.herlop.lumilearn", // 👈 TeamID + BundleID
-          paths: ["/invite/*", "/course/*"], // ✅ both invite & course
+          appID: "D7FAZ4W8U9.com.herlop.lumilearn",
+          paths: ["/invite/*", "/course/*"],
+          // Add a comment field to change the file
+          components: [
+            {
+              "/": "/invite/*",
+              comment: "Friend invites"
+            },
+            {
+              "/": "/course/*", 
+              comment: "Course shares"
+            }
+          ]
         },
       ],
     },
