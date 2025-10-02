@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createCourseMeta, getFeaturedCoursesFromFirebase, getAllCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus, PaginatedCoursesResponse, PaginatedAllCoursesResponse } from "../services/courseService";
+import { createCourseMeta, getFeaturedCoursesFromFirebase, getAllCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus, getCourseById, PaginatedCoursesResponse, PaginatedAllCoursesResponse } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
 import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
@@ -653,6 +653,39 @@ export const getCourseFilesController = async (
     });
   } catch (error) {
     console.error("Error fetching uploaded files:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getCourseByIdController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { courseId } = request.params as { courseId: string };
+
+    if (!courseId) {
+      return reply.status(400).send({ error: "Missing courseId parameter" });
+    }
+
+    console.log(`📚 Fetching course details for Course: ${courseId} (User: ${user.uid})`);
+
+    const course = await getCourseById(courseId);
+
+    if (!course) {
+      return reply.status(404).send({ error: "Course not found" });
+    }
+
+    return reply.status(200).send({
+      course
+    });
+  } catch (error) {
+    console.error("Error fetching course:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };

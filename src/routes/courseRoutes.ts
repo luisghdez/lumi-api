@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { createCourseController, getCoursesController, getFeaturedCoursesController, getAllCoursesController, getLessonsController, getCourseFilesController } from "../controllers/courseController";
+import { createCourseController, getCoursesController, getFeaturedCoursesController, getAllCoursesController, getLessonsController, getCourseFilesController, getCourseByIdController } from "../controllers/courseController";
 import { authenticateUser } from '../middleware/authUser';
 
 
@@ -31,6 +31,13 @@ async function courseRoutes(fastify: FastifyInstance) {
     url: "/courses/all",
     preHandler: authenticateUser,
     handler: getAllCoursesController,
+  });
+
+  fastify.route({
+    method: "GET",
+    url: "/courses/:courseId",
+    preHandler: authenticateUser,
+    handler: getCourseByIdController,
   });
 
   fastify.route({
