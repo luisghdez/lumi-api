@@ -525,6 +525,40 @@ export async function updateCourseContent(
     }
   };
 
+  export const getCourseById = async (courseId: string) => {
+    try {
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      
+      if (!courseDoc.exists) {
+        return null;
+      }
+      
+      const courseData = courseDoc.data();
+      
+      // Get lesson count by querying the lessons subcollection
+      const lessonsSnapshot = await courseDoc.ref.collection("lessons").get();
+      const lessonCount = lessonsSnapshot.size;
+      
+      return {
+        id: courseDoc.id,
+        title: courseData?.title || "",
+        tags: courseData?.tags || [],
+        subject: courseData?.subject || "Other",
+        hasEmbeddings: courseData?.hasEmbeddings || false,
+        savedCount: courseData?.savedCount || 0,
+        lessonCount,
+        totalLessons: lessonCount,
+        createdByName: courseData?.createdByName || "Unknown User",
+        createdById: courseData?.createdBy || "",
+        createdBy: courseData?.createdBy || ""
+      };
+      
+    } catch (error) {
+      console.error("Error retrieving course by ID:", error);
+      throw new Error("Failed to fetch course details.");
+    }
+  };
+
 
   
   
