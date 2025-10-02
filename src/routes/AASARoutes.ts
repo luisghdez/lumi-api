@@ -7,8 +7,19 @@ async function appleAppSiteAssociationRoutes(fastify: FastifyInstance) {
       apps: [],
       details: [
         {
-          appID: "D7FAZ4W8U9.com.herlop.lumilearn", // 👈 TeamID + BundleID
+          appID: "D7FAZ4W8U9.com.herlop.lumilearn",
           paths: ["/invite/*", "/course/*"],
+          // Add a comment field to change the file
+          components: [
+            {
+              "/": "/invite/*",
+              comment: "Friend invites"
+            },
+            {
+              "/": "/course/*", 
+              comment: "Course shares"
+            }
+          ]
         },
       ],
     },
@@ -29,23 +40,21 @@ async function appleAppSiteAssociationRoutes(fastify: FastifyInstance) {
   });
   
 
-  // Optional: /invite/:uid route (redirect to App Store if app not installed)
+  // Invite route (redirect if app not installed)
   fastify.get<{ Params: { uid: string } }>("/invite/:uid", async (req, reply) => {
     const { uid } = req.params;
     console.log(`Invite link clicked for UID: ${uid}`);
 
-    // Replace with your real App Store ID
-    const APP_STORE_URL =
-      "https://apps.apple.com/app/id6743999003"; // ✅ your app’s URL
+    const APP_STORE_URL = "https://apps.apple.com/app/id6743999003"; // ✅ your app’s URL
     return reply.redirect(APP_STORE_URL);
   });
 
+  // Course route (now identical to invite route)
   fastify.get<{ Params: { courseId: string } }>("/course/:courseId", async (req, reply) => {
     const { courseId } = req.params;
     console.log(`Course link clicked for Course ID: ${courseId}`);
 
-    // Replace with your real App Store URL
-    const APP_STORE_URL = `https://apps.apple.com/app/id6743999003`;
+    const APP_STORE_URL = "https://apps.apple.com/app/id6743999003"; // ✅ your app’s URL
     return reply.redirect(APP_STORE_URL);
   });
 }
