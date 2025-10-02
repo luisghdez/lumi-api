@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { createSavedCourseController, markLessonCompletedController } from "../controllers/savedCourseController";
+import { createSavedCourseController, markLessonCompletedController, deleteSavedCourseController } from "../controllers/savedCourseController";
 import { authenticateUser } from "../middleware/authUser";
 
 // routes for saving a course, sharing course, saving course progress, finishing course.
@@ -16,6 +16,13 @@ async function savedCourseRoutes(fastify: FastifyInstance) {
     url: "/saved-courses/:courseId/lessons/:lessonId/complete",
     preHandler: authenticateUser,
     handler: markLessonCompletedController,
+  });
+
+  fastify.route({
+    method: "DELETE",
+    url: "/saved-courses/:courseId",
+    preHandler: authenticateUser,
+    handler: deleteSavedCourseController,
   });
 }
 

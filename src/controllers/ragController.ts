@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { answerCourseQuestion, searchCourseContext } from "../services/ragService";
-import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread } from "../services/threadService";
+import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread, createImageThread } from "../services/threadService";
 import { getCourseTitleById } from "../services/courseService";
 import { processGeneralMessage, processGeneralMessageWithHistory } from "../services/generalChatService";
 import OpenAI from "openai";
@@ -398,3 +398,75 @@ export const createMessageController = async (
 };
 
 
+export const createImageThreadController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    // Check if the request has a file upload
+    const data = await request.file();
+    if (!data) {
+      return reply.status(400).send({ error: "No image file provided" });
+    }
+
+    // Validate that it's an image file
+    if (!data.mimetype.startsWith('image/')) {
+      return reply.status(400).send({ error: "File must be an image" });
+    }
+
+    // Get the file buffer
+    const imageBuffer = await data.toBuffer();
+    const imageMimeType = data.mimetype;
+
+    // Prepare streaming NDJSON response
+    reply.raw.writeHead(200, {
+      "Content-Type": "application/x-ndjson; charset=utf-8",
+      "Cache-Control": "no-cache, no-transform",
+      "Connection": "keep-alive",
+      "X-Accel-Buffering": "no",
+      "Transfer-Encoding": "chunked",
+    });
+    // @ts-ignore
+    if (typeof reply.raw.flushHeaders === "function") reply.raw.flushHeaders();
+
+    const writeObject = (obj: any) => {
+      try { reply.raw.write(`${JSON.stringify(obj)}\n`); } catch {}
+    };
+
+    try {
+      // Create the image thread
+      const result = await createImageThread(
+        user.uid,
+        imageBuffer,
+        imageMimeType
+      );
+
+      writeObject({ type: "thread", threadId: result.threadId, ...result.thread });
+      writeObject({ type: "message", ...result.assistantMessage });
+      writeObject({ type: "done" });
+    } catch (persistErr: any) {
+      writeObject({ type: "error", error: "Failed to create image thread", details: persistErr?.message || String(persistErr) });
+    } finally {
+      try { reply.raw.end(); } catch {}
+    }
+
+    return;
+  } catch (error: any) {
+    console.error("Error in createImageThreadController:", error);
+    try {
+      if (reply.raw.headersSent) {
+        try {
+          reply.raw.write(`${JSON.stringify({ type: "error", error: "Internal Server Error" })}\n`);
+          reply.raw.end();
+          return;
+        } catch {}
+      }
+    } catch {}
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};

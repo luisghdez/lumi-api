@@ -263,6 +263,33 @@ export const markLessonAsCompleted = async (
   }
 };
 
+export async function deleteSavedCourse(userId: string, courseId: string): Promise<void> {
+  try {
+    const savedCourseRef = db
+      .collection("users")
+      .doc(userId)
+      .collection("savedCourses")
+      .doc(courseId);
+
+    // Check if the saved course exists
+    const savedCourseSnapshot = await savedCourseRef.get();
+    if (!savedCourseSnapshot.exists) {
+      throw new Error("Saved course does not exist");
+    }
+
+    // Delete the saved course document and update counters in a transaction
+    await db.runTransaction(async (transaction) => {
+      // Delete the saved course document
+      transaction.delete(savedCourseRef);
+    });
+
+    console.log(`Saved course ${courseId} deleted for user ${userId}`);
+  } catch (error) {
+    console.error("Error deleting saved course:", error);
+    throw error;
+  }
+}
+
 export async function assignCourseToClass(
   classId: string,
   courseId: string,

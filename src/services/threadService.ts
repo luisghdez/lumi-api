@@ -1,4 +1,6 @@
 import { db } from "../config/firebaseConfig";
+import { extractTextFromImage } from "./visionService";
+import { processGeneralMessage } from "./generalChatService";
 
 export interface ThreadData {
   initialMessage: string;
@@ -327,4 +329,70 @@ export const createMessageInThread = async (
       ...(sources && { sources: cleanSourcesForFirestore(sources) }),
     },
   };
+};
+
+export const createImageThread = async (
+  uid: string,
+  imageBuffer: Buffer,
+  imageMimeType: string
+): Promise<{ threadId: string; thread: ThreadData; assistantMessage: ThreadMessage }> => {
+  try {
+    // Extract text from the image using vision service
+    const extractedText = await extractTextFromImage(imageBuffer);
+    
+    // Create a descriptive initial message for the image
+    const initialMessage = `[Image Analysis] ${extractedText}`;
+    
+    // Process the extracted text with general chat service
+    const initialResponse = await processGeneralMessage(
+      `I've analyzed this image and extracted the following text: "${extractedText}". Please provide insights, analysis, or answer any questions about this content explained in very simple terms like your explaining to a 5 year old but do not mention you are explaining to a 5 year old.`
+    );
+
+    const threadData = {
+      initialMessage: initialMessage.trim(),
+      initialResponse,
+      courseId: null, // No course ID for image threads
+      courseTitle: null,
+      lastMessageAt: new Date(),
+      messageCount: 2, // User message + AI response
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+
+    // Create the thread document
+    const threadRef = await db
+      .collection("users")
+      .doc(uid)
+      .collection("threads")
+      .add(threadData);
+
+    // Save the user's initial message (with image context)
+    await threadRef.collection("messages").add({
+      role: "user",
+      content: initialMessage.trim(),
+      timestamp: new Date(),
+      imageMimeType, // Store the image type for reference
+    });
+
+    // Save the AI's response
+    const aiMessageRef = await threadRef.collection("messages").add({
+      role: "assistant",
+      content: initialResponse,
+      timestamp: new Date(),
+    });
+
+    return {
+      threadId: threadRef.id,
+      thread: threadData,
+      assistantMessage: {
+        messageId: aiMessageRef.id,
+        role: "assistant",
+        content: initialResponse,
+        timestamp: new Date(),
+      },
+    };
+  } catch (error) {
+    console.error("Error creating image thread:", error);
+    throw error;
+  }
 };
