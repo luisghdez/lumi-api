@@ -211,6 +211,7 @@ export const getThreadMessages = async (
       messageId: doc.id,
       role: data.role,
       content: data.content,
+      ...(data.imageFile && { imageUrl: data.imageFile.fileUrl }),
       timestamp: data.timestamp.toDate(),
       ...(data.sources && { sources: data.sources }),
     });
