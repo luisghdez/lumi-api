@@ -10,8 +10,7 @@ export default async function cronRoutes(fastify: FastifyInstance) {
     return { sent };
   });
 
-  // Automatic trigger at 12:00 PM every day
-  cron.schedule("0 12 * * *", async () => {
+  cron.schedule("0 * * * *", async () => {
     console.log("⏰ Running scheduled reengagement cron (12 PM daily)...");
     try {
       await runReengagementJob();
