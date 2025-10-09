@@ -1,6 +1,6 @@
 import { FastifyInstance } from "fastify";
 import { authenticateUser } from "../middleware/authUser";
-import { courseChatController, createThreadController, getUserThreadsController, getThreadMessagesController, getCourseMessagesController, createMessageController } from "../controllers/ragController";
+import { courseChatController, createThreadController, getUserThreadsController, getThreadMessagesController, getCourseMessagesController, createMessageController, createImageThreadController } from "../controllers/ragController";
 
 async function ragRoutes(fastify: FastifyInstance) {
   fastify.route({
@@ -43,6 +43,13 @@ async function ragRoutes(fastify: FastifyInstance) {
     url: "/threads/:threadId/messages",
     preHandler: authenticateUser,
     handler: createMessageController,
+  });
+
+  fastify.route({
+    method: "POST",
+    url: "/threads/image",
+    preHandler: authenticateUser,
+    handler: createImageThreadController,
   });
 }
 

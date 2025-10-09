@@ -32,8 +32,13 @@ async function appleAppSiteAssociationRoutes(fastify: FastifyInstance) {
 
   // Well-known route: /.well-known/apple-app-site-association
   fastify.get("/.well-known/apple-app-site-association", async (_, reply) => {
-    reply.header("Content-Type", "application/json").send(aasa);
+    reply
+      .header("Content-Type", "application/json")
+      .header("Cache-Control", "no-cache, must-revalidate")
+      .header("ETag", `"${Date.now()}"`) // forces Apple to see a new version
+      .send(aasa);
   });
+  
 
   // Invite route (redirect if app not installed)
   fastify.get<{ Params: { uid: string } }>("/invite/:uid", async (req, reply) => {
