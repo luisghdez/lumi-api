@@ -55,17 +55,8 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed on the user document and savedCount on the course document
+    // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {
-      const userRef = db.collection("users").doc(userId);
-      const userSnap = await transaction.get(userRef);
-      const userData = userSnap.data() || {};
-      const currentCount = userData.courseSlotsUsed ?? 0;
-
-      transaction.update(userRef, {
-        courseSlotsUsed: currentCount + 1,
-      });
-
       // Increment savedCount on the course document
       const courseRef = db.collection("courses").doc(data.courseId);
       transaction.update(courseRef, {
@@ -128,17 +119,8 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed on the user document and savedCount on the course document
+    // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {
-      const userRef = db.collection("users").doc(userId);
-      const userSnap = await transaction.get(userRef);
-      const userData = userSnap.data() || {};
-      const currentCount = userData.courseSlotsUsed ?? 0;
-
-      transaction.update(userRef, {
-        courseSlotsUsed: currentCount + 1,
-      });
-
       // Increment savedCount on the course document
       const courseRef = db.collection("courses").doc(courseId);
       transaction.update(courseRef, {
@@ -194,17 +176,8 @@ export async function createSavedCourseOptimized(userId: string, data: SavedCour
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    // Increment courseSlotsUsed on the user document and savedCount on the course document
+    // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {
-      const userRef = db.collection("users").doc(userId);
-      const userSnap = await transaction.get(userRef);
-      const userData = userSnap.data() || {};
-      const currentCount = userData.courseSlotsUsed ?? 0;
-
-      transaction.update(userRef, {
-        courseSlotsUsed: currentCount + 1,
-      });
-
       // Increment savedCount on the course document
       const courseRef = db.collection("courses").doc(data.courseId);
       transaction.update(courseRef, {

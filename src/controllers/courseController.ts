@@ -366,6 +366,13 @@ export const createCourseController = async (
       uploadedFiles
     });
 
+    // Increment courseSlotsUsed for the user who created this original course
+    const userRef = db.collection("users").doc(user.uid);
+    await userRef.update({
+      courseSlotsUsed: admin.firestore.FieldValue.increment(1),
+    });
+    console.log(`✅ Incremented courseSlotsUsed for user ${user.uid}`);
+
     // 1️⃣1️⃣ Final parallel operations: class assignment and saved course creation
     const finalOperations = [];
     
