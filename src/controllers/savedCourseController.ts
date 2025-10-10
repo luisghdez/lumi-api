@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createSavedCourse, createSharedSavedCourse, markLessonAsCompleted } from "../services/savedCourseService";
+import { createSavedCourse, createSharedSavedCourse, markLessonAsCompleted, deleteSavedCourse } from "../services/savedCourseService";
 import { updateUserStreak } from "../services/streakService";
 
 interface CreateSavedCourseRequestBody {
@@ -63,3 +63,27 @@ export const markLessonCompletedController = async (
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
+
+export async function deleteSavedCourseController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { courseId } = request.params as { courseId: string };
+    if (!courseId) {
+      return reply.status(400).send({ error: "Missing courseId parameter" });
+    }
+
+    await deleteSavedCourse(user.uid, courseId);
+    
+    reply.code(200).send({ message: "Saved course deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting saved course:", error);
+    if (error instanceof Error && error.message === "Saved course does not exist") {
+      return reply.status(404).send({ error: "Saved course not found" });
+    }
+    reply.code(500).send({ error: "Failed to delete saved course" });
+  }
+}

@@ -97,9 +97,9 @@ export function generateLessons(
   const totalFillInBlank = fillInTheBlanks.length;
 
   // ✅ Ensure each item appears 3-4 times across lessons
-  const repeatedFlashcards = repeatItems(flashcards, 3);
-  const repeatedMultipleChoice = repeatItems(multipleChoice, 2);
-  const repeatedFillInBlank = repeatItems(fillInTheBlanks, 2);
+  const repeatedFlashcards = repeatItems(flashcards, 2);
+  const repeatedMultipleChoice = repeatItems(multipleChoice, 1);
+  const repeatedFillInBlank = repeatItems(fillInTheBlanks, 1);
 
   let flashcardIndex = 0,
       multipleChoiceIndex = 0,

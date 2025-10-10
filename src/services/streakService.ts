@@ -1,61 +1,61 @@
 import { admin, db } from "../config/firebaseConfig";
+import { sendPushToUser } from "../services/notification_service";
 
 interface UpdateStreakResult {
   previousStreak: number;
   newStreak: number;
-  streakExtended: boolean; // or 'streakIncremented', however you prefer
+  streakExtended: boolean;
 }
 
-export const updateUserStreak = async (userId: string): Promise<UpdateStreakResult | null> => {
+export const updateUserStreak = async (
+  userId: string
+): Promise<UpdateStreakResult | null> => {
   try {
     const userRef = db.collection("users").doc(userId);
     const userSnap = await userRef.get();
 
     if (!userSnap.exists) {
       console.warn(`User ${userId} not found, cannot update streak.`);
-      return null; // or throw, whichever you prefer
+      return null;
     }
 
     const userData = userSnap.data() || {};
-    const currentStreak = userData.streakCount || 0;
+    const currentStreak: number = userData.streakCount || 0;
     const lastCheckIn = userData.lastCheckIn as admin.firestore.Timestamp | undefined;
 
-    // We'll default to new streak = 1 if no lastCheckIn is present
-    let newStreakCount = 1;
     const now = new Date();
+    let newStreakCount = 1;
     
     if (lastCheckIn) {
-      // If lastCheckIn is a Firestore Timestamp, convert it
       const lastCheckInDate = lastCheckIn.toDate();
-
-      // Calculate day difference (rounded down)
-      const msInADay = 24 * 60 * 60 * 1000;
-      const dayDiff = Math.floor((now.getTime() - lastCheckInDate.getTime()) / msInADay);
-
+      const dayDiff = calendarDayDiff(lastCheckInDate, now, "UTC"); // or user-specific TZ
+    
       if (dayDiff === 0) {
-        // Same day → no change to streak
-        newStreakCount = currentStreak;
+        newStreakCount = currentStreak;      // Same calendar day
       } else if (dayDiff === 1) {
-        // Consecutive day → increment
-        newStreakCount = currentStreak + 1;
+        newStreakCount = currentStreak + 1;  // Next calendar day
       } else {
-        // Missed at least one day → reset to 1
-        newStreakCount = 1;
-      }
-    } // else no lastCheckIn → newStreakCount = 1 as the first day
+        newStreakCount = 1;                  // Missed 2+ days
+      }    
+    }
 
-    // Decide if the streak was extended (newStreak is strictly greater than previousStreak)
     const streakExtended = newStreakCount > currentStreak;
 
-    // Update Firestore with newStreakCount and lastCheckIn = now
+    // 🎉 Send milestone push (with route for Flutter navigation)
+    if ([5, 10, 20, 30].includes(newStreakCount)) {
+      const title = `${newStreakCount}-Day Streak!`;
+      const body = "You're on fire! Keep it going.";
+      await sendPushToUser(userId, title, body, {
+        route: "/",
+        streakCount: newStreakCount.toString(),
+      });
+    }
+
+    // ✅ Always update Firestore with the new streak + timestamp
     await userRef.update({
       streakCount: newStreakCount,
       lastCheckIn: admin.firestore.FieldValue.serverTimestamp(),
     });
-
-    console.log(
-      `User ${userId} streak updated: from ${currentStreak} to ${newStreakCount}`
-    );
 
     return {
       previousStreak: currentStreak,
@@ -68,15 +68,30 @@ export const updateUserStreak = async (userId: string): Promise<UpdateStreakResu
   }
 };
 
+
+
+function calendarDayDiff(d1: Date, d2: Date, tz: string = "UTC"): number {
+  // Convert both dates into yyyy-mm-dd in the same timezone
+  const d1Str = d1.toLocaleDateString("en-CA", { timeZone: tz }); // "YYYY-MM-DD"
+  const d2Str = d2.toLocaleDateString("en-CA", { timeZone: tz });
+
+  const d1Parts = d1Str.split("-").map(Number);
+  const d2Parts = d2Str.split("-").map(Number);
+
+  const start = new Date(Date.UTC(d1Parts[0], d1Parts[1] - 1, d1Parts[2]));
+  const end = new Date(Date.UTC(d2Parts[0], d2Parts[1] - 1, d2Parts[2]));
+
+  const msInADay = 24 * 60 * 60 * 1000;
+  return Math.round((end.getTime() - start.getTime()) / msInADay);
+}
+
+
 /**
  * Checks if the user has missed a day since lastCheckIn.
- * If missed, resets streak to 0 and returns streakLost: true.
- * Otherwise, returns streakLost: false.
+ * If missed, resets streak to 0 and updates lastCheckIn.
  */
-
 export async function checkStreakOnLogin(userData: any): Promise<any> {
   try {
-    // Ensure userData is provided and has an ID.
     if (!userData || !userData.id) {
       console.warn("User data is missing or incomplete; cannot check streak.");
       return null;
@@ -84,49 +99,39 @@ export async function checkStreakOnLogin(userData: any): Promise<any> {
 
     const userId = userData.id;
     const currentStreak = userData.streakCount || 0;
-    const lastCheckIn = userData.lastCheckIn; // Could be an ISO string or a Firestore Timestamp
+    const lastCheckIn = userData.lastCheckIn;
 
-    // If there's no lastCheckIn, there's no streak check to perform.
     if (!lastCheckIn) {
-      return {
-        ...userData,
-        streakLost: false,
-      };
+      return { ...userData, streakLost: false };
     }
 
-    // Convert lastCheckIn to a Date instance.
-    // If lastCheckIn is a Firestore Timestamp, use its toDate() method; otherwise assume it's a date string.
     const lastCheckInDate =
       typeof lastCheckIn.toDate === "function"
         ? lastCheckIn.toDate()
         : new Date(lastCheckIn);
 
     const now = new Date();
-    const msInADay = 24 * 60 * 60 * 1000;
-    const dayDiff = Math.floor((now.getTime() - lastCheckInDate.getTime()) / msInADay);
+    const dayDiff = calendarDayDiff(lastCheckInDate, now, "UTC");
 
-    // If the user missed a day (dayDiff >= 1) and had a positive streak,
-    // we reset the streak.
     if (dayDiff >= 1 && currentStreak > 0) {
+      // ❌ Reset streak and update lastCheckIn
       await db.collection("users").doc(userId).update({
         streakCount: 0,
+        lastCheckIn: admin.firestore.FieldValue.serverTimestamp(),
       });
-      console.log(`User ${userId}'s streak reset from ${currentStreak} to 0.`);
+
+      console.log(`User ${userId}'s streak reset from ${currentStreak} → 0`);
 
       return {
         ...userData,
         streakCount: 0,
-        streakLost: true, // Indicate that a streak was lost.
+        streakLost: true,
       };
     }
 
-    // Otherwise, no change is needed.
-    return {
-      ...userData,
-      streakLost: false,
-    };
+    return { ...userData, streakLost: false };
   } catch (error) {
-    console.error("Error checking user streak on login:", error);
+    console.error("🔥 Error checking user streak on login:", error);
     throw error;
   }
 }

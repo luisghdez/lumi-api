@@ -1,40 +1,135 @@
 import { admin, db } from "../config/firebaseConfig";
 
-interface CourseData {
+export interface LessonData {
+  [key: string]: any;
+}
+
+export interface Flashcard {
+  term: string;
+  definition: string;
+}
+
+export interface CourseMeta {
   title: string;
   description: string;
   createdBy: string;
-  lessons: { [key: string]: any };
-  mergedFlashcards: any[];
+  createdByName?: string;
+  hasEmbeddings?: boolean;
+  visibility?: string;
 }
 
-// 🔹 Save Course in Firestore
-export async function saveCourseToFirebase(courseData: CourseData): Promise<string> {
+export interface CourseContent {
+  lessons: Record<string, LessonData>;
+  mergedFlashcards: Flashcard[];
+  summary: string;
+}
+
+export interface SavedCourse {
+  id: string;
+  hasEmbeddings: boolean;
+  totalLessons: number;
+  completedLessons: number;
+  savedCount: number;
+  createdBy?: string;
+  createdByName?: string;
+  [key: string]: any;
+}
+
+export interface PaginatedCoursesResponse {
+  courses: SavedCourse[];
+  totalCount: number;
+  hasNextPage: boolean;
+}
+
+export interface AllCourse {
+  id: string;
+  hasEmbeddings: boolean;
+  lessonCount: number;
+  savedCount: number;
+  createdBy?: string;
+  createdByName?: string;
+  [key: string]: any;
+}
+
+export interface PaginatedAllCoursesResponse {
+  courses: AllCourse[];
+  totalCount: number;
+  hasNextPage: boolean;
+}
+
+/**
+ * Creates an empty course document in Firestore and returns its new ID.
+ * Only metadata fields are written here; lessons & flashcards come later.
+ */
+export async function createCourseMeta(meta: CourseMeta): Promise<string> {
   try {
-    const courseRef = db.collection("courses").doc(); // Generate a new course ID
-    await courseRef.set({
-      title: courseData.title,
-      description: courseData.description,
-      createdAt: new Date().toISOString(),
-      createdBy: courseData.createdBy, // Store the creator
-      mergedFlashcards: courseData.mergedFlashcards,
-    });
-
-    const lessonsRef = courseRef.collection("lessons");
-
-    for (const [lessonKey, lessonData] of Object.entries(courseData.lessons)) {
-      await lessonsRef.doc(lessonKey).set(lessonData);
+    // Fetch the creator's name from the users collection
+    let createdByName = "Unknown User";
+    try {
+      const userDoc = await db.collection("users").doc(meta.createdBy).get();
+      if (userDoc.exists) {
+        const userData = userDoc.data();
+        createdByName = userData?.name || userData?.displayName || "Unknown User";
+      }
+    } catch (userError) {
+      console.warn(`⚠️ Could not fetch user name for ${meta.createdBy}:`, userError);
+      // Continue with default value
     }
 
-    console.log(`✅ Course saved with ID: ${courseRef.id}`);
+    const courseRef = db.collection("courses").doc();
+    await courseRef.set({
+      title:        meta.title,
+      description:  meta.description,
+      createdBy:    meta.createdBy,
+      createdByName: createdByName,
+      hasEmbeddings: meta.hasEmbeddings || false,
+      visibility:   meta.visibility || "Private",
+      createdAt:    admin.firestore.FieldValue.serverTimestamp(),
+      // leave lessons & mergedFlashcards empty for now
+    });
+    console.log(`📖 Reserved Course ID: ${courseRef.id} (created by: ${createdByName})`);
     return courseRef.id;
   } catch (error) {
-    console.error("🔥 Error saving course to Firebase:", error);
-    throw new Error("Failed to save course");
+    console.error("❌ createCourseMeta failed:", error);
+    throw new Error("Failed to create course metadata");
   }
 }
 
-export const getUserCoursesFromFirebase = async (userId: string) => {
+/**
+ * Populates the already-reserved course with lessons & flashcards.
+ * Uses a batch write to ensure atomicity of sub-collection writes.
+ */
+export async function updateCourseContent(
+  courseId: string,
+  content: CourseContent
+): Promise<void> {
+  try {
+    const courseRef  = db.collection("courses").doc(courseId);
+    const lessonsRef = courseRef.collection("lessons");
+    const batch      = db.batch();
+
+    // 1️⃣ write mergedFlashcards array on the root document
+    batch.update(courseRef, {
+      mergedFlashcards: content.mergedFlashcards,
+      updatedAt:        admin.firestore.FieldValue.serverTimestamp(),
+      summary:          content.summary,
+    });
+
+    // 2️⃣ write each lesson into the sub-collection
+    for (const [lessonId, lessonData] of Object.entries(content.lessons)) {
+      const lessonDoc = lessonsRef.doc(lessonId);
+      batch.set(lessonDoc, lessonData);
+    }
+
+    await batch.commit();
+    console.log(`✅ Course ${courseId} content updated (lessons + flashcards).`);
+  } catch (error) {
+    console.error("❌ updateCourseContent failed:", error);
+    throw new Error("Failed to update course content");
+  }
+}
+
+  export const getUserCoursesFromFirebase = async (userId: string) => {
     try {
       const coursesRef = db.collection("courses").where("createdBy", "==", userId);
       const snapshot = await coursesRef.get();
@@ -44,10 +139,14 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         return [];
       }
   
-      const courses = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+      const courses = snapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          ...data,
+          hasEmbeddings: data.hasEmbeddings || false,
+        };
+      });
   
       return courses;
     } catch (error) {
@@ -56,76 +155,264 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
     }
   };
 
-  export const getUsersSavedCoursesFromFirebase = async (userId: string) => {
+  export const getUsersSavedCoursesFromFirebase = async (
+    userId: string, 
+    page: number = 1, 
+    limit: number = 10,
+    subject?: string
+  ): Promise<PaginatedCoursesResponse> => {
     try {
-      const savedCoursesRef = db
-        .collection("users")
-        .doc(userId)
-        .collection("savedCourses")
-        .orderBy("lastAttempt", "desc");
-  
-      const snapshot = await savedCoursesRef.get();
-  
-      if (snapshot.empty) {
-        console.log("No saved courses found for this user.");
-        return [];
+      // Build query based on whether subject filter is provided
+      let totalSnapshot;
+      let paginatedQuery;
+      
+      if (subject && subject.trim()) {
+        // Query with subject filter
+        totalSnapshot = await db
+          .collection("users")
+          .doc(userId)
+          .collection("savedCourses")
+          .where("subject", "==", subject.trim())
+          .orderBy("lastAttempt", "desc")
+          .get();
+      } else {
+        // Query without subject filter
+        totalSnapshot = await db
+          .collection("users")
+          .doc(userId)
+          .collection("savedCourses")
+          .orderBy("lastAttempt", "desc")
+          .get();
       }
-  
-      const courses = snapshot.docs.map((doc) => {
-        const data = doc.data();
-  
-        // Safely extract lessons. Adjust the path below if your Firestore structure differs.
-        const lessons = data?.progress?.lessons || {};
-  
-        // If `lessons` is an object where each key is a lesson,
-        // and each lesson has a structure like { completed: boolean }:
-        const totalLessons = Object.keys(lessons).length;
-        const completedLessons = Object.values(lessons).filter(
-          (lesson: any) => lesson.completed
-        ).length;
-  
+
+      const totalCount = totalSnapshot.size;
+
+      if (totalCount === 0) {
+        console.log(subject ? `No saved courses found for subject: ${subject}` : "No saved courses found for this user.");
         return {
-          id: doc.id,
-          ...data,
-          totalLessons,
-          completedLessons,
+          courses: [],
+          totalCount: 0,
+          hasNextPage: false
         };
-      });
+      }
+
+      // Calculate offset
+      const offset = (page - 1) * limit;
+
+      // Get paginated results
+      if (subject && subject.trim()) {
+        // Paginated query with subject filter
+        paginatedQuery = db
+          .collection("users")
+          .doc(userId)
+          .collection("savedCourses")
+          .where("subject", "==", subject.trim())
+          .orderBy("lastAttempt", "desc")
+          .offset(offset)
+          .limit(limit);
+      } else {
+        // Paginated query without subject filter
+        paginatedQuery = db
+          .collection("users")
+          .doc(userId)
+          .collection("savedCourses")
+          .orderBy("lastAttempt", "desc")
+          .offset(offset)
+          .limit(limit);
+      }
+
+      const snapshot = await paginatedQuery.get();
+      
+      // Fetch savedCount from original course documents in parallel
+      const courses = await Promise.all(
+        snapshot.docs.map(async (doc) => {
+          const data = doc.data();
+    
+          // Safely extract lessons. Adjust the path below if your Firestore structure differs.
+          const lessons = data?.progress?.lessons || {};
+    
+          // If `lessons` is an object where each key is a lesson,
+          // and each lesson has a structure like { completed: boolean }:
+          const totalLessons = Object.keys(lessons).length;
+          const completedLessons = Object.values(lessons).filter(
+            (lesson: any) => lesson.completed
+          ).length;
+
+          // Fetch savedCount, createdBy, and createdByName from the original course document
+          let savedCount = 0;
+          let createdBy = undefined;
+          let createdByName = undefined;
+          try {
+            const courseRef = db.collection("courses").doc(data.courseId || doc.id);
+            const courseSnapshot = await courseRef.get();
+            if (courseSnapshot.exists) {
+              const courseData = courseSnapshot.data();
+              savedCount = courseData?.savedCount || 0;
+              createdBy = courseData?.createdBy;
+              createdByName = courseData?.createdByName;
+            }
+          } catch (error) {
+            console.error(`Error fetching course data for ${data.courseId || doc.id}:`, error);
+          }
+    
+          return {
+            id: doc.id,
+            ...data,
+            hasEmbeddings: data.hasEmbeddings || false,
+            totalLessons,
+            completedLessons,
+            savedCount,
+            createdBy,
+            createdByName,
+          };
+        })
+      );
+
+      // Calculate if there are more pages
+      const hasNextPage = offset + limit < totalCount;
   
-      return courses;
+      return {
+        courses,
+        totalCount,
+        hasNextPage
+      };
     } catch (error) {
       console.error("Error retrieving saved courses:", error);
       throw new Error("Failed to fetch saved courses.");
     }
   }; 
 
-  // fixed featured courses for now
+  // Featured courses: Top 20 most saved courses
   export const getFeaturedCoursesFromFirebase = async () => {
     try {
-      // Query for courses CREATED BY a specific user, ordered by creation date descending and limited to 8.
+      // Query for top 20 courses ordered by savedCount (most saved first)
+      // Note: Ensure you have a Firestore index on savedCount in descending order
       const snapshot = await db
         .collection("courses")
-        .where("createdBy", "==", "QE4WkIOW1gXzN0gGPZFvOX65Cpr2")
-        .orderBy("createdAt", "asc")   // ensure you have an index on createdAt
-        .limit(8)
+        .orderBy("savedCount", "desc")
+        .limit(20)
         .get();
   
       if (snapshot.empty) {
-        console.log("No courses found for that creator.");
+        console.log("No featured courses found.");
         return [];
       }
   
-      // Convert snapshots to a usable array
-      return snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+      // Convert snapshots to a usable array with lesson count
+      const coursesWithLessonCount = await Promise.all(
+        snapshot.docs.map(async (doc) => {
+          const data = doc.data();
+          
+          // Get lesson count by querying the lessons subcollection
+          const lessonsSnapshot = await doc.ref.collection("lessons").get();
+          const lessonCount = lessonsSnapshot.size;
+
+          return {
+            id: doc.id,
+            ...data,
+            hasEmbeddings: data.hasEmbeddings || false,
+            lessonCount,
+            savedCount: data.savedCount || 0,
+          };
+        })
+      );
+
+      return coursesWithLessonCount;
     } catch (error) {
       console.error("Error retrieving courses:", error);
       throw new Error("Failed to fetch courses.");
     }
   };
+
+  // Get all courses from any users with optional subject filtering and pagination
+  export const getAllCoursesFromFirebase = async (subject?: string, page: number = 1, limit: number = 10): Promise<PaginatedAllCoursesResponse> => {
+    try {
+      // Build query based on whether subject filter is provided
+      let query;
+      
+      if (subject && subject.trim()) {
+        // Query with subject filter
+        query = db
+          .collection("courses")
+          .where("subject", "==", subject.trim())
+          .orderBy("createdAt", "desc");
+      } else {
+        // Query without subject filter
+        query = db
+          .collection("courses")
+          .orderBy("createdAt", "desc");
+      }
+
+      // Get total count for pagination metadata
+      const totalSnapshot = await query.get();
+      const totalCount = totalSnapshot.size;
+
+      if (totalCount === 0) {
+        console.log(subject ? `No courses found for subject: ${subject}` : "No courses found.");
+        return {
+          courses: [],
+          totalCount: 0,
+          hasNextPage: false
+        };
+      }
+
+      // Calculate offset
+      const offset = (page - 1) * limit;
+
+      // Get paginated results
+      const paginatedQuery = query
+        .offset(offset)
+        .limit(limit);
+
+      const snapshot = await paginatedQuery.get();
+
+      // Convert snapshots to a usable array with lesson count
+      const coursesWithLessonCount = await Promise.all(
+        snapshot.docs.map(async (doc) => {
+          const data = doc.data();
+          
+          // Get lesson count by querying the lessons subcollection
+          const lessonsSnapshot = await doc.ref.collection("lessons").get();
+          const lessonCount = lessonsSnapshot.size;
+
+          return {
+            id: doc.id,
+            ...data,
+            hasEmbeddings: data.hasEmbeddings || false,
+            lessonCount,
+            savedCount: data.savedCount || 0,
+          };
+        })
+      );
+
+      // Calculate if there are more pages
+      const hasNextPage = offset + limit < totalCount;
+
+      return {
+        courses: coursesWithLessonCount,
+        totalCount,
+        hasNextPage
+      };
+    } catch (error) {
+      console.error("Error retrieving all courses:", error);
+      throw new Error("Failed to fetch all courses.");
+    }
+  };
   
+  export async function getCourseTitleById(courseId: string): Promise<string | null> {
+    try {
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      if (!courseDoc.exists) {
+        return null;
+      }
+      const data = courseDoc.data();
+      return (data && (data as any).title) || null;
+    } catch (error) {
+      console.error("Error retrieving course title:", error);
+      throw new Error("Failed to fetch course title.");
+    }
+  }
+
 
   export const getLessonsWithProgressFromFirebase = async (
     userId: string,
@@ -177,18 +464,102 @@ export const getUserCoursesFromFirebase = async (userId: string) => {
         };
       });
   
-      // 4. Retrieve the course document to get the merged flashcards.
+      // 4. Retrieve the course document to get the merged flashcards and summary.
       const courseDoc = await db.collection("courses").doc(courseId).get();
-      const mergedFlashcards = courseDoc.exists
-        ? courseDoc.data()?.mergedFlashcards || []
-        : [];
+      const courseData = courseDoc.exists ? courseDoc.data() : {};
+      const mergedFlashcards = courseData?.mergedFlashcards || [];
+      const summary = courseData?.summary || '';
   
-      return { lessons, mergedFlashcards };
+      return { lessons, mergedFlashcards, summary };
     } catch (error) {
       console.error("Error retrieving lessons with progress:", error);
       throw new Error("Failed to fetch lessons with progress.");
     }
   };
+
+  export const getCourseUploadedFiles = async (courseId: string) => {
+    try {
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      
+      if (!courseDoc.exists) {
+        throw new Error("Course not found");
+      }
+      
+      const courseData = courseDoc.data();
+      return courseData?.uploadedFiles || [];
+      
+    } catch (error) {
+      console.error("Error retrieving uploaded files:", error);
+      throw new Error("Failed to fetch uploaded files.");
+    }
+  };
+
+  export const updateCourseEmbeddingsStatus = async (courseId: string, hasEmbeddings: boolean) => {
+    try {
+      const courseRef = db.collection("courses").doc(courseId);
+      await courseRef.update({
+        hasEmbeddings,
+        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+      console.log(`✅ Updated embeddings status for course ${courseId}: ${hasEmbeddings}`);
+    } catch (error) {
+      console.error("❌ Failed to update embeddings status:", error);
+      throw new Error("Failed to update embeddings status");
+    }
+  };
+
+  export const checkCourseHasEmbeddings = async (courseId: string): Promise<boolean> => {
+    try {
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      
+      if (!courseDoc.exists) {
+        return false;
+      }
+      
+      const courseData = courseDoc.data();
+      return courseData?.hasEmbeddings || false;
+      
+    } catch (error) {
+      console.error("Error checking embeddings status:", error);
+      return false;
+    }
+  };
+
+  export const getCourseById = async (courseId: string) => {
+    try {
+      const courseDoc = await db.collection("courses").doc(courseId).get();
+      
+      if (!courseDoc.exists) {
+        return null;
+      }
+      
+      const courseData = courseDoc.data();
+      
+      // Get lesson count by querying the lessons subcollection
+      const lessonsSnapshot = await courseDoc.ref.collection("lessons").get();
+      const lessonCount = lessonsSnapshot.size;
+      
+      return {
+        id: courseDoc.id,
+        title: courseData?.title || "",
+        tags: courseData?.tags || [],
+        subject: courseData?.subject || "Other",
+        hasEmbeddings: courseData?.hasEmbeddings || false,
+        savedCount: courseData?.savedCount || 0,
+        lessonCount,
+        totalLessons: lessonCount,
+        createdByName: courseData?.createdByName || "Unknown User",
+        createdById: courseData?.createdBy || "",
+        createdBy: courseData?.createdBy || ""
+      };
+      
+    } catch (error) {
+      console.error("Error retrieving course by ID:", error);
+      throw new Error("Failed to fetch course details.");
+    }
+  };
+
+
   
   
   

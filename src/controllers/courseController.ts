@@ -1,44 +1,172 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { getFeaturedCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, saveCourseToFirebase } from "../services/courseService";
+import { createCourseMeta, getFeaturedCoursesFromFirebase, getAllCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus, getCourseById, PaginatedCoursesResponse, PaginatedAllCoursesResponse } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
-import { openAiCourseContent } from "../services/openAICourseContentService";
-import { assignCourseToClass, createSavedCourse } from "../services/savedCourseService";
+import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
+import { assignCourseToClass, createSavedCourse, createSavedCourseOptimized } from "../services/savedCourseService";
 import { parseOfficeAsync } from "officeparser";
+import { embedAndStoreWithMetadata, embedAndStoreWithMetadataStreaming } from "../services/enhancedEmbedAndChunk";
+import { uploadFileToFirebaseStorage, UploadedFile } from "../services/firebaseStorageService";
+import { db, admin } from "../config/firebaseConfig";
+import { processConcurrently, processInBatches } from "../utils/concurrency";
+import { nanoid } from "nanoid";
+
+/**
+ * 🚀 LEVEL 1 OPTIMIZATION: Batched database writes for maximum performance
+ * Combines multiple Firestore operations into a single batch
+ */
+async function batchedCourseUpdate(courseId: string, data: {
+  lessons: Record<string, any>;
+  mergedFlashcards: any[];
+  summary: string;
+  title: string;
+  subject: string;
+  description: string;
+  processedFiles?: any[];
+  uploadedFiles?: any[];
+}) {
+  const batchStartTime = Date.now();
+  console.log("🚀 Starting BATCHED database update");
+
+  try {
+    const courseRef = db.collection("courses").doc(courseId);
+    const lessonsRef = courseRef.collection("lessons");
+    const batch = db.batch();
+
+    // 1️⃣ Update main course document with all metadata and content
+    const courseUpdateData: any = {
+      title: data.title,
+      description: data.description,
+      subject: data.subject,
+      mergedFlashcards: data.mergedFlashcards,
+      summary: data.summary,
+      hasEmbeddings: true, // Mark as complete
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    };
+
+    // Add optional data if present
+    if (data.uploadedFiles && data.uploadedFiles.length > 0) {
+      courseUpdateData.uploadedFiles = data.uploadedFiles;
+    }
+    if (data.processedFiles && data.processedFiles.length > 0) {
+      courseUpdateData.processedFiles = data.processedFiles.map(file => ({
+        fileName: file.fileName,
+        originalName: file.originalName,
+        mimeType: file.mimeType,
+        fileIndex: file.fileIndex,
+        totalChunks: file.chunks.length
+      }));
+    }
+
+    batch.update(courseRef, courseUpdateData);
+
+    // 2️⃣ Batch write all lessons
+    for (const [lessonId, lessonData] of Object.entries(data.lessons)) {
+      const lessonDoc = lessonsRef.doc(lessonId);
+      batch.set(lessonDoc, lessonData);
+    }
+
+    // 3️⃣ Execute single batch commit
+    await batch.commit();
+    
+    const batchDuration = Date.now() - batchStartTime;
+    console.log(`✅ BATCHED database update completed in ${batchDuration}ms`);
+    console.log(`✅ Updated course "${data.title}" with ${Object.keys(data.lessons).length} lessons and ${data.mergedFlashcards.length} flashcards`);
+
+  } catch (error) {
+    console.error("❌ Batched database update failed:", error);
+    throw new Error("Failed to update course content in batch");
+  }
+}
 
 
 const OFFICE_MIME_TYPES = new Set([
   "application/pdf",
   "application/vnd.openxmlformats-officedocument.presentationml.presentation", // pptx
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",   // docx
-  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",         // xlsx
   "application/msword",                                                        // legacy .doc
   "application/vnd.ms-powerpoint",                                             // legacy .ppt
-  "application/vnd.ms-excel"                                                   // legacy .xls
 ]);
 
+const IMAGE_MIME_TYPES = new Set([
+  "image/jpeg",
+  "image/jpg", 
+  "image/png",
+  "image/gif",
+  "image/webp",
+  "image/bmp",
+  "image/tiff"
+]);
+
+// Configuration for optimized processing
+const OPTIMIZATION_CONFIG = {
+  // Maximum concurrent Firebase uploads
+  FIREBASE_UPLOAD_CONCURRENCY: 3,
+  // 🚀 LEVEL 1 OPTIMIZATION: Increased OpenAI concurrency from 5 to 15 for 3x faster content generation
+  OPENAI_CONCURRENCY: 15,
+  // Batch size for OpenAI processing
+  OPENAI_BATCH_SIZE: 8,
+  // Timeout for individual operations (30 seconds)
+  OPERATION_TIMEOUT: 30000,
+} as const;
+
 /**
- * Splits `text` into chunks ≤ maxLen, breaking at the last `.` before the limit.
+ * Helper function to upload files to Firebase Storage in parallel
  */
-function splitIntoChunks(text: string, maxLen = 1500): string[] {
-  const chunks: string[] = [];
-  let start = 0;
-
-  while (start < text.length) {
-    if (text.length - start <= maxLen) {
-      chunks.push(text.slice(start).trim());
-      break;
+async function uploadFilesInParallel(
+  files: Array<{ buffer: Buffer; filename: string; mimeType: string; fileId: string }>
+): Promise<UploadedFile[]> {
+  console.log(`🔥 Starting parallel upload of ${files.length} files to Firebase Storage`);
+  
+  const uploadPromises = files.map(async (file, index) => {
+    try {
+      // Use the provided fileId instead of generating a new one
+      const uploadedFile = await uploadFileToFirebaseStorage(
+        file.buffer,
+        file.fileId,
+        file.filename || "unknown", // Keep original name for metadata
+        file.mimeType,
+        "courses"
+      );
+      console.log(`✅ File ${index + 1}/${files.length} uploaded: ${uploadedFile.fileName}`);
+      return uploadedFile;
+    } catch (error) {
+      console.error(`❌ Failed to upload file ${file.filename}:`, error);
+      // Return a placeholder for failed uploads, but continue processing
+      return null;
     }
+  });
 
-    const end = start + maxLen;
-    const periodIdx = text.lastIndexOf(".", end);
-    const splitPos = periodIdx > start ? periodIdx + 1 : end;
+  const results = await Promise.all(uploadPromises);
+  return results.filter((result): result is UploadedFile => result !== null);
+}
 
-    chunks.push(text.slice(start, splitPos).trim());
-    start = splitPos;
-  }
-
-  return chunks;
+/**
+ * Helper function to process OpenAI content generation with controlled concurrency
+ */
+async function processOpenAIContentConcurrently(chunkTexts: string[]): Promise<any[]> {
+  const startTime = Date.now();
+  console.log(`🤖 Processing ${chunkTexts.length} chunks with OpenAI (concurrency: ${OPTIMIZATION_CONFIG.OPENAI_CONCURRENCY})`);
+  
+  const results = await processConcurrently(
+    chunkTexts,
+    async (chunk: string, index: number) => {
+      try {
+        console.log(`  • Processing chunk ${index + 1}/${chunkTexts.length}`);
+        return await openAiCourseContent(chunk);
+      } catch (error) {
+        console.error(`❌ Failed to process chunk ${index + 1}:`, error);
+        // Return empty structure to continue processing
+        return { flashcards: [], fillInTheBlankQuestions: [], multipleChoiceQuestions: [] };
+      }
+    },
+    OPTIMIZATION_CONFIG.OPENAI_CONCURRENCY
+  );
+  
+  const duration = Date.now() - startTime;
+  console.log(`✅ All OpenAI processing completed in ${duration}ms (avg: ${Math.round(duration / chunkTexts.length)}ms per chunk)`);
+  
+  return results;
 }
 
 export const createCourseController = async (
@@ -46,54 +174,90 @@ export const createCourseController = async (
   reply: FastifyReply
 ) => {
   try {
+    const overallStartTime = Date.now();
     const user = (request as any).user;
     if (!user?.uid) {
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    console.log("Controller triggered");
+    console.log("🚀 Course creation started");
 
-    const extractedFilesText: string[] = [];
-    let title = "Untitled Course";
-    let description = "No description provided";
+    let uploadedFiles: UploadedFile[] = [];
+    const filesForEmbedding: Array<{
+      buffer: Buffer;
+      fileName: string;
+      originalName: string;
+      mimeType: string;
+    }> = [];
     let classId: string | undefined;
     let dueDate: string | undefined;
 
-    // 1️⃣ Extract raw text from all parts
+    // 1️⃣ Process all parts and collect files (optimized for parallel processing)
+    const filesToUpload: Array<{ buffer: Buffer; filename: string; mimeType: string; fileId: string }> = [];
+    
     for await (const part of request.parts()) {
       if ("file" in part) {
         console.log("Processing file:", part.filename, part.mimetype);
+        
+        // Check if file type is supported (PDF, images, or text)
+        const isSupported = part.mimetype === "application/pdf" || 
+                           part.mimetype.startsWith("image/") || 
+                           part.mimetype === "text/plain";
+        
+        if (!isSupported) {
+          console.log(`⚠️ Unsupported file type: ${part.mimetype}. Skipping ${part.filename}`);
+          continue;
+        }
+        
         const fileBuffer = await part.toBuffer();
-        let fileExtractedText = "";
 
-        if (OFFICE_MIME_TYPES.has(part.mimetype)) {
-          console.log("Extracting text from Office/PDF...");
-          fileExtractedText = await parseOfficeAsync(fileBuffer);
+        // Generate the nanoid that will be used for upload
+        const fileId = nanoid();
+        const fileExtension = (part.filename || "unknown").split('.').pop() || '';
+        const expectedFileName = `courses/${fileId}.${fileExtension}`;
+        
+        // Collect files for parallel upload later with the fileId
+        filesToUpload.push({
+          buffer: fileBuffer,
+          filename: part.filename || "unknown",
+          mimeType: part.mimetype,
+          fileId: fileId  // Pass the fileId to use in upload
+        });
 
-        } else if (part.mimetype.startsWith("image/")) {
-          console.log("Extracting text from image...");
-          fileExtractedText = await extractTextFromImage(fileBuffer);
-
-        } else {
-          console.log("Reading file as plain text...");
-          fileExtractedText = fileBuffer.toString("utf8");
-        }
-
-        if (fileExtractedText.trim()) {
-          extractedFilesText.push(fileExtractedText);
-        }
+        // Add file for enhanced embedding processing with correct filename
+        filesForEmbedding.push({
+          buffer: fileBuffer,
+          fileName: expectedFileName, // Use the actual Firebase filename
+          originalName: part.filename || "unknown",
+          mimeType: part.mimetype
+        });
 
       } else {
         const { fieldname, value } = part as any;
         switch (fieldname) {
-          case "title":
-            if (value.trim()) title = value;
-            break;
-          case "description":
-            if (value.trim()) description = value;
-            break;
           case "content":
-            if (value.trim()) extractedFilesText.push(value);
+            // Handle plain text content as a file - store as .txt in Firebase Storage
+            if (value.trim()) {
+              const fileId = nanoid();
+              const expectedFileName = `courses/${fileId}.txt`;
+              const textBuffer = Buffer.from(value, 'utf8');
+              
+              // Add to upload queue
+              filesToUpload.push({
+                buffer: textBuffer,
+                filename: "text_input.txt",
+                mimeType: "text/plain",
+                fileId: fileId
+              });
+
+              // Add for enhanced embedding processing with correct filename
+              filesForEmbedding.push({
+                buffer: textBuffer,
+                fileName: expectedFileName, // Use the actual Firebase filename
+                originalName: "text_input.txt",
+                mimeType: "text/plain"
+              });
+            }
             break;
           case "classId":
             if (value.trim()) classId = value;
@@ -109,77 +273,182 @@ export const createCourseController = async (
       }
     }
 
-    if (extractedFilesText.length === 0) {
-      return reply.status(400).send({ error: "No valid text provided" });
-    }
+      if (filesForEmbedding.length === 0) {
+        return reply.status(400).send({ error: "No valid files or content provided" });
+      }
 
-    console.log(
-      `Extracted text from ${extractedFilesText.length} part(s), now chunking...`
-    );
+      console.log(
+        `🚀 Processing ${filesForEmbedding.length} file(s) with optimized parallel processing...`
+      );
 
-    // 2️⃣ Break every file’s text into sentence‑safe chunks
-    const allChunks = extractedFilesText.flatMap((text) =>
-      splitIntoChunks(text, 1500)
-    );
-    console.log(`→ ${allChunks.length} chunks ready for OpenAI.`);
+      // 2️⃣ Create course metadata first with temporary values
+      const courseId = await createCourseMeta({ 
+        title: "Generating Course...", 
+        description: "Course content is being generated...", 
+        createdBy: user.uid,
+        hasEmbeddings: false,
+        visibility: "Private"
+      });
+      
+      // 3️⃣ Start parallel operations: Firebase upload AND document processing
+      const parallelStartTime = Date.now();
+      console.log("🔄 Starting parallel operations: Firebase upload and document streaming processing");
+      const [uploadResults, { coarseChunks: chunkTexts, processedFiles, embeddingPromise }] = await Promise.all([
+        // Parallel Firebase uploads
+        filesToUpload.length > 0 ? uploadFilesInParallel(filesToUpload) : Promise.resolve([]),
+        // 🚀 LEVEL 1 OPTIMIZATION: Document processing with streaming for immediate content generation
+        embedAndStoreWithMetadataStreaming(courseId, filesForEmbedding)
+      ]);
+      
+      const parallelDuration = Date.now() - parallelStartTime;
+      console.log(`✅ Parallel operations completed in ${parallelDuration}ms`);
+      
+      // Assign upload results to uploadedFiles
+      uploadedFiles = uploadResults;
+      
+      // 4️⃣ File metadata will be stored in batched update (no separate operation needed)
+      
+      // 🚀 LEVEL 1 OPTIMIZATION: Start content generation immediately while embeddings continue
+      console.log("🚀 PARALLEL PROCESSING: Starting content generation while embeddings run in background");
+      const [chunkedResponses] = await Promise.all([
+        // 5️⃣ Process OpenAI content generation with controlled concurrency (immediate start)
+        processOpenAIContentConcurrently(chunkTexts),
+        // 6️⃣ Wait for embeddings to complete and mark as complete (background)
+        embeddingPromise.then(() => updateCourseEmbeddingsStatus(courseId, true)).catch(error => {
+          console.error("❌ Failed to complete embeddings:", error);
+        })
+      ]);    
 
-    // 3️⃣ Call OpenAI in parallel on each chunk
-    const chunkedResponses = await Promise.all(
-      allChunks.map((chunk, idx) => {
-        console.log(`  • processing chunk ${idx + 1}/${allChunks.length}`);
-        return openAiCourseContent(chunk);
-      })
-    );
-
-    // 4️⃣ Merge all question arrays
-    const mergedFlashcards = chunkedResponses.flatMap((r) => r?.flashcards || []);
+    // 7️⃣ Merge all question arrays
+    const mergedFlashcards = chunkedResponses.flatMap((r: any) => r?.flashcards || []);
     const mergedFillInTheBlanks = chunkedResponses.flatMap(
-      (r) => r?.fillInTheBlankQuestions || []
+      (r: any) => r?.fillInTheBlankQuestions || []
     );
     const mergedMultipleChoice = chunkedResponses.flatMap(
-      (r) => r?.multipleChoiceQuestions || []
+      (r: any) => r?.multipleChoiceQuestions || []
     );
 
     console.log(
       `🎯 Totals → Flashcards: ${mergedFlashcards.length}, MCQs: ${mergedMultipleChoice.length}, FITBs: ${mergedFillInTheBlanks.length}`
     );
 
-    // 5️⃣ Generate lessons & save
+    // 8️⃣ Generate lessons (fast, local operation)
     const { lessons, lessonCount } = generateLessons(
       mergedFlashcards,
       mergedMultipleChoice,
       mergedFillInTheBlanks
     );
 
-    const courseId = await saveCourseToFirebase({
-      title,
-      description,
-      createdBy: user.uid,
+    // 9️⃣ Parallel operations: Summary generation and course content update prep
+    console.log("🔄 Starting parallel final operations");
+    const [summaryData] = await Promise.all([
+      // Generate summary with title and subject
+      generateMarkdownSummaryFromTerms(mergedFlashcards.map((f: any) => f.term)).catch(error => {
+        console.error("❌ Failed to generate summary:", error);
+        return { title: "Course", subject: "Other", summary: "" };
+      }),
+      // Processed files metadata will be stored in batched update (no separate operation needed)
+      Promise.resolve()
+    ]);
+
+    // Extract generated data
+    const { title, subject, summary } = summaryData || { title: "Course", subject: "Other", summary: "" };
+
+    // 🔟 🚀 LEVEL 1 OPTIMIZATION: Batched database writes for better performance
+    await batchedCourseUpdate(courseId, {
       lessons,
       mergedFlashcards,
+      summary,
+      title,
+      subject,
+      description: `A ${subject} course covering key concepts and skills.`,
+      processedFiles,
+      uploadedFiles
     });
 
+    // Increment courseSlotsUsed for the user who created this original course
+    const userRef = db.collection("users").doc(user.uid);
+    await userRef.update({
+      courseSlotsUsed: admin.firestore.FieldValue.increment(1),
+    });
+    console.log(`✅ Incremented courseSlotsUsed for user ${user.uid}`);
+
+    // 1️⃣1️⃣ Final parallel operations: class assignment and saved course creation
+    const finalOperations = [];
+    
     if (classId) {
-      await assignCourseToClass(classId, courseId, title, dueDate);
+      finalOperations.push(
+        assignCourseToClass(classId, courseId, title, dueDate).catch(error => {
+          console.error("❌ Failed to assign course to class:", error);
+        })
+      );
+    }
+    
+    finalOperations.push(
+      // 🚀 LEVEL 1 OPTIMIZATION: Create saved course with data we already have (no redundant DB reads)
+      createSavedCourseOptimized(user.uid, {
+        courseId,
+        lessonCount,
+        title,
+        description: `A ${subject} course covering key concepts and skills.`,
+        subject,
+        hasEmbeddings: true
+      }).catch(error => {
+        console.error("❌ Failed to create saved course:", error);
+      })
+    );
+
+    // Execute final operations in parallel
+    if (finalOperations.length > 0) {
+      await Promise.all(finalOperations);
     }
 
-    await createSavedCourse(user.uid, { courseId, lessonCount });
+    // 1️⃣2️⃣ Success response with performance info
+    const totalDuration = Date.now() - overallStartTime;
+    console.log(`🎉 Course creation completed successfully! CourseID: ${courseId}`);
+    console.log(`📊 Performance Summary:
+      - Total Duration: ${totalDuration}ms (${Math.round(totalDuration/1000)}s)
+      - Files processed: ${filesForEmbedding.length}
+      - Files uploaded: ${uploadedFiles.length}
+      - Text chunks generated: ${chunkTexts.length}
+      - Flashcards created: ${mergedFlashcards.length}
+      - Lessons generated: ${lessonCount}
+    `);
 
-    // 6️⃣ Respond
     return reply.status(201).send({
-      message: "Course created successfully",
+      message: "Course created successfully with AI-generated title and content",
       courseId,
+      title,
+      subject,
       lessonCount,
+      summary,
+      uploadedFiles: uploadedFiles.length > 0 ? uploadedFiles : undefined,
+      stats: {
+        filesProcessed: filesForEmbedding.length,
+        filesUploaded: uploadedFiles.length,
+        chunksGenerated: chunkTexts.length,
+        flashcardsCreated: mergedFlashcards.length,
+        lessonsGenerated: lessonCount
+      }
     });
 
   } catch (error) {
-    console.error("Error creating course:", error);
-    return reply.status(500).send({ error: "Internal Server Error" });
+    console.error("❌ Error creating course:", error);
+    return reply.status(500).send({ 
+      error: "Internal Server Error",
+      details: process.env.NODE_ENV === 'development' ? (error as Error).message : undefined
+    });
   }
 };
 
+interface PaginationQuery {
+  page?: string;
+  limit?: string;
+  subject?: string;
+}
+
 export const getCoursesController = async (
-  request: FastifyRequest,
+  request: FastifyRequest<{ Querystring: PaginationQuery }>,
   reply: FastifyReply
 ) => {
   try {
@@ -188,14 +457,41 @@ export const getCoursesController = async (
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    console.log(`📚 Fetching courses for User: ${user.uid}`);
+    // Parse pagination parameters with defaults
+    const page = parseInt(request.query.page || '1', 10);
+    const limit = parseInt(request.query.limit || '10', 10);
+    const subject = request.query.subject;
 
-    // Call Firebase service to fetch user's courses
-    const userCourses = await getUsersSavedCoursesFromFirebase(user.uid);
+    // Validate pagination parameters
+    if (page < 1) {
+      return reply.status(400).send({ error: "Page must be greater than 0" });
+    }
+
+    if (limit < 1 || limit > 100) {
+      return reply.status(400).send({ error: "Limit must be between 1 and 100" });
+    }
+
+    console.log(`📚 Fetching courses for User: ${user.uid}${subject ? ` (subject: ${subject})` : ''} (page: ${page}, limit: ${limit})`);
+
+    // Call Firebase service to fetch user's courses with pagination and optional subject filtering
+    const { courses, totalCount, hasNextPage } = await getUsersSavedCoursesFromFirebase(
+      user.uid, 
+      page, 
+      limit,
+      subject
+    );
 
     return reply.status(200).send({
       message: "Courses retrieved successfully",
-      courses: userCourses,
+      courses,
+      pagination: {
+        page,
+        limit,
+        totalCount,
+        totalPages: Math.ceil(totalCount / limit),
+        hasNextPage,
+        hasPreviousPage: page > 1
+      }
     });
   } catch (error) {
     console.error("Error fetching courses:", error);
@@ -228,6 +524,77 @@ export const getFeaturedCoursesController = async (
   }
 };
 
+interface AllCoursesQuery {
+  subject?: string;
+  page?: string;
+  limit?: string;
+}
+
+export const getAllCoursesController = async (
+  request: FastifyRequest<{ Querystring: AllCoursesQuery }>,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { subject, page: pageParam, limit: limitParam } = request.query;
+
+    // Parse pagination parameters with defaults
+    const page = parseInt(pageParam || '1', 10);
+    const limit = parseInt(limitParam || '10', 10);
+
+    // Validate pagination parameters
+    if (page < 1) {
+      return reply.status(400).send({ error: "Page must be greater than 0" });
+    }
+
+    if (limit < 1 || limit > 100) {
+      return reply.status(400).send({ error: "Limit must be between 1 and 100" });
+    }
+
+    console.log(`📚 Fetching all courses${subject ? ` for subject: ${subject}` : ''} (page: ${page}, limit: ${limit})`);
+
+    // If no subject is provided, return featured courses (same as getFeaturedCoursesFromFirebase)
+    if (!subject || !subject.trim()) {
+      const featuredCourses = await getFeaturedCoursesFromFirebase();
+      return reply.status(200).send({
+        message: "All courses retrieved successfully",
+        courses: featuredCourses,
+        pagination: {
+          page: 1,
+          limit: featuredCourses.length,
+          totalCount: featuredCourses.length,
+          totalPages: 1,
+          hasNextPage: false,
+          hasPreviousPage: false
+        }
+      });
+    }
+
+    // Call Firebase service to fetch all courses with subject filter and pagination
+    const { courses, totalCount, hasNextPage } = await getAllCoursesFromFirebase(subject, page, limit);
+
+    return reply.status(200).send({
+      message: "All courses retrieved successfully",
+      courses,
+      pagination: {
+        page,
+        limit,
+        totalCount,
+        totalPages: Math.ceil(totalCount / limit),
+        hasNextPage,
+        hasPreviousPage: page > 1
+      }
+    });
+  } catch (error) {
+    console.error("Error fetching all courses:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
 export const getLessonsController = async (
   request: FastifyRequest,
   reply: FastifyReply
@@ -248,7 +615,7 @@ export const getLessonsController = async (
 
     // Fetch lessons along with the user's progress from Firebase
     const courseData = await getLessonsWithProgressFromFirebase(user.uid, courseId);
-    const { lessons, mergedFlashcards } = courseData;
+    const { lessons, mergedFlashcards, summary } = courseData;
 
 
     if (!lessons.length) {
@@ -259,11 +626,77 @@ export const getLessonsController = async (
       message: "Lessons retrieved successfully",
       lessons,
       mergedFlashcards,
+      summary,
     });
   } catch (error) {
     console.error("Error fetching lessons:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
+
+export const getCourseFilesController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { courseId } = request.params as { courseId: string };
+
+    if (!courseId) {
+      return reply.status(400).send({ error: "Missing courseId parameter" });
+    }
+
+    console.log(`📁 Fetching uploaded files for Course: ${courseId} (User: ${user.uid})`);
+
+    const uploadedFiles = await getCourseUploadedFiles(courseId);
+
+    return reply.status(200).send({
+      message: "Uploaded files retrieved successfully",
+      uploadedFiles,
+    });
+  } catch (error) {
+    console.error("Error fetching uploaded files:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getCourseByIdController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { courseId } = request.params as { courseId: string };
+
+    if (!courseId) {
+      return reply.status(400).send({ error: "Missing courseId parameter" });
+    }
+
+    console.log(`📚 Fetching course details for Course: ${courseId} (User: ${user.uid})`);
+
+    const course = await getCourseById(courseId);
+
+    if (!course) {
+      return reply.status(404).send({ error: "Course not found" });
+    }
+
+    return reply.status(200).send({
+      course
+    });
+  } catch (error) {
+    console.error("Error fetching course:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+
 
 
