@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { processReviewService } from "../services/reviewService";
+import { gradeReview, generateFeedback } from "../services/reviewService";
 import { generateElevenLabsTtsAudioBuffer, generateTtsAudioBuffer } from "../services/textToSpeechService";
 import { v4 as uuidv4 } from "uuid";
 import { storeAudio } from "../services/audioCacheService";
@@ -18,7 +18,7 @@ export const reviewController = async (
       transcript: string;
       focusTerm: string;
       focusDefinition: string;
-      terms: Array<{ term: string; score: number }>;
+      terms: Array<{ term: string; definition?: string; score: number }>;
       attemptNumber: number;
       conversationHistory?: Array<{ role: "user" | "tutor"; message: string }>;
     };
@@ -32,12 +32,42 @@ export const reviewController = async (
       });
     }
 
-    // Process the review using GPT-based logic
-    const result = await processReviewService({ transcript, focusTerm, focusDefinition, terms, attemptNumber, conversationHistory });
-    if (!result) {
-      return reply.status(500).send({ error: "Failed to process review" });
+    // Get the current score for the focus term
+    const currentTerm = terms.find(t => t.term === focusTerm);
+    const currentScore = currentTerm?.score || 0;
+
+    // Step 1: Grade the user's response
+    const gradingResult = await gradeReview({
+      focusTerm,
+      focusDefinition,
+      conversationHistory: conversationHistory || [],
+      currentScore,
+    });
+
+    if (!gradingResult) {
+      return reply.status(500).send({ error: "Failed to grade review" });
     }
-    const { updatedTerms, feedbackMessage } = result;
+
+    // Step 2: Update the terms array with the new score
+    const updatedTerms = terms.map(t => 
+      t.term === focusTerm ? { ...t, score: gradingResult.score } : t
+    );
+
+    // Step 3: Generate feedback based on score and attempt number
+    const feedbackResult = await generateFeedback({
+      score: gradingResult.score,
+      attemptNumber,
+      focusTerm,
+      focusDefinition,
+      terms: updatedTerms,
+      conversationHistory: conversationHistory || [],
+    });
+
+    if (!feedbackResult) {
+      return reply.status(500).send({ error: "Failed to generate feedback" });
+    }
+
+    const feedbackMessage = feedbackResult.feedbackMessage;
 
     // Generate a unique session ID for this review session
     const sessionId = uuidv4();
