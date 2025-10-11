@@ -18,15 +18,16 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
         }
       
       // Optionally, you might also pass user email, name, etc. from the client body:
-      const { email, name, profilePicture } = request.body as {
+      const { email, name, profilePicture, timezone } = request.body as {
         email?: string;
         name?: string;
         profilePicture?: string;
+        timezone?: string;
       };
 
       const uid = user.uid;
   
-      await createFireStoreUser(uid, { email, name, profilePicture });
+      await createFireStoreUser(uid, { email, name, profilePicture, timezone });
   
       // Return success (could also return the user doc if you like)
       reply.code(200).send({ message: "User ensured/created successfully." });
@@ -73,19 +74,20 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
       }
   
       // Extract the fields from the request body.
-      // Only name and profilePicture are allowed for updates.
-      const { name, profilePicture } = request.body as {
+      // name, profilePicture, and timezone are allowed for updates.
+      const { name, profilePicture, timezone } = request.body as {
         name?: string;
         profilePicture?: string;
+        timezone?: string;
       };
   
       // Validate that at least one field is provided.
-      if (!name && !profilePicture) {
+      if (!name && !profilePicture && !timezone) {
         return reply.status(400).send({ error: "No update fields provided." });
       }
   
       // Update the Firestore user document using the service.
-      await updateFireStoreUser(user.uid, { name, profilePicture });
+      await updateFireStoreUser(user.uid, { name, profilePicture, timezone });
   
       reply.code(200).send({ message: "User profile updated successfully." });
     } catch (error) {

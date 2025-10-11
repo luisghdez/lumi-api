@@ -12,6 +12,7 @@ interface UserProfileData {
     email?: string;
     name?: string;
     profilePicture?: string;
+    timezone?: string;
   }
 
 export async function createFireStoreUser(uid: string, data: UserProfileData) {
@@ -27,6 +28,7 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
           emailLower: data.email?.toLowerCase() || "",
           nameLower: data.name?.toLowerCase() || "",
           profilePicture: data.profilePicture || "default",
+          timezone: data.timezone || "UTC", // Default to UTC if not provided
   
           // New fields for freemium control
           isPremium: false,
@@ -77,6 +79,9 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       }
       if (data.profilePicture) {
         updateData.profilePicture = data.profilePicture;
+      }
+      if (data.timezone) {
+        updateData.timezone = data.timezone;
       }
   
       await userRef.update(updateData);
