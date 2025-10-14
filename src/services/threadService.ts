@@ -358,7 +358,7 @@ export const createImageThread = async (
     const extractedText = await extractTextFromImage(imageBuffer);
     
     // Create a descriptive initial message for the image
-    const initialMessage = `[Image Analysis] ${extractedText}`;
+    const initialMessage = `${extractedText}`;
 
     const threadData = {
       initialMessage: initialMessage.trim(),
