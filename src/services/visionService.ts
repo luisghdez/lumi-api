@@ -40,5 +40,13 @@ export const extractTextFromImage = async (
     store: true,
   });
 
-  return response.choices[0].message.content || "No text detected.";
+  const extractedText = response.choices[0].message.content || "No text detected.";
+  
+  // console.log("📝 Extracted text length:", extractedText.length, "characters");
+  // console.log("📝 Extracted text content:");
+  // console.log("─".repeat(80));
+  // console.log(extractedText);
+  // console.log("─".repeat(80));
+
+  return extractedText;
 };
