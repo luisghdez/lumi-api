@@ -15,6 +15,7 @@ import ragRoutes from './routes/ragRoutes';
 import notiRoutes from './routes/notifRoutes';
 import cronRoutes from './routes/cronRoutes';
 import AASARoutes from './routes/AASARoutes';
+import podcastRoutes from './routes/podcastRoutes';
 
 
 const fastify = Fastify({ logger: true });
@@ -37,6 +38,8 @@ fastify.register(ragRoutes);
 fastify.register(notiRoutes)
 fastify.register(cronRoutes);
 fastify.register(AASARoutes);
+fastify.register(podcastRoutes);
+
 
 // Health check route
 fastify.get("/", async () => {
