@@ -1,6 +1,6 @@
 import { db } from "../config/firebaseConfig";
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createFullPodcast, handlePodcastInterrupt, handleEphemeralPodcastInterrupt } from "../services/podcastService";
+import { createFullPodcast, handleEphemeralPodcastInterrupt } from "../services/podcastService";
 import fs from "fs";
 import os from "os";
 import path from "path";
@@ -9,6 +9,7 @@ import { pipeline } from "stream";
 import { promisify } from "util";
 import { transcribeUserAudioQuestion } from "../services/podcast_transcribe";
 
+const pump = promisify(pipeline);
 
 /* --------------------------------------------------------
    Helper: Build fallback text content from Firestore
@@ -50,7 +51,8 @@ async function buildCourseTextFromFirestore(courseId: string): Promise<string | 
 }
 
 /* --------------------------------------------------------
-   1️⃣ Create Podcast
+   1️⃣ Create Podcast (ENHANCED)
+   Now generates topic-based segments with real-world examples
 -------------------------------------------------------- */
 export const createPodcastController = async (request: FastifyRequest, reply: FastifyReply) => {
   try {
@@ -65,9 +67,12 @@ export const createPodcastController = async (request: FastifyRequest, reply: Fa
 
     if (!courseId) return reply.status(400).send({ error: "Missing courseId" });
 
-    // Fallback content
+    console.log(`\n🎧 Creating podcast for course: ${courseId}`);
+
+    // Fallback content from Firestore if not provided
     let courseText = (content || "").trim();
     if (!courseText) {
+      console.log("📚 No content provided, building from Firestore...");
       const fallback = await buildCourseTextFromFirestore(courseId);
       if (!fallback) {
         return reply.status(400).send({
@@ -75,12 +80,22 @@ export const createPodcastController = async (request: FastifyRequest, reply: Fa
         });
       }
       courseText = fallback;
+      console.log(`✅ Built ${courseText.length} characters of content from course data`);
     }
 
     const safeTitle = (title && title.trim()) || "Course Podcast";
+
+    // 🎙️ Generate enhanced podcast with topic-based segments
     const podcast = await createFullPodcast(courseText, courseId, safeTitle);
 
-    return reply.status(201).send({ message: "Podcast created successfully", podcast });
+    console.log(`\n✅ Podcast created successfully!`);
+    console.log(`   📊 Total segments: ${podcast.segments.length}`);
+    console.log(`   📚 Topics covered: ${podcast.topics?.join(", ")}`);
+
+    return reply.status(201).send({ 
+      message: "Podcast created successfully", 
+      podcast 
+    });
   } catch (err) {
     console.error("❌ Podcast generation failed:", err);
     return reply.status(500).send({ error: (err as Error).message });
@@ -88,36 +103,7 @@ export const createPodcastController = async (request: FastifyRequest, reply: Fa
 };
 
 /* --------------------------------------------------------
-   2️⃣ Handle Interrupts
--------------------------------------------------------- */
-export const podcastInterruptController = async (request: FastifyRequest, reply: FastifyReply) => {
-  try {
-    const user = (request as any).user;
-    if (!user?.uid) return reply.status(401).send({ error: "Unauthorized" });
-
-    const body = request.body as {
-      courseId: string;
-      segmentId: string;
-      question?: string;
-      userQuestion?: string;
-    };
-
-    const { courseId, segmentId } = body;
-    const question = (body.question || body.userQuestion || "").trim();
-
-    if (!courseId || !segmentId || !question)
-      return reply.status(400).send({ error: "Missing courseId, segmentId, or question" });
-
-    const result = await handlePodcastInterrupt(courseId, segmentId, question);
-    return reply.status(200).send({ message: "Interrupt merged successfully", result });
-  } catch (err) {
-    console.error("❌ Podcast interrupt failed:", err);
-    return reply.status(500).send({ error: (err as Error).message });
-  }
-};
-
-/* --------------------------------------------------------
-   3️⃣ Check Podcast Exists
+   2️⃣ Check Podcast Exists
 -------------------------------------------------------- */
 export const checkPodcastExistsController = async (
   request: FastifyRequest<{ Params: { courseId: string } }>,
@@ -135,7 +121,7 @@ export const checkPodcastExistsController = async (
 };
 
 /* --------------------------------------------------------
-   4️⃣ Get Metadata
+   3️⃣ Get Metadata
 -------------------------------------------------------- */
 export const getPodcastMetadataController = async (
   request: FastifyRequest<{ Params: { courseId: string } }>,
@@ -159,7 +145,7 @@ export const getPodcastMetadataController = async (
 };
 
 /* --------------------------------------------------------
-   5️⃣ Get Segments + Dialogue
+   4️⃣ Get Segments + Dialogue
 -------------------------------------------------------- */
 export const getPodcastSegmentsController = async (
   request: FastifyRequest<{ Params: { courseId: string } }>,
@@ -180,7 +166,11 @@ export const getPodcastSegmentsController = async (
       segSnap.docs.map(async (seg) => {
         const dialogueSnap = await seg.ref.collection("dialogue").orderBy("order").get();
         const dialogue = dialogueSnap.docs.map((d) => ({ id: d.id, ...d.data() }));
-        return { id: seg.id, ...seg.data(), dialogue };
+        return { 
+          id: seg.id, 
+          ...seg.data(), 
+          dialogue 
+        };
       })
     );
 
@@ -192,7 +182,7 @@ export const getPodcastSegmentsController = async (
 };
 
 /* --------------------------------------------------------
-   6️⃣ Get Single Segment
+   5️⃣ Get Single Segment
 -------------------------------------------------------- */
 export const getPodcastSegmentController = async (
   request: FastifyRequest<{ Params: { courseId: string; segmentId: string } }>,
@@ -213,7 +203,12 @@ export const getPodcastSegmentController = async (
 
     const dialogueSnap = await segRef.collection("dialogue").orderBy("order").get();
     const dialogue = dialogueSnap.docs.map((d) => ({ id: d.id, ...d.data() }));
-    return reply.send({ id: segDoc.id, ...segDoc.data(), dialogue });
+    
+    return reply.send({ 
+      id: segDoc.id, 
+      ...segDoc.data(), 
+      dialogue 
+    });
   } catch (err) {
     console.error("Error getting single segment:", err);
     return reply.status(500).send({ error: "Internal Server Error" });
@@ -221,7 +216,7 @@ export const getPodcastSegmentController = async (
 };
 
 /* --------------------------------------------------------
-   7️⃣ Get Interruptions
+   6️⃣ Get Interruptions (if any were saved)
 -------------------------------------------------------- */
 export const getPodcastInterruptionsController = async (
   request: FastifyRequest<{ Params: { courseId: string } }>,
@@ -246,53 +241,96 @@ export const getPodcastInterruptionsController = async (
   }
 };
 
-const pump = promisify(pipeline);
-
-
+/* --------------------------------------------------------
+   7️⃣ Transcribe Audio Question (ENHANCED & EPHEMERAL)
+   
+   ✅ User questions are NOT saved to Firestore
+   ✅ Responses are temporary and play once
+   ✅ Enhanced with realistic call-in handling
+   ✅ Backward compatible API response
+-------------------------------------------------------- */
 export const transcribeAudioQuestionController = async (request: any, reply: any) => {
   try {
+    // 1️⃣ Get uploaded audio file
     const mp = await request.file();
-    if (!mp) return reply.status(400).send({ error: "No audio file uploaded" });
+    if (!mp) {
+      return reply.status(400).send({ error: "No audio file uploaded" });
+    }
 
+    // 2️⃣ Extract form fields
     const fields = mp.fields || {};
     const courseId = (fields?.courseId?.value as string) || "unknown";
     const segmentId = (fields?.segmentId?.value as string) || "1";
 
-    // Save temp copy
+    console.log(`\n📞 Processing ephemeral call-in...`);
+    console.log(`   📚 Course: ${courseId}`);
+    console.log(`   📑 Segment: ${segmentId}`);
+
+    // 3️⃣ Save audio to temp file for transcription
     const tmpPath = path.join(os.tmpdir(), `${nanoid()}_${mp.filename}`);
     await pump(mp.file, fs.createWriteStream(tmpPath));
 
-    // Transcribe
-    console.log("🎧 Transcribing audio question...");
+    // 4️⃣ Transcribe user's audio question
+    console.log("🎧 Transcribing audio...");
+    const startTranscribe = Date.now();
+    
     const userQuestion = await transcribeUserAudioQuestion(
       fs.createReadStream(tmpPath),
       mp.filename
     );
-    console.log(`📝 Transcript: ${userQuestion}`);
+    
+    console.log(`✅ Transcribed in ${Date.now() - startTranscribe}ms`);
+    console.log(`📝 User asked: "${userQuestion}"`);
 
-    // Clean up
-    fs.unlink(tmpPath, () => {});
+    // 5️⃣ Clean up temp file immediately (don't wait)
+    fs.unlink(tmpPath, (err) => {
+      if (err) console.warn("⚠️ Failed to delete temp file:", err);
+    });
 
-    // Generate ephemeral response (nothing saved to Firestore)
-    console.log("🤖 Generating ephemeral response...");
+    // 6️⃣ Generate EPHEMERAL response (NOT SAVED to Firestore)
+    // This now uses the enhanced realistic call-in handling
+    console.log("🤖 Generating realistic host response...");
+    const startResponse = Date.now();
+
     const result = await handleEphemeralPodcastInterrupt(
       courseId,
       segmentId,
       userQuestion
     );
 
+    console.log(`✅ Response generated in ${Date.now() - startResponse}ms`);
+    console.log(`🎤 ${result.speaker} responding:`);
+    console.log(`   💬 "${result.acknowledgment}"`);
+
+    // 7️⃣ Return BACKWARD COMPATIBLE response
+    // Frontend will work exactly as before, but with enhanced responses
     return reply.status(200).send({
       message: "Ephemeral call-in processed",
       text: userQuestion,
-      hostResponse: result.aiResponse,
-      hostAudioUrl: result.audioUrl,
-      reaction: result.reaction,
-      answer: result.answer,
-      transition: result.transition,
-      speaker: result.speaker,
+      
+      // ✅ EXISTING FIELDS (backward compatible)
+      hostResponse: result.fullResponse,  // Full combined response
+      hostAudioUrl: result.audioUrl,      // Audio URL to play
+      speaker: result.speaker,            // Which host responded
+      
+      // ✅ DEPRECATED but kept for compatibility
+      reaction: result.acknowledgment,    // Maps to acknowledgment
+      answer: result.answer,              // Just the answer part
+      transition: result.transition,      // Just the transition part
+      
+      // 🆕 NEW ENHANCED FIELDS (optional for frontend to use)
+      acknowledgment: result.acknowledgment,         // "Oh! We've got a caller!"
+      questionProcessing: result.questionProcessing, // "So you're asking about..."
+      segmentTopic: result.segmentTopic,             // Current topic being discussed
     });
+
   } catch (err: any) {
     console.error("❌ Ephemeral call-in failed:", err);
-    return reply.status(500).send({ error: err.message || "Call-in failed" });
+    console.error(err.stack);
+    
+    return reply.status(500).send({ 
+      error: err.message || "Call-in failed",
+      details: process.env.NODE_ENV === "development" ? err.stack : undefined
+    });
   }
 };

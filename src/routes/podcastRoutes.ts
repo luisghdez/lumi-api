@@ -3,7 +3,7 @@ import { authenticateUser } from "../middleware/authUser";
 
 import {
   createPodcastController,
-  podcastInterruptController,
+  // podcastInterruptController,
   checkPodcastExistsController,
   getPodcastMetadataController,
   getPodcastSegmentsController,
@@ -22,12 +22,12 @@ async function podcastRoutes(fastify: FastifyInstance) {
   });
 
   // ☎️ Handle podcast interrupt (user question)
-  fastify.route({
-    method: "POST",
-    url: "/podcasts/interrupt",
-    preHandler: authenticateUser,
-    handler: podcastInterruptController,
-  });
+  // fastify.route({
+  //   method: "POST",
+  //   url: "/podcasts/interrupt",
+  //   preHandler: authenticateUser,
+  //   handler: podcastInterruptController,
+  // });
 
   // 🧠 Check if podcast exists
   fastify.route({
