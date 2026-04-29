@@ -12,6 +12,8 @@ interface UserProfileData {
     email?: string;
     name?: string;
     profilePicture?: string;
+    timezone?: string;
+    hasCompletedOnboarding?: boolean;
   }
 
 export async function createFireStoreUser(uid: string, data: UserProfileData) {
@@ -77,6 +79,12 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       }
       if (data.profilePicture) {
         updateData.profilePicture = data.profilePicture;
+      }
+      if (data.timezone) {
+        updateData.timezone = data.timezone;
+      }
+      if (data.hasCompletedOnboarding !== undefined) {
+        updateData.hasCompletedOnboarding = data.hasCompletedOnboarding;
       }
   
       await userRef.update(updateData);
