@@ -356,6 +356,46 @@ export async function getVideoFeed(
   };
 }
 
+export async function getUserVideos(
+  profileUserId: string,
+  viewerId: string,
+  options: { cursor?: string; limit?: number }
+): Promise<{ videos: VideoResponse[]; nextCursor: string | null }> {
+  const limit = normalizeLimit(options.limit);
+  const cursor = decodeCursor(options.cursor);
+  const documentId = admin.firestore.FieldPath.documentId();
+  const isOwner = profileUserId === viewerId;
+
+  let query: FirebaseFirestore.Query = db
+    .collection(VIDEOS_COLLECTION)
+    .where("ownerId", "==", profileUserId)
+    .where("status", "==", "ready");
+
+  if (!isOwner) {
+    query = query.where("visibility", "==", "public");
+  }
+
+  query = query
+    .orderBy("createdAt", "desc")
+    .orderBy(documentId, "desc")
+    .limit(limit + 1);
+
+  if (cursor) {
+    query = query.startAfter(cursor.createdAt, cursor.id);
+  }
+
+  const snapshot = await query.get();
+  const docs = snapshot.docs.slice(0, limit);
+  const videos = await Promise.all(docs.map((doc) => serializeVideo(doc, viewerId)));
+  const hasNextPage = snapshot.docs.length > limit;
+  const lastDoc = docs[docs.length - 1];
+
+  return {
+    videos,
+    nextCursor: hasNextPage && lastDoc ? encodeCursor(lastDoc.get("createdAt"), lastDoc.id) : null,
+  };
+}
+
 export async function deleteVideo(videoId: string, ownerId: string): Promise<void> {
   const videoRef = db.collection(VIDEOS_COLLECTION).doc(videoId);
   const videoDoc = await videoRef.get();
