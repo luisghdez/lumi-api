@@ -29,6 +29,8 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
           emailLower: data.email?.toLowerCase() || "",
           nameLower: data.name?.toLowerCase() || "",
           profilePicture: data.profilePicture || "default",
+          timezone: data.timezone || "",
+          hasCompletedOnboarding: data.hasCompletedOnboarding ?? false,
   
           // New fields for freemium control
           isPremium: false,
