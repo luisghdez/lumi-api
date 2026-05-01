@@ -27,7 +27,12 @@ export function buildVideoStoragePath(userId: string, videoId: string, mimeType:
   return `videos/${userId}/${videoId}/original.${extension}`;
 }
 
-export async function createSignedVideoUploadUrl(
+export function buildVideoThumbnailStoragePath(userId: string, videoId: string, mimeType: string): string {
+  const extension = getExtensionFromMimeType(mimeType);
+  return `videos/${userId}/${videoId}/thumbnail.${extension}`;
+}
+
+export async function createSignedStorageUploadUrl(
   storagePath: string,
   mimeType: string,
   ttlMs: number = DEFAULT_UPLOAD_URL_TTL_MS
@@ -50,7 +55,23 @@ export async function createSignedVideoUploadUrl(
   };
 }
 
-export async function createSignedVideoPlaybackUrl(
+export async function createSignedVideoUploadUrl(
+  storagePath: string,
+  mimeType: string,
+  ttlMs: number = DEFAULT_UPLOAD_URL_TTL_MS
+): Promise<SignedUploadTarget> {
+  return createSignedStorageUploadUrl(storagePath, mimeType, ttlMs);
+}
+
+export async function createSignedVideoThumbnailUploadUrl(
+  storagePath: string,
+  mimeType: string,
+  ttlMs: number = DEFAULT_UPLOAD_URL_TTL_MS
+): Promise<SignedUploadTarget> {
+  return createSignedStorageUploadUrl(storagePath, mimeType, ttlMs);
+}
+
+export async function createSignedStorageReadUrl(
   storagePath: string,
   ttlMs: number = DEFAULT_PLAYBACK_URL_TTL_MS
 ): Promise<string> {
@@ -63,6 +84,13 @@ export async function createSignedVideoPlaybackUrl(
   });
 
   return playbackUrl;
+}
+
+export async function createSignedVideoPlaybackUrl(
+  storagePath: string,
+  ttlMs: number = DEFAULT_PLAYBACK_URL_TTL_MS
+): Promise<string> {
+  return createSignedStorageReadUrl(storagePath, ttlMs);
 }
 
 export async function getStoredVideoMetadata(storagePath: string): Promise<StoredVideoMetadata | null> {

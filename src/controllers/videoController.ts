@@ -41,9 +41,11 @@ export async function createVideoController(request: FastifyRequest, reply: Fast
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    const { caption, mimeType, visibility } = request.body as {
+    const { caption, mimeType, subject, thumbnailMimeType, visibility } = request.body as {
       caption?: string;
       mimeType?: string;
+      subject?: string;
+      thumbnailMimeType?: string;
       visibility?: VideoVisibility;
     };
 
@@ -54,6 +56,8 @@ export async function createVideoController(request: FastifyRequest, reply: Fast
     const result = await createVideoUpload(userId, {
       caption,
       mimeType,
+      subject,
+      thumbnailMimeType,
       visibility,
     });
 

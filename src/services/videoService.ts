@@ -1,7 +1,10 @@
 import { admin, db } from "../config/firebaseConfig";
 import {
+  buildVideoThumbnailStoragePath,
   buildVideoStoragePath,
+  createSignedStorageReadUrl,
   createSignedVideoPlaybackUrl,
+  createSignedVideoThumbnailUploadUrl,
   createSignedVideoUploadUrl,
   deleteStoredVideo,
   getStoredVideoMetadata,
@@ -14,6 +17,8 @@ export type VideoStatus = "uploading" | "processing" | "ready" | "failed" | "del
 export interface CreateVideoInput {
   caption?: string;
   mimeType: string;
+  subject?: string;
+  thumbnailMimeType?: string;
   visibility?: VideoVisibility;
 }
 
@@ -39,9 +44,11 @@ export interface VideoResponse {
   ownerName: string;
   ownerProfilePicture: string;
   caption: string;
+  subject: string;
   storagePath: string;
   playbackUrl: string | null;
   thumbnailUrl: string | null;
+  thumbnailStoragePath: string | null;
   mimeType: string;
   sizeBytes: number | null;
   durationMs: number | null;
@@ -59,9 +66,11 @@ interface VideoDocument {
   ownerName: string;
   ownerProfilePicture: string;
   caption: string;
+  subject: string;
   storagePath: string;
   playbackUrl: string | null;
   thumbnailUrl: string | null;
+  thumbnailStoragePath: string | null;
   mimeType: string;
   sizeBytes: number | null;
   durationMs: number | null;
@@ -85,6 +94,7 @@ class ServiceError extends Error {
 
 const VIDEOS_COLLECTION = "videos";
 const MAX_CAPTION_LENGTH = 2200;
+const MAX_SUBJECT_LENGTH = 120;
 const MAX_COMMENT_LENGTH = 500;
 const DEFAULT_PAGE_LIMIT = 20;
 const MAX_PAGE_LIMIT = 50;
@@ -92,6 +102,13 @@ const MAX_PAGE_LIMIT = 50;
 function assertVideoMimeType(mimeType: string): void {
   if (!mimeType || !mimeType.toLowerCase().startsWith("video/")) {
     throw new ServiceError(400, "mimeType must be a video MIME type");
+  }
+}
+
+function assertThumbnailMimeType(mimeType?: string): void {
+  if (!mimeType) return;
+  if (!mimeType.toLowerCase().startsWith("image/")) {
+    throw new ServiceError(400, "thumbnailMimeType must be an image MIME type");
   }
 }
 
@@ -107,6 +124,14 @@ function normalizeCaption(caption?: string): string {
   const normalized = (caption || "").trim();
   if (normalized.length > MAX_CAPTION_LENGTH) {
     throw new ServiceError(400, `caption must be ${MAX_CAPTION_LENGTH} characters or fewer`);
+  }
+  return normalized;
+}
+
+function normalizeSubject(subject?: string): string {
+  const normalized = (subject || "").trim();
+  if (normalized.length > MAX_SUBJECT_LENGTH) {
+    throw new ServiceError(400, `subject must be ${MAX_SUBJECT_LENGTH} characters or fewer`);
   }
   return normalized;
 }
@@ -207,15 +232,22 @@ async function serializeVideo(
       ? await createSignedVideoPlaybackUrl(data.storagePath)
       : null;
 
+  const thumbnailUrl =
+    data.status === "ready" && data.thumbnailStoragePath
+      ? await createSignedStorageReadUrl(data.thumbnailStoragePath)
+      : data.thumbnailUrl || null;
+
   return {
     id: doc.id,
     ownerId: data.ownerId,
     ownerName: data.ownerName,
     ownerProfilePicture: data.ownerProfilePicture,
     caption: data.caption,
+    subject: data.subject || "",
     storagePath: data.storagePath,
     playbackUrl,
-    thumbnailUrl: data.thumbnailUrl || null,
+    thumbnailUrl,
+    thumbnailStoragePath: data.thumbnailStoragePath || null,
     mimeType: data.mimeType,
     sizeBytes: data.sizeBytes ?? null,
     durationMs: data.durationMs ?? null,
@@ -232,23 +264,33 @@ async function serializeVideo(
 export async function createVideoUpload(
   ownerId: string,
   input: CreateVideoInput
-): Promise<{ video: VideoResponse; upload: SignedUploadTarget }> {
+): Promise<{ video: VideoResponse; upload: SignedUploadTarget; thumbnailUpload: SignedUploadTarget | null }> {
   assertVideoMimeType(input.mimeType);
+  assertThumbnailMimeType(input.thumbnailMimeType);
 
   const userDoc = await getUserSnapshot(ownerId);
   const userData = userDoc.data() || {};
   const videoRef = db.collection(VIDEOS_COLLECTION).doc();
   const storagePath = buildVideoStoragePath(ownerId, videoRef.id, input.mimeType);
   const upload = await createSignedVideoUploadUrl(storagePath, input.mimeType);
+  const thumbnailStoragePath = input.thumbnailMimeType
+    ? buildVideoThumbnailStoragePath(ownerId, videoRef.id, input.thumbnailMimeType)
+    : null;
+  const thumbnailUpload =
+    input.thumbnailMimeType && thumbnailStoragePath
+      ? await createSignedVideoThumbnailUploadUrl(thumbnailStoragePath, input.thumbnailMimeType)
+      : null;
 
   const video: VideoDocument = {
     ownerId,
     ownerName: userData.name || "Unknown User",
     ownerProfilePicture: userData.profilePicture || "default",
     caption: normalizeCaption(input.caption),
+    subject: normalizeSubject(input.subject),
     storagePath,
     playbackUrl: null,
     thumbnailUrl: null,
+    thumbnailStoragePath,
     mimeType: input.mimeType,
     sizeBytes: null,
     durationMs: null,
@@ -266,6 +308,7 @@ export async function createVideoUpload(
   return {
     video: await serializeVideo(createdDoc, ownerId),
     upload,
+    thumbnailUpload,
   };
 }
 
@@ -294,12 +337,19 @@ export async function completeVideoUpload(
     throw new ServiceError(400, "Uploaded video file was not found in storage");
   }
 
+  if (video.thumbnailStoragePath) {
+    const storedThumbnailMetadata = await getStoredVideoMetadata(video.thumbnailStoragePath);
+    if (!storedThumbnailMetadata) {
+      throw new ServiceError(400, "Uploaded thumbnail file was not found in storage");
+    }
+  }
+
   await videoRef.update({
     status: "ready",
     sizeBytes: storedMetadata.sizeBytes ?? video.sizeBytes ?? null,
     mimeType: storedMetadata.contentType || video.mimeType,
     durationMs: typeof input.durationMs === "number" ? input.durationMs : video.durationMs ?? null,
-    thumbnailUrl: input.thumbnailUrl || video.thumbnailUrl || null,
+    thumbnailUrl: video.thumbnailStoragePath ? null : input.thumbnailUrl || video.thumbnailUrl || null,
     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
   });
 
@@ -417,6 +467,9 @@ export async function deleteVideo(videoId: string, ownerId: string): Promise<voi
   });
 
   await deleteStoredVideo(video.storagePath);
+  if (video.thumbnailStoragePath) {
+    await deleteStoredVideo(video.thumbnailStoragePath);
+  }
 }
 
 export async function likeVideo(videoId: string, userId: string): Promise<{ liked: boolean; likeCount: number }> {
