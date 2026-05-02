@@ -271,10 +271,112 @@ Fetch a user by ID.
 
 ---
 
+## 📌 5. Short Video Feed
+
+All video routes require Firebase authentication. Videos use a direct-to-Firebase Storage flow: create metadata first, upload the binary to the returned signed URL, then mark the upload complete.
+
+### ➡️ POST `/videos`
+Create a video document and receive a signed upload URL.
+
+#### 📥 Request
+```json
+{
+  "caption": "Study tip in 30 seconds",
+  "mimeType": "video/mp4",
+  "visibility": "public"
+}
+```
+
+#### 📤 Response
+```json
+{
+  "video": {
+    "id": "videoId123",
+    "caption": "Study tip in 30 seconds",
+    "status": "uploading",
+    "visibility": "public",
+    "likeCount": 0,
+    "commentCount": 0,
+    "playbackUrl": null
+  },
+  "upload": {
+    "uploadUrl": "https://storage.googleapis.com/...",
+    "storagePath": "videos/userId123/videoId123/original.mp4",
+    "expiresAt": "2026-04-29T01:00:00.000Z"
+  }
+}
+```
+
+Upload the video file with `PUT` to `upload.uploadUrl` using the same `Content-Type` as `mimeType`.
+
+### ➡️ PATCH `/videos/:videoId/complete`
+Mark an uploaded video as ready after the Storage upload finishes.
+
+#### 📥 Request
+```json
+{
+  "durationMs": 18000,
+  "thumbnailUrl": "https://example.com/thumb.jpg"
+}
+```
+
+### ➡️ GET `/videos/feed?cursor=&limit=`
+Retrieve public ready videos ordered by newest first.
+
+#### 📤 Response
+```json
+{
+  "videos": [
+    {
+      "id": "videoId123",
+      "ownerId": "userId123",
+      "caption": "Study tip in 30 seconds",
+      "playbackUrl": "https://storage.googleapis.com/...",
+      "thumbnailUrl": "https://example.com/thumb.jpg",
+      "likeCount": 4,
+      "commentCount": 2,
+      "likedByMe": false,
+      "createdAt": "2026-04-29T01:00:00.000Z"
+    }
+  ],
+  "nextCursor": null
+}
+```
+
+### ➡️ GET `/videos/:videoId`
+Fetch a single video, including a short-lived playback URL and `likedByMe`.
+
+### ➡️ DELETE `/videos/:videoId`
+Delete a video owned by the authenticated user.
+
+### ➡️ POST `/videos/:videoId/like`
+Like a video. Safe to call multiple times.
+
+### ➡️ DELETE `/videos/:videoId/like`
+Unlike a video. Safe to call multiple times.
+
+### ➡️ GET `/videos/:videoId/comments?cursor=&limit=`
+Retrieve paginated comments for a video.
+
+### ➡️ POST `/videos/:videoId/comments`
+Create a comment.
+
+#### 📥 Request
+```json
+{
+  "text": "This helped a lot!"
+}
+```
+
+### ➡️ DELETE `/videos/:videoId/comments/:commentId`
+Delete a comment when the authenticated user is the comment author or video owner.
 
 ---
 
-## 📌 4. Submit Review for AI Feedback
+
+---
+
+## 📌 6. Submit Review for AI Feedback
 ### ➡️ POST `/review`
 Process user explanation of terms and get guided AI feedback.
 
@@ -306,7 +408,7 @@ Process user explanation of terms and get guided AI feedback.
 
 ---
 
-## 📌 5. Get AI Feedback Audio
+## 📌 7. Get AI Feedback Audio
 ### ➡️ GET `/review/audio?sessionId=abc123-session-id`
 Retrieve the TTS audio for the AI feedback associated with a previous review session.
 
@@ -334,5 +436,15 @@ Retrieve the TTS audio for the AI feedback associated with a previous review ses
 | PATCH  | `/friend-requests/:id` | Accept a friend request | ✅ Yes |
 | GET    | `/friends` | Get list of friends | ✅ Yes |
 | GET    | `/users/:userId` | Get user profile by ID | ✅ Yes |
+| POST   | `/videos` | Create video metadata and signed upload URL | ✅ Yes |
+| PATCH  | `/videos/:videoId/complete` | Mark an uploaded video as ready | ✅ Yes |
+| GET    | `/videos/feed` | Get public video feed | ✅ Yes |
+| GET    | `/videos/:videoId` | Get a video by ID | ✅ Yes |
+| DELETE | `/videos/:videoId` | Delete an owned video | ✅ Yes |
+| POST   | `/videos/:videoId/like` | Like a video | ✅ Yes |
+| DELETE | `/videos/:videoId/like` | Unlike a video | ✅ Yes |
+| GET    | `/videos/:videoId/comments` | Get video comments | ✅ Yes |
+| POST   | `/videos/:videoId/comments` | Create a video comment | ✅ Yes |
+| DELETE | `/videos/:videoId/comments/:commentId` | Delete a video comment | ✅ Yes |
 | POST   | `/review`                            | Submit transcript for review + feedback     | ✅ Yes |
 | GET    | `/review/audio?sessionId=...`        | Retrieve audio feedback (MP3)               | ✅ Yes |

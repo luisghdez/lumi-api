@@ -2,6 +2,7 @@ import { FastifyRequest, FastifyReply } from "fastify";
 import { createFireStoreUser, deleteFireStoreUser, getUserProfile, updateFireStoreUser } from "../services/userService";
 import { checkStreakOnLogin } from "../services/streakService";
 import { updateFcmTokenForUser } from "../services/userService";
+import { getUserVideos } from "../services/videoService";
 
 interface CreateUserRequestBody {
   email: string;
@@ -134,5 +135,39 @@ export async function updateFcmTokenController(request: FastifyRequest, reply: F
   } catch (error) {
     console.error("Error updating FCM token:", error);
     reply.code(500).send({ error: "Failed to update FCM token" });
+  }
+}
+
+export async function getUserVideosController(
+  request: FastifyRequest,
+  reply: FastifyReply
+) {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { userId } = request.params as { userId: string };
+    if (!userId) {
+      return reply.status(400).send({ error: "Missing userId parameter" });
+    }
+
+    const { cursor, limit } = request.query as {
+      cursor?: string;
+      limit?: string;
+    };
+
+    const result = await getUserVideos(userId, user.uid, {
+      cursor,
+      limit: limit ? Number(limit) : undefined,
+    });
+
+    return reply.status(200).send(result);
+  } catch (error) {
+    console.error("Error fetching user videos:", error);
+    const statusCode = typeof (error as any)?.statusCode === "number" ? (error as any).statusCode : 500;
+    const message = error instanceof Error ? error.message : "Failed to fetch user videos";
+    return reply.status(statusCode).send({ error: message });
   }
 }
