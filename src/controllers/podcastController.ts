@@ -8,6 +8,8 @@ import { nanoid } from "nanoid";
 import { pipeline } from "stream";
 import { promisify } from "util";
 import { transcribeUserAudioQuestion } from "../services/podcast_transcribe";
+import { createPodcastRealtimeSession } from "../services/podcastRealtimeService";
+
 
 const pump = promisify(pipeline);
 
@@ -334,3 +336,34 @@ export const transcribeAudioQuestionController = async (request: any, reply: any
     });
   }
 };
+
+
+
+interface RealtimeSessionBody {
+  courseId: string;
+  segmentId: string;
+}
+
+export async function createPodcastRealtimeSessionController(
+  request: FastifyRequest<{ Body: RealtimeSessionBody }>,
+  reply: FastifyReply
+) {
+  try {
+    const { courseId, segmentId } = request.body;
+
+    if (!courseId || !segmentId) {
+      return reply.status(400).send({
+        error: "Missing courseId or segmentId",
+      });
+    }
+
+    const session = await createPodcastRealtimeSession(courseId, segmentId);
+
+    return reply.send(session);
+  } catch (err: any) {
+    console.error("Realtime session error:", err);
+    return reply.status(500).send({
+      error: err.message ?? "Failed to create realtime session",
+    });
+  }
+}

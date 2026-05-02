@@ -10,6 +10,7 @@ import {
   getPodcastSegmentController,
   getPodcastInterruptionsController,
   transcribeAudioQuestionController, // ✅ include here directly
+  createPodcastRealtimeSessionController,
 } from "../controllers/podcastController";
 
 async function podcastRoutes(fastify: FastifyInstance) {
@@ -68,6 +69,14 @@ async function podcastRoutes(fastify: FastifyInstance) {
     preHandler: authenticateUser,
     handler: getPodcastInterruptionsController,
   });
+
+    fastify.route({
+    method: "POST",
+    url:     "/podcasts/realtime/session",
+    preHandler: authenticateUser,
+    handler: createPodcastRealtimeSessionController,
+  });
+
 
   // 🎤 NEW: Transcribe audio call-in (radio-style)
   fastify.route({
