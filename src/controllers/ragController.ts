@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { answerCourseQuestion, searchCourseContext } from "../services/ragService";
-import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread, createImageThread, saveImageThreadResponse } from "../services/threadService";
+import { createThread, getUserThreads, getThreadMessages, getThreadByCourseId, createMessageInThread, createImageThread, saveImageThreadResponse, addImageToThread, saveImageMessageResponse } from "../services/threadService";
 import { getCourseTitleById } from "../services/courseService";
 import { processGeneralMessage, processGeneralMessageWithHistory } from "../services/generalChatService";
 import OpenAI from "openai";
@@ -501,6 +501,129 @@ export const createImageThreadController = async (
     return;
   } catch (error: any) {
     console.error("Error in createImageThreadController:", error);
+    try {
+      if (reply.raw.headersSent) {
+        try {
+          reply.raw.write(`${JSON.stringify({ type: "error", error: "Internal Server Error" })}\n`);
+          reply.raw.end();
+          return;
+        } catch {}
+      }
+    } catch {}
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const addImageToThreadController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { threadId } = request.params as { threadId: string };
+    
+    if (!threadId) {
+      return reply.status(400).send({ error: "Missing threadId parameter" });
+    }
+
+    // Check if the request has a file upload
+    const data = await request.file();
+    if (!data) {
+      return reply.status(400).send({ error: "No image file provided" });
+    }
+
+    // Validate that it's an image file
+    if (!data.mimetype.startsWith('image/')) {
+      return reply.status(400).send({ error: "File must be an image" });
+    }
+
+    // Get the file buffer and metadata
+    const imageBuffer = await data.toBuffer();
+    const imageMimeType = data.mimetype;
+    const originalFileName = data.filename;
+
+    // Prepare streaming NDJSON response
+    reply.raw.writeHead(200, {
+      "Content-Type": "application/x-ndjson; charset=utf-8",
+      "Cache-Control": "no-cache, no-transform",
+      "Connection": "keep-alive",
+      "X-Accel-Buffering": "no",
+      "Transfer-Encoding": "chunked",
+    });
+    // @ts-ignore
+    if (typeof reply.raw.flushHeaders === "function") reply.raw.flushHeaders();
+
+    const writeObject = (obj: any) => {
+      try { reply.raw.write(`${JSON.stringify(obj)}\n`); } catch {}
+    };
+
+    try {
+      // Add the image to the existing thread
+      const result = await addImageToThread(
+        user.uid,
+        threadId,
+        imageBuffer,
+        imageMimeType,
+        originalFileName
+      );
+
+      writeObject({ type: "image_uploaded", threadId, userMessageId: result.userMessageId });
+
+      // Now stream the AI response generation
+      const openai = new OpenAI();
+      
+      // Build the message for AI processing
+      const messages = [
+        { 
+          role: "system", 
+          content: "You are a helpful AI assistant. Provide clear, concise, and helpful responses to user questions. Explain things in very simple terms like you're explaining to a 5 year old but do not mention you are explaining to a 5 year old." 
+        },
+        { 
+          role: "user", 
+          content: `I've analyzed this image and extracted the following text: "${result.extractedText}". Please provide insights, analysis, or answer any questions about this content.` 
+        }
+      ];
+
+      writeObject({ type: "start", role: "assistant" });
+
+      const stream = await openai.chat.completions.create({
+        model: "gpt-4.1-mini",
+        messages,
+        stream: true,
+      } as any);
+
+      let fullText = "";
+      for await (const chunk of stream as any) {
+        if (reply.raw.writableEnded) break;
+        const delta = chunk?.choices?.[0]?.delta?.content || "";
+        if (delta) {
+          fullText += delta;
+          writeObject({ type: "delta", delta });
+        }
+      }
+
+      // Save the final response to the database
+      const assistantMessage = await saveImageMessageResponse(
+        user.uid,
+        threadId,
+        fullText
+      );
+
+      writeObject({ type: "message", ...assistantMessage.message });
+      writeObject({ type: "done" });
+    } catch (persistErr: any) {
+      writeObject({ type: "error", error: "Failed to add image to thread", details: persistErr?.message || String(persistErr) });
+    } finally {
+      try { reply.raw.end(); } catch {}
+    }
+
+    return;
+  } catch (error: any) {
+    console.error("Error in addImageToThreadController:", error);
     try {
       if (reply.raw.headersSent) {
         try {

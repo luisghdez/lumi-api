@@ -19,7 +19,7 @@ const MAX_CHARS_PER_CHUNK = 1_200;       // ~300 tokens  (upper bound)
 const OVERLAP_SENTENCES   = 1;           // sentence overlap between chunks
 // 🚀 LEVEL 1 OPTIMIZATION: Increased embedding batch size from 100 to 200 for faster embedding generation
 const BATCH_SIZE          = 200;         // embedding batch size (OpenAI supports up to 2048)
-const COARSE_LLM_MAX      = 1_500;       // merge chunks for LLM prompts (< ~375 tokens)
+const COARSE_LLM_MAX      = 500;         // merge chunks for LLM prompts (~2000 chars max for better flashcard generation)
 // ===========================================================================
 
 const sentenceRegex = /[^.!?]+[.!?]+/g;
@@ -446,7 +446,10 @@ export async function embedAndStoreWithMetadataStreaming(
   }
   if (bufText.trim()) coarseChunks.push(bufText.trim());
 
-  console.log(`🚀 STREAMING: Returning ${coarseChunks.length} chunks for immediate content generation`);
+  console.log(`🚀 STREAMING: Returning ${coarseChunks.length} coarse chunks for immediate content generation`);
+  coarseChunks.forEach((chunk, i) => {
+    console.log(`  • Chunk ${i + 1}: ${chunk.length} chars (~${Math.ceil(chunk.length/4)} tokens)`);
+  });
 
   // 🚀 Start embedding generation in background (non-blocking)
   const embeddingPromise = generateAndStoreEmbeddings(courseId, allChunks);

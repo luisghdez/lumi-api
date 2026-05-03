@@ -29,7 +29,7 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
           emailLower: data.email?.toLowerCase() || "",
           nameLower: data.name?.toLowerCase() || "",
           profilePicture: data.profilePicture || "default",
-          timezone: data.timezone || "",
+          timezone: data.timezone || "UTC",
           hasCompletedOnboarding: data.hasCompletedOnboarding ?? false,
   
           // New fields for freemium control

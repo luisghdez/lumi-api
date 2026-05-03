@@ -450,3 +450,118 @@ export const saveImageThreadResponse = async (
     throw error;
   }
 };
+
+export const addImageToThread = async (
+  uid: string,
+  threadId: string,
+  imageBuffer: Buffer,
+  imageMimeType: string,
+  originalFileName?: string
+): Promise<{ extractedText: string; uploadedFile: any; userMessageId: string }> => {
+  try {
+    // Verify that the thread exists and belongs to the user
+    const threadRef = db
+      .collection("users")
+      .doc(uid)
+      .collection("threads")
+      .doc(threadId);
+    
+    const threadDoc = await threadRef.get();
+    if (!threadDoc.exists) {
+      throw new Error("Thread not found");
+    }
+
+    // Generate a unique file ID for the image
+    const fileId = uuidv4();
+    const fileName = originalFileName || `image_${Date.now()}.${imageMimeType.split('/')[1]}`;
+    
+    // Upload image to Firebase Storage
+    const uploadedFile = await uploadFileToFirebaseStorage(
+      imageBuffer,
+      fileId,
+      fileName,
+      imageMimeType,
+      "files"
+    );
+
+    // Extract text from the image using vision service
+    const extractedText = await extractTextFromImage(imageBuffer);
+    
+    // Create a descriptive message for the image
+    const imageMessage = `[Image Analysis] ${extractedText}`;
+
+    // Save the user's message with the image
+    const userMessageRef = await threadRef.collection("messages").add({
+      role: "user",
+      content: imageMessage.trim(),
+      timestamp: new Date(),
+      imageMimeType,
+      imageFile: {
+        fileId: uploadedFile.fileName,
+        fileUrl: uploadedFile.fileUrl,
+        originalName: uploadedFile.originalName,
+        mimeType: uploadedFile.mimeType,
+        size: uploadedFile.size
+      }
+    });
+
+    return {
+      extractedText,
+      uploadedFile,
+      userMessageId: userMessageRef.id
+    };
+  } catch (error) {
+    console.error("Error adding image to thread:", error);
+    throw error;
+  }
+};
+
+export const saveImageMessageResponse = async (
+  uid: string,
+  threadId: string,
+  fullResponse: string
+): Promise<{ messageId: string; message: ThreadMessage }> => {
+  try {
+    // Save the AI's response
+    const aiMessageRef = await db
+      .collection("users")
+      .doc(uid)
+      .collection("threads")
+      .doc(threadId)
+      .collection("messages")
+      .add({
+        role: "assistant",
+        content: fullResponse,
+        timestamp: new Date(),
+      });
+
+    // Update thread metadata
+    const threadRef = db
+      .collection("users")
+      .doc(uid)
+      .collection("threads")
+      .doc(threadId);
+
+    const threadDoc = await threadRef.get();
+    const currentData = threadDoc.data();
+    
+    await threadRef.update({
+      lastMessageAt: new Date(),
+      messageCount: (currentData?.messageCount || 0) + 2, // User message + AI response
+      updatedAt: new Date(),
+    });
+
+    return {
+      messageId: aiMessageRef.id,
+      message: {
+        messageId: aiMessageRef.id,
+        role: "assistant",
+        content: fullResponse,
+        timestamp: new Date(),
+      },
+    };
+  } catch (error) {
+    console.error("Error saving image message response:", error);
+    throw error;
+  }
+};

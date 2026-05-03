@@ -22,13 +22,14 @@ export const updateUserStreak = async (
     const userData = userSnap.data() || {};
     const currentStreak: number = userData.streakCount || 0;
     const lastCheckIn = userData.lastCheckIn as admin.firestore.Timestamp | undefined;
+    const userTimezone: string = userData.timezone || "UTC"; // Use user's timezone or fallback to UTC
 
     const now = new Date();
     let newStreakCount = 1;
     
     if (lastCheckIn) {
       const lastCheckInDate = lastCheckIn.toDate();
-      const dayDiff = calendarDayDiff(lastCheckInDate, now, "UTC"); // or user-specific TZ
+      const dayDiff = calendarDayDiff(lastCheckInDate, now, userTimezone);
     
       if (dayDiff === 0) {
         newStreakCount = currentStreak;      // Same calendar day
@@ -100,6 +101,7 @@ export async function checkStreakOnLogin(userData: any): Promise<any> {
     const userId = userData.id;
     const currentStreak = userData.streakCount || 0;
     const lastCheckIn = userData.lastCheckIn;
+    const userTimezone: string = userData.timezone || "UTC"; // Use user's timezone or fallback to UTC
 
     if (!lastCheckIn) {
       return { ...userData, streakLost: false };
@@ -111,10 +113,10 @@ export async function checkStreakOnLogin(userData: any): Promise<any> {
         : new Date(lastCheckIn);
 
     const now = new Date();
-    const dayDiff = calendarDayDiff(lastCheckInDate, now, "UTC");
+    const dayDiff = calendarDayDiff(lastCheckInDate, now, userTimezone);
 
-    if (dayDiff >= 1 && currentStreak > 0) {
-      // ❌ Reset streak and update lastCheckIn
+    if (dayDiff >= 2 && currentStreak > 0) {
+      // ❌ Reset streak only if 2+ days have passed (allowing next-day grace)
       await db.collection("users").doc(userId).update({
         streakCount: 0,
         lastCheckIn: admin.firestore.FieldValue.serverTimestamp(),

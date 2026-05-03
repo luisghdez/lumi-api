@@ -68,25 +68,25 @@ const courseSummarySchema = z.object({
 export async function openAiCourseContent(extractedText: string) {
   // Define the detailed instructional prompt including the content guidelines.
   const promptInstructions = `
-  Generate structured course content.
+  Generate comprehensive structured course content from the provided educational material.
   
   Rules:
-  - One flashcard per key concept.
-  - Definition must NOT include the term word.
+  - Each flashcard should cover ONE specific concept, term, fact, or idea.
+  - Definition must NOT include the term word itself.
   - For each flashcard, create 1 fill-in-the-blank and 1 multiple-choice question.
   - MCQs: 4 options (1 correct, 3 distractors).
   - Fill-in-the-blanks: 7 options (1 correct, 6 distractors).
-    Every math symbol or expression—no matter how small—must be enclosed within the $$ … $$ math delimiters; absolutely no other delimiters are allowed.
-    NEVER use \`\\(\` … \`\\)\`, \`\\[\` … \`\\]\`, single \`$\`, back‑ticks, or raw LaTeX without delimiters.  **Only** \`$$ … $$\`.
-    NEVER use Unicode math symbols (√, ∫, ½, …) – write them in LaTeX.
-    Write LaTeX commands **with a doubled back‑slash** (e.g. \`\\\\sqrt\`) so the frontend receives a single back‑slash after JSON escaping.
+  - Every math symbol or expression—no matter how small—must be enclosed within the $$ … $$ math delimiters; absolutely no other delimiters are allowed.
+  - NEVER use \`\\(\` … \`\\)\`, \`\\[\` … \`\\]\`, single \`$\`, back‑ticks, or raw LaTeX without delimiters.  **Only** \`$$ … $$\`.
+  - NEVER use Unicode math symbols (√, ∫, ½, …) – write them in LaTeX.
+  - Write LaTeX commands **with a doubled back‑slash** (e.g. \`\\\\sqrt\`) so the frontend receives a single back‑slash after JSON escaping.
 
   Content:
   `;
 
   try {
     const startTime = Date.now();
-    console.log(`⏱️ Starting OpenAI content generation (${Math.ceil(extractedText.length/1000)}k chars)`);
+    console.log(`⏱️ Starting OpenAI content generation (${extractedText.length} chars, ~${Math.ceil(extractedText.length/4)} tokens)`);
     
     const completion = await openai.beta.chat.completions.parse({
       model: "gpt-4.1-mini",
@@ -99,9 +99,11 @@ export async function openAiCourseContent(extractedText: string) {
     });
 
     const duration = Date.now() - startTime;
-    console.log(`✅ OpenAI content generation completed in ${duration}ms`);
-
     const courseContent = completion.choices[0].message.parsed;
+    
+    console.log(`✅ OpenAI content generation completed in ${duration}ms`);
+    console.log(`📊 Generated: ${courseContent?.flashcards?.length || 0} flashcards, ${courseContent?.multipleChoiceQuestions?.length || 0} MCQs, ${courseContent?.fillInTheBlankQuestions?.length || 0} FITBs`);
+    
     return courseContent;
   } catch (error) {
     console.error("Error generating course content:", error);
