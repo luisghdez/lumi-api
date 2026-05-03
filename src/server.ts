@@ -18,6 +18,7 @@ import cronRoutes from './routes/cronRoutes';
 import AASARoutes from './routes/AASARoutes';
 import videoRoutes from './routes/videoRoutes';
 import videoShareWebRoutes from './routes/videoShareWebRoutes';
+import podcastRoutes from './routes/podcastRoutes';
 
 
 const fastify = Fastify({ logger: true });
@@ -69,6 +70,7 @@ fastify.register(cronRoutes);
 fastify.register(AASARoutes);
 fastify.register(videoShareWebRoutes);
 fastify.register(videoRoutes);
+fastify.register(podcastRoutes);
 
 // Health check route
 fastify.get("/", async () => {
