@@ -1,5 +1,94 @@
 import { admin, db } from "../config/firebaseConfig";
 
+export class FriendServiceError extends Error {
+  readonly statusCode: number;
+
+  constructor(statusCode: number, message: string) {
+    super(message);
+    this.name = "FriendServiceError";
+    this.statusCode = statusCode;
+  }
+}
+
+/** True if there is an accepted friend request between the two users (or a === b). */
+export async function areUsersFriends(a: string, b: string): Promise<boolean> {
+  if (a === b) return true;
+  try {
+    const snapshot = await db
+      .collection("friendRequests")
+      .where("userIds", "array-contains", a)
+      .where("status", "==", "accepted")
+      .get();
+
+    for (const doc of snapshot.docs) {
+      const ids = doc.data()?.userIds as string[] | undefined;
+      if (Array.isArray(ids) && ids.includes(b)) return true;
+    }
+    return false;
+  } catch (error) {
+    console.error("Error checking friendship:", error);
+    throw error;
+  }
+}
+
+/**
+ * Remove an accepted friendship between `viewerId` and `friendUserId`.
+ * Deletes the `friendRequests` edge and decrements `friendCount` on both users (mirrors accept).
+ */
+export async function removeFriendship(viewerId: string, friendUserId: string): Promise<void> {
+  if (viewerId === friendUserId) {
+    throw new FriendServiceError(400, "Cannot unfriend yourself");
+  }
+
+  const friendUserSnap = await db.collection("users").doc(friendUserId).get();
+  if (!friendUserSnap.exists) {
+    throw new FriendServiceError(404, "User not found");
+  }
+
+  const snapshot = await db
+    .collection("friendRequests")
+    .where("userIds", "array-contains", viewerId)
+    .where("status", "==", "accepted")
+    .get();
+
+  const match = snapshot.docs.find((doc) => {
+    const ids = doc.data()?.userIds as string[] | undefined;
+    return Array.isArray(ids) && ids.length === 2 && ids.includes(friendUserId);
+  });
+
+  if (!match) {
+    throw new FriendServiceError(403, "Not friends with this user");
+  }
+
+  const requestRef = match.ref;
+
+  await db.runTransaction(async (transaction) => {
+    const fresh = await transaction.get(requestRef);
+    if (!fresh.exists) {
+      throw new FriendServiceError(403, "Not friends with this user");
+    }
+    const data = fresh.data();
+    if (!data || data.status !== "accepted") {
+      throw new FriendServiceError(403, "Not friends with this user");
+    }
+    const userIds = data.userIds as string[];
+    if (!Array.isArray(userIds) || userIds.length !== 2) {
+      throw new FriendServiceError(403, "Not friends with this user");
+    }
+    if (!userIds.includes(viewerId) || !userIds.includes(friendUserId)) {
+      throw new FriendServiceError(403, "Not friends with this user");
+    }
+
+    transaction.delete(requestRef);
+    transaction.update(db.collection("users").doc(userIds[0]), {
+      friendCount: admin.firestore.FieldValue.increment(-1),
+    });
+    transaction.update(db.collection("users").doc(userIds[1]), {
+      friendCount: admin.firestore.FieldValue.increment(-1),
+    });
+  });
+}
+
 // Service that queries Firestore for users matching the given string.
 // Uses lowercased fields for case-insensitive prefix matches.
 export async function searchUsers(query: string): Promise<any[]> {

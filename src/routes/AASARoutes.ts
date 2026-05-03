@@ -8,7 +8,7 @@ async function appleAppSiteAssociationRoutes(fastify: FastifyInstance) {
       details: [
         {
           appID: "D7FAZ4W8U9.com.herlop.lumilearn",
-          paths: ["/invite/*", "/course/*"],
+          paths: ["/invite/*", "/course/*", "/video/*"],
           // Add a comment field to change the file
           components: [
             {
@@ -18,6 +18,10 @@ async function appleAppSiteAssociationRoutes(fastify: FastifyInstance) {
             {
               "/": "/course/*", 
               comment: "Course shares"
+            },
+            {
+              "/": "/video/*",
+              comment: "Shared video (matches https://www.lumilearnapp.com/video/:videoId)"
             }
           ]
         },

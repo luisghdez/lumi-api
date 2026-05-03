@@ -1,5 +1,12 @@
 import { FastifyInstance } from "fastify";
-import { createFriendRequestController, getFriendRequestsController, getFriendsController, respondFriendRequestController, searchUsersController } from "../controllers/friendController";
+import {
+  createFriendRequestController,
+  getFriendRequestsController,
+  getFriendsController,
+  removeFriendController,
+  respondFriendRequestController,
+  searchUsersController,
+} from "../controllers/friendController";
 import { authenticateUser } from "../middleware/authUser";
 
 // Route for searching users by email or name
@@ -37,6 +44,13 @@ async function friendRoutes(fastify: FastifyInstance) {
     url: "/friends",
     preHandler: authenticateUser,
     handler: getFriendsController,
+  });
+
+  fastify.route({
+    method: "DELETE",
+    url: "/friends/:friendUserId",
+    preHandler: authenticateUser,
+    handler: removeFriendController,
   });
 }
 

@@ -1,15 +1,20 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import {
   completeVideoUpload,
+  CompleteSlideInput,
   createVideoComment,
   createVideoUpload,
   deleteVideo,
   deleteVideoComment,
+  getPublicVideoShareMeta,
   getVideoById,
   getVideoComments,
   getVideoFeed,
   likeVideo,
+  likeVideoComment,
   unlikeVideo,
+  unlikeVideoComment,
+  ContentKind,
   VideoVisibility,
 } from "../services/videoService";
 
@@ -41,12 +46,26 @@ export async function createVideoController(request: FastifyRequest, reply: Fast
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    const { caption, mimeType, subject, thumbnailMimeType, visibility } = request.body as {
+    const {
+      caption,
+      mimeType,
+      subject,
+      thumbnailMimeType,
+      visibility,
+      contentKind,
+      slideCount,
+      slideMimeTypes,
+      defaultSlideDurationMs,
+    } = request.body as {
       caption?: string;
       mimeType?: string;
       subject?: string;
       thumbnailMimeType?: string;
       visibility?: VideoVisibility;
+      contentKind?: ContentKind;
+      slideCount?: number;
+      slideMimeTypes?: string[];
+      defaultSlideDurationMs?: number;
     };
 
     if (!mimeType) {
@@ -59,6 +78,10 @@ export async function createVideoController(request: FastifyRequest, reply: Fast
       subject,
       thumbnailMimeType,
       visibility,
+      contentKind,
+      slideCount,
+      slideMimeTypes,
+      defaultSlideDurationMs,
     });
 
     return reply.status(201).send(result);
@@ -75,14 +98,16 @@ export async function completeVideoUploadController(request: FastifyRequest, rep
     }
 
     const { videoId } = request.params as { videoId: string };
-    const { durationMs, thumbnailUrl } = request.body as {
+    const { durationMs, thumbnailUrl, slides } = request.body as {
       durationMs?: number;
       thumbnailUrl?: string;
+      slides?: CompleteSlideInput[];
     };
 
     const video = await completeVideoUpload(videoId, userId, {
       durationMs,
       thumbnailUrl,
+      slides,
     });
 
     return reply.status(200).send({ video });
@@ -192,13 +217,46 @@ export async function createVideoCommentController(request: FastifyRequest, repl
     }
 
     const { videoId } = request.params as { videoId: string };
-    const { text } = request.body as { text?: string };
+    const { text, parentCommentId } = request.body as {
+      text?: string;
+      parentCommentId?: string | null;
+    };
     if (!text) {
       return reply.status(400).send({ error: "Missing required field: text" });
     }
 
-    const comment = await createVideoComment(videoId, userId, text);
+    const comment = await createVideoComment(videoId, userId, text, parentCommentId);
     return reply.status(201).send({ comment });
+  } catch (error) {
+    return handleVideoError(reply, error);
+  }
+}
+
+export async function likeVideoCommentController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const userId = getAuthenticatedUserId(request);
+    if (!userId) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { videoId, commentId } = request.params as { videoId: string; commentId: string };
+    const result = await likeVideoComment(videoId, commentId, userId);
+    return reply.status(200).send(result);
+  } catch (error) {
+    return handleVideoError(reply, error);
+  }
+}
+
+export async function unlikeVideoCommentController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const userId = getAuthenticatedUserId(request);
+    if (!userId) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { videoId, commentId } = request.params as { videoId: string; commentId: string };
+    const result = await unlikeVideoComment(videoId, commentId, userId);
+    return reply.status(200).send(result);
   } catch (error) {
     return handleVideoError(reply, error);
   }
@@ -216,5 +274,25 @@ export async function deleteVideoCommentController(request: FastifyRequest, repl
     return reply.status(200).send({ message: "Comment deleted successfully" });
   } catch (error) {
     return handleVideoError(reply, error);
+  }
+}
+
+/** Unauthenticated: public-ready videos only (for crawlers / unfurl / web). */
+export async function getPublicVideoMetaController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const { videoId } = request.params as { videoId: string };
+    if (!videoId) {
+      return reply.status(400).send({ error: "Missing videoId" });
+    }
+
+    const meta = await getPublicVideoShareMeta(videoId);
+    if (!meta) {
+      return reply.status(404).send({ error: "Video not found" });
+    }
+
+    return reply.status(200).send(meta);
+  } catch (error) {
+    console.error("Public video meta error:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
   }
 }
