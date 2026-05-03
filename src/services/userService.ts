@@ -13,6 +13,7 @@ interface UserProfileData {
     name?: string;
     profilePicture?: string;
     timezone?: string;
+    hasCompletedOnboarding?: boolean;
   }
 
 export async function createFireStoreUser(uid: string, data: UserProfileData) {
@@ -28,7 +29,8 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
           emailLower: data.email?.toLowerCase() || "",
           nameLower: data.name?.toLowerCase() || "",
           profilePicture: data.profilePicture || "default",
-          timezone: data.timezone || "UTC", // Default to UTC if not provided
+          timezone: data.timezone || "UTC",
+          hasCompletedOnboarding: data.hasCompletedOnboarding ?? false,
   
           // New fields for freemium control
           isPremium: false,
@@ -82,6 +84,9 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       }
       if (data.timezone) {
         updateData.timezone = data.timezone;
+      }
+      if (data.hasCompletedOnboarding !== undefined) {
+        updateData.hasCompletedOnboarding = data.hasCompletedOnboarding;
       }
   
       await userRef.update(updateData);
