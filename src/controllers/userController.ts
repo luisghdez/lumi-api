@@ -140,7 +140,7 @@ export async function updateFcmTokenController(request: FastifyRequest, reply: F
   }
 }
 
-/** Any authenticated user may list another user’s ready videos (`getUserVideos` filters by visibility). */
+/** Any authenticated user may list another user’s ready posts; strangers see public only, friends also see `visibility: friends` (same rules as `canReadVideo`). */
 export async function getUserVideosController(
   request: FastifyRequest<{
     Params: { userId: string };

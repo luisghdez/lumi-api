@@ -1,4 +1,5 @@
 import { admin, db } from "../config/firebaseConfig";
+import { pushFriendRequest } from "./notification_service";
 
 export class FriendServiceError extends Error {
   readonly statusCode: number;
@@ -148,8 +149,22 @@ export async function createFriendRequest(senderId: string, recipientId: string)
 
     // Store the friend request in the "friendRequests" collection.
     const friendRequestRef = await db.collection("friendRequests").add(friendRequest);
-    console.log(`Friend request created with id: ${friendRequestRef.id}`);
-    return { id: friendRequestRef.id, ...friendRequest };
+    const requestId = friendRequestRef.id;
+    console.log(`Friend request created with id: ${requestId}`);
+
+    let actorName = "Someone";
+    const senderSnap = await db.collection("users").doc(senderId).get();
+    if (senderSnap.exists) {
+      actorName = String(senderSnap.data()?.name || "Someone");
+    }
+    void pushFriendRequest({
+      recipientUserId: recipientId,
+      actorId: senderId,
+      actorName,
+      requestId,
+    });
+
+    return { id: requestId, ...friendRequest };
   } catch (error) {
     console.error("Error saving friend request:", error);
     throw error;

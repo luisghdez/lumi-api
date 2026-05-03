@@ -1,5 +1,6 @@
 import { admin, db } from "../config/firebaseConfig";
-import { areUsersFriends } from "./friendService";
+import { areUsersFriends, getFriends } from "./friendService";
+import { pushFriendVideoPosted, pushVideoLiked } from "./notification_service";
 import {
   buildSlideStoragePath,
   buildVideoThumbnailStoragePath,
@@ -583,6 +584,33 @@ async function verifySlideshowSlidesAndBuildPersisted(
   return { slides, totalDurationMs, sizeBytes };
 }
 
+/** Fire-and-forget: notify accepted friends when a post becomes ready and is not private. */
+async function notifyFriendsOfNewVideoPost(
+  videoId: string,
+  ownerId: string,
+  ownerName: string,
+  visibility: VideoVisibility | undefined
+): Promise<void> {
+  const vis = visibility ?? "public";
+  if (vis === "private") return;
+  try {
+    const friends = await getFriends(ownerId, false);
+    const actorName = ownerName || "Someone";
+    await Promise.allSettled(
+      friends.map((friend) =>
+        pushFriendVideoPosted({
+          recipientUserId: friend.id,
+          actorId: ownerId,
+          actorName,
+          videoId,
+        })
+      )
+    );
+  } catch (err) {
+    console.error("notifyFriendsOfNewVideoPost:", err);
+  }
+}
+
 export async function completeVideoUpload(
   videoId: string,
   ownerId: string,
@@ -629,6 +657,8 @@ export async function completeVideoUpload(
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
+    void notifyFriendsOfNewVideoPost(videoId, ownerId, video.ownerName || "", video.visibility);
+
     return getVideoById(videoId, ownerId);
   }
 
@@ -657,6 +687,8 @@ export async function completeVideoUpload(
       : { playbackStoragePath: admin.firestore.FieldValue.delete() }),
     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
   });
+
+  void notifyFriendsOfNewVideoPost(videoId, ownerId, video.ownerName || "", video.visibility);
 
   return getVideoById(videoId, ownerId);
 }
@@ -739,7 +771,13 @@ export async function getUserVideos(
     .where("status", "==", "ready");
 
   if (!isOwner) {
-    query = query.where("visibility", "==", "public");
+    const viewerIsFriendOfOwner = await areUsersFriends(viewerId, profileUserId);
+    if (viewerIsFriendOfOwner) {
+      // Match `canReadVideo`: friends may see `visibility: "friends"` on this profile.
+      query = query.where("visibility", "in", ["public", "friends"]);
+    } else {
+      query = query.where("visibility", "==", "public");
+    }
   }
 
   query = query
@@ -808,7 +846,7 @@ export async function likeVideo(videoId: string, userId: string): Promise<{ like
   const videoRef = db.collection(VIDEOS_COLLECTION).doc(videoId);
   const likeRef = videoRef.collection("likes").doc(userId);
 
-  return db.runTransaction(async (transaction) => {
+  const result = await db.runTransaction(async (transaction) => {
     const videoDoc = await transaction.get(videoRef);
     const likeDoc = await transaction.get(likeRef);
 
@@ -821,9 +859,10 @@ export async function likeVideo(videoId: string, userId: string): Promise<{ like
       throw new ServiceError(403, "You do not have access to this video");
     }
 
+    const ownerId = video.ownerId;
     const currentLikeCount = video.likeCount || 0;
     if (likeDoc.exists) {
-      return { liked: true, likeCount: currentLikeCount };
+      return { liked: true, likeCount: currentLikeCount, newlyLiked: false, ownerId };
     }
 
     transaction.set(likeRef, {
@@ -835,8 +874,24 @@ export async function likeVideo(videoId: string, userId: string): Promise<{ like
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    return { liked: true, likeCount: currentLikeCount + 1 };
+    return { liked: true, likeCount: currentLikeCount + 1, newlyLiked: true, ownerId };
   });
+
+  if (result.newlyLiked && result.ownerId !== userId) {
+    let likerName = "Someone";
+    const likerSnap = await db.collection("users").doc(userId).get();
+    if (likerSnap.exists) {
+      likerName = String(likerSnap.data()?.name || "Someone");
+    }
+    void pushVideoLiked({
+      ownerUserId: result.ownerId,
+      likerId: userId,
+      likerName,
+      videoId,
+    });
+  }
+
+  return { liked: result.liked, likeCount: result.likeCount };
 }
 
 export async function unlikeVideo(videoId: string, userId: string): Promise<{ liked: boolean; likeCount: number }> {
