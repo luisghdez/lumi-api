@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 import { zodResponseFormat } from "openai/helpers/zod";
 import { ChatCompletionMessageParam } from "openai/resources";
-import { z } from "zod";
+import { z } from "zod/v3";
 
 // Schema for grading only
 const gradingResponseSchema = z.object({
@@ -68,7 +68,7 @@ Current score: ${currentScore}. Only increase, never decrease. Be generous if th
       })),
     ] as ChatCompletionMessageParam[];
 
-    const response = await openai.beta.chat.completions.parse({
+    const response = await openai.chat.completions.parse({
       model: "gpt-4.1-nano",
       messages,
       max_tokens: 150,
@@ -159,7 +159,7 @@ Stay focused ONLY on ${focusTerm}. Keep it 2-3 sentences, encouraging and specif
       })),
     ] as ChatCompletionMessageParam[];
 
-    const response = await openai.beta.chat.completions.parse({
+    const response = await openai.chat.completions.parse({
       model: "gpt-4.1-nano",
       messages,
       max_tokens: 200,

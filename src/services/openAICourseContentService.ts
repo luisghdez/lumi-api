@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 import { zodResponseFormat } from "openai/helpers/zod";
-import { z } from "zod";
+import { z } from "zod/v3";
 
 const openai = new OpenAI();
 
@@ -88,7 +88,7 @@ export async function openAiCourseContent(extractedText: string) {
     const startTime = Date.now();
     console.log(`⏱️ Starting OpenAI content generation (${extractedText.length} chars, ~${Math.ceil(extractedText.length/4)} tokens)`);
     
-    const completion = await openai.beta.chat.completions.parse({
+    const completion = await openai.chat.completions.parse({
       model: "gpt-4.1-mini",
       messages: [
         { role: "system", content: promptInstructions },
@@ -134,7 +134,7 @@ export async function generateMarkdownSummaryFromTerms(terms: string[]) {
   const startTime = Date.now();
   console.log(`⏱️ Starting enhanced summary generation for ${terms.length} terms`);
 
-  const completion = await openai.beta.chat.completions.parse({
+  const completion = await openai.chat.completions.parse({
     model: "gpt-4.1-mini",
     messages: [
       { role: "system", content: "You generate course titles, categorize subjects, and create readable Markdown summaries for students. Choose the most appropriate subject from the predefined list." },
