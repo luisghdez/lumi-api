@@ -4,6 +4,86 @@ import { z } from "zod/v3";
 
 const openai = new OpenAI();
 
+const courseSubjects = [
+  "Algebra",
+  "Algebra 1",
+  "Algebra 2",
+  "Geometry",
+  "Trigonometry",
+  "Pre-Calculus",
+  "Calculus",
+  "Calculus 1",
+  "Statistics",
+  "Differential Equations",
+  "Biology",
+  "Chemistry",
+  "Physics",
+  "Earth & Space Science",
+  "Environmental Science",
+  "Electrical Engineering",
+  "Computer Science",
+  "Computer Science / Programming",
+  "Honors Computer Education",
+  "Health & Medicine",
+  "World History",
+  "U.S. History",
+  "US History",
+  "European History",
+  "Art History",
+  "Psychology",
+  "Sociology",
+  "Philosophy",
+  "World Geography",
+  "Civics",
+  "Accounting",
+  "Finance",
+  "Marketing",
+  "General Business",
+  "Microeconomics",
+  "Macroeconomics",
+  "Music",
+  "Art & Design",
+  "Foreign Languages",
+  "AP Biology",
+  "AP Physics 1",
+  "AP Chemistry",
+  "AP Environmental Science",
+  "AP Physics 2",
+  "AP Physics C: E&M",
+  "AP Physics C: Mechanics",
+  "AP Computer Science A",
+  "AP Computer Science Principles",
+  "AP Statistics",
+  "AP Pre-Calculus",
+  "AP Business with Personal Finance",
+  "AP US Government & Politics",
+  "AP US History",
+  "AP European History",
+  "AP World History",
+  "AP Human Geography",
+  "AP Comparative Government & Politics",
+  "AP Psychology",
+  "AP Macroeconomics",
+  "AP Microeconomics",
+  "AP African American Studies",
+  "AP Research",
+  "AP English Language",
+  "AP English Literature",
+  "AP Music Theory",
+  "AP Art History",
+  "AP Spanish Language",
+  "AP Spanish Literature",
+  "AP French",
+  "AP German",
+  "AP Chinese",
+  "AP Italian",
+  "AP Japanese",
+  "AP Latin",
+  "Other",
+] as const;
+
+const courseSubjectList = courseSubjects.join(", ");
+
 const courseContentSchema = z.object({
   // Include the "name" field as required by your docs.
   name: z.literal("Lumi Course"),
@@ -33,35 +113,7 @@ const courseContentSchema = z.object({
 
 const courseSummarySchema = z.object({
   title: z.string(),
-  subject: z.enum([
-    "Algebra",
-    "Geometry", 
-    "Statistics",
-    "Calculus",
-    "Biology",
-    "Chemistry",
-    "Physics",
-    "Earth & Space Science",
-    "Environmental Science",
-    "Computer Science",
-    "World History",
-    "U.S. History",
-    "European History",
-    "Art History",
-    "Psychology",
-    "Sociology",
-    "Philosophy",
-    "Accounting",
-    "Finance",
-    "Marketing",
-    "General Business",
-    "Microeconomics",
-    "Macroeconomics",
-    "Music",
-    "Art & Design",
-    "Foreign Languages",
-    "Other"
-  ]),
+  subject: z.enum(courseSubjects),
   summary: z.string(),
 });
 
@@ -117,7 +169,8 @@ export async function generateMarkdownSummaryFromTerms(terms: string[]) {
   Based on the provided terms, generate:
   
   1. A short, engaging title for the course (15-25 characters)
-  2. The most appropriate subject from the predefined list
+  2. The most appropriate subject from this predefined list:
+  ${courseSubjectList}
   3. A comprehensive Markdown study guide
   
   For the study guide:
