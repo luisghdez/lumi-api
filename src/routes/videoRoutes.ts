@@ -5,10 +5,13 @@ import {
   createVideoController,
   deleteVideoCommentController,
   deleteVideoController,
+  getPublicVideoMetaController,
   getVideoByIdController,
   getVideoCommentsController,
   getVideoFeedController,
+  likeVideoCommentController,
   likeVideoController,
+  unlikeVideoCommentController,
   unlikeVideoController,
 } from "../controllers/videoController";
 import { authenticateUser } from "../middleware/authUser";
@@ -26,6 +29,12 @@ async function videoRoutes(fastify: FastifyInstance) {
     url: "/videos/feed",
     preHandler: authenticateUser,
     handler: getVideoFeedController,
+  });
+
+  fastify.route({
+    method: "GET",
+    url: "/videos/:videoId/public",
+    handler: getPublicVideoMetaController,
   });
 
   fastify.route({
@@ -75,6 +84,20 @@ async function videoRoutes(fastify: FastifyInstance) {
     url: "/videos/:videoId/comments",
     preHandler: authenticateUser,
     handler: createVideoCommentController,
+  });
+
+  fastify.route({
+    method: "POST",
+    url: "/videos/:videoId/comments/:commentId/like",
+    preHandler: authenticateUser,
+    handler: likeVideoCommentController,
+  });
+
+  fastify.route({
+    method: "DELETE",
+    url: "/videos/:videoId/comments/:commentId/like",
+    preHandler: authenticateUser,
+    handler: unlikeVideoCommentController,
   });
 
   fastify.route({
