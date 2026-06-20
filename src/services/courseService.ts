@@ -9,6 +9,8 @@ export interface Flashcard {
   definition: string;
 }
 
+export type CourseType = "standard" | "ap_catalog";
+
 export interface CourseMeta {
   title: string;
   description: string;
@@ -16,6 +18,9 @@ export interface CourseMeta {
   createdByName?: string;
   hasEmbeddings?: boolean;
   visibility?: string;
+  // AP catalog fields — only present when courseType === "ap_catalog"
+  courseType?: CourseType;
+  apSubject?: string;
 }
 
 export interface CourseContent {
@@ -63,30 +68,39 @@ export interface PaginatedAllCoursesResponse {
  */
 export async function createCourseMeta(meta: CourseMeta): Promise<string> {
   try {
-    // Fetch the creator's name from the users collection
-    let createdByName = "Unknown User";
-    try {
-      const userDoc = await db.collection("users").doc(meta.createdBy).get();
-      if (userDoc.exists) {
-        const userData = userDoc.data();
-        createdByName = userData?.name || userData?.displayName || "Unknown User";
+    // System-created courses (e.g. AP catalog) skip the user lookup
+    let createdByName = meta.createdByName || "Unknown User";
+    if (meta.createdBy !== "system") {
+      try {
+        const userDoc = await db.collection("users").doc(meta.createdBy).get();
+        if (userDoc.exists) {
+          const userData = userDoc.data();
+          createdByName = userData?.name || userData?.displayName || "Unknown User";
+        }
+      } catch (userError) {
+        console.warn(`⚠️ Could not fetch user name for ${meta.createdBy}:`, userError);
       }
-    } catch (userError) {
-      console.warn(`⚠️ Could not fetch user name for ${meta.createdBy}:`, userError);
-      // Continue with default value
     }
 
     const courseRef = db.collection("courses").doc();
-    await courseRef.set({
-      title:        meta.title,
-      description:  meta.description,
-      createdBy:    meta.createdBy,
+
+    const courseDoc: Record<string, unknown> = {
+      title:         meta.title,
+      description:   meta.description,
+      createdBy:     meta.createdBy,
       createdByName: createdByName,
       hasEmbeddings: meta.hasEmbeddings || false,
-      visibility:   meta.visibility || "Private",
-      createdAt:    admin.firestore.FieldValue.serverTimestamp(),
-      // leave lessons & mergedFlashcards empty for now
-    });
+      visibility:    meta.visibility || "Private",
+      courseType:    meta.courseType || "standard",
+      createdAt:     admin.firestore.FieldValue.serverTimestamp(),
+    };
+
+    // Write AP-specific fields only when present
+    if (meta.courseType === "ap_catalog") {
+      if (meta.apSubject !== undefined) courseDoc.apSubject = meta.apSubject;
+    }
+
+    await courseRef.set(courseDoc);
     console.log(`📖 Reserved Course ID: ${courseRef.id} (created by: ${createdByName})`);
     return courseRef.id;
   } catch (error) {
