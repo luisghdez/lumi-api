@@ -1,0 +1,613 @@
+{
+  "apSubject": "AP Precalculus",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Polynomial and Rational Functions",
+      "description": "Polynomial behavior, zeros, end behavior, rational functions, asymptotes, and function composition.",
+      "note": "# Unit 1: Polynomial and Rational Functions\n\n## Overview\nThis unit introduces **polynomial functions**, **rational functions**, their **zeros**, **end behavior**, **asymptotes**, and **function composition**. These ideas matter on the AP exam because students must interpret function structure, connect equations to graphs, and analyze behavior both algebraically and graphically.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Polynomial functions** | Functions of the form $$f(x)=a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_1x+a_0$$ where exponents are nonnegative integers | You must identify degree, leading coefficient, and overall graph behavior |\n| **Zeros / roots** | Values of $$x$$ such that $$f(x)=0$$ | AP questions often connect zeros to **x-intercepts**, factors, and graph shape |\n| **Multiplicity** | The number of times a factor repeats, such as $$\\left(x-r\\right)^k$$ | Determines whether the graph **crosses** or **touches** the $$x$$-axis at a zero |\n| **End behavior** | The behavior of $$f(x)$$ as $$x\\to\\infty$$ and $$x\\to -\\infty$$ | Essential for sketching polynomial graphs and interpreting leading terms |\n| **Rational functions** | Functions of the form $$f(x)=\\frac{p(x)}{q(x)}$$ where $$q(x)\\neq 0$$ | AP tasks frequently involve domain, discontinuities, and asymptotes |\n| **Asymptotes** | Lines the graph approaches, including **vertical**, **horizontal**, and sometimes **slant** asymptotes | Students must determine them from algebraic structure and use them to graph |\n| **Holes / removable discontinuities** | Points excluded from the graph after common factors cancel | A classic AP trap: cancellation changes the graph but not the original domain restriction |\n| **Function composition** | Combining functions: $$\\left(f\\circ g\\right)(x)=f\\left(g(x)\\right)$$ | Important for modeling multi-step processes and understanding domain restrictions |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify function type] --> B{Polynomial or Rational?}\n    B -->|Polynomial| C[Find degree and leading coefficient]\n    C --> D[Determine end behavior from leading term]\n    D --> E[Factor if possible]\n    E --> F[Find zeros and multiplicities]\n    F --> G[Connect zeros to graph behavior]\n\n    B -->|Rational| H[Factor numerator and denominator]\n    H --> I[Find domain restrictions]\n    I --> J{Common factors?}\n    J -->|Yes| K[Identify holes]\n    J -->|No| L[Keep restrictions]\n    K --> M[Find vertical asymptotes from remaining denominator zeros]\n    L --> M\n    M --> N[Find horizontal or slant asymptote]\n    N --> O[Use intercepts and asymptotes to sketch graph]\n\n    G --> P[Interpret graph]\n    O --> P\n    P --> Q[Apply composition if functions are combined]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Idea** | **Expression / Definition** |\n|---|---|\n| **General polynomial form** | $$f(x)=a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_0,\\quad a_n\\neq 0$$ |\n| **Zero-factor connection** | If $$f(x)=0$$ at $$x=r$$, then $$x-r$$ is a factor of $$f(x)$$ |\n| **Multiplicity behavior** | If $$\\left(x-r\\right)^k$$ is a factor, then: odd $$k$$ usually means the graph **crosses** the axis; even $$k$$ usually means it **touches and turns** |\n| **End behavior from leading term** | For large $$|x|$$, a polynomial behaves like $$a_nx^n$$ |\n| **Rational function form** | $$f(x)=\\frac{p(x)}{q(x)},\\quad q(x)\\neq 0$$ |\n| **Vertical asymptotes** | Occur at zeros of the denominator that do **not** cancel |\n| **Holes** | If a factor cancels from numerator and denominator, the corresponding $$x$$-value is excluded from the domain and creates a **hole** |\n| **Horizontal asymptote** | For $$f(x)=\\frac{p(x)}{q(x)}$$: if $$\\deg(p)<\\deg(q)$$, then $$y=0$$; if $$\\deg(p)=\\deg(q)$$, then $$y=\\frac{\\text{leading coeff. of }p}{\\text{leading coeff. of }q}$$ |\n| **Slant asymptote** | If $$\\deg(p)=\\deg(q)+1$$, divide to get a linear quotient; that line is the slant asymptote |\n| **Function composition** | $$\\left(f\\circ g\\right)(x)=f\\left(g(x)\\right)$$ |\n| **Domain of a composition** | $$x$$ must be in the domain of $$g$$ and $$g(x)$$ must be in the domain of $$f$$ |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They’re Connected** | **Key Difference** |\n|---|---|---|\n| **Zeros of polynomials** vs. **zeros of rational functions** | Both come from making the function equal to $$0$$ | For rational functions, zeros come from the numerator only, as long as the factor does not also make the denominator $$0$$ |\n| **Zero with even multiplicity** vs. **zero with odd multiplicity** | Both indicate repeated factors | Even multiplicity usually means the graph touches the axis; odd multiplicity means it crosses |\n| **Hole** vs. **vertical asymptote** | Both arise from denominator factors in rational functions | A **hole** comes from a canceled factor; a **vertical asymptote** comes from a denominator zero that remains |\n| **Horizontal asymptote** vs. **end behavior of polynomials** | Both describe behavior as $$x$$ becomes very large or very negative | Rational functions may level off toward a line; nonconstant polynomials usually grow without bound in magnitude |\n\n```mermaid\nflowchart LR\n    A[Factored rational function] --> B{Denominator factor}\n    B -->|Cancels with numerator| C[Hole]\n    B -->|Does not cancel| D[Vertical asymptote]\n\n    E[Polynomial zero] --> F{Multiplicity}\n    F -->|Even| G[Touches x-axis]\n    F -->|Odd| H[Crosses x-axis]\n```\n\n## Common AP Exam Traps\n\n- Confusing a **hole** with a **vertical asymptote**. If the factor cancels, the graph has a removable discontinuity, not an asymptote.\n- Finding zeros of a **rational function** by setting the denominator equal to $$0$$. Denominator zeros create undefined points, not function zeros.\n- Forgetting that **multiplicity** affects graph behavior at a zero. Repeated roots do not all behave the same way.\n- Using all terms of a polynomial to predict **end behavior** instead of just the **leading term**.\n- Composing functions without checking **domain restrictions**, especially when the inner function produces a value outside the outer function’s domain.\n\n## Quick Review Checklist\n\n- [ ] I can identify whether a function is **polynomial** or **rational**.\n- [ ] I can determine the **degree** and **leading coefficient** of a polynomial.\n- [ ] I can use the leading term to describe **end behavior**.\n- [ ] I can find **zeros** and explain the effect of **multiplicity** on the graph.\n- [ ] I can factor a rational function and identify **domain restrictions**.\n- [ ] I can distinguish between a **hole** and a **vertical asymptote**.\n- [ ] I can determine **horizontal** or **slant asymptotes** from degrees and leading coefficients.\n- [ ] I can evaluate and interpret **function composition**, including domain constraints.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Polynomial function",
+              "definition": "A function that can be written as a finite sum of terms of the form $$a_nx^n$$ where each exponent is a nonnegative integer and each coefficient is real."
+            },
+            {
+              "term": "Degree",
+              "definition": "The greatest exponent of the variable with a nonzero coefficient in a polynomial written in standard form; it determines key features such as maximum possible turning points and end behavior."
+            },
+            {
+              "term": "Zero of a function",
+              "definition": "A value of $$x$$ for which the output is $$0$$; on a graph, it corresponds to an $$x$$-intercept when the graph crosses or touches the horizontal axis."
+            },
+            {
+              "term": "Multiplicity",
+              "definition": "The number of times a factor of the form $$(x-r)$$ appears in a polynomial’s factorization; odd values generally indicate crossing the axis, while even values generally indicate touching and turning."
+            },
+            {
+              "term": "End behavior",
+              "definition": "The behavior of function values as $$x\\to \\infty$$ and as $$x\\to -\\infty$$, typically determined for polynomials by the leading term."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A polynomial function has degree $$5$$, leading coefficient negative, and zeros at $$x=-2$$ with multiplicity $$2$$ and $$x=1$$ with multiplicity $$3$$. Which statement must be true?",
+              "options": [
+                "The graph touches the $$x$$-axis at $$x=-2$$ and crosses at $$x=1$$.",
+                "The graph crosses the $$x$$-axis at both zeros.",
+                "The graph touches the $$x$$-axis at both zeros.",
+                "The graph crosses the $$x$$-axis at $$x=-2$$ and touches at $$x=1$$."
+              ],
+              "correctAnswer": "The graph touches the $$x$$-axis at $$x=-2$$ and crosses at $$x=1$$.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which polynomial could have end behavior rising to the left and falling to the right?",
+              "options": [
+                "$$2x^4-3x+1$$",
+                "$$-x^3+5x^2-1$$",
+                "$$3x^2-7$$",
+                "$$x^5+2x$$"
+              ],
+              "correctAnswer": "$$-x^3+5x^2-1$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a polynomial of degree $$n$$, the maximum possible number of turning points is ______.",
+              "options": [
+                "$$n-1$$",
+                "$$n$$",
+                "$$n+1$$",
+                "$$2n$$"
+              ],
+              "correctAnswer": "$$n-1$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$(x-4)^2$$ is a factor of a polynomial, then $$x=4$$ is a zero with ______.",
+              "options": [
+                "multiplicity $$2$$",
+                "multiplicity $$1$$",
+                "negative leading coefficient",
+                "degree $$4$$"
+              ],
+              "correctAnswer": "multiplicity $$2$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Rational function",
+              "definition": "A function that can be expressed as a quotient $$\\frac{p(x)}{q(x)}$$ where $$p$$ and $$q$$ are polynomials and $$q(x)\\neq 0$$."
+            },
+            {
+              "term": "Vertical asymptote",
+              "definition": "A line $$x=a$$ that the graph approaches when inputs near $$a$$ cause outputs to increase or decrease without bound, typically at noncanceling zeros of the denominator."
+            },
+            {
+              "term": "Horizontal asymptote",
+              "definition": "A line $$y=L$$ that the graph approaches as $$x\\to \\infty$$ or $$x\\to -\\infty$$; for rational functions, it is often determined by comparing the degrees of numerator and denominator."
+            },
+            {
+              "term": "Hole",
+              "definition": "A removable discontinuity produced when a common factor in the numerator and denominator cancels, leaving a missing point at the corresponding input value."
+            },
+            {
+              "term": "Function composition",
+              "definition": "The process of using the output of one function as the input of another, written for example as $$(f\\circ g)(x)=f(g(x))$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider $$f(x)=\\frac{x^2-9}{x^2-x-6}$$. Which statement correctly describes its discontinuities?",
+              "options": [
+                "There is a vertical asymptote at $$x=3$$ and a hole at $$x=-2$$.",
+                "There are vertical asymptotes at $$x=3$$ and $$x=-2$$.",
+                "There is a hole at $$x=3$$ and a vertical asymptote at $$x=-2$$.",
+                "There are holes at $$x=3$$ and $$x=-2$$."
+              ],
+              "correctAnswer": "There is a hole at $$x=3$$ and a vertical asymptote at $$x=-2$$.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Let $$f(x)=2x-1$$ and $$g(x)=x^2+3$$. What is $$(f\\circ g)(x)$$?",
+              "options": [
+                "$$2x^2+5$$",
+                "$$2x^2-1$$",
+                "$$(2x-1)^2+3$$",
+                "$$x^2+2$$"
+              ],
+              "correctAnswer": "$$2x^2+5$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For $$r(x)=\\frac{3x^2-1}{x^2+4x+7}$$, the horizontal asymptote is ______.",
+              "options": [
+                "$$y=3$$",
+                "$$y=0$$",
+                "$$x=3$$",
+                "$$y=\\frac{1}{3}$$"
+              ],
+              "correctAnswer": "$$y=3$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$f(x)=\\sqrt{x+1}$$ and $$g(x)=x^2$$, then $$(g\\circ f)(x)=______.",
+              "options": [
+                "$$x+1$$",
+                "$$\\sqrt{x^2+1}$$",
+                "$$(x^2)+1$$",
+                "$$x^2+2x+1$$"
+              ],
+              "correctAnswer": "$$x+1$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Exponential and Logarithmic Functions",
+      "description": "Exponential growth and decay, properties of logarithms, solving exponential and logarithmic equations.",
+      "note": "# Unit 2: Exponential and Logarithmic Functions\n\n## Overview\nThis unit develops your understanding of **exponential** and **logarithmic functions**, including how they model growth and decay, how their graphs behave, and how to solve equations involving exponents and logs. On the AP exam, these ideas are essential because they connect **function transformations, inverses, algebraic reasoning, and real-world modeling**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Exponential function** | A function of the form $$f(x)=ab^x$$ where $$a\\neq 0$$, $$b>0$$, and $$b\\neq 1$$ | You must identify growth vs. decay, interpret parameters, and analyze graphs and contexts |\n| **Exponential growth and decay** | Growth occurs when $$b>1$$; decay occurs when $$0<b<1$$ | Frequently tested through modeling, table/graph interpretation, and rate comparisons |\n| **Logarithmic function** | The inverse of an exponential function, written $$f(x)=\\log_b(x)$$ | Important for solving equations, understanding inverses, and graph/domain analysis |\n| **Inverse relationship** | Exponential and logarithmic functions undo each other: $$b^{\\log_b(x)}=x$$ and $$\\log_b(b^x)=x$$ | Central for rewriting expressions and solving equations efficiently |\n| **Properties of logarithms** | Rules for products, quotients, powers, and change of base | AP questions often require simplifying expressions or solving without a calculator |\n| **Domain, range, and asymptotes** | Exponentials have horizontal asymptotes; logarithms have vertical asymptotes and restricted domains | Common graphing and interpretation skill on multiple-choice and free-response questions |\n| **Solving exponential equations** | Use common bases or logarithms to isolate the variable | A core algebraic process that appears in both abstract and applied settings |\n| **Solving logarithmic equations** | Condense/expand logs, rewrite in exponential form, and check for invalid solutions | Students often lose points by ignoring domain restrictions or extraneous solutions |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify equation type] --> B{\"Variable in exponent?\"}\n    B -->|Yes| C[Try rewriting with a common base]\n    C --> D{\"Same base possible?\"}\n    D -->|Yes| E[Set exponents equal and solve]\n    D -->|No| F[Apply logarithm to both sides]\n    F --> G[Use log properties if helpful]\n    G --> H[Solve algebraically]\n\n    B -->|No, variable is inside log| I[Isolate the logarithmic expression]\n    I --> J[Rewrite in exponential form]\n    J --> K[Solve algebraically]\n    K --> L[Check domain restrictions]\n\n    E --> M[Verify solution in context]\n    H --> M\n    L --> M\n```\n\n### Typical reasoning pathway\n1. **Identify** whether the equation is exponential or logarithmic.\n2. **Simplify** using algebra or log properties.\n3. For exponentials, **rewrite with common bases** if possible.\n4. If not, **take logarithms** of both sides.\n5. For logarithms, **isolate the log** and rewrite in exponential form.\n6. **Solve** and then **check** for invalid or extraneous solutions.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Idea** | **Expression** |\n|---|---|\n| **General exponential form** | $$f(x)=ab^x$$ |\n| **Growth factor** | If growth rate is $$r$$, then $$f(x)=a(1+r)^x$$ |\n| **Decay factor** | If decay rate is $$r$$, then $$f(x)=a(1-r)^x$$ |\n| **Logarithm definition** | $$\\log_b(x)=y \\iff b^y=x$$ |\n| **Inverse relationships** | $$b^{\\log_b(x)}=x \\quad \\text{and} \\quad \\log_b(b^x)=x$$ |\n| **Product rule** | $$\\log_b(MN)=\\log_b(M)+\\log_b(N)$$ |\n| **Quotient rule** | $$\\log_b\\left(\\frac{M}{N}\\right)=\\log_b(M)-\\log_b(N)$$ |\n| **Power rule** | $$\\log_b(M^p)=p\\log_b(M)$$ |\n| **Change-of-base formula** | $$\\log_b(x)=\\frac{\\log(x)}{\\log(b)}$$ |\n| **Exponential parent function** | $$f(x)=b^x,\\quad \\text{domain: }(-\\infty,\\infty),\\quad \\text{range: }(0,\\infty)$$ |\n| **Logarithmic parent function** | $$f(x)=\\log_b(x),\\quad \\text{domain: }(0,\\infty),\\quad \\text{range: }(-\\infty,\\infty)$$ |\n| **Asymptotes** | For $$b^x$$, horizontal asymptote: $$y=0$$; for $$\\log_b(x)$$, vertical asymptote: $$x=0$$ |\n\n### Graph facts you should know\n- **Exponential growth**: increasing when $$b>1$$.\n- **Exponential decay**: decreasing when $$0<b<1$$.\n- **Logarithmic growth**: increasing when $$b>1$$.\n- **Logarithmic decay**: decreasing when $$0<b<1$$.\n- The graphs of $$y=b^x$$ and $$y=\\log_b(x)$$ are **reflections across** $$y=x$$.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Key Similarity / Difference** | **What to Notice** |\n|---|---|---|\n| **Exponential vs. Logarithmic functions** | They are **inverses** of each other | Their domains and ranges swap, and their graphs reflect over $$y=x$$ |\n| **Growth vs. Decay** | Both are modeled by $$ab^x$$ | If $$b>1$$, values increase; if $$0<b<1$$, values decrease |\n| **Solving exponentials vs. solving logarithms** | Both require isolating the variable | Exponential equations often use logs; logarithmic equations often convert to exponential form |\n| **Exact form vs. calculator form** | Some solutions stay symbolic, others require approximation | AP may ask for an exact expression like $$\\frac{\\log 7}{\\log 3}$$ or a decimal approximation |\n\n```mermaid\nflowchart LR\n    A[Exponential: $$y=b^x$$] --> B[Inverse relationship]\n    B --> C[Logarithmic: $$y=\\log_b(x)$$]\n    A --> D[Horizontal asymptote: $$y=0$$]\n    C --> E[Vertical asymptote: $$x=0$$]\n    A --> F[Domain: all real numbers]\n    C --> G[Domain: $$x>0$$]\n```\n\n## Common AP Exam Traps\n- **Forgetting domain restrictions**: In a logarithmic expression, the argument must satisfy $$x>0$$ or more generally the inside must be positive.\n- **Misusing log properties**: For example, $$\\log(M+N)\\neq \\log(M)+\\log(N)$$.\n- **Confusing growth rate with growth factor**: A rate of $$5\\%$$ means multiply by $$1.05$$, not $$0.05$$.\n- **Ignoring extraneous solutions**: Solving a logarithmic equation algebraically can produce values that do not work in the original equation.\n- **Mixing up asymptotes and intercepts**: Exponential functions approach $$y=0$$ but usually do not cross it; logarithmic functions are undefined at and to the left of $$x=0$$ for the parent function.\n\n## Quick Review Checklist\n- [ ] I can identify whether an equation or graph represents **exponential growth** or **exponential decay**.\n- [ ] I can interpret the parameters in $$f(x)=ab^x$$, including the **initial value** and **growth/decay factor**.\n- [ ] I can explain why **logarithmic functions** are the **inverses** of exponential functions.\n- [ ] I can use the **product, quotient, and power rules** of logarithms correctly.\n- [ ] I can convert between **logarithmic form** and **exponential form**.\n- [ ] I can solve **exponential equations** by using common bases or applying logarithms.\n- [ ] I can solve **logarithmic equations** and check for **extraneous solutions**.\n- [ ] I can determine the **domain, range, intercepts, and asymptotes** of exponential and logarithmic functions.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Exponential growth factor",
+              "definition": "For a function written as $$f(x)=ab^x$$ with $$a\\neq 0$$ and $$b>1$$, the multiplicative change for each increase of 1 in the input is the constant value $$b$$."
+            },
+            {
+              "term": "Exponential decay model",
+              "definition": "A relationship of the form $$f(x)=ab^x$$ where $$a\\neq 0$$ and $$0<b<1$$, so equal increases in the input multiply the output by the same factor less than 1."
+            },
+            {
+              "term": "Percent rate in an exponential model",
+              "definition": "If a quantity changes by the same percentage each unit interval, then in $$f(x)=a(1+r)^x$$ the value $$r$$ represents the decimal rate of increase or decrease, with negative values indicating decrease."
+            },
+            {
+              "term": "Asymptote of an exponential function",
+              "definition": "For the parent form $$f(x)=b^x$$ with $$b>0$$ and $$b\\neq 1$$, the graph approaches the horizontal line $$y=0$$ as the input moves in one direction without ever reaching it."
+            },
+            {
+              "term": "Domain and range of basic exponential functions",
+              "definition": "For $$f(x)=ab^x$$ with $$a>0$$, every real number is allowed as an input, and every output is positive."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A population of bacteria is modeled by $$P(t)=120(1.08)^t$$, where $$t$$ is measured in hours. Which statement is correct?",
+              "options": [
+                "The population decreases by $$8\\%$$ each hour.",
+                "The population increases by $$8\\%$$ each hour.",
+                "The initial population is $$1.08$$.",
+                "The population doubles every hour."
+              ],
+              "correctAnswer": "The population increases by $$8\\%$$ each hour.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which function represents exponential decay with an initial value of $$500$$ and a decay rate of $$12\\%$$ per year?",
+              "options": [
+                "$$f(t)=500(1.12)^t$$",
+                "$$f(t)=500(0.88)^t$$",
+                "$$f(t)=0.12(500)^t$$",
+                "$$f(t)=500-0.12t$$"
+              ],
+              "correctAnswer": "$$f(t)=500(0.88)^t$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For the function $$f(x)=3\\left(\\frac{1}{4}\\right)^x$$, the output is multiplied by ______ when $$x$$ increases by 1.",
+              "options": [
+                "$$\\frac{1}{4}$$",
+                "$$4$$",
+                "$$3$$",
+                "$$-\\frac{1}{4}$$"
+              ],
+              "correctAnswer": "$$\\frac{1}{4}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The horizontal asymptote of $$g(x)=7\\cdot 2^x$$ is ______.",
+              "options": [
+                "$$y=0$$",
+                "$$x=0$$",
+                "$$y=7$$",
+                "$$x=7$$"
+              ],
+              "correctAnswer": "$$y=0$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Logarithm as an inverse",
+              "definition": "The expression $$\\log_b(x)$$ gives the exponent to which the base $$b$$ must be raised to produce $$x$$, where $$b>0$$, $$b\\neq 1$$, and $$x>0$$."
+            },
+            {
+              "term": "Product property of logarithms",
+              "definition": "For positive inputs, a sum of two expressions with the same base can be rewritten as a single expression: $$\\log_b(M)+\\log_b(N)=\\log_b(MN)$$."
+            },
+            {
+              "term": "Quotient property of logarithms",
+              "definition": "For positive inputs, a difference of two expressions with the same base can be rewritten as one expression: $$\\log_b(M)-\\log_b(N)=\\log_b\\left(\\frac{M}{N}\\right)$$."
+            },
+            {
+              "term": "Power property of logarithms",
+              "definition": "An exponent on the argument can be moved in front as a coefficient: $$\\log_b(M^p)=p\\log_b(M)$$ for $$M>0$$."
+            },
+            {
+              "term": "Extraneous solution in a logarithmic equation",
+              "definition": "A value obtained during algebraic solving that does not satisfy the original restrictions, often because logarithmic arguments must be positive."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which expression is equivalent to $$2\\log_3(x)-\\log_3(5)$$ for $$x>0$$?",
+              "options": [
+                "$$\\log_3(2x-5)$$",
+                "$$\\log_3\\left(\\frac{x^2}{5}\\right)$$",
+                "$$\\log_3\\left(\\frac{2x}{5}\\right)$$",
+                "$$\\log_3(x^2-5)$$"
+              ],
+              "correctAnswer": "$$\\log_3\\left(\\frac{x^2}{5}\\right)$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Solve $$\\log_2(x+1)=3$$.",
+              "options": [
+                "$$x=2$$",
+                "$$x=7$$",
+                "$$x=8$$",
+                "$$x=9$$"
+              ],
+              "correctAnswer": "$$x=7$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Solving $$5^{2x-1}=125$$ gives $$x=______$$.",
+              "options": [
+                "$$\\frac{3}{2}$$",
+                "$$2$$",
+                "$$3$$",
+                "$$\\frac{1}{2}$$"
+              ],
+              "correctAnswer": "$$2$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The solution to $$\\ln(x-4)=0$$ is ______.",
+              "options": [
+                "$$4$$",
+                "$$5$$",
+                "$$1$$",
+                "$$e^4$$"
+              ],
+              "correctAnswer": "$$5$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Trigonometric and Polar Functions",
+      "description": "Unit circle, trigonometric functions, inverses, graphs, identities, and introduction to polar coordinates.",
+      "note": "# Unit 3: Trigonometric and Polar Functions\n\n## Overview\nThis unit introduces **trigonometric functions** through the **unit circle**, develops their **graphs, transformations, and inverses**, and applies key **identities** to analyze relationships among functions. It also introduces **polar coordinates**, an alternative way to locate points and represent graphs, which connects algebraic, geometric, and functional thinking often tested on the AP exam.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Unit Circle** | A circle of radius $$1$$ centered at the origin, used to define sine, cosine, and tangent by coordinates and ratios. | Essential for evaluating trig values, determining signs by quadrant, and connecting angle measure to function behavior. |\n| **Radian Measure** | A way of measuring angles based on arc length, where $$\\theta = \\frac{s}{r}$$. | AP problems often prefer radians, especially for graphing, periodicity, and exact trig values. |\n| **Trigonometric Functions** | Functions such as $$\\sin x$$, $$\\cos x$$, $$\\tan x$$, and their reciprocals, defined using the unit circle. | You must interpret values, domains, ranges, asymptotes, and periodic behavior. |\n| **Graphs and Transformations** | Changes to trig graphs through amplitude, period, phase shift, vertical shift, and reflection. | Frequently tested through modeling and graph interpretation, especially identifying features from equations. |\n| **Inverse Trigonometric Functions** | Functions such as $$\\sin^{-1} x$$, $$\\cos^{-1} x$$, and $$\\tan^{-1} x$$ that reverse trig functions on restricted domains. | Important for solving equations and understanding why domain restriction is necessary for invertibility. |\n| **Trigonometric Identities** | Equations true for all values in their domain, such as Pythagorean and quotient identities. | AP questions often require simplifying expressions, verifying identities, or selecting equivalent forms. |\n| **Solving Trigonometric Equations** | Finding all angles that satisfy a trig condition, often over an interval. | Common AP task: use unit circle reasoning, periodicity, and inverse functions correctly. |\n| **Polar Coordinates** | A system locating points by distance $$r$$ from the origin and angle $$\\theta$$ from the positive $$x$$-axis. | Expands graphing and representation skills; students must convert between polar and rectangular forms. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start with angle measure] --> B[Convert if needed between degrees and radians]\n    B --> C[Locate angle on the unit circle]\n    C --> D[Determine coordinates $$\\left(\\cos \\theta,\\sin \\theta\\right)$$]\n    D --> E[Evaluate trig functions and signs by quadrant]\n    E --> F[Use values to graph or solve equations]\n    F --> G[Apply identities to simplify or rewrite]\n    G --> H[Restrict domain if finding inverse]\n    F --> I[Translate between rectangular and polar forms when needed]\n```\n\n### Typical problem-solving progression\n1. **Identify the representation**: angle, graph, equation, or coordinate point.\n2. **Use the unit circle** to determine exact values or quadrant information.\n3. **Apply function properties** such as period, symmetry, domain, range, or asymptotes.\n4. **Use identities** to rewrite or simplify expressions.\n5. **Check intervals and restrictions** when solving equations or using inverse trig functions.\n6. **Convert forms** if working with **polar coordinates**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Expression** |\n|---|---|\n| **Radian definition** | $$\\theta = \\frac{s}{r}$$ |\n| **Degree-radian conversion** | $$180^\\circ = \\pi \\text{ radians}$$ |\n| **Unit circle coordinates** | $$\\left(x,y\\right) = \\left(\\cos \\theta,\\sin \\theta\\right)$$ |\n| **Tangent definition** | $$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$$ |\n| **Reciprocal identities** | $$\\csc \\theta = \\frac{1}{\\sin \\theta}, \\quad \\sec \\theta = \\frac{1}{\\cos \\theta}, \\quad \\cot \\theta = \\frac{1}{\\tan \\theta}$$ |\n| **Pythagorean identity** | $$\\sin^2 \\theta + \\cos^2 \\theta = 1$$ |\n| **Derived Pythagorean identities** | $$1+\\tan^2\\theta = \\sec^2\\theta, \\quad 1+\\cot^2\\theta = \\csc^2\\theta$$ |\n| **General sine/cosine transformation** | $$y = a\\sin\\left(b\\left(x-h\\right)\\right)+k \\quad \\text{or} \\quad y = a\\cos\\left(b\\left(x-h\\right)\\right)+k$$ |\n| **Amplitude** | $$\\text{amplitude} = |a|$$ |\n| **Period of sine/cosine** | $$\\text{period} = \\frac{2\\pi}{|b|}$$ |\n| **Period of tangent** | $$\\text{period} = \\frac{\\pi}{|b|}$$ |\n| **General tangent transformation** | $$y = a\\tan\\left(b\\left(x-h\\right)\\right)+k$$ |\n| **Inverse trig principal ranges** | $$\\sin^{-1}x \\in \\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right], \\quad \\cos^{-1}x \\in \\left[0,\\pi\\right], \\quad \\tan^{-1}x \\in \\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$$ |\n| **Polar to rectangular** | $$x = r\\cos\\theta, \\quad y = r\\sin\\theta$$ |\n| **Rectangular to polar** | $$r^2 = x^2+y^2, \\quad \\tan\\theta = \\frac{y}{x} \\text{ when } x \\ne 0$$ |\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection** | **Key Difference** |\n|---|---|---|\n| **Unit circle vs. right-triangle trig** | Both define trig ratios and help evaluate functions. | **Right-triangle trig** is limited to acute angles in geometric contexts; the **unit circle** extends definitions to all real angles. |\n| **Sine/Cosine vs. Tangent** | All are periodic trig functions defined from angle measure. | **Sine** and **cosine** have period $$2\\pi$$ and bounded range; **tangent** has period $$\\pi$$, vertical asymptotes, and unbounded range. |\n| **Trig function vs. inverse trig function** | Inverse functions undo original functions on restricted domains. | Original trig functions are periodic and not one-to-one on all real numbers, so inverses require **domain restriction**. |\n| **Rectangular vs. polar coordinates** | Both locate points in the plane and can describe graphs. | **Rectangular** uses $$\\left(x,y\\right)$$; **polar** uses $$\\left(r,\\theta\\right)$$ and allows multiple representations of the same point. |\n\n## Common AP Exam Traps\n- Confusing **degrees** and **radians**, especially when identifying period or evaluating exact values on the **unit circle**.\n- Forgetting that **inverse trig functions** use **restricted ranges**, so not every equivalent angle is a valid principal value.\n- Misidentifying **amplitude** and **period** in equations like $$y = a\\sin\\left(bx\\right)$$; remember amplitude applies to sine and cosine, not tangent.\n- Ignoring **undefined values** such as when $$\\cos \\theta = 0$$ in tangent or secant expressions.\n- Treating a **polar point** as unique; for example, the same point may be represented by different values of $$r$$ and $$\\theta$$.\n\n## Quick Review Checklist\n- [ ] I can use the **unit circle** to find exact values of $$\\sin \\theta$$, $$\\cos \\theta$$, and $$\\tan \\theta$$.\n- [ ] I can convert between **degrees** and **radians** and use radians in graphing and periodicity.\n- [ ] I can identify the **domain**, **range**, **period**, **amplitude**, and **asymptotes** of trig functions.\n- [ ] I can graph and interpret transformations of $$\\sin x$$, $$\\cos x$$, and $$\\tan x$$.\n- [ ] I can use and recognize key **trigonometric identities**, especially the **Pythagorean identities**.\n- [ ] I can solve basic **trigonometric equations** on a given interval and account for all solutions.\n- [ ] I can explain why **inverse trigonometric functions** require restricted domains and state their principal-value ranges.\n- [ ] I can convert points and equations between **rectangular** and **polar** forms.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Unit circle",
+              "definition": "A circle centered at the origin with radius $$1$$ that connects an angle in standard position to the ordered pair $$(\\cos \\theta, \\sin \\theta)$$."
+            },
+            {
+              "term": "Reference angle",
+              "definition": "The acute angle formed between the terminal side of an angle and the $$x$$-axis, used to determine exact trigonometric values in any quadrant."
+            },
+            {
+              "term": "Radian measure",
+              "definition": "A way to measure angles by comparing arc length to radius, where one full revolution is $$2\\pi$$."
+            },
+            {
+              "term": "Sine function",
+              "definition": "For an angle $$\\theta$$, the ratio of vertical coordinate to radius on a circle, and on the unit circle it equals the $$y$$-coordinate of the corresponding point."
+            },
+            {
+              "term": "Cosine function",
+              "definition": "For an angle $$\\theta$$, the ratio of horizontal coordinate to radius on a circle, and on the unit circle it equals the $$x$$-coordinate of the corresponding point."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "If $$\\sin \\theta=-\\frac{\\sqrt{3}}{2}$$ and $$\\theta$$ is in Quadrant IV, which value is $$\\cos \\theta$$?",
+              "options": [
+                "$$\\frac{1}{2}$$",
+                "$$-\\frac{1}{2}$$",
+                "$$\\frac{\\sqrt{3}}{2}$$",
+                "$$-\\frac{\\sqrt{3}}{2}$$"
+              ],
+              "correctAnswer": "$$\\frac{1}{2}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which angle is coterminal with $$-\\frac{5\\pi}{6}$$ and lies in the interval $$[0,2\\pi)$$?",
+              "options": [
+                "$$\\frac{5\\pi}{6}$$",
+                "$$\\frac{7\\pi}{6}$$",
+                "$$\\frac{11\\pi}{6}$$",
+                "$$\\frac{13\\pi}{6}$$"
+              ],
+              "correctAnswer": "$$\\frac{7\\pi}{6}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "On the unit circle, the point corresponding to $$\\theta=\\frac{5\\pi}{3}$$ has $$y$$-coordinate ______.",
+              "options": [
+                "$$-\\frac{\\sqrt{3}}{2}$$",
+                "$$-\\frac{1}{2}$$",
+                "$$\\frac{1}{2}$$",
+                "$$\\frac{\\sqrt{3}}{2}$$"
+              ],
+              "correctAnswer": "$$-\\frac{\\sqrt{3}}{2}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$\\tan \\theta=-1$$ and $$\\theta$$ is in Quadrant II, then $$\\theta=______$$.",
+              "options": [
+                "$$\\frac{\\pi}{4}$$",
+                "$$\\frac{3\\pi}{4}$$",
+                "$$\\frac{5\\pi}{4}$$",
+                "$$\\frac{7\\pi}{4}$$"
+              ],
+              "correctAnswer": "$$\\frac{3\\pi}{4}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Inverse sine",
+              "definition": "The function that returns the angle in the interval $$\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$$ whose sine is a given input from $$[-1,1]$$."
+            },
+            {
+              "term": "Amplitude",
+              "definition": "Half the distance between the maximum and minimum values of a periodic sinusoidal graph."
+            },
+            {
+              "term": "Period",
+              "definition": "The horizontal length of one complete cycle of a repeating function."
+            },
+            {
+              "term": "Pythagorean identity",
+              "definition": "The relationship $$\\sin^2 \\theta+\\cos^2 \\theta=1$$, derived from the geometry of the unit circle."
+            },
+            {
+              "term": "Polar coordinates",
+              "definition": "A system that locates a point using its directed distance from the origin and the angle measured from the positive $$x$$-axis."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which equation is equivalent to $$\\sin^2 \\theta=1-\\cos^2 \\theta$$ for all $$\\theta$$?",
+              "options": [
+                "$$\\tan^2 \\theta+1=\\sec^2 \\theta$$",
+                "$$\\sin^2 \\theta+\\cos^2 \\theta=1$$",
+                "$$1+\\cot^2 \\theta=\\csc^2 \\theta$$",
+                "$$\\sin \\theta=\\frac{1}{\\csc \\theta}$$"
+              ],
+              "correctAnswer": "$$\\sin^2 \\theta+\\cos^2 \\theta=1$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A point has polar coordinates $$\\left(4,\\frac{2\\pi}{3}\\right)$$. What are its rectangular coordinates?",
+              "options": [
+                "$$(-2,2\\sqrt{3})$$",
+                "$$(2,2\\sqrt{3})$$",
+                "$$(-2,-2\\sqrt{3})$$",
+                "$$(2,-2\\sqrt{3})$$"
+              ],
+              "correctAnswer": "$$(-2,2\\sqrt{3})$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The principal value of $$\\sin^{-1}\\left(-\\frac{1}{2}\\right)$$ is ______.",
+              "options": [
+                "$$-\\frac{\\pi}{6}$$",
+                "$$\\frac{\\pi}{6}$$",
+                "$$\\frac{5\\pi}{6}$$",
+                "$$\\frac{7\\pi}{6}$$"
+              ],
+              "correctAnswer": "$$-\\frac{\\pi}{6}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For $$f(x)=3\\cos\\left(2x-\\frac{\\pi}{3}\\right)+1$$, the period is ______.",
+              "options": [
+                "$$\\pi$$",
+                "$$2\\pi$$",
+                "$$\\frac{\\pi}{2}$$",
+                "$$3\\pi$$"
+              ],
+              "correctAnswer": "$$\\pi$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Functions Involving Parameters, Vectors, and Matrices",
+      "description": "Parametric functions, vectors in 2D, matrix operations, and systems of equations.",
+      "note": "# Unit 4: Functions Involving Parameters, Vectors, and Matrices\n\n## Overview\nThis unit brings together three major ideas: **parametric functions**, **vectors in two dimensions**, and **matrices used to organize and solve systems**. On the AP exam, these topics matter because they test your ability to represent relationships in multiple ways, move flexibly between algebraic and geometric interpretations, and use structure to solve problems efficiently.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Parametric functions** | Functions where both coordinates are written in terms of a third variable, usually $$t$$ | AP questions often ask you to connect parameter values to motion, graph shape, and elimination of the parameter |\n| **Eliminating the parameter** | Rewriting a parametric relationship as a rectangular equation in $$x$$ and $$y$$ | Helps you identify the underlying graph and compare parametric and standard forms |\n| **Vector representation** | A vector written as $$\\langle a,b \\rangle$$ or as a directed segment in the plane | Tested through interpretation of direction, magnitude, and movement |\n| **Vector operations** | Addition, subtraction, and scalar multiplication of vectors | Essential for combining motions, translating geometric ideas, and modeling displacement |\n| **Magnitude and direction** | The length and orientation of a vector | Important when AP problems connect vectors to geometry or physical-style motion contexts |\n| **Matrices** | Rectangular arrays used to organize data or coefficients | AP problems use matrices to represent transformations, systems, and structured calculations |\n| **Matrix operations** | Addition, scalar multiplication, and matrix multiplication | You must understand when operations are defined and how multiplication encodes composition or systems |\n| **Systems of equations** | Multiple equations solved simultaneously, often using matrices | A major application of matrices; AP may emphasize setup, interpretation, and solution meaning |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Given a relationship with parameter $$t$$\"] --> B[\"Write equations for $$x$$ and $$y$$ in terms of $$t$$\"]\n    B --> C[\"Analyze how $$x$$ and $$y$$ change as $$t$$ changes\"]\n    C --> D[\"Eliminate $$t$$ when possible\"]\n    D --> E[\"Identify the rectangular equation and graph\"]\n    B --> F[\"Interpret as motion or traced path\"]\n    F --> G[\"Determine direction, starting point, and repeated points\"]\n    A --> H[\"Represent displacement with vectors\"]\n    H --> I[\"Use vector addition or scalar multiplication\"]\n    I --> J[\"Organize equations or transformations in matrix form\"]\n    J --> K[\"Use matrix operations to solve systems or model composition\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Topic** | **Key Rule / Formula** |\n|---|---|\n| **Parametric form** | $$x=f(t), \\quad y=g(t)$$ |\n| **Eliminating the parameter** | Solve one equation for $$t$$ and substitute into the other, when possible |\n| **Average rate of change in parametric context** | If asked over parameter values, compute changes in $$x$$ or $$y$$ with respect to $$t$$ carefully; do not assume rectangular form automatically |\n| **Vector form** | $$\\vec{v}=\\langle a,b\\rangle$$ |\n| **Vector addition** | $$\\langle a,b\\rangle+\\langle c,d\\rangle=\\langle a+c,b+d\\rangle$$ |\n| **Vector subtraction** | $$\\langle a,b\\rangle-\\langle c,d\\rangle=\\langle a-c,b-d\\rangle$$ |\n| **Scalar multiplication** | $$k\\langle a,b\\rangle=\\langle ka,kb\\rangle$$ |\n| **Magnitude of a vector** | $$\\|\\vec{v}\\|=\\sqrt{a^2+b^2}$$ for $$\\vec{v}=\\langle a,b\\rangle$$ |\n| **Vector from two points** | From $$\\left(x_1,y_1\\right)$$ to $$\\left(x_2,y_2\\right)$$: $$\\langle x_2-x_1,\\ y_2-y_1\\rangle$$ |\n| **Matrix form** | $$A=\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$$ |\n| **Matrix addition** | Add corresponding entries; matrices must have the same dimensions |\n| **Scalar multiplication of matrices** | Multiply every entry by the scalar |\n| **Matrix multiplication condition** | If $$A$$ is $$m \\times n$$ and $$B$$ is $$n \\times p$$, then $$AB$$ exists and is $$m \\times p$$ |\n| **Matrix multiplication entry rule** | The entry in row $$i$$, column $$j$$ of $$AB$$ is the dot product of row $$i$$ of $$A$$ with column $$j$$ of $$B$$ |\n| **System written as a matrix equation** | $$A\\vec{x}=\\vec{b}$$ |\n| **Solution meaning** | A solution to a system is a value of the variable vector $$\\vec{x}$$ that makes all equations true simultaneously |\n\n### High-value definitions\n- **Parameter**: an independent variable, usually $$t$$, that generates ordered pairs.\n- **Vector**: a quantity with **magnitude** and **direction**.\n- **Coefficient matrix**: the matrix formed by the coefficients of a system.\n- **Augmented matrix**: a coefficient matrix with the constants appended as an extra column.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** | **AP Use** |\n|---|---|---|---|\n| **Parametric equations vs. rectangular equations** | Both describe points on a graph | Parametric form includes direction and timing through $$t$$; rectangular form shows the direct relation between $$x$$ and $$y$$ | You may need to convert between them and interpret what is gained or lost |\n| **Vectors vs. points** | Both can be written with two numbers | A point gives location; a vector gives displacement or direction | AP items may switch between geometric position and movement |\n| **Vector addition vs. matrix addition** | Both combine corresponding entries | Vectors model displacement; matrices organize broader structures such as systems or transformations | Helps avoid treating every array-like object the same way |\n| **System of equations vs. matrix equation** | A matrix equation is a compact representation of a system | The matrix form emphasizes structure and operations | Useful for efficient setup and solution interpretation |\n\n```mermaid\nflowchart LR\n    A[\"Parametric equations $$x=f(t), y=g(t)$$\"] --> B[\"Eliminate $$t$$\"]\n    B --> C[\"Rectangular equation in $$x$$ and $$y$$\"]\n    A --> D[\"Interpret direction and motion\"]\n    E[\"Vectors\"] --> F[\"Model displacement in the plane\"]\n    G[\"Matrices\"] --> H[\"Organize coefficients and transformations\"]\n    H --> I[\"Solve systems\"]\n```\n\n## Common AP Exam Traps\n- Confusing a **point** such as $$\\left(3,4\\right)$$ with a **vector** such as $$\\langle 3,4\\rangle$$. They may look similar but mean different things.\n- Eliminating the parameter correctly but forgetting that **parametric form also gives direction** and may trace only part of a rectangular graph.\n- Assuming matrix multiplication works both ways. In general, $$AB \\ne BA$$, and sometimes one product is defined while the other is not.\n- Adding or multiplying matrices with incompatible dimensions. Always check size first.\n- Finding a rectangular equation from a parametric one but ignoring **domain restrictions** or repeated tracing caused by the parameter.\n\n## Quick Review Checklist\n- [ ] I can write and interpret a **parametric function** of the form $$x=f(t), \\ y=g(t)$$.\n- [ ] I can **eliminate the parameter** to find a rectangular equation when possible.\n- [ ] I can determine how a parametric curve is **traced as $$t$$ increases**.\n- [ ] I can add, subtract, and scale **vectors** in two dimensions.\n- [ ] I can find the **magnitude** of a vector and the vector between two points.\n- [ ] I can identify when **matrix addition** and **matrix multiplication** are defined.\n- [ ] I can compute a **matrix product** and interpret its dimensions.\n- [ ] I can represent and solve a **system of equations** using matrix notation such as $$A\\vec{x}=\\vec{b}$$.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Parametric equations",
+              "definition": "A representation of a curve in which each coordinate is written as a function of an independent variable, often time, such as $$x=f(t)$$ and $$y=g(t)$$."
+            },
+            {
+              "term": "Parameter elimination",
+              "definition": "The process of removing the independent variable from equations like $$x=f(t)$$ and $$y=g(t)$$ to obtain a direct relationship between $$x$$ and $$y$$."
+            },
+            {
+              "term": "Direction of motion",
+              "definition": "The orientation in which a point travels along a curve as the independent variable increases, often determined by evaluating successive coordinate pairs."
+            },
+            {
+              "term": "Velocity vector",
+              "definition": "An ordered pair formed from the derivatives of position coordinates with respect to the independent variable, written as $$\\langle x'(t), y'(t)\\rangle$$."
+            },
+            {
+              "term": "Speed",
+              "definition": "The magnitude of the rate of change of position, computed in two dimensions by $$\\sqrt{\\left(x'(t)\\right)^2+\\left(y'(t)\\right)^2}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A particle has position given by $$x=2t-1$$ and $$y=t^2+3$$. Which rectangular equation describes its path?",
+              "options": [
+                "$$y=\\frac{(x+1)^2}{4}+3$$",
+                "$$y=\\frac{(x-1)^2}{2}+3$$",
+                "$$y=(x+1)^2+3$$",
+                "$$y=2x^2+3$$"
+              ],
+              "correctAnswer": "$$y=\\frac{(x+1)^2}{4}+3$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A particle moves according to $$x=t^2-4t$$ and $$y=2t+1$$. What is its velocity vector at $$t=3$$?",
+              "options": [
+                "$$\\langle 2,2\\rangle$$",
+                "$$\\langle -2,7\\rangle$$",
+                "$$\\langle 2,7\\rangle$$",
+                "$$\\langle 6,2\\rangle$$"
+              ],
+              "correctAnswer": "$$\\langle 2,2\\rangle$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$x=3\\cos t$$ and $$y=3\\sin t$$ for $$0\\le t\\le 2\\pi$$, then the particle moves along the circle in the ______ direction as $$t$$ increases.",
+              "options": [
+                "clockwise",
+                "counterclockwise",
+                "vertical",
+                "undefined"
+              ],
+              "correctAnswer": "counterclockwise",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For the parametric equations $$x=t^2+1$$ and $$y=4t-5$$, the speed at $$t=2$$ is ______.",
+              "options": [
+                "$$4\\sqrt{2}$$",
+                "$$2\\sqrt{5}$$",
+                "$$8$$",
+                "$$\\sqrt{20}$$"
+              ],
+              "correctAnswer": "$$4\\sqrt{2}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Vector in two dimensions",
+              "definition": "A quantity with magnitude and direction represented by an ordered pair, such as $$\\langle a,b\\rangle$$, which can describe displacement or motion in a plane."
+            },
+            {
+              "term": "Magnitude of a vector",
+              "definition": "The length of an ordered pair in the plane, found using $$\\sqrt{a^2+b^2}$$ for $$\\langle a,b\\rangle$$."
+            },
+            {
+              "term": "Matrix addition",
+              "definition": "An operation in which corresponding entries of two arrays with the same dimensions are combined to produce a new array of identical size."
+            },
+            {
+              "term": "Matrix multiplication",
+              "definition": "An operation in which entries of a product array are formed by taking row-by-column dot products, defined only when the number of columns of the first array equals the number of rows of the second."
+            },
+            {
+              "term": "Inverse matrix",
+              "definition": "A square array that, when multiplied by the original square array, produces the identity array, provided the original array is nonsingular."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Let $$\\mathbf{u}=\\langle 3,-4\\rangle$$ and $$\\mathbf{v}=\\langle -1,2\\rangle$$. Which vector is equal to $$2\\mathbf{u}-\\mathbf{v}$$?",
+              "options": [
+                "$$\\langle 7,-10\\rangle$$",
+                "$$\\langle 5,-6\\rangle$$",
+                "$$\\langle 7,-6\\rangle$$",
+                "$$\\langle -7,10\\rangle$$"
+              ],
+              "correctAnswer": "$$\\langle 7,-10\\rangle$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Given $$A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$$ and $$B=\\begin{pmatrix}2&0\\\\-1&5\\end{pmatrix}$$, what is $$AB$$?",
+              "options": [
+                "$$\\begin{pmatrix}0&10\\\\2&20\\end{pmatrix}$$",
+                "$$\\begin{pmatrix}4&10\\\\2&20\\end{pmatrix}$$",
+                "$$\\begin{pmatrix}1&5\\\\5&17\\end{pmatrix}$$",
+                "$$\\begin{pmatrix}2&10\\\\-1&20\\end{pmatrix}$$"
+              ],
+              "correctAnswer": "$$\\begin{pmatrix}0&10\\\\2&20\\end{pmatrix}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The magnitude of $$\\langle -6,8\\rangle$$ is ______.",
+              "options": [
+                "$$10$$",
+                "$$14$$",
+                "$$\\sqrt{28}$$",
+                "$$2$$"
+              ],
+              "correctAnswer": "$$10$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$A=\\begin{pmatrix}2&1\\\\5&3\\end{pmatrix}$$, then the solution to $$A\\begin{pmatrix}x\\\\y\\end{pmatrix}=\\begin{pmatrix}1\\\\4\\end{pmatrix}$$ has $$x=______$$.",
+              "options": [
+                "$$-1$$",
+                "$$1$$",
+                "$$2$$",
+                "$$-2$$"
+              ],
+              "correctAnswer": "$$-1$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

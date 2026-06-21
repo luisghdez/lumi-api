@@ -116,7 +116,7 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP Physics 1",
+    apSubject: "AP Physics 1: Algebra-Based",
     slug: "ap-physics-1",
     units: [
       { unitNumber: 1, unitName: "Kinematics", description: "Displacement, velocity, acceleration, kinematic equations, projectile motion, and graphical analysis of motion." },
@@ -131,7 +131,7 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP Physics 2",
+    apSubject: "AP Physics 2: Algebra-Based",
     slug: "ap-physics-2",
     units: [
       { unitNumber: 1, unitName: "Fluids", description: "Fluid statics and dynamics: pressure, buoyancy, continuity equation, and Bernoulli's principle in depth." },
@@ -157,7 +157,7 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP Physics C: E&M",
+    apSubject: "AP Physics C: Electricity and Magnetism",
     slug: "ap-physics-c-em",
     units: [
       { unitNumber: 1, unitName: "Electrostatics", description: "Coulomb's law, electric field using calculus and Gauss's law, electric potential, and energy in electric fields." },
@@ -219,7 +219,7 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP Pre-Calculus",
+    apSubject: "AP Precalculus",
     slug: "ap-precalculus",
     units: [
       { unitNumber: 1, unitName: "Polynomial and Rational Functions", description: "Polynomial behavior, zeros, end behavior, rational functions, asymptotes, and function composition." },
@@ -275,7 +275,7 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP US Government & Politics",
+    apSubject: "AP United States Government and Politics",
     slug: "ap-us-government",
     units: [
       { unitNumber: 1, unitName: "Foundations of American Democracy", description: "Constitutional principles, Articles of Confederation, Federalist Papers, checks and balances, and federalism." },
@@ -287,7 +287,7 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP Comparative Government & Politics",
+    apSubject: "AP Comparative Government and Politics",
     slug: "ap-comparative-government",
     units: [
       { unitNumber: 1, unitName: "Political Systems, Regimes, and Governments", description: "Regime types, democratic vs. authoritarian systems, legitimacy, sovereignty, and country comparisons." },
@@ -326,7 +326,7 @@ export const AP_CATALOG: CatalogExam[] = [
   // ─── History ───────────────────────────────────────────────────────────────
 
   {
-    apSubject: "AP US History",
+    apSubject: "AP United States History",
     slug: "ap-us-history",
     units: [
       { unitNumber: 1, unitName: "Period 1: 1491–1607", description: "Pre-Columbian America, European exploration, Columbian Exchange, and early contact between Native Americans and Europeans." },
@@ -358,7 +358,7 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP World History",
+    apSubject: "AP World History: Modern",
     slug: "ap-world-history",
     units: [
       { unitNumber: 1, unitName: "The Global Tapestry (c.1200–c.1450)", description: "Song China, Islamic caliphates, Byzantine Empire, African kingdoms, and the Americas before 1450." },
@@ -401,7 +401,7 @@ export const AP_CATALOG: CatalogExam[] = [
   // ─── English ───────────────────────────────────────────────────────────────
 
   {
-    apSubject: "AP English Literature",
+    apSubject: "AP English Literature and Composition",
     slug: "ap-english-literature",
     units: [
       { unitNumber: 1, unitName: "Short Fiction I", description: "Analyzing character, setting, and plot in short fiction; identifying narrative perspective and tone." },
@@ -416,7 +416,7 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP English Language",
+    apSubject: "AP English Language and Composition",
     slug: "ap-english-language",
     units: [
       { unitNumber: 1, unitName: "Rhetorical Situation", description: "Speaker, occasion, audience, purpose, subject, and tone (SOAPSTone); analyzing how context shapes meaning." },
@@ -477,13 +477,13 @@ export const AP_CATALOG: CatalogExam[] = [
   // ─── Languages ─────────────────────────────────────────────────────────────
 
   {
-    apSubject: "AP Spanish Language",
+    apSubject: "AP Spanish Language and Culture",
     slug: "ap-spanish-language",
     units: WORLD_LANGUAGE_UNITS,
   },
 
   {
-    apSubject: "AP Spanish Literature",
+    apSubject: "AP Spanish Literature and Culture",
     slug: "ap-spanish-literature",
     units: [
       { unitNumber: 1, unitName: "La narrativa: el siglo XX (20th-Century Narrative)", description: "Key themes, narrative techniques, and major authors of 20th-century Spanish and Latin American prose." },
@@ -495,31 +495,31 @@ export const AP_CATALOG: CatalogExam[] = [
   },
 
   {
-    apSubject: "AP French",
+    apSubject: "AP French Language and Culture",
     slug: "ap-french",
     units: WORLD_LANGUAGE_UNITS,
   },
 
   {
-    apSubject: "AP German",
+    apSubject: "AP German Language and Culture",
     slug: "ap-german",
     units: WORLD_LANGUAGE_UNITS,
   },
 
   {
-    apSubject: "AP Italian",
+    apSubject: "AP Italian Language and Culture",
     slug: "ap-italian",
     units: WORLD_LANGUAGE_UNITS,
   },
 
   {
-    apSubject: "AP Chinese",
+    apSubject: "AP Chinese Language and Culture",
     slug: "ap-chinese",
     units: WORLD_LANGUAGE_UNITS,
   },
 
   {
-    apSubject: "AP Japanese",
+    apSubject: "AP Japanese Language and Culture",
     slug: "ap-japanese",
     units: WORLD_LANGUAGE_UNITS,
   },

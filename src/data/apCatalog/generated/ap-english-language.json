@@ -1,0 +1,765 @@
+{
+  "apSubject": "AP English Language and Composition",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Rhetorical Situation",
+      "description": "Speaker, occasion, audience, purpose, subject, and tone (SOAPSTone); analyzing how context shapes meaning.",
+      "note": "# Unit 1: Rhetorical Situation\n\n## Overview\nIn this unit, you learn how a text’s **meaning** and **effectiveness** are shaped by its **rhetorical situation**: the interaction among **speaker**, **occasion**, **audience**, **purpose**, **subject**, and **tone**. This matters on the AP English Language and Composition exam because strong rhetorical analysis depends on explaining not just *what* a writer says, but *how* and *why* the writer’s choices fit a specific context.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Rhetorical Situation** | The full context surrounding a text: who is speaking, to whom, why, when, and under what circumstances. | AP questions often reward students who connect rhetorical choices to **context**, not just identify devices in isolation. |\n| **SOAPSTone** | A framework: **Speaker**, **Occasion**, **Audience**, **Purpose**, **Subject**, **Tone**. | Helps you organize analysis quickly in multiple-choice and rhetorical analysis essays. |\n| **Speaker** | The voice, persona, or authorial identity presented in the text. | A speaker’s credibility, position, and perspective affect the text’s appeals and authority. |\n| **Occasion** | The immediate and broader context that prompted the text, including historical moment and exigence. | You must explain how circumstances shape urgency, tone, and rhetorical strategy. |\n| **Audience** | The intended readers/listeners and their beliefs, values, or expectations. | AP analysis improves when you explain how a writer tailors language and appeals to a specific audience. |\n| **Purpose** | What the writer wants the audience to think, feel, believe, or do. | Distinguishing between **inform**, **persuade**, **challenge**, **commemorate**, or **call to action** is essential for line-of-reasoning. |\n| **Tone** | The writer’s attitude toward the subject or audience, conveyed through diction, syntax, and detail. | Tone often reveals purpose and helps explain why certain rhetorical choices are effective. |\n| **Exigence** | The issue, problem, or situation that demands a response. | Exigence sharpens your analysis of *why this text exists at this moment*. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Historical / cultural context\"] --> B[\"Occasion and exigence\"]\n    B --> C[\"Speaker\"]\n    B --> D[\"Audience\"]\n    C --> E[\"Purpose\"]\n    D --> E\n    E --> F[\"Choices in diction, syntax, evidence, appeals, and tone\"]\n    F --> G[\"Audience interpretation / effect\"]\n    G --> H[\"Meaning shaped by rhetorical situation\"]\n```\n\n### How to analyze a rhetorical situation\n1. Identify the **speaker**.\n   - Who is speaking?\n   - What authority, experience, or persona does the speaker bring?\n\n2. Determine the **occasion** and **exigence**.\n   - What event, conflict, or issue prompted the text?\n   - What larger historical or cultural context matters?\n\n3. Identify the **audience**.\n   - Who is the intended audience?\n   - What does that audience likely value, fear, or assume?\n\n4. Clarify the **purpose**.\n   - Is the speaker trying to inform, persuade, unify, criticize, warn, or inspire?\n   - What response is the speaker seeking?\n\n5. Define the **subject**.\n   - What is the text literally about?\n   - What larger issue or debate does it address?\n\n6. Analyze **tone** and rhetorical choices.\n   - How do diction, syntax, imagery, evidence, and appeals reflect the situation?\n   - Why are these choices effective for this audience and purpose?\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **SOAPSTone is a starting point, not the final analysis** | Listing **Speaker**, **Occasion**, **Audience**, **Purpose**, **Subject**, and **Tone** is useful, but AP-level writing must explain how these elements interact. |\n| **Context shapes rhetoric** | A rhetorical choice is meaningful because it fits a particular **occasion**, **audience**, and **purpose**. |\n| **Purpose goes beyond a vague verb** | Avoid weak claims like “the author wants to persuade.” Specify: persuade **whom**, about **what**, and toward **what action or belief**. |\n| **Tone is created, not guessed** | Tone should be inferred from **diction**, **syntax**, **imagery**, and **selection of detail**. |\n| **Audience is constructed and targeted** | The audience may be broader than the immediate readers; writers often address multiple audiences at once. |\n| **Speaker is not always identical to the author** | The **speaker** may be a crafted public voice or persona, especially in speeches, essays, and satire. |\n| **Rhetorical choices produce effects** | Strong analysis follows this logic: **choice** → **effect on audience** → **connection to purpose**. |\n| **Subject is not the same as purpose** | **Subject** is what the text discusses; **purpose** is what the text aims to accomplish. |\n\n### Useful AP analysis sentence pattern\n- **Because** of the **occasion/exigence**, the **speaker** adopts a **tone/strategy** that appeals to the **audience** in order to achieve a specific **purpose**.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Key Difference / Connection** | **Why Students Confuse It** |\n|---|---|---|\n| **Subject vs. Purpose** | **Subject** = topic; **Purpose** = intended outcome. | Students often summarize content instead of analyzing intent. |\n| **Speaker vs. Author** | **Author** is the real person; **speaker** is the voice presented in the text. | In nonfiction, they may seem identical, but AP analysis often benefits from distinguishing the public voice. |\n| **Occasion vs. Exigence** | **Occasion** = circumstances surrounding the text; **exigence** = the urgent problem prompting it. | Both involve context, but exigence emphasizes the reason the text had to be written. |\n| **Audience vs. Tone** | **Audience** is who receives the message; **tone** is the speaker’s attitude. | Students sometimes label tone without explaining how it is calibrated for the audience. |\n\n```mermaid\nflowchart LR\n    A[\"Subject: what the text is about\"] --> B[\"Purpose: what the speaker wants to accomplish\"]\n    C[\"Audience: who is addressed\"] --> D[\"Tone and strategies: how the message is shaped\"]\n    D --> B\n```\n\n## Common AP Exam Traps\n\n- Confusing **summary** with **analysis**: retelling what the passage says is not the same as explaining how the rhetorical situation shapes meaning.\n- Treating **purpose** too broadly: “to persuade” is incomplete unless you specify the belief, action, or attitude the writer seeks.\n- Identifying **tone** with a single adjective but giving no textual support from **diction** or **syntax**.\n- Ignoring **historical context** or **occasion**, especially in speeches, letters, and public arguments.\n- Listing rhetorical devices mechanically without linking them to **audience**, **effect**, and **purpose**.\n\n## Quick Review Checklist\n\n- [ ] I can define **rhetorical situation** and explain why context matters in analysis.\n- [ ] I can identify all parts of **SOAPSTone** in a passage.\n- [ ] I can distinguish **subject** from **purpose**.\n- [ ] I can explain how **occasion** and **exigence** influence a writer’s choices.\n- [ ] I can identify the intended **audience** and describe its likely values or assumptions.\n- [ ] I can support a claim about **tone** using evidence from diction, syntax, or detail.\n- [ ] I can explain rhetorical choices using **choice → effect → purpose** reasoning.\n- [ ] I can write an AP-style thesis connecting **speaker**, **audience**, **purpose**, and **context**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Rhetorical Situation",
+              "definition": "The set of circumstances that surrounds a text, including who is communicating, why the communication occurs, to whom it is directed, and the context that shapes its meaning and effects."
+            },
+            {
+              "term": "Speaker",
+              "definition": "The voice or persona responsible for the message, whose position, credibility, identity, and relationship to the topic influence how the audience receives the text."
+            },
+            {
+              "term": "Audience",
+              "definition": "The intended or likely readers, listeners, or viewers whose beliefs, values, knowledge, and expectations shape the choices a writer or speaker makes."
+            },
+            {
+              "term": "Purpose",
+              "definition": "The writer’s or speaker’s intended effect, such as to persuade, inform, entertain, define, challenge, or call an audience to action."
+            },
+            {
+              "term": "Occasion",
+              "definition": "The event, issue, circumstance, or broader historical moment that prompts a text and gives urgency or relevance to its message."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student analyzes a political speech by identifying the economic crisis that prompted it, the citizens it addresses, and the speaker’s attempt to restore public confidence. Which choice best explains the value of that analysis?",
+              "options": [
+                "It situates the speech within the circumstances that shape its claims and strategies.",
+                "It proves that the speech is objective rather than persuasive.",
+                "It shows that the speech relies primarily on figurative language.",
+                "It eliminates the need to evaluate the speaker’s tone."
+              ],
+              "correctAnswer": "It situates the speech within the circumstances that shape its claims and strategies.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best distinguishes purpose from audience in rhetorical analysis?",
+              "options": [
+                "Purpose is the central topic of a text, whereas audience is the historical moment in which it appears.",
+                "Purpose is the effect the writer seeks to achieve, whereas audience is the group the writer seeks to affect.",
+                "Purpose is the emotional atmosphere of a text, whereas audience is the evidence used to support claims.",
+                "Purpose is the writer’s credibility, whereas audience is the writer’s organizational pattern."
+              ],
+              "correctAnswer": "Purpose is the effect the writer seeks to achieve, whereas audience is the group the writer seeks to affect.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In rhetorical analysis, the ______ refers to the specific event, situation, or historical context that motivates a text’s creation.",
+              "options": [
+                "occasion",
+                "audience",
+                "syntax",
+                "genre"
+              ],
+              "correctAnswer": "occasion",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a writer adjusts diction and evidence to appeal to skeptical business leaders rather than high school students, the writer is responding primarily to the ______.",
+              "options": [
+                "audience",
+                "subject",
+                "imagery",
+                "speaker"
+              ],
+              "correctAnswer": "audience",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Subject",
+              "definition": "The specific topic, issue, or matter under discussion, distinct from the broader circumstances or the effect the writer hopes to achieve."
+            },
+            {
+              "term": "Tone",
+              "definition": "The writer’s or speaker’s attitude toward the subject, audience, or occasion as conveyed through diction, syntax, imagery, and detail."
+            },
+            {
+              "term": "Context",
+              "definition": "The larger social, historical, cultural, or political conditions that inform a text and influence how its message is produced and interpreted."
+            },
+            {
+              "term": "Exigence",
+              "definition": "An issue, problem, or urgency that calls forth discourse and helps explain why a text appears at a particular moment."
+            },
+            {
+              "term": "SOAPSTone",
+              "definition": "A framework for examining a text by considering the communicator, prompting circumstances, intended recipients, desired effect, topic, and attitude."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "An author writes an editorial immediately after a major court ruling, adopting restrained but urgent language to address undecided voters. Which factor most directly explains why that language is effective?",
+              "options": [
+                "The context created by the ruling shapes what the audience is prepared to hear and how the message will be interpreted.",
+                "The editorial’s effectiveness depends entirely on whether it avoids any emotional appeal.",
+                "The author’s subject is more important than the intended audience in every rhetorical situation.",
+                "The language is effective because court rulings automatically guarantee a writer’s credibility."
+              ],
+              "correctAnswer": "The context created by the ruling shapes what the audience is prepared to hear and how the message will be interpreted.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which interpretation best reflects an AP Lang understanding of tone?",
+              "options": [
+                "It is the text’s topic stated in neutral terms.",
+                "It is the writer’s attitude conveyed through stylistic choices.",
+                "It is the intended audience’s reaction to the text.",
+                "It is the organizational structure of a text’s argument."
+              ],
+              "correctAnswer": "It is the writer’s attitude conveyed through stylistic choices.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In the SOAPSTone framework, the ______ identifies what the text is about rather than why it was written.",
+              "options": [
+                "subject",
+                "purpose",
+                "occasion",
+                "tone"
+              ],
+              "correctAnswer": "subject",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A pressing problem or urgency that prompts someone to write or speak is called the ______.",
+              "options": [
+                "exigence",
+                "syntax",
+                "allusion",
+                "persona"
+              ],
+              "correctAnswer": "exigence",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Claims and Evidence in Argument",
+      "description": "Types of claims, use of evidence, source credibility, and structuring arguments.",
+      "note": "# Unit 2: Claims and Evidence in Argument\n\n## Overview\nIn this unit, you learn how writers build **arguments** by making clear **claims**, supporting them with effective **evidence**, and organizing reasoning so an audience can follow and trust the argument. This matters on the AP English Language and Composition exam because both the **multiple-choice** and **free-response** sections reward your ability to identify, evaluate, and produce arguments that are logical, credible, and well supported.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Claim** | A writer’s main assertion or position. | You must identify what an author is actually arguing and make your own defensible claim in essays. |\n| **Thesis** | The central claim that guides the entire argument. | On the argument essay, a precise thesis sets up line of reasoning and scoring strength. |\n| **Evidence** | Facts, examples, data, testimony, and other support used to back a claim. | AP readers look for relevant, specific evidence rather than vague generalization. |\n| **Reasoning** | The explanation that connects evidence to the claim. | Strong evidence alone is not enough; you must show how it proves the claim. |\n| **Source Credibility** | The trustworthiness and authority of a source. | You may be asked to evaluate whether support is reliable, biased, current, or appropriate. |\n| **Counterclaim** | A viewpoint that opposes the main claim. | Effective arguments often acknowledge and respond to counterarguments, showing complexity. |\n| **Line of Reasoning** | The logical structure that develops the argument from claim through support. | A clear progression of ideas is essential for high-scoring rhetorical and argument essays. |\n| **Evidence Selection** | The process of choosing the most relevant and persuasive support. | AP success depends on using evidence strategically, not just including a lot of it. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Read the prompt or argument] --> B[Identify the main **claim**]\n    B --> C[Determine the **purpose** and audience]\n    C --> D[Examine the **evidence** used]\n    D --> E[Evaluate **source credibility** and relevance]\n    E --> F[Analyze the **reasoning** linking evidence to claim]\n    F --> G[Identify **counterclaims** and responses]\n    G --> H[Judge overall effectiveness of the argument]\n```\n\nYou can also think of argument construction as a writing workflow:\n\n1. Form a **defensible claim**.\n2. Select **relevant, credible evidence**.\n3. Explain the **reasoning** that connects support to claim.\n4. Address a **counterclaim** or limitation.\n5. Organize ideas into a clear **line of reasoning**.\n6. Revise for precision, coherence, and rhetorical effectiveness.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **A claim must be arguable** | A real **claim** is not a simple fact; it is a position someone could reasonably challenge. |\n| **Evidence must be relevant** | Good **evidence** directly supports the claim being made, not just the general topic. |\n| **Evidence requires commentary** | In AP writing, support earns value when paired with **reasoning** that explains its significance. |\n| **Credibility depends on context** | A source may be strong in one context and weak in another depending on **expertise**, **bias**, **timeliness**, and **purpose**. |\n| **Counterargument strengthens argument** | Addressing a **counterclaim** can increase sophistication if the response is thoughtful and purposeful. |\n| **Organization reflects logic** | A strong **line of reasoning** develops point by point rather than listing disconnected examples. |\n| **Specificity beats generality** | Precise examples, details, and explanations are more persuasive than broad, unsupported assertions. |\n| **Rhetorical situation matters** | Claims and evidence should be analyzed in relation to **audience**, **purpose**, and **context**. |\n\n### Useful claim categories\nStudents should recognize common **types of claims**:\n\n- **Claims of fact**: assert whether something is true.\n- **Claims of value**: argue that something is good, bad, just, effective, important, and so on.\n- **Claims of policy**: argue for a course of action, often answering what should be done.\n- **Claims of cause**: argue that one thing leads to another.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Key Difference / Connection** | **Why Students Confuse Them** |\n|---|---|---|\n| **Claim vs. Thesis** | A **claim** can be a single arguable point; a **thesis** is the controlling central claim of a full essay. | Students often use the terms interchangeably without seeing that a thesis organizes the whole argument. |\n| **Evidence vs. Reasoning** | **Evidence** is the support; **reasoning** is the explanation of how that support proves the claim. | Students may provide examples but fail to explain their significance. |\n| **Credibility vs. Relevance** | **Credibility** asks whether the source is trustworthy; **relevance** asks whether it actually supports the point. | A source can be credible but still not prove the claim being made. |\n| **Counterclaim vs. Refutation** | A **counterclaim** is the opposing view; **refutation** is the response that challenges or limits it. | Students sometimes mention the opposing view without actually answering it. |\n\n```mermaid\nflowchart LR\n    A[**Claim**] --> B[**Evidence**]\n    B --> C[**Reasoning**]\n    C --> D[**Conclusion**]\n    E[**Counterclaim**] --> F[**Refutation / Qualification**]\n    F --> C\n```\n\n## Common AP Exam Traps\n\n- Confusing **summary** with **analysis**: identifying what a source says is not the same as explaining how it supports a claim.\n- Assuming that more evidence automatically means a stronger argument; weak, irrelevant, or unexplained evidence does little.\n- Treating all published sources as equally **credible** without considering expertise, bias, or context.\n- Writing a thesis that is too broad, obvious, or purely factual rather than clearly **arguable**.\n- Mentioning a **counterclaim** only superficially, without integrating it into the overall line of reasoning.\n\n## Quick Review Checklist\n\n- [ ] I can distinguish among **claims of fact**, **value**, **policy**, and **cause**.\n- [ ] I can identify an author’s central **claim** or **thesis** in a passage.\n- [ ] I can evaluate whether a piece of **evidence** is relevant, specific, and persuasive.\n- [ ] I can explain the **reasoning** that connects evidence to a claim.\n- [ ] I can assess **source credibility** using factors such as authority, bias, and timeliness.\n- [ ] I can identify and analyze a **counterclaim** and the writer’s response to it.\n- [ ] I can build a clear **line of reasoning** in my own argument essay.\n- [ ] I can avoid unsupported assertions by pairing every major claim with evidence and commentary.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Claim of Fact",
+              "definition": "An assertion that something is true, false, has happened, or can be verified through observation, data, or historical record."
+            },
+            {
+              "term": "Claim of Value",
+              "definition": "An assertion that judges something according to criteria such as morality, importance, effectiveness, or worth."
+            },
+            {
+              "term": "Claim of Policy",
+              "definition": "An assertion that argues for a specific action, change, or solution, often signaled by language such as what should be done."
+            },
+            {
+              "term": "Evidence",
+              "definition": "Specific support used to back an assertion, including examples, statistics, testimony, or textual references that make the reasoning more convincing."
+            },
+            {
+              "term": "Line of Reasoning",
+              "definition": "The logical sequence that connects an assertion to supporting points and shows how the overall argument develops toward its conclusion."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A writer argues that public libraries should expand evening hours because working families need greater access to educational resources. Which choice best identifies the type of claim in the writer’s argument?",
+              "options": [
+                "Claim of fact",
+                "Claim of policy",
+                "Claim of definition",
+                "Claim of cause"
+              ],
+              "correctAnswer": "Claim of policy",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which revision would most strengthen the evidentiary support in an argument about the effects of school start times on student performance?",
+              "options": [
+                "Replacing a broad assertion with data from a peer-reviewed sleep study and district attendance records",
+                "Adding a rhetorical question that emphasizes the writer’s frustration",
+                "Repeating the thesis at the end of the paragraph in stronger language",
+                "Including a personal opinion about how teenagers often seem tired"
+              ],
+              "correctAnswer": "Replacing a broad assertion with data from a peer-reviewed sleep study and district attendance records",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When a writer asserts that a city’s water system contains unsafe lead levels based on laboratory reports and municipal records, the central assertion is best classified as a ______.",
+              "options": [
+                "claim of fact",
+                "claim of value",
+                "counterclaim",
+                "concession"
+              ],
+              "correctAnswer": "claim of fact",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In an effective argument, each paragraph should contribute to the writer’s ______ by clearly connecting supporting material to the thesis.",
+              "options": [
+                "line of reasoning",
+                "syntax",
+                "figurative language",
+                "tone shift"
+              ],
+              "correctAnswer": "line of reasoning",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Source Credibility",
+              "definition": "The degree to which material deserves trust based on the author’s expertise, the publication context, the quality of support, and the absence or acknowledgment of bias."
+            },
+            {
+              "term": "Counterclaim",
+              "definition": "A position that challenges the writer’s main assertion and must be addressed to strengthen the overall argument."
+            },
+            {
+              "term": "Concession",
+              "definition": "A strategic acknowledgment that an opposing point has some merit, often used to build fairness and strengthen the writer’s position."
+            },
+            {
+              "term": "Commentary",
+              "definition": "Explanation that interprets support, shows why it matters, and links it directly to the broader assertion being developed."
+            },
+            {
+              "term": "Synthesis",
+              "definition": "The act of combining information or perspectives from multiple sources to develop a unified argument rather than merely summarizing each source separately."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which factor would most seriously weaken the credibility of a source used in an argument about environmental regulation?",
+              "options": [
+                "The source presents current data but acknowledges limitations in the study",
+                "The source is written by a researcher with expertise in public policy",
+                "The source is published by an advocacy group that omits conflicting evidence and provides no verifiable citations",
+                "The source compares recent findings with earlier government reports"
+              ],
+              "correctAnswer": "The source is published by an advocacy group that omits conflicting evidence and provides no verifiable citations",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student writer summarizes an opposing viewpoint, acknowledges one of its strongest points, and then explains why the thesis still stands. This move functions primarily as which rhetorical strategy?",
+              "options": [
+                "Concession",
+                "Hyperbole",
+                "Narration",
+                "Analogy"
+              ],
+              "correctAnswer": "Concession",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When a writer integrates several sources to develop one coherent position on a controversial issue, that writer is practicing ______.",
+              "options": [
+                "synthesis",
+                "plotting",
+                "description",
+                "classification"
+              ],
+              "correctAnswer": "synthesis",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "After quoting a source, an effective writer should provide ______ that explains how the quotation supports the argument.",
+              "options": [
+                "commentary",
+                "imagery",
+                "allusion",
+                "parallelism"
+              ],
+              "correctAnswer": "commentary",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Reasoning and Organization",
+      "description": "Logical reasoning structures, refutation, concession, arrangement, and line of reasoning.",
+      "note": "# Unit 3: Reasoning and Organization\n\n## Overview\nThis unit focuses on how writers build **logical arguments** through **line of reasoning**, strategic **organization**, and techniques like **concession** and **refutation**. For the AP English Language and Composition exam, mastering these moves helps you analyze how an argument works and craft your own essays with clear, persuasive structure.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Line of Reasoning** | The logical sequence of claims, evidence, and commentary that develops an argument from beginning to end. | The AP exam often asks you to identify or create a **line of reasoning** that is coherent, purposeful, and sustained. |\n| **Claim** | A writer’s main assertion or position. | Every rhetorical analysis, argument essay, and synthesis essay depends on recognizing the **claim** and how it is supported. |\n| **Evidence** | Specific facts, examples, anecdotes, data, or references used to support a claim. | On AP essays, strong reasoning requires relevant **evidence**, not just opinion or summary. |\n| **Commentary** | Explanation of how the evidence supports the claim and advances the argument. | AP readers look for reasoning, not just quotations or examples; **commentary** connects the parts. |\n| **Organization / Arrangement** | The order in which ideas, claims, counterclaims, and evidence are presented. | Writers arrange ideas for emphasis, clarity, and persuasion; analyzing this structure is central to rhetorical analysis. |\n| **Concession** | Acknowledging a valid point from an opposing viewpoint. | **Concession** can make an argument more nuanced and credible, especially in the argument essay. |\n| **Refutation** | Responding to and challenging an opposing claim. | Effective **refutation** shows control of complexity and strengthens the writer’s own position. |\n| **Counterargument** | An opposing perspective that complicates or challenges the writer’s claim. | AP prompts reward students who can engage with **counterarguments** instead of oversimplifying issues. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify the writer's main claim] --> B[Trace supporting reasons]\n    B --> C[Examine evidence and examples]\n    C --> D[Analyze commentary and explanation]\n    D --> E[Determine the line of reasoning]\n    E --> F[Notice organizational choices]\n    F --> G[Evaluate concession and counterargument]\n    G --> H[Assess refutation and overall effectiveness]\n```\n\n### How argument structure typically works\n1. **Establish a claim**\n   - The writer states or implies a central argument.\n2. **Develop supporting reasons**\n   - Each body section usually advances one part of the overall reasoning.\n3. **Support with evidence**\n   - Evidence may be empirical, anecdotal, historical, or illustrative.\n4. **Explain significance**\n   - Commentary shows why the evidence matters.\n5. **Address opposition**\n   - The writer may use **concession** or **counterargument**.\n6. **Refute or qualify**\n   - The writer answers objections to reinforce credibility and control.\n7. **Conclude with purpose**\n   - The ending reinforces the argument’s stakes, implications, or call to action.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **A claim must be arguable** | A real **claim** is not just a fact; it is a position that could be challenged. |\n| **Evidence without commentary is incomplete** | Strong reasoning requires not only evidence but also explanation of how that evidence supports the claim. |\n| **Line of reasoning must be logical and connected** | Each paragraph should contribute to the overall argument rather than functioning as an isolated point. |\n| **Organization creates meaning** | The arrangement of ideas can emphasize urgency, build complexity, or guide the audience toward a conclusion. |\n| **Concession is not surrender** | A **concession** strengthens an argument when the writer acknowledges a valid opposing point but still maintains the central claim. |\n| **Refutation must directly answer opposition** | Effective **refutation** does more than dismiss; it explains why the counterclaim is flawed, limited, or less persuasive. |\n| **Counterarguments increase sophistication** | Engaging alternative views can make an argument more credible and nuanced. |\n| **Purpose and audience shape organization** | Writers arrange ideas differently depending on what they want the audience to think, feel, or do. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Relate** | **Key Distinction** |\n|---|---|---|\n| **Claim vs. Line of Reasoning** | The **claim** is the position; the **line of reasoning** is the path used to prove it. | A writer can have a clear claim but weak reasoning if the support is disconnected. |\n| **Evidence vs. Commentary** | **Evidence** provides support; **commentary** explains and interprets that support. | Evidence shows; commentary proves. |\n| **Concession vs. Refutation** | Both engage opposing views. | **Concession** acknowledges value in the opposition; **refutation** responds against it. |\n| **Organization vs. Development** | Both shape how an argument unfolds. | **Organization** is the order of ideas; **development** is how fully and logically those ideas are explained. |\n\n```mermaid\nflowchart LR\n    A[Claim] --> B[Reasons]\n    B --> C[Evidence]\n    C --> D[Commentary]\n    D --> E[Line of Reasoning]\n\n    F[Counterargument] --> G[Concession]\n    F --> H[Refutation]\n\n    E --> I[Overall Effectiveness]\n    G --> I\n    H --> I\n```\n\n## Common AP Exam Traps\n\n- Confusing **summary** with **analysis**: identifying what a passage says is not the same as explaining how its reasoning is structured.\n- Treating **evidence** as automatically persuasive without analyzing the writer’s **commentary** or logic.\n- Assuming **concession** weakens an argument; on the AP exam, it often strengthens credibility.\n- Listing rhetorical choices without explaining how they contribute to the **line of reasoning**.\n- Writing body paragraphs that make separate points but do not build a unified, progressive argument.\n\n## Quick Review Checklist\n\n- [ ] I can define **claim**, **evidence**, **commentary**, and **line of reasoning**.\n- [ ] I can trace how a writer organizes ideas to guide an audience toward a conclusion.\n- [ ] I can identify when a writer uses **concession**, **counterargument**, or **refutation**.\n- [ ] I can explain the difference between **evidence** and **commentary** in an argument.\n- [ ] I can analyze how paragraph order contributes to a text’s overall effectiveness.\n- [ ] I can evaluate whether an argument’s **line of reasoning** is coherent and well supported.\n- [ ] I can write an argument that addresses opposition without losing focus on my own claim.\n- [ ] I can avoid mere summary and instead explain how reasoning and organization create persuasion.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Line of Reasoning",
+              "definition": "A sequence of connected claims, evidence, and explanations that develops an argument from beginning to end toward a specific conclusion."
+            },
+            {
+              "term": "Claim",
+              "definition": "A debatable assertion that establishes a writer's position and requires support through evidence and explanation."
+            },
+            {
+              "term": "Evidence",
+              "definition": "Specific information, examples, testimony, or data used to support an assertion and increase its credibility."
+            },
+            {
+              "term": "Commentary",
+              "definition": "The writer's explanation of how supporting material proves a point and advances the overall argument."
+            },
+            {
+              "term": "Arrangement",
+              "definition": "The deliberate ordering of ideas, paragraphs, and supporting material to maximize clarity and persuasive effect."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which choice best explains how a writer most effectively establishes a strong line of reasoning in an argumentative passage?",
+              "options": [
+                "By listing several unrelated examples to create the impression of broad knowledge",
+                "By connecting each claim to supporting evidence and explaining how each point advances the central argument",
+                "By relying primarily on emotionally charged language rather than explicit logical connections",
+                "By presenting the opposition's position in detail without clarifying the writer's own stance"
+              ],
+              "correctAnswer": "By connecting each claim to supporting evidence and explaining how each point advances the central argument",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student argues that school lunch should be free for all students. Which revision would most strengthen the organization of the argument?",
+              "options": [
+                "Beginning with a personal anecdote and ending without addressing cost concerns",
+                "Grouping reasons by topic, such as equity, academic performance, and public health, and developing each in a separate paragraph",
+                "Placing the strongest evidence in the middle of a paragraph with no topic sentence",
+                "Alternating randomly between reasons supporting and opposing the policy"
+              ],
+              "correctAnswer": "Grouping reasons by topic, such as equity, academic performance, and public health, and developing each in a separate paragraph",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In an effective argument, the writer's explanation of how the evidence supports the claim is called ______.",
+              "options": [
+                "commentary",
+                "narration",
+                "counterclaim",
+                "transition"
+              ],
+              "correctAnswer": "commentary",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a writer deliberately orders ideas to build an argument from one point to the next, the writer is shaping the essay's ______.",
+              "options": [
+                "arrangement",
+                "syntax",
+                "tone",
+                "diction"
+              ],
+              "correctAnswer": "arrangement",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Counterargument",
+              "definition": "An opposing viewpoint that challenges the writer's position and must be addressed to strengthen the argument."
+            },
+            {
+              "term": "Refutation",
+              "definition": "A response that exposes weaknesses in an opposing position by using reasoning and evidence to show why it is flawed or less convincing."
+            },
+            {
+              "term": "Concession",
+              "definition": "A strategic acknowledgment that an opposing point has some validity, often used to build credibility before advancing the main position."
+            },
+            {
+              "term": "Qualifier",
+              "definition": "A word or phrase that limits the scope of a statement, showing precision and avoiding overstatement."
+            },
+            {
+              "term": "Transition",
+              "definition": "A word, phrase, or sentence that clarifies relationships among ideas and helps readers follow the progression of the argument."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Why might a writer include a concession in an argumentative essay?",
+              "options": [
+                "To replace the thesis with a neutral summary of both sides",
+                "To acknowledge a valid point from the opposition while still maintaining the overall argument",
+                "To avoid taking a clear position on a controversial issue",
+                "To signal that the writer has abandoned the original claim"
+              ],
+              "correctAnswer": "To acknowledge a valid point from the opposition while still maintaining the overall argument",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which scenario best illustrates effective refutation?",
+              "options": [
+                "A writer repeats an opponent's claim but offers no response",
+                "A writer dismisses an opposing view as foolish without citing reasons",
+                "A writer summarizes an opposing position and then uses evidence to demonstrate its limitations",
+                "A writer shifts to a new topic whenever objections arise"
+              ],
+              "correctAnswer": "A writer summarizes an opposing position and then uses evidence to demonstrate its limitations",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "By admitting that a counterargument has some merit before responding to it, a writer is using ______.",
+              "options": [
+                "concession",
+                "hyperbole",
+                "analogy",
+                "description"
+              ],
+              "correctAnswer": "concession",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A sentence such as 'however' or 'therefore' often functions as a ______ by signaling the relationship between ideas.",
+              "options": [
+                "transition",
+                "claim",
+                "refrain",
+                "generalization"
+              ],
+              "correctAnswer": "transition",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Style",
+      "description": "Diction, syntax, figurative language, tone, and how stylistic choices create rhetorical effect.",
+      "note": "# Unit 4: Style\n\n## Overview\nIn this unit, you study how **style** shapes meaning and persuasion through **diction**, **syntax**, **figurative language**, and **tone**. On the AP English Language and Composition exam, success depends not just on identifying these choices, but on explaining **how** and **why** a writer’s stylistic decisions create a specific **rhetorical effect** for a particular audience and purpose.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Diction** | A writer’s word choice, including level of formality, connotation, and specificity. | AP questions and essays often ask how specific word choices shape **tone**, **meaning**, or **appeal**. |\n| **Syntax** | The arrangement of words, phrases, and clauses in sentences. | Sentence structure can create **emphasis**, **urgency**, **clarity**, **contrast**, or **rhythm**, all of which are important in rhetorical analysis. |\n| **Figurative Language** | Language that goes beyond literal meaning, such as **metaphor**, **simile**, **personification**, and **imagery**. | Figurative language often reveals a writer’s attitude and helps build emotional or conceptual impact. |\n| **Tone** | The writer’s attitude toward the subject, audience, or occasion. | Students must distinguish tone precisely and connect it to textual evidence and rhetorical purpose. |\n| **Rhetorical Effect** | The impact a stylistic choice has on the audience’s understanding, emotion, or response. | On the AP exam, identifying a device is not enough; you must explain its **effect**. |\n| **Imagery** | Descriptive language that appeals to the senses. | Imagery helps shape **mood**, support **tone**, and make abstract ideas vivid and persuasive. |\n| **Parallelism and Repetition** | Deliberate reuse of structure or wording for emphasis and rhythm. | These choices are common in speeches and arguments; they can reinforce claims and make ideas memorable. |\n| **Shifts in Style** | Changes in tone, syntax, diction, or figurative language within a passage. | AP passages often include shifts that signal a change in argument, attitude, or emphasis. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Read the passage closely] --> B[Identify major stylistic choices]\n    B --> C[Analyze local effect of a choice]\n    C --> D[Connect effect to tone]\n    D --> E[Connect tone to purpose]\n    E --> F[Explain audience impact]\n    F --> G[Form a rhetorical analysis claim]\n\n    B --> H[Look for patterns]\n    H --> I[Repetition, contrast, shifts, emphasis]\n    I --> C\n```\n\n### How to Analyze Style on the AP Exam\n1. **Notice the language**\n   - Look for unusual **word choice**, striking **images**, repeated phrases, or distinct sentence patterns.\n2. **Name the stylistic feature**\n   - Identify whether the writer uses **diction**, **syntax**, **figurative language**, **imagery**, **parallelism**, or another strategy.\n3. **Describe the immediate effect**\n   - Ask: What does this choice make the reader notice, feel, or understand?\n4. **Connect to tone**\n   - Determine how the stylistic feature contributes to an attitude such as **skeptical**, **admiring**, **urgent**, or **ironic**.\n5. **Connect to rhetorical purpose**\n   - Explain how the choice helps the writer inform, persuade, criticize, commemorate, or provoke reflection.\n6. **Frame the audience impact**\n   - Strong AP analysis often explains how the choice positions or influences the audience.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Device + Effect Rule** | Never stop at naming a device. Always explain **how it works** and **why it matters**. |\n| **Tone Must Be Precise** | Use specific tone words like **qualified**, **reverent**, **indignant**, or **playful**, not vague words like “good” or “bad.” |\n| **Style Supports Purpose** | Every stylistic observation should connect to the writer’s larger **purpose** or **argument**. |\n| **Context Matters** | The same device can have different effects in different passages; avoid formulaic interpretations. |\n| **Patterns Matter More Than Isolated Examples** | A repeated stylistic pattern usually matters more than a single decorative phrase. |\n| **Syntax Creates Emphasis** | Short sentences can create **urgency** or **force**; long periodic sentences can create **suspense**, **complexity**, or **control**. |\n| **Diction Carries Connotation** | Words do more than denote meaning; they suggest values, emotions, and judgments. |\n| **Shifts Signal Meaning** | A shift in style often marks a change in **tone**, **perspective**, or **argumentative strategy**. |\n\n### Common Syntax Terms to Know\n- **Parallelism**: repetition of grammatical structure for balance and emphasis  \n- **Anaphora**: repetition at the beginning of clauses or phrases  \n- **Antithesis**: juxtaposition of contrasting ideas in balanced structure  \n- **Periodic sentence**: main idea delayed until the end  \n- **Loose sentence**: main idea appears early, followed by additional detail  \n- **Asyndeton**: omission of conjunctions  \n- **Polysyndeton**: deliberate overuse of conjunctions  \n\n## Connections & Comparisons\n\n| **Concept Pair** | **Key Difference / Relationship** | **Why Students Confuse Them** | **AP-Level Distinction** |\n|---|---|---|---|\n| **Diction vs. Tone** | **Diction** is the language choice; **tone** is the attitude created by that choice. | Students often label a word choice as tone itself. | Explain that diction **produces** tone. |\n| **Syntax vs. Organization** | **Syntax** works at the sentence level; **organization** works at the paragraph or whole-text level. | Both involve structure. | If you are discussing sentence arrangement, it is syntax; if discussing sequence of ideas, it is organization. |\n| **Imagery vs. Figurative Language** | **Imagery** appeals to the senses; **figurative language** compares or extends meaning beyond the literal. | Some figurative language creates imagery, but not all imagery is figurative. | Be specific about whether the effect comes from sensory detail, comparison, or both. |\n| **Repetition vs. Redundancy** | **Repetition** is deliberate and purposeful; **redundancy** is unnecessary duplication. | Repeated wording can seem excessive. | On the AP exam, explain the rhetorical purpose behind repeated structure or phrasing. |\n\n```mermaid\nflowchart LR\n    A[Diction] --> D[Tone]\n    B[Syntax] --> D\n    C[Figurative Language] --> D\n    D --> E[Rhetorical Effect]\n    E --> F[Audience Response]\n    F --> G[Writer's Purpose]\n```\n\n## Common AP Exam Traps\n- Confusing **identification** with **analysis**: naming **metaphor** or **parallelism** without explaining its rhetorical effect will not earn strong analysis.\n- Using vague tone words such as “nice,” “sad,” or “angry” instead of precise, defensible terms like **melancholic**, **scornful**, or **measured**.\n- Treating every stylistic device as automatically persuasive without explaining **why this specific audience** would respond to it.\n- Ignoring **shifts** in tone or syntax that complicate the passage’s meaning.\n- Over-quoting evidence instead of selecting a brief example and analyzing its significance.\n\n## Quick Review Checklist\n- [ ] I can define **diction**, **syntax**, **figurative language**, **imagery**, **tone**, and **rhetorical effect**.\n- [ ] I can explain how **word choice** shapes a writer’s tone and purpose.\n- [ ] I can identify important **syntactical patterns** such as **parallelism**, **anaphora**, **periodic sentences**, and **antithesis**.\n- [ ] I can distinguish between **literal meaning** and **figurative meaning** in a passage.\n- [ ] I can connect a stylistic feature to its **effect on the audience**.\n- [ ] I can track **shifts** in style and explain what they reveal about the writer’s argument or attitude.\n- [ ] I can write an AP-style rhetorical analysis sentence that moves from **evidence** to **effect** to **purpose**.\n- [ ] I can avoid merely labeling devices and instead explain **how style creates meaning and persuasion**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Diction",
+              "definition": "An author’s deliberate choice of words to shape meaning, audience response, and the level of formality or intensity in a passage."
+            },
+            {
+              "term": "Syntax",
+              "definition": "The arrangement of words, phrases, and clauses in sentences, often used to control emphasis, pacing, and clarity."
+            },
+            {
+              "term": "Denotation",
+              "definition": "The direct, dictionary-level meaning of a word apart from associated feelings or implied meanings."
+            },
+            {
+              "term": "Connotation",
+              "definition": "The emotional, cultural, or implied associations attached to a word beyond its literal sense."
+            },
+            {
+              "term": "Tone",
+              "definition": "A writer’s attitude toward a subject, audience, or occasion as conveyed through language, detail, and sentence structure."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which choice best explains how a shift from short, declarative sentences to longer, periodic sentences can affect a passage’s rhetorical impact?",
+              "options": [
+                "It can increase suspense and delay emphasis until the sentence’s end.",
+                "It eliminates the need for transitions between ideas.",
+                "It guarantees that the writer’s tone becomes objective.",
+                "It makes the argument depend entirely on figurative language."
+              ],
+              "correctAnswer": "It can increase suspense and delay emphasis until the sentence’s end.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A writer describes a policy as “streamlined” rather than “reduced.” The most relevant stylistic distinction is that the chosen word",
+              "options": [
+                "has a more favorable connotation that frames the policy positively.",
+                "changes the denotation so completely that the policy’s meaning is reversed.",
+                "functions as a literal statistic rather than evaluative language.",
+                "removes all tone from the sentence."
+              ],
+              "correctAnswer": "has a more favorable connotation that frames the policy positively.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When a writer selects words primarily for their emotional and associative force rather than their strict dictionary meanings, the writer is relying on ______.",
+              "options": [
+                "connotation",
+                "syntax",
+                "organization",
+                "evidence"
+              ],
+              "correctAnswer": "connotation",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A writer’s attitude toward the subject, revealed through choices in language and detail, is called ______.",
+              "options": [
+                "tone",
+                "counterclaim",
+                "thesis",
+                "qualification"
+              ],
+              "correctAnswer": "tone",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Imagery",
+              "definition": "Language that appeals to the senses in order to make an idea, scene, or experience vivid for the audience."
+            },
+            {
+              "term": "Metaphor",
+              "definition": "A comparison that equates unlike things without using words of explicit comparison, often revealing a new perspective on a subject."
+            },
+            {
+              "term": "Parallelism",
+              "definition": "The use of similar grammatical structures in related words, phrases, or clauses to create balance, rhythm, and emphasis."
+            },
+            {
+              "term": "Periodic sentence",
+              "definition": "A sentence that withholds its main clause or central idea until the end, often building tension or emphasis."
+            },
+            {
+              "term": "Juxtaposition",
+              "definition": "The placement of contrasting ideas, images, or details close together to highlight differences or produce insight."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a speech, a writer repeats the structure “we demand justice, we demand dignity, we demand change.” Which rhetorical effect is most directly created by this stylistic choice?",
+              "options": [
+                "It reinforces key ideas through rhythm and balanced structure.",
+                "It introduces ambiguity by obscuring the speaker’s purpose.",
+                "It weakens the argument by making it overly informal.",
+                "It shifts the appeal from logos to visual evidence."
+              ],
+              "correctAnswer": "It reinforces key ideas through rhythm and balanced structure.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which interpretation best captures the effect of juxtaposing descriptions of a luxurious banquet with images of nearby hunger?",
+              "options": [
+                "The contrast intensifies the critique of inequality.",
+                "The comparison neutralizes the passage’s emotional force.",
+                "The placement mainly clarifies chronological sequence.",
+                "The contrast establishes a purely celebratory tone."
+              ],
+              "correctAnswer": "The contrast intensifies the critique of inequality.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A sentence that delays its main point until the end in order to build anticipation is known as a ______.",
+              "options": [
+                "periodic sentence",
+                "fragment",
+                "loose sentence",
+                "rhetorical question"
+              ],
+              "correctAnswer": "periodic sentence",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a writer presents one thing as if it were another in order to deepen meaning without using “like” or “as,” the writer is using a ______.",
+              "options": [
+                "metaphor",
+                "simile",
+                "allusion",
+                "metonymy"
+              ],
+              "correctAnswer": "metaphor",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Exam Preparation: Synthesis, Rhetoric, and Argument",
+      "description": "Writing synthesis, rhetorical analysis, and argument essays; integrating sources and citing evidence.",
+      "note": "# Unit 5: Exam Preparation: Synthesis, Rhetoric, and Argument\n\n## Overview\nThis unit focuses on the three major **free-response essay tasks** in **AP English Language and Composition**: the **synthesis essay**, **rhetorical analysis essay**, and **argument essay**. Success on the AP exam depends not just on understanding texts, but on crafting a **defensible thesis**, selecting strong evidence, explaining reasoning clearly, and adapting your writing to the specific demands of each prompt.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Synthesis** | Writing an argument that incorporates and evaluates multiple provided sources. | The AP exam expects you to **use at least 3 sources effectively**, not just summarize them. |\n| **Rhetorical Analysis** | Analyzing how a writer uses rhetorical choices to achieve a purpose for an audience. | Students must explain **how** choices such as diction, tone, and structure create meaning and persuasion. |\n| **Argument** | Developing a position on an issue using reasoning and evidence, often from reading, observation, or experience. | This essay tests your ability to create a **line of reasoning** without relying on provided sources. |\n| **Defensible Thesis** | A clear, arguable claim that directly responds to the prompt. | A thesis is required for the **thesis point** and anchors the essay’s line of reasoning. |\n| **Evidence and Commentary** | Specific support plus explanation of how that support proves the claim. | AP readers reward essays that do more than provide examples: they must **analyze and connect** evidence to the argument. |\n| **Line of Reasoning** | The logical progression that links thesis, claims, evidence, and commentary. | Strong essays are organized around a coherent argument, not a list of unrelated observations. |\n| **Sophistication** | Demonstrating complexity, nuance, or a deeper understanding of the rhetorical situation or argument. | The **sophistication point** often comes from nuance, qualification, and control of the discussion. |\n| **Citation and Source Integration** | Blending source material smoothly and attributing it clearly, often by source letter or description. | In the synthesis essay, weak integration leads to summary; effective integration strengthens credibility and analysis. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Read the prompt carefully] --> B[Identify the task type]\n    B --> C[\"Synthesis: develop position using sources\"]\n    B --> D[\"Rhetorical Analysis: analyze writer's choices\"]\n    B --> E[\"Argument: defend a position with evidence\"]\n    C --> F[Plan thesis and claims]\n    D --> F\n    E --> F\n    F --> G[Select evidence]\n    G --> H[Write commentary explaining how evidence supports the claim]\n    H --> I[Build a clear line of reasoning]\n    I --> J[Draft introduction, body paragraphs, conclusion]\n    J --> K[Review for precision, coherence, and sophistication]\n```\n\n### Practical Essay Workflow\n1. **Read the prompt twice** and identify exactly what it asks.\n2. Determine the **mode**:\n   - **Synthesis** = use provided sources\n   - **Rhetorical analysis** = analyze author’s rhetorical choices\n   - **Argument** = defend a position with your own evidence\n3. Draft a **defensible thesis** before writing body paragraphs.\n4. Build 2–4 main claims that support the thesis.\n5. For each paragraph, include:\n   - a **claim**\n   - relevant **evidence**\n   - clear **commentary**\n6. Maintain a consistent **line of reasoning** across the essay.\n7. Revise for clarity, specificity, and nuance.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Thesis Rule** | A strong AP thesis must be **defensible**, directly answer the prompt, and establish a position or interpretation. |\n| **Evidence + Commentary Rule** | Evidence alone does not earn high scores; you must explain **how and why** the evidence supports the claim. |\n| **Synthesis Source Rule** | In the synthesis essay, you should use **multiple sources effectively** and integrate them into your own argument rather than summarizing them one by one. |\n| **Rhetorical Analysis Rule** | Focus on the **writer’s choices**, their **purpose**, and their **effect on the audience** — not whether you personally agree. |\n| **Argument Rule** | In the argument essay, choose evidence that is **specific, relevant, and explained**, not vague references or unsupported opinion. |\n| **Line of Reasoning Rule** | Each paragraph should develop the thesis logically; avoid disconnected examples or repeating the same point. |\n| **Counterargument / Qualification Rule** | Stronger arguments often acknowledge complexity by **qualifying**, conceding limits, or addressing alternate perspectives. |\n| **Citation Rule** | In synthesis, attribute sources clearly, such as **Source A** or by describing the source’s speaker or context. |\n\n## Connections & Comparisons\n\n| **Essay Type** | **Primary Task** | **Main Evidence Source** | **Common Mistake** |\n|---|---|---|---|\n| **Synthesis** | Develop an argument using multiple provided texts. | **Provided sources** plus, if useful, broader knowledge. | Summarizing sources instead of using them to support a claim. |\n| **Rhetorical Analysis** | Explain how an author persuades or conveys meaning. | **The passage itself** and its rhetorical features. | Listing devices without explaining their function or effect. |\n| **Argument** | Defend a position on an issue. | **Your own chosen evidence** from reading, history, current events, or experience. | Making broad claims with weak or generic support. |\n\n```mermaid\nflowchart LR\n    A[All three essays] --> B[Need a defensible thesis]\n    A --> C[Need evidence and commentary]\n    A --> D[Need a line of reasoning]\n    B --> E[Synthesis]\n    B --> F[Rhetorical Analysis]\n    B --> G[Argument]\n    C --> E\n    C --> F\n    C --> G\n    D --> E\n    D --> F\n    D --> G\n```\n\n## Common AP Exam Traps\n- Confusing **summary** with **analysis**: retelling what a source or passage says is not the same as explaining its significance.\n- Writing a thesis that is too vague, obvious, or merely restates the prompt without making a claim.\n- In **rhetorical analysis**, naming devices such as **imagery** or **parallelism** without explaining how they advance the author’s purpose.\n- In **synthesis**, dropping in quotations from sources without integrating or interpreting them.\n- In **argument**, relying on personal opinion alone instead of providing concrete, relevant evidence and commentary.\n\n## Quick Review Checklist\n- [ ] I can distinguish among **synthesis**, **rhetorical analysis**, and **argument** prompts.\n- [ ] I can write a **defensible thesis** that directly answers the question.\n- [ ] I can organize an essay around a clear **line of reasoning** rather than a list of examples.\n- [ ] I can choose and integrate evidence effectively for each essay type.\n- [ ] I can write strong **commentary** that explains how evidence supports my claim.\n- [ ] I can analyze **rhetorical choices** in terms of **purpose**, **audience**, and **effect**.\n- [ ] I can use at least **3 sources** meaningfully in a synthesis essay.\n- [ ] I can strengthen an argument by acknowledging complexity, qualification, or alternative views.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Synthesis essay",
+              "definition": "An AP writing task that asks a student to develop a defensible position using several provided texts as evidence while combining those materials with the writer's own reasoning."
+            },
+            {
+              "term": "Defensible thesis",
+              "definition": "A clear, arguable claim that directly responds to the prompt and can be supported with evidence and explanation rather than mere summary."
+            },
+            {
+              "term": "Counterargument",
+              "definition": "A view that challenges the writer's position and is addressed in order to refine, qualify, or strengthen the overall line of reasoning."
+            },
+            {
+              "term": "Source attribution",
+              "definition": "The practice of identifying a text by author, title, description, or other relevant context so that borrowed evidence is clearly situated for the reader."
+            },
+            {
+              "term": "Commentary",
+              "definition": "Explanation that connects cited evidence to a claim by interpreting significance, drawing inferences, and showing how support advances the argument."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student writing a synthesis essay on public library funding uses three sources: one statistical report, one editorial, and one historical overview. Which approach best demonstrates effective source integration on the AP exam?",
+              "options": [
+                "Summarizing each source in a separate body paragraph without taking a position",
+                "Using quotations from all three sources only in the introduction to establish context",
+                "Selecting evidence from the sources according to a clear claim and explaining how each piece supports the line of reasoning",
+                "Referring to the sources only by number and allowing the evidence to speak for itself"
+              ],
+              "correctAnswer": "Selecting evidence from the sources according to a clear claim and explaining how each piece supports the line of reasoning",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best describes an effective thesis for an AP Lang synthesis essay?",
+              "options": [
+                "It lists all of the sources the writer plans to use",
+                "It makes an arguable response to the prompt and may indicate the main reasoning supporting that response",
+                "It restates the prompt in different words and avoids taking a clear position",
+                "It announces that the issue is complicated and that many perspectives exist"
+              ],
+              "correctAnswer": "It makes an arguable response to the prompt and may indicate the main reasoning supporting that response",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In an AP synthesis essay, evidence from sources should be followed by ______ that explains how the evidence supports the writer's claim.",
+              "options": [
+                "commentary",
+                "plot summary",
+                "source list",
+                "topic repetition"
+              ],
+              "correctAnswer": "commentary",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a writer acknowledges an opposing viewpoint and responds to it to strengthen the essay's reasoning, the writer is developing a ______.",
+              "options": [
+                "counterargument",
+                "non sequitur",
+                "narrative frame",
+                "red herring"
+              ],
+              "correctAnswer": "counterargument",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Rhetorical analysis",
+              "definition": "An AP writing task that examines how a writer's choices in language, structure, and appeal help achieve a particular purpose for a particular audience."
+            },
+            {
+              "term": "Line of reasoning",
+              "definition": "The logical progression of claims and evidence through an essay so that each part builds on earlier ideas and advances the central position."
+            },
+            {
+              "term": "Sophistication",
+              "definition": "A quality in AP writing shown through nuanced thought, careful qualification, strong control of style, or a deeper understanding of the rhetorical situation."
+            },
+            {
+              "term": "Evidence and explanation",
+              "definition": "Support drawn from a text, example, or observation together with analysis that clarifies how that support proves the claim being made."
+            },
+            {
+              "term": "Rhetorical situation",
+              "definition": "The interaction among writer, audience, purpose, context, and message that shapes how a text is composed and interpreted."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student begins a rhetorical analysis by identifying a speech's use of anaphora, but the essay mainly labels devices without explaining their effects. According to AP scoring expectations, what is the essay's most significant weakness?",
+              "options": [
+                "It fails to provide enough biographical information about the speaker",
+                "It emphasizes description of techniques over analysis of how those choices advance the speaker's purpose",
+                "It should replace discussion of language with a summary of the historical event",
+                "It relies on too many direct quotations from the passage"
+              ],
+              "correctAnswer": "It emphasizes description of techniques over analysis of how those choices advance the speaker's purpose",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which strategy is most likely to strengthen an AP argument essay?",
+              "options": [
+                "Avoiding qualification so the position seems absolute and forceful",
+                "Relying on broad assertions that most readers are likely to accept",
+                "Developing specific evidence and connecting each example to a coherent line of reasoning",
+                "Presenting several unrelated examples to show familiarity with many topics"
+              ],
+              "correctAnswer": "Developing specific evidence and connecting each example to a coherent line of reasoning",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In rhetorical analysis, identifying the speaker, audience, purpose, and context helps a writer explain the ______ of the text.",
+              "options": [
+                "rhetorical situation",
+                "figurative language",
+                "citation format",
+                "sentence variety"
+              ],
+              "correctAnswer": "rhetorical situation",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "An AP argument essay earns stronger support and analysis when each body paragraph advances a clear ______ rather than offering disconnected observations.",
+              "options": [
+                "line of reasoning",
+                "plot sequence",
+                "definition strategy",
+                "concession marker"
+              ],
+              "correctAnswer": "line of reasoning",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

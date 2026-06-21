@@ -1,0 +1,765 @@
+{
+  "apSubject": "AP Spanish Literature and Culture",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "La narrativa: el siglo XX (20th-Century Narrative)",
+      "description": "Key themes, narrative techniques, and major authors of 20th-century Spanish and Latin American prose.",
+      "note": "# Unit 1: La narrativa: el siglo XX (20th-Century Narrative)\n\n## Overview\nThis unit introduces major **20th-century prose** from Spain and Latin America, focusing on how authors use **narrative voice, structure, symbolism, and historical context** to explore identity, memory, power, and social conflict. It matters for the AP exam because students must analyze **literary techniques**, connect texts to **cultural and historical movements**, and compare how different authors shape meaning through form.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Narrador** | The voice that tells the story: **first person**, **third person**, **omniscient**, **limited**, or unreliable. | AP questions often ask how **point of view** shapes tone, credibility, and reader interpretation. |\n| **Estructura narrativa** | The organization of the story: **linear**, **fragmented**, **circular**, flashback, or open ending. | Students must explain how structure reflects themes like **memory**, **dislocation**, or **uncertainty**. |\n| **Realismo mágico** | Narrative mode blending the ordinary with the extraordinary as if both are normal. | Essential for distinguishing literary movements and explaining how authors challenge Western ideas of reality. |\n| **Vanguardia / experimentación** | Innovative prose techniques such as **stream of consciousness**, ambiguity, and nontraditional chronology. | The AP exam may ask students to identify how formal experimentation reflects modern subjectivity or crisis. |\n| **Contexto histórico-social** | The influence of war, dictatorship, revolution, modernization, and inequality on literature. | Strong AP analysis connects literary choices to **20th-century Spanish and Latin American realities**. |\n| **Temas recurrentes** | Recurring themes such as **identity**, **alienation**, **violence**, **memory**, **gender**, and **social injustice**. | Theme-based comparison is common in essays and multiple-choice analysis. |\n| **Símbolo e imagen** | Objects, spaces, or recurring images that carry deeper meaning. | Students need to move beyond plot summary and interpret how symbols develop theme. |\n| **Relación entre individuo y sociedad** | Tension between personal desire and social, political, or family pressures. | A central interpretive lens across many AP texts in this unit. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Contexto histórico y cultural\"] --> B[\"Preocupaciones temáticas\"]\n    B --> C[\"Selección de técnicas narrativas\"]\n    C --> D[\"Efecto en el lector\"]\n    D --> E[\"Interpretación de tema y sentido\"]\n\n    A --> A1[\"Guerra, modernización, dictadura, desigualdad\"]\n    B --> B1[\"Identidad, memoria, poder, alienación\"]\n    C --> C1[\"Narrador, estructura, simbolismo, tiempo\"]\n    D --> D1[\"Ambigüedad, empatía, extrañamiento, crítica\"]\n    E --> E1[\"Análisis literario AP\"]\n\n    C --> F[\"Movimiento literario\"]\n    F --> F1[\"Realismo mágico / vanguardia / realismo social\"]\n```\n\n**How to read this process:**  \nIn AP literary analysis, start with the **historical and cultural context**, connect it to the text’s **major concerns**, then explain how the author’s **narrative techniques** produce a specific **reader effect** and ultimately reinforce the text’s **themes**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **No resumir; analizar** | On the AP exam, plot summary alone is insufficient. Always explain **how** a literary device contributes to **meaning**. |\n| **Forma y contenido son inseparables** | Narrative **form**—voice, time, structure, syntax—helps create the text’s central message. |\n| **El narrador no es el autor** | Do not confuse the **speaker/narrator** with the historical author. Narrative perspective is a constructed device. |\n| **El contexto ilumina, no reemplaza** | Historical context should support interpretation, not substitute for close reading of the text itself. |\n| **Un símbolo requiere evidencia** | A symbol must be supported by repetition, emphasis, or thematic relevance—not guessed arbitrarily. |\n| **La ambigüedad suele ser intencional** | Many 20th-century narratives resist a single meaning; uncertainty itself can be thematically important. |\n| **Comparar implica matizar** | In comparative analysis, identify both **similarities** and **meaningful differences** in technique or theme. |\n\n## Connections & Comparisons\n\n| **Concept / Movement** | **Characteristics** | **Typical Effect** | **AP Comparison Angle** |\n|---|---|---|---|\n| **Realismo social** | Focus on social conditions, injustice, class, political realities; clearer referential world. | Encourages critique of society and institutions. | Compare with **vanguard** texts that privilege interiority or fragmentation. |\n| **Vanguardia / modernismo narrativo** | Experimental form, subjective perception, nonlinear time, linguistic innovation. | Produces ambiguity, psychological depth, estrangement. | Explain how form itself becomes part of the message. |\n| **Realismo mágico** | Supernatural or marvelous elements treated as ordinary within realistic settings. | Expands reality and questions rationalist boundaries. | Distinguish from fantasy: the marvelous is integrated into daily life. |\n| **Narrativa existencial / psicológica** | Emphasis on alienation, identity crisis, memory, inner conflict. | Draws attention to consciousness and instability of self. | Compare external social conflict with internal psychological conflict. |\n\n### Common thematic connections across authors\n\n```mermaid\nflowchart LR\n    A[\"Identidad\"] --- B[\"Memoria\"]\n    B --- C[\"Historia colectiva\"]\n    C --- D[\"Poder y opresión\"]\n    D --- E[\"Resistencia individual\"]\n    E --- A\n```\n\nThis comparison helps students see that 20th-century narrative often links **personal experience** to larger **historical and political structures**.\n\n## Common AP Exam Traps\n\n- Confusing **realismo mágico** with pure fantasy; in magical realism, extraordinary events appear within a recognizable social world and are not always treated as shocking.\n- Treating the **narrador** as identical to the **author**, especially in first-person texts.\n- Describing a symbol without explaining its connection to a broader **theme** or **character conflict**.\n- Ignoring **structure**: fragmented chronology, repetition, and open endings are often central to interpretation, not decorative.\n- Overusing historical background while neglecting **textual evidence**, diction, imagery, or narrative technique.\n\n## Quick Review Checklist\n\n- [ ] I can identify the **narrator** and explain how point of view affects interpretation.\n- [ ] I can describe the text’s **structure** and connect it to theme.\n- [ ] I can distinguish **realismo social**, **vanguardia**, and **realismo mágico**.\n- [ ] I can explain how **historical context** shapes 20th-century narrative concerns.\n- [ ] I can analyze at least one **symbol** or recurring image with textual support.\n- [ ] I can compare how two texts treat themes such as **identity**, **memory**, or **power**.\n- [ ] I can explain the relationship between **individual experience** and **society** in prose narratives.\n- [ ] I can write an AP-style claim that links **literary technique** to **meaning**, not just plot.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "realismo mágico",
+              "definition": "Narrative mode in which extraordinary or seemingly supernatural events are presented as ordinary parts of everyday life, often without surprise from characters or narrator."
+            },
+            {
+              "term": "narrador omnisciente",
+              "definition": "A storytelling voice that has access to the thoughts, motivations, and actions of multiple characters and can move freely across time and space."
+            },
+            {
+              "term": "perspectivismo",
+              "definition": "Technique that presents events through multiple viewpoints, highlighting the partial and subjective nature of truth."
+            },
+            {
+              "term": "ambiente opresivo",
+              "definition": "Setting shaped by tension, confinement, or threat, often used to reinforce psychological conflict and social critique."
+            },
+            {
+              "term": "tiempo no lineal",
+              "definition": "Organization of events through interruptions, flashbacks, anticipations, or circular structures rather than strict chronological sequence."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En un análisis de la narrativa del siglo XX, ¿qué rasgo distingue mejor al realismo mágico de la literatura fantástica tradicional?",
+              "options": [
+                "La presencia de seres mitológicos explicados científicamente",
+                "La integración de lo extraordinario en la vida cotidiana sin ruptura del tono narrativo",
+                "El uso exclusivo de narradores en primera persona",
+                "La ausencia total de crítica social"
+              ],
+              "correctAnswer": "La integración de lo extraordinario en la vida cotidiana sin ruptura del tono narrativo",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Qué efecto produce con mayor frecuencia el uso de una estructura temporal no lineal en la narrativa hispanoamericana del siglo XX?",
+              "options": [
+                "Elimina toda ambigüedad interpretativa",
+                "Refuerza la complejidad de la memoria y la subjetividad",
+                "Convierte el texto en una obra dramática",
+                "Reduce la importancia del contexto histórico"
+              ],
+              "correctAnswer": "Refuerza la complejidad de la memoria y la subjetividad",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando un relato presenta los pensamientos de varios personajes y conoce hechos del pasado y del futuro, se identifica la presencia de un ______.",
+              "options": [
+                "narrador omnisciente",
+                "hablante lírico",
+                "apóstrofe",
+                "hipérbaton"
+              ],
+              "correctAnswer": "narrador omnisciente",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "La técnica que organiza la acción mediante retrospecciones y anticipaciones en vez de seguir un orden cronológico estricto se llama ______.",
+              "options": [
+                "tiempo no lineal",
+                "costumbrismo",
+                "paralelismo",
+                "sinestesia"
+              ],
+              "correctAnswer": "tiempo no lineal",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "monólogo interior",
+              "definition": "Representation of a character’s thought process in a fluid, often minimally mediated form that imitates mental movement."
+            },
+            {
+              "term": "metaliteratura",
+              "definition": "Self-referential writing that draws attention to its own status as an invented text and often questions authorship or narrative authority."
+            },
+            {
+              "term": "Boom latinoamericano",
+              "definition": "Period of international prominence for several Latin American novelists in the mid-twentieth century, marked by formal experimentation and broad circulation."
+            },
+            {
+              "term": "alienación",
+              "definition": "Condition in which an individual experiences estrangement from society, identity, or meaningful human connection."
+            },
+            {
+              "term": "espacio simbólico",
+              "definition": "Setting that functions beyond physical location by representing abstract ideas such as power, isolation, decay, or memory."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Cuál de las siguientes opciones describe mejor el monólogo interior en la narrativa del siglo XX?",
+              "options": [
+                "Una descripción objetiva del paisaje por parte del narrador",
+                "La reproducción del fluir mental de un personaje con escasa mediación externa",
+                "Un diálogo teatral entre personajes secundarios",
+                "Una explicación histórica añadida al final del texto"
+              ],
+              "correctAnswer": "La reproducción del fluir mental de un personaje con escasa mediación externa",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "En el contexto del Boom latinoamericano, ¿qué característica fue especialmente significativa?",
+              "options": [
+                "El rechazo total de la innovación formal",
+                "La circulación internacional de novelas complejas y experimentalmente estructuradas",
+                "La preferencia exclusiva por temas medievales peninsulares",
+                "La eliminación de toda referencia política o histórica"
+              ],
+              "correctAnswer": "La circulación internacional de novelas complejas y experimentalmente estructuradas",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando una obra llama la atención sobre su propia construcción y cuestiona la relación entre autor, narrador y texto, emplea ______.",
+              "options": [
+                "metaliteratura",
+                "métrica",
+                "romancero",
+                "sátira neoclásica"
+              ],
+              "correctAnswer": "metaliteratura",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "En muchos relatos del siglo XX, el sentimiento de separación del individuo respecto de la sociedad o de sí mismo se denomina ______.",
+              "options": [
+                "alienación",
+                "anáfora",
+                "idealización",
+                "mester de clerecía"
+              ],
+              "correctAnswer": "alienación",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "La poesía: del siglo XV al XX (Poetry: 15th–20th Century)",
+      "description": "Poetic movements (Baroque, Romanticism, Modernismo, Generation of '27) and key poets.",
+      "note": "# Unit 2: La poesía: del siglo XV al XX (Poetry: 15th–20th Century)\n\n## Overview\nThis unit surveys major poetic movements in the Spanish-speaking world from the **15th through the 20th centuries**, with emphasis on **Baroque poetry, Romanticism, Modernismo, and the Generation of ’27**. For the AP exam, students must recognize how **form, imagery, tone, and historical context** shape meaning, and they must compare poets and movements using precise literary vocabulary in Spanish.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Barroco** | A highly elaborate poetic style marked by **complex syntax, contrast, ornamentation, and philosophical tension**. | AP questions often ask students to identify how **conceptismo** or **culteranismo** intensify meaning and reflect instability or disillusionment. |\n| **Conceptismo** | Baroque tendency associated with **compressed wit, wordplay, paradox, and intellectual density**; often linked to **Quevedo**. | Students must distinguish it from **culteranismo** and explain how brevity and conceptual sharpness create satire or moral reflection. |\n| **Culteranismo** | Baroque style associated with **Góngora**, known for **latinate syntax, rich metaphor, and elevated diction**. | Frequently tested through close reading of difficult imagery and syntax; students should connect style to aesthetic effect. |\n| **Romanticismo** | Movement emphasizing **emotion, subjectivity, nature, freedom, and the inner self**. | AP analysis often focuses on the poetic speaker, **individual anguish**, idealized love, and rebellion against constraints. |\n| **Modernismo** | Late 19th-/early 20th-century movement led by **Rubén Darío**, featuring **musicality, cosmopolitanism, symbolism, and refined language**. | Students should identify how sound, rhythm, and exotic imagery signal a break from realism and reflect artistic renewal. |\n| **Generación del 27** | Group of 20th-century poets who fused **tradition and experimentation**, often engaging **avant-garde techniques**. | AP prompts may ask students to compare how these poets modernize inherited forms while addressing identity, desire, or loss. |\n| **Recursos poéticos** | Devices such as **metáfora, hipérbaton, anáfora, símbolo, aliteración, personificación**, and **paradoja**. | Literary devices are central to free-response analysis; students must name them and explain their function, not just spot them. |\n| **Contexto histórico y cultural** | The political, intellectual, and artistic conditions surrounding a poem’s creation. | AP success depends on linking text to context without reducing the poem to biography or history alone. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Evolución de la poesía del siglo XV al XX\n    Siglo XV : Poesía cancioneril y tradicional\n    Siglos XVI-XVII : Barroco\n    Siglos XVI-XVII : Quevedo y Góngora\n    Siglo XIX : Romanticismo\n    Fin del XIX - inicio del XX : Modernismo\n    Siglo XX : Generación del 27\n    Siglo XX : Síntesis de tradición y vanguardia\n```\n\n### How to analyze a poem in this unit\n1. Identify the **movement or period**.\n2. Note the **speaker**, **tone**, and **theme**.\n3. Analyze the poem’s **form**: meter, stanza structure, rhyme, or free verse.\n4. Identify major **poetic devices** and explain their effect.\n5. Connect style to **historical/cultural context**.\n6. Compare the poem to another author or movement when relevant.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Do not summarize only** | On the AP exam, interpretation must go beyond paraphrase: explain **how** language creates meaning. |\n| **Form shapes meaning** | **Meter, rhyme, enjambment, repetition, and syntax** are not decorative; they contribute to tone and theme. |\n| **Differentiate Baroque styles** | **Conceptismo** emphasizes intellectual compression and wit; **culteranismo** emphasizes sensory beauty and syntactic complexity. |\n| **Romanticism centers the self** | Look for **emotion, subjectivity, longing, nature, and tension between ideal and reality**. |\n| **Modernismo privileges musicality and refinement** | Pay attention to **sound patterns, synesthesia, exotic imagery, and artistic self-consciousness**. |\n| **Generation of ’27 blends old and new** | These poets often combine **traditional Spanish forms** with **avant-garde experimentation**. |\n| **Context informs, not replaces, analysis** | Historical knowledge should support reading of the poem’s language, symbols, and structure. |\n| **Use precise literary terminology** | Terms like **hipérbaton**, **metáfora**, **apóstrofe**, **anáfora**, and **símbolo** should be used accurately and tied to effect. |\n\n## Connections & Comparisons\n\n| **Movement / Style** | **Main Features** | **Representative Poets** | **Key AP Comparison Point** |\n|---|---|---|---|\n| **Barroco: Conceptismo** | Brevity, wit, paradox, satire, dense ideas | **Francisco de Quevedo** | Compare its conceptual sharpness with the lush ornamentation of culteranismo. |\n| **Barroco: Culteranismo** | Elevated diction, mythological allusions, hyperbaton, elaborate imagery | **Luis de Góngora** | Useful for explaining how syntax and metaphor can make meaning indirect or layered. |\n| **Romanticismo** | Subjective voice, passion, melancholy, freedom, idealized love | **Gustavo Adolfo Bécquer**, **José María Heredia** | Contrast with Baroque complexity: Romantic poems often feel more intimate and emotionally direct. |\n| **Modernismo** | Musical language, symbolism, cosmopolitan imagery, aesthetic renewal | **Rubén Darío**, **Julián del Casal** | Compare with Romanticism: both value emotion, but Modernismo is often more stylized and formally self-aware. |\n| **Generación del 27** | Fusion of tradition and avant-garde, symbolic richness, formal innovation | **Federico García Lorca**, **Rafael Alberti** | Compare with Modernismo: both prize artistry, but the Generation of ’27 often experiments more radically with voice and structure. |\n\n```mermaid\nflowchart LR\n    A[Barroco] --> B[Complejidad formal]\n    A --> C[Desengaño y contraste]\n    D[Romanticismo] --> E[Yo poético]\n    D --> F[Emoción y libertad]\n    G[Modernismo] --> H[Musicalidad]\n    G --> I[Cosmopolitismo y símbolo]\n    J[Generación del 27] --> K[Tradición]\n    J --> L[Vanguardia]\n    K --> M[Síntesis poética moderna]\n    L --> M[Síntesis poética moderna]\n```\n\n## Common AP Exam Traps\n- Confusing **conceptismo** with **culteranismo**; both are Baroque, but they achieve complexity in different ways.\n- Identifying a poetic device without explaining its **effect on tone, theme, or meaning**.\n- Treating **Romanticismo** and **Modernismo** as the same because both use beautiful language; their aims and aesthetics differ.\n- Overusing historical background while neglecting **close reading** of diction, imagery, and syntax.\n- Assuming difficult language means a poem is only decorative; on the AP exam, complexity usually serves a **thematic purpose**.\n\n## Quick Review Checklist\n- [ ] I can identify major features of **Barroco, Romanticismo, Modernismo,** and the **Generación del 27**.\n- [ ] I can explain the difference between **conceptismo** and **culteranismo** with an example.\n- [ ] I can analyze how **imagery, symbolism, and sound** contribute to a poem’s meaning.\n- [ ] I can describe how **form and syntax** affect tone and interpretation.\n- [ ] I can connect a poem to its **historical and cultural context** without replacing textual analysis.\n- [ ] I can compare two poets or movements using precise literary terminology.\n- [ ] I can identify common devices such as **metáfora, hipérbaton, anáfora, paradoja,** and **personificación**.\n- [ ] I can write an AP-style interpretation that moves from **evidence** to **analysis** to **argument**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "memento mori",
+              "definition": "Baroque motif that reminds the audience of the inevitability of death and the fleeting nature of earthly life."
+            },
+            {
+              "term": "carpe diem",
+              "definition": "Renaissance and early modern poetic invitation to enjoy youth, beauty, or the present moment before time destroys them."
+            },
+            {
+              "term": "culteranismo",
+              "definition": "Baroque style associated with dense ornamentation, elevated diction, Latinized syntax, and striking sensory imagery."
+            },
+            {
+              "term": "conceptismo",
+              "definition": "Baroque style characterized by wit, compression, wordplay, and the creation of multiple meanings through concise language."
+            },
+            {
+              "term": "Romanticismo",
+              "definition": "Nineteenth-century movement that privileges emotion, subjectivity, rebellion, nature, and the individual imagination over neoclassical restraint."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a comparison of Baroque poetic styles, which statement best distinguishes Luis de Góngora from Francisco de Quevedo?",
+              "options": [
+                "Góngora is associated with ornate syntax and sensory complexity, while Quevedo is associated with intellectual compression and wordplay.",
+                "Góngora writes primarily realist social poetry, while Quevedo writes pastoral eclogues.",
+                "Góngora rejects metaphor, while Quevedo avoids satire.",
+                "Góngora belongs to Romanticism, while Quevedo belongs to the Generation of '27'."
+              ],
+              "correctAnswer": "Góngora is associated with ornate syntax and sensory complexity, while Quevedo is associated with intellectual compression and wordplay.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which interpretation best fits the speaker's attitude in José María Heredia's \"En una tempestad\"?",
+              "options": [
+                "The storm becomes a sublime force through which the speaker confronts overwhelming emotion and grandeur.",
+                "The storm is treated as a scientific phenomenon described with detached objectivity.",
+                "The storm serves mainly as a comic device to parody epic conventions.",
+                "The storm is reduced to a decorative background for courtly love."
+              ],
+              "correctAnswer": "The storm becomes a sublime force through which the speaker confronts overwhelming emotion and grandeur.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Baroque poetry, the motif of ______ emphasizes the brevity of life and the certainty of death.",
+              "options": [
+                "memento mori",
+                "costumbrismo",
+                "indigenismo",
+                "esperpento"
+              ],
+              "correctAnswer": "memento mori",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The highly ornamental Baroque style most associated with Luis de Góngora is called ______.",
+              "options": [
+                "culteranismo",
+                "realismo",
+                "modernismo",
+                "neoclasicismo"
+              ],
+              "correctAnswer": "culteranismo",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Modernismo",
+              "definition": "Late nineteenth- and early twentieth-century movement marked by formal musicality, cosmopolitan aesthetics, symbolism, and a search for artistic renewal in Spanish-language poetry."
+            },
+            {
+              "term": "sinestesia",
+              "definition": "Figure of speech that blends sensory categories, such as describing a sound with a color or a texture with a taste."
+            },
+            {
+              "term": "Generación del 27",
+              "definition": "Twentieth-century group of poets who combined reverence for earlier Spanish traditions with avant-garde experimentation, often linked to the 1927 commemoration of Góngora."
+            },
+            {
+              "term": "Romance sonámbulo",
+              "definition": "Poem by Federico García Lorca that uses recurring imagery, dreamlike atmosphere, and popular-ballad elements to create symbolic ambiguity and tension."
+            },
+            {
+              "term": "poesía negra",
+              "definition": "Afro-Antillean verse that foregrounds rhythm, oral cadence, and Black cultural experience, especially in the Caribbean context."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which feature is most characteristic of Rubén Darío's Modernist poetry?",
+              "options": [
+                "Musical language, exotic imagery, and a cosmopolitan search for aesthetic refinement.",
+                "Strict imitation of medieval epic formulas without innovation.",
+                "Exclusive focus on everyday rural labor in colloquial prose rhythms.",
+                "Deliberate rejection of symbolism and all sensory imagery."
+              ],
+              "correctAnswer": "Musical language, exotic imagery, and a cosmopolitan search for aesthetic refinement.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "What is a defining trait of the Generation of '27 as represented by poets such as García Lorca?",
+              "options": [
+                "They fused traditional Spanish forms and motifs with avant-garde techniques and modern symbolism.",
+                "They rejected all earlier Spanish literature in favor of documentary realism alone.",
+                "They wrote exclusively political manifestos instead of lyric poetry.",
+                "They limited themselves to neoclassical rules and avoided experimentation."
+              ],
+              "correctAnswer": "They fused traditional Spanish forms and motifs with avant-garde techniques and modern symbolism.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The literary movement led by Rubén Darío and known for musicality and aesthetic renovation is called ______.",
+              "options": [
+                "Modernismo",
+                "Naturalismo",
+                "Costumbrismo",
+                "Realismo"
+              ],
+              "correctAnswer": "Modernismo",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In Federico García Lorca's poetry, the fusion of popular tradition with avant-garde symbolism is strongly associated with the ______.",
+              "options": [
+                "Generación del 27",
+                "mester de clerecía",
+                "Siglo de las Luces",
+                "Novecentismo"
+              ],
+              "correctAnswer": "Generación del 27",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "El teatro (Theater)",
+      "description": "Major Spanish-language plays, dramatic conventions, and thematic analysis.",
+      "note": "# Unit 3: El teatro (Theater)\n\n## Overview\nIn this unit, you study major works of **Spanish-language theater**, focusing on **dramatic structure**, **stage conventions**, **characterization**, and the cultural themes that plays communicate through dialogue and performance. This matters for the AP exam because students must not only recognize literary devices and historical context, but also explain how **theatrical form** shapes meaning differently from poetry, narrative, or essays.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Acotaciones** | **Stage directions** that describe movement, tone, setting, gesture, or visual details. | On the AP exam, acotaciones often reveal **symbolism**, **mood**, or **power dynamics** that are not stated directly in dialogue. |\n| **Diálogo y monólogo** | **Dialogue** shows interaction between characters; **monologue** gives extended speech by one character. | You may need to explain how a character’s ideas emerge through speech and how dramatic voice builds **conflict** or **theme**. |\n| **Conflicto dramático** | The central struggle in a play, often between individuals, social forces, or inner desires. | Identifying the main conflict helps you analyze **plot development**, **motivation**, and **theme**. |\n| **Espacio escénico** | The staged physical setting, whether realistic, symbolic, or minimal. | AP questions often ask how setting contributes to **tone**, **social critique**, or **symbolic meaning**. |\n| **Simbolismo** | Objects, actions, or spaces that represent larger abstract ideas. | Many plays in the AP canon rely on symbols to express **oppression**, **freedom**, **honor**, **desire**, or **death**. |\n| **Tragedia y comedia** | Major dramatic modes: **tragedy** emphasizes suffering and downfall; **comedy** often uses humor, irony, or social inversion. | Students must distinguish tone and genre while recognizing that some works blend both to critique society. |\n| **Honor, autoridad y normas sociales** | Recurrent themes involving family reputation, hierarchy, gender, and obedience. | These themes are central in many Spanish and Latin American plays and frequently appear in **free-response analysis**. |\n| **Representación y performance** | The idea that meaning in theater comes from both text and imagined performance. | AP students should analyze not just what is said, but **how it would appear on stage** and affect an audience. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Lectura del texto dramático] --> B[Identificar personajes, conflicto y contexto]\n    B --> C[Analizar diálogo, monólogo y acotaciones]\n    C --> D[Observar símbolos, espacio escénico y tono]\n    D --> E[Relacionar forma teatral con tema]\n    E --> F[Interpretar efecto en el público]\n    F --> G[Construir argumento analítico para el AP]\n```\n\nThis reflects the most useful AP reading process for theater: move from **what happens** to **how it is staged**, then to **why it matters**.\n\n## Essential Formulas / Laws / Rules\n\nFor this unit, there are no mathematical formulas; instead, you need a small set of **analytical rules** and **dramatic definitions**.\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **A play is written for performance** | Always consider how **gesture**, **silence**, **movement**, and **visual staging** contribute to meaning. |\n| **Acotaciones are interpretive evidence** | Do not ignore stage directions; they often reveal **tone**, **symbolism**, and **subtext**. |\n| **Conflict drives dramatic action** | Every major scene should be read in relation to the play’s central **conflict**. |\n| **Speech reveals character** | In theater, characterization often comes through **word choice**, **silence**, **interruption**, and **repetition** rather than narration. |\n| **Dramatic irony matters** | Pay attention when the audience knows more than a character; this often increases **tension** or sharpens **critique**. |\n| **Setting can be symbolic** | A house, room, road, or closed space may represent broader ideas such as **confinement**, **tradition**, or **social pressure**. |\n| **Themes emerge through interaction** | In drama, themes are often developed through **conflict among characters**, not through direct exposition. |\n| **Genre shapes expectation** | Ask whether the play uses elements of **tragedy**, **comedy**, or a hybrid form, and how that choice shapes meaning. |\n\n## Connections & Comparisons\n\n| **Element** | **Tragedy** | **Comedy / Satirical Drama** | **AP Significance** |\n|---|---|---|---|\n| **Tone** | Serious, intense, often fatalistic | Playful, ironic, exaggerated, or subversive | Helps identify the author’s purpose and expected audience response |\n| **Conflict** | Often leads to downfall, suffering, or irreversible loss | Often exposes hypocrisy, foolishness, or social disorder | Useful for explaining how form supports **social criticism** |\n| **Characterization** | Characters may be trapped by fate, honor, desire, or authority | Characters may embody types, flaws, or exaggerated social roles | Supports analysis of **motivation** and **theme** |\n| **Ending** | Frequently unresolved, painful, or destructive | Often restorative, ironic, or ambiguously critical | Important when evaluating the play’s final message |\n| **Themes** | Death, repression, destiny, sacrifice, honor | Social norms, gender roles, power, hypocrisy | AP prompts often ask how these themes are dramatized |\n\n### Common thematic relationship in Spanish-language theater\n\n```mermaid\nflowchart LR\n    A[Autoridad] --> B[Represión]\n    B --> C[Conflicto personal]\n    C --> D[Rebeldía o sumisión]\n    D --> E[Desenlace trágico o crítico]\n```\n\nThis pattern appears often in plays where individuals confront **family**, **social norms**, or **institutional power**.\n\n## Common AP Exam Traps\n\n- Confusing **plot summary** with **analysis**. On the AP exam, you must explain **how** dialogue, structure, or staging creates meaning, not just recount events.\n- Ignoring **acotaciones**. Students often focus only on spoken lines and miss crucial evidence in stage directions.\n- Treating a play like a novel. Drama usually lacks an external narrator, so meaning comes through **speech**, **interaction**, and **performance cues**.\n- Oversimplifying themes such as **honor** or **authority**. These are rarely abstract ideas alone; they are tied to **gender**, **class**, **tradition**, and **social control**.\n- Assuming comedy is “light” and tragedy is “serious” without nuance. Comic elements can deliver sharp **political or social criticism**, and tragic works may contain irony or dark humor.\n\n## Quick Review Checklist\n\n- [ ] I can define **acotaciones**, **monólogo**, **diálogo**, and **conflicto dramático**.\n- [ ] I can explain how a play’s meaning depends on **performance**, not just written language.\n- [ ] I can identify the central **conflict** of a scene or play and connect it to a larger theme.\n- [ ] I can analyze how **stage directions** contribute to tone, symbolism, or characterization.\n- [ ] I can compare **tragedy** and **comedy** as dramatic modes.\n- [ ] I can discuss recurring themes such as **honor**, **authority**, **social pressure**, and **freedom**.\n- [ ] I can support an interpretation with evidence from **dialogue**, **silence**, **gesture**, and **setting**.\n- [ ] I can write an AP-style claim explaining how **dramatic form** shapes the audience’s understanding of a theme.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "comedia nueva",
+              "definition": "Modelo dramático del Siglo de Oro asociado con una estructura flexible de tres jornadas, mezcla de elementos trágicos y cómicos, y énfasis en el entretenimiento del público."
+            },
+            {
+              "term": "honor",
+              "definition": "Valor social y moral vinculado a la reputación pública, la limpieza de linaje y la conducta, cuya pérdida suele desencadenar conflicto dramático."
+            },
+            {
+              "term": "gracioso",
+              "definition": "Figura escénica que aporta humor, comentario crítico y contraste con los personajes nobles, a menudo mediante lenguaje coloquial e ingenio verbal."
+            },
+            {
+              "term": "jornada",
+              "definition": "Cada una de las divisiones principales de una obra del teatro clásico español, comparable a un acto dentro de la organización dramática."
+            },
+            {
+              "term": "capa y espada",
+              "definition": "Subgénero centrado en enredos amorosos, duelos, identidades ocultas y códigos sociales urbanos, generalmente con ritmo ágil y final restaurador."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En el teatro del Siglo de Oro, ¿cuál es la función más característica del personaje del gracioso?",
+              "options": [
+                "Representar la autoridad política absoluta",
+                "Servir como contraste cómico y comentar críticamente la acción",
+                "Mantener la unidad clásica de tiempo y lugar",
+                "Encarnar el ideal heroico sin fisuras"
+              ],
+              "correctAnswer": "Servir como contraste cómico y comentar críticamente la acción",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Qué rasgo distingue mejor a la comedia nueva frente a los preceptos neoclásicos?",
+              "options": [
+                "La observancia estricta de las tres unidades",
+                "La separación absoluta entre lo trágico y lo cómico",
+                "La combinación de registros y la prioridad del gusto del público",
+                "La exclusión de conflictos de honor"
+              ],
+              "correctAnswer": "La combinación de registros y la prioridad del gusto del público",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "En muchas obras del Siglo de Oro, la preocupación por la reputación pública y la dignidad social se articula mediante el tema del ______.",
+              "options": [
+                "honor",
+                "desengaño",
+                "costumbrismo",
+                "modernismo"
+              ],
+              "correctAnswer": "honor",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "La división principal de una obra clásica española en tres partes se denomina ______.",
+              "options": [
+                "estrofa",
+                "jornada",
+                "acotación",
+                "loa"
+              ],
+              "correctAnswer": "jornada",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "acotación",
+              "definition": "Indicación escrita que orienta la puesta en escena mediante referencias a movimientos, tono, espacio, iluminación o acciones no dialogadas."
+            },
+            {
+              "term": "La casa de Bernarda Alba",
+              "definition": "Drama de Federico García Lorca en el que el luto, la autoridad materna y la represión del deseo revelan tensiones de género y opresión social."
+            },
+            {
+              "term": "simbolismo",
+              "definition": "Procedimiento estético por el cual objetos, colores, espacios o acciones adquieren significados abstractos que amplían el sentido literal de la obra."
+            },
+            {
+              "term": "espacio dramático",
+              "definition": "Ámbito físico y social donde se desarrolla la acción, cuya configuración contribuye a intensificar conflicto, jerarquías y aislamiento."
+            },
+            {
+              "term": "represión",
+              "definition": "Control o supresión de deseos, voces o conductas por fuerzas familiares, sociales o políticas, con consecuencias psicológicas y trágicas."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En La casa de Bernarda Alba, ¿qué interpretación es más adecuada del espacio doméstico cerrado?",
+              "options": [
+                "Funciona como símbolo de libertad política",
+                "Sirve principalmente para introducir elementos fantásticos",
+                "Refuerza el aislamiento y el control social sobre las hijas",
+                "Representa una celebración del orden igualitario"
+              ],
+              "correctAnswer": "Refuerza el aislamiento y el control social sobre las hijas",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Cuál de los siguientes elementos escénicos se asocia más directamente con las acotaciones?",
+              "options": [
+                "La organización métrica de los versos",
+                "Las indicaciones sobre movimientos y ambiente escénico",
+                "La tesis filosófica implícita del autor",
+                "La biografía completa de cada personaje"
+              ],
+              "correctAnswer": "Las indicaciones sobre movimientos y ambiente escénico",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "En el teatro, las indicaciones del autor sobre gestos, entradas, salidas y ambientación reciben el nombre de ______.",
+              "options": [
+                "acotaciones",
+                "romances",
+                "monólogos interiores",
+                "hipérboles"
+              ],
+              "correctAnswer": "acotaciones",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "En La casa de Bernarda Alba, la supresión del deseo y de la autonomía personal se entiende mejor como una forma de ______.",
+              "options": [
+                "parodia",
+                "represión",
+                "catarsis",
+                "epopeya"
+              ],
+              "correctAnswer": "represión",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Identidades y sociedades (Identities and Societies)",
+      "description": "Intersections of identity, gender, race, and power in AP required texts.",
+      "note": "# Unit 4: Identidades y sociedades (Identities and Societies)\n\n## Overview\nThis unit examines how **identity** is shaped by **gender**, **race**, **social class**, **power**, and cultural expectations across the AP required readings. Students analyze how authors represent individuals in tension with the societies they inhabit, especially through themes of exclusion, hierarchy, resistance, and belonging.\n\nFor the AP exam, this unit matters because students must connect **literary analysis** to broader **cultural and social themes**, using precise textual evidence to explain how identity is constructed, challenged, and transformed.\n\n---\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Identidad individual y colectiva** | The relationship between a person’s self-concept and the community, nation, family, or culture they belong to. | AP questions often ask how a character’s identity is shaped by social pressures or collective expectations. |\n| **Género y roles sociales** | Socially constructed expectations about masculinity, femininity, and behavior. | Students must analyze how texts critique or reinforce gender norms, especially in relation to authority and freedom. |\n| **Raza y jerarquía social** | The way racial categories and prejudice organize power and belonging. | Important for interpreting marginalization, privilege, and symbolic exclusion in literary works. |\n| **Poder y opresión** | Systems through which one group controls or limits another. | A core AP task is explaining how characters respond to domination, whether through silence, conformity, or rebellion. |\n| **Marginalización** | The social process by which individuals or groups are pushed to the edges of society. | Helps students explain why certain voices are silenced and how authors reveal injustice. |\n| **Resistencia y transgresión** | Acts of defiance against norms, authority, or social restrictions. | Frequently tested through essays asking how a character challenges dominant values. |\n| **Construcción social de la identidad** | The idea that identity is formed through social interaction, language, institutions, and tradition. | Supports sophisticated analysis beyond plot summary, especially in thematic comparisons. |\n| **Voz y representación** | Who gets to speak, narrate, or define reality in a text. | Essential for discussing narrative perspective, authority, and whose experiences are centered or excluded. |\n\n---\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Normas sociales\"] --> B[\"Expectativas sobre género, raza y clase\"]\n    B --> C[\"Formación de la identidad individual\"]\n    C --> D[\"Conflicto entre individuo y sociedad\"]\n    D --> E[\"Respuesta: conformidad, silencio o resistencia\"]\n    E --> F[\"Consecuencias personales y sociales\"]\n    F --> G[\"Crítica del autor sobre poder e identidad\"]\n```\n\n### How this pattern appears in literature\n1. A text presents a set of **social norms** or hierarchies.\n2. These norms define what is considered acceptable for certain groups.\n3. A character experiences pressure to conform to those expectations.\n4. Conflict emerges when the character’s desires or identity clash with society.\n5. The character responds through **submission**, **negotiation**, or **resistance**.\n6. The author uses that struggle to critique broader systems of **power** and **belonging**.\n\n---\n\n## Essential Formulas / Laws / Rules\n\nSince this is a literature and culture unit, students need key **analytical rules and definitions** rather than equations.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Theme over plot** | On the AP exam, do not merely retell events; explain how events develop a theme such as **identity**, **oppression**, or **social hierarchy**. |\n| **Textual evidence must be interpreted** | Quoting or referencing a moment is not enough; you must explain how it reveals **identity**, **power**, or **social tension**. |\n| **Speaker, narrator, and author are not the same** | Distinguish between the **narrative voice**, the **characters’ perspectives**, and the author’s broader critique. |\n| **Identity is relational** | A character’s identity is often defined in contrast to family, community, gender roles, race, or institutions. |\n| **Social criticism may be implicit** | Authors do not always state their critique directly; symbolism, irony, characterization, and conflict often carry the message. |\n| **Context strengthens interpretation** | Historical and cultural context can clarify why issues of **race**, **gender**, and **status** matter in a given work. |\n| **Compare both similarity and difference** | In comparative tasks, identify not only shared themes but also distinct methods, tones, or outcomes. |\n\n### High-value literary moves for this unit\n- Identify how **symbols** represent exclusion or belonging.\n- Explain how **setting** reflects social hierarchy.\n- Analyze how **dialogue** or **silence** reveals power imbalance.\n- Connect **character development** to changing understandings of identity.\n- Notice whether resistance leads to liberation, punishment, or ambiguity.\n\n---\n\n## Connections & Comparisons\n\n| **Comparison** | **Shared Element** | **Key Difference** | **AP Use** |\n|---|---|---|---|\n| **Identidad individual vs. identidad colectiva** | Both shape how a person understands selfhood. | Individual identity emphasizes personal desire; collective identity emphasizes family, nation, race, or tradition. | Useful for explaining inner conflict in characters. |\n| **Conformidad vs. resistencia** | Both are responses to social pressure. | Conformity preserves order; resistance exposes injustice or demands change. | Helps analyze character choices and authorial critique. |\n| **Género vs. raza as social forces** | Both can determine status, opportunity, and treatment. | Gender often structures domestic and behavioral expectations; race often structures belonging and hierarchy more broadly. | Important when discussing intersectionality in a text. |\n| **Silencio vs. voz** | Both communicate social position. | Silence can signal repression, fear, or strategy; voice can signal empowerment, authority, or defiance. | Strong for discussing narration and marginalized perspectives. |\n\n### Comparative frame for essay writing\nWhen comparing texts, ask:\n- How does each text define **who belongs**?\n- What social rules limit the character?\n- Is resistance portrayed as heroic, tragic, or futile?\n- Who has the power to **name**, **judge**, or **exclude** others?\n\n---\n\n## Common AP Exam Traps\n- Confusing **plot summary** with **literary analysis**. The exam rewards explanation of meaning, not retelling.\n- Treating **identity** as fixed. In many texts, identity is unstable, negotiated, or imposed by others.\n- Ignoring **narrative perspective**. Who tells the story affects how power and marginalization are presented.\n- Oversimplifying **resistance** as always successful or admirable. Some texts portray it as costly, partial, or ambiguous.\n- Discussing **gender** or **race** in general terms without tying claims to specific textual moments, imagery, or characterization.\n\n---\n\n## Quick Review Checklist\n- [ ] I can explain how **social norms** influence a character’s sense of self.\n- [ ] I can analyze the relationship between **identity** and **power** in a literary text.\n- [ ] I can distinguish **individual identity** from **collective identity**.\n- [ ] I can identify how **gender roles** shape conflict or limitation in a work.\n- [ ] I can explain how **race** or **social hierarchy** affects belonging and exclusion.\n- [ ] I can describe a character’s response to oppression: **conformity**, **silence**, or **resistance**.\n- [ ] I can use **textual evidence** to support a theme-based argument rather than summarize the plot.\n- [ ] I can compare how two texts treat **identity, marginalization,** or **social expectations** differently.\n\n--- \n\n### Final AP Focus\nIn this unit, always look beyond what happens and ask: **How does society define people, and how do people accept, resist, or reshape those definitions?** That question sits at the center of **Identidades y sociedades** and is the key to strong AP literary analysis.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "mestizaje",
+              "definition": "Proceso histórico y cultural de mezcla étnica y cultural que problematiza categorías fijas de pertenencia y revela jerarquías sociales heredadas de la colonización."
+            },
+            {
+              "term": "machismo",
+              "definition": "Sistema de valores que privilegia la autoridad masculina, normaliza la dominación de los hombres y limita la autonomía de las mujeres dentro de la familia y la sociedad."
+            },
+            {
+              "term": "honra",
+              "definition": "Código social vinculado a la reputación pública, la conducta sexual y el control familiar, especialmente significativo en textos del Siglo de Oro y en conflictos de género."
+            },
+            {
+              "term": "marginalización",
+              "definition": "Condición en la que ciertos sujetos o grupos son excluidos del poder, la representación o los recursos, a menudo por razones de clase, raza, género o estatus legal."
+            },
+            {
+              "term": "voz femenina",
+              "definition": "Perspectiva literaria que articula experiencias, deseos y conflictos de las mujeres frente a estructuras patriarcales o normas sociales restrictivas."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En \"A Julia de Burgos,\" ¿cuál es el efecto principal del desdoblamiento entre el \"tú\" y el \"yo\" poético?",
+              "options": [
+                "Destacar el conflicto entre una identidad social impuesta y una identidad auténtica",
+                "Presentar un diálogo amoroso convencional entre dos amantes",
+                "Imitar la estructura de un romance tradicional español",
+                "Defender la obediencia femenina como valor central"
+              ],
+              "correctAnswer": "Destacar el conflicto entre una identidad social impuesta y una identidad auténtica",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "En \"La casa de Bernarda Alba,\" la imposición del luto y el encierro funciona principalmente como símbolo de",
+              "options": [
+                "la defensa de la movilidad social por medio del matrimonio",
+                "el control autoritario sobre el cuerpo y la conducta femenina",
+                "la reconciliación entre generaciones dentro del hogar",
+                "la liberación individual frente a la presión comunitaria"
+              ],
+              "correctAnswer": "el control autoritario sobre el cuerpo y la conducta femenina",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "En muchos textos del curso, el concepto de ______ ayuda a explicar cómo la reputación pública regula la conducta privada, especialmente la de las mujeres.",
+              "options": [
+                "honra",
+                "costumbrismo",
+                "realismo mágico",
+                "apóstrofe"
+              ],
+              "correctAnswer": "honra",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "En \"A Julia de Burgos,\" la oposición entre la mujer social y la voz interior revela una crisis de ______.",
+              "options": [
+                "identidad",
+                "hipérbole",
+                "paisajismo",
+                "cronología"
+              ],
+              "correctAnswer": "identidad",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "afrohispanismo",
+              "definition": "Enfoque cultural y literario que visibiliza experiencias, herencias y representaciones de la diáspora africana en el mundo hispánico."
+            },
+            {
+              "term": "patriarcado",
+              "definition": "Estructura social en la que el poder institucional, familiar y simbólico se concentra mayoritariamente en los hombres y regula la vida de otros grupos."
+            },
+            {
+              "term": "otredad",
+              "definition": "Construcción de una diferencia que define a ciertos individuos como ajenos, inferiores o amenazantes frente a una norma dominante."
+            },
+            {
+              "term": "interseccionalidad",
+              "definition": "Marco analítico que examina cómo categorías como raza, género, clase y sexualidad actúan simultáneamente para producir experiencias específicas de privilegio o discriminación."
+            },
+            {
+              "term": "resistencia",
+              "definition": "Respuesta individual o colectiva que desafía normas opresivas, ya sea mediante la palabra, el silencio estratégico, el cuerpo o la acción social."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En \"La negra tiene tumbao,\" la afirmación de una presencia segura y visible en el espacio social desafía principalmente",
+              "options": [
+                "las jerarquías de género y raza que buscan disciplinar el cuerpo femenino",
+                "la estructura métrica del soneto clásico del Siglo de Oro",
+                "la autoridad de la Iglesia en la España medieval",
+                "el ideal romántico del amor imposible entre nobles"
+              ],
+              "correctAnswer": "las jerarquías de género y raza que buscan disciplinar el cuerpo femenino",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Qué interpretación refleja mejor la función de la otredad en textos de esta unidad?",
+              "options": [
+                "Permite mostrar cómo una sociedad dominante define y excluye a quienes considera diferentes",
+                "Sirve únicamente para describir paisajes regionales con detalle costumbrista",
+                "Se limita al uso de humor verbal sin implicaciones sociales",
+                "Indica que todos los conflictos literarios son exclusivamente psicológicos"
+              ],
+              "correctAnswer": "Permite mostrar cómo una sociedad dominante define y excluye a quienes considera diferentes",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando un análisis considera simultáneamente raza, género y clase para explicar la experiencia de un personaje, aplica el marco de la ______.",
+              "options": [
+                "interseccionalidad",
+                "anagnórisis",
+                "metonimia",
+                "jitanjáfora"
+              ],
+              "correctAnswer": "interseccionalidad",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "En textos que denuncian la exclusión social de grupos racializados, la construcción de la diferencia como categoría inferior se conoce como ______.",
+              "options": [
+                "otredad",
+                "sinestesia",
+                "endecasílabo",
+                "parodia"
+              ],
+              "correctAnswer": "otredad",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "El ensayo y la escritura crítica (Essay and Critical Writing)",
+      "description": "Analytical essay skills, citing textual evidence, and comparative analysis across required works.",
+      "note": "# Unit 5: El ensayo y la escritura crítica (Essay and Critical Writing)\n\n## Overview\nIn this unit, you will strengthen the skills needed to write an effective **analytical essay** in Spanish, using **textual evidence**, clear **thesis development**, and **comparative analysis** across works from the AP reading list. This matters for the AP Exam because success depends not only on understanding literature, but also on explaining **how** and **why** authors create meaning through theme, structure, voice, and historical context.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Tesis** | A clear, arguable central claim that answers the prompt. | The AP essay rewards writing that directly addresses the question with a defensible interpretation. |\n| **Evidencia textual** | Specific references, paraphrases, or brief quotations from the text. | Strong essays use precise support rather than vague plot summary. |\n| **Análisis literario** | Explanation of how literary elements create meaning. | The exam values interpretation of **theme**, **symbolism**, **tone**, **imagery**, and **structure**, not just identification. |\n| **Comparación entre obras** | Analysis that connects two or more required texts through a shared theme, technique, or cultural issue. | Comparative thinking is essential for open-response questions and deeper literary understanding. |\n| **Contexto histórico y cultural** | The social, political, philosophical, or cultural background of a work. | AP readers expect students to connect literature to broader **cultural conversations** without replacing analysis with history alone. |\n| **Organización del ensayo** | The structure of introduction, body paragraphs, transitions, and conclusion. | Clear organization helps present a coherent argument under timed conditions. |\n| **Comentario crítico** | Evaluation and interpretation of authorial choices and their effects. | High-scoring essays explain significance, not just content. |\n| **Registro académico** | Formal, precise Spanish appropriate for literary analysis. | Effective language use improves clarity, sophistication, and control in AP writing. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Leer el prompt] --> B[Identificar el tema central]\n    B --> C[Formular una tesis defendible]\n    C --> D[Seleccionar evidencia textual relevante]\n    D --> E[Analizar recursos literarios y efectos]\n    E --> F[\"Comparar obras o perspectivas (si aplica)\"]\n    F --> G[Organizar párrafos con lógica clara]\n    G --> H[Redactar con registro académico]\n    H --> I[Revisar coherencia, precisión y enfoque]\n```\n\n### Writing Workflow for AP Literary Analysis\n1. **Read the prompt carefully** and determine exactly what it asks: theme, character, conflict, literary technique, or comparison.\n2. **Develop a thesis** that makes an argument, not just a topic statement.\n3. **Choose evidence strategically** from the required works you know best.\n4. **Analyze**, rather than summarize, by explaining how the evidence supports your interpretation.\n5. **Connect ideas across works** when comparison is required or strengthens the response.\n6. **Organize logically**, with each paragraph advancing the thesis.\n7. **Revise for precision**, making sure every sentence contributes to the argument.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **A strong thesis is arguable** | A **tesis** must present an interpretation that could be defended with evidence, not a fact or broad generalization. |\n| **Evidence must support analysis** | Do not insert quotations or references without explaining their significance. **Evidence + analysis** is the core of the essay. |\n| **Avoid plot summary** | Summary may provide context, but the main focus must be **interpretation** of literary meaning and technique. |\n| **Name and explain literary devices** | Identifying **metaphor**, **symbol**, **irony**, **narrative voice**, or **structure** is not enough; explain how each shapes the work’s message. |\n| **Compare through a common lens** | In comparative writing, connect works through a shared **theme**, **conflict**, **character type**, **historical concern**, or **stylistic strategy**. |\n| **Use context carefully** | Historical or cultural context should deepen interpretation, not replace close reading of the text itself. |\n| **Each paragraph needs a purpose** | A body paragraph should include a claim, supporting evidence, analysis, and a link back to the thesis. |\n| **Academic Spanish should be clear and formal** | Use precise literary vocabulary and avoid informal phrasing, repetition, and unsupported opinion. |\n\n### Useful Analytical Moves\n- **El autor presenta...**\n- **Esto sugiere que...**\n- **A través de ... el texto revela...**\n- **En contraste con...**\n- **Ambas obras exploran..., pero difieren en...**\n- **Este recurso literario enfatiza...**\n\n## Connections & Comparisons\n\n| **Related Elements** | **Connection** | **Key Distinction** |\n|---|---|---|\n| **Resumen** vs. **análisis** | Both refer to the text. | **Resumen** tells what happens; **análisis** explains what it means and how it is constructed. |\n| **Tema** vs. **tesis** | Both deal with central ideas. | **Tema** is the broader subject or message in the work; **tesis** is your argument about that theme in response to a prompt. |\n| **Evidencia textual** vs. **comentario crítico** | Both are needed in body paragraphs. | Evidence provides support; commentary interprets and connects that support to the argument. |\n| **Contexto histórico** vs. **lectura cercana** | Both deepen understanding. | Context gives background; close reading examines the language and literary form of the text itself. |\n\n```mermaid\nflowchart LR\n    A[Resumen] --> B[Base mínima]\n    B --> C[Análisis]\n    C --> D[Interpretación convincente]\n\n    E[Contexto histórico] --> F[Profundiza]\n    G[Lectura cercana] --> F\n    F --> D\n```\n\n## Common AP Exam Traps\n- Confusing **plot summary** with **literary analysis**; retelling events does not earn strong analytical credit.\n- Writing a **vague thesis** that restates the prompt instead of making a specific claim.\n- Mentioning **literary devices** without explaining their effect on meaning, tone, or theme.\n- Using **historical context** as filler rather than tying it directly to the text’s argument and artistic choices.\n- In comparative responses, discussing two works separately without making a real **comparison** or thematic connection.\n\n## Quick Review Checklist\n- [ ] I can write a **clear, arguable thesis** in response to a literary prompt.\n- [ ] I can distinguish between **summary** and **analysis** in an AP essay.\n- [ ] I can choose **specific textual evidence** that directly supports my argument.\n- [ ] I can explain how **literary devices** contribute to theme, tone, or characterization.\n- [ ] I can compare **two works** through a shared idea, conflict, or technique.\n- [ ] I can incorporate **historical and cultural context** without losing focus on the text.\n- [ ] I can organize an essay with effective **introduction, body paragraphs, and transitions**.\n- [ ] I can write in a **formal academic register** in Spanish appropriate for literary criticism.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "tesis interpretativa",
+              "definition": "A focused, arguable claim that presents a defensible reading of a literary work and guides the structure of an analytical response."
+            },
+            {
+              "term": "evidencia textual",
+              "definition": "Specific words, images, events, or stylistic features from a work used to support an interpretation rather than merely summarize the plot."
+            },
+            {
+              "term": "comentario analítico",
+              "definition": "Explanation that connects cited details to an argument by showing how and why the details produce meaning or support a claim."
+            },
+            {
+              "term": "tono",
+              "definition": "The attitude conveyed by a speaker or narrator toward a subject, audience, or situation through diction, imagery, and style."
+            },
+            {
+              "term": "estructura argumentativa",
+              "definition": "The logical organization of a response in which claims, supporting proof, and explanation are arranged to persuade the reader."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En un ensayo analítico sobre \"Nuestra América\" de José Martí, ¿cuál de las siguientes tesis sería la más eficaz para responder a una pregunta de análisis literario de nivel AP?",
+              "options": [
+                "Martí escribió un ensayo muy importante para la historia de América Latina.",
+                "En \"Nuestra América\", Martí utiliza contrastes entre lo autóctono y lo imitativo para afirmar que la legitimidad política debe surgir de la realidad cultural americana.",
+                "El texto menciona varios problemas políticos y sociales de las nuevas repúblicas.",
+                "Martí quería que los países americanos fueran independientes y unidos."
+              ],
+              "correctAnswer": "En \"Nuestra América\", Martí utiliza contrastes entre lo autóctono y lo imitativo para afirmar que la legitimidad política debe surgir de la realidad cultural americana.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Qué uso de evidencia textual demuestra mejor una práctica sólida de escritura crítica en AP Spanish Literature and Culture?",
+              "options": [
+                "Parafrasear toda la trama antes de presentar la interpretación.",
+                "Incluir un detalle textual preciso y explicar cómo contribuye al tema o propósito del texto.",
+                "Mencionar el autor y la fecha de publicación sin analizar el lenguaje.",
+                "Ofrecer una opinión personal extensa sin referencia específica al texto."
+              ],
+              "correctAnswer": "Incluir un detalle textual preciso y explicar cómo contribuye al tema o propósito del texto.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "En una respuesta bien desarrollada, después de citar un recurso literario, el siguiente paso debe ser el ______ para demostrar su relación con la tesis.",
+              "options": [
+                "comentario analítico",
+                "resumen narrativo",
+                "contexto biográfico aislado",
+                "juicio personal"
+              ],
+              "correctAnswer": "comentario analítico",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Cuando un estudiante formula una afirmación defendible y específica sobre el significado de una obra, está construyendo una ______.",
+              "options": [
+                "tesis interpretativa",
+                "lista de datos",
+                "digresión temática",
+                "falacia ad hominem"
+              ],
+              "correctAnswer": "tesis interpretativa",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "análisis comparativo",
+              "definition": "A mode of interpretation that examines meaningful similarities and differences between works in order to develop a unified claim."
+            },
+            {
+              "term": "contexto histórico-cultural",
+              "definition": "The social, political, intellectual, and artistic circumstances that inform a work’s production and help illuminate its meanings."
+            },
+            {
+              "term": "voz ensayística",
+              "definition": "The distinctive presence projected by a writer through style, perspective, and rhetorical choices in prose."
+            },
+            {
+              "term": "apelación retórica",
+              "definition": "A persuasive strategy that seeks to affect readers through credibility, emotional engagement, or reasoning."
+            },
+            {
+              "term": "síntesis crítica",
+              "definition": "The integration of ideas from more than one text into a coherent interpretation that advances an original argument."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Al comparar \"Nuestra América\" de Martí con \"A Roosevelt\" de Rubén Darío, ¿cuál enfoque analítico produce una comparación más sólida?",
+              "options": [
+                "Señalar únicamente que ambos textos pertenecen al modernismo.",
+                "Explicar cómo ambos autores responden al poder estadounidense, pero mediante estrategias retóricas distintas: Martí desde el ensayo político y Darío desde la invectiva poética.",
+                "Resumir por separado el contenido de cada obra sin establecer relaciones entre ellas.",
+                "Afirmar que los dos textos tienen exactamente el mismo propósito y el mismo tono."
+              ],
+              "correctAnswer": "Explicar cómo ambos autores responden al poder estadounidense, pero mediante estrategias retóricas distintas: Martí desde el ensayo político y Darío desde la invectiva poética.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Cuál afirmación refleja mejor el uso adecuado del contexto en un ensayo de análisis literario?",
+              "options": [
+                "El contexto reemplaza la necesidad de analizar el lenguaje del texto.",
+                "El contexto solo es útil si el autor menciona hechos históricos de manera explícita.",
+                "El contexto puede enriquecer una interpretación cuando se conecta directamente con elecciones textuales y con el argumento central.",
+                "El contexto debe ocupar la mayor parte del ensayo para demostrar conocimiento externo."
+              ],
+              "correctAnswer": "El contexto puede enriquecer una interpretación cuando se conecta directamente con elecciones textuales y con el argumento central.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "En un ensayo que une observaciones sobre dos obras para sostener una sola interpretación, el proceso central es la ______.",
+              "options": [
+                "síntesis crítica",
+                "memorización mecánica",
+                "traducción literal",
+                "enumeración cronológica"
+              ],
+              "correctAnswer": "síntesis crítica",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Si un estudiante analiza cómo un autor busca credibilidad, emoción y razonamiento para convencer al lector, está examinando la ______.",
+              "options": [
+                "apelación retórica",
+                "métrica consonante",
+                "acotación teatral",
+                "secuencia cronológica"
+              ],
+              "correctAnswer": "apelación retórica",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

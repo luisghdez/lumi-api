@@ -1,0 +1,765 @@
+{
+  "apSubject": "AP Microeconomics",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Basic Economic Concepts",
+      "description": "Scarcity, opportunity cost, trade-offs, production possibilities, gains from trade, and economic systems.",
+      "note": "# Unit 1: Basic Economic Concepts\n\n## Overview\nThis unit introduces the foundational ideas of **economics**: **scarcity**, **choice**, **opportunity cost**, **trade-offs**, **production possibilities**, **specialization**, and **gains from trade**. These concepts matter on the AP exam because they appear in both multiple-choice and free-response questions as the logic behind nearly every later topic in microeconomics.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Scarcity** | The condition that **limited resources** cannot satisfy **unlimited wants**. | Explains why all economic choices exist; often the starting point for FRQ analysis. |\n| **Opportunity Cost** | The value of the **next best alternative foregone** when a choice is made. | Frequently tested in PPC questions, trade questions, and comparative advantage problems. |\n| **Trade-offs** | The idea that getting more of one thing usually requires giving up some of another. | Central to interpreting curves, especially the **production possibilities curve**. |\n| **Production Possibilities Curve (PPC)** | A graph showing the maximum combinations of two goods an economy can produce with given resources and technology. | Used to test efficiency, underutilization, growth, and increasing opportunity costs. |\n| **Efficiency** | When resources are used to produce the maximum possible output. On a PPC, points on the curve are efficient. | Students must distinguish **efficient**, **inefficient**, and **unattainable** points. |\n| **Comparative Advantage** | The ability to produce a good at a **lower opportunity cost** than another producer. | One of the most common AP topics in Unit 1; drives specialization and trade. |\n| **Absolute Advantage** | The ability to produce more of a good with the same resources, or the same amount with fewer resources. | Often confused with comparative advantage; AP questions regularly test the difference. |\n| **Economic Systems** | The ways societies organize production and allocation, such as **market**, **command**, and **mixed** systems. | Helps explain how different economies answer the basic economic questions. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Scarcity] --> B[Need to Make Choices]\n    B --> C[Every Choice Has a Trade-off]\n    C --> D[Opportunity Cost]\n    D --> E[\"Production Decisions (how much of each good?)\"]\n    E --> F[PPC Shows Trade-offs]\n    F --> G[Specialization Based on Comparative Advantage]\n    G --> H[Trade]\n    H --> I[Gains from Trade]\n```\n\n### How this logic works\n1. **Scarcity** forces individuals, firms, and societies to choose.\n2. Every choice creates a **trade-off**.\n3. The cost of that choice is the **opportunity cost**.\n4. A **PPC** models these choices for two goods.\n5. When producers specialize according to **comparative advantage**, total output can rise.\n6. This creates **gains from trade**, even if one side has no **absolute advantage**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **What You Must Know** |\n|---|---|\n| **Opportunity Cost** | $$\\text{Opportunity Cost of Good A} = \\frac{\\text{Good B Given Up}}{\\text{Good A Gained}}$$ |\n| **Comparative Advantage Rule** | A producer has comparative advantage in the good with the **lower opportunity cost**. |\n| **Absolute Advantage Rule** | A producer has absolute advantage in the good it can produce **more of** using the same resources. |\n| **PPC Efficiency Rule** | Points **on** the PPC are **efficient**; points **inside** are **inefficient**; points **outside** are **currently unattainable**. |\n| **Increasing Opportunity Cost** | If resources are not equally suited for producing both goods, then as production shifts, the PPC is **bowed outward** because opportunity cost rises. |\n| **Economic Growth on PPC** | An outward shift of the PPC results from increases in **resources**, **labor**, **capital**, or **technology**. |\n| **Specialization and Trade Rule** | If each producer specializes in the good for which it has comparative advantage, total production and potential consumption increase. |\n| **Three Basic Economic Questions** | Every economy must decide: **What to produce? How to produce? For whom to produce?** |\n\n### PPC slope idea\nThe slope of a PPC reflects **opportunity cost**.\n\n$$\n\\text{Slope of PPC} = \\frac{\\Delta y}{\\Delta x}\n$$\n\nOn the AP exam, you usually interpret this in words: producing more of one good requires sacrificing some amount of the other good.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Similar** | **Key Difference** | **AP Tip** |\n|---|---|---|---|\n| **Scarcity vs Shortage** | Both involve limited availability. | **Scarcity** is universal and permanent; a **shortage** is temporary and often caused by price being below equilibrium. | Do not use these as synonyms. |\n| **Absolute Advantage vs Comparative Advantage** | Both compare producers. | **Absolute advantage** uses output amounts; **comparative advantage** uses opportunity cost. | Trade is based on **comparative**, not absolute, advantage. |\n| **Efficient vs Inefficient PPC Points** | Both are feasible production points. | **Efficient** points lie on the curve; **inefficient** points lie inside it. | Inside the curve means unemployed or underused resources. |\n| **Movement Along PPC vs Shift of PPC** | Both change observed production possibilities. | A **movement along** the curve reflects reallocation; a **shift** changes productive capacity. | Recession often moves production inside the PPC, not shifts it inward. |\n\n```mermaid\nflowchart LR\n    A[Absolute Advantage] --> C[Specialization Decision]\n    B[Comparative Advantage] --> C\n    C --> D[Trade Pattern]\n    D --> E[Gains from Trade]\n\n    A --- F[Based on output]\n    B --- G[Based on opportunity cost]\n```\n\n## Common AP Exam Traps\n- Confusing **absolute advantage** with **comparative advantage**. A country can produce more of everything and still not have comparative advantage in everything.\n- Treating **scarcity** and **shortage** as the same concept. **Scarcity** always exists; **shortages** are market outcomes.\n- Assuming a point **inside** the PPC is impossible. It is possible, but **inefficient**.\n- Forgetting that a **bowed-out PPC** means **increasing opportunity costs**, usually because resources are specialized.\n- Thinking trade only helps when one producer is “better” at everything. Trade benefits both sides when they specialize by **comparative advantage**.\n\n## Quick Review Checklist\n- [ ] Define **scarcity** and explain why it forces economic choices.\n- [ ] Calculate **opportunity cost** from a table, scenario, or PPC.\n- [ ] Distinguish between **trade-offs** and **opportunity cost**.\n- [ ] Identify whether a PPC point is **efficient**, **inefficient**, or **unattainable**.\n- [ ] Explain why a PPC can be **straight** or **bowed outward**.\n- [ ] Distinguish **absolute advantage** from **comparative advantage**.\n- [ ] Determine who should specialize in which good based on **lower opportunity cost**.\n- [ ] Explain how **specialization** and **trade** create **gains from trade**.\n- [ ] Compare **market**, **command**, and **mixed** economic systems in answering the basic economic questions.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Scarcity",
+              "definition": "The condition that arises because limited resources cannot satisfy unlimited wants, forcing individuals and societies to make choices."
+            },
+            {
+              "term": "Opportunity Cost",
+              "definition": "The value of the next best alternative forgone when a decision is made."
+            },
+            {
+              "term": "Marginal Analysis",
+              "definition": "A decision-making approach that compares the additional benefit of an action to its additional cost."
+            },
+            {
+              "term": "Production Possibilities Curve",
+              "definition": "A model showing the maximum combinations of two goods that can be produced with available resources and technology when resources are fully employed."
+            },
+            {
+              "term": "Allocative Efficiency",
+              "definition": "A situation in which the mix of output produced matches consumer preferences, occurring where the marginal benefit of a good equals its marginal cost."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A nation can produce either consumer goods or capital goods. If it moves from a point inside its production possibilities curve to a point on the curve, which of the following most likely occurs?",
+              "options": [
+                "An increase in productive efficiency through better use of unemployed resources",
+                "A reduction in opportunity cost because resources have become less scarce",
+                "A shift outward of the production possibilities curve due to technological progress",
+                "A movement from allocative efficiency to productive inefficiency"
+              ],
+              "correctAnswer": "An increase in productive efficiency through better use of unemployed resources",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which of the following best explains why the production possibilities curve is typically drawn bowed outward from the origin?",
+              "options": [
+                "Resources are equally suited to producing either good",
+                "The opportunity cost of producing more of one good increases as resources are reallocated",
+                "Consumer preferences change as more of a good is produced",
+                "Economic growth causes output of both goods to rise over time"
+              ],
+              "correctAnswer": "The opportunity cost of producing more of one good increases as resources are reallocated",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When an individual chooses to spend two hours studying for an economics exam instead of working at a job, the wages forgone are the ______ of studying.",
+              "options": [
+                "explicit benefit",
+                "opportunity cost",
+                "marginal product",
+                "comparative advantage"
+              ],
+              "correctAnswer": "opportunity cost",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "On a production possibilities curve, any point ______ the curve represents an attainable but inefficient use of resources.",
+              "options": [
+                "outside",
+                "inside",
+                "beyond",
+                "tangent to"
+              ],
+              "correctAnswer": "inside",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Absolute Advantage",
+              "definition": "The ability of a producer to make more of a good than another producer using the same amount of resources, or to make the same amount using fewer resources."
+            },
+            {
+              "term": "Comparative Advantage",
+              "definition": "The ability of a producer to make a good at a lower forgone alternative output than another producer."
+            },
+            {
+              "term": "Specialization",
+              "definition": "The concentration of productive effort on tasks or goods for which a producer is relatively more efficient."
+            },
+            {
+              "term": "Market Economy",
+              "definition": "An economic system in which decisions about production and consumption are guided primarily by voluntary exchange and prices."
+            },
+            {
+              "term": "Command Economy",
+              "definition": "An economic system in which a central authority makes major decisions about resource allocation, production, and distribution."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Two countries can each produce wheat and cloth. Even if one country is more productive in making both goods, trade can still be mutually beneficial if",
+              "options": [
+                "each country specializes according to comparative advantage",
+                "the less productive country imposes a protective tariff",
+                "each country produces both goods in equal quantities",
+                "the more productive country has a higher opportunity cost in both goods"
+              ],
+              "correctAnswer": "each country specializes according to comparative advantage",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which of the following is a defining characteristic of a market economy?",
+              "options": [
+                "Prices and output levels are determined primarily through decentralized decision-making",
+                "The government owns all capital and directly assigns labor to industries",
+                "Resource allocation is based solely on traditional customs",
+                "A central planner sets binding production targets for all firms"
+              ],
+              "correctAnswer": "Prices and output levels are determined primarily through decentralized decision-making",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If a producer can make a good at a lower opportunity cost than another producer, the producer has a ______ in that good.",
+              "options": [
+                "trade deficit",
+                "absolute advantage",
+                "comparative advantage",
+                "production quota"
+              ],
+              "correctAnswer": "comparative advantage",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "An economy in which the government makes most decisions about what, how, and for whom to produce is a ______ economy.",
+              "options": [
+                "market",
+                "mixed",
+                "traditional",
+                "command"
+              ],
+              "correctAnswer": "command",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Supply and Demand",
+      "description": "Law of supply and demand, market equilibrium, price controls, consumer and producer surplus, and elasticity.",
+      "note": "# Unit 2: Supply and Demand\n\n## Overview\nThis unit introduces how **buyers and sellers interact in markets** to determine **equilibrium price** and **equilibrium quantity**. You will also analyze how **government intervention**, **surplus measures**, and **elasticity** affect market outcomes—core skills that appear frequently in AP Microeconomics multiple-choice and free-response questions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Law of Demand** | As **price** rises, **quantity demanded** falls, ceteris paribus. | AP questions often test movement along the demand curve versus shifts of the entire curve. |\n| **Law of Supply** | As **price** rises, **quantity supplied** rises, ceteris paribus. | Essential for graphing markets and predicting producer behavior. |\n| **Market Equilibrium** | The price and quantity where **quantity demanded equals quantity supplied**. | Central to nearly every unit problem; students must identify shortages, surpluses, and market adjustment. |\n| **Shifts vs. Movements** | A **change in price** causes movement along a curve; a **non-price determinant** causes a shift. | One of the most common AP traps, especially in graph interpretation. |\n| **Price Controls** | **Price ceilings** and **price floors** set legal limits on prices. | AP often asks about shortages, surpluses, rationing, and inefficiency created by controls. |\n| **Consumer Surplus** | The difference between what consumers are willing to pay and what they actually pay. | Used to evaluate market welfare and policy effects. |\n| **Producer Surplus** | The difference between the market price and the minimum price producers are willing to accept. | Common in welfare analysis and policy graphs. |\n| **Elasticity** | Measures how responsive quantity demanded or supplied is to changes in price, income, or related goods’ prices. | A major AP topic with formulas, interpretation, and applications to revenue and tax incidence. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start with market demand and market supply] --> B[Determine equilibrium where Qd = Qs]\n    B --> C[\"Price above equilibrium\"]\n    B --> D[\"Price below equilibrium\"]\n    C --> E[Surplus forms]\n    E --> F[Downward pressure on price]\n    F --> B\n    D --> G[Shortage forms]\n    G --> H[Upward pressure on price]\n    H --> B\n\n    B --> I[\"Non-price determinant changes\"]\n    I --> J[Demand shifts right or left]\n    I --> K[Supply shifts right or left]\n    J --> L[New equilibrium price and quantity]\n    K --> L\n\n    L --> M[\"Government intervention or elasticity analysis\"]\n    M --> N[Evaluate shortages surpluses welfare and responsiveness]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Meaning / Use** |\n|---|---|\n| **Law of Demand** | When **price** increases, **quantity demanded** decreases, ceteris paribus. |\n| **Law of Supply** | When **price** increases, **quantity supplied** increases, ceteris paribus. |\n| $$Q_d = Q_s$$ | Condition for **market equilibrium**. |\n| $$\\text{Elasticity of Demand} = \\frac{\\%\\ \\text{change in quantity demanded}}{\\%\\ \\text{change in price}}$$ | Measures responsiveness of buyers to price changes. |\n| $$\\text{Elasticity of Supply} = \\frac{\\%\\ \\text{change in quantity supplied}}{\\%\\ \\text{change in price}}$$ | Measures responsiveness of sellers to price changes. |\n| $$\\%\\ \\text{change} = \\frac{\\text{new value} - \\text{old value}}{\\text{old value}} \\times 100$$ | Basic percentage change formula. |\n| $$\\text{Midpoint \\% change} = \\frac{\\text{new} - \\text{old}}{\\left(\\frac{\\text{new} + \\text{old}}{2}\\right)} \\times 100$$ | Preferred on AP for elasticity calculations because it avoids direction bias. |\n| $$E_d > 1$$ | **Elastic demand**: quantity demanded is relatively responsive. |\n| $$E_d < 1$$ | **Inelastic demand**: quantity demanded is relatively unresponsive. |\n| $$E_d = 1$$ | **Unit elastic demand**. |\n| **Total Revenue Rule** | If demand is **elastic**, a price increase lowers total revenue; if demand is **inelastic**, a price increase raises total revenue. |\n| **Price Ceiling** | A legal maximum price; if set **below equilibrium**, it is **binding** and creates a **shortage**. |\n| **Price Floor** | A legal minimum price; if set **above equilibrium**, it is **binding** and creates a **surplus**. |\n| $$\\text{Consumer Surplus} = \\text{area below demand and above price}$$ | Measures net benefit to consumers. |\n| $$\\text{Producer Surplus} = \\text{area above supply and below price}$$ | Measures net benefit to producers. |\n\n### Key Demand Determinants\n- **Income**\n- **Tastes and preferences**\n- **Prices of related goods**:\n  - **Substitutes**: if price of one rises, demand for the other rises\n  - **Complements**: if price of one rises, demand for the other falls\n- **Number of consumers**\n- **Expectations**\n\n### Key Supply Determinants\n- **Input prices**\n- **Technology**\n- **Taxes/subsidies**\n- **Number of sellers**\n- **Expectations**\n- **Prices of alternative products**\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **AP-Relevant Difference** |\n|---|---|---|---|\n| **Movement vs. Shift** | **Movement along demand/supply** | **Shift of demand/supply** | A **price change** causes movement along a curve; a **determinant change** shifts the entire curve. |\n| **Shortage vs. Surplus** | **Shortage** | **Surplus** | Shortage occurs when $$Q_d > Q_s$$ and pushes price up; surplus occurs when $$Q_s > Q_d$$ and pushes price down. |\n| **Price Ceiling vs. Price Floor** | **Ceiling** | **Floor** | A binding ceiling is below equilibrium and creates shortage; a binding floor is above equilibrium and creates surplus. |\n| **Elastic vs. Inelastic Demand** | **Elastic** | **Inelastic** | In elastic demand, buyers respond strongly to price changes; in inelastic demand, they respond weakly, affecting total revenue differently. |\n\n## Common AP Exam Traps\n- Confusing a **change in quantity demanded** with a **change in demand**. If **price of the good itself** changes, that is a movement along the demand curve, not a shift.\n- Forgetting that **only binding price controls matter**. A price ceiling above equilibrium or a price floor below equilibrium has **no effect**.\n- Mislabeling **shortage** and **surplus** on a graph. Shortage means buyers want more than sellers offer at that price; surplus means sellers offer more than buyers want.\n- Treating **elasticity** as the same as slope. Elasticity depends on **percentage changes**, not just visual steepness.\n- Reversing the **total revenue test**: with **elastic demand**, price and total revenue move in opposite directions; with **inelastic demand**, they move in the same direction.\n\n## Quick Review Checklist\n- [ ] I can explain the **law of demand** and **law of supply**.\n- [ ] I can distinguish between a **movement along a curve** and a **shift of the curve**.\n- [ ] I can identify **equilibrium price** and **equilibrium quantity** on a graph or from data.\n- [ ] I can explain how a **shortage** or **surplus** causes price to adjust toward equilibrium.\n- [ ] I can analyze the effects of a **binding price ceiling** or **binding price floor**.\n- [ ] I can calculate and interpret **consumer surplus** and **producer surplus** from a graph.\n- [ ] I can calculate **price elasticity of demand** or **supply** using the **midpoint formula**.\n- [ ] I can determine whether demand is **elastic**, **inelastic**, or **unit elastic**, and relate that to **total revenue**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Law of Demand",
+              "definition": "Holding all else constant, as the price of a good rises, the quantity buyers are willing and able to purchase falls, and as the price falls, the quantity purchased rises."
+            },
+            {
+              "term": "Normal Good",
+              "definition": "A product for which demand increases when consumer income rises and decreases when consumer income falls, all else equal."
+            },
+            {
+              "term": "Substitute Goods",
+              "definition": "Two products for which an increase in the price of one leads consumers to buy more of the other."
+            },
+            {
+              "term": "Determinants of Supply",
+              "definition": "Nonprice factors that shift sellers' willingness and ability to produce, including input costs, technology, taxes or subsidies, number of sellers, expectations, and prices of related goods in production."
+            },
+            {
+              "term": "Market Equilibrium",
+              "definition": "The outcome in which the quantity buyers wish to purchase equals the quantity sellers wish to sell, so there is no tendency for the market price to change."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A decrease in consumer income causes the demand for instant noodles to increase. Based on this information, instant noodles are best classified as",
+              "options": [
+                "a normal good",
+                "an inferior good",
+                "a substitute in production",
+                "a complement"
+              ],
+              "correctAnswer": "an inferior good",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Suppose the price of wheat increases. In a competitive market, which of the following best explains why the quantity supplied of wheat increases?",
+              "options": [
+                "Higher income shifts demand rightward",
+                "The higher price increases producers' willingness to sell along the existing supply curve",
+                "Consumers expect lower future prices",
+                "The price increase causes the supply curve to shift leftward"
+              ],
+              "correctAnswer": "The higher price increases producers' willingness to sell along the existing supply curve",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If a technological improvement lowers production costs for solar panels, the market supply curve for solar panels will shift ______.",
+              "options": [
+                "left because quantity demanded falls",
+                "right because production becomes more profitable at each price",
+                "left because demand decreases",
+                "upward only because price rises"
+              ],
+              "correctAnswer": "right because production becomes more profitable at each price",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When the market price is above the equilibrium price, a ______ will occur.",
+              "options": [
+                "shortage",
+                "surplus",
+                "price floor",
+                "demand increase"
+              ],
+              "correctAnswer": "surplus",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Price Ceiling",
+              "definition": "A legal maximum on the price at which a good can be sold; when set below the market-clearing level, it creates excess demand."
+            },
+            {
+              "term": "Price Floor",
+              "definition": "A legal minimum on the price at which a good can be sold; when set above the market-clearing level, it creates excess supply."
+            },
+            {
+              "term": "Consumer Surplus",
+              "definition": "The difference between the maximum amount buyers are willing to pay and the amount they actually pay, represented by the area below demand and above price up to the quantity traded."
+            },
+            {
+              "term": "Price Elasticity of Demand",
+              "definition": "A measure of how responsive quantity demanded is to a change in price, calculated as $$\frac{\text{percentage change in quantity demanded}}{\text{percentage change in price}}$$."
+            },
+            {
+              "term": "Total Revenue Test",
+              "definition": "A method for inferring demand responsiveness by examining how sellers' receipts, calculated as $$P \times Q$$, change when price changes."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a market for rental housing, a binding rent control is most likely to result in which of the following?",
+              "options": [
+                "A surplus of apartments and lower search costs for tenants",
+                "A shortage of apartments and nonprice rationing",
+                "An increase in producer surplus for landlords",
+                "A rightward shift of the supply curve for apartments"
+              ],
+              "correctAnswer": "A shortage of apartments and nonprice rationing",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A firm raises price from $$10$$ dollars to $$12$$ dollars, and quantity demanded falls from $$100$$ units to $$90$$ units. Using the midpoint method, the price elasticity of demand is closest to",
+              "options": [
+                "$$0.48$$",
+                "$$0.82$$",
+                "$$1.22$$",
+                "$$2.20$$"
+              ],
+              "correctAnswer": "$$1.22$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If demand is price inelastic, a decrease in price will ______ total revenue.",
+              "options": [
+                "increase",
+                "decrease",
+                "not change",
+                "make it equal to marginal revenue"
+              ],
+              "correctAnswer": "decrease",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A binding price floor set above equilibrium will create a ______.",
+              "options": [
+                "shortage",
+                "surplus",
+                "decrease in demand",
+                "decrease in supply"
+              ],
+              "correctAnswer": "surplus",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Production, Cost, and the Perfect Competition Model",
+      "description": "Production function, short- and long-run costs, profit maximization, and competitive markets.",
+      "note": "# Unit 3: Production, Cost, and the Perfect Competition Model\n\n## Overview\nThis unit explains how firms turn **inputs** into **output**, how economists measure **costs** in the **short run** and **long run**, and how firms choose the **profit-maximizing level of production**. It matters for the AP exam because many multiple-choice and free-response questions ask you to connect **production**, **cost curves**, and **perfect competition** using both graphs and formulas.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Production Function** | The relationship between **inputs** and the quantity of **output** produced. | Helps explain how changing labor or capital affects output and cost. |\n| **Short Run vs. Long Run** | In the **short run**, at least one input is fixed; in the **long run**, all inputs are variable. | AP questions often test which costs or decisions apply only in one time frame. |\n| **Marginal Product** | The additional output from hiring one more unit of a variable input, usually labor. | Central to understanding why **marginal cost** eventually rises. |\n| **Law of Diminishing Marginal Returns** | As more units of a variable input are added to a fixed input, marginal product eventually falls. | Explains the shape of the **marginal cost** and **average variable cost** curves. |\n| **Fixed, Variable, and Total Cost** | **Fixed costs** do not change with output; **variable costs** do; **total cost** is their sum. | Students must calculate and classify costs correctly on the exam. |\n| **Average and Marginal Cost Curves** | **AFC**, **AVC**, **ATC**, and **MC** measure cost per unit or cost of the next unit. | Graphing and interpreting these curves is a major AP Micro skill. |\n| **Profit Maximization** | Firms produce where **marginal revenue equals marginal cost** if price covers shutdown conditions. | This is the core rule for output choice in perfect competition. |\n| **Perfect Competition** | A market with many firms, identical products, easy entry/exit, and firms as **price takers**. | AP exam questions frequently ask for short-run and long-run outcomes in this market structure. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Firm adds variable input (labor)\"] --> B[\"Output rises\"]\n    B --> C[\"Marginal product first may rise, then falls\"]\n    C --> D[\"Diminishing marginal returns set in\"]\n    D --> E[\"Marginal cost rises\"]\n    E --> F[\"Firm compares price and cost\"]\n    F --> G[\"Produce where MR = MC\"]\n    G --> H[\"If P > ATC, economic profit\"]\n    G --> I[\"If ATC > P > AVC, loss but keep producing in short run\"]\n    G --> J[\"If P < AVC, shut down in short run\"]\n    H --> K[\"In long run, entry shifts market supply right\"]\n    I --> L[\"In long run, exit shifts market supply left\"]\n    K --> M[\"Price moves toward minimum ATC\"]\n    L --> M[\"Price moves toward minimum ATC\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Expression / Meaning** |\n|---|---|\n| **Total Product** | Total quantity of output produced from given inputs |\n| **Marginal Product of Labor** | $$MP_L = \\frac{\\Delta TP}{\\Delta L}$$ |\n| **Law of Diminishing Marginal Returns** | When one input is fixed, adding more of a variable input eventually causes $$MP$$ to decline |\n| **Total Cost** | $$TC = TFC + TVC$$ |\n| **Average Fixed Cost** | $$AFC = \\frac{TFC}{Q}$$ |\n| **Average Variable Cost** | $$AVC = \\frac{TVC}{Q}$$ |\n| **Average Total Cost** | $$ATC = \\frac{TC}{Q} = AFC + AVC$$ |\n| **Marginal Cost** | $$MC = \\frac{\\Delta TC}{\\Delta Q} = \\frac{\\Delta TVC}{\\Delta Q}$$ |\n| **Economic Profit** | $$\\text{Profit} = TR - TC$$ |\n| **Total Revenue** | $$TR = P \\times Q$$ |\n| **Marginal Revenue in Perfect Competition** | $$MR = P$$ |\n| **Profit-Maximizing Rule** | Produce where $$MR = MC$$, as long as $$P \\ge AVC$$ in the short run |\n| **Shutdown Rule** | Shut down in the short run if $$P < AVC$$ |\n| **Break-Even Point** | Firms earn normal profit when $$P = ATC$$ |\n| **Long-Run Equilibrium in Perfect Competition** | $$P = MR = MC = ATC$$ at the minimum point of **ATC** |\n\n### Curve Relationships You Must Know\n- **MC** intersects **AVC** and **ATC** at their minimum points.\n- **AFC** always declines as output increases.\n- When **MC** is below **ATC** or **AVC**, it pulls them down.\n- When **MC** is above **ATC** or **AVC**, it pulls them up.\n- In perfect competition, the firm’s **demand curve** is perfectly elastic, so $$D = MR = AR = P$$.\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key Connection / Difference** |\n|---|---|---|---|\n| **Short Run vs. Long Run** | At least one input is fixed | All inputs are variable | Only in the short run do diminishing marginal returns drive rising **MC** in the same way. |\n| **Marginal Product vs. Marginal Cost** | Output gained from one more worker | Cost of one more unit of output | They are inversely related: when **MP** rises, **MC** falls; when **MP** falls, **MC** rises. |\n| **Accounting Profit vs. Economic Profit** | Revenue minus explicit costs | Revenue minus explicit and implicit costs | AP Micro focuses on **economic profit**, not just accounting profit. |\n| **Firm vs. Market in Perfect Competition** | Firm is a **price taker** with horizontal demand | Market price determined by industry supply and demand | Individual firms cannot change price, but entry and exit can change market supply in the long run. |\n\n```mermaid\nflowchart LR\n    A[\"Higher marginal product\"] --> B[\"Lower marginal cost\"]\n    B --> C[\"Lower average costs possible\"]\n    C --> D[\"Higher profit if price stays above cost\"]\n    D --> E[\"Entry in perfect competition\"]\n    E --> F[\"Market supply increases\"]\n    F --> G[\"Market price falls\"]\n    G --> H[\"Economic profit moves toward zero\"]\n```\n\n## Common AP Exam Traps\n- Confusing **short-run shutdown** with **long-run exit**. A firm may continue producing in the short run when $$AVC < P < ATC$$, even though it is earning a loss.\n- Forgetting that in **perfect competition**, $$MR = P$$ for the firm. Do not use a downward-sloping marginal revenue curve here.\n- Mixing up **marginal cost** and **average total cost** when identifying profit maximization. Firms choose output where $$MR = MC$$, not where $$P = ATC$$.\n- Assuming a firm should always produce if it earns positive revenue. The real short-run test is whether price covers **average variable cost**.\n- Missing the difference between **economic profit** and **normal profit**. In long-run perfect competition, firms earn **zero economic profit**, not zero total revenue or zero accounting profit.\n\n## Quick Review Checklist\n- [ ] Define **production function**, **short run**, and **long run**.\n- [ ] Calculate **marginal product**, **total cost**, **AFC**, **AVC**, **ATC**, and **MC** from a table.\n- [ ] Explain how **diminishing marginal returns** causes **marginal cost** to rise.\n- [ ] Identify the output level where a perfectly competitive firm maximizes profit using $$MR = MC$$.\n- [ ] Determine whether a firm earns **profit**, **breaks even**, or incurs a **loss** by comparing $$P$$ and **ATC**.\n- [ ] Apply the **shutdown rule** using $$P$$ and **AVC**.\n- [ ] Describe why firms in perfect competition are **price takers** and why their demand curve is horizontal.\n- [ ] Explain how **entry** and **exit** move a perfectly competitive market to **long-run equilibrium** where $$P = ATC$$ at the minimum **ATC**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Production function",
+              "definition": "A representation showing the maximum output a firm can produce from different combinations of inputs, given current technology."
+            },
+            {
+              "term": "Marginal product",
+              "definition": "The additional output generated by employing one more unit of a variable input, holding other inputs constant."
+            },
+            {
+              "term": "Diminishing marginal returns",
+              "definition": "The pattern in which adding successive units of a variable input to a fixed input eventually causes the extra output from each additional unit to fall."
+            },
+            {
+              "term": "Fixed cost",
+              "definition": "An expense that does not change as output changes in the short run because it is tied to inputs that cannot be adjusted."
+            },
+            {
+              "term": "Marginal cost",
+              "definition": "The increase in total cost from producing one additional unit of output; it can be calculated as $$\\Delta TC \\div \\Delta Q$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A firm hires workers while capital is fixed. Output rises from $$50$$ to $$68$$ units when the fifth worker is hired, and from $$68$$ to $$82$$ units when the sixth worker is hired. Which conclusion is most consistent with these data?",
+              "options": [
+                "The firm is experiencing diminishing marginal returns because the marginal product of labor fell from $$18$$ to $$14$$.",
+                "The firm is experiencing economies of scale because average total cost is falling.",
+                "The firm should shut down immediately because total product is increasing.",
+                "The firm's fixed costs must have increased as more workers were hired."
+              ],
+              "correctAnswer": "The firm is experiencing diminishing marginal returns because the marginal product of labor fell from $$18$$ to $$14$$.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "If a firm's total cost is $$240$$ when it produces $$8$$ units and $$275$$ when it produces $$9$$ units, what is the firm's marginal cost of the ninth unit?",
+              "options": [
+                "$$35$$",
+                "$$30.56$$",
+                "$$275$$",
+                "$$515$$"
+              ],
+              "correctAnswer": "$$35$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When average variable cost is decreasing, marginal cost must be ______ average variable cost.",
+              "options": [
+                "below",
+                "equal to",
+                "above",
+                "unrelated to"
+              ],
+              "correctAnswer": "below",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the short run, the cost that remains when output is zero is ______ cost.",
+              "options": [
+                "fixed",
+                "marginal",
+                "variable",
+                "implicit"
+              ],
+              "correctAnswer": "fixed",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Profit-maximizing rule",
+              "definition": "The output level at which a firm produces the quantity where $$MR = MC$$, provided price is at least average variable cost in the short run."
+            },
+            {
+              "term": "Shutdown rule",
+              "definition": "The short-run decision to produce only if total revenue covers variable expenses; otherwise the firm produces zero output."
+            },
+            {
+              "term": "Allocative efficiency",
+              "definition": "A market outcome in which resources are distributed so that the value buyers place on the last unit equals the cost of society's resources used to produce it, expressed as $$P = MC$$."
+            },
+            {
+              "term": "Productive efficiency",
+              "definition": "A situation in which output is produced at the lowest possible average total cost, which occurs at the minimum point of the average total cost curve."
+            },
+            {
+              "term": "Perfect competition",
+              "definition": "A market structure characterized by many small buyers and sellers, identical products, free entry and exit, and no individual firm's ability to influence market price."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A perfectly competitive firm sells its product for $$18$$. At the profit-maximizing output, average total cost is $$15$$ and average variable cost is $$11$$. Which statement is correct?",
+              "options": [
+                "The firm earns an economic profit of $$3$$ per unit and should continue producing in the short run.",
+                "The firm incurs a loss of $$7$$ per unit and should shut down immediately.",
+                "The firm is breaking even because price exceeds average variable cost.",
+                "The firm is allocatively inefficient because $$P > AVC$$."
+              ],
+              "correctAnswer": "The firm earns an economic profit of $$3$$ per unit and should continue producing in the short run.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In long-run equilibrium in a perfectly competitive industry, which condition must hold for each firm?",
+              "options": [
+                "$$P = MR = MC$$ and price equals minimum average total cost.",
+                "$$P > MR > MC$$ because firms have market power.",
+                "$$P = AVC$$ and firms earn positive economic profit.",
+                "$$MR = MC$$ and average total cost is rising."
+              ],
+              "correctAnswer": "$$P = MR = MC$$ and price equals minimum average total cost.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a perfectly competitive firm, the demand curve is horizontal because the firm is a ______ in the market.",
+              "options": [
+                "price taker",
+                "monopolist",
+                "barrier creator",
+                "wage setter"
+              ],
+              "correctAnswer": "price taker",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A perfectly competitive firm will shut down in the short run if price falls ______ average variable cost.",
+              "options": [
+                "below",
+                "above",
+                "equal to",
+                "twice"
+              ],
+              "correctAnswer": "below",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Imperfect Competition",
+      "description": "Monopoly, oligopoly, monopolistic competition, price discrimination, and market power.",
+      "note": "# Unit 4: Imperfect Competition\n\n## Overview\nThis unit covers market structures in which firms have **market power**, meaning they can influence price rather than taking market price as given. For the AP exam, you need to compare **monopoly**, **oligopoly**, and **monopolistic competition**, analyze their graphs and outcomes, and understand how **price discrimination** and strategic behavior affect efficiency, profit, and consumer welfare.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Market Power** | The ability of a firm to set price above marginal cost because it faces a downward-sloping demand curve. | AP questions often ask how imperfectly competitive firms differ from perfectly competitive firms in pricing and output decisions. |\n| **Monopoly** | A market with a single seller, high barriers to entry, and no close substitutes. | You must graph monopoly equilibrium where **$$MR = MC$$** and identify price from the demand curve. |\n| **Monopolistic Competition** | A market with many firms selling differentiated products and relatively easy entry and exit. | AP commonly tests short-run profit/loss and the long-run outcome of **normal profit** with excess capacity. |\n| **Oligopoly** | A market dominated by a few interdependent firms. | Expect questions on strategic behavior, collusion, and the **kinked demand curve** model. |\n| **Barriers to Entry** | Obstacles that prevent new firms from entering a market, such as legal barriers, control of resources, or economies of scale. | Barriers explain why monopoly and oligopoly profits may persist in the long run. |\n| **Price Discrimination** | Charging different prices to different consumers for the same good when costs are similar. | AP may ask when price discrimination is possible and how it can increase a monopolist’s profit. |\n| **Allocative and Productive Efficiency** | **Allocative efficiency** occurs where **$$P = MC$$**; **productive efficiency** occurs at minimum **$$ATC$$**. | Imperfect competition is often compared to perfect competition in terms of efficiency and deadweight loss. |\n| **Deadweight Loss** | The loss of total surplus caused by underproduction relative to the socially efficient output. | Students must identify how monopoly output creates **$$DWL$$** because output is below the efficient level. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Imperfectly competitive firm faces downward-sloping demand] --> B[Calculate output where MR = MC]\n    B --> C[Use demand curve to find price at that output]\n    C --> D[Compare price, ATC, and AVC]\n    D --> E[\"If P > ATC, firm earns profit\"]\n    D --> F[\"If ATC > P > AVC, firm incurs loss but produces in short run\"]\n    D --> G[\"If P < AVC, firm shuts down in short run\"]\n\n    H[Long run depends on market structure] --> I[Monopoly can keep profit if barriers exist]\n    H --> J[Monopolistic competition attracts entry, profit goes to zero]\n    H --> K[Oligopoly outcome depends on rivalry or collusion]\n```\n\n### Strategic relationship in oligopoly\n1. Firms are **mutually interdependent**.\n2. Each firm considers how rivals will respond to price or output changes.\n3. Firms may:\n   - **Collude** to act like a monopoly,\n   - Compete aggressively on price or output,\n   - Follow a stable pricing pattern suggested by the **kinked demand curve**.\n4. The result may be:\n   - Higher prices and profits with collusion,\n   - Lower prices with competition,\n   - Price rigidity if firms fear asymmetric rival responses.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Meaning / Use** |\n|---|---|\n| $$TR = P \\times Q$$ | **Total revenue** equals price times quantity sold. |\n| $$MR = \\frac{\\Delta TR}{\\Delta Q}$$ | **Marginal revenue** is the change in total revenue from selling one more unit. |\n| $$\\text{Profit-maximizing output: } MR = MC$$ | All imperfect competitors choose output where marginal revenue equals marginal cost. |\n| $$\\text{For monopoly or monopolistic competition: } P > MR$$ | Because the firm faces a downward-sloping demand curve, lowering price to sell more reduces marginal revenue below price. |\n| $$\\text{Allocative efficiency: } P = MC$$ | Society’s preferred output level; monopoly generally does not produce here. |\n| $$\\text{Productive efficiency: output at minimum } ATC$$ | Lowest possible average total cost; monopolistic competition and monopoly often do not produce here. |\n| $$\\text{Economic profit per unit} = P - ATC$$ | Multiply by quantity to get total profit area on the graph. |\n| $$\\text{Total economic profit} = (P - ATC)\\times Q$$ | Used to identify profit or loss on AP graphs. |\n| $$DWL$$ occurs when $$Q_{market} < Q_{efficient}$$ | In monopoly, restricted output creates lost consumer and producer surplus. |\n\n### Must-know rules by market structure\n- **Monopoly**:\n  - Produces where $$MR = MC$$\n  - Charges price from the **demand** curve\n  - Usually has **$$P > MC$$**, so it is **allocatively inefficient**\n- **Monopolistic competition**:\n  - Short run: can earn profit or incur loss\n  - Long run: entry/exit leads to **zero economic profit**\n  - Still produces where **$$P > MC$$)** and not at minimum **$$ATC$$**\n- **Oligopoly**:\n  - Firms are interdependent\n  - Collusion can make firms behave like a monopoly\n  - Price wars can reduce profit\n- **Price discrimination** requires:\n  - Some degree of **market power**\n  - Ability to separate consumer groups\n  - Prevention of resale\n\n## Connections & Comparisons\n\n| **Feature** | **Monopoly** | **Oligopoly** | **Monopolistic Competition** | **Perfect Competition reference** |\n|---|---|---|---|---|\n| Number of firms | One | Few | Many | Many |\n| Type of product | Unique, no close substitute | Standardized or differentiated | Differentiated | Identical |\n| Barriers to entry | Very high | High | Low | None |\n| Firm control over price | Significant | Some, depends on rivals | Some | None |\n| Long-run profit | Possible | Possible | Zero economic profit | Zero economic profit |\n| Efficiency | Not allocatively efficient | Usually not fully efficient | Not allocatively or productively efficient | Allocatively and productively efficient in long run |\n\n```mermaid\nflowchart LR\n    A[More competition] --> B[Monopolistic Competition]\n    B --> C[Oligopoly]\n    C --> D[Monopoly]\n    A --> E[Less market power]\n    D --> F[More market power]\n```\n\n## Common AP Exam Traps\n- **Do not use the demand curve to find output.** Output is found where **$$MR = MC$$**; then price is found on the demand curve at that quantity.\n- **Monopoly does not necessarily earn profit.** A monopolist can incur losses if **$$ATC > P$$** at the profit-maximizing output.\n- **Monopolistic competition in long-run equilibrium does not produce at minimum $$ATC$$.** This is why it has **excess capacity**.\n- **Oligopoly is not the same as monopoly.** A collusive oligopoly may behave like a monopoly, but firms remain separate and strategic interaction matters.\n- **Price discrimination does not mean charging different prices because of different costs.** It refers to different prices for similar units when the difference reflects willingness to pay.\n\n## Quick Review Checklist\n- [ ] Explain what **market power** is and why imperfect competitors face downward-sloping demand.\n- [ ] Determine a firm’s profit-maximizing output using **$$MR = MC$$**.\n- [ ] Find the profit-maximizing price from the **demand** curve, not the **$$MR$$** curve.\n- [ ] Identify whether a monopoly or monopolistically competitive firm earns profit, breaks even, or incurs a loss.\n- [ ] Compare **monopoly**, **oligopoly**, and **monopolistic competition** using number of firms, barriers, and pricing power.\n- [ ] Explain why monopoly creates **deadweight loss** and fails to achieve **allocative efficiency**.\n- [ ] Describe why **monopolistic competition** earns **zero economic profit** in the long run but still has **excess capacity**.\n- [ ] State the conditions needed for **price discrimination** and explain why it can raise profit.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Monopoly",
+              "definition": "A market structure with a single seller producing a product with no close substitutes and protected by high barriers to entry."
+            },
+            {
+              "term": "Natural monopoly",
+              "definition": "A market in which one firm can supply the entire market at a lower average total cost than multiple competing firms because of substantial economies of scale over the relevant output range."
+            },
+            {
+              "term": "Marginal revenue",
+              "definition": "The additional revenue earned from selling one more unit of output; for a single seller facing a downward-sloping demand curve, it is less than price for each positive quantity."
+            },
+            {
+              "term": "Deadweight loss",
+              "definition": "The reduction in total surplus that occurs when output is restricted below the socially efficient level, creating mutually beneficial trades that do not occur."
+            },
+            {
+              "term": "Price discrimination",
+              "definition": "A pricing practice in which a seller charges different buyers different prices for the same good or service when the differences are not based on cost differences."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A profit-maximizing single seller faces market demand and produces where $$MR = MC$$. If at that output the price exceeds average total cost, which statement is correct?",
+              "options": [
+                "The firm earns economic profit because price is above average total cost at the profit-maximizing quantity.",
+                "The firm should increase output until price equals marginal cost.",
+                "The firm is allocatively efficient because it charges a price above marginal revenue.",
+                "The firm must be producing at the minimum point of average total cost."
+              ],
+              "correctAnswer": "The firm earns economic profit because price is above average total cost at the profit-maximizing quantity.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which condition best explains why a single seller creates deadweight loss relative to perfect competition?",
+              "options": [
+                "It sets output where $$P = MC$$, causing overproduction.",
+                "It restricts output below the socially efficient quantity where $$P = MC$$.",
+                "It faces a perfectly elastic demand curve and charges a lower price.",
+                "It produces where average fixed cost is maximized."
+              ],
+              "correctAnswer": "It restricts output below the socially efficient quantity where $$P = MC$$.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A single seller maximizes profit by producing the quantity at which ______ and then using the demand curve to determine price.",
+              "options": [
+                "$$MR = MC$$",
+                "$$P = MC$$",
+                "$$ATC = AVC$$",
+                "$$TR = TC$$"
+              ],
+              "correctAnswer": "$$MR = MC$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For a single seller that can separate consumers by willingness to pay, charging different prices to different buyers is called ______.",
+              "options": [
+                "price discrimination",
+                "allocative efficiency",
+                "perfect competition",
+                "nonprice competition"
+              ],
+              "correctAnswer": "price discrimination",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Oligopoly",
+              "definition": "A market structure dominated by a small number of interdependent firms, so each firm's pricing and output decisions depend on rivals' expected responses."
+            },
+            {
+              "term": "Game theory",
+              "definition": "A framework used to analyze strategic behavior when the outcome for each participant depends on the actions taken by others."
+            },
+            {
+              "term": "Nash equilibrium",
+              "definition": "An outcome in which each participant chooses the best strategy given the choices of others, so no one has an incentive to change unilaterally."
+            },
+            {
+              "term": "Monopolistic competition",
+              "definition": "A market structure with many firms selling differentiated products, relatively easy entry, and some control over price because products are not identical."
+            },
+            {
+              "term": "Excess capacity",
+              "definition": "A situation in which a firm produces less than the output level that minimizes average total cost in the long run."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Two firms in a concentrated industry are deciding whether to collude or compete. Even though both would earn higher combined profits by colluding, each firm has an incentive to cheat on the agreement. This outcome is best explained by",
+              "options": [
+                "the kinked demand model",
+                "a dominant strategy in a prisoners' dilemma",
+                "productive efficiency",
+                "constant returns to scale"
+              ],
+              "correctAnswer": "a dominant strategy in a prisoners' dilemma",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In long-run equilibrium under monopolistic competition, which of the following is true for a representative firm?",
+              "options": [
+                "Price equals marginal cost, and the firm earns positive economic profit.",
+                "Price exceeds marginal cost, and the firm earns zero economic profit.",
+                "Marginal revenue exceeds price, and the firm produces at minimum average total cost.",
+                "Price is below average total cost, so the firm shuts down immediately."
+              ],
+              "correctAnswer": "Price exceeds marginal cost, and the firm earns zero economic profit.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In an oligopoly, mutual interdependence means each firm's decisions about price and output depend on the expected behavior of ______.",
+              "options": [
+                "rival firms",
+                "factor markets",
+                "government regulators",
+                "perfectly competitive buyers"
+              ],
+              "correctAnswer": "rival firms",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In long-run equilibrium for monopolistic competition, firms earn ______ because entry and exit eliminate sustained economic profits.",
+              "options": [
+                "zero economic profit",
+                "normal losses",
+                "negative marginal revenue",
+                "minimum fixed cost"
+              ],
+              "correctAnswer": "zero economic profit",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Factor Markets and Market Failure",
+      "description": "Labor market, derived demand, wages, externalities, public goods, market failures, and government intervention.",
+      "note": "# Unit 5: Factor Markets and Market Failure\n\n## Overview\nThis unit explains how **factor markets** determine the prices and quantities of inputs like **labor**, and why those markets matter for firms’ production decisions. It also introduces **market failure**—situations where free markets misallocate resources because of **externalities**, **public goods**, or missing property rights—making this a high-frequency AP Micro topic for graphs, marginal analysis, and policy evaluation.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Derived Demand** | Demand for a resource based on the demand for the final product it helps produce. | AP questions often ask why labor demand shifts when product demand or productivity changes. |\n| **Marginal Revenue Product (MRP)** | The additional revenue generated by hiring one more unit of a resource. | A profit-maximizing firm hires labor where **$$MRP = MRC$$**. |\n| **Marginal Resource Cost (MRC)** | The additional cost of hiring one more unit of a resource. | In competitive labor markets, firms usually face **$$MRC = wage$$**. |\n| **Competitive Labor Market** | A market in which many firms hire workers and no single buyer or seller controls wages. | You must identify equilibrium **wage** and **quantity of labor** using market supply and demand. |\n| **Monopsony** | A labor market with one dominant buyer of labor. | AP exam questions often test why a monopsonist hires fewer workers and pays a lower wage than a competitive market. |\n| **Negative Externality** | A cost imposed on third parties not involved in the transaction. | Leads to **overproduction** because private costs are less than social costs. |\n| **Positive Externality** | A benefit received by third parties not involved in the transaction. | Leads to **underproduction** because private benefits are less than social benefits. |\n| **Public Goods** | Goods that are **nonrival** and **nonexcludable**. | AP questions use them to test the **free-rider problem** and why markets may fail to provide them efficiently. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Consumer demand for output rises] --> B[Firm's output price or sales rise]\n    B --> C[Marginal revenue product of labor rises]\n    C --> D[Labor demand shifts right]\n    D --> E[Wage and employment tend to rise]\n\n    F[Worker productivity rises] --> C\n    G[Price of complementary input falls] --> H[More profitable production]\n    H --> D\n\n    I[External cost exists] --> J[Social cost exceeds private cost]\n    J --> K[Market produces too much]\n    K --> L[Tax or regulation can reduce output]\n\n    M[External benefit exists] --> N[Social benefit exceeds private benefit]\n    N --> O[Market produces too little]\n    O --> P[Subsidy or public provision can increase output]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Meaning / Use** |\n|---|---|\n| $$MRP = MP \\times MR$$ | **Marginal revenue product** equals marginal product times marginal revenue. |\n| $$VMPL = MP_L \\times P$$ | In a competitive product market, the **value of marginal product of labor** equals marginal product of labor times output price. Since **$$MR = P$$**, then **$$MRP = VMPL$$**. |\n| $$\\text{Hire labor until } MRP = MRC$$ | Profit-maximizing hiring rule for any firm in a factor market. |\n| $$MRC = w$$ | For a firm hiring in a perfectly competitive labor market, marginal resource cost equals the wage rate. |\n| $$MSC > MPC$$ | With a **negative externality**, **marginal social cost** exceeds **marginal private cost**. |\n| $$MSB > MPB$$ | With a **positive externality**, **marginal social benefit** exceeds **marginal private benefit**. |\n| **Efficient output occurs where** $$MSB = MSC$$ | Socially optimal output accounts for all private and external costs and benefits. |\n| **Public goods are** **nonrival** and **nonexcludable** | One person’s consumption does not reduce others’ use, and people cannot easily be prevented from consuming. |\n| **Common resources are** **rival** and **nonexcludable** | They are prone to overuse, often called the **tragedy of the commons**. |\n\n### Must-know definitions\n- **Factor market**: market for inputs such as **labor**, **land**, **capital**, and **entrepreneurship**.\n- **Product market**: market where final goods and services are sold.\n- **Resource demand is downward sloping** because of **diminishing marginal productivity**.\n- **Labor supply** generally slopes upward because higher wages attract more workers.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Key Difference** | **AP Significance** |\n|---|---|---|\n| **Competitive labor market vs. Monopsony** | Competitive firms are **wage takers**; a monopsonist must raise wages to hire more workers, so **$$MRC > wage$$**. | Monopsony hires fewer workers and pays a lower wage than the competitive outcome. |\n| **Negative externality vs. Positive externality** | Negative externality means **$$MSC > MPC$$**; positive externality means **$$MSB > MPB$$**. | Be able to identify whether the market overproduces or underproduces. |\n| **Public goods vs. Common resources** | Public goods are **nonrival** and **nonexcludable**; common resources are **rival** and **nonexcludable**. | Both can cause market failure, but the problem differs: **free riding** vs. **overconsumption**. |\n| **Private solution vs. Government intervention** | Private bargaining may work when property rights are clear and transaction costs are low; government may use taxes, subsidies, regulation, or permits. | AP questions often ask which policy best moves output toward the socially efficient level. |\n\n```mermaid\nflowchart LR\n    A[Competitive Labor Market] --> B[Higher employment]\n    A --> C[Wage set by market]\n\n    D[Monopsony] --> E[Lower employment]\n    D --> F[Lower wage]\n    D --> G[\"Firm hires where MRP = MRC\"]\n\n    H[Negative Externality] --> I[Overproduction]\n    J[Positive Externality] --> K[Underproduction]\n```\n\n## Common AP Exam Traps\n- Confusing **demand for labor** with **demand for the product**. Labor demand is **derived** from product demand, but they are not the same curve.\n- Forgetting that in a **competitive labor market**, firms hire where **$$MRP = MRC$$**, and since **$$MRC = w$$**, the firm hires where **$$MRP = w$$**.\n- Mixing up **external costs** and **external benefits**: **negative externalities** cause **overproduction**, while **positive externalities** cause **underproduction**.\n- Assuming all government intervention improves efficiency. On the AP exam, you must explain **how** a tax, subsidy, regulation, or permit system changes output toward **$$MSB = MSC$$**.\n- Confusing **public goods** with goods provided by the government. A good is public because of its characteristics, not because of who pays for it.\n\n## Quick Review Checklist\n- [ ] Explain why **labor demand** is a **derived demand**.\n- [ ] Calculate or interpret **$$MRP$$**, **$$VMPL$$**, and **$$MRC$$**.\n- [ ] Identify the profit-maximizing quantity of labor using **$$MRP = MRC$$**.\n- [ ] Compare a **competitive labor market** with a **monopsony** in terms of wage and employment.\n- [ ] Distinguish between **negative** and **positive externalities** using **$$MSC$$**, **$$MPC$$**, **$$MSB$$**, and **$$MPB$$**.\n- [ ] Determine whether a market is **overproducing** or **underproducing** relative to the socially efficient outcome.\n- [ ] Explain why **public goods** create a **free-rider problem** and why **common resources** are overused.\n- [ ] Evaluate when **taxes**, **subsidies**, **regulation**, or **property rights** can reduce **market failure**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Derived Demand",
+              "definition": "The demand for an input that results from consumers' demand for the final good or service the input helps produce."
+            },
+            {
+              "term": "Marginal Revenue Product",
+              "definition": "The additional revenue generated by employing one more unit of an input, calculated as the input's marginal product multiplied by the firm's marginal revenue."
+            },
+            {
+              "term": "Marginal Resource Cost",
+              "definition": "The additional cost incurred from hiring one more unit of an input."
+            },
+            {
+              "term": "Profit-Maximizing Hiring Rule",
+              "definition": "The condition under which a firm employs inputs up to the point where the extra revenue from the last unit hired equals the extra cost of that unit."
+            },
+            {
+              "term": "Monopsony",
+              "definition": "A labor market structure in which there is a single buyer of labor, giving that employer wage-setting power."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a perfectly competitive labor market, a profit-maximizing firm will continue hiring workers until which condition is met?",
+              "options": [
+                "$$MRP = MRC$$",
+                "$$MR = MC$$",
+                "$$MP = AP$$",
+                "$$ATC = AVC$$"
+              ],
+              "correctAnswer": "$$MRP = MRC$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which change would most likely increase the demand for carpenters in a competitive labor market?",
+              "options": [
+                "A decrease in the demand for newly built homes",
+                "An increase in the productivity of carpenters",
+                "A decrease in the price of construction equipment that substitutes for labor",
+                "An increase in the supply of carpenters"
+              ],
+              "correctAnswer": "An increase in the productivity of carpenters",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If a firm's output market is perfectly competitive, then the marginal revenue product of labor is calculated as ______.",
+              "options": [
+                "$$MRP = MP_L \\times P$$",
+                "$$MRP = MR \\div MP_L$$",
+                "$$MRP = W \\times P$$",
+                "$$MRP = MP_L - MR$$"
+              ],
+              "correctAnswer": "$$MRP = MP_L \\times P$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In a monopsony labor market, the firm hires the quantity of labor where ______ and then pays the wage found on the labor supply curve at that quantity.",
+              "options": [
+                "$$MRP = MRC$$",
+                "$$W = MRC$$",
+                "$$MR = MC$$",
+                "$$MP_L = W$$"
+              ],
+              "correctAnswer": "$$MRP = MRC$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Negative Externality",
+              "definition": "A spillover cost imposed on third parties when production or consumption creates harm not reflected in the market price."
+            },
+            {
+              "term": "Positive Externality",
+              "definition": "A spillover benefit received by third parties when production or consumption creates gains not captured in the market price."
+            },
+            {
+              "term": "Public Good",
+              "definition": "A good or service that is nonrival in consumption and nonexcludable, making private market provision difficult."
+            },
+            {
+              "term": "Free Rider Problem",
+              "definition": "The tendency for individuals to benefit from a good without paying for it when exclusion is not feasible."
+            },
+            {
+              "term": "Pigouvian Tax",
+              "definition": "A per-unit levy intended to reduce overproduction or overconsumption by making private decision-makers face the full external cost."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "When a competitive market produces a good that generates external costs, the market equilibrium quantity will typically be",
+              "options": [
+                "less than the socially optimal quantity because marginal social benefit exceeds marginal private benefit",
+                "greater than the socially optimal quantity because marginal social cost exceeds marginal private cost",
+                "equal to the socially optimal quantity because firms account for all spillover effects",
+                "indeterminate because external costs affect only consumers"
+              ],
+              "correctAnswer": "greater than the socially optimal quantity because marginal social cost exceeds marginal private cost",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which policy is most appropriate for addressing underconsumption of a good that creates external benefits?",
+              "options": [
+                "A per-unit tax on consumers",
+                "A subsidy to producers or consumers",
+                "A price floor above equilibrium",
+                "A tariff on imported substitutes"
+              ],
+              "correctAnswer": "A subsidy to producers or consumers",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a good that generates negative production externalities, efficiency requires producing the quantity where ______.",
+              "options": [
+                "marginal social benefit equals marginal social cost",
+                "marginal private benefit equals marginal private cost",
+                "average total cost is minimized",
+                "consumer surplus is zero"
+              ],
+              "correctAnswer": "marginal social benefit equals marginal social cost",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "National defense is commonly cited as a public good because it is ______.",
+              "options": [
+                "nonrival and nonexcludable",
+                "rival and excludable",
+                "nonrival and excludable",
+                "rival and nonexcludable"
+              ],
+              "correctAnswer": "nonrival and nonexcludable",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

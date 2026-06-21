@@ -1,0 +1,765 @@
+{
+  "apSubject": "AP United States Government and Politics",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Foundations of American Democracy",
+      "description": "Constitutional principles, Articles of Confederation, Federalist Papers, checks and balances, and federalism.",
+      "note": "# Unit 1: Foundations of American Democracy\n\n## Overview\nThis unit introduces the **constitutional foundations** of the U.S. political system: the failures of the **Articles of Confederation**, the creation of the **Constitution**, and the principles that structure government power. It matters for the AP exam because many multiple-choice and FRQ prompts ask you to connect **foundational documents**, **institutional design**, and **enduring debates** about liberty, power, and representation.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Social Contract** | The idea that government derives legitimacy from the **consent of the governed** and exists to protect natural rights. | Appears in arguments about the **Declaration of Independence**, popular sovereignty, and the philosophical roots of American government. |\n| **Articles of Confederation** | The first U.S. governing framework, creating a **weak national government** and strong state governments. | You must know its **weaknesses** and how they led to the Constitutional Convention. |\n| **Constitutional Convention** | The 1787 meeting where delegates replaced the Articles and designed a stronger national government. | Frequently tested as the turning point that produced compromises over **representation**, **federalism**, and **executive power**. |\n| **Federalism** | A system in which power is **shared between national and state governments**. | Central to AP Gov; often tested through disputes over reserved, delegated, and concurrent powers. |\n| **Separation of Powers** | The division of authority among the **legislative**, **executive**, and **judicial** branches. | Important for explaining how the Constitution prevents concentration of power. |\n| **Checks and Balances** | Powers each branch has to limit the others. | Common in FRQs asking how institutions interact or restrain one another. |\n| **Federalist No. 10** | Madison’s argument that a **large republic** can control the effects of **factions**. | A foundational required document; often tied to pluralism, representation, and majority/minority interests. |\n| **Federalist No. 51** | Madison’s argument that government must be structured so that **ambition counteracts ambition**. | Essential for understanding **checks and balances**, **separation of powers**, and institutional design. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title From Weak Confederation to Constitutional Government\n    1776 : Declaration of Independence asserts natural rights and popular sovereignty\n    1781 : Articles of Confederation take effect\n    1780s : Weak national government struggles with taxation, commerce, and enforcement\n    1786-1787 : Shays' Rebellion highlights limits of the Articles\n    1787 : Constitutional Convention meets in Philadelphia\n    1787 : Great Compromise and 3/5 Compromise shape representation\n    1787-1788 : Federalists and Anti-Federalists debate ratification\n    1788 : Constitution ratified\n    1791 : Bill of Rights added to protect civil liberties and support ratification\n```\n\n### Constitutional Structure: How Power Is Controlled\n1. **Popular sovereignty** gives ultimate authority to the people.\n2. The **Constitution** creates a government of **limited powers**.\n3. **Federalism** divides power between national and state governments.\n4. **Separation of powers** divides national power among three branches.\n5. **Checks and balances** allow each branch to restrain the others.\n6. The **Bill of Rights** and later amendments protect liberty against government overreach.\n\n## Essential Formulas / Laws / Rules\n\n| **Principle / Rule** | **What You Must Know** |\n|---|---|\n| **Popular Sovereignty** | Government’s authority comes from the **people**. |\n| **Limited Government** | Government can do only what the **Constitution permits**. |\n| **Republicanism** | The people govern through **elected representatives**. |\n| **Federalism** | Power is shared between **national** and **state** governments. |\n| **Separation of Powers** | **Legislative** makes laws, **executive** enforces laws, **judicial** interprets laws. |\n| **Checks and Balances** | Each branch has constitutional tools to **limit** the others. |\n| **Enumerated Powers** | Powers specifically granted to the national government, especially to **Congress** in Article I, Section 8. |\n| **Reserved Powers** | Powers not delegated to the national government are reserved to the **states** under the **10th Amendment**. |\n| **Concurrent Powers** | Powers shared by both levels of government, such as **taxation** and **law enforcement**. |\n| **Faction** | A group united by a common interest that may act against the rights of others or the public good; central to **Federalist No. 10**. |\n\n### Foundational Documents You Should Recognize\n- **Declaration of Independence**: natural rights, social contract, right to alter or abolish government.\n- **Articles of Confederation**: confederation, weak central government, no power to tax directly or regulate interstate commerce.\n- **U.S. Constitution**: framework for national government and federalism.\n- **Brutus No. 1**: Anti-Federalist critique that a large republic threatens liberty and state power.\n- **Federalist No. 10**: controlling the effects of factions through a large republic.\n- **Federalist No. 51**: structure of government prevents tyranny through internal controls.\n\n## Connections & Comparisons\n\n| **Comparison** | **Articles of Confederation** | **Constitution** | **AP Significance** |\n|---|---|---|---|\n| **National Government Strength** | Very weak | Stronger but limited | Explains why the Constitution replaced the Articles |\n| **Taxation** | Congress could not effectively tax states | Congress has power to tax | Major reason the Articles failed |\n| **Executive Branch** | No independent executive | President leads executive branch | Shows shift toward enforceable national laws |\n| **Judicial Branch** | No national judiciary | Supreme Court and lower courts | Demonstrates stronger national authority |\n| **Representation** | States had equal vote in Congress | Bicameral legislature balances population and state equality | Linked to the **Great Compromise** |\n| **Sovereignty** | States dominant | Shared through **federalism** | Core concept in AP Gov questions |\n\n```mermaid\nflowchart LR\n    A[\"Federalist No. 10\"] --> B[\"Problem: factions\"]\n    B --> C[\"Solution: large republic\"]\n    C --> D[\"Many interests make domination harder\"]\n\n    E[\"Federalist No. 51\"] --> F[\"Problem: concentration of power\"]\n    F --> G[\"Solution: separation of powers\"]\n    G --> H[\"Checks and balances protect liberty\"]\n```\n\n## Common AP Exam Traps\n- **Do not confuse** **separation of powers** with **federalism**. Separation of powers divides authority among the **three branches**; federalism divides authority between **national and state governments**.\n- **The Articles of Confederation did create a national government**, but it was too weak to govern effectively in key areas like taxation and commerce.\n- **Federalist No. 10 is about factions**, not checks and balances. **Federalist No. 51** is the key document for checks and balances.\n- **The Bill of Rights was added after the Constitution was written** largely to address Anti-Federalist concerns during ratification.\n- **The Constitution does not create direct democracy**; it creates a **republic** with democratic elements and representative institutions.\n\n## Quick Review Checklist\n- [ ] Explain why the **Articles of Confederation** were considered ineffective.\n- [ ] Describe how **Shays’ Rebellion** influenced support for a stronger national government.\n- [ ] Identify the main outcomes of the **Constitutional Convention**.\n- [ ] Distinguish between **federalism**, **separation of powers**, and **checks and balances**.\n- [ ] Summarize the argument of **Federalist No. 10** about **factions**.\n- [ ] Summarize the argument of **Federalist No. 51** about controlling government power.\n- [ ] Compare the structure of government under the **Articles** and under the **Constitution**.\n- [ ] Explain how the **Bill of Rights** helped secure ratification and protect liberty.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Popular sovereignty",
+              "definition": "The principle that political authority comes from the people, who grant power to the government either directly or through elected representatives."
+            },
+            {
+              "term": "Social contract",
+              "definition": "The idea that people consent to government in exchange for protection of natural rights and maintenance of order."
+            },
+            {
+              "term": "Articles of Confederation",
+              "definition": "The first national framework of government that created a weak central authority, lacked power to tax, and gave most governing power to the states."
+            },
+            {
+              "term": "Shays' Rebellion",
+              "definition": "A 1786–1787 uprising of indebted Massachusetts farmers that exposed the inability of the national government to maintain order under the existing system."
+            },
+            {
+              "term": "Great Compromise",
+              "definition": "The agreement at the Constitutional Convention that created a bicameral legislature with equal representation in one chamber and population-based representation in the other."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which of the following best explains how the weaknesses of the national government under the early republic influenced the writing of the Constitution?",
+              "options": [
+                "They encouraged delegates to create a stronger central government with greater fiscal and regulatory authority.",
+                "They convinced most delegates that state legislatures should appoint all national officials and judges.",
+                "They led the framers to eliminate any national power over interstate commerce.",
+                "They persuaded the convention to preserve a unicameral legislature with equal state voting."
+              ],
+              "correctAnswer": "They encouraged delegates to create a stronger central government with greater fiscal and regulatory authority.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "At the Constitutional Convention, the principal dispute between large and small states over representation was resolved by which arrangement?",
+              "options": [
+                "A bicameral legislature with proportional representation in the House and equal representation in the Senate",
+                "A unicameral legislature with representation based solely on state population",
+                "Equal representation for each state in both chambers of Congress",
+                "Direct democracy through national referenda on all major laws"
+              ],
+              "correctAnswer": "A bicameral legislature with proportional representation in the House and equal representation in the Senate",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The idea that legitimate government depends on the consent of the governed is known as ______.",
+              "options": [
+                "judicial review",
+                "popular sovereignty",
+                "federal supremacy",
+                "reserved powers"
+              ],
+              "correctAnswer": "popular sovereignty",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The inability of the national government under the ______ to compel state compliance or raise revenue contributed to calls for a new Constitution.",
+              "options": [
+                "Declaration of Independence",
+                "Northwest Ordinance",
+                "Articles of Confederation",
+                "Bill of Rights"
+              ],
+              "correctAnswer": "Articles of Confederation",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Federalist No. 10",
+              "definition": "An essay arguing that a large republic would better control the effects of factions by making it harder for any one interest group to dominate the political system."
+            },
+            {
+              "term": "Separation of powers",
+              "definition": "The constitutional division of national authority among the legislative, executive, and judicial branches."
+            },
+            {
+              "term": "Checks and balances",
+              "definition": "A constitutional arrangement in which each branch can limit the powers of the others to prevent any one part of government from becoming too powerful."
+            },
+            {
+              "term": "Federalism",
+              "definition": "A system of government in which power is constitutionally divided between a national government and subnational governments."
+            },
+            {
+              "term": "Brutus No. 1",
+              "definition": "An Anti-Federalist argument warning that the proposed Constitution would create a central authority too powerful to preserve liberty and state independence."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which claim is most consistent with the argument advanced in Federalist No. 10?",
+              "options": [
+                "A large republic makes it less likely that a single faction will dominate public policy.",
+                "Liberty is best protected when the national government is limited to defense and treaties only.",
+                "State governments should retain final authority over the interpretation of national laws.",
+                "Political parties should be prohibited because they inevitably destroy republican government."
+              ],
+              "correctAnswer": "A large republic makes it less likely that a single faction will dominate public policy.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which constitutional design most directly reflects the framers' commitment to preventing concentration of political power?",
+              "options": [
+                "The establishment of separated institutions sharing powers across branches",
+                "The requirement that members of the House serve life terms",
+                "The grant of complete sovereignty to the states over commerce",
+                "The use of national referenda to overturn Supreme Court decisions"
+              ],
+              "correctAnswer": "The establishment of separated institutions sharing powers across branches",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The constitutional system in which each branch can restrain the others is called ______.",
+              "options": [
+                "checks and balances",
+                "judicial federalism",
+                "dual sovereignty",
+                "civil liberty"
+              ],
+              "correctAnswer": "checks and balances",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In AP U.S. Government, the division of authority between national and state governments is known as ______.",
+              "options": [
+                "confederation",
+                "federalism",
+                "unitary rule",
+                "parliamentarism"
+              ],
+              "correctAnswer": "federalism",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Interactions Among Branches of Government",
+      "description": "Legislative process, executive power, judicial review, bureaucracy, and inter-branch conflicts.",
+      "note": "# Unit 2: Interactions Among Branches of Government\n\n## Overview\nThis unit examines how the **legislative**, **executive**, and **judicial** branches interact as they make, enforce, and interpret public policy. It matters on the AP exam because many questions ask you to apply **checks and balances**, **separation of powers**, and key Supreme Court cases to real political situations.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Separation of Powers** | The constitutional division of authority among **Congress**, the **president**, and the **courts**. | AP questions often ask how this structure limits concentrated power and creates institutional conflict. |\n| **Checks and Balances** | The ability of each branch to restrain the others, such as **vetoes**, **judicial review**, and **Senate confirmation**. | Central to explaining why policymaking is slow, contested, and fragmented. |\n| **Legislative Process** | The steps by which a bill moves through **committee**, both chambers of Congress, and the president. | Frequently tested through scenario questions about where bills stall or how congressional rules shape outcomes. |\n| **Presidential Power** | Formal and informal powers of the president, including **veto**, **commander in chief**, **executive orders**, and bargaining. | AP questions often distinguish between constitutional powers and political constraints. |\n| **Judicial Review** | The power of courts to declare laws or executive actions unconstitutional. | A foundational principle tied especially to **Marbury v. Madison** and judicial checks on the other branches. |\n| **Bureaucracy** | The federal administrative agencies that implement laws and regulations. | Students must know how unelected agencies exercise authority and how Congress and the president try to control them. |\n| **Congressional Oversight** | Congress’s monitoring of executive agencies and implementation of laws through hearings, investigations, and funding power. | Often appears in questions about accountability and interbranch struggle. |\n| **Interbranch Conflict** | Ongoing disputes between institutions over authority, appointments, war powers, and policy implementation. | Useful for FRQs and MCQs that ask how constitutional design produces competition rather than efficiency. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Bill Introduced in House or Senate] --> B[Committee Referral]\n    B --> C[Subcommittee Review and Hearings]\n    C --> D[Markup and Committee Vote]\n    D --> E[Floor Debate and Vote in First Chamber]\n    E --> F[Sent to Other Chamber]\n    F --> G[Committee and Floor Process in Second Chamber]\n    G --> H[Conference Committee if Versions Differ]\n    H --> I[Final Passage in House and Senate]\n    I --> J[President Signs or Vetoes]\n    J --> K[Law Implemented by Bureaucracy]\n    K --> L[Courts May Review Constitutionality]\n```\n\n### How the branches interact in this process\n1. **Congress** writes and passes legislation.\n2. The **president** can **sign** or **veto** the bill and later directs executive agencies to carry it out.\n3. The **bureaucracy** creates rules and enforces the law in practice.\n4. The **judiciary** may review the law or executive actions if challenged in court.\n5. Congress can respond with **oversight**, revised legislation, or budget changes.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Article I** | Establishes **Congress** and grants legislative powers, including lawmaking, taxation, and oversight. |\n| **Article II** | Establishes the **presidency** and outlines executive powers such as enforcement of laws, treaty negotiation, and appointments. |\n| **Article III** | Establishes the **judicial branch** and the Supreme Court’s role in deciding cases under the Constitution and federal law. |\n| **Necessary and Proper Clause** | Gives Congress flexibility to pass laws needed to carry out its enumerated powers. Often linked to expansion of federal authority. |\n| **Veto and Override** | The president may veto legislation; Congress can override with a **two-thirds vote** in both chambers. |\n| **Senate Advice and Consent** | The **Senate** confirms major presidential appointments and ratifies treaties, limiting executive power. |\n| **Judicial Review** | Established through **Marbury v. Madison**; allows courts to strike down unconstitutional laws or executive actions. |\n| **Impeachment** | The **House** impeaches by majority vote; the **Senate** tries the case and convicts/removes with a **two-thirds vote**. |\n| **Executive Orders** | Directives from the president to manage the executive branch; they have force within the executive but can be challenged by courts or reversed later. |\n| **Congressional Oversight Tools** | **Hearings**, **investigations**, **appropriations**, confirmation power, and statutory revision all help Congress monitor the executive branch. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key Distinction / Connection** |\n|---|---|---|---|\n| **Formal vs. Informal Presidential Power** | **Formal powers**: veto, appointments, treaties, commander in chief | **Informal powers**: persuasion, bargaining, public appeals, executive agreements | Presidents often rely on informal tools when Congress is divided or unwilling to cooperate. |\n| **Legislative Control vs. Executive Control of Bureaucracy** | **Congress** uses budgets, oversight, statutes, and hearings | **President** uses appointments, executive orders, and OMB review | Both branches compete to shape how agencies implement policy. |\n| **Judicial Review vs. Congressional Oversight** | **Courts** assess constitutionality in cases | **Congress** monitors policy implementation and legality through politics | Both check the executive, but one is legal-judicial and the other political-institutional. |\n| **Separation of Powers vs. Checks and Balances** | **Separation of powers** divides authority | **Checks and balances** allows branches to limit one another | Division creates the structure; checks create the interaction. |\n\n```mermaid\nflowchart LR\n    A[Congress] -->|Laws, budgets, oversight| B[Bureaucracy]\n    C[President] -->|Appointments, direction, executive orders| B\n    D[Courts] -->|Review agency actions and legality| B\n    A -->|Can constrain| C\n    C -->|Can veto or negotiate with| A\n    D -->|Can strike down acts of| A\n    D -->|Can limit actions of| C\n```\n\n## Common AP Exam Traps\n\n- Confusing **separation of powers** with **federalism**. Separation of powers is about division among the **three branches** of the national government; federalism is about division between **national and state governments**.\n- Assuming the president can make law alone. **Executive orders** direct the executive branch, but they do not function exactly like statutes passed by Congress.\n- Forgetting that **bureaucratic agencies** are part of the **executive branch**, even though Congress helps shape them through legislation and oversight.\n- Misstating **Marbury v. Madison** as giving the Supreme Court power directly from the text of the Constitution; the case established **judicial review** through interpretation.\n- Assuming checks are always effective or immediate. In practice, **partisanship**, **public opinion**, and institutional rules often shape whether a branch can successfully check another.\n\n## Quick Review Checklist\n\n- [ ] I can explain the difference between **separation of powers** and **checks and balances**.\n- [ ] I can trace how a bill becomes law and identify where the process can stall.\n- [ ] I can distinguish between the president’s **formal** and **informal** powers.\n- [ ] I can explain how **Marbury v. Madison** established **judicial review**.\n- [ ] I can describe how the **bureaucracy** implements laws and why it matters politically.\n- [ ] I can identify at least three tools of **congressional oversight**.\n- [ ] I can compare how **Congress**, the **president**, and the **courts** each influence public policy.\n- [ ] I can analyze an example of **interbranch conflict** involving appointments, vetoes, executive action, or judicial review.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "House Rules Committee",
+              "definition": "A standing committee in the lower chamber that determines the conditions under which a bill reaches the floor, including time for debate and whether amendments may be offered."
+            },
+            {
+              "term": "Filibuster",
+              "definition": "A tactic in the upper chamber in which prolonged debate or other delaying actions are used to prevent a final vote unless a supermajority invokes cloture."
+            },
+            {
+              "term": "Conference Committee",
+              "definition": "A temporary, joint body created to reconcile differences between House and Senate versions of the same legislation before final passage."
+            },
+            {
+              "term": "Pocket Veto",
+              "definition": "An executive rejection of legislation that occurs when the president takes no action on a bill for ten days while Congress adjourns, preventing its return."
+            },
+            {
+              "term": "Oversight",
+              "definition": "The process by which Congress monitors the implementation of laws and the performance of executive agencies through hearings, investigations, and budgetary review."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which of the following best explains why the House Rules Committee is a major source of leadership influence in the legislative process?",
+              "options": [
+                "It determines whether and how a bill will be considered on the House floor",
+                "It decides whether the Supreme Court may review a statute",
+                "It negotiates treaties between the president and foreign governments",
+                "It confirms executive branch appointments before they take office"
+              ],
+              "correctAnswer": "It determines whether and how a bill will be considered on the House floor",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A senator seeks to delay a final vote on a controversial bill by extending debate. Which institutional feature of Congress makes this strategy most effective in the Senate?",
+              "options": [
+                "The Senate allows unlimited debate unless cloture is invoked",
+                "The Senate requires all revenue bills to originate there",
+                "The Senate uses a discharge petition to force bills from committee",
+                "The Senate permits the president to preside over all debate"
+              ],
+              "correctAnswer": "The Senate allows unlimited debate unless cloture is invoked",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When the House and Senate pass different versions of the same bill, a ______ commonly works out a single compromise text.",
+              "options": [
+                "conference committee",
+                "select committee",
+                "joint economic committee",
+                "standing committee"
+              ],
+              "correctAnswer": "conference committee",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Congress engages in ______ when it holds hearings to evaluate whether executive agencies are carrying out laws as intended.",
+              "options": [
+                "oversight",
+                "judicial review",
+                "enumeration",
+                "apportionment"
+              ],
+              "correctAnswer": "oversight",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Judicial Review",
+              "definition": "The authority of the courts to determine whether laws or government actions are consistent with the Constitution, a power established in Marbury v. Madison."
+            },
+            {
+              "term": "Signing Statement",
+              "definition": "A written comment issued by the president at the time of approving legislation, often used to express an interpretation of the law or concerns about enforcement."
+            },
+            {
+              "term": "Bureaucratic Discretion",
+              "definition": "The authority of administrative agencies and their officials to make decisions about how to implement laws and regulations within the limits set by Congress."
+            },
+            {
+              "term": "Executive Agreement",
+              "definition": "An international arrangement made by the president with another country that does not require Senate ratification, unlike a treaty."
+            },
+            {
+              "term": "Senate Confirmation",
+              "definition": "The constitutional process through which the upper chamber approves or rejects presidential nominees for major executive and judicial positions."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which of the following most directly illustrates the power of judicial review?",
+              "options": [
+                "A federal court declares an act of Congress unconstitutional",
+                "The president vetoes a bill passed by both chambers",
+                "The Senate refuses to ratify a treaty negotiated by the president",
+                "A committee chair schedules a bill for markup"
+              ],
+              "correctAnswer": "A federal court declares an act of Congress unconstitutional",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which scenario best demonstrates bureaucratic discretion?",
+              "options": [
+                "An agency interprets broad statutory language when writing regulations",
+                "The Supreme Court overturns a lower court decision on appeal",
+                "The House impeaches a federal judge for misconduct",
+                "The Senate invokes cloture to end debate on a nomination"
+              ],
+              "correctAnswer": "An agency interprets broad statutory language when writing regulations",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The power of courts to invalidate laws or government actions that conflict with the Constitution is known as ______.",
+              "options": [
+                "judicial review",
+                "executive privilege",
+                "federalism",
+                "senatorial courtesy"
+              ],
+              "correctAnswer": "judicial review",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A president may rely on a ______ to make an international arrangement without obtaining approval from two-thirds of the Senate.",
+              "options": [
+                "executive agreement",
+                "signing statement",
+                "recess appointment",
+                "pocket veto"
+              ],
+              "correctAnswer": "executive agreement",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Civil Liberties and Civil Rights",
+      "description": "Bill of Rights, incorporation doctrine, landmark civil rights legislation, and equal protection analysis.",
+      "note": "# Unit 3: Civil Liberties and Civil Rights\n\n## Overview\nThis unit covers how the Constitution protects **individual freedoms** and how government must treat people **equally under the law**. For the AP exam, students must distinguish **civil liberties** from **civil rights**, apply major **Supreme Court cases**, and explain how the **Bill of Rights**, **incorporation doctrine**, and **equal protection** shape public policy and constitutional debate.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Civil liberties** | Protections **from government action**, especially limits on what government may do to individuals. | AP questions often ask how the **Bill of Rights** restricts government and how courts balance liberty with order. |\n| **Civil rights** | Protections **by government action** to ensure equal treatment and prevent discrimination. | Frequently tested through **equal protection**, social movements, and major federal legislation. |\n| **Bill of Rights** | The first ten amendments, protecting rights such as speech, religion, due process, and criminal procedure. | Students must know specific amendments and how they apply in cases. |\n| **Selective incorporation** | The process by which the **Supreme Court** has applied most Bill of Rights protections to the states through the **Fourteenth Amendment**. | A foundational AP concept linking federalism and individual rights. |\n| **Due process clause** | The **Fifth** and **Fourteenth Amendments** prohibit government from depriving life, liberty, or property without due process of law. | Key for understanding rights of the accused and incorporation. |\n| **Equal protection clause** | The **Fourteenth Amendment** requires states to provide equal protection of the laws. | Central to civil rights cases involving race, gender, and discrimination. |\n| **Standards of judicial review** | Levels of scrutiny courts use to evaluate whether government classifications are constitutional. | AP exam may ask when courts use **strict scrutiny**, **intermediate scrutiny**, or **rational basis review**. |\n| **Landmark civil rights legislation** | Major laws such as the **Civil Rights Act of 1964** and **Voting Rights Act of 1965**. | Students must connect constitutional principles to congressional and executive action. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Expansion of Civil Liberties and Civil Rights\n    1791 : Bill of Rights ratified\n    1868 : Fourteenth Amendment adopted\n    1896 : Plessy v. Ferguson upholds \"separate but equal\"\n    1925 : Gitlow v. New York begins selective incorporation\n    1954 : Brown v. Board rejects school segregation\n    1964 : Civil Rights Act bans discrimination in public accommodations and employment\n    1965 : Voting Rights Act protects voting access\n    1971 : Reed v. Reed strengthens gender equality claims\n    1978 : Regents of the University of California v. Bakke limits racial quotas but allows some affirmative action\n```\n\n### How these ideas connect\n1. The **Bill of Rights** originally limited only the **national government**.\n2. After the **Fourteenth Amendment**, the Court began using **selective incorporation** to apply most protections to the **states**.\n3. The **equal protection clause** became the constitutional basis for challenging discrimination.\n4. Congress and the president expanded protections through **civil rights legislation**.\n5. The Supreme Court evaluates equality claims using different **standards of review**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Law / Principle** | **What You Must Know** |\n|---|---|\n| **First Amendment freedoms** | Protects **religion, speech, press, assembly, and petition**. Government regulation is often judged by whether it is **content-based** or **content-neutral**. |\n| **Establishment clause** | Government may not establish or favor religion. AP students should know this differs from the **free exercise clause**. |\n| **Free exercise clause** | Government may not unduly interfere with religious belief and, in some cases, religious practice. |\n| **Second Amendment** | Protects an individual right to bear arms, though the right is **not unlimited**. |\n| **Fourth Amendment** | Protects against **unreasonable searches and seizures**; often tied to warrants and privacy. |\n| **Fifth Amendment** | Includes **due process**, protection against **self-incrimination**, and **double jeopardy**. |\n| **Sixth Amendment** | Guarantees rights of the accused, including **speedy trial**, **public trial**, **attorney**, and **impartial jury**. |\n| **Eighth Amendment** | Prohibits **cruel and unusual punishment** and excessive bail/fines. |\n| **Selective incorporation** | Most, but not all, Bill of Rights protections have been applied to the states through the **Fourteenth Amendment due process clause**. |\n| **Strict scrutiny** | Used for **suspect classifications** like race. Government must show a **compelling interest** and use the **least restrictive means**. |\n| **Intermediate scrutiny** | Usually used for **gender classifications**. Government must show an **important interest** and a close relationship between the law and that interest. |\n| **Rational basis review** | Used for most other classifications. Law is upheld if it is **rationally related** to a **legitimate government interest**. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Civil Liberties** | **Civil Rights** |\n|---|---|---|\n| **Basic meaning** | Freedom from government interference | Equal treatment and protection by government |\n| **Main constitutional focus** | **Bill of Rights**, **due process** | **Equal protection clause**, later amendments, federal laws |\n| **Typical AP examples** | Speech, religion, rights of the accused, privacy | Segregation, voting discrimination, affirmative action, gender equality |\n| **Typical question type** | Whether government has gone too far in limiting liberty | Whether government has failed to prevent unequal treatment |\n\n| **Judicial Standard** | **Used For** | **AP-Level Meaning** |\n|---|---|---|\n| **Strict scrutiny** | Race, fundamental rights | Hardest test for government to pass |\n| **Intermediate scrutiny** | Gender | Medium-level review |\n| **Rational basis** | Most other classifications | Government usually wins |\n\n```mermaid\nflowchart LR\n    A[\"Bill of Rights\"] --> B[\"Selective Incorporation\"]\n    B --> C[\"Limits on State Governments\"]\n    C --> D[\"Expanded Civil Liberties Claims\"]\n    D --> E[\"Equal Protection Challenges\"]\n    E --> F[\"Civil Rights Legislation and Court Cases\"]\n```\n\n## Common AP Exam Traps\n- Confusing **civil liberties** with **civil rights**. Liberties are usually protections **from** government; rights are protections **through** government for equal treatment.\n- Assuming the **Bill of Rights** originally applied to the states. It mostly did **not** until **selective incorporation** through the **Fourteenth Amendment**.\n- Mixing up the **due process clause** and the **equal protection clause**. Due process concerns fair government procedures and liberty; equal protection concerns discrimination and unequal treatment.\n- Thinking **Brown v. Board of Education** ended all segregation immediately. It declared school segregation unconstitutional, but implementation was gradual and contested.\n- Believing **affirmative action** is always unconstitutional or always constitutional. The Court has allowed some race-conscious policies while rejecting rigid racial quotas.\n\n## Quick Review Checklist\n- [ ] Define **civil liberties** and **civil rights** and explain the difference.\n- [ ] Identify key protections in the **First**, **Fourth**, **Fifth**, **Sixth**, and **Eighth Amendments**.\n- [ ] Explain **selective incorporation** using the **Fourteenth Amendment**.\n- [ ] Describe the significance of **Gitlow v. New York** and **Brown v. Board of Education**.\n- [ ] Explain the purpose of the **Civil Rights Act of 1964** and the **Voting Rights Act of 1965**.\n- [ ] Distinguish between the **establishment clause** and **free exercise clause**.\n- [ ] Apply **strict scrutiny**, **intermediate scrutiny**, and **rational basis review** to equal protection scenarios.\n- [ ] Analyze how the **Supreme Court**, **Congress**, and the **president** have each shaped civil liberties and civil rights.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Selective Incorporation",
+              "definition": "The constitutional process by which most protections in the first eight amendments are applied to state governments through the Due Process Clause of the Fourteenth Amendment."
+            },
+            {
+              "term": "Establishment Clause",
+              "definition": "The constitutional protection that prevents government from creating an official religion, favoring one faith over another, or excessively entangling itself with religious institutions."
+            },
+            {
+              "term": "Free Exercise Clause",
+              "definition": "The constitutional protection that limits the government's ability to punish or prohibit the practice of religion, though neutral laws of general applicability may still be enforced."
+            },
+            {
+              "term": "Symbolic Speech",
+              "definition": "Nonverbal expression, such as wearing armbands or burning a flag, that may receive constitutional protection when intended to communicate a political idea."
+            },
+            {
+              "term": "Prior Restraint",
+              "definition": "Government action that prohibits speech or publication before it occurs, a practice the Supreme Court generally treats as highly suspect under the First Amendment."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which constitutional development most directly enabled the Supreme Court to apply First Amendment protections to state governments?",
+              "options": [
+                "The commerce clause in Article I",
+                "The equal protection clause of the Fourteenth Amendment",
+                "The due process clause of the Fourteenth Amendment",
+                "The necessary and proper clause"
+              ],
+              "correctAnswer": "The due process clause of the Fourteenth Amendment",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which Supreme Court decision established the principle that students do not shed their constitutional rights to freedom of speech at school, so long as their expression does not substantially disrupt the educational environment?",
+              "options": [
+                "Schenck v. United States",
+                "Tinker v. Des Moines Independent Community School District",
+                "Wisconsin v. Yoder",
+                "Engel v. Vitale"
+              ],
+              "correctAnswer": "Tinker v. Des Moines Independent Community School District",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The constitutional doctrine by which most of the Bill of Rights has been applied to the states is called ______.",
+              "options": [
+                "federal preemption",
+                "selective incorporation",
+                "judicial restraint",
+                "strict scrutiny"
+              ],
+              "correctAnswer": "selective incorporation",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In Lemon v. Kurtzman, the Court evaluated whether government action violated the ______ by examining purpose, effect, and entanglement.",
+              "options": [
+                "free exercise clause",
+                "necessary and proper clause",
+                "establishment clause",
+                "takings clause"
+              ],
+              "correctAnswer": "establishment clause",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Equal Protection Clause",
+              "definition": "The provision in the Fourteenth Amendment requiring states to apply the law equally and providing the constitutional foundation for many civil rights claims."
+            },
+            {
+              "term": "Strict Scrutiny",
+              "definition": "The most demanding standard of judicial review, requiring the government to prove a compelling interest and show that its policy is narrowly tailored to achieve that interest."
+            },
+            {
+              "term": "Civil Rights Act of 1964",
+              "definition": "A major federal law that prohibited discrimination based on race, color, religion, sex, or national origin in public accommodations, employment, and other areas."
+            },
+            {
+              "term": "Voting Rights Act of 1965",
+              "definition": "A major federal law that banned discriminatory voting practices, especially literacy tests and other mechanisms used to disenfranchise racial minorities."
+            },
+            {
+              "term": "Affirmative Action",
+              "definition": "Policies designed to increase opportunities for historically disadvantaged groups, often scrutinized by courts when race is used in government or educational decision-making."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A state law classifies people by race and is challenged under the Fourteenth Amendment. Which standard of review will the Supreme Court most likely apply?",
+              "options": [
+                "Rational basis review",
+                "Intermediate scrutiny",
+                "Strict scrutiny",
+                "Political question review"
+              ],
+              "correctAnswer": "Strict scrutiny",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which piece of legislation most directly targeted the use of literacy tests and other mechanisms used to prevent African Americans from voting?",
+              "options": [
+                "Civil Rights Act of 1964",
+                "Voting Rights Act of 1965",
+                "Americans with Disabilities Act",
+                "Title IX of the Education Amendments of 1972"
+              ],
+              "correctAnswer": "Voting Rights Act of 1965",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Under equal protection analysis, sex-based classifications are generally evaluated using ______.",
+              "options": [
+                "strict scrutiny",
+                "intermediate scrutiny",
+                "rational basis review",
+                "prior restraint"
+              ],
+              "correctAnswer": "intermediate scrutiny",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The Supreme Court's decision in Brown v. Board of Education held that racially segregated public schools violated the ______ of the Fourteenth Amendment.",
+              "options": [
+                "due process clause",
+                "necessary and proper clause",
+                "equal protection clause",
+                "supremacy clause"
+              ],
+              "correctAnswer": "equal protection clause",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "American Political Ideologies and Beliefs",
+      "description": "Political socialization, polling, ideological spectrum, and linkage institutions.",
+      "note": "# Unit 4: American Political Ideologies and Beliefs\n\n## Overview\nThis unit examines how Americans form political beliefs, how those beliefs are measured, and how institutions connect citizens to government. You need this unit for the AP exam because it helps explain **public opinion**, **ideology**, **political participation**, and the role of **linkage institutions** like parties, media, interest groups, and elections.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Political socialization** | The process by which people develop political beliefs and values through family, school, peers, media, religion, and life experiences | AP questions often ask how beliefs are formed and why individuals or groups differ politically |\n| **Public opinion** | The collective attitudes of citizens about government, politics, and policy | Public opinion shapes elections, policy agendas, and legitimacy of government action |\n| **Ideology** | A consistent set of political beliefs about government’s proper role | You must distinguish **liberal**, **conservative**, and **libertarian**-leaning views on economic and social issues |\n| **Political culture** | Broadly shared values about government, liberty, equality, and civic duty in the U.S. | Helps explain why Americans often support both **individualism** and **democratic participation** |\n| **Polling** | The use of surveys to measure public opinion | AP often tests **random sampling**, **margin of error**, and how wording or timing can distort results |\n| **Linkage institutions** | Structures that connect people to government, especially **political parties**, **elections**, **interest groups**, and **media** | Essential for explaining how citizen preferences enter the policymaking system |\n| **Policy mood** | The overall ideological orientation of the public at a given time | Helps explain shifts in support for more or less government action |\n| **Generational and demographic influences** | Differences in political beliefs based on age, race, ethnicity, gender, religion, education, and region | AP free-response questions often ask students to explain patterns in political attitudes among groups |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Agents of socialization] --> B[Political beliefs and values]\n    B --> C[Ideological identification]\n    C --> D[Public opinion]\n    D --> E[Polling measures opinion]\n    D --> F[Political participation]\n    F --> G[Linkage institutions]\n    G --> H[Government action and policy]\n    H --> I[Feedback effects]\n    I --> B\n\n    A1[Family] --> A\n    A2[School] --> A\n    A3[Peers] --> A\n    A4[Media] --> A\n    A5[Religion] --> A\n    A6[Life events] --> A\n```\n\n### How this works\n1. **Political socialization** begins with institutions and experiences such as family, school, religion, and media.\n2. These influences shape a person’s **values** and **ideology**.\n3. When aggregated across many people, these views form **public opinion**.\n4. **Polls** attempt to measure that opinion.\n5. Citizens act through **voting**, **parties**, **interest groups**, and other **linkage institutions**.\n6. Government responds through policy, which can then reshape future public beliefs.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Political socialization** | The lifelong process by which individuals form political values and beliefs |\n| **Public opinion** | Distribution of the population’s beliefs about politics and policy |\n| **Ideological spectrum** | In AP Gov, **liberals** generally support more government action in the economy and civil rights; **conservatives** generally prefer less government intervention in the economy and more emphasis on tradition, order, and limited government |\n| **Random sampling** | A valid poll uses a sample in which every person in the population has an equal chance of being selected |\n| **Sampling error** | Polls estimate opinion, not measure it perfectly; results include a **margin of error** |\n| **Margin of error** | The range within which the true population value is likely to fall; smaller samples usually produce larger margins of error |\n| **Question wording effect** | Poll results can be influenced by how a question is phrased |\n| **Push poll** | A biased survey designed to shape opinion rather than accurately measure it |\n| **Political efficacy** | The belief that one can understand politics and influence government; often linked to participation |\n| **Linkage institutions** | Channels that connect citizens to government: **elections**, **parties**, **interest groups**, and **media** |\n\n### Polling rule of thumb\nIf a poll says a candidate has **$$50\\%$$** support with a **$$\\pm 3\\%$$** margin of error, the candidate’s actual support is likely between:\n\n$$47\\% \\text{ and } 53\\%$$\n\nIf two candidates’ ranges overlap, the race may be statistically too close to call.\n\n## Connections & Comparisons\n\n| **Comparison** | **Liberal** | **Conservative** | **Why AP Cares** |\n|---|---|---|---|\n| **Economic policy** | More government regulation and social welfare spending | Less government regulation, lower taxes, more market solutions | Tests understanding of ideological differences on policy |\n| **Social policy** | Greater government action to protect civil rights and liberties | Greater emphasis on traditional values and social order, though views vary | Useful in FRQs comparing issue positions |\n| **View of government** | Government can be a positive force for equality and opportunity | Government should be limited because it can threaten liberty and efficiency | Connects ideology to policy preferences |\n| **Public programs** | More likely to support expansion of programs like health care aid | More likely to support reducing scope or cost of some programs | Important in explaining public policy debates |\n\n```mermaid\nflowchart LR\n    A[Citizens] --> B[Elections]\n    A --> C[Political parties]\n    A --> D[Interest groups]\n    A --> E[Media]\n    B --> F[Government]\n    C --> F\n    D --> F\n    E --> F\n```\n\n### Key connection\n**Linkage institutions** do not all function the same way:\n- **Elections** translate participation into representation.\n- **Political parties** organize candidates and policy coalitions.\n- **Interest groups** amplify specific policy demands.\n- **Media** informs, frames, and sometimes influences political attitudes.\n\n## Common AP Exam Traps\n- Confusing **political socialization** with **public opinion**: socialization is the process; public opinion is the result.\n- Assuming polls are always accurate: AP questions often test flaws like **nonresponse bias**, poor wording, or unrepresentative samples.\n- Treating ideology as only one left-right line without issue differences: a person may be conservative on one issue and liberal on another.\n- Forgetting that **linkage institutions** connect people to government; they are not government institutions themselves.\n- Assuming demographic groups vote or think uniformly: AP often rewards nuanced explanations of variation within groups.\n\n## Quick Review Checklist\n- [ ] I can define **political socialization** and identify major socializing agents.\n- [ ] I can explain how **family**, **media**, **school**, and **life experiences** shape political beliefs.\n- [ ] I can distinguish **public opinion**, **political culture**, and **ideology**.\n- [ ] I can compare **liberal** and **conservative** views on economic and social policy.\n- [ ] I can explain what makes a poll scientifically credible, including **random sampling** and **margin of error**.\n- [ ] I can identify common polling problems such as **question wording**, **sampling bias**, and **push polling**.\n- [ ] I can describe the role of **linkage institutions**: **elections**, **political parties**, **interest groups**, and **media**.\n- [ ] I can connect citizen beliefs and participation to government action through the political process.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Political Socialization",
+              "definition": "The process by which individuals develop their political attitudes, values, and beliefs through influences such as family, school, peers, media, and social environments."
+            },
+            {
+              "term": "Public Opinion",
+              "definition": "The collection of individual attitudes and beliefs held by the adult population on political issues, institutions, leaders, and public policy."
+            },
+            {
+              "term": "Ideology",
+              "definition": "A coherent set of beliefs about government, politics, public policy, and the role of government in society and the economy."
+            },
+            {
+              "term": "Liberal",
+              "definition": "A person who generally supports greater government action to address social and economic inequality and to protect civil liberties and civil rights."
+            },
+            {
+              "term": "Conservative",
+              "definition": "A person who generally prefers limited government intervention in the economy, traditional social values, and a smaller role for the national government in many policy areas."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which of the following best explains why family is considered a primary agent in the development of political attitudes?",
+              "options": [
+                "It is the institution most directly responsible for administering elections.",
+                "It provides early and sustained exposure to political norms and party identification.",
+                "It legally determines the ideology a citizen must adopt at age 18.",
+                "It replaces the influence of schools, media, and peer groups in adulthood."
+              ],
+              "correctAnswer": "It provides early and sustained exposure to political norms and party identification.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which scenario best reflects a challenge in interpreting public opinion data on a national policy issue?",
+              "options": [
+                "A census counts every resident rather than a sample of the population.",
+                "A poll uses a random sample but asks a question with emotionally charged wording.",
+                "A state uses winner-take-all rules in presidential elections.",
+                "A candidate receives more campaign donations from one region than another."
+              ],
+              "correctAnswer": "A poll uses a random sample but asks a question with emotionally charged wording.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The process through which people acquire their political beliefs and values over time is known as ______.",
+              "options": [
+                "political socialization",
+                "fiscal policy",
+                "judicial review",
+                "selective incorporation"
+              ],
+              "correctAnswer": "political socialization",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A broad and consistent set of beliefs about the purpose and scope of government is called ______.",
+              "options": [
+                "federalism",
+                "ideology",
+                "turnout",
+                "bureaucracy"
+              ],
+              "correctAnswer": "ideology",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Political Efficacy",
+              "definition": "The belief that one can understand and influence political affairs and that government will respond to citizen participation."
+            },
+            {
+              "term": "Poll Reliability",
+              "definition": "The extent to which survey results accurately reflect the views of the target population, often affected by sampling methods, question wording, and timing."
+            },
+            {
+              "term": "Political Party",
+              "definition": "An organized group that seeks to influence government by electing its members to office and shaping public policy."
+            },
+            {
+              "term": "Interest Group",
+              "definition": "An organization that tries to influence public policy on behalf of specific causes, constituencies, or policy preferences."
+            },
+            {
+              "term": "Mass Media",
+              "definition": "Forms of communication that transmit political information to large audiences and help shape issue attention, framing, and public discussion."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which of the following best distinguishes an interest group from a political party?",
+              "options": [
+                "An interest group seeks to influence policy, while a political party seeks to control government through elected office.",
+                "An interest group nominates candidates, while a political party only lobbies Congress.",
+                "An interest group is part of the judiciary, while a political party is part of the executive branch.",
+                "An interest group may campaign in elections, while a political party may not do so legally."
+              ],
+              "correctAnswer": "An interest group seeks to influence policy, while a political party seeks to control government through elected office.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which development has most contributed to the rise of horse-race journalism in coverage of presidential campaigns?",
+              "options": [
+                "An increased emphasis on polling data, strategy, and candidate momentum in media reporting",
+                "A constitutional amendment requiring newspapers to endorse candidates",
+                "The elimination of primary elections in most states",
+                "A decline in the use of televised debates by major-party nominees"
+              ],
+              "correctAnswer": "An increased emphasis on polling data, strategy, and candidate momentum in media reporting",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The belief that ordinary citizens can affect what government does is called political ______.",
+              "options": [
+                "socialization",
+                "efficacy",
+                "cleavage",
+                "capital"
+              ],
+              "correctAnswer": "efficacy",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Organizations that seek to influence public policy without directly running candidates for office are known as ______.",
+              "options": [
+                "political parties",
+                "interest groups",
+                "linkage courts",
+                "cabinet departments"
+              ],
+              "correctAnswer": "interest groups",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Political Participation",
+      "description": "Voting, elections, political parties, interest groups, media, and campaign finance.",
+      "note": "# Unit 5: Political Participation\n\n## Overview\nThis unit examines how Americans influence government through **voting**, **elections**, **political parties**, **interest groups**, **media**, and **campaign finance**. It matters for the AP exam because many questions ask you to connect constitutional principles, institutions, and behavior—especially how participation shapes representation, policy making, and democratic responsiveness.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Political Participation** | Actions by citizens intended to influence government, such as voting, protesting, donating, or contacting officials. | AP questions often ask which forms of participation are most common, most effective, or most unequal across groups. |\n| **Voting Rights & Turnout** | The legal right to vote and the patterns of who actually votes. | You must know how amendments, federal laws, and state rules affect turnout and access. |\n| **Elections** | The formal process by which voters choose candidates for office. | The AP exam emphasizes how **primaries**, **general elections**, and electoral rules shape outcomes and representation. |\n| **Political Parties** | Organizations that recruit candidates, mobilize voters, and structure electoral competition. | Parties link citizens to government and help explain polarization, campaign strategy, and policy agendas. |\n| **Interest Groups** | Organized groups that try to influence public policy. | Often tested through **pluralism**, **free-rider problem**, and tactics like **lobbying**, **litigation**, and **amicus briefs**. |\n| **Media** | Traditional and digital channels that provide political information and shape public discussion. | AP questions often focus on **agenda-setting**, **framing**, **horse-race coverage**, and media’s impact on public opinion. |\n| **Campaign Finance** | The raising and spending of money in elections. | You should know major court cases and the tension between **free speech** and regulation. |\n| **Linkage Institutions** | Structures that connect people to government: **elections**, **parties**, **interest groups**, and **media**. | This is a major AP theme: how citizens communicate preferences to policymakers. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Citizens develop political beliefs] --> B[Participation choices]\n    B --> C[Vote in elections]\n    B --> D[Join parties]\n    B --> E[Support interest groups]\n    B --> F[Use or respond to media]\n    C --> G[Candidates win office]\n    D --> G\n    E --> H[Policy influence]\n    F --> I[Public agenda shaped]\n    G --> H\n    I --> H\n    H --> J[Government action or inaction]\n    J --> K[Public evaluates results]\n    K --> A\n```\n\n### How participation works in U.S. politics\n1. **Citizens form preferences** based on ideology, socialization, and current events.\n2. They act through **linkage institutions**:\n   - **Elections** choose leaders.\n   - **Parties** organize competition and mobilize voters.\n   - **Interest groups** pressure policymakers.\n   - **Media** informs, frames, and amplifies issues.\n3. Elected officials and institutions respond with **policy decisions**.\n4. Citizens then judge outcomes, which affects future participation.\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Rule / Definition** | **What You Must Know** |\n|---|---|\n| **15th Amendment** | Prohibits denying the right to vote based on **race**. |\n| **17th Amendment** | Establishes the **direct election of senators** by voters. |\n| **19th Amendment** | Prohibits denying the right to vote based on **sex**. |\n| **24th Amendment** | Prohibits **poll taxes** in federal elections. |\n| **26th Amendment** | Lowers the voting age to **18**. |\n| **Voting Rights Act of 1965** | Expanded federal protection of voting rights, especially against racial discrimination in voting practices. |\n| **Motor Voter Act of 1993** | Increased voter registration access through motor vehicle agencies and other public offices. |\n| **Baker v. Carr (1962)** | Redistricting issues are justiciable under the **Equal Protection Clause**. |\n| **Shaw v. Reno (1993)** | Race can be considered in redistricting, but districts cannot be drawn with race as the predominant factor without sufficient justification. |\n| **McCutcheon v. FEC (2014)** | Struck down aggregate limits on individual contributions to candidates, parties, and PACs. |\n| **Citizens United v. FEC (2010)** | Independent political spending by corporations and unions is protected under the **First Amendment**. |\n| **PAC** | A group that raises limited contributions from members and donates directly to campaigns. |\n| **Super PAC** | Can raise and spend unlimited funds independently, but cannot donate directly to candidates or coordinate with campaigns. |\n| **Hard Money** | Money given directly to a candidate campaign, subject to contribution limits and disclosure rules. |\n| **Soft Money** | Money given to parties for general party-building activities; historically less regulated, though later restricted. |\n| **Free-Rider Problem** | People benefit from an interest group’s success without joining or paying, making recruitment difficult. |\n| **Winner-Take-All System** | In most U.S. elections, the candidate with the most votes wins, which tends to reinforce the **two-party system**. |\n\n## Connections & Comparisons\n\n| **Concept 1** | **Concept 2** | **Key Similarity / Difference** | **Why AP Cares** |\n|---|---|---|---|\n| **Political Parties** | **Interest Groups** | Both try to influence government, but parties seek to **win elections and control government**, while interest groups focus on **specific policies**. | Students often confuse these; AP questions test their different goals and methods. |\n| **PACs** | **Super PACs** | Both raise money for political purposes, but **PACs** may contribute directly to candidates in limited amounts, while **Super PACs** spend independently and may raise unlimited funds. | Important in campaign finance FRQs and case-based MCQs. |\n| **Primary Elections** | **General Elections** | Primaries choose party nominees; general elections determine officeholders. | AP may ask how each stage affects candidate ideology, voter turnout, or party influence. |\n| **Traditional Media** | **Social Media** | Both spread political information, but social media is faster, less filtered, and often more vulnerable to misinformation and echo chambers. | Useful for explaining modern participation and public opinion dynamics. |\n\n```mermaid\nflowchart LR\n    A[Political Parties] -->|\"Nominate candidates,\\nbuild broad coalitions\"| E[Win elections]\n    B[Interest Groups] -->|\"Lobby, litigate,\\nmobilize members\"| F[Influence policy]\n    C[Media] -->|\"Inform, frame,\\nset agenda\"| G[Shape public debate]\n    D[Voters] -->|\"Turnout and choice\"| E\n    E --> H[Government officials]\n    F --> H\n    G --> D\n```\n\n## Common AP Exam Traps\n\n- **Do not confuse parties and interest groups**: parties run candidates for office; interest groups usually do not.\n- **Do not assume more rights means higher turnout automatically**: the U.S. has broad suffrage, but turnout is also shaped by registration rules, education, age, competitiveness, and political efficacy.\n- **Do not confuse PACs with Super PACs**: the biggest distinction is **direct contributions** versus **independent expenditures**.\n- **Do not overstate media neutrality**: AP questions often emphasize **framing**, **agenda-setting**, and strategic coverage rather than simple objective reporting.\n- **Do not forget federalism in elections**: states administer elections, so rules about registration, voter ID, early voting, and ballot access can vary.\n\n## Quick Review Checklist\n\n- [ ] Explain how **elections, parties, interest groups, and media** act as **linkage institutions**.\n- [ ] Identify the major **constitutional amendments** and **federal laws** that expanded voting rights.\n- [ ] Distinguish between **primary elections** and **general elections**.\n- [ ] Compare the goals and methods of **political parties** and **interest groups**.\n- [ ] Explain the **free-rider problem** and how interest groups overcome it through selective benefits or incentives.\n- [ ] Describe how **media** influences politics through **agenda-setting**, **framing**, and coverage choices.\n- [ ] Distinguish among **hard money**, **soft money**, **PACs**, and **Super PACs**.\n- [ ] Apply major cases like **Citizens United v. FEC**, **McCutcheon v. FEC**, **Baker v. Carr**, and **Shaw v. Reno** to AP-style questions.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Linkage institutions",
+              "definition": "Structures that connect people to government by translating preferences into policy demands, including parties, elections, interest groups, and the media."
+            },
+            {
+              "term": "Political efficacy",
+              "definition": "The belief that ordinary people can influence government and that public officials will respond to their participation."
+            },
+            {
+              "term": "Motor Voter Act",
+              "definition": "A 1993 federal law that expanded voter registration opportunities, especially through state motor vehicle agencies and public assistance offices."
+            },
+            {
+              "term": "Open primary",
+              "definition": "A nominating election in which voters do not need to be registered members of a party to participate in selecting that party’s candidates, depending on state rules."
+            },
+            {
+              "term": "Winner-take-all electoral system",
+              "definition": "An arrangement in which the candidate with the most votes in a district receives the entire prize, a pattern that helps reinforce a two-party system in the United States."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which of the following best explains why the United States has historically maintained a two-party system rather than a strong multiparty system?",
+              "options": [
+                "Proportional representation allocates seats based on national vote share",
+                "Single-member districts with plurality voting discourage minor parties",
+                "The Constitution explicitly limits ballot access to two parties",
+                "State legislatures are required to fund only two major parties"
+              ],
+              "correctAnswer": "Single-member districts with plurality voting discourage minor parties",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A political scientist studying turnout finds that registration requirements reduce participation among eligible citizens. Which policy was specifically designed to address that barrier?",
+              "options": [
+                "The Bipartisan Campaign Reform Act",
+                "The Motor Voter Act",
+                "The Pendleton Act",
+                "The War Powers Resolution"
+              ],
+              "correctAnswer": "The Motor Voter Act",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The sense that government will respond to citizen action is known as ______.",
+              "options": [
+                "political efficacy",
+                "selective perception",
+                "prior restraint",
+                "partisan dealignment"
+              ],
+              "correctAnswer": "political efficacy",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In a system where the candidate with the most votes in a district wins the entire seat, the electoral structure is called ______.",
+              "options": [
+                "proportional representation",
+                "winner-take-all electoral system",
+                "closed-list system",
+                "ranked-choice system"
+              ],
+              "correctAnswer": "winner-take-all electoral system",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Political action committee",
+              "definition": "An organization that raises and spends money to elect or defeat candidates, often representing corporations, labor unions, or interest groups, within federal contribution rules."
+            },
+            {
+              "term": "Super PAC",
+              "definition": "An independent expenditure-only committee that may raise unlimited funds to advocate for or against candidates but cannot donate directly to campaigns or coordinate with them."
+            },
+            {
+              "term": "Citizens United v. FEC",
+              "definition": "A 2010 Supreme Court decision holding that the government may not suppress independent political spending by corporations and unions under the First Amendment."
+            },
+            {
+              "term": "Horse-race journalism",
+              "definition": "Coverage that emphasizes who is ahead, strategy, and campaign momentum rather than candidates’ issue positions or policy consequences."
+            },
+            {
+              "term": "Issue network",
+              "definition": "A fluid web of policy actors, including interest groups, experts, legislators, and bureaucrats, who interact on specific policy areas."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which of the following accurately distinguishes a super PAC from a traditional political action committee?",
+              "options": [
+                "A super PAC may contribute unlimited funds directly to a candidate’s campaign",
+                "A super PAC may raise unlimited funds for independent expenditures",
+                "A super PAC is prohibited from engaging in political advertising",
+                "A super PAC is limited to contributions from individual donors only"
+              ],
+              "correctAnswer": "A super PAC may raise unlimited funds for independent expenditures",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A news outlet focuses its election coverage primarily on polling shifts, campaign strategy, and fundraising totals. This is best described as",
+              "options": [
+                "watchdog journalism",
+                "investigative federalism",
+                "horse-race journalism",
+                "prior restraint"
+              ],
+              "correctAnswer": "horse-race journalism",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The Supreme Court case that expanded protection for independent political expenditures by corporations and unions was ______.",
+              "options": [
+                "McCulloch v. Maryland",
+                "Citizens United v. FEC",
+                "Wisconsin v. Yoder",
+                "Baker v. Carr"
+              ],
+              "correctAnswer": "Citizens United v. FEC",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A committee that can raise unlimited funds for independent expenditures but cannot coordinate with candidates is called a ______.",
+              "options": [
+                "political machine",
+                "super PAC",
+                "closed primary",
+                "party caucus"
+              ],
+              "correctAnswer": "super PAC",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

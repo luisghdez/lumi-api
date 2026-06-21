@@ -1,0 +1,1373 @@
+{
+  "apSubject": "AP United States History",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Period 1: 1491–1607",
+      "description": "Pre-Columbian America, European exploration, Columbian Exchange, and early contact between Native Americans and Europeans.",
+      "note": "# Unit 1: Period 1: 1491–1607\n\n## Overview\nThis unit examines **Native American societies before European contact**, the motives and patterns of **European exploration**, and the profound transformations caused by the **Columbian Exchange** and early interactions between Europeans, Native Americans, and Africans. For the AP exam, this period matters because it establishes major themes that continue throughout U.S. history: **environment and geography**, **cultural contact**, **labor systems**, **race**, and **economic exchange**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Regional diversity of Native American societies** | Before 1492, Native peoples lived in varied environments and developed different economies, political systems, and cultures. | APUSH often tests that Native societies were **not uniform**; geography shaped development in regions like the **Southwest**, **Great Basin**, **Eastern Woodlands**, and **Great Plains**. |\n| **Maize cultivation and agriculture** | The spread of **corn cultivation** supported larger populations and more complex societies in some regions. | Important for explaining why some societies became **sedentary**, built permanent settlements, and developed stratified political structures. |\n| **European motives for exploration** | Europeans sought **wealth**, **trade routes**, **land**, and **religious converts**, aided by maritime technology. | The exam frequently asks students to connect exploration to **mercantilism**, competition among empires, and the search for a route to Asia. |\n| **Columbian Exchange** | The transatlantic movement of **plants, animals, diseases, and people** after 1492. | A central AP theme because it reshaped economies, diets, populations, and environments in both the **Americas** and **Europe/Africa**. |\n| **Disease and demographic collapse** | Eurasian diseases such as **smallpox** devastated Native populations, who lacked immunity. | This is one of the most important causes of Native population decline and helps explain changing power balances after contact. |\n| **Spanish colonization and labor systems** | Spain established colonies in the Americas and used systems like the **encomienda** to extract labor and wealth. | AP questions often connect Spanish colonization to **coerced labor**, **mission systems**, and the development of a **caste hierarchy**. |\n| **Cultural exchange and conflict** | Contact produced trade, intermarriage, conversion efforts, adaptation, and military conflict. | Students must understand that interactions were **complex**—not only conquest, but also negotiation, alliance, and resistance. |\n| **Beginning of the Atlantic World** | Early contact linked Europe, Africa, and the Americas into a new network of trade and migration. | This lays the foundation for later units on **slavery**, **colonial economies**, and imperial competition. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Major Developments in Period 1: 1491–1607\n    1491 : Diverse Native societies across North America\n         : Agriculture, trade networks, regional adaptation\n    1492 : Columbus's voyage initiates sustained contact\n    1490s-1500s : Columbian Exchange begins\n                : Crops, animals, diseases, peoples move across Atlantic\n    Early 1500s : Spanish conquest and colonization expand\n                : Mission system and encomienda develop\n    1500s : Native population decline from disease and conflict\n          : Cultural exchange, resistance, and adaptation\n    By 1607 : Foundations laid for later European colonization in North America\n```\n\n### Cause-and-effect pattern to know\n1. **Geography** shaped Native economies and cultures.\n2. **European maritime expansion** enabled transatlantic contact.\n3. Contact triggered the **Columbian Exchange**.\n4. Disease, conquest, and labor systems produced major **demographic and social disruption**.\n5. These changes created the early framework for the **Atlantic World** and later colonization.\n\n## Essential Formulas / Laws / Rules\n\nFor APUSH, there are no mathematical formulas, but there are key **historical rules and definitions** you must know:\n\n| **Term / Principle** | **Must-Know Definition or Rule** |\n|---|---|\n| **Columbian Exchange** | The transfer of **animals, plants, microbes, and people** between the Eastern and Western Hemispheres after 1492. |\n| **Encomienda system** | A Spanish labor system that granted colonists the right to demand **labor or tribute** from Native Americans. |\n| **Mercantilism** | The belief that colonies should enrich the mother country through the extraction of **resources** and controlled trade. |\n| **Mission system** | Spanish efforts to **convert Native peoples to Christianity** and incorporate them into colonial society. |\n| **Sedentary society** | A community living in **permanent settlements**, often supported by agriculture. |\n| **Nomadic / semi-nomadic society** | A group that moves seasonally, often following resources such as game or adapting to arid conditions. |\n| **Atlantic World** | The connected system linking **Europe, Africa, and the Americas** through trade, migration, conquest, and cultural exchange. |\n| **Historical reasoning rule** | On APUSH, always connect **cause and effect**, **continuity and change**, and **comparison across regions**. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Native American Societies Before Contact** | **European Empires / Contact Era** | **AP Significance** |\n|---|---|---|---|\n| **Relationship to environment** | Adapted to local geography; economies varied by region | Often sought to exploit land for profit and imperial gain | Shows how **environment** shaped different historical developments |\n| **Labor systems** | Kin-based labor, communal agriculture, regional variation | Coerced labor systems such as **encomienda** | Helps explain rising inequality and colonial extraction |\n| **Religion** | Diverse spiritual traditions tied to land and community | Christianity, especially Catholic missionary efforts | Useful in questions about **cultural conflict and syncretism** |\n| **Population patterns** | Large, established populations in many regions | Settlement often followed conquest and trade routes | Counters the misconception that the Americas were sparsely populated or “empty” |\n| **Exchange after contact** | Adopted some European goods, animals, and technologies | Gained American crops like **maize** and **potatoes** | Highlights that exchange was **two-way**, though unequal in impact |\n\n### Fast comparison: regions of Native North America\n\n```mermaid\nflowchart LR\n    A[\"Southwest\"] --> A1[\"Irrigation, farming, adobe communities\"]\n    B[\"Great Plains\"] --> B1[\"Mobile lifestyles; hunting and trade\"]\n    C[\"Eastern Woodlands\"] --> C1[\"Mixed agriculture, villages, political alliances\"]\n    D[\"Great Basin\"] --> D1[\"Scattered groups adapted to arid conditions\"]\n```\n\n## Common AP Exam Traps\n\n- **Do not treat Native Americans as a single culture.** APUSH emphasizes **regional diversity** and adaptation to environment.\n- **Do not say Europeans only brought destruction.** They did cause devastating change, but AP questions also expect discussion of **exchange, alliance, adaptation, and resistance**.\n- **Do not confuse the Columbian Exchange with only trade goods.** It also included **diseases**, **animals**, **crops**, and **human migration**.\n- **Do not overlook geography.** Environmental conditions are a major explanatory factor in both Native development and European colonization patterns.\n- **Do not assume labor systems were identical across empires.** In this unit, focus especially on the **Spanish** use of **encomienda** and missionary activity.\n\n## Quick Review Checklist\n\n- [ ] I can explain how **geography and environment** shaped different Native American societies before 1492.\n- [ ] I can describe the significance of **maize cultivation** in the development of settled societies.\n- [ ] I can identify the major **motives for European exploration** and expansion.\n- [ ] I can define the **Columbian Exchange** and give examples of what moved in both directions.\n- [ ] I can explain why **disease** had such a devastating effect on Native populations.\n- [ ] I can describe the basic features of **Spanish colonization**, including the **encomienda** and **mission system**.\n- [ ] I can compare **Native American**, **European**, and early **Atlantic World** patterns of economy, religion, and labor.\n- [ ] I can analyze early contact in terms of **cause/effect**, **comparison**, and **continuity/change**, as required on the AP exam.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Maize cultivation",
+              "definition": "The domestication and widespread farming of a high-yield grain that supported population growth, permanent settlements, and more complex societies across many regions of the Americas."
+            },
+            {
+              "term": "Mississippian culture",
+              "definition": "A mound-building society centered in the Mississippi River Valley that developed large urban centers, extensive trade networks, and hierarchical political organization before European contact."
+            },
+            {
+              "term": "Iroquois Confederacy",
+              "definition": "A political alliance among several northeastern Native nations that promoted diplomacy, collective security, and coordinated decision-making among member groups."
+            },
+            {
+              "term": "North American environmental adaptation",
+              "definition": "The process by which Indigenous societies developed distinct economies, housing, and social structures in response to regional climates, landforms, and natural resources."
+            },
+            {
+              "term": "Animism",
+              "definition": "A religious worldview in which spiritual power is understood to exist throughout the natural world, shaping many Indigenous belief systems before European arrival."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly explains the growth of large, sedentary societies such as Cahokia in North America before 1492?",
+              "options": [
+                "The expansion of maize-based agriculture",
+                "The introduction of horses from Europe",
+                "The adoption of Atlantic slave labor",
+                "The spread of Protestant missionary networks"
+              ],
+              "correctAnswer": "The expansion of maize-based agriculture",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A key difference between societies in the Southwest and societies in the Great Plains before European contact was that Southwestern peoples generally",
+              "options": [
+                "relied more heavily on settled agriculture and irrigation",
+                "had no trade networks with neighboring peoples",
+                "lacked permanent architectural structures",
+                "depended primarily on maritime resources"
+              ],
+              "correctAnswer": "relied more heavily on settled agriculture and irrigation",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The development of ______ supported denser populations and more complex political organization in many Native societies before European arrival.",
+              "options": [
+                "maize agriculture",
+                "joint-stock companies",
+                "indentured servitude",
+                "transatlantic commerce"
+              ],
+              "correctAnswer": "maize agriculture",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The most important factor shaping differences among Native societies in North America before 1492 was regional ______.",
+              "options": [
+                "environment",
+                "feudalism",
+                "industrialization",
+                "mercantilism"
+              ],
+              "correctAnswer": "environment",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Columbian Exchange",
+              "definition": "The extensive transfer of plants, animals, peoples, diseases, and ideas between the Eastern and Western Hemispheres following sustained contact after 1492."
+            },
+            {
+              "term": "Spanish encomienda system",
+              "definition": "A colonial labor arrangement that granted conquerors the right to demand tribute and work from Indigenous communities, contributing to exploitation and demographic decline."
+            },
+            {
+              "term": "Atlantic slave trade",
+              "definition": "The forced migration of Africans across the ocean to supply labor in colonial economies, especially after Native populations sharply decreased."
+            },
+            {
+              "term": "Black Legend",
+              "definition": "A negative portrayal of Iberian colonial rule that emphasized extreme cruelty toward Indigenous peoples and was often used by rival European powers for political purposes."
+            },
+            {
+              "term": "Spanish mission system",
+              "definition": "A colonial institution designed to spread Christianity and incorporate Indigenous populations into imperial society through religious conversion, labor, and cultural change."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which consequence of the Columbian Exchange had the most immediate demographic impact on Native American populations?",
+              "options": [
+                "The spread of epidemic diseases such as smallpox",
+                "The adoption of European livestock",
+                "The introduction of silver mining",
+                "The growth of Protestant settlements"
+              ],
+              "correctAnswer": "The spread of epidemic diseases such as smallpox",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Spanish colonization in the Americas during the sixteenth century was most directly motivated by the desire to",
+              "options": [
+                "extract wealth and expand imperial power",
+                "establish religious freedom for dissenters",
+                "create industrial manufacturing centers",
+                "develop democratic self-government"
+              ],
+              "correctAnswer": "extract wealth and expand imperial power",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The ______ refers to the transatlantic transfer of crops, animals, diseases, and peoples after 1492.",
+              "options": [
+                "Columbian Exchange",
+                "Great Awakening",
+                "Market Revolution",
+                "Navigation Acts"
+              ],
+              "correctAnswer": "Columbian Exchange",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "As Indigenous populations declined after contact, Europeans increasingly turned to enslaved ______ labor in the Americas.",
+              "options": [
+                "African",
+                "Asian",
+                "wage",
+                "indentured"
+              ],
+              "correctAnswer": "African",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Period 2: 1607–1754",
+      "description": "Colonial settlement, transatlantic trade, slavery in British North America, and colonial conflicts.",
+      "note": "# Unit 2: Period 2: 1607–1754\n\n## Overview\nThis unit examines how **European colonization** reshaped North America through settlement, labor systems, trade networks, and conflict among **Native peoples**, **Europeans**, and **Africans**. For the AP exam, this period matters because it explains the origins of **regional colonial differences**, the rise of **racialized slavery**, and the growing tensions within the **British Atlantic world** that set up later revolutionary change.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Jamestown and early English settlement** | The first permanent English colony, founded in **1607**, initially struggled but survived through **tobacco cultivation**. | Often used to show how profit motives, labor demands, and adaptation to American conditions shaped colonial development. |\n| **Regional colonial societies** | The **New England**, **Middle**, and **Southern** colonies developed distinct economies, labor systems, religious cultures, and settlement patterns. | AP questions frequently ask students to compare how geography, religion, and labor created different colonial identities. |\n| **Mercantilism and the Atlantic economy** | Colonies fit into a larger system in which they supplied raw materials and served as markets for the mother country. | Essential for understanding **Navigation Acts**, imperial regulation, and the economic ties that later became points of conflict. |\n| **Triangular trade / transatlantic trade** | Exchange networks linked **Europe**, **Africa**, and the **Americas** through goods, labor, and capital. | Important because it connects colonial prosperity to global trade and the expansion of **enslaved labor**. |\n| **Indentured servitude to racial slavery** | Early labor needs were often met by indentured servants, but colonies increasingly turned to **African slavery**. | A major AP theme: the transition shows how economic demands and legal systems created **hereditary race-based slavery**. |\n| **Plantation economies** | Large-scale cash-crop agriculture, especially **tobacco**, **rice**, and **indigo**, depended on coerced labor. | Helps explain wealth inequality, elite power, and why slavery became deeply embedded in the **Chesapeake** and **Lower South**. |\n| **Colonial self-government** | Institutions such as the **Virginia House of Burgesses** and **Mayflower Compact** gave colonists experience with local rule. | AP often links these developments to emerging expectations of political participation and autonomy within the empire. |\n| **Imperial and intercultural conflict** | Competition among **Britain**, **France**, **Spain**, and Native groups produced wars, alliances, and shifting borders. | Key to understanding how colonization was contested and how Native diplomacy and resistance shaped the period. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Development of British North America, 1607–1754\n    1607 : **Jamestown founded**\n    1610s : Tobacco economy expands in Virginia\n    1619 : First representative assembly in Virginia\n    1619 : First recorded arrival of Africans in English North America\n    1620s-1640s : New England colonies founded by religious dissenters\n    1660s : Navigation Acts strengthen imperial trade regulation\n    1670s : Bacon's Rebellion exposes tensions over land, labor, and class\n    late 1600s : Shift from indentured servitude to increased African slavery\n    1700s : Plantation economies and Atlantic trade deepen\n    1730s-1740s : First Great Awakening spreads across colonies\n    1754 : Growing imperial rivalry helps trigger the French and Indian War\n```\n\n### How the system worked\n1. **Colonization** created demand for land, labor, and export crops.\n2. **Cash-crop agriculture** tied colonies to Atlantic markets.\n3. Labor shortages encouraged use of **indentured servants**, then increasingly **enslaved Africans**.\n4. **Mercantilist regulation** sought to keep colonial trade beneficial to Britain.\n5. Regional differences in settlement and economy produced distinct colonial societies.\n6. Competition for land intensified conflict among **European empires** and **Native nations**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Mercantilism** | Colonies existed to enrich the mother country by supplying raw materials and buying finished goods. |\n| **Navigation Acts** | English laws restricted colonial trade to strengthen imperial control and channel profits through Britain. |\n| **Salutary neglect** | Britain often loosely enforced colonial regulations, allowing colonies substantial autonomy before the mid-1700s. |\n| **Hereditary racial slavery** | By the late 1600s, colonial laws increasingly defined slavery as permanent, inherited, and based on race. |\n| **Middle Passage** | The forced transatlantic voyage of enslaved Africans to the Americas; central to the growth of plantation labor systems. |\n| **Indentured servitude** | A labor system in which workers exchanged several years of labor for passage to America, room, and eventual freedom dues. |\n| **Covenant community** | In **New England**, many settlers believed society should be organized around shared religious commitments and moral discipline. |\n| **Representative government** | Colonists developed elected assemblies, creating traditions of self-rule even while remaining under imperial authority. |\n\n## Connections & Comparisons\n\n| **Comparison** | **New England** | **Chesapeake / Southern Colonies** | **Middle Colonies** |\n|---|---|---|---|\n| **Main motive for settlement** | Often religious, especially among **Puritans** | Primarily economic profit | Mixed: economic opportunity, diversity, trade |\n| **Labor system** | Family labor, small farms, commerce | Greater reliance on indentured servants, then slavery | Mixed farms, artisans, merchants, some enslaved labor |\n| **Settlement pattern** | Dense towns and village life | Dispersed plantations | Mixed towns and farms |\n| **Economy** | Shipping, fishing, small farming, trade | Tobacco, rice, indigo, plantation agriculture | Grain production, trade, port cities |\n| **Religion / culture** | More socially homogeneous early on | Anglican influence, less uniformity | Most diverse in ethnicity and religion |\n| **AP significance** | Shows role of religion and community | Shows labor demand, class tension, slavery | Shows pluralism and commercial growth |\n\n```mermaid\nflowchart LR\n    A[\"Land demand\"] --> B[\"Conflict with Native peoples\"]\n    C[\"Cash crops\"] --> D[\"Need for labor\"]\n    D --> E[\"Indentured servitude\"]\n    D --> F[\"African slavery expands\"]\n    G[\"Mercantilism\"] --> H[\"Navigation Acts\"]\n    H --> I[\"Colonial trade shaped by empire\"]\n```\n\n## Common AP Exam Traps\n- Do not treat the colonies as a single unified society; **regional differences** are one of the biggest themes of this unit.\n- Do not assume **slavery** was fully developed from the start in English colonies; the AP exam often tests the **transition** from mixed labor systems to legalized racial slavery.\n- Do not overlook **Native agency**. Native nations were not passive victims; they negotiated, traded, allied, and resisted.\n- Do not confuse **mercantilism** with total British control. Before the mid-1700s, **salutary neglect** allowed substantial colonial autonomy.\n- Do not attribute all colonial migration to religious motives; many settlers, especially in the **Chesapeake** and **Middle Colonies**, came mainly for economic opportunity.\n\n## Quick Review Checklist\n- [ ] Explain how **Jamestown** survived and why **tobacco** transformed the Chesapeake.\n- [ ] Compare the social, religious, and economic development of **New England**, the **Middle Colonies**, and the **Southern Colonies**.\n- [ ] Describe how **mercantilism** and the **Navigation Acts** linked the colonies to the British Empire.\n- [ ] Explain why colonial labor systems shifted from **indentured servitude** to **racial slavery**.\n- [ ] Identify how the **Atlantic slave trade** and **Middle Passage** shaped British North America.\n- [ ] Analyze the causes and significance of **Bacon's Rebellion** as a turning point in labor and class relations.\n- [ ] Explain how **colonial self-government** developed through assemblies and local institutions.\n- [ ] Describe how conflict among **European empires** and **Native peoples** shaped North America by **1754**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Joint-stock company",
+              "definition": "A business structure in which investors pooled capital and shared both risk and profit, helping finance early English colonization in North America."
+            },
+            {
+              "term": "Jamestown",
+              "definition": "The first permanent English settlement in North America, founded in 1607 in Virginia, where survival depended on trade, labor, and eventually tobacco cultivation."
+            },
+            {
+              "term": "House of Burgesses",
+              "definition": "An elected legislative assembly established in Virginia in 1619 that set a precedent for representative self-government in the English colonies."
+            },
+            {
+              "term": "Indentured servitude",
+              "definition": "A labor system in which migrants worked for a fixed number of years in exchange for passage to the Americas, food, and shelter, widely used in the Chesapeake during the seventeenth century."
+            },
+            {
+              "term": "Mercantilism",
+              "definition": "An economic system in which colonies existed primarily to benefit the mother country by supplying raw materials and serving as markets for finished goods."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly contributed to the long-term economic survival of the Virginia colony in the early seventeenth century?",
+              "options": [
+                "The rapid growth of tobacco cultivation for export",
+                "The discovery of large gold reserves near the James River",
+                "The immediate establishment of religious toleration for all settlers",
+                "The replacement of private landholding with communal farming"
+              ],
+              "correctAnswer": "The rapid growth of tobacco cultivation for export",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The creation of the House of Burgesses is most significant in United States history because it",
+              "options": [
+                "established a precedent for representative government in the colonies",
+                "ended the political authority of the British monarchy in North America",
+                "created the first written constitution in the British Atlantic world",
+                "granted universal suffrage to all free adult men and women"
+              ],
+              "correctAnswer": "established a precedent for representative government in the colonies",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In the seventeenth-century Chesapeake, many landowners initially relied on ______ as a major source of agricultural labor before the widespread expansion of racial slavery.",
+              "options": [
+                "indentured servants",
+                "sharecroppers",
+                "factory wage laborers",
+                "tenant reformers"
+              ],
+              "correctAnswer": "indentured servants",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "According to ______, colonial trade should enrich the mother country through regulation and the accumulation of wealth.",
+              "options": [
+                "mercantilism",
+                "socialism",
+                "laissez-faire capitalism",
+                "sectionalism"
+              ],
+              "correctAnswer": "mercantilism",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Middle Passage",
+              "definition": "The transatlantic voyage that forcibly transported captive Africans to the Americas under brutal and deadly conditions as part of the Atlantic slave trade."
+            },
+            {
+              "term": "Triangular trade",
+              "definition": "A transatlantic trading network linking Europe, Africa, and the Americas through the exchange of manufactured goods, enslaved laborers, and colonial commodities."
+            },
+            {
+              "term": "Salutary neglect",
+              "definition": "An informal British policy of loosely enforcing parliamentary laws in the colonies, allowing local autonomy in economic and political affairs for much of the early eighteenth century."
+            },
+            {
+              "term": "Navigation Acts",
+              "definition": "A series of English laws designed to regulate imperial trade by requiring that colonial commerce primarily benefit England and move through English ships or ports."
+            },
+            {
+              "term": "French and Indian War",
+              "definition": "The North American phase of a larger imperial conflict in which Britain and France fought over territory and influence, leading to major territorial changes after 1763."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which factor most strongly explains the rapid expansion of slavery in British North America after the late seventeenth century?",
+              "options": [
+                "The growing demand for labor on plantations producing cash crops",
+                "The immediate abolition of indentured servitude throughout the colonies",
+                "A decline in Atlantic commerce between Europe and the Americas",
+                "Parliamentary laws prohibiting the importation of African laborers"
+              ],
+              "correctAnswer": "The growing demand for labor on plantations producing cash crops",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "British policies of salutary neglect in the early eighteenth century had the effect of",
+              "options": [
+                "encouraging the development of colonial self-government and local autonomy",
+                "ending smuggling in the Atlantic world",
+                "eliminating tensions between colonists and American Indians",
+                "preventing the growth of colonial assemblies"
+              ],
+              "correctAnswer": "encouraging the development of colonial self-government and local autonomy",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The ______ was the brutal ocean crossing in which enslaved Africans were transported to the Americas.",
+              "options": [
+                "Middle Passage",
+                "Great Awakening",
+                "Enclosure Movement",
+                "Columbian Exchange"
+              ],
+              "correctAnswer": "Middle Passage",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The ______ sought to ensure that trade within the British Empire benefited England by restricting colonial commerce.",
+              "options": [
+                "Navigation Acts",
+                "Intolerable Acts",
+                "Townshend Acts",
+                "Albany Plan of Union"
+              ],
+              "correctAnswer": "Navigation Acts",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Period 3: 1754–1800",
+      "description": "Seven Years' War, American Revolution, Articles of Confederation, Constitutional Convention, and early republic.",
+      "note": "# Unit 3: Period 3: 1754–1800\n\n## Overview\n**Period 3** traces the transformation of Britain’s North American colonies from imperial subjects into an independent republic. For the AP exam, this unit matters because it connects **war, taxation, republican ideology, constitutional change, and early national politics** into one of the clearest cause-and-effect sequences in U.S. history.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Seven Years’ War / French and Indian War** | Global conflict between Britain and France; in North America, Britain defeated France and gained major territory. | Sets up later conflict because Britain’s war debt led to **new imperial taxation and tighter colonial control**. |\n| **Imperial Reform and Colonial Resistance** | British efforts after 1763 to raise revenue and govern the colonies more directly through acts like the **Sugar Act**, **Stamp Act**, and **Townshend Acts**. | AP questions often ask how **economic regulation**, **political protest**, and **ideas about rights** escalated toward revolution. |\n| **Republicanism and Enlightenment Ideas** | Belief that government should be based on the people’s consent and aimed at the public good; influenced by thinkers like **John Locke**. | Essential for explaining the ideological basis of the **Declaration of Independence** and revolutionary resistance. |\n| **American Revolution** | Political and military struggle for independence from Britain, from the 1770s through the **Treaty of Paris (1783)**. | The exam emphasizes both **military turning points** and **broader social/political consequences** of the Revolution. |\n| **Articles of Confederation** | First national framework of government, creating a weak central government with most power in the states. | Important because APUSH often asks why the Articles were **insufficient** and how their weaknesses led to constitutional revision. |\n| **Constitutional Convention and U.S. Constitution** | 1787 meeting that replaced the Articles and created a stronger federal system with **separation of powers** and **checks and balances**. | Core AP theme: balancing **liberty vs. order**, **state vs. national power**, and resolving sectional disputes. |\n| **Federalists vs. Anti-Federalists** | Debate over ratification of the Constitution and the proper scope of national government. | Frequently tested as a comparison of competing visions of the republic and the need for the **Bill of Rights**. |\n| **Early Republic and Washington’s Presidency** | The first national administrations established precedents in diplomacy, finance, and political leadership. | AP questions often connect **Hamilton’s financial plan**, **party formation**, and **foreign policy neutrality** to the new republic’s stability. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title From Imperial Conflict to New Republic, 1754–1800\n    1754 : **French and Indian War** begins\n    1763 : **Treaty of Paris** ends war; Britain gains territory\n    1763 : **Proclamation of 1763** restricts westward settlement\n    1764 : **Sugar Act**\n    1765 : **Stamp Act** and colonial protest\n    1770 : **Boston Massacre**\n    1773 : **Boston Tea Party**\n    1774 : **Intolerable Acts** and **First Continental Congress**\n    1775 : Battles of **Lexington and Concord**\n    1776 : **Declaration of Independence**\n    1781 : Victory at **Yorktown**; **Articles of Confederation** ratified\n    1783 : **Treaty of Paris** recognizes U.S. independence\n    1786 : **Shays’ Rebellion**\n    1787 : **Constitutional Convention**\n    1788 : Constitution ratified\n    1789 : Washington inaugurated\n    1791 : **Bill of Rights** ratified\n    1790s : Rise of **Federalists** and **Democratic-Republicans**\n```\n\n### Big Historical Chain\n1. **British victory in the Seven Years’ War** created a larger empire but also massive debt.\n2. Britain attempted **imperial reform** through taxation and tighter enforcement.\n3. Colonists resisted using arguments about **rights**, **representation**, and **self-government**.\n4. Conflict escalated from protest to **revolutionary war**.\n5. Independence produced a weak national system under the **Articles of Confederation**.\n6. Problems under the Articles led to the **Constitution**, which strengthened national authority while limiting power through structure.\n7. The new republic immediately faced debates over **finance, foreign policy, and political factions**.\n\n## Essential Formulas / Laws / Rules\n\nFor APUSH, students need **principles, documents, and governing rules** more than equations.\n\n| **Law / Rule / Principle** | **What You Must Know** |\n|---|---|\n| **“No taxation without representation”** | Colonists argued Parliament could not tax them legitimately because they lacked elected representation in that body. |\n| **Natural rights** | Based on **Lockean** thought: people possess rights such as **life, liberty, and property**; governments exist by consent to protect them. |\n| **Popular sovereignty** | Political authority comes from the people, a foundational revolutionary and constitutional principle. |\n| **Republicanism** | Citizens and representatives should promote the common good and resist corruption and concentrated power. |\n| **Articles of Confederation** | National government lacked the power to **tax directly**, regulate **interstate commerce**, or easily enforce laws. |\n| **Checks and balances** | The Constitution divided power among **legislative**, **executive**, and **judicial** branches to prevent tyranny. |\n| **Federalism** | Sovereignty is divided between **national** and **state** governments. |\n| **Bill of Rights** | First ten amendments added protections for civil liberties and helped win support from critics of the Constitution. |\n\n## Connections & Comparisons\n\n| **Comparison** | **British View** | **Colonial / American View** | **AP Significance** |\n|---|---|---|---|\n| **Taxation after 1763** | Colonists should help pay for imperial defense. | Taxes without direct representation violated rights. | Shows how different constitutional understandings fueled resistance. |\n| **Articles of Confederation vs. Constitution** | N/A | Articles favored state power; Constitution created stronger national power. | Tests continuity/change in American government after independence. |\n| **Federalists vs. Anti-Federalists** | N/A | Federalists supported stronger national government; Anti-Federalists feared centralized power and demanded protections for liberty. | Central to ratification debates and the origin of the **Bill of Rights**. |\n| **Revolutionary ideals vs. social reality** | N/A | Ideals of equality expanded political debate, but many groups remained excluded, including **women**, **enslaved people**, and many **Native peoples**. | AP questions often ask students to assess limits of revolutionary change. |\n\n```mermaid\nflowchart LR\n    A[\"Seven Years' War\"] --> B[\"British debt and imperial reform\"]\n    B --> C[\"Colonial protest and resistance\"]\n    C --> D[\"American Revolution\"]\n    D --> E[\"Articles of Confederation\"]\n    E --> F[\"Weaknesses exposed\"]\n    F --> G[\"Constitutional Convention\"]\n    G --> H[\"Constitution and new federal system\"]\n```\n\n## Common AP Exam Traps\n- Do not claim the Revolution was caused by **taxes alone**; APUSH stresses the combination of **economic burdens, political representation issues, Enlightenment ideas, and imperial enforcement**.\n- Do not confuse the **French and Indian War** with the **American Revolution**; the first helped cause the second.\n- Do not describe the **Articles of Confederation** as completely ineffective; they were weak, but the government still achieved things like the **Northwest Ordinance**.\n- Do not assume the Constitution was universally welcomed; **Anti-Federalist opposition** was serious and directly influenced the addition of the **Bill of Rights**.\n- Do not overstate revolutionary equality; the Revolution broadened political ideals, but **slavery persisted** and many groups did not gain full political rights.\n\n## Quick Review Checklist\n- [ ] Explain how the **Seven Years’ War** changed the relationship between Britain and its colonies.\n- [ ] Identify major British policies after 1763 and explain why colonists resisted them.\n- [ ] Describe how **Enlightenment** and **republican** ideas shaped the movement for independence.\n- [ ] Explain the significance of the **Declaration of Independence** as both an ideological and political document.\n- [ ] Assess the strengths and weaknesses of the **Articles of Confederation**.\n- [ ] Explain why **Shays’ Rebellion** helped convince many leaders that a stronger national government was necessary.\n- [ ] Compare the **Articles of Confederation** and the **Constitution** in terms of power distribution.\n- [ ] Distinguish between **Federalist** and **Anti-Federalist** arguments and explain why the **Bill of Rights** mattered.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "French and Indian War",
+              "definition": "The North American theater of a larger imperial conflict between Britain and France from 1754 to 1763, resulting in British territorial gains, a large war debt, and heightened tensions with Native nations and colonists."
+            },
+            {
+              "term": "Proclamation of 1763",
+              "definition": "British policy that prohibited colonial settlement west of the Appalachian Mountains in order to reduce conflict with Native peoples and stabilize imperial administration after the war."
+            },
+            {
+              "term": "Stamp Act",
+              "definition": "A 1765 parliamentary measure that placed a direct tax on printed materials in the colonies, provoking organized resistance over representation and imperial authority."
+            },
+            {
+              "term": "Republicanism",
+              "definition": "A political ideology emphasizing civic virtue, opposition to corruption, and the idea that legitimate government rests on the consent and participation of the governed."
+            },
+            {
+              "term": "Common Sense",
+              "definition": "A widely circulated 1776 pamphlet by Thomas Paine that urged separation from Britain and helped shift public opinion toward independence."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly led Britain to tighten imperial control over its North American colonies after 1763?",
+              "options": [
+                "The colonial alliance with Spain during the American Revolution",
+                "The financial and administrative burdens created by victory in the Seven Years' War",
+                "The adoption of the Articles of Confederation by the states",
+                "The end of salutary neglect following the War of 1812"
+              ],
+              "correctAnswer": "The financial and administrative burdens created by victory in the Seven Years' War",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains why the First Continental Congress met in 1774?",
+              "options": [
+                "Colonists sought to coordinate a response to the Coercive Acts and defend colonial rights",
+                "Patriots wanted to draft the United States Constitution before independence was declared",
+                "Delegates intended to negotiate a permanent alliance with France",
+                "Loyalists organized to strengthen royal authority in Massachusetts"
+              ],
+              "correctAnswer": "Colonists sought to coordinate a response to the Coercive Acts and defend colonial rights",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The 1773 protest in which colonists dumped tea into Boston Harbor was a response to the ______, which reinforced Parliament's authority to tax the colonies.",
+              "options": [
+                "Tea Act",
+                "Declaratory Act",
+                "Townshend Acts",
+                "Quebec Act"
+              ],
+              "correctAnswer": "Tea Act",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the Declaration of Independence, Thomas Jefferson drew heavily on Enlightenment ideas, especially the social contract theory of ______.",
+              "options": [
+                "John Locke",
+                "Baron de Montesquieu",
+                "Jean-Jacques Rousseau",
+                "Adam Smith"
+              ],
+              "correctAnswer": "John Locke",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Articles of Confederation",
+              "definition": "The first national framework of government for the United States, establishing a weak central authority with no power to tax directly or regulate interstate commerce."
+            },
+            {
+              "term": "Northwest Ordinance",
+              "definition": "A 1787 law that created a process for governing western territories and admitting new states on equal footing with existing ones, while prohibiting slavery north of the Ohio River."
+            },
+            {
+              "term": "Shays' Rebellion",
+              "definition": "An uprising of indebted farmers in Massachusetts in 1786 and 1787 that revealed weaknesses in the national government under the existing framework."
+            },
+            {
+              "term": "Great Compromise",
+              "definition": "An agreement at the Constitutional Convention creating a bicameral legislature with equal representation for states in one chamber and representation based on population in the other."
+            },
+            {
+              "term": "Washington's Farewell Address",
+              "definition": "A statement warning against permanent foreign alliances and political factionalism, shaping political debate in the early republic."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which weakness of the national government under the Articles of Confederation was most clearly exposed by Shays' Rebellion?",
+              "options": [
+                "Its inability to declare war without unanimous state approval",
+                "Its lack of power to maintain order and respond effectively to domestic unrest",
+                "Its refusal to negotiate treaties with European powers",
+                "Its dependence on a directly elected national executive"
+              ],
+              "correctAnswer": "Its lack of power to maintain order and respond effectively to domestic unrest",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which outcome of the Constitutional Convention best reflected a compromise between large and small states?",
+              "options": [
+                "The creation of a bicameral Congress with different bases of representation in each chamber",
+                "The immediate abolition of slavery in all states",
+                "The elimination of the electoral college in presidential elections",
+                "The replacement of federal courts with state supreme courts"
+              ],
+              "correctAnswer": "The creation of a bicameral Congress with different bases of representation in each chamber",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Alexander Hamilton's proposal for the federal assumption of state debts was part of a broader financial program designed to strengthen the ______ government.",
+              "options": [
+                "national",
+                "confederate",
+                "colonial",
+                "municipal"
+              ],
+              "correctAnswer": "national",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The 1798 resolutions authored by Jefferson and Madison advanced the idea that states could judge the constitutionality of federal laws, a principle known as ______.",
+              "options": [
+                "nullification",
+                "judicial review",
+                "popular sovereignty",
+                "mercantilism"
+              ],
+              "correctAnswer": "nullification",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Period 4: 1800–1848",
+      "description": "Market revolution, Jacksonian democracy, westward expansion, reform movements, and antebellum society.",
+      "note": "# Unit 4: Period 4: 1800–1848\n\n## Overview\nThis unit examines how the **United States transformed politically, economically, and socially** between **1800 and 1848**. For the AP exam, it is crucial because it connects **democratization, capitalism, reform, and expansion** while revealing the growing **sectional tensions** that set up later conflict over slavery and national identity.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Market Revolution** | Rapid expansion of the U.S. economy through **transportation improvements**, **commercial agriculture**, and **early industrialization** | Frequently tested as a cause of major changes in **labor**, **regional specialization**, and **social class** |\n| **Second Great Awakening** | Protestant religious revival emphasizing **individual salvation** and moral reform | Important because it inspired many **antebellum reform movements** and shaped ideas about democracy and perfectionism |\n| **Jacksonian Democracy** | Expansion of political participation for **white men**, rise of the **Democratic Party**, and emphasis on the “common man” | AP questions often ask students to evaluate how democratic this era really was, especially given exclusion of **women, Native Americans, and Black Americans** |\n| **Westward Expansion** | Movement of settlers beyond the Appalachians into the **Old Southwest**, **Louisiana Territory**, and beyond | Key for understanding **Native American removal**, expansion of **slavery**, and debates over the nation’s future |\n| **Indian Removal** | Federal policy forcing Native peoples east of the Mississippi to move west, especially under **Andrew Jackson** | A major example of the limits of democracy and the use of **federal power** despite Native legal resistance |\n| **Reform Movements** | Efforts to improve society through **temperance**, **education reform**, **abolitionism**, **women’s rights**, and **asylums/prisons** | Important because reform reveals how Americans responded to market change and because essay questions often connect reform to religion and social change |\n| **Sectionalism** | Growing differences among the **North**, **South**, and **West** in economy, labor systems, and political priorities | Critical for explaining why national unity weakened and why slavery became an increasingly divisive issue |\n| **Antebellum Society** | Social structure and culture before the Civil War, including changing **gender roles**, **family life**, and **class divisions** | Helps students explain continuity and change in daily life, especially under the influence of the market economy |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Major Developments in Period 4 (1800–1848)\n    1800 : Jeffersonian era begins\n    1803 : Louisiana Purchase expands U.S. territory\n    1812 : War of 1812 strengthens nationalism\n    1820 : Missouri Compromise exposes sectional tensions\n    1820s : Market Revolution accelerates with roads, canals, factories\n    1820s : Second Great Awakening fuels reform\n    1828 : Andrew Jackson elected\n    1830 : Indian Removal Act passed\n    1830s : Nullification Crisis and Bank War\n    1830s : Abolitionism and women's reform activism grow\n    1840s : Manifest Destiny drives western migration\n    1848 : Seneca Falls Convention marks organized women's rights movement\n```\n\n### Cause-and-Effect Pattern\n1. **Transportation innovations** such as the **National Road**, **Erie Canal**, and railroads lowered shipping costs.\n2. This encouraged **regional specialization**:\n   - **North**: manufacturing and wage labor\n   - **South**: cotton and slavery\n   - **West**: grain and livestock production\n3. Economic change produced new **social tensions**:\n   - class divisions\n   - labor unrest\n   - changing gender expectations\n4. Many Americans responded through **reform movements** inspired by religion and republican ideals.\n5. At the same time, expansion intensified conflicts over **Native land**, **slavery**, and **federal power**.\n\n## Essential Formulas / Laws / Rules\n\n| **Term / Rule** | **What You Must Know** |\n|---|---|\n| **American System** | **Henry Clay’s** program promoting **protective tariffs**, a **national bank**, and **internal improvements** to strengthen the national economy |\n| **Monroe Doctrine (1823)** | Declared that the **Western Hemisphere** was no longer open to European colonization and that European interference would be viewed as hostile |\n| **Missouri Compromise (1820)** | Admitted **Missouri** as a slave state and **Maine** as a free state; banned slavery in the rest of the Louisiana Purchase north of $$36^\\circ 30'$$ |\n| **Indian Removal Act (1830)** | Authorized the federal government to negotiate treaties that forced Native peoples west of the Mississippi; led to the **Trail of Tears** |\n| **Nullification** | The claim that a state could declare a federal law invalid within its borders; challenged by **Jackson** during the **Nullification Crisis** |\n| **Spoils System** | Practice of rewarding political supporters with government jobs; associated with **Jacksonian politics** |\n| **Cult of Domesticity** | Ideology that idealized women’s role in the home as moral guardians, especially in the **middle class** |\n| **Manifest Destiny** | The belief that the United States was destined to expand across the continent, often used to justify settlement and conquest |\n\n## Connections & Comparisons\n\n| **Comparison** | **Jacksonian Democracy** | **Reform Movements** | **AP Significance** |\n|---|---|---|---|\n| **View of the individual** | Celebrated the political power of the **common white man** | Emphasized the ability of individuals to **improve self and society** | Shows how democratic ideals spread, but unevenly |\n| **Role of government** | Often suspicious of concentrated federal economic power, especially the **Bank of the U.S.** | Sometimes sought government action in schools, prisons, and moral reform | Useful for comparing political democracy with moral activism |\n| **Who was included** | Expanded suffrage mainly for **white men** | Opened public activism for some **women** and free Black reformers | Highlights the limits of inclusion in the era |\n| **Effect on society** | Increased mass politics and party competition | Challenged alcohol use, slavery, inequality, and social disorder | Helps explain how political and social change occurred together |\n\n```mermaid\nflowchart LR\n    A[\"Market Revolution\"] --> B[\"Urbanization and wage labor\"]\n    A --> C[\"Regional specialization\"]\n    C --> D[\"Expansion of cotton slavery\"]\n    A --> E[\"Social dislocation\"]\n    E --> F[\"Reform movements\"]\n    C --> G[\"Sectional tensions\"]\n    D --> G\n    B --> F\n```\n\n## Common AP Exam Traps\n- Do not assume **Jacksonian Democracy** meant democracy for everyone. It expanded participation for **white men**, while Native Americans, women, and most Black Americans remained excluded.\n- Do not treat the **Market Revolution** as only a Northern story. It also strengthened the **cotton South** and tied western farmers into national markets.\n- Do not confuse the **Second Great Awakening** with purely religious change; it directly influenced **abolitionism**, **temperance**, and **women’s activism**.\n- Do not describe **westward expansion** as uncontested opportunity. It also meant **Native dispossession**, environmental change, and renewed conflict over slavery.\n- Do not overstate national unity after the **War of 1812**. Nationalism grew, but **sectionalism** also intensified during this period.\n\n## Quick Review Checklist\n- [ ] Explain how the **Market Revolution** changed transportation, labor, and regional economies.\n- [ ] Describe the main ideas and effects of the **Second Great Awakening**.\n- [ ] Evaluate the extent to which **Jacksonian Democracy** expanded democracy in the United States.\n- [ ] Identify the causes and consequences of **Indian Removal** and the **Trail of Tears**.\n- [ ] Compare the economies and societies of the **North**, **South**, and **West** in the antebellum era.\n- [ ] Explain how reform movements such as **abolitionism**, **temperance**, and **women’s rights** emerged from broader social changes.\n- [ ] Define key policies including the **Monroe Doctrine**, **Missouri Compromise**, and **American System**.\n- [ ] Analyze how **westward expansion** and **sectionalism** increased tensions over slavery and the future of the Union.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Market Revolution",
+              "definition": "Nineteenth-century transformation in the U.S. economy marked by expanded commercial agriculture, improved transportation, wage labor, and greater interregional trade, which linked local markets into a national system."
+            },
+            {
+              "term": "American System",
+              "definition": "Henry Clay’s economic program that promoted protective tariffs, a national bank, and federally funded internal improvements to strengthen national economic development and regional interdependence."
+            },
+            {
+              "term": "Second Bank of the United States",
+              "definition": "Federally chartered financial institution created in 1816 to regulate currency, stabilize credit, and restrain risky lending practices of state banks."
+            },
+            {
+              "term": "Era of Good Feelings",
+              "definition": "Period after the War of 1812 characterized by the temporary decline of partisan conflict, growing nationalism, and support for economic development, though sectional tensions persisted beneath the surface."
+            },
+            {
+              "term": "Monroe Doctrine",
+              "definition": "1823 foreign policy statement declaring the Western Hemisphere closed to future European colonization and warning against European interference in newly independent nations of the Americas."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly contributed to the rise of a national market economy in the United States during the early nineteenth century?",
+              "options": [
+                "The spread of transportation networks such as canals and turnpikes",
+                "The decline of commercial farming in the Northeast",
+                "The elimination of regional specialization",
+                "The collapse of manufacturing in New England"
+              ],
+              "correctAnswer": "The spread of transportation networks such as canals and turnpikes",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Opposition to the Second Bank of the United States during Andrew Jackson’s presidency was primarily based on the belief that the Bank",
+              "options": [
+                "favored wealthy elites and threatened republican equality",
+                "promoted universal male suffrage in federal elections",
+                "encouraged the expansion of abolitionism in the South",
+                "prevented the federal government from collecting tariff revenue"
+              ],
+              "correctAnswer": "favored wealthy elites and threatened republican equality",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Henry Clay’s plan to foster economic growth through tariffs, a national bank, and internal improvements was known as the ______.",
+              "options": [
+                "American System",
+                "Monroe Doctrine",
+                "Corrupt Bargain",
+                "Spoils System"
+              ],
+              "correctAnswer": "American System",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The 1823 statement warning European powers against further colonization in the Western Hemisphere is called the ______.",
+              "options": [
+                "Missouri Compromise",
+                "Monroe Doctrine",
+                "Treaty of Ghent",
+                "Compromise of 1850"
+              ],
+              "correctAnswer": "Monroe Doctrine",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Jacksonian Democracy",
+              "definition": "Political movement that expanded participation for most white men, emphasized the common citizen, strengthened the presidency, and promoted distrust of entrenched economic privilege."
+            },
+            {
+              "term": "Indian Removal Act",
+              "definition": "1830 law authorizing the federal government to negotiate the relocation of Indigenous peoples living east of the Mississippi River to lands farther west, leading to coercive removals and severe suffering."
+            },
+            {
+              "term": "Manifest Destiny",
+              "definition": "Belief that the United States had a providential mission to expand across the North American continent, often used to justify territorial acquisition and displacement of other peoples."
+            },
+            {
+              "term": "Second Great Awakening",
+              "definition": "Religious revival movement that emphasized individual moral responsibility and salvation, helping inspire reform efforts such as temperance, abolition, and educational change."
+            },
+            {
+              "term": "Seneca Falls Convention",
+              "definition": "1848 gathering that launched a major organized movement for women’s rights in the United States by issuing a declaration demanding greater legal and political equality."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best explains a major effect of the Second Great Awakening on antebellum society?",
+              "options": [
+                "It encouraged reform movements by stressing individual moral improvement",
+                "It ended sectional conflict over slavery through church mediation",
+                "It reduced participation in voluntary associations among women",
+                "It promoted the idea that social institutions should remain unchanged"
+              ],
+              "correctAnswer": "It encouraged reform movements by stressing individual moral improvement",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A key argument used to justify U.S. westward expansion in the 1840s was that",
+              "options": [
+                "territorial growth fulfilled a national mission and spread republican institutions",
+                "the Constitution prohibited admission of new western states",
+                "expansion would immediately end all conflict over slavery",
+                "Native nations had full sovereignty protected by the federal government"
+              ],
+              "correctAnswer": "territorial growth fulfilled a national mission and spread republican institutions",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The 1830 federal law that led to the forced relocation of many southeastern Indigenous peoples was the ______.",
+              "options": [
+                "Kansas-Nebraska Act",
+                "Indian Removal Act",
+                "Northwest Ordinance",
+                "Force Act"
+              ],
+              "correctAnswer": "Indian Removal Act",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The 1848 meeting in New York that produced the Declaration of Sentiments was the ______.",
+              "options": [
+                "Albany Convention",
+                "Seneca Falls Convention",
+                "Hartford Convention",
+                "Annapolis Convention"
+              ],
+              "correctAnswer": "Seneca Falls Convention",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Period 5: 1844–1877",
+      "description": "Manifest destiny, Civil War causes, the war itself, Reconstruction, and the 13th–15th Amendments.",
+      "note": "# Unit 5: Period 5: 1844–1877\n\n## Overview\n**Period 5** covers the dramatic transformation of the United States from an expanding republic into a nation fractured by sectional conflict, civil war, and the contested rebuilding of the Union. For the AP exam, this unit matters because it ties together **manifest destiny**, the intensification of the **slavery debate**, the **Civil War**, and the successes and limits of **Reconstruction**, especially through the **13th, 14th, and 15th Amendments**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Manifest Destiny** | The belief that the United States was destined to expand across North America. | AP questions often ask how expansion intensified conflicts over **slavery**, **Native peoples**, and national identity. |\n| **Mexican-American War** | War from **1846–1848** that ended with major U.S. territorial gains in the **Mexican Cession**. | Important as a cause of sectional tension because new western lands reopened the question of whether **slavery** would expand. |\n| **Sectionalism** | Growing political, economic, and cultural division between **North** and **South**. | Central AP theme: know how tariffs, labor systems, and slavery created rival regional interests. |\n| **Compromise of 1850 and Kansas-Nebraska Act** | Legislative attempts to manage slavery in the territories; the latter used **popular sovereignty** and effectively repealed the **Missouri Compromise** line. | Often tested as examples of failed compromise that deepened conflict and contributed to the rise of the **Republican Party**. |\n| **Dred Scott, John Brown, and the Election of 1860** | Key turning points that radicalized sectional politics. | These events show why compromise collapsed and why many southerners viewed **Lincoln’s election** as a threat. |\n| **Civil War** | Conflict from **1861–1865** between the **Union** and the **Confederacy** over secession and slavery. | AP students must connect military turning points, wartime goals, and the shift from preserving the Union to **emancipation**. |\n| **Reconstruction** | Federal effort to reunite the nation and define freedom after the war. | Frequently tested through debates over presidential vs. congressional Reconstruction, Black rights, and federal power. |\n| **13th, 14th, and 15th Amendments** | Constitutional amendments abolishing slavery, defining citizenship and equal protection, and protecting voting rights for Black men. | Essential for long-term historical significance and for understanding constitutional change after the Civil War. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Road to Civil War and Reconstruction\n    1844 : Expansionist politics intensify\n    1846 : Mexican-American War begins\n    1848 : Mexican Cession acquired\n    1850 : Compromise of 1850 attempts to calm sectional conflict\n    1854 : Kansas-Nebraska Act leads to \"Bleeding Kansas\" and rise of Republican Party\n    1857 : Dred Scott decision denies Black citizenship and limits congressional power over slavery in territories\n    1859 : John Brown raids Harpers Ferry\n    1860 : Lincoln elected president\n    1861 : Southern secession and Civil War begin\n    1863 : Emancipation Proclamation redefines Union war aims\n    1865 : Union victory; 13th Amendment ratified\n    1866 : Black Codes and conflict over Reconstruction intensify\n    1868 : 14th Amendment ratified\n    1870 : 15th Amendment ratified\n    1877 : Compromise of 1877 ends Reconstruction\n```\n\n### Cause-and-Effect Chain\n1. **Territorial expansion** after the **Mexican-American War** created new debates over slavery in the West.  \n2. Repeated political compromises failed to resolve whether slavery would expand.  \n3. Court decisions, violence, and partisan realignment increased distrust between North and South.  \n4. **Lincoln’s election** triggered secession by southern states.  \n5. The Civil War led to **emancipation** and a broader federal role in defining citizenship and rights.  \n6. **Reconstruction** expanded constitutional equality on paper, but white resistance and waning northern commitment limited lasting change.\n\n## Essential Formulas / Laws / Rules\n\n| **Term / Rule** | **What You Must Know** |\n|---|---|\n| **Popular Sovereignty** | The idea that settlers in a territory should decide whether to allow **slavery**. Associated with **Stephen Douglas** and the **Kansas-Nebraska Act**. |\n| **Free Soil** | The belief that slavery should not expand into western territories, not necessarily because all supporters favored racial equality. |\n| **Secession** | The claim that states could leave the Union; rejected by **Lincoln** and settled militarily by the Civil War. |\n| **Emancipation Proclamation** | Issued in **1863**; freed enslaved people in rebelling areas, shifted the war toward abolition, and discouraged foreign support for the Confederacy. |\n| **13th Amendment** | Abolished **slavery** in the United States. |\n| **14th Amendment** | Established **birthright citizenship**, **due process**, and **equal protection of the laws**. |\n| **15th Amendment** | Prohibited denying the right to vote based on **race, color, or previous condition of servitude**. |\n| **Black Codes** | Southern laws passed after the Civil War to restrict African American freedom and preserve a cheap labor force. |\n| **Sharecropping** | Labor system in which tenants farmed land in exchange for a share of the crop; often trapped freedpeople and poor whites in debt. |\n| **Compromise of 1877** | Informal deal resolving the disputed election of **1876**; federal troops withdrew from the South, effectively ending **Reconstruction**. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Similarities** | **Differences / AP Significance** |\n|---|---|---|\n| **Manifest Destiny vs. Sectionalism** | Both shaped national politics in the 1840s and 1850s. | Expansion seemed to promote unity, but in practice it intensified sectional conflict over slavery. |\n| **Compromise of 1850 vs. Kansas-Nebraska Act** | Both tried to address slavery in territories through political compromise. | The **Compromise of 1850** temporarily reduced tension; the **Kansas-Nebraska Act** increased violence and destroyed older party alignments. |\n| **Presidential vs. Congressional Reconstruction** | Both aimed to restore the Union after the Civil War. | **Presidential Reconstruction** was more lenient toward former Confederates; **Congressional Reconstruction** imposed stricter requirements and prioritized Black civil and political rights. |\n| **13th, 14th, and 15th Amendments** | All expanded freedom and federal authority after the Civil War. | The **13th** ended slavery, the **14th** defined citizenship and equality, and the **15th** addressed voting rights; together they are known as the **Reconstruction Amendments**. |\n\n```mermaid\nflowchart LR\n    A[Territorial Expansion] --> B[Debate over Slavery in New Territories]\n    B --> C[Breakdown of National Political Compromise]\n    C --> D[Secession and Civil War]\n    D --> E[Emancipation and Union Victory]\n    E --> F[Reconstruction Amendments]\n    F --> G[Backlash, Redemption, and End of Reconstruction]\n```\n\n## Common AP Exam Traps\n- Confusing **manifest destiny** with simple land gain; AP questions often stress that expansion intensified conflict over **slavery** and relations with **Mexico** and **Native Americans**.\n- Assuming the Civil War began only over **states’ rights**; on the AP exam, states’ rights usually appear as tied to the protection of **slavery**.\n- Treating the **Emancipation Proclamation** as the document that ended slavery everywhere; legally, the **13th Amendment** abolished slavery.\n- Assuming **Reconstruction** fully secured equality; the AP exam often emphasizes the gap between constitutional gains and actual enforcement.\n- Forgetting that many white northerners opposed slavery’s expansion without supporting full social or political equality for African Americans.\n\n## Quick Review Checklist\n- [ ] Explain how **manifest destiny** and the **Mexican-American War** increased sectional tensions.\n- [ ] Describe the role of the **Compromise of 1850**, **Fugitive Slave Act**, and **Kansas-Nebraska Act** in escalating conflict.\n- [ ] Explain why **Bleeding Kansas**, **Dred Scott**, and **John Brown’s raid** weakened chances for compromise.\n- [ ] Identify the major causes of **southern secession** after the **Election of 1860**.\n- [ ] Describe how the goals of the **Civil War** changed over time, especially after the **Emancipation Proclamation**.\n- [ ] Compare **Presidential Reconstruction** and **Congressional Reconstruction**.\n- [ ] Explain the significance of the **13th, 14th, and 15th Amendments**.\n- [ ] Analyze why **Reconstruction ended** in **1877** and what limits remained on freedom and equality afterward.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Manifest Destiny",
+              "definition": "The belief that the United States had a providential mission to expand westward across the North American continent, often used to justify territorial acquisition and the spread of U.S. institutions."
+            },
+            {
+              "term": "Mexican-American War",
+              "definition": "An 1846–1848 conflict that began after the annexation of Texas and a border dispute, resulting in a major U.S. territorial gain in the Southwest through the Treaty of Guadalupe Hidalgo."
+            },
+            {
+              "term": "Wilmot Proviso",
+              "definition": "An unsuccessful proposal introduced in 1846 that sought to ban slavery in territory acquired from Mexico, intensifying sectional conflict between North and South."
+            },
+            {
+              "term": "Compromise of 1850",
+              "definition": "A package of laws admitting California as a free state while strengthening enforcement of laws requiring the return of freedom seekers and allowing popular sovereignty in parts of the Mexican cession."
+            },
+            {
+              "term": "Kansas-Nebraska Act",
+              "definition": "A 1854 law that created two territories and allowed settlers there to decide the slavery issue, effectively repealing the Missouri Compromise line and contributing to violent conflict."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly intensified sectional conflict by overturning a long-standing congressional restriction on the expansion of slavery?",
+              "options": [
+                "The passage of the Kansas-Nebraska Act",
+                "The issuance of the Monroe Doctrine",
+                "The signing of the Adams-Onís Treaty",
+                "The ratification of the Treaty of Ghent"
+              ],
+              "correctAnswer": "The passage of the Kansas-Nebraska Act",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The Wilmot Proviso is best understood as evidence of which broader trend in the 1840s?",
+              "options": [
+                "The growing sectional dispute over the status of slavery in western territories",
+                "The decline of interest in territorial expansion after the annexation of Texas",
+                "The emergence of a national consensus in favor of popular sovereignty",
+                "The successful effort to preserve the balance between free and slave states"
+              ],
+              "correctAnswer": "The growing sectional dispute over the status of slavery in western territories",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The acquisition of vast western lands after the Mexican-American War reignited debate over slavery's expansion, a controversy highlighted by the ______.",
+              "options": [
+                "Wilmot Proviso",
+                "Hartford Convention",
+                "Albany Plan of Union",
+                "Force Bill"
+              ],
+              "correctAnswer": "Wilmot Proviso",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The law that allowed settlers in two new western territories to decide the slavery question for themselves, helping trigger violent conflict known as Bleeding Kansas, was the ______.",
+              "options": [
+                "Kansas-Nebraska Act",
+                "Compromise Tariff of 1833",
+                "Northwest Ordinance",
+                "Embargo Act"
+              ],
+              "correctAnswer": "Kansas-Nebraska Act",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Emancipation Proclamation",
+              "definition": "A wartime executive order issued in 1863 declaring freedom for enslaved people in areas still in rebellion, transforming the conflict into a struggle against slavery and discouraging foreign support for the Confederacy."
+            },
+            {
+              "term": "13th Amendment",
+              "definition": "The constitutional change ratified in 1865 that permanently abolished slavery throughout the United States, except as punishment for crime."
+            },
+            {
+              "term": "14th Amendment",
+              "definition": "The constitutional change ratified in 1868 that established birthright citizenship, required due process and equal protection from the states, and became a foundation for later civil rights claims."
+            },
+            {
+              "term": "15th Amendment",
+              "definition": "The constitutional change ratified in 1870 that prohibited denying voting rights on the basis of race, color, or previous condition of servitude, though states later used other means to restrict Black voting."
+            },
+            {
+              "term": "Compromise of 1877",
+              "definition": "The informal political agreement that resolved the disputed 1876 presidential election by recognizing Rutherford B. Hayes in exchange for the withdrawal of remaining federal troops from the South, effectively ending Reconstruction."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best explains a major significance of the Emancipation Proclamation during the Civil War?",
+              "options": [
+                "It immediately abolished slavery in all U.S. states and territories",
+                "It transformed Union war aims and reduced the likelihood of European recognition of the Confederacy",
+                "It granted voting rights to formerly enslaved men throughout the South",
+                "It required former Confederate states to ratify the 14th Amendment before readmission"
+              ],
+              "correctAnswer": "It transformed Union war aims and reduced the likelihood of European recognition of the Confederacy",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which Reconstruction amendment most directly overturned the Supreme Court's ruling in Dred Scott v. Sandford by defining national citizenship?",
+              "options": [
+                "13th Amendment",
+                "14th Amendment",
+                "15th Amendment",
+                "16th Amendment"
+              ],
+              "correctAnswer": "14th Amendment",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The constitutional amendment that guaranteed birthright citizenship and equal protection of the laws was the ______.",
+              "options": [
+                "14th Amendment",
+                "13th Amendment",
+                "15th Amendment",
+                "12th Amendment"
+              ],
+              "correctAnswer": "14th Amendment",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The disputed presidential election of 1876 was resolved by the ______, which helped bring Reconstruction to an end.",
+              "options": [
+                "Compromise of 1877",
+                "Missouri Compromise",
+                "Corrupt Bargain",
+                "Treaty of Washington"
+              ],
+              "correctAnswer": "Compromise of 1877",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Period 6: 1865–1898",
+      "description": "Industrialization, Gilded Age, Populism, immigration, urbanization, and the New South.",
+      "note": "# Unit 6: Period 6: 1865–1898\n\n## Overview\n**Period 6** focuses on the dramatic transformation of the United States after the Civil War through **industrialization**, **urbanization**, **westward expansion**, **mass immigration**, and growing conflict over the effects of capitalism. For the AP exam, this period matters because it explains how the modern U.S. economy, labor struggles, reform movements, and regional tensions developed in the **Gilded Age**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Second Industrial Revolution** | Rapid expansion of industry, railroads, steel, oil, and new technologies after 1865 | Helps explain economic growth, big business, and major social changes in labor and cities |\n| **Big Business & Corporate Consolidation** | Rise of corporations, **trusts**, monopolies, and industrial leaders like **Carnegie** and **Rockefeller** | AP questions often ask how industrial capitalism reshaped politics, class relations, and government policy |\n| **Labor Unrest** | Worker resistance through strikes, unions, and labor organizations such as the **Knights of Labor** and **AFL** | Central for analyzing tensions between capital and labor and limits of workers’ gains |\n| **Mass Immigration & Urbanization** | Large-scale migration from southern/eastern Europe and movement into growing cities | Important for linking industrial labor demand, nativism, political machines, and cultural change |\n| **The New South** | Southern leaders promoted industrial growth, but the region remained tied to agriculture and racial hierarchy | AP often tests continuity vs. change in the South after Reconstruction |\n| **The West & Federal Policy** | Settlement, railroad expansion, Native dispossession, and new farming economies | Connects economic growth to conflict over land, resources, and federal power |\n| **Farmers’ Protest & Populism** | Agrarian backlash against railroads, debt, and deflation, leading to the **Populist Party** | Frequently used in essays about reform, economic inequality, and political realignment |\n| **Gilded Age Politics** | High voter turnout, patronage, limited federal regulation, and debates over tariffs and currency | Useful for understanding why rapid change produced weak reform before the Progressive Era |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Major Developments in Period 6\n    1865 : End of Civil War\n    1869 : Transcontinental Railroad completed\n    1870s : Expansion of railroads, steel, oil, and national markets\n    1877 : Great Railroad Strike signals major labor unrest\n    1880s : New immigration and rapid urban growth intensify\n    1886 : Haymarket Affair shapes views of labor radicalism\n    1887 : Dawes Act and Interstate Commerce Act expand federal role\n    1890 : Sherman Antitrust Act and Wounded Knee\n    1892 : Homestead Strike and Populist Party emerge\n    1894 : Pullman Strike shows federal support for business order\n    1896 : Bryan's campaign reveals power and limits of Populism\n```\n\n### Cause-and-Effect Pattern to Know\n1. **Technological innovation** and abundant natural resources fueled industrial growth.\n2. Industrial growth encouraged **railroad expansion**, national markets, and urban job creation.\n3. Cities attracted **immigrants** and rural migrants, increasing labor supply.\n4. Harsh working conditions and inequality led to **unionization** and strikes.\n5. Farmers and workers challenged concentrated wealth, but courts and the federal government often sided with **business interests**.\n6. These tensions laid the groundwork for later **Progressive Era reforms**.\n\n## Essential Formulas / Laws / Rules\n\n| **Term / Rule** | **What You Must Know** |\n|---|---|\n| **Laissez-faire** | The idea that government should interfere minimally in the economy; often associated with Gilded Age business policy |\n| **Social Darwinism** | Application of “survival of the fittest” to society and economics; used to justify inequality and limited regulation |\n| **Vertical Integration** | Business strategy in which a company controls multiple stages of production and distribution; associated with **Andrew Carnegie** |\n| **Horizontal Integration** | Business strategy in which a company consolidates control over one industry by absorbing competitors; associated with **John D. Rockefeller** |\n| **Trust** | A legal arrangement used to consolidate companies and reduce competition |\n| **Monopoly** | Near-total control of a market by one company or small group |\n| **Political Machine** | Urban political organization that exchanged services and jobs for votes and loyalty; example: **Tammany Hall** |\n| **Sharecropping / Crop-Lien System** | Postwar southern agricultural systems that trapped many farmers, especially Black farmers, in debt |\n| **Gold Standard vs. Free Silver** | Debate over currency: **gold** favored tighter money; **free silver** would expand currency, raise prices, and help indebted farmers |\n| **Assimilation Policy** | Federal effort to absorb Native Americans into white American culture, especially through the **Dawes Act** and boarding schools |\n\n## Connections & Comparisons\n\n| **Comparison** | **Industrial Workers** | **Farmers / Populists** | **AP Significance** |\n|---|---|---|---|\n| **Main Problems** | Low wages, long hours, unsafe conditions | Debt, low crop prices, railroad rates, deflation | Shows how different groups reacted to industrial capitalism |\n| **Main Organizations** | **Knights of Labor**, **AFL** | **Grange**, **Farmers’ Alliances**, **Populist Party** | Often compared in SAQs and essays about reform |\n| **Main Tactics** | Strikes, collective bargaining, union membership | Cooperatives, political activism, currency reform | Helps explain why some reforms were economic and others political |\n| **Main Obstacles** | Government repression, public fear of radicalism, strikebreaking | Two-party dominance, sectional divisions, limited urban support | Explains why both movements had only partial success |\n| **Long-Term Impact** | Raised awareness of labor issues | Influenced later reform ideas such as regulation and expanded democracy | Important continuity into the Progressive Era |\n\n```mermaid\nflowchart LR\n    A[\"Industrialization\"] --> B[\"Urbanization\"]\n    A --> C[\"Large corporations and trusts\"]\n    B --> D[\"Immigrant labor growth\"]\n    C --> E[\"Labor conflict\"]\n    A --> F[\"Falling crop prices and national markets\"]\n    F --> G[\"Farmer protest and Populism\"]\n    E --> H[\"Calls for regulation\"]\n    G --> H\n```\n\n## Common AP Exam Traps\n- **Do not confuse the “New South” with true racial or economic equality.** Industrial growth was limited, and **Jim Crow** and Black disenfranchisement expanded.\n- **Do not assume the federal government was simply absent.** It often intervened, but frequently in ways that supported **business**, railroads, or westward expansion.\n- **Do not treat all labor unions as identical.** The **Knights of Labor** were broader and more inclusive; the **AFL** focused more on skilled workers and practical workplace gains.\n- **Do not reduce Populism to only currency reform.** **Free silver** mattered, but Populists also demanded regulation, democratic reforms, and relief from corporate power.\n- **Do not overlook Native Americans in western expansion.** Period 6 includes federal conquest, reservation policy, the **Dawes Act**, and the destruction of tribal sovereignty.\n\n## Quick Review Checklist\n- [ ] Explain how **industrialization** transformed the U.S. economy after 1865.\n- [ ] Compare **vertical integration** and **horizontal integration** using specific business leaders.\n- [ ] Describe why **immigration** and **urbanization** expanded during the Gilded Age.\n- [ ] Explain the causes and significance of major **labor conflicts** such as **Haymarket**, **Homestead**, or **Pullman**.\n- [ ] Analyze continuity and change in the **South**, especially the limits of the **New South**.\n- [ ] Explain how federal policy affected **Native Americans** and western settlement.\n- [ ] Describe the causes of **Populism** and the main goals of the **Populist Party**.\n- [ ] Connect **Gilded Age politics** to broader debates over regulation, democracy, and inequality.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Horizontal integration",
+              "definition": "A business strategy in which a company gains control of many firms at the same stage of production, reducing competition and increasing market share in an industry."
+            },
+            {
+              "term": "Social Darwinism",
+              "definition": "An ideology that applied ideas about competition and natural selection to human society, often used to justify economic inequality and limited government intervention."
+            },
+            {
+              "term": "Interstate Commerce Act",
+              "definition": "An 1887 federal law that created a national regulatory body to oversee railroad practices and attempted to curb discriminatory rates and monopolistic abuses."
+            },
+            {
+              "term": "Knights of Labor",
+              "definition": "A broad labor organization that sought to unite skilled and unskilled workers and advocated reforms such as the eight-hour workday and cooperative ownership."
+            },
+            {
+              "term": "Chinese Exclusion Act",
+              "definition": "An 1882 federal law that suspended immigration from a specific Asian nationality, marking a major expansion of restriction based on ethnicity and nationality."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly contributed to the rapid growth of corporations in the late nineteenth century?",
+              "options": [
+                "The widespread adoption of vertical and horizontal integration",
+                "The decline of national railroad networks",
+                "The end of mass immigration from Europe",
+                "The elimination of tariff protections for industry"
+              ],
+              "correctAnswer": "The widespread adoption of vertical and horizontal integration",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The federal government's response to the Great Railroad Strike of 1877 best demonstrates which continuity in the late nineteenth century?",
+              "options": [
+                "A tendency to support labor unions during national emergencies",
+                "A commitment to using federal power on behalf of workers",
+                "A pattern of siding with business interests in labor conflicts",
+                "A refusal to intervene in interstate commerce disputes"
+              ],
+              "correctAnswer": "A pattern of siding with business interests in labor conflicts",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The Supreme Court decision in ______ limited the effectiveness of the Fourteenth Amendment by ruling that it restricted only state action, not discrimination by private individuals.",
+              "options": [
+                "Plessy v. Ferguson",
+                "Civil Rights Cases",
+                "Munn v. Illinois",
+                "Wabash v. Illinois"
+              ],
+              "correctAnswer": "Civil Rights Cases",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The practice by which industrial leaders controlled every stage of production from raw materials to distribution is known as ______.",
+              "options": [
+                "collective bargaining",
+                "vertical integration",
+                "laissez-faire",
+                "tenement housing"
+              ],
+              "correctAnswer": "vertical integration",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Populist Party",
+              "definition": "A political movement of the 1890s rooted largely in agrarian discontent that called for reforms such as currency expansion, government ownership of railroads, and direct election of senators."
+            },
+            {
+              "term": "Settlement houses",
+              "definition": "Urban community centers, often founded by middle-class reformers, that provided services such as education, childcare, and assistance to immigrants and the poor."
+            },
+            {
+              "term": "Jim Crow laws",
+              "definition": "State and local statutes in the South that enforced racial segregation and institutionalized second-class citizenship for African Americans after Reconstruction."
+            },
+            {
+              "term": "Plessy v. Ferguson",
+              "definition": "An 1896 Supreme Court ruling that upheld legally mandated racial segregation under the doctrine of 'separate but equal.'"
+            },
+            {
+              "term": "New South",
+              "definition": "A post-Reconstruction regional vision that emphasized industrial growth and economic diversification while maintaining racial hierarchy and dependence on low-wage labor."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which factor most directly encouraged the rise of the Populist movement in the 1890s?",
+              "options": [
+                "Farmers' frustrations with debt, deflation, and railroad rates",
+                "Industrial workers' success in gaining federal labor protections",
+                "Southern planters' desire to restore plantation slavery",
+                "Bankers' support for unlimited silver coinage"
+              ],
+              "correctAnswer": "Farmers' frustrations with debt, deflation, and railroad rates",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains a major cause of urban political machines' power during the Gilded Age?",
+              "options": [
+                "They gained support by providing services and patronage to immigrants and the urban poor",
+                "They were sustained primarily by federal civil service examinations",
+                "They depended on backing from Populist farmers in western territories",
+                "They eliminated corruption through nonpartisan city management"
+              ],
+              "correctAnswer": "They gained support by providing services and patronage to immigrants and the urban poor",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The Supreme Court ruling in ______ established the constitutional basis for racial segregation in public facilities during the late nineteenth century.",
+              "options": [
+                "Brown v. Board of Education",
+                "Plessy v. Ferguson",
+                "Dred Scott v. Sandford",
+                "United States v. E. C. Knight Co."
+              ],
+              "correctAnswer": "Plessy v. Ferguson",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Reformers such as Jane Addams sought to address problems of immigration and urban poverty through ______, which offered social services in crowded city neighborhoods.",
+              "options": [
+                "sharecropping contracts",
+                "settlement houses",
+                "company unions",
+                "greenback clubs"
+              ],
+              "correctAnswer": "settlement houses",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "unitName": "Period 7: 1890–1945",
+      "description": "Progressivism, imperialism, World War I, Roaring Twenties, Great Depression, New Deal, and World War II.",
+      "note": "# Unit 7: Period 7: 1890–1945\n\n## Overview\n**Period 7** traces the United States from the crises and reforms of the **Progressive Era** through **imperial expansion**, **World War I**, the cultural and political shifts of the **1920s**, the economic collapse of the **Great Depression**, the federal activism of the **New Deal**, and the global mobilization of **World War II**. For the AP exam, this period is crucial because it shows how industrialization, reform, war, and economic crisis transformed the role of the **federal government**, the meaning of **American freedom**, and the nation’s place in the world.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Progressivism** | Reform movement seeking to address problems caused by industrialization, urbanization, corruption, and inequality. | Often tested as a response to the **Gilded Age**; know both its achievements and limits, especially regarding race and gender. |\n| **American Imperialism** | Expansion of U.S. influence overseas through war, annexation, and economic intervention. | Connects domestic industrial power to foreign policy; compare arguments of **imperialists** vs. **anti-imperialists**. |\n| **World War I and Home Front** | U.S. entry into war in 1917 led to mobilization, propaganda, and restrictions on dissent. | Important for linking war to expanded federal power, civil liberties debates, and postwar disillusionment. |\n| **Roaring Twenties** | Decade of consumerism, cultural change, nativism, and business-oriented politics. | AP often asks students to explain tension between **modernity** and **traditionalism**. |\n| **Great Depression** | Massive economic collapse beginning in 1929, causing unemployment, bank failures, and social suffering. | A major turning point; students should explain causes, effects, and why older policies seemed inadequate. |\n| **New Deal** | Franklin Roosevelt’s programs to provide relief, recovery, and reform during the Depression. | Central to debates over the size and role of government; know major programs and criticisms from both left and right. |\n| **World War II** | Global conflict that led to full economic mobilization, defeat of fascism, and emergence of the U.S. as a superpower. | AP emphasizes causes of U.S. entry, wartime diplomacy, home-front changes, and long-term consequences. |\n| **Changing Role of Government** | Shift from limited federal action toward greater regulation, welfare, and wartime coordination. | This is the thread connecting the whole unit and is frequently useful in LEQ and DBQ arguments. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Major Developments in Period 7\n    1890s : Rise of **Progressivism**\n    1898 : **Spanish-American War** expands U.S. overseas influence\n    1901-1909 : **Theodore Roosevelt** and reform-minded federal activism\n    1914-1918 : **World War I** reshapes foreign and domestic policy\n    1920s : **Consumer culture**, nativism, and cultural conflict\n    1929 : **Stock Market Crash**\n    1933-1939 : **New Deal** expands federal government\n    1941-1945 : U.S. fights in **World War II**\n    1945 : U.S. emerges as global power\n```\n\n### Big Historical Pattern\n1. **Industrial capitalism** created new wealth but also corruption, inequality, and labor conflict.  \n2. **Progressive reformers** pushed government intervention to regulate business and improve society.  \n3. Overseas expansion and global war increased U.S. international involvement.  \n4. The **Great Depression** discredited laissez-faire responses and opened the door to the **New Deal**.  \n5. **World War II** completed the transformation of the U.S. into a powerful modern state with global leadership.\n\n## Essential Formulas / Laws / Rules\n\n| **Term / Rule** | **What You Must Know** |\n|---|---|\n| **16th Amendment** | Authorized the **federal income tax**, increasing federal revenue and power. |\n| **17th Amendment** | Established direct election of **senators**, a major Progressive reform. |\n| **18th Amendment** | Created **Prohibition**; know it as a reform effort with unintended consequences. |\n| **19th Amendment** | Granted **women’s suffrage** nationally in 1920. |\n| **Muckrakers** | Journalists and writers who exposed corruption and social problems, helping build support for reform. |\n| **Dollar Diplomacy / Big Stick Diplomacy / Moral Diplomacy** | Distinct approaches to foreign policy under **Taft**, **Theodore Roosevelt**, and **Wilson**. |\n| **Schenck v. United States** | Upheld wartime limits on speech; key for civil liberties during **World War I**. |\n| **Harlem Renaissance** | Flourishing of African American art, literature, and thought; tied to the **Great Migration**. |\n| **First New Deal vs. Second New Deal** | First emphasized immediate relief and recovery; second focused more on social welfare, labor rights, and reform. |\n| **Internment of Japanese Americans** | Wartime policy upheld in **Korematsu v. United States**; key example of limits on civil liberties in war. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Similarity** | **Difference / Key Distinction** | **AP Use** |\n|---|---|---|---|\n| **Progressive Era vs. New Deal** | Both expanded government intervention to solve social and economic problems. | **Progressivism** often focused on regulation and political reform; the **New Deal** responded to economic collapse with broader federal relief and welfare programs. | Useful for continuity and change essays. |\n| **World War I vs. World War II Home Front** | Both increased federal power, propaganda, and economic mobilization. | **WWII** produced fuller employment, greater industrial output, and wider participation of women and minorities, while **WWI** was shorter and followed by stronger postwar repression. | Helps compare wartime transformation. |\n| **1920s Cultural Modernism vs. Traditionalism** | Both reflected attempts to define American identity. | **Modernists** embraced urban culture, science, and new social norms; **traditionalists** supported religious fundamentalism, prohibition, and nativism. | Common SAQ/MCQ theme. |\n| **Imperialism before WWI vs. Internationalism during WWII** | Both increased U.S. global involvement. | Early imperialism often centered on direct territorial influence; WWII involvement framed U.S. leadership in terms of defeating fascism and shaping a postwar order. | Important for foreign policy evolution. |\n\n```mermaid\nflowchart LR\n    A[\"Industrialization and urban problems\"] --> B[\"Progressive reforms\"]\n    B --> C[\"Stronger federal government\"]\n    C --> D[\"War mobilization and global involvement\"]\n    D --> E[\"Economic instability and Depression crisis\"]\n    E --> F[\"New Deal expansion of federal responsibility\"]\n    F --> G[\"World War II mobilization and superpower status\"]\n```\n\n## Common AP Exam Traps\n\n- **Do not treat Progressivism as universally inclusive.** Many Progressive reforms excluded or marginalized **African Americans**, immigrants, and the poor.\n- **Do not confuse causes of the Great Depression with just the stock market crash.** The crash mattered, but AP expects broader causes such as **overproduction**, weak banking structures, unequal wealth distribution, and underconsumption.\n- **Do not assume the New Deal ended the Great Depression by itself.** Full recovery is more closely linked to **wartime mobilization during World War II**.\n- **Do not describe the 1920s only as prosperity and liberation.** The decade also saw **nativism**, **racial violence**, immigration restriction, and religious traditionalism.\n- **Do not assume wartime always expanded freedom.** Both world wars featured restrictions on **civil liberties**, especially for dissenters and Japanese Americans during WWII.\n\n## Quick Review Checklist\n\n- [ ] Explain how **Progressive reformers** responded to the problems of industrial America.\n- [ ] Compare the foreign policies of **Theodore Roosevelt**, **Taft**, and **Wilson**.\n- [ ] Describe why the U.S. entered **World War I** and how the war affected civil liberties at home.\n- [ ] Identify major tensions in the **1920s**, including **modernism vs. traditionalism**.\n- [ ] Explain multiple causes and major effects of the **Great Depression**.\n- [ ] Distinguish between key goals and programs of the **New Deal**.\n- [ ] Evaluate how the **New Deal** changed the role of the **federal government**.\n- [ ] Explain how **World War II** transformed the economy, society, and U.S. global power.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Progressive Era",
+              "definition": "A reform movement in the late nineteenth and early twentieth centuries that sought to address problems created by industrialization, urbanization, political corruption, and social inequality through government action and expert administration."
+            },
+            {
+              "term": "Muckrakers",
+              "definition": "Journalists and writers who exposed corporate abuses, unsafe living conditions, political corruption, and social injustice in order to build public support for reform."
+            },
+            {
+              "term": "Platt Amendment",
+              "definition": "A measure that limited Cuban sovereignty by allowing the United States to intervene in its affairs and to maintain a naval base at Guantanamo Bay after the Spanish-American War."
+            },
+            {
+              "term": "Open Door Policy",
+              "definition": "A diplomatic principle asserting that all nations should have equal trading access in China and that Chinese territorial integrity should be preserved."
+            },
+            {
+              "term": "Fourteen Points",
+              "definition": "A statement of war aims calling for open diplomacy, freedom of navigation, national self-determination, and an international organization to preserve peace after World War I."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly reflected Progressive Era faith in the power of government to regulate large corporations in the public interest?",
+              "options": [
+                "The creation of the Federal Trade Commission",
+                "The ratification of the Treaty of Versailles",
+                "The passage of the Kansas-Nebraska Act",
+                "The decision in Plessy v. Ferguson"
+              ],
+              "correctAnswer": "The creation of the Federal Trade Commission",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "United States support for the Open Door Policy primarily reflected which broader goal at the turn of the twentieth century?",
+              "options": [
+                "Securing equal access to overseas markets without formal colonization",
+                "Ending all military involvement outside North America",
+                "Preventing further immigration from East Asia through treaty obligations",
+                "Promoting immediate independence for all European colonies"
+              ],
+              "correctAnswer": "Securing equal access to overseas markets without formal colonization",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "During World War I, President Woodrow Wilson's ______ proposed principles for a postwar settlement based on self-determination and collective security.",
+              "options": [
+                "Fourteen Points",
+                "Social Gospel",
+                "Square Deal",
+                "Zimmermann Note"
+              ],
+              "correctAnswer": "Fourteen Points",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Writers known as ______ helped inspire reform by publicizing urban poverty, unsafe working conditions, and political corruption.",
+              "options": [
+                "muckrakers",
+                "nativists",
+                "isolationists",
+                "yellow journalists"
+              ],
+              "correctAnswer": "muckrakers",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Harlem Renaissance",
+              "definition": "A major flowering of African American literature, music, and visual art in the 1920s that celebrated Black cultural identity and challenged racist stereotypes."
+            },
+            {
+              "term": "Great Depression",
+              "definition": "A severe worldwide economic crisis beginning in 1929 marked by bank failures, industrial decline, high unemployment, and widespread hardship."
+            },
+            {
+              "term": "New Deal",
+              "definition": "A broad set of federal programs, regulations, and reforms under Franklin D. Roosevelt designed to provide relief, recovery, and structural change during the 1930s."
+            },
+            {
+              "term": "Internment of Japanese Americans",
+              "definition": "The wartime policy of forcibly relocating and confining people of Japanese ancestry, most of them citizens, in camps after Executive Order 9066."
+            },
+            {
+              "term": "GI Bill",
+              "definition": "A 1944 law that provided returning veterans with educational subsidies, low-interest loans, and other benefits that expanded middle-class opportunities after World War II."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which argument best explains why many historians view the New Deal as a turning point in the role of the federal government?",
+              "options": [
+                "It permanently reduced federal involvement in economic life",
+                "It expanded federal responsibility for economic security and social welfare",
+                "It transferred most domestic policy authority to state governments",
+                "It ended debates over the constitutionality of federal regulation"
+              ],
+              "correctAnswer": "It expanded federal responsibility for economic security and social welfare",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The migration of many African Americans to northern cities during and after World War I most directly contributed to which development in the 1920s?",
+              "options": [
+                "The Harlem Renaissance",
+                "The Red Scare deportations",
+                "The annexation of Hawaii",
+                "The passage of the Dawes Act"
+              ],
+              "correctAnswer": "The Harlem Renaissance",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The Supreme Court case ______ upheld the constitutionality of the wartime exclusion of Japanese Americans from the West Coast.",
+              "options": [
+                "Korematsu v. United States",
+                "Schenck v. United States",
+                "Brown v. Board of Education",
+                "United States v. Nixon"
+              ],
+              "correctAnswer": "Korematsu v. United States",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Franklin D. Roosevelt's set of relief, recovery, and reform programs became known collectively as the ______.",
+              "options": [
+                "New Deal",
+                "Fair Deal",
+                "Great Society",
+                "Square Deal"
+              ],
+              "correctAnswer": "New Deal",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 8,
+      "unitName": "Period 8: 1945–1980",
+      "description": "Cold War, Korean War, civil rights movement, Great Society, Vietnam War, and social/political upheaval.",
+      "note": "# Unit 8: Period 8: 1945–1980\n\n## Overview\n**Period 8** examines how the **Cold War**, domestic reform, and major social movements reshaped the United States after World War II. For the AP exam, this unit matters because it connects **foreign policy**, **civil rights**, **expanding federal power**, and **backlash/conservatism**—all major themes that frequently appear in SAQs, DBQs, and LEQs.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Cold War containment** | The U.S. strategy of limiting the spread of **communism** through diplomacy, military alliances, aid, and intervention. | Central to explaining U.S. actions in **Korea**, **Vietnam**, and relations with the **Soviet Union**. |\n| **Truman Doctrine & Marshall Plan** | Policies that provided aid to nations resisting communism and funded European recovery after World War II. | Shows how the U.S. used both **economic** and **military** tools to pursue containment. |\n| **Second Red Scare / McCarthyism** | Intense fear of communist influence in the U.S., leading to investigations, accusations, and loyalty programs. | Useful for analyzing limits on **civil liberties** and the domestic effects of the Cold War. |\n| **Civil Rights Movement** | A broad movement to end **racial segregation** and secure equal rights, especially for African Americans. | A core AP topic linking **grassroots activism**, **Supreme Court rulings**, and **federal legislation**. |\n| **Great Society** | President **Lyndon B. Johnson’s** domestic reform agenda aimed at reducing poverty and expanding civil rights. | Important for understanding the growth of the **federal government** and debates over liberal reform. |\n| **Vietnam War** | A prolonged conflict in which the U.S. supported South Vietnam against communist North Vietnam. | Frequently tested as an example of Cold War policy, executive power, protest, and credibility gaps. |\n| **Social movements of the 1960s–1970s** | Movements for **women’s rights**, **Latino rights**, **Native American rights**, **gay rights**, and more. | Demonstrates how activism broadened beyond Black civil rights and challenged traditional norms. |\n| **Rise of conservatism** | Political backlash against liberal reform, counterculture, and federal expansion, gaining momentum in the 1970s. | Helps explain the transition toward the politics of the **Reagan era** and changing voter priorities. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Major Developments in Period 8: 1945–1980\n    1945 : End of World War II\n    1947 : Truman Doctrine announced\n    1948 : Marshall Plan begins\n    1949 : NATO formed\n    1950 : Korean War begins\n    1954 : Brown v. Board of Education\n    1955 : Montgomery Bus Boycott\n    1964 : Civil Rights Act\n    1965 : Voting Rights Act\n    1964 : Gulf of Tonkin Resolution\n    1965 : Great Society programs expand\n    1968 : Tet Offensive intensifies doubts about Vietnam\n    1972 : Détente and Nixon visits China\n    1973 : War Powers Act\n    1974 : Watergate leads to Nixon resignation\n    1980 : Conservative resurgence evident in national politics\n```\n\n### How the unit fits together\n1. **Cold War rivalry** drove U.S. foreign policy after 1945.\n2. Fear of communism shaped both **international intervention** and **domestic politics**.\n3. At home, activists pushed the U.S. to live up to democratic ideals through the **civil rights movement** and later reform movements.\n4. The **Great Society** expanded federal responsibility, but the **Vietnam War**, social unrest, and economic problems fueled distrust and backlash.\n5. By the late 1970s, many Americans were turning toward a more **conservative political direction**.\n\n## Essential Formulas / Laws / Rules\n\nSince APUSH is non-quantitative, focus on the key **laws, rulings, doctrines, and definitions** you must know:\n\n| **Term / Law / Rule** | **What You Must Know** |\n|---|---|\n| **Containment** | U.S. policy to stop the spread of **communism** rather than directly roll it back everywhere. |\n| **Truman Doctrine** | The U.S. would support nations resisting communist pressure; first clearly applied in **Greece and Turkey**. |\n| **Marshall Plan** | Massive U.S. economic aid to rebuild Western Europe and reduce the appeal of communism. |\n| **Brown v. Board of Education** | **1954** Supreme Court decision declaring school segregation unconstitutional; overturned **separate but equal** in public education. |\n| **Civil Rights Act of 1964** | Banned segregation in public accommodations and outlawed employment discrimination. |\n| **Voting Rights Act of 1965** | Prohibited discriminatory voting practices such as literacy tests; greatly increased Black voter participation. |\n| **Gulf of Tonkin Resolution** | **1964** congressional resolution that gave President Johnson broad authority to escalate U.S. involvement in Vietnam. |\n| **War Powers Act** | **1973** law intended to limit presidential power to deploy troops without congressional approval. |\n| **Détente** | Relaxation of Cold War tensions, especially under **Nixon** with the Soviet Union and China. |\n| **Great Society** | LBJ’s reform vision emphasizing **civil rights**, **education**, **health care**, and **anti-poverty programs**. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Cold War Consensus** | **Vietnam Era / Late Period 8** | **AP Significance** |\n|---|---|---|---|\n| **Public trust in government** | High after World War II; broad agreement on containment | Declined due to **Vietnam**, **credibility gap**, and **Watergate** | Helps explain changing political culture and skepticism toward federal authority |\n| **Civil rights strategy** | Early emphasis on court cases and nonviolent protest | Later includes **Black Power**, urban activism, and broader rights movements | Shows continuity and change within reform movements |\n| **Federal power** | Expanded for defense and anti-communism | Expanded further through the **Great Society**, then challenged by conservatives | A recurring APUSH theme: debates over the size and role of government |\n| **Foreign policy approach** | Interventionist containment through alliances and wars | Shift toward **détente**, yet still anti-communist | Demonstrates adaptation, not abandonment, of Cold War policy |\n\n```mermaid\nflowchart LR\n    A[\"Cold War fears\"] --> B[\"Military alliances and interventions\"]\n    A --> C[\"Second Red Scare at home\"]\n    D[\"Civil rights activism\"] --> E[\"Federal legislation and court action\"]\n    E --> F[\"Expanded expectations of government\"]\n    B --> G[\"Vietnam War escalation\"]\n    G --> H[\"Protest, distrust, and backlash\"]\n    F --> H\n    H --> I[\"Rise of modern conservatism\"]\n```\n\n## Common AP Exam Traps\n- **Do not treat all civil rights activism as identical.** Early movement leaders often emphasized **nonviolence** and legal challenges, while later activists sometimes embraced **Black Power** and more militant rhetoric.\n- **Do not confuse Korea and Vietnam.** Both were Cold War conflicts tied to containment, but Korea ended in a stalemate near the original boundary, while Vietnam became a prolonged and deeply divisive war.\n- **Do not assume the federal government always resisted civil rights.** In this period, the **Supreme Court**, **Congress**, and presidents at key moments advanced major reforms.\n- **Do not describe the Great Society as only civil rights legislation.** It also included **Medicare**, **Medicaid**, anti-poverty efforts, and education initiatives.\n- **Do not oversimplify conservatism as appearing suddenly in 1980.** Its roots grew during the 1960s and 1970s in reaction to liberal reform, social change, and perceived disorder.\n\n## Quick Review Checklist\n- [ ] Explain how **containment** shaped U.S. actions in **Korea** and **Vietnam**.\n- [ ] Describe the purpose of the **Truman Doctrine** and **Marshall Plan**.\n- [ ] Explain how **McCarthyism** reflected Cold War fears at home.\n- [ ] Identify the significance of **Brown v. Board of Education**, the **Civil Rights Act of 1964**, and the **Voting Rights Act of 1965**.\n- [ ] Compare early **civil rights** strategies with later movements such as **Black Power**.\n- [ ] Summarize the goals and major programs of the **Great Society**.\n- [ ] Explain why the **Vietnam War** weakened public trust in government.\n- [ ] Describe how social upheaval and backlash contributed to the **rise of conservatism** in the 1970s.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Containment",
+              "definition": "A postwar foreign policy strategy centered on preventing the expansion of Soviet influence through diplomatic, economic, and military measures."
+            },
+            {
+              "term": "Marshall Plan",
+              "definition": "A major U.S. program that provided economic aid to rebuild Western European nations after World War II in order to promote stability and limit communist appeal."
+            },
+            {
+              "term": "Truman Doctrine",
+              "definition": "A 1947 policy declaring that the United States would support peoples resisting outside pressure or armed minorities, especially in Greece and Turkey."
+            },
+            {
+              "term": "NSC-68",
+              "definition": "A 1950 policy paper that urged a large peacetime military buildup and framed the global struggle with the Soviet Union as a long-term, worldwide conflict."
+            },
+            {
+              "term": "Brown v. Board of Education",
+              "definition": "A 1954 Supreme Court decision that ruled state-sponsored school segregation violated the Equal Protection Clause of the Fourteenth Amendment."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly reflected the militarization of U.S. foreign policy in the early Cold War?",
+              "options": [
+                "The adoption of NSC-68's recommendations for a major defense buildup",
+                "The reduction of overseas alliances after World War II",
+                "The rejection of peacetime military planning",
+                "The withdrawal of the United States from European affairs"
+              ],
+              "correctAnswer": "The adoption of NSC-68's recommendations for a major defense buildup",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The Supreme Court's decision in Brown v. Board of Education most directly challenged which earlier precedent?",
+              "options": [
+                "Plessy v. Ferguson",
+                "Marbury v. Madison",
+                "Schenck v. United States",
+                "Baker v. Carr"
+              ],
+              "correctAnswer": "Plessy v. Ferguson",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "President Harry Truman's 1947 pledge to aid nations resisting communist pressure became known as the ______.",
+              "options": [
+                "Marshall Plan",
+                "Truman Doctrine",
+                "Fair Deal",
+                "Eisenhower Doctrine"
+              ],
+              "correctAnswer": "Truman Doctrine",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The 1950 conflict that began when North Korean forces crossed the 38th parallel was the ______.",
+              "options": [
+                "Vietnam War",
+                "Korean War",
+                "Persian Gulf War",
+                "Spanish Civil War"
+              ],
+              "correctAnswer": "Korean War",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Civil Rights Act of 1964",
+              "definition": "Landmark federal legislation that outlawed discrimination in public accommodations and employment on the basis of race, color, religion, sex, or national origin."
+            },
+            {
+              "term": "Great Society",
+              "definition": "President Lyndon B. Johnson's domestic reform agenda aimed at reducing poverty, expanding education and health care, and improving urban life and civil rights protections."
+            },
+            {
+              "term": "Gulf of Tonkin Resolution",
+              "definition": "A 1964 congressional measure that gave the president broad authority to escalate U.S. military involvement in Southeast Asia without a formal declaration of war."
+            },
+            {
+              "term": "Tet Offensive",
+              "definition": "A massive 1968 assault by communist forces in South Vietnam that weakened public confidence in official claims of imminent U.S. success."
+            },
+            {
+              "term": "Watergate",
+              "definition": "A political scandal involving abuses of executive power, obstruction of justice, and a break-in tied to the president's reelection effort, culminating in resignation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which factor most contributed to growing public skepticism about the Vietnam War after 1968?",
+              "options": [
+                "The success of the Tet Offensive in capturing and holding South Vietnam permanently",
+                "The perception gap between official claims of progress and the realities revealed by the Tet Offensive",
+                "The immediate end of the draft after U.S. troop increases",
+                "Congress's formal declaration of war against North Vietnam"
+              ],
+              "correctAnswer": "The perception gap between official claims of progress and the realities revealed by the Tet Offensive",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The Great Society programs of the 1960s most directly expanded the federal government's role in which area?",
+              "options": [
+                "Providing social welfare and health care support",
+                "Dismantling New Deal agencies and labor protections",
+                "Reducing federal involvement in education",
+                "Privatizing anti-poverty initiatives"
+              ],
+              "correctAnswer": "Providing social welfare and health care support",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The 1964 law that prohibited segregation in public accommodations and banned employment discrimination was the ______.",
+              "options": [
+                "Voting Rights Act of 1965",
+                "Civil Rights Act of 1964",
+                "Fair Housing Act of 1968",
+                "Social Security Act"
+              ],
+              "correctAnswer": "Civil Rights Act of 1964",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The scandal that led to President Richard Nixon's resignation in 1974 was known as ______.",
+              "options": [
+                "Iran-Contra",
+                "Teapot Dome",
+                "Watergate",
+                "Credit Mobilier"
+              ],
+              "correctAnswer": "Watergate",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 9,
+      "unitName": "Period 9: 1980–Present",
+      "description": "Reagan Revolution, end of Cold War, globalization, 9/11, culture wars, and contemporary America.",
+      "note": "# Unit 9: Period 9: 1980–Present\n\n## Overview\n**Period 9** covers the transformation of the United States from the **Reagan era** through the **post–Cold War world**, **globalization**, **9/11**, and ongoing **political and cultural polarization**. For the AP exam, this unit matters because it connects modern policy debates, shifts in foreign policy, and demographic/cultural change to long-term themes such as **American identity**, **politics and power**, and **America in the world**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Reagan Revolution** | Conservative political shift in the 1980s emphasizing **tax cuts**, **deregulation**, **anticommunism**, and reduced federal government in some areas | Often tested as a reaction to the liberalism of the **New Deal/Great Society** and as a major realignment in modern politics |\n| **Conservative Resurgence & Culture Wars** | Rise of the **Religious Right**, battles over **abortion**, **gender roles**, **school prayer**, and the role of government in morality | Useful for explaining increasing **partisan polarization** and the role of social issues in elections |\n| **End of the Cold War** | Collapse of the **Soviet Union** in 1991 after reforms, economic weakness, and pressure from the U.S. and internal dissent | AP questions often ask students to compare this with earlier Cold War containment and assess U.S. global power afterward |\n| **Globalization** | Expansion of global trade, communication, finance, and migration, especially through policies like **NAFTA** and new technologies | Important for linking economic restructuring, deindustrialization, immigration, and debates over free trade |\n| **Technological Revolution** | Growth of **computers**, the **internet**, and digital communication reshaped work, politics, and culture | Frequently tied to economic change, new media, and shifts from industrial to information-based employment |\n| **9/11 and War on Terror** | Terrorist attacks of **September 11, 2001** led to wars in **Afghanistan** and **Iraq**, plus expanded national security powers | A major turning point in foreign policy, civil liberties, and executive power |\n| **Demographic Change** | Immigration from **Latin America** and **Asia**, suburban growth, Sun Belt expansion, and increasing diversity | Helps explain electoral changes, debates over immigration policy, and evolving American identity |\n| **Contemporary Political Polarization** | Intensified partisan conflict over taxes, healthcare, race, immigration, and federal power | Essential for FRQs asking students to trace continuity and change in politics since 1980 |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Major Developments in Period 9\n    1980 : Election of **Ronald Reagan**\n    1981 : Reaganomics: **tax cuts**, deregulation, military buildup\n    1980s : Rise of the **Religious Right** and culture wars\n    1989-1991 : **Cold War ends**; fall of Berlin Wall; Soviet Union collapses\n    1990s : **Globalization** expands; **NAFTA** and internet growth\n    2001 : **9/11 attacks**\n    2001-2003 : **War on Terror**; invasions of Afghanistan and Iraq\n    2008 : Major **financial crisis** and recession\n    2008-present : Debates over healthcare, immigration, inequality, and polarization\n```\n\n### Cause-and-Effect Pattern to Know\n1. **Economic conservatism** in the 1980s promoted tax reduction, deregulation, and anti-union policies.  \n2. These policies contributed to a stronger emphasis on **free-market capitalism** and widened debates over **income inequality**.  \n3. At the same time, **globalization** and technological change shifted jobs away from traditional manufacturing.  \n4. This economic restructuring intensified regional, class, and political divisions.  \n5. After **9/11**, national security concerns expanded federal surveillance and military intervention abroad.  \n6. By the early twenty-first century, the U.S. faced both unmatched military power and deep internal disagreement over its global and domestic role.\n\n## Essential Formulas / Laws / Rules\n\nFor APUSH, there are no mathematical formulas, but there are **key principles, laws, and definitions** you should know:\n\n| **Term / Rule** | **What You Must Know** |\n|---|---|\n| **Reaganomics** | Economic program stressing **supply-side economics**, tax cuts, deregulation, and reduced growth of some domestic spending |\n| **Supply-side economics** | Theory that lower taxes on businesses and investors encourage investment, production, and economic growth |\n| **Deregulation** | Reduction of government rules over business and industry |\n| **NAFTA** | **North American Free Trade Agreement**; linked the U.S., Canada, and Mexico in freer trade beginning in 1994 |\n| **War on Terror** | Broad U.S. military and security response to terrorism after **9/11** |\n| **PATRIOT Act** | Law expanding government surveillance and law-enforcement powers after 2001 |\n| **Conservative coalition / New Right** | Political movement combining economic conservatives, anticommunists, and social conservatives |\n| **Globalization** | Increasing integration of economies, cultures, and communication across national borders |\n\n## Connections & Comparisons\n\n| **Comparison** | **Reagan Era (1980s)** | **Post–Cold War / Contemporary Era** | **AP Significance** |\n|---|---|---|---|\n| **Foreign Policy** | Strong anticommunism, military buildup, pressure on USSR | Focus shifts to **terrorism**, Middle East conflicts, and global policing | Shows change from **Cold War containment** to **unipolar interventionism** |\n| **Economy** | **Tax cuts**, deregulation, anti-union politics | Global trade, tech growth, finance expansion, rising inequality | Helps explain continuity of market-oriented policy and new economic tensions |\n| **Politics** | Conservative resurgence under Reagan | Increasing partisan deadlock and ideological polarization | Useful for tracing modern political realignment |\n| **Social Conflict** | **Culture wars** over religion, abortion, family values | Continued disputes over race, immigration, gender, and rights | Demonstrates continuity in social conflict, but with changing issues and coalitions |\n\n```mermaid\nflowchart LR\n    A[\"Reagan Revolution\"] --> B[\"Conservative dominance in national politics\"]\n    B --> C[\"Tax cuts and deregulation\"]\n    C --> D[\"Debates over inequality and role of government\"]\n    B --> E[\"Culture wars and Religious Right\"]\n    D --> F[\"Polarization in contemporary politics\"]\n    E --> F\n    G[\"End of Cold War\"] --> H[\"U.S. as sole superpower\"]\n    H --> I[\"Intervention in post-1991 world\"]\n    I --> J[\"9/11 and War on Terror\"]\n```\n\n## Common AP Exam Traps\n\n- **Do not treat Reagan as simply reducing government overall.** Federal government activism remained strong in areas like **defense spending** and law enforcement.\n- **Do not say the Cold War ended only because of Reagan.** AP exam answers should also mention **Soviet internal weakness**, **Gorbachev’s reforms**, and popular resistance in Eastern Europe.\n- **Do not confuse globalization with only trade.** It also includes **migration**, **outsourcing**, **finance**, and **communication technology**.\n- **Do not describe 9/11 as creating U.S. interventionism from nothing.** The U.S. had intervened abroad before; 9/11 changed the **focus and scale**.\n- **Do not ignore continuity.** Even while the period features major change, many debates—over federal power, rights, race, and America’s world role—continued from earlier periods.\n\n## Quick Review Checklist\n\n- [ ] Explain how the **Reagan Revolution** reflected a conservative reaction to the **New Deal** and **Great Society**.\n- [ ] Describe the main features of **Reaganomics** and evaluate its effects.\n- [ ] Explain the causes and significance of the **end of the Cold War**.\n- [ ] Identify how **globalization** changed the U.S. economy and workforce.\n- [ ] Explain how **technology** reshaped American society, politics, and communication after 1980.\n- [ ] Describe the significance of **9/11**, the **PATRIOT Act**, and the **War on Terror**.\n- [ ] Compare the **culture wars** of the 1980s and 1990s with contemporary political polarization.\n- [ ] Connect **demographic change**, immigration, and regional shifts to modern electoral and cultural debates.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Reaganomics",
+              "definition": "An economic approach emphasizing tax cuts, reduced regulation, and decreased domestic spending in order to stimulate investment and long-term growth."
+            },
+            {
+              "term": "Moral Majority",
+              "definition": "A politically active conservative Christian organization that mobilized voters around issues such as school prayer, abortion, and opposition to the Equal Rights Amendment."
+            },
+            {
+              "term": "Strategic Defense Initiative",
+              "definition": "A 1983 proposal to create a missile defense system that would use advanced technology to intercept incoming nuclear weapons, reflecting renewed Cold War tensions."
+            },
+            {
+              "term": "Iran-Contra Affair",
+              "definition": "A political scandal in which members of the executive branch secretly facilitated arms sales to Iran and directed proceeds to anticommunist rebels in Nicaragua despite congressional restrictions."
+            },
+            {
+              "term": "Rust Belt",
+              "definition": "A region of older industrial cities in the Northeast and Midwest that experienced factory closures, job losses, and economic decline as manufacturing contracted."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly contributed to the rise of the conservative coalition that supported Ronald Reagan in the 1980 election?",
+              "options": [
+                "Growing backlash against high taxes, inflation, and perceived federal overreach",
+                "A widespread demand for stronger New Deal labor protections",
+                "Increased support for détente as the central goal of foreign policy",
+                "A major expansion of confidence in welfare state liberalism"
+              ],
+              "correctAnswer": "Growing backlash against high taxes, inflation, and perceived federal overreach",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The Reagan administration's approach toward the Soviet Union in the early 1980s differed from the policy of détente primarily because it",
+              "options": [
+                "sought reduced military spending in favor of diplomacy",
+                "adopted a more confrontational posture and expanded defense spending",
+                "recognized Soviet political control over Eastern Europe as permanent",
+                "ended American involvement in anticommunist movements abroad"
+              ],
+              "correctAnswer": "adopted a more confrontational posture and expanded defense spending",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The 1981 air traffic controllers strike ended when President Reagan fired workers who refused to return, signaling a broader shift toward ______ in labor relations.",
+              "options": [
+                "stronger federal protection for unions",
+                "management interests and anti-union policies",
+                "mandatory industrial arbitration",
+                "nationalization of key industries"
+              ],
+              "correctAnswer": "management interests and anti-union policies",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "During the 1980s, many Sun Belt states gained population and political influence because of defense spending, air conditioning, and the growth of ______.",
+              "options": [
+                "heavy textile farming",
+                "service and technology industries",
+                "tenant agriculture",
+                "urban political machines"
+              ],
+              "correctAnswer": "service and technology industries",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "NAFTA",
+              "definition": "A 1994 agreement among the United States, Canada, and Mexico that reduced trade barriers and reflected the growing integration of North American economies."
+            },
+            {
+              "term": "End of the Cold War",
+              "definition": "The conclusion of the long geopolitical rivalry between the United States and the Soviet Union, marked by the collapse of communist regimes in Eastern Europe and the dissolution of the USSR in 1991."
+            },
+            {
+              "term": "September 11 attacks",
+              "definition": "A 2001 terrorist assault in which hijackers commandeered commercial airplanes and struck major American targets, leading to wars abroad and expanded security measures at home."
+            },
+            {
+              "term": "Patriot Act",
+              "definition": "A federal law passed after the 2001 terrorist attacks that broadened government authority to conduct surveillance and investigate suspected threats."
+            },
+            {
+              "term": "Obergefell v. Hodges",
+              "definition": "A 2015 Supreme Court decision that required all states to recognize marriage as a constitutional right for same-sex couples."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best describes a major consequence of globalization for the United States in the 1990s and early 2000s?",
+              "options": [
+                "Manufacturing employment expanded steadily as trade barriers increased",
+                "Economic integration intensified debates over free trade, outsourcing, and wage competition",
+                "The federal government ended immigration from Latin America to protect domestic labor",
+                "American foreign policy became less involved in international economic institutions"
+              ],
+              "correctAnswer": "Economic integration intensified debates over free trade, outsourcing, and wage competition",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A key continuity in American politics from the 1980s through the early 2000s was the",
+              "options": [
+                "decline of disputes over religion and morality in public life",
+                "persistence of culture-war conflicts over issues such as abortion, family, and the role of government",
+                "collapse of partisan competition in presidential elections",
+                "complete disappearance of grassroots political activism"
+              ],
+              "correctAnswer": "persistence of culture-war conflicts over issues such as abortion, family, and the role of government",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "After the attacks of September 11, 2001, the United States adopted a foreign policy focused on a global ______ against terrorist organizations and states accused of aiding them.",
+              "options": [
+                "balance of payments system",
+                "war on terror",
+                "policy of isolationism",
+                "return to détente"
+              ],
+              "correctAnswer": "war on terror",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the late twentieth and early twenty-first centuries, increased migration from Latin America and Asia contributed to greater ethnic diversity and renewed debates over ______.",
+              "options": [
+                "immigration policy and border enforcement",
+                "the gold standard",
+                "civil service patronage",
+                "prohibition enforcement"
+              ],
+              "correctAnswer": "immigration policy and border enforcement",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
