@@ -573,7 +573,84 @@ export async function updateCourseContent(
     }
   };
 
+// ─── AP Unit Notes ─────────────────────────────────────────────────────────────
 
-  
-  
-  
+export interface APUnitNote {
+  unitNumber: number;
+  unitName: string;
+  content: string;
+}
+
+/**
+ * Fetches a single unit note from courses/{courseId}/notes/unit-{unitNumber}.
+ * Returns null if the note doesn't exist yet.
+ */
+export const getAPUnitNote = async (
+  courseId: string,
+  unitNumber: number
+): Promise<APUnitNote | null> => {
+  try {
+    const doc = await db
+      .collection("courses")
+      .doc(courseId)
+      .collection("notes")
+      .doc(`unit-${unitNumber}`)
+      .get();
+
+    if (!doc.exists) return null;
+
+    const d = doc.data()!;
+    return {
+      unitNumber: d.unitNumber ?? unitNumber,
+      unitName:   d.unitName   ?? "",
+      content:    d.note       ?? "",
+    };
+  } catch (error) {
+    console.error(`Error fetching unit note ${unitNumber} for course ${courseId}:`, error);
+    throw new Error("Failed to fetch unit note.");
+  }
+};
+
+// ─── AP Catalog ────────────────────────────────────────────────────────────────
+
+export interface APCatalogCourse {
+  id: string;
+  title: string;
+  description: string;
+  apSubject: string;
+  courseType: "ap_catalog";
+  unitCount: number;
+  lessonCount: number;
+  savedCount: number;
+}
+
+/**
+ * Returns all AP catalog courses ordered alphabetically by apSubject.
+ * Uses the composite Firestore index on (courseType ASC, apSubject ASC).
+ */
+export const getAPCatalogCourses = async (): Promise<APCatalogCourse[]> => {
+  try {
+    const snapshot = await db
+      .collection("courses")
+      .where("courseType", "==", "ap_catalog")
+      .orderBy("apSubject", "asc")
+      .get();
+
+    return snapshot.docs.map((doc) => {
+      const d = doc.data();
+      return {
+        id:          doc.id,
+        title:       d.title        ?? d.apSubject ?? "",
+        description: d.description  ?? "",
+        apSubject:   d.apSubject    ?? "",
+        courseType:  "ap_catalog"   as const,
+        unitCount:   d.unitCount    ?? 0,
+        lessonCount: d.lessonCount  ?? 0,
+        savedCount:  d.savedCount   ?? 0,
+      };
+    });
+  } catch (error) {
+    console.error("Error fetching AP catalog courses:", error);
+    throw new Error("Failed to fetch AP catalog courses.");
+  }
+};

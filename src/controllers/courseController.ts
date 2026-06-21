@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createCourseMeta, getFeaturedCoursesFromFirebase, getAllCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus, getCourseById, PaginatedCoursesResponse, PaginatedAllCoursesResponse } from "../services/courseService";
+import { createCourseMeta, getFeaturedCoursesFromFirebase, getAllCoursesFromFirebase, getLessonsWithProgressFromFirebase, getUsersSavedCoursesFromFirebase, updateCourseContent, getCourseUploadedFiles, updateCourseEmbeddingsStatus, getCourseById, getAPCatalogCourses, getAPUnitNote, PaginatedCoursesResponse, PaginatedAllCoursesResponse } from "../services/courseService";
 import { generateLessons } from "../services/lessonService";
 import { extractTextFromImage } from "../services/visionService";
 import { generateMarkdownSummaryFromTerms, openAiCourseContent } from "../services/openAICourseContentService";
@@ -660,6 +660,62 @@ export const getCourseFilesController = async (
     });
   } catch (error) {
     console.error("Error fetching uploaded files:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getAPUnitNoteController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { courseId, unitNumber } = request.params as { courseId: string; unitNumber: string };
+    const unitNum = parseInt(unitNumber, 10);
+
+    if (!courseId || isNaN(unitNum)) {
+      return reply.status(400).send({ error: "Missing or invalid courseId / unitNumber" });
+    }
+
+    console.log(`📝 Fetching unit note ${unitNum} for course ${courseId}`);
+
+    const note = await getAPUnitNote(courseId, unitNum);
+
+    if (!note) {
+      return reply.status(404).send({ error: "Unit note not found" });
+    }
+
+    return reply.status(200).send({ note });
+  } catch (error) {
+    console.error("Error fetching unit note:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+};
+
+export const getAPCatalogCoursesController = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    console.log("📚 Fetching AP catalog courses");
+
+    const courses = await getAPCatalogCourses();
+
+    return reply.status(200).send({
+      message: "AP catalog courses retrieved successfully",
+      courses,
+    });
+  } catch (error) {
+    console.error("Error fetching AP catalog courses:", error);
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };

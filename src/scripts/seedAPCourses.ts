@@ -149,6 +149,9 @@ async function writeCourse(exam: APExam, existingId: string | null): Promise<voi
     hasEmbeddings: false,
     mergedFlashcards,
     summary:       "",
+    // Stored so the catalog list endpoint doesn't need subcollection counts
+    unitCount:     exam.units.length,
+    lessonCount,
     updatedAt:     admin.firestore.FieldValue.serverTimestamp(),
   };
 
