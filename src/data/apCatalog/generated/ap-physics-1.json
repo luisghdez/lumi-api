@@ -5,75 +5,76 @@
       "unitNumber": 1,
       "unitName": "Kinematics",
       "description": "Displacement, velocity, acceleration, kinematic equations, projectile motion, and graphical analysis of motion.",
+      "note": "# Unit 1: Kinematics\n\n## Overview\nThis unit introduces **kinematics**, the branch of physics describing motion without considering its causes. You will learn to analyze **displacement**, **velocity**, and **acceleration**, apply **kinematic equations** to solve problems, and interpret **graphs of motion**. Mastery of these concepts is essential for solving AP Physics 1 problems involving linear and projectile motion.\n\n## Key Concepts at a Glance\n\n| **Concept**           | **What It Is**                                                                 | **Why It Matters (AP angle)**                                         |\n|----------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| **Displacement**      | Vector quantity representing change in position, $$\\vec{d} = \\vec{x}_f - \\vec{x}_i$$ | Distinguishes from distance; critical for vector analysis problems. |\n| **Velocity**          | Rate of change of displacement; vector $$\\vec{v} = \\frac{d\\vec{x}}{dt}$$        | Differentiates speed from velocity; key in interpreting motion graphs.|\n| **Acceleration**      | Rate of change of velocity; vector $$\\vec{a} = \\frac{d\\vec{v}}{dt}$$            | Central to understanding changing motion and applying kinematic equations.|\n| **Kinematic Equations** | Set of equations relating $$\\vec{d}, \\vec{v}, \\vec{a}, t$$ for constant acceleration | Fundamental tools for solving linear motion problems on the exam.   |\n| **Projectile Motion** | Two-dimensional motion under gravity, decomposed into independent horizontal and vertical components | Tests ability to analyze motion in 2D and apply kinematics separately.|\n| **Graphical Analysis**| Interpretation of position, velocity, and acceleration vs. time graphs          | Essential for qualitative and quantitative problem solving.          |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Start: Define Motion Scenario\"] --> B[\"Identify Known Variables (x_i, v_i, a, t)\"]\n    B --> C[\"Choose Appropriate Kinematic Equation\"]\n    C --> D[\"Solve for Unknown (x_f, v_f, t)\"]\n    D --> E[\"Interpret Results (displacement, velocity, acceleration)\"]\n    E --> F{\"Is Motion 2D (Projectile)? \"}\n    F -- Yes --> G[\"Resolve Motion into x and y components\"]\n    G --> H[\"Apply 1D Kinematic Equations Separately\"]\n    H --> I[\"Combine Results for Final Solution\"]\n    F -- No --> J[\"Use 1D Kinematics Directly\"]\n    J --> I\n```\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Rule                      | Description                                          |\n|-----------------------------------|------------------------------------------------------|\n| $$\\vec{v} = \\frac{d\\vec{x}}{dt}$$ | Instantaneous velocity as derivative of position     |\n| $$\\vec{a} = \\frac{d\\vec{v}}{dt}$$ | Instantaneous acceleration as derivative of velocity |\n| Constant acceleration kinematics: |                                                      |\n| $$v = v_0 + at$$                  | Velocity after time $$t$$                             |\n| $$x = x_0 + v_0 t + \\frac{1}{2} a t^2$$ | Displacement after time $$t$$                    |\n| $$v^2 = v_0^2 + 2a(x - x_0)$$    | Velocity-displacement relation without time           |\n| Projectile motion components:     |                                                      |\n| Horizontal: $$x = v_{0x} t$$      | Constant velocity (no horizontal acceleration)        |\n| Vertical: $$y = y_0 + v_{0y} t - \\frac{1}{2} g t^2$$ | Vertical displacement under gravity $$g$$ |\n| Vertical velocity: $$v_y = v_{0y} - g t$$ | Vertical velocity at time $$t$$                      |\n| Gravity acceleration: $$g = 9.8 \\, m/s^2$$ | Constant downward acceleration near Earth's surface |\n\n## Connections & Comparisons\n\n| Concept 1           | Concept 2           | Similarities                                    | Differences / AP Focus                                      |\n|---------------------|---------------------|------------------------------------------------|------------------------------------------------------------|\n| **Displacement**     | **Distance**        | Both measure length of motion                   | Displacement is vector (direction matters), distance is scalar (always positive) |\n| **Velocity**         | **Speed**           | Both measure how fast an object moves           | Velocity is vector (direction + magnitude), speed is scalar (magnitude only)    |\n| **Acceleration**     | **Velocity Change** | Acceleration causes velocity to change          | Acceleration is rate of velocity change; velocity change is the effect         |\n| **Horizontal Motion**| **Vertical Motion** | Both use kinematic equations                     | Horizontal velocity constant (no acceleration), vertical velocity affected by gravity |\n\n## Common AP Exam Traps\n\n- Confusing **displacement** with **distance**; displacement can be zero if start and end points coincide, distance cannot.\n- Forgetting to treat **velocity** and **acceleration** as vectors; direction matters, especially in projectile motion.\n- Applying kinematic equations assuming constant acceleration when acceleration varies (e.g., air resistance ignored).\n- Mixing up horizontal and vertical components in projectile problems; they must be analyzed independently.\n- Misinterpreting motion graphs, especially confusing slope and area under curves for position, velocity, and acceleration.\n\n## Quick Review Checklist\n\n- [ ] Define and distinguish **displacement**, **velocity**, and **acceleration** as vectors.\n- [ ] Use and rearrange the **kinematic equations** for constant acceleration.\n- [ ] Analyze **projectile motion** by decomposing into horizontal and vertical components.\n- [ ] Interpret **position vs. time**, **velocity vs. time**, and **acceleration vs. time** graphs.\n- [ ] Solve problems involving motion with **constant acceleration**, including free fall.\n- [ ] Recognize and avoid common pitfalls in vector direction and sign conventions.\n- [ ] Calculate time, displacement, and velocity for 1D and 2D motion scenarios.\n- [ ] Explain the independence of horizontal and vertical motions in projectile motion.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Displacement",
-              "definition": "A vector quantity representing the change in position of an object from its initial point to its final point, defined by magnitude and direction."
+              "definition": "A vector quantity representing the change in position of an object, defined as the straight-line distance and direction from the initial to the final position."
             },
             {
-              "term": "Average velocity",
-              "definition": "The displacement of an object divided by the time interval during which the displacement occurred, indicating overall rate of change of position."
+              "term": "Velocity",
+              "definition": "A vector quantity that describes the rate of change of displacement with respect to time, including both speed and direction."
             },
             {
-              "term": "Instantaneous acceleration",
-              "definition": "The rate of change of an object's velocity with respect to time at a specific instant."
+              "term": "Acceleration",
+              "definition": "A vector quantity that represents the rate of change of velocity with respect to time."
             },
             {
-              "term": "Kinematic equations (1D)",
-              "definition": "A set of four equations relating displacement, initial velocity, final velocity, acceleration, and time for uniformly accelerated motion along a straight line."
+              "term": "Kinematic Equations",
+              "definition": "A set of equations that relate displacement, initial velocity, final velocity, acceleration, and time for motion with constant acceleration."
             },
             {
-              "term": "Graphical analysis of motion",
-              "definition": "The interpretation and extraction of kinematic quantities such as displacement, velocity, and acceleration by analyzing position vs. time, velocity vs. time, and acceleration vs. time graphs."
+              "term": "Average Velocity",
+              "definition": "The total displacement divided by the total time interval during which the displacement occurs."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "An object moves from position $$x = 2 \\, m$$ to $$x = 10 \\, m$$ in 4 seconds. What is its average velocity?",
+              "questionText": "An object moves along a straight line with an initial velocity of $$5\\,\\mathrm{m/s}$$ and a constant acceleration of $$2\\,\\mathrm{m/s^2}$$. What is its velocity after $$3$$ seconds?",
               "options": [
-                "$$2 \\, m/s$$",
-                "$$4 \\, m/s$$",
-                "$$-2 \\, m/s$$",
-                "$$8 \\, m/s$$"
+                "$$11\\,\\mathrm{m/s}$$",
+                "$$6\\,\\mathrm{m/s}$$",
+                "$$16\\,\\mathrm{m/s}$$",
+                "$$9\\,\\mathrm{m/s}$$"
               ],
-              "correctAnswer": "$$2 \\, m/s$$",
+              "correctAnswer": "$$11\\,\\mathrm{m/s}$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which of the following best describes instantaneous acceleration?",
+              "questionText": "If an object's displacement over a time interval is zero, which of the following must be true?",
               "options": [
-                "Change in displacement over change in time",
-                "Slope of the velocity-time graph at a particular time",
-                "Average velocity over a time interval",
-                "Total displacement divided by total time"
+                "Its velocity is zero throughout the interval.",
+                "Its average velocity is zero.",
+                "Its acceleration is zero throughout the interval.",
+                "Its speed is zero throughout the interval."
               ],
-              "correctAnswer": "Slope of the velocity-time graph at a particular time",
+              "correctAnswer": "Its average velocity is zero.",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The kinematic equation $$v = v_0 + a t$$ is valid only when acceleration is ______.",
+              "questionText": "The acceleration of an object moving with a constant velocity is ______.",
               "options": [
-                "constant",
-                "changing linearly",
                 "zero",
-                "random"
+                "constant",
+                "non-zero",
+                "changing"
               ],
-              "correctAnswer": "constant",
+              "correctAnswer": "zero",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "In a position vs. time graph with a straight line of positive slope, the object's velocity is ______.",
+              "questionText": "The slope of a displacement-versus-time graph represents ______.",
               "options": [
-                "positive and constant",
-                "zero",
-                "negative",
-                "increasing"
+                "velocity",
+                "acceleration",
+                "displacement",
+                "time"
               ],
-              "correctAnswer": "positive and constant",
+              "correctAnswer": "velocity",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -81,69 +82,69 @@
         {
           "flashcards": [
             {
-              "term": "Projectile motion",
-              "definition": "The two-dimensional motion of an object under the influence of gravity, assuming negligible air resistance, typically described by independent horizontal constant velocity and vertical uniformly accelerated motion components."
+              "term": "Projectile Motion",
+              "definition": "The two-dimensional motion of an object under the influence of gravity, assuming air resistance is negligible, with a constant acceleration downward."
             },
             {
-              "term": "Horizontal component of velocity in projectile motion",
-              "definition": "The constant velocity component along the horizontal axis since no acceleration acts horizontally under ideal projectile motion conditions."
+              "term": "Range of a Projectile",
+              "definition": "The horizontal distance traveled by a projectile from launch to landing."
             },
             {
-              "term": "Vertical component of velocity in projectile motion",
-              "definition": "The velocity component affected by gravitational acceleration, changing with time as the object rises and falls."
+              "term": "Maximum Height",
+              "definition": "The greatest vertical displacement reached by a projectile during its trajectory."
             },
             {
-              "term": "Range of a projectile",
-              "definition": "The horizontal distance traveled by a projectile from launch point to the landing point on the same horizontal level."
+              "term": "Graphical Analysis of Motion",
+              "definition": "The interpretation of motion characteristics such as velocity and acceleration by analyzing the slopes and areas under displacement, velocity, and acceleration graphs."
             },
             {
-              "term": "Maximum height of a projectile",
-              "definition": "The greatest vertical displacement above the launch height reached by the projectile during its trajectory."
+              "term": "Instantaneous Velocity",
+              "definition": "The velocity of an object at a specific instant in time, found as the slope of the tangent line to a position-versus-time graph at that point."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "A projectile is launched horizontally from a height with an initial speed $$v_0$$. Which of the following statements about its velocity components is true?",
+              "questionText": "A projectile is launched at an angle $$\\theta$$ with initial velocity $$v_0$$. Which of the following expressions gives the total time of flight?",
               "options": [
-                "Horizontal velocity remains constant; vertical velocity increases due to gravity",
-                "Horizontal velocity decreases; vertical velocity remains constant",
-                "Both velocity components remain constant",
-                "Horizontal velocity increases; vertical velocity decreases"
+                "$$\\frac{2v_0\\sin\\theta}{g}$$",
+                "$$\\frac{v_0\\cos\\theta}{g}$$",
+                "$$\\frac{v_0}{g}\\sin(2\\theta)$$",
+                "$$\\frac{v_0^2\\sin(2\\theta)}{g}$$"
               ],
-              "correctAnswer": "Horizontal velocity remains constant; vertical velocity increases due to gravity",
+              "correctAnswer": "$$\\frac{2v_0\\sin\\theta}{g}$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "For a projectile launched at an angle $$\\theta$$ with initial speed $$v_0$$, what is the formula for its range assuming it lands at the same height from which it was launched?",
+              "questionText": "What does the area under a velocity-versus-time graph represent?",
               "options": [
-                "$$\\frac{v_0^2 \\sin 2\\theta}{g}$$",
-                "$$v_0 \\cos \\theta$$",
-                "$$v_0 \\sin \\theta$$",
-                "$$\\frac{2 v_0 \\sin \\theta}{g}$$"
+                "Displacement",
+                "Acceleration",
+                "Speed",
+                "Force"
               ],
-              "correctAnswer": "$$\\frac{v_0^2 \\sin 2\\theta}{g}$$",
+              "correctAnswer": "Displacement",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The time of flight for a projectile launched at speed $$v_0$$ and angle $$\\theta$$ from ground level is given by $$\\frac{2 v_0 \\sin \\theta}{______}$$.",
+              "questionText": "The horizontal component of a projectile’s velocity remains ______ throughout its flight (neglecting air resistance).",
               "options": [
-                "$$g$$",
-                "$$v_0$$",
-                "$$\\cos \\theta$$",
-                "$$\\sin \\theta$$"
+                "constant",
+                "increasing",
+                "decreasing",
+                "zero"
               ],
-              "correctAnswer": "$$g$$",
+              "correctAnswer": "constant",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The maximum height of a projectile is reached when its vertical velocity component is ______.",
+              "questionText": "The maximum height of a projectile occurs when its vertical velocity component equals ______.",
               "options": [
                 "zero",
                 "maximum",
-                "equal to horizontal velocity",
-                "negative"
+                "initial velocity",
+                "acceleration"
               ],
               "correctAnswer": "zero",
               "lessonType": "fillInTheBlank"
@@ -156,16 +157,17 @@
       "unitNumber": 2,
       "unitName": "Force and Translational Dynamics",
       "description": "Newton's three laws, friction, normal force, tension, and free-body diagrams for translational equilibrium.",
+      "note": "# Unit 2: Force and Translational Dynamics\n\n## Overview\nThis unit explores **Newton's three laws of motion** and their application to forces acting on objects in translational motion. You will learn to analyze forces such as **friction**, **normal force**, and **tension**, and use **free-body diagrams** to solve problems involving **translational equilibrium**. Mastery of these concepts is essential for solving AP Physics 1 problems involving motion and force interactions.\n\n## Key Concepts at a Glance\n\n| **Concept**           | **What It Is**                                                                 | **Why It Matters (AP angle)**                                         |\n|----------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| Newton's First Law    | An object remains at rest or in uniform motion unless acted on by a net force. | Foundation for understanding inertia and equilibrium conditions.    |\n| Newton's Second Law   | $$\\sum \\vec{F} = m \\vec{a}$$ relates net force, mass, and acceleration.        | Central equation for solving dynamics problems on the exam.          |\n| Newton's Third Law    | For every action, there is an equal and opposite reaction force.               | Crucial for analyzing force pairs and interaction problems.          |\n| Friction             | Force opposing relative motion between surfaces; static and kinetic types.     | Often appears in problems requiring force balance and motion analysis.|\n| Normal Force          | Perpendicular contact force exerted by a surface on an object.                 | Key to correctly setting up free-body diagrams and force components. |\n| Tension              | Force transmitted through a string, rope, or cable when pulled tight.          | Common in pulley and connected-object problems on the AP exam.       |\n| Free-Body Diagrams   | Visual representation of all forces acting on an object.                       | Essential tool for organizing and solving force and motion problems. |\n| Translational Equilibrium | Condition where $$\\sum \\vec{F} = 0$$ and acceleration is zero.               | Basis for static and constant velocity scenarios tested on the exam. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Identify the object of interest\"] --> B[\"Draw Free-Body Diagram (FBD)\"]\n    B --> C[\"List all forces: gravity, normal, friction, tension, applied\"]\n    C --> D[\"Resolve forces into components (if needed)\"]\n    D --> E[\"Apply Newton's Second Law: $$\\sum F_x = ma_x$$ and $$\\sum F_y = ma_y$$\"]\n    E --> F[\"Solve for unknowns: acceleration, force magnitudes, tension, etc.\"]\n    F --> G{\"Is acceleration zero?\"}\n    G -- Yes --> H[\"Translational Equilibrium: $$\\sum \\vec{F} = 0$$\"]\n    G -- No --> I[\"Object accelerates: $$\\sum \\vec{F} = m \\vec{a}$$\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Law                          | Description                                              |\n|--------------------------------------|----------------------------------------------------------|\n| $$\\vec{F}_{net} = \\sum \\vec{F}$$    | Vector sum of all forces acting on an object.            |\n| $$\\vec{F}_{net} = m \\vec{a}$$        | Newton's Second Law relating net force and acceleration. |\n| $$f_s \\leq \\mu_s N$$                 | Maximum static friction force; $$\\mu_s$$ is static friction coefficient. |\n| $$f_k = \\mu_k N$$                    | Kinetic friction force; $$\\mu_k$$ is kinetic friction coefficient. |\n| $$N = mg \\cos \\theta$$               | Normal force on an inclined plane at angle $$\\theta$$.   |\n| $$T$$                               | Tension force in a string or rope (magnitude along the rope). |\n| Newton's First Law                   | $$\\vec{a} = 0 \\Rightarrow \\sum \\vec{F} = 0$$ (equilibrium). |\n| Newton's Third Law                   | $$\\vec{F}_{AB} = -\\vec{F}_{BA}$$ (action-reaction pairs). |\n\n## Connections & Comparisons\n\n| Concept 1          | Concept 2           | Similarities                                    | Differences / AP Focus                                  |\n|--------------------|---------------------|------------------------------------------------|--------------------------------------------------------|\n| Static Friction    | Kinetic Friction    | Both oppose relative motion between surfaces.  | Static friction adjusts up to $$\\mu_s N$$; kinetic friction is constant $$\\mu_k N$$ and acts during motion. |\n| Normal Force       | Weight (Gravity)    | Both are forces acting on an object.            | Weight acts downward due to gravity; normal force acts perpendicular to contact surface. |\n| Newton's First Law | Newton's Second Law | Both describe motion states and forces.         | First law describes equilibrium (no acceleration); second law quantifies acceleration when net force exists. |\n| Tension            | Normal Force        | Both are contact forces transmitted through objects. | Tension acts along a rope/string; normal force acts perpendicular to a surface. |\n\n## Common AP Exam Traps\n\n- Confusing **static friction** with **kinetic friction**; static friction varies up to a maximum, kinetic friction is constant.\n- Forgetting to include all forces in the **free-body diagram**, especially the **normal force** and **friction**.\n- Treating **tension** as a separate force rather than a force transmitted through a string or rope.\n- Misapplying Newton's Third Law by mixing action-reaction pairs on the **same object** instead of on **different objects**.\n- Assuming **translational equilibrium** (zero acceleration) without checking if the net force is zero.\n\n## Quick Review Checklist\n\n- [ ] Explain and apply **Newton's three laws** to various physical situations.\n- [ ] Draw accurate **free-body diagrams** including all relevant forces.\n- [ ] Distinguish between **static** and **kinetic friction** and calculate frictional forces.\n- [ ] Calculate **normal force** on flat and inclined surfaces.\n- [ ] Analyze **tension** forces in strings and ropes in multi-object systems.\n- [ ] Solve problems involving **translational equilibrium** where $$\\sum \\vec{F} = 0$$.\n- [ ] Use Newton’s Second Law $$\\sum \\vec{F} = m \\vec{a}$$ to find acceleration or unknown forces.\n- [ ] Identify and correctly apply **action-reaction force pairs** per Newton’s Third Law.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Newton's First Law",
-              "definition": "An object remains at rest or moves at constant velocity unless acted upon by a net external force."
+              "definition": "An object at rest remains at rest, and an object in motion continues in motion at constant velocity unless acted upon by a net external force."
             },
             {
               "term": "Newton's Second Law",
-              "definition": "The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass, expressed by $$\\vec{F}_{net} = m\\vec{a}$$."
+              "definition": "The net force acting on an object is equal to the mass of the object multiplied by its acceleration, mathematically expressed as $$\\mathbf{F}_{net} = m\\mathbf{a}$$."
             },
             {
               "term": "Newton's Third Law",
@@ -173,58 +175,58 @@
             },
             {
               "term": "Frictional Force",
-              "definition": "A force exerted by a surface opposing the relative motion or tendency of motion between the surface and an object in contact."
+              "definition": "A resistive force that acts parallel to the surface of contact and opposite to the relative motion or intended motion between two surfaces."
             },
             {
-              "term": "Normal Force",
-              "definition": "The contact force exerted by a surface perpendicular to the surface, supporting the weight of an object resting on it."
+              "term": "Kinetic Friction",
+              "definition": "The frictional force acting between surfaces that are sliding past each other, usually modeled as proportional to the normal force with coefficient $$\\mu_k$$."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following best describes the acceleration of an object experiencing a net force $$\\vec{F}_{net}$$?",
+              "questionText": "Which of the following best describes the acceleration of an object of mass $$m$$ when the net force $$\\mathbf{F}_{net}$$ acting on it is zero?",
               "options": [
-                "It is proportional to the object's velocity.",
-                "It is inversely proportional to the object's mass.",
-                "It is proportional to the net force and inversely proportional to mass.",
-                "It is independent of the net force."
+                "The object accelerates at $$\\mathbf{a} = \\frac{\\mathbf{F}_{net}}{m}$$",
+                "The object moves with a constant velocity",
+                "The object decelerates until it stops",
+                "The object experiences an increasing velocity"
               ],
-              "correctAnswer": "It is proportional to the net force and inversely proportional to mass.",
+              "correctAnswer": "The object moves with a constant velocity",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "If an object is stationary on a horizontal surface with friction, what can be said about the net force acting on it?",
+              "questionText": "If an object is sliding across a surface with kinetic friction coefficient $$\\mu_k$$ and normal force $$N$$, what is the magnitude of the kinetic friction force?",
               "options": [
-                "Net force is zero because friction balances any applied force.",
-                "Net force is downward due to gravity.",
-                "Net force is directed opposite to velocity.",
-                "Net force equals mass times acceleration upward."
+                "$$\\mu_k + N$$",
+                "$$\\mu_k N$$",
+                "$$\\frac{\\mu_k}{N}$$",
+                "$$\\mu_k - N$$"
               ],
-              "correctAnswer": "Net force is zero because friction balances any applied force.",
+              "correctAnswer": "$$\\mu_k N$$",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "According to Newton's Third Law, if object A exerts a force on object B, then object B exerts a force on object A that is ______ in magnitude and opposite in direction.",
+              "questionText": "According to Newton's second law, the net force $$\\mathbf{F}_{net}$$ acting on an object is equal to the product of its mass $$m$$ and ______.",
               "options": [
-                "equal",
-                "greater",
-                "less",
-                "perpendicular"
+                "velocity $$\\mathbf{v}$$",
+                "acceleration $$\\mathbf{a}$$",
+                "momentum $$\\mathbf{p}$$",
+                "displacement $$\\mathbf{d}$$"
               ],
-              "correctAnswer": "equal",
+              "correctAnswer": "acceleration $$\\mathbf{a}$$",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The force exerted by a surface that acts perpendicular to the surface to support the weight of the object is called the ______ force.",
+              "questionText": "The frictional force that opposes the start of motion between two surfaces at rest relative to each other is called ______ friction.",
               "options": [
-                "normal",
-                "frictional",
-                "tension",
-                "gravitational"
+                "kinetic",
+                "static",
+                "rolling",
+                "fluid"
               ],
-              "correctAnswer": "normal",
+              "correctAnswer": "static",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -232,71 +234,71 @@
         {
           "flashcards": [
             {
-              "term": "Tension Force",
-              "definition": "A pulling force transmitted through a string, rope, cable, or similar object when it is pulled tight by forces acting at each end."
+              "term": "Normal Force",
+              "definition": "The perpendicular contact force exerted by a surface on an object resting on it, preventing penetration of the object into the surface."
             },
             {
-              "term": "Coefficient of Kinetic Friction",
-              "definition": "A dimensionless scalar that represents the ratio of kinetic frictional force to the normal force between two surfaces in relative motion."
-            },
-            {
-              "term": "Free-Body Diagram",
-              "definition": "A graphical illustration used to visualize all the external forces acting on a single object as vectors originating from the object's center."
+              "term": "Tension",
+              "definition": "A pulling force transmitted along a string, rope, cable, or similar connector when it is taut and connected to an object."
             },
             {
               "term": "Translational Equilibrium",
-              "definition": "A state where the net external force acting on an object is zero, resulting in constant velocity or rest."
+              "definition": "A state in which the net external force acting on an object is zero, resulting in constant velocity or rest of the object."
             },
             {
-              "term": "Static Friction",
-              "definition": "The frictional force that resists the initiation of sliding motion between two surfaces in contact, up to a certain maximum value."
+              "term": "Free-Body Diagram",
+              "definition": "A graphical representation used to visualize the forces acting on an isolated object by drawing vectors representing all forces."
+            },
+            {
+              "term": "Static Equilibrium Condition",
+              "definition": "A special case of translational equilibrium where an object remains at rest because the net force and net torque acting on it are zero."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "In a system at translational equilibrium, what is true about the net force acting on the object?",
+              "questionText": "Which force generally balances the weight of an object resting on a horizontal surface in the absence of other vertical forces?",
               "options": [
-                "It is directed upward.",
-                "It is zero.",
-                "It equals mass times acceleration.",
-                "It is unpredictable without velocity."
+                "Frictional force",
+                "Tension",
+                "Normal force",
+                "Applied force"
               ],
-              "correctAnswer": "It is zero.",
+              "correctAnswer": "Normal force",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which of the following best describes tension in a rope in a system where the rope is massless and frictionless?",
+              "questionText": "In a free-body diagram of an object suspended by a rope, the force represented by the rope pulling upward on the object is called:",
               "options": [
-                "Tension varies along the rope.",
-                "Tension is zero.",
-                "Tension is constant throughout the rope.",
-                "Tension depends on the rope's elasticity."
+                "friction",
+                "weight",
+                "normal force",
+                "tension"
               ],
-              "correctAnswer": "Tension is constant throughout the rope.",
+              "correctAnswer": "tension",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The maximum force of static friction before an object starts to slide is given by $$f_s^{max} = ______ \\times F_N$$, where $$F_N$$ is the normal force.",
+              "questionText": "An object is in translational equilibrium when the vector sum of all forces acting on it is equal to ______.",
               "options": [
-                "\\mu_s",
-                "\\mu_k",
-                "g",
-                "m"
+                "zero",
+                "its weight",
+                "its mass",
+                "acceleration"
               ],
-              "correctAnswer": "\\mu_s",
+              "correctAnswer": "zero",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "A free-body diagram includes all external forces acting on an object drawn as arrows originating from the ______ of the object.",
+              "questionText": "In a free-body diagram, arrows represent ______ acting on the object, with length proportional to magnitude and direction to force direction.",
               "options": [
-                "center",
-                "edge",
-                "surface",
-                "contact points"
+                "velocities",
+                "displacements",
+                "forces",
+                "accelerations"
               ],
-              "correctAnswer": "center",
+              "correctAnswer": "forces",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -307,28 +309,29 @@
       "unitNumber": 3,
       "unitName": "Work, Energy, and Power",
       "description": "Work-energy theorem, conservative forces, conservation of mechanical energy, and power calculations.",
+      "note": "# Unit 3: Work, Energy, and Power\n\n## Overview\nThis unit explores the fundamental concepts of **work**, **energy**, and **power**, focusing on how forces affect the motion and energy of objects. Understanding the **work-energy theorem**, **conservative forces**, and the **conservation of mechanical energy** is crucial for solving problems involving energy transfer and efficiency, which are frequently tested on the AP Physics 1 exam.\n\n## Key Concepts at a Glance\n\n| **Concept**                 | **What It Is**                                                                 | **Why It Matters (AP angle)**                                           |\n|----------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------------|\n| **Work**                   | The transfer of energy by a force acting over a displacement: $$W = \\vec{F} \\cdot \\vec{d}$$ | Central to understanding energy changes; appears in problem-solving.  |\n| **Kinetic Energy (KE)**    | Energy of motion: $$KE = \\frac{1}{2}mv^2$$                                    | Quantifies how motion relates to energy; key for work-energy theorem.  |\n| **Potential Energy (PE)**  | Stored energy due to position, e.g., gravitational: $$PE = mgh$$               | Helps analyze energy conservation and forces in systems.              |\n| **Work-Energy Theorem**    | Work done equals change in kinetic energy: $$W_{\\text{net}} = \\Delta KE$$     | Connects forces and motion; simplifies dynamics problems.              |\n| **Conservative Forces**    | Forces where work done is path-independent (e.g., gravity, spring force)       | Allows use of energy conservation; reduces complexity in calculations.|\n| **Nonconservative Forces** | Forces like friction where energy is lost as heat, path-dependent work         | Important for realistic problem setups; affects total mechanical energy.|\n| **Conservation of Mechanical Energy** | Total mechanical energy (KE + PE) remains constant if only conservative forces act | Fundamental principle for solving many AP problems without force analysis.|\n| **Power**                  | Rate of doing work or transferring energy: $$P = \\frac{W}{t} = \\vec{F} \\cdot \\vec{v}$$ | Measures how quickly energy is used or transferred; common in real-world contexts.|\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Apply Force ($\\vec{F}$) over Displacement ($\\vec{d}$)\"] --> B[\"Calculate Work: $W = \\vec{F} \\cdot \\vec{d}$\"]\n    B --> C[\"Determine Change in Kinetic Energy: $\\Delta KE$\"]\n    C --> D[\"Use Work-Energy Theorem: $W_{\\text{net}} = \\Delta KE$\"]\n    D --> E{\"Are forces conservative?\"}\n    E -- Yes --> F[\"Apply Conservation of Mechanical Energy: $KE_i + PE_i = KE_f + PE_f$\"]\n    E -- No --> G[\"Account for Nonconservative Work (e.g., friction)\"]\n    G --> H[\"Calculate Total Energy Change and Power\"]\n    F --> H\n    H --> I[\"Calculate Power: $P = \\frac{W}{t}$ or $P = \\vec{F} \\cdot \\vec{v}$\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Law                              | Description                                                  |\n|-------------------------------------------|--------------------------------------------------------------|\n| $$W = \\vec{F} \\cdot \\vec{d} = F d \\cos \\theta$$ | Work done by a constant force over displacement $$d$$ at angle $$\\theta$$ |\n| $$KE = \\frac{1}{2} m v^2$$                | Kinetic energy of an object with mass $$m$$ and speed $$v$$  |\n| $$PE_{gravity} = m g h$$                   | Gravitational potential energy relative to reference height $$h$$ |\n| $$W_{\\text{net}} = \\Delta KE = KE_f - KE_i$$ | Work-energy theorem connecting net work and kinetic energy change |\n| $$E_{\\text{mech}} = KE + PE$$              | Total mechanical energy of a system                          |\n| $$E_{\\text{mech, initial}} = E_{\\text{mech, final}}$$ (if conservative forces only) | Conservation of mechanical energy principle                  |\n| $$W_{\\text{nc}} = \\Delta E_{\\text{mech}}$$ | Work done by nonconservative forces equals mechanical energy change |\n| $$P = \\frac{W}{t}$$ or $$P = \\vec{F} \\cdot \\vec{v}$$ | Power as rate of work or dot product of force and velocity    |\n\n## Connections & Comparisons\n\n| Concept                     | Conservative Forces                          | Nonconservative Forces                      | Impact on Energy Conservation                  |\n|-----------------------------|---------------------------------------------|---------------------------------------------|------------------------------------------------|\n| **Definition**              | Work done independent of path                | Work depends on path                         | Determines if mechanical energy is conserved   |\n| **Examples**                | Gravity, spring force                         | Friction, air resistance                     | Conservative: $$E_{\\text{mech}} = \\text{constant}$$; Nonconservative: $$E_{\\text{mech}} \\downarrow$$ |\n| **Work Done**               | $$W = -\\Delta PE$$ (negative change in PE)  | Converts mechanical energy to thermal, sound, etc. | Nonconservative work changes total mechanical energy |\n| **Energy Accounting**       | Use conservation of mechanical energy        | Must include $$W_{\\text{nc}}$$ in energy balance | Nonconservative forces cause energy dissipation |\n\n## Common AP Exam Traps\n\n- Forgetting to include the angle $$\\theta$$ between force and displacement when calculating work.\n- Confusing **work done by a force** with **change in kinetic energy** without applying the work-energy theorem correctly.\n- Assuming mechanical energy is conserved when **nonconservative forces** like friction are present.\n- Misapplying the formula for **power** by ignoring the vector nature of force and velocity.\n- Neglecting to choose a proper reference point for **potential energy** calculations.\n\n## Quick Review Checklist\n\n- [ ] Define and calculate **work** done by a constant force.\n- [ ] Explain and apply the **work-energy theorem** to relate net work and kinetic energy change.\n- [ ] Calculate **kinetic** and **potential energy** for various systems.\n- [ ] Identify **conservative** vs. **nonconservative forces** and their effects on energy.\n- [ ] Use **conservation of mechanical energy** to solve problems without force analysis.\n- [ ] Calculate **power** as rate of work or using force and velocity.\n- [ ] Analyze energy transformations when **nonconservative forces** act.\n- [ ] Avoid common pitfalls related to angles, reference points, and force types in energy problems.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Work-Energy Theorem",
-              "definition": "The principle stating that the net work done on an object is equal to the change in its kinetic energy."
+              "definition": "A principle stating that the net work done by all forces acting on an object equals the change in its kinetic energy."
             },
             {
-              "term": "Work done by a force",
-              "definition": "The scalar product of the force vector and the displacement vector of its point of application, representing energy transfer."
-            },
-            {
-              "term": "Kinetic Energy",
-              "definition": "The energy an object possesses due to its motion, given by the expression $$\\frac{1}{2}mv^2$$."
+              "term": "Work Done by a Constant Force",
+              "definition": "The product of the magnitude of the force, the displacement of the object, and the cosine of the angle between force and displacement directions."
             },
             {
               "term": "Positive Work",
-              "definition": "Work that results when the force component along the displacement is in the same direction as the displacement, increasing kinetic energy."
+              "definition": "Occurs when the component of the force applied on an object is in the same direction as the object's displacement, increasing its kinetic energy."
             },
             {
               "term": "Negative Work",
-              "definition": "Work that results when the force component along the displacement is opposite to the displacement, decreasing kinetic energy."
+              "definition": "Occurs when the force applied on an object opposes its displacement, resulting in a decrease in the object's kinetic energy."
+            },
+            {
+              "term": "Net Work",
+              "definition": "The total work done on an object by the sum of all forces acting on it."
             }
           ],
           "multipleChoice": [
@@ -336,7 +339,7 @@
               "questionText": "According to the work-energy theorem, if the net work done on an object is positive, what happens to the object's kinetic energy?",
               "options": [
                 "It decreases",
-                "It remains constant",
+                "It remains the same",
                 "It increases",
                 "It becomes zero"
               ],
@@ -344,38 +347,38 @@
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which of the following expressions represents the work done by a constant force $$\\vec{F}$$ acting over a displacement $$\\vec{d}$$?",
+              "questionText": "The work done by a force $$\\vec{F}$$ acting on an object that moves displacement $$\\vec{d}$$ at an angle $$\\theta$$ between force and displacement is given by which expression?",
               "options": [
-                "$$W = \\vec{F} \\times \\vec{d}$$",
-                "$$W = |\\vec{F}| + |\\vec{d}|$$",
-                "$$W = |\\vec{F}| |\\vec{d}| \\cos \\theta$$",
-                "$$W = \\vec{F} \\div \\vec{d}$$"
+                "$$W = F \\cdot d \\cdot \\sin \\theta$$",
+                "$$W = F \\cdot d \\cdot \\cos \\theta$$",
+                "$$W = F \\times d^2 \\cos \\theta$$",
+                "$$W = F / (d \\cos \\theta)$$"
               ],
-              "correctAnswer": "$$W = |\\vec{F}| |\\vec{d}| \\cos \\theta$$",
+              "correctAnswer": "$$W = F \\cdot d \\cdot \\cos \\theta$$",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The work-energy theorem relates the net work done on an object to the change in its ______.",
+              "questionText": "The net work done on an object equals the change in the object's ______.",
               "options": [
-                "kinetic energy",
                 "potential energy",
+                "kinetic energy",
                 "mechanical energy",
-                "thermal energy"
+                "momentum"
               ],
               "correctAnswer": "kinetic energy",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "If a force acts perpendicular to the displacement, the work done by this force is ______.",
+              "questionText": "When a force acts opposite to the direction of displacement, the work done is ______.",
               "options": [
-                "equal to the displacement",
-                "zero",
                 "positive",
-                "negative"
+                "zero",
+                "negative",
+                "undefined"
               ],
-              "correctAnswer": "zero",
+              "correctAnswer": "negative",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -384,70 +387,70 @@
           "flashcards": [
             {
               "term": "Conservative Force",
-              "definition": "A force for which the work done moving an object between two points is independent of the path taken."
+              "definition": "A force for which the work done on an object moving between two points is independent of the path taken."
             },
             {
               "term": "Conservation of Mechanical Energy",
-              "definition": "The principle that in the absence of non-conservative forces, the total mechanical energy remains constant."
+              "definition": "A principle stating that the total mechanical energy remains constant in a system if only conservative forces are doing work."
             },
             {
               "term": "Power",
-              "definition": "The rate at which work is done or energy is transferred, mathematically expressed as work done divided by time."
+              "definition": "The rate at which work is done or energy is transferred over time, measured in watts (W)."
             },
             {
-              "term": "Potential Energy",
-              "definition": "Energy stored due to an object's position in a force field, commonly gravitational or elastic."
+              "term": "Average Power",
+              "definition": "Total work done divided by the total time interval during which the work was performed."
             },
             {
-              "term": "Non-conservative Force",
-              "definition": "A force, such as friction, for which the work done depends on the path and dissipates mechanical energy as thermal or other forms."
+              "term": "Instantaneous Power",
+              "definition": "The power output at a specific moment, calculated as the product of force, velocity, and the cosine of the angle between them."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following is a characteristic of a conservative force?",
+              "questionText": "Which of the following forces is an example of a conservative force?",
               "options": [
-                "Work depends on the path taken",
-                "Mechanical energy is not conserved",
-                "Work done around any closed path is zero",
-                "It always causes an increase in kinetic energy"
+                "Frictional force",
+                "Applied force",
+                "Gravitational force",
+                "Air resistance"
               ],
-              "correctAnswer": "Work done around any closed path is zero",
+              "correctAnswer": "Gravitational force",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Power is defined as:",
+              "questionText": "Mechanical energy is conserved in a system if it is only acted upon by which type of forces?",
               "options": [
-                "Total energy multiplied by time",
-                "Work divided by time",
-                "Force multiplied by displacement",
-                "Velocity divided by time"
+                "Non-conservative forces",
+                "Conservative forces",
+                "Frictional forces",
+                "Tension forces"
               ],
-              "correctAnswer": "Work divided by time",
+              "correctAnswer": "Conservative forces",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "When only conservative forces are acting, the quantity ______ remains constant during motion.",
+              "questionText": "When no non-conservative forces act, the sum of kinetic and potential energy remains ______ within a system.",
               "options": [
-                "mechanical energy",
-                "kinetic energy",
-                "work done",
-                "momentum"
+                "constant",
+                "increasing",
+                "decreasing",
+                "zero"
               ],
-              "correctAnswer": "mechanical energy",
+              "correctAnswer": "constant",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The unit of power in the SI system is the ______.",
+              "questionText": "Power is defined as the rate of doing ______.",
               "options": [
-                "joule",
-                "watt",
-                "newton",
-                "pascal"
+                "work",
+                "force",
+                "momentum",
+                "acceleration"
               ],
-              "correctAnswer": "watt",
+              "correctAnswer": "work",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -458,12 +461,13 @@
       "unitNumber": 4,
       "unitName": "Linear Momentum",
       "description": "Impulse-momentum theorem, conservation of linear momentum, elastic and inelastic collisions.",
+      "note": "# Unit 4: Linear Momentum\n\n## Overview\nThis unit explores **linear momentum**, a fundamental quantity describing motion, and how it changes through forces and collisions. Understanding the **impulse-momentum theorem**, **conservation of linear momentum**, and the nature of **elastic and inelastic collisions** is essential for solving AP Physics 1 problems involving interacting objects and forces over time.\n\n## Key Concepts at a Glance\n\n| **Concept**                  | **What It Is**                                                                 | **Why It Matters (AP angle)**                                               |\n|-----------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------|\n| **Linear Momentum**          | Product of an object's mass and velocity: $$\\vec{p} = m \\vec{v}$$              | Momentum conservation is a core principle tested in collision problems.    |\n| **Impulse**                  | Change in momentum caused by a force applied over time: $$\\vec{J} = \\vec{F} \\Delta t$$ | Connects force and time to changes in motion; key for impulse-momentum problems. |\n| **Impulse-Momentum Theorem** | $$\\vec{J} = \\Delta \\vec{p}$$ — Impulse equals change in momentum               | Allows solving for unknown forces, times, or velocities in dynamic scenarios. |\n| **Conservation of Momentum** | Total momentum before collision equals total momentum after, if no external forces | Fundamental for analyzing collisions and explosions on the AP exam.          |\n| **Elastic Collisions**       | Collisions where kinetic energy and momentum are conserved                      | Requires applying two conservation laws simultaneously; common AP problem type. |\n| **Inelastic Collisions**     | Collisions where objects stick or deform; momentum conserved but kinetic energy is not | Tests understanding of energy dissipation and momentum conservation.         |\n| **Center of Mass (COM)**     | Weighted average position of mass in a system                                  | Useful for analyzing system motion and collisions in multi-object systems.   |\n| **System vs. External Forces** | Distinguishing internal forces (between system parts) and external forces       | Critical for correctly applying conservation laws on the AP exam.            |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Start: Two Objects Approach\"] --> B[\"Identify System and External Forces\"]\n    B --> C[\"Calculate Initial Momenta: $$\\vec{p}_1 = m_1 \\vec{v}_1, \\quad \\vec{p}_2 = m_2 \\vec{v}_2$$\"]\n    C --> D[\"Determine Collision Type\"]\n    D --> E1[\"Elastic Collision\"]\n    D --> E2[\"Inelastic Collision\"]\n    E1 --> F1[\"Apply Conservation of Momentum: $$m_1 \\vec{v}_{1i} + m_2 \\vec{v}_{2i} = m_1 \\vec{v}_{1f} + m_2 \\vec{v}_{2f}$$\"]\n    F1 --> G1[\"Apply Conservation of Kinetic Energy: $$\\frac{1}{2} m_1 v_{1i}^2 + \\frac{1}{2} m_2 v_{2i}^2 = \\frac{1}{2} m_1 v_{1f}^2 + \\frac{1}{2} m_2 v_{2f}^2$$\"]\n    G1 --> H[\"Solve for Final Velocities\"]\n    E2 --> F2[\"Apply Conservation of Momentum Only\"]\n    F2 --> G2[\"Use $$\\vec{v}_{1f} = \\vec{v}_{2f}$$ if perfectly inelastic\"]\n    G2 --> H\n    H --> I[\"Analyze Results: velocities, kinetic energy change, impulse\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Law                     | Meaning / Use                                                                                  |\n|----------------------------------|-----------------------------------------------------------------------------------------------|\n| $$\\vec{p} = m \\vec{v}$$          | **Linear momentum** of an object                                                             |\n| $$\\vec{J} = \\vec{F} \\Delta t$$   | **Impulse**: force applied over time                                                         |\n| $$\\vec{J} = \\Delta \\vec{p} = m \\vec{v}_f - m \\vec{v}_i$$ | **Impulse-momentum theorem** relates impulse to momentum change                               |\n| $$\\sum \\vec{p}_{initial} = \\sum \\vec{p}_{final}$$ | **Conservation of linear momentum** in isolated systems                                      |\n| $$K = \\frac{1}{2} m v^2$$        | Kinetic energy formula                                                                         |\n| Elastic collision conditions:    | Both momentum and kinetic energy conserved                                                   |\n| Inelastic collision conditions:  | Momentum conserved, kinetic energy decreases (energy lost to deformation, heat, sound)       |\n| Perfectly inelastic collision:   | Objects stick together after collision, $$\\vec{v}_{1f} = \\vec{v}_{2f} = \\vec{v}_f$$          |\n\n## Connections & Comparisons\n\n| Aspect                      | Elastic Collision                               | Inelastic Collision                            | Perfectly Inelastic Collision                     |\n|-----------------------------|------------------------------------------------|------------------------------------------------|--------------------------------------------------|\n| **Momentum**                | Conserved                                       | Conserved                                       | Conserved                                         |\n| **Kinetic Energy**          | Conserved                                       | Not conserved                                  | Not conserved                                    |\n| **Final Velocities**        | Different velocities for objects after collision | Different velocities, but less kinetic energy | Objects move together with common velocity       |\n| **Energy Transformation**  | No loss; energy remains kinetic                 | Some kinetic energy converted to other forms  | Maximum kinetic energy lost within collision     |\n| **AP Exam Focus**           | Requires solving simultaneous equations        | Focus on momentum only                          | Simplified momentum conservation with combined mass |\n\n## Common AP Exam Traps\n\n- Confusing **impulse** with force alone; impulse depends on both force and time interval.\n- Forgetting that **momentum is a vector**; directions matter in collisions.\n- Assuming **kinetic energy is always conserved**; only true in elastic collisions.\n- Mixing up **internal vs. external forces** when deciding if momentum is conserved.\n- Neglecting to apply **impulse-momentum theorem** when forces act over time intervals.\n\n## Quick Review Checklist\n\n- [ ] Define **linear momentum** and calculate it for single objects.\n- [ ] Explain and apply the **impulse-momentum theorem** to relate force, time, and momentum change.\n- [ ] Identify when **momentum is conserved** and apply conservation to collision problems.\n- [ ] Distinguish between **elastic** and **inelastic collisions**, including kinetic energy considerations.\n- [ ] Solve problems involving **perfectly inelastic collisions** where objects stick together.\n- [ ] Analyze collisions in one dimension, accounting for vector directions.\n- [ ] Recognize the role of **external forces** in system momentum changes.\n- [ ] Use **kinetic energy calculations** to assess energy conservation or loss in collisions.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Impulse",
-              "definition": "A vector quantity equal to the product of the average force applied to an object and the time interval over which it acts, resulting in a change in momentum."
+              "definition": "The product of the average force applied to an object and the time duration over which it acts, resulting in a change in the object's momentum."
             },
             {
               "term": "Momentum",
@@ -471,62 +475,62 @@
             },
             {
               "term": "Impulse-Momentum Theorem",
-              "definition": "A principle stating that the impulse applied to an object equals the change in its momentum, expressed mathematically as $$\\vec{J} = \\Delta \\vec{p}$$."
+              "definition": "A principle stating that the impulse applied to an object equals the change in its momentum."
             },
             {
-              "term": "Linear Momentum Conservation",
-              "definition": "The principle that the total linear momentum of a closed system remains constant if no external forces act on it."
+              "term": "Average Force",
+              "definition": "The mean force exerted over a time interval, calculated as the impulse divided by the duration of application."
             },
             {
-              "term": "System",
-              "definition": "A collection of interacting objects or particles considered for analysis, isolated from external influences."
+              "term": "Change in Momentum",
+              "definition": "The vector difference between the final and initial momentum of an object over a given time interval."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "According to the impulse-momentum theorem, if a constant force $$\\vec{F}$$ acts over a time interval $$\\Delta t$$ on an object, the change in momentum $$\\Delta \\vec{p}$$ of the object is:",
+              "questionText": "According to the impulse-momentum theorem, which of the following correctly relates impulse $$\\vec{J}$$ to momentum $$\\vec{p}$$?",
               "options": [
-                "$$\\Delta \\vec{p} = \\vec{F} \\times \\Delta t$$",
-                "$$\\Delta \\vec{p} = \\vec{F} + \\Delta t$$",
-                "$$\\Delta \\vec{p} = \\vec{F} / \\Delta t$$",
-                "$$\\Delta \\vec{p} = \\vec{F} - \\Delta t$$"
+                "$$\\vec{J} = \\Delta \\vec{p}$$",
+                "$$\\vec{J} = \\vec{p} \\times \\vec{F}$$",
+                "$$\\vec{J} = m \\vec{v}$$",
+                "$$\\vec{J} = \\vec{F} / \\Delta t$$"
               ],
-              "correctAnswer": "$$\\Delta \\vec{p} = \\vec{F} \\times \\Delta t$$",
+              "correctAnswer": "$$\\vec{J} = \\Delta \\vec{p}$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which of the following best describes a closed system in terms of linear momentum?",
+              "questionText": "An object of mass $$m$$ moving at velocity $$\\vec{v}_i$$ experiences a constant force $$\\vec{F}$$ for a time $$\\Delta t$$, resulting in a final velocity $$\\vec{v}_f$$. Which expression gives the impulse exerted on the object?",
               "options": [
-                "No external forces act on the system, so total momentum is conserved.",
-                "External forces can change the system's total velocity.",
-                "The system gains momentum from outside influences.",
-                "The system's total mass increases during collision."
+                "$$\\vec{J} = \\vec{F} \\Delta t$$",
+                "$$\\vec{J} = m (\\vec{v}_i - \\vec{v}_f)$$",
+                "$$\\vec{J} = m \\vec{v}_f$$",
+                "$$\\vec{J} = \\vec{F} / m$$"
               ],
-              "correctAnswer": "No external forces act on the system, so total momentum is conserved.",
+              "correctAnswer": "$$\\vec{J} = \\vec{F} \\Delta t$$",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The quantity representing force applied over time, resulting in a change in momentum, is called ______.",
+              "questionText": "The impulse experienced by an object is equal to the ______, which is the change in momentum.",
               "options": [
                 "impulse",
-                "velocity",
-                "acceleration",
-                "momentum"
+                "average force",
+                "time interval",
+                "change in momentum"
               ],
-              "correctAnswer": "impulse",
+              "correctAnswer": "change in momentum",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "In an isolated system, the total linear ______ before an event equals the total linear ______ after the event.",
+              "questionText": "The quantity calculated by multiplying the average force by the time during which it acts is called the ______.",
               "options": [
-                "momentum; momentum",
-                "force; impulse",
-                "velocity; acceleration",
-                "mass; velocity"
+                "change in velocity",
+                "acceleration",
+                "impulse",
+                "mass"
               ],
-              "correctAnswer": "momentum; momentum",
+              "correctAnswer": "impulse",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -534,71 +538,71 @@
         {
           "flashcards": [
             {
+              "term": "Conservation of Linear Momentum",
+              "definition": "A principle stating that in the absence of external forces, the total momentum of a system remains constant."
+            },
+            {
               "term": "Elastic Collision",
-              "definition": "A collision in which both kinetic energy and momentum of the system are conserved."
+              "definition": "A collision where both kinetic energy and momentum of the system are conserved."
             },
             {
               "term": "Inelastic Collision",
-              "definition": "A collision where momentum is conserved, but kinetic energy is not conserved due to transformation into other forms of energy."
+              "definition": "A collision where momentum is conserved but kinetic energy is not conserved, often involving deformation or heat."
             },
             {
               "term": "Perfectly Inelastic Collision",
-              "definition": "A type of inelastic collision where colliding objects stick together and move with a common velocity after impact."
+              "definition": "A type of inelastic collision in which colliding objects stick together and move as a single mass after impact."
             },
             {
-              "term": "Coefficient of Restitution",
-              "definition": "A value between 0 and 1 that quantifies the elasticity of a collision, defined as the relative speed after collision divided by the relative speed before collision."
-            },
-            {
-              "term": "Center of Mass Frame",
-              "definition": "A reference frame in which the total momentum of a system is zero, simplifying analysis of collisions."
+              "term": "System of Particles",
+              "definition": "A collection of interacting objects considered together for the purpose of analyzing conservation laws and internal forces."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "In a perfectly inelastic collision between two objects, which of the following quantities is always conserved?",
+              "questionText": "Which of the following must be conserved in all collisions in an isolated system?",
               "options": [
-                "Total momentum of the system",
-                "Total kinetic energy of the system",
-                "Both total momentum and kinetic energy",
-                "Neither momentum nor kinetic energy"
+                "Kinetic energy only",
+                "Momentum only",
+                "Both kinetic energy and momentum",
+                "Neither kinetic energy nor momentum"
               ],
-              "correctAnswer": "Total momentum of the system",
+              "correctAnswer": "Momentum only",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which statement is true for an elastic collision in one dimension?",
+              "questionText": "In a perfectly inelastic collision between two objects, what is true about the final velocities?",
               "options": [
-                "Kinetic energy and momentum are conserved.",
-                "Only kinetic energy is conserved.",
-                "Only momentum is conserved.",
-                "Neither kinetic energy nor momentum is conserved."
+                "The objects rebound with equal and opposite velocities",
+                "The objects move together with a common velocity",
+                "The objects maintain their initial velocities",
+                "The objects come to rest immediately after collision"
               ],
-              "correctAnswer": "Kinetic energy and momentum are conserved.",
+              "correctAnswer": "The objects move together with a common velocity",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "In an ______ collision, the colliding bodies rebound without lasting deformation or generation of heat.",
+              "questionText": "In an elastic collision, both ______ and ______ are conserved quantities.",
               "options": [
-                "elastic",
-                "inelastic",
-                "perfectly inelastic",
-                "explosive"
+                "momentum; kinetic energy",
+                "momentum; potential energy",
+                "kinetic energy; potential energy",
+                "momentum; temperature"
               ],
-              "correctAnswer": "elastic",
+              "correctAnswer": "momentum; kinetic energy",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The ______ is a parameter that measures how much kinetic energy is conserved in a collision, with a value of 1 indicating a perfectly elastic collision.",
+              "questionText": "The total momentum of a system remains constant if no ______ forces act on it.",
               "options": [
-                "coefficient of restitution",
-                "impulse",
-                "momentum",
-                "elastic modulus"
+                "internal",
+                "external",
+                "frictional",
+                "magnetic"
               ],
-              "correctAnswer": "coefficient of restitution",
+              "correctAnswer": "external",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -609,75 +613,76 @@
       "unitNumber": 5,
       "unitName": "Torque and Rotational Dynamics",
       "description": "Torque, rotational inertia, Newton's second law for rotation, and static equilibrium of rigid bodies.",
+      "note": "# Unit 5: Torque and Rotational Dynamics\n\n## Overview\nThis unit explores **torque**, the rotational analogue of force, and how it causes objects to rotate. You will learn about **rotational inertia**, Newton’s second law applied to rotation, and the conditions for **static equilibrium** of rigid bodies. Mastery of these concepts is essential for solving AP Physics 1 problems involving rotational motion and equilibrium.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                         |\n|--------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| **Torque ($\\tau$)**       | A measure of the tendency of a force to cause rotation about an axis.          | Central to solving rotational dynamics problems on the exam.         |\n| **Lever arm ($r_\\perp$)** | The perpendicular distance from the axis of rotation to the line of action of the force. | Determines the effectiveness of a force in producing torque.        |\n| **Rotational inertia ($I$)** | The resistance of an object to changes in its rotational motion, depends on mass distribution. | Key to applying Newton’s 2nd law for rotation; varies by shape.      |\n| **Newton’s Second Law for Rotation** | $\\sum \\tau = I \\alpha$, relates net torque to angular acceleration.          | Fundamental equation for analyzing rotational motion problems.       |\n| **Angular acceleration ($\\alpha$)** | The rate of change of angular velocity.                                       | Connects torque and rotational inertia; appears in many AP problems. |\n| **Static Equilibrium**    | Condition where net force and net torque on a rigid body are zero.             | Essential for solving balance and stability problems on the exam.    |\n| **Center of Mass (COM)**  | The point where the mass of a body can be considered concentrated.              | Used to analyze torque and equilibrium in irregular objects.         |\n| **Rotational Kinetic Energy** | Energy due to rotational motion, $K = \\frac{1}{2} I \\omega^2$.                  | Appears in energy conservation problems involving rotation.          |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Apply a Force ($\\vec{F}$) at a Point\"] --> B[\"Determine Lever Arm ($r_\\perp$)\"]\n    B --> C[\"Calculate Torque: $\\tau = r_\\perp F$\"]\n    C --> D[\"Sum All Torques: $\\sum \\tau$\"]\n    D --> E[\"Use Newton's 2nd Law for Rotation: $\\sum \\tau = I \\alpha$\"]\n    E --> F[\"Solve for Angular Acceleration ($\\alpha$)\"]\n    F --> G[\"Analyze Rotational Motion or Equilibrium\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Law**                          | **Meaning / Use**                                     |\n|-------------------------------------------|------------------------------------------------------|\n| $$\\tau = r_\\perp F = r F \\sin \\theta$$   | Torque from force $F$ applied at distance $r$ with angle $\\theta$ to lever arm. |\n| $$\\sum \\tau = I \\alpha$$                   | Newton’s 2nd law for rotation: net torque equals moment of inertia times angular acceleration. |\n| $$I = \\sum m_i r_i^2$$                     | Moment of inertia for discrete masses; integral form for continuous bodies. |\n| $$\\alpha = \\frac{d\\omega}{dt}$$            | Angular acceleration as time derivative of angular velocity. |\n| $$K_{\\text{rot}} = \\frac{1}{2} I \\omega^2$$ | Rotational kinetic energy of a rotating object. |\n| Conditions for static equilibrium:         | $$\\sum \\vec{F} = 0 \\quad \\text{and} \\quad \\sum \\tau = 0$$ |\n| $$\\tau_{\\text{net}} = 0 \\implies \\text{no angular acceleration}$$ | Static or rotational equilibrium condition. |\n\n## Connections & Comparisons\n\n| **Concept**               | **Force**                         | **Torque**                         | **Linear Motion**                 | **Rotational Motion**               |\n|--------------------------|---------------------------------|----------------------------------|---------------------------------|-----------------------------------|\n| **Analogue**             | Force ($\\vec{F}$)                | Torque ($\\tau$)                  | Mass ($m$)                      | Moment of Inertia ($I$)            |\n| **Effect**               | Causes linear acceleration ($a$) | Causes angular acceleration ($\\alpha$) | $F = m a$                      | $\\sum \\tau = I \\alpha$             |\n| **Quantity**             | Vector                          | Pseudovector (depends on axis)  | Scalar                         | Scalar                            |\n| **Resistance to change** | Mass                           | Rotational inertia               | Inertia in linear motion        | Inertia in rotational motion       |\n| **Energy**               | Kinetic energy: $\\frac{1}{2} m v^2$ | Rotational kinetic energy: $\\frac{1}{2} I \\omega^2$ | Linear displacement ($x$)       | Angular displacement ($\\theta$)    |\n\n## Common AP Exam Traps\n\n- Confusing **torque** ($\\tau$) with force ($F$); torque depends on both force magnitude and lever arm.\n- Forgetting to use the **perpendicular component** of the lever arm or force when calculating torque.\n- Mixing up **rotational inertia** ($I$) formulas for different shapes; always check the shape and axis.\n- Neglecting to check **sign conventions** for torque (clockwise vs. counterclockwise).\n- Assuming static equilibrium means zero force only; must also have **zero net torque**.\n- Overlooking that **angular acceleration** is zero in equilibrium, not necessarily angular velocity.\n\n## Quick Review Checklist\n\n- [ ] Define and calculate **torque** using force and lever arm.\n- [ ] Explain the physical meaning of **rotational inertia** and how it depends on mass distribution.\n- [ ] Apply **Newton’s second law for rotation**: $\\sum \\tau = I \\alpha$.\n- [ ] Determine conditions for **static equilibrium**: net force and net torque zero.\n- [ ] Calculate **rotational kinetic energy** for rotating objects.\n- [ ] Analyze problems involving combined **translational and rotational motion**.\n- [ ] Use correct **sign conventions** for torque directions.\n- [ ] Identify and compute the **center of mass** for torque calculations.\n\n---\n\nThis guide prepares you to tackle rotational dynamics problems confidently on the AP Physics 1 exam by focusing on the essential concepts, formulas, and problem-solving strategies.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Torque",
-              "definition": "A measure of the effectiveness of a force to cause an object to rotate about an axis, calculated as the product of the force magnitude and the perpendicular distance from the axis to the line of action of the force."
+              "definition": "A measure of the rotational force applied to an object, calculated as the product of the force magnitude and the perpendicular distance from the pivot point to the line of action of the force."
             },
             {
-              "term": "Rotational inertia",
-              "definition": "The resistance of a rigid body to changes in its rotational motion, depending on both the body's mass distribution and the axis of rotation."
+              "term": "Rotational Inertia",
+              "definition": "The property of a rigid body that quantifies its resistance to changes in its angular velocity, depending on the mass distribution relative to the axis of rotation."
             },
             {
-              "term": "Lever arm",
-              "definition": "The shortest perpendicular distance from the axis of rotation to the line of action of the applied force."
+              "term": "Lever Arm (Moment Arm)",
+              "definition": "The shortest perpendicular distance between the axis of rotation and the line of action of the force applied."
             },
             {
-              "term": "Net torque",
-              "definition": "The vector sum of all torques acting on an object, determining the angular acceleration according to Newton's second law for rotation."
+              "term": "Right-Hand Rule for Torque",
+              "definition": "A rule stating that if the fingers of the right hand curl in the direction of rotation caused by a force, the thumb points in the direction of the torque vector."
             },
             {
-              "term": "Static equilibrium conditions",
-              "definition": "The state in which an object experiences zero net force and zero net torque, resulting in no linear or rotational acceleration."
+              "term": "Angular Equilibrium",
+              "definition": "The condition in which the net torque acting on a body is zero, resulting in no angular acceleration."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following expressions correctly represents torque $$\\tau$$ when a force $$F$$ is applied at a lever arm $$r$$ making an angle $$\\theta$$ with the lever arm?",
+              "questionText": "Which expression correctly defines torque $$\\tau$$ produced by a force $$F$$ applied at a distance $$r$$ from the pivot point at an angle $$\\theta$$ to the lever arm?",
               "options": [
-                "$$\\tau = F r \\sin \\theta$$",
-                "$$\\tau = F r \\cos \\theta$$",
-                "$$\\tau = F r$$",
-                "$$\\tau = F \\sin \\theta$$"
+                "$$\\tau = F \\cdot r \\cdot \\cos\\theta$$",
+                "$$\\tau = F \\cdot r \\cdot \\sin\\theta$$",
+                "$$\\tau = \\frac{F \\cdot r}{\\sin\\theta}$$",
+                "$$\\tau = F \\cdot r$$"
               ],
-              "correctAnswer": "$$\\tau = F r \\sin \\theta$$",
+              "correctAnswer": "$$\\tau = F \\cdot r \\cdot \\sin\\theta$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "A rigid body is in static equilibrium. Which of the following is true?",
+              "questionText": "If a force is applied tangentially to a rotating wheel, how does increasing the radius at which the force is applied affect the torque on the wheel?",
               "options": [
-                "Net force is zero and net torque is zero",
-                "Net force is zero but net torque is not zero",
-                "Net torque is zero but net force is not zero",
-                "Neither net force nor net torque is zero"
+                "Torque decreases as radius increases",
+                "Torque increases as radius increases",
+                "Torque remains the same regardless of radius",
+                "Torque depends only on force, not radius"
               ],
-              "correctAnswer": "Net force is zero and net torque is zero",
+              "correctAnswer": "Torque increases as radius increases",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The quantity that determines how difficult it is to change the rotational speed of a rigid body about a given axis is called ______.",
+              "questionText": "The rotational inertia of an object depends on the distribution of ______ about the axis of rotation.",
               "options": [
-                "rotational inertia",
-                "torque",
-                "angular velocity",
-                "angular acceleration"
+                "mass",
+                "velocity",
+                "force",
+                "acceleration"
               ],
-              "correctAnswer": "rotational inertia",
+              "correctAnswer": "mass",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The lever arm of a force is defined as the ______ from the axis of rotation to the line of action of the force.",
+              "questionText": "According to the right-hand rule, if the torque vector points out of the page, the rotation is ______.",
               "options": [
-                "perpendicular distance",
-                "parallel distance",
-                "magnitude of force",
-                "total distance"
+                "counterclockwise",
+                "clockwise",
+                "downward",
+                "upward"
               ],
-              "correctAnswer": "perpendicular distance",
+              "correctAnswer": "counterclockwise",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -685,71 +690,71 @@
         {
           "flashcards": [
             {
-              "term": "Newton's second law for rotation",
-              "definition": "The rotational analog of the classical law relating torque and angular acceleration, expressed as the product of rotational inertia and angular acceleration equals net torque."
+              "term": "Newton's Second Law for Rotation",
+              "definition": "States that the net torque acting on a body is equal to the product of its rotational inertia and angular acceleration, expressed as $$\\tau_{net} = I\\alpha$$."
             },
             {
-              "term": "Moment of inertia formula",
-              "definition": "The sum over all mass elements of the product of each mass and the square of its distance from the axis of rotation."
+              "term": "Static Equilibrium of a Rigid Body",
+              "definition": "A state where both the net force and net torque on the body are zero, resulting in no linear or angular acceleration."
             },
             {
-              "term": "Static equilibrium criteria",
-              "definition": "Conditions requiring both the net force and net torque acting on a body to be zero to ensure no translational or rotational acceleration."
+              "term": "Center of Mass",
+              "definition": "The unique point in an object where the weighted relative position of the distributed mass sums to zero and at which gravity can be considered to act."
             },
             {
-              "term": "Rotational kinetic energy",
-              "definition": "The energy associated with the rotation of an object, calculated as half the product of its moment of inertia and the square of its angular velocity."
+              "term": "Couple",
+              "definition": "A pair of equal and opposite forces whose lines of action do not coincide, creating a pure rotational effect without translation."
             },
             {
-              "term": "Torque sign convention",
-              "definition": "The system of assigning positive or negative signs to torques depending on their tendency to produce clockwise or counterclockwise rotation."
+              "term": "Rotational Kinetic Energy",
+              "definition": "The energy possessed by a rotating body due to its angular motion, expressed as $$K = \\frac{1}{2} I \\omega^2$$, where $$I$$ is rotational inertia and $$\\omega$$ is angular velocity."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "According to Newton's second law for rotation, the net torque $$\\tau_{net}$$ acting on a rigid body is related to angular acceleration $$\\alpha$$ and rotational inertia $$I$$ by which expression?",
+              "questionText": "For a rigid body rotating about a fixed axis, Newton's second law for rotation states that the net torque $$\\tau_{net}$$ equals:",
               "options": [
-                "$$\\tau_{net} = I \\alpha$$",
-                "$$\\tau_{net} = m a$$",
-                "$$\\tau_{net} = F r$$",
-                "$$\\tau_{net} = I / \\alpha$$"
+                "$$I \\cdot a$$",
+                "$$I \\cdot \\alpha$$",
+                "$$m \\cdot a$$",
+                "$$m \\cdot \\alpha$$"
               ],
-              "correctAnswer": "$$\\tau_{net} = I \\alpha$$",
+              "correctAnswer": "$$I \\cdot \\alpha$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which of the following expressions correctly represents the rotational kinetic energy $$K_{rot}$$ of a rigid body with moment of inertia $$I$$ and angular velocity $$\\omega$$?",
+              "questionText": "Which condition is necessary for a rigid body to be in static equilibrium?",
               "options": [
-                "$$K_{rot} = \\frac{1}{2} I \\omega^2$$",
-                "$$K_{rot} = I \\omega$$",
-                "$$K_{rot} = I \\omega^2$$",
-                "$$K_{rot} = \\frac{1}{2} m v^2$$"
+                "Net force equals mass times acceleration",
+                "Net torque equals zero",
+                "Net force and net torque both equal zero",
+                "Angular acceleration is positive"
               ],
-              "correctAnswer": "$$K_{rot} = \\frac{1}{2} I \\omega^2$$",
+              "correctAnswer": "Net force and net torque both equal zero",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The moment of inertia $$I$$ for a point mass $$m$$ located at a distance $$r$$ from the axis of rotation is given by $$I = m \\cdot $$ ______.",
+              "questionText": "A couple produces a pure ______ on a rigid body without causing any linear acceleration.",
               "options": [
-                "$$r^2$$",
-                "$$r$$",
-                "$$2r$$",
-                "$$\\sqrt{r}$$"
+                "rotation",
+                "translation",
+                "equilibrium",
+                "acceleration"
               ],
-              "correctAnswer": "$$r^2$$",
+              "correctAnswer": "rotation",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "For an object in static equilibrium, the sum of the clockwise torques is equal to the sum of the ______ torques.",
+              "questionText": "The rotational kinetic energy of a spinning object is proportional to its rotational inertia and the square of its ______.",
               "options": [
-                "counterclockwise",
-                "net",
-                "zero",
-                "external"
+                "angular velocity",
+                "angular acceleration",
+                "linear velocity",
+                "force"
               ],
-              "correctAnswer": "counterclockwise",
+              "correctAnswer": "angular velocity",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -760,75 +765,76 @@
       "unitNumber": 6,
       "unitName": "Energy and Momentum of Rotating Systems",
       "description": "Rotational kinetic energy, angular momentum, and conservation laws applied to rotating systems.",
+      "note": "# Unit 6: Energy and Momentum of Rotating Systems\n\n## Overview\nThis unit explores the dynamics of rotating objects, focusing on **rotational kinetic energy**, **angular momentum**, and the **conservation laws** that govern them. Understanding these concepts is crucial for solving AP Physics 1 problems involving rotating rigid bodies, where linear analogies extend to rotational motion.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                           |\n|--------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------------|\n| **Rotational Kinetic Energy** | Energy due to an object's rotation, analogous to linear kinetic energy.       | Essential for calculating energy in rotating systems and solving work-energy problems. |\n| **Moment of Inertia ($$I$$)** | Measure of an object's resistance to angular acceleration, depends on mass distribution. | Determines how torque affects angular acceleration; critical for rotational dynamics. |\n| **Angular Momentum ($$\\vec{L}$$)** | Rotational analog of linear momentum, $$\\vec{L} = I \\vec{\\omega}$$.           | Conserved quantity in isolated systems; key to solving collision and rotational motion problems. |\n| **Torque ($$\\tau$$)**          | Rotational equivalent of force, causes changes in angular momentum.           | Connects forces to rotational acceleration; used in Newton’s second law for rotation. |\n| **Conservation of Angular Momentum** | Total angular momentum remains constant if no external torque acts.          | Fundamental principle for analyzing isolated rotating systems and collisions. |\n| **Parallel Axis Theorem**      | Allows calculation of moment of inertia about any axis parallel to one through the center of mass. | Simplifies moment of inertia calculations for complex objects. |\n| **Rotational Work and Power**  | Work done by torque and power delivered in rotational motion.                  | Links rotational motion to energy transfer; useful for mechanical energy problems. |\n| **Rolling Motion**             | Combination of rotational and translational motion without slipping.           | Common in AP problems involving wheels and spheres; requires combining linear and angular quantities. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Apply Torque ($$\\tau$$)\"] --> B[\"Angular Acceleration ($$\\alpha = \\frac{\\tau}{I}$$)\"]\n    B --> C[\"Change in Angular Velocity ($$\\omega$$)\"]\n    C --> D[\"Change in Angular Momentum ($$\\Delta \\vec{L} = I \\Delta \\omega$$)\"]\n    D --> E[\"Rotational Kinetic Energy ($$K = \\frac{1}{2} I \\omega^2$$)\"]\n    E --> F[\"Work Done by Torque ($$W = \\tau \\theta$$)\"]\n    F --> G[\"Power ($$P = \\tau \\omega$$)\"]\n```\n\nThis flowchart summarizes the cause-effect relationships in rotational dynamics: applying torque produces angular acceleration, changing angular velocity and momentum, which affects kinetic energy, work, and power.\n\n## Essential Formulas / Laws / Rules\n\n| **Quantity**                     | **Formula / Definition**                                                                                     |\n|---------------------------------|--------------------------------------------------------------------------------------------------------------|\n| **Rotational Kinetic Energy**   | $$K = \\frac{1}{2} I \\omega^2$$                                                                               |\n| **Moment of Inertia**            | $$I = \\sum m_i r_i^2$$ (discrete), or $$I = \\int r^2 dm$$ (continuous)                                       |\n| **Torque**                      | $$\\tau = r F \\sin \\theta$$ or $$\\tau = I \\alpha$$                                                            |\n| **Angular Momentum**             | $$\\vec{L} = I \\vec{\\omega}$$                                                                                  |\n| **Newton’s 2nd Law for Rotation**| $$\\sum \\tau = I \\alpha$$                                                                                       |\n| **Conservation of Angular Momentum** | $$L_{\\text{initial}} = L_{\\text{final}} \\quad \\Rightarrow \\quad I_i \\omega_i = I_f \\omega_f$$               |\n| **Parallel Axis Theorem**        | $$I = I_{\\text{CM}} + M d^2$$ where $$d$$ is distance between axes                                            |\n| **Work done by Torque**          | $$W = \\tau \\theta$$ where $$\\theta$$ is angular displacement in radians                                       |\n| **Power in Rotational Motion**   | $$P = \\tau \\omega$$                                                                                             |\n| **Rolling without slipping**     | $$v = \\omega r$$                                                                                                |\n\n## Connections & Comparisons\n\n| **Concept**                  | **Rotational Version**                          | **Linear Version**                          | **Key Difference / Connection**                        |\n|-----------------------------|------------------------------------------------|--------------------------------------------|--------------------------------------------------------|\n| **Kinetic Energy**           | $$K = \\frac{1}{2} I \\omega^2$$                  | $$K = \\frac{1}{2} m v^2$$                   | Moment of inertia $$I$$ replaces mass $$m$$; angular velocity $$\\omega$$ replaces linear velocity $$v$$ |\n| **Momentum**                 | $$\\vec{L} = I \\vec{\\omega}$$                     | $$\\vec{p} = m \\vec{v}$$                      | Angular momentum depends on distribution of mass (via $$I$$) |\n| **Force vs Torque**          | $$\\tau = r F \\sin \\theta$$                       | $$F = m a$$                                  | Torque is force applied at a distance; causes angular acceleration |\n| **Newton’s 2nd Law**         | $$\\sum \\tau = I \\alpha$$                         | $$\\sum F = m a$$                             | Both relate cause (force/torque) to acceleration (linear/angular) |\n| **Conservation Laws**        | $$L_{\\text{initial}} = L_{\\text{final}}$$       | $$p_{\\text{initial}} = p_{\\text{final}}$$   | Angular momentum conserved when no external torque; linear momentum conserved when no external force |\n\n## Common AP Exam Traps\n\n- Confusing **moment of inertia** with mass; moment of inertia depends on both mass and how it is distributed relative to the axis.\n- Forgetting to convert angles to **radians** when using $$W = \\tau \\theta$$ or angular kinematics.\n- Applying conservation of angular momentum incorrectly when **external torques** are present.\n- Mixing up **rolling without slipping** conditions; must use $$v = \\omega r$$ to relate linear and angular velocities.\n- Neglecting the **parallel axis theorem** when the axis of rotation is not through the center of mass.\n\n## Quick Review Checklist\n\n- [ ] Explain the physical meaning of **rotational kinetic energy** and calculate it for rigid bodies.\n- [ ] Calculate **moment of inertia** for common shapes and apply the **parallel axis theorem**.\n- [ ] Use **torque** and **Newton’s second law for rotation** to find angular acceleration.\n- [ ] Apply **conservation of angular momentum** to solve problems involving isolated rotating systems.\n- [ ] Relate **work** and **power** in rotational motion using torque and angular displacement/velocity.\n- [ ] Analyze **rolling motion** combining translational and rotational kinematics.\n- [ ] Distinguish when to use linear vs. rotational analogs in problem-solving.\n- [ ] Avoid common pitfalls related to units, external torques, and slipping conditions.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Rotational kinetic energy",
-              "definition": "The energy possessed by a body due to its rotation about an axis, expressed as $$\\frac{1}{2}I\\omega^2$$, where $$I$$ is the moment of inertia and $$\\omega$$ is the angular velocity."
+              "term": "Rotational Kinetic Energy",
+              "definition": "The energy associated with the rotation of an object, given by $$K = \\tfrac{1}{2}I\\omega^2$$, where $$I$$ is the moment of inertia and $$\\omega$$ the angular velocity."
             },
             {
-              "term": "Moment of inertia",
-              "definition": "A scalar measure of an object's resistance to changes in its rotational motion, dependent on mass distribution relative to the axis of rotation."
+              "term": "Moment of Inertia",
+              "definition": "A scalar measure of an object's resistance to changes in its rotational motion, depending on the mass distribution relative to the rotation axis."
             },
             {
-              "term": "Angular velocity",
-              "definition": "A vector quantity that represents the rate of change of angular displacement, defined as $$\\omega = \\frac{d\\theta}{dt}$$, with units of radians per second."
+              "term": "Angular Velocity",
+              "definition": "The rate of change of angular displacement, expressed in radians per second and typically denoted by $$\\omega$$."
             },
             {
-              "term": "Torque",
-              "definition": "The rotational equivalent of force; it causes angular acceleration and is defined as $$\\tau = r \\times F$$ where $$r$$ is the position vector from the axis and $$F$$ is the applied force."
+              "term": "Rigid Body Rotation",
+              "definition": "A motion where all particles of a body rotate around a fixed axis with the same angular velocity while maintaining relative positions."
             },
             {
-              "term": "Rotational work",
-              "definition": "The work done by a torque when it causes an angular displacement, calculated by $$W = \\tau \\Delta \\theta$$ when torque is constant over the angular displacement."
+              "term": "Parallel Axis Theorem",
+              "definition": "A principle allowing calculation of the moment of inertia about any axis parallel to one through the center of mass by adding $$Md^2$$ to the central moment, where $$M$$ is mass and $$d$$ the distance between axes."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which expression correctly calculates the rotational kinetic energy of a rigid body?",
+              "questionText": "Which expression correctly represents the rotational kinetic energy of a rotating rigid body?",
               "options": [
-                "$$\\frac{1}{2}mv^2$$",
-                "$$I\\alpha$$",
-                "$$\\frac{1}{2}I\\omega^2$$",
-                "$$mgh$$"
+                "$$K = \\frac{1}{2}mv^2$$",
+                "$$K = \\frac{1}{2}I\\omega^2$$",
+                "$$K = I\\alpha$$",
+                "$$K = mgh$$"
               ],
-              "correctAnswer": "$$\\frac{1}{2}I\\omega^2$$",
+              "correctAnswer": "$$K = \\frac{1}{2}I\\omega^2$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "What effect does increasing the moment of inertia have on a rotating object's angular acceleration if the applied torque remains constant?",
+              "questionText": "The moment of inertia depends on which of the following:",
               "options": [
-                "Angular acceleration increases",
-                "Angular acceleration decreases",
-                "Angular acceleration remains the same",
-                "Angular velocity becomes zero"
+                "Only the total mass of the object",
+                "The mass distribution relative to the axis of rotation",
+                "Only the shape of the object",
+                "The angular velocity of the object"
               ],
-              "correctAnswer": "Angular acceleration decreases",
+              "correctAnswer": "The mass distribution relative to the axis of rotation",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The moment of inertia depends primarily on the ______ of the mass relative to the axis of rotation.",
+              "questionText": "The moment of inertia of a body about an axis parallel to its center of mass axis can be found using the ________ theorem.",
               "options": [
-                "distribution",
-                "temperature",
-                "speed",
-                "volume"
+                "Conservation of Angular Momentum",
+                "Parallel Axis",
+                "Work-Energy",
+                "Torque"
               ],
-              "correctAnswer": "distribution",
+              "correctAnswer": "Parallel Axis",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Angular velocity is defined as the rate of change of ______ with respect to time.",
+              "questionText": "In rigid body rotation, every particle in the body has the same ________ but may have different linear velocities.",
               "options": [
-                "angular displacement",
-                "linear displacement",
-                "momentum",
-                "torque"
+                "Angular Velocity",
+                "Linear Acceleration",
+                "Moment of Inertia",
+                "Torque"
               ],
-              "correctAnswer": "angular displacement",
+              "correctAnswer": "Angular Velocity",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -836,71 +842,71 @@
         {
           "flashcards": [
             {
-              "term": "Angular momentum",
-              "definition": "A vector quantity representing the product of moment of inertia and angular velocity, given by $$L = I\\omega$$, conserved in a closed system with no external torque."
+              "term": "Angular Momentum",
+              "definition": "A vector quantity representing the rotational analog of linear momentum, calculated as the product of moment of inertia and angular velocity."
             },
             {
-              "term": "Conservation of angular momentum",
-              "definition": "The principle stating that if no external torque acts on a system, its total angular momentum remains constant."
+              "term": "Conservation of Angular Momentum",
+              "definition": "A principle stating that if no external torque acts on a system, its total angular momentum remains constant."
             },
             {
-              "term": "Rotational analog of Newton's second law",
-              "definition": "A relationship describing how the net torque acting on a rotating object causes angular acceleration, expressed as $$\\tau_{net} = I\\alpha$$."
+              "term": "Torque",
+              "definition": "A measure of the effectiveness of a force to cause rotational acceleration about an axis, given by $$\\tau = rF\\sin\\theta$$."
             },
             {
-              "term": "Rolling without slipping",
-              "definition": "A motion condition where the linear velocity of the rolling object's point of contact with the surface is zero, relating linear velocity $$v$$ and angular velocity $$\\omega$$ by $$v = r\\omega$$."
+              "term": "Rolling Without Slipping",
+              "definition": "A type of motion where a rolling object moves such that its point of contact with the surface has zero velocity relative to the surface."
             },
             {
-              "term": "Gyroscopic stability",
-              "definition": "The tendency of a spinning object to resist changes to its axis of rotation due to the conservation of angular momentum, stabilizing orientation."
+              "term": "Rotational Work and Power",
+              "definition": "Work done by torque during rotation calculated as $$W = \\tau \\theta$$, and the power as the rate of doing this work, $$P = \\tau \\omega$$."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "If the net external torque on a rotating system is zero, what happens to its angular momentum?",
+              "questionText": "According to the conservation of angular momentum, if the moment of inertia of a rotating object decreases, its angular velocity will:",
               "options": [
-                "It increases",
-                "It decreases",
-                "It remains constant",
-                "It oscillates"
+                "Decrease",
+                "Remain the same",
+                "Increase",
+                "Become zero"
               ],
-              "correctAnswer": "It remains constant",
+              "correctAnswer": "Increase",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which equation represents the rotational analog to Newton's second law of motion?",
+              "questionText": "Torque is maximized when the angle between the force vector and lever arm is:",
               "options": [
-                "$$F = ma$$",
-                "$$\\tau = I\\alpha$$",
-                "$$p = mv$$",
-                "$$\\omega = \\theta / t$$"
+                "0 degrees",
+                "45 degrees",
+                "90 degrees",
+                "180 degrees"
               ],
-              "correctAnswer": "$$\\tau = I\\alpha$$",
+              "correctAnswer": "90 degrees",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The condition for rolling without slipping requires that linear velocity $$v$$ equals radius $$r$$ times the angular velocity ______.",
+              "questionText": "If no external ________ acts on a system, the angular momentum of the system is conserved.",
               "options": [
-                "$$\\omega$$",
-                "$$\\alpha$$",
-                "torque",
-                "momentum"
+                "Force",
+                "Acceleration",
+                "Torque",
+                "Energy"
               ],
-              "correctAnswer": "$$\\omega$$",
+              "correctAnswer": "Torque",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Gyroscopic stability arises from the conservation of ______ in a rotating system.",
+              "questionText": "The instantaneous power delivered by a torque $$\\tau$$ rotating an object at angular velocity $$\\omega$$ is given by ________.",
               "options": [
-                "angular momentum",
-                "linear momentum",
-                "torque",
-                "kinetic energy"
+                "$$P=\\tau\\omega$$",
+                "$$P=\\tau\\alpha$$",
+                "$$P=I\\omega^2$$",
+                "$$P=mgh$$"
               ],
-              "correctAnswer": "angular momentum",
+              "correctAnswer": "$$P=\\tau\\omega$$",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -911,75 +917,76 @@
       "unitNumber": 7,
       "unitName": "Oscillations",
       "description": "Simple harmonic motion, period and frequency of springs and pendulums, energy in oscillating systems.",
+      "note": "# Unit 7: Oscillations\n\n## Overview\nThis unit explores **simple harmonic motion (SHM)**, focusing on oscillations of springs and pendulums. Understanding the **period**, **frequency**, and **energy transformations** in oscillating systems is essential for solving AP Physics 1 problems involving waves, forces, and energy conservation.\n\n## Key Concepts at a Glance\n\n| **Concept**                 | **What It Is**                                                                 | **Why It Matters (AP angle)**                                          |\n|----------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| Simple Harmonic Motion (SHM) | Periodic motion where restoring force is proportional to displacement          | Foundation for analyzing oscillations and wave phenomena             |\n| Period ($$T$$)              | Time for one complete oscillation                                              | Used to calculate frequency and relate to energy and forces          |\n| Frequency ($$f$$)           | Number of oscillations per second                                              | Connects time domain to wave behavior; $$f = \\frac{1}{T}$$            |\n| Hooke’s Law                 | Restoring force in springs: $$F = -kx$$                                       | Governs spring oscillations; critical for force and energy problems  |\n| Mass-Spring System          | Oscillator where mass attached to spring exhibits SHM                         | Model system for many AP problems; period depends on mass and spring constant |\n| Simple Pendulum             | Mass swinging on a string under gravity exhibiting SHM                        | Tests understanding of gravitational effects on oscillations        |\n| Energy in Oscillations      | Exchange between kinetic and potential energy during oscillation              | Key for conservation of energy problems and understanding motion     |\n| Angular Frequency ($$\\omega$$) | Rate of oscillation in radians per second: $$\\omega = 2\\pi f$$                 | Links time-based and angular descriptions of oscillations            |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Displacement from equilibrium (x)\"] --> B[\"Restoring force (F = -kx for springs)\"]\n    B --> C[\"Acceleration towards equilibrium\"]\n    C --> D[\"Velocity changes direction at maximum displacement\"]\n    D --> E[\"Kinetic energy maximizes at equilibrium (x=0)\"]\n    E --> F[\"Potential energy maximizes at max displacement\"]\n    F --> A\n```\n\n**Explanation:**  \n- The restoring force acts opposite displacement, causing acceleration toward equilibrium.  \n- Velocity is zero at maximum displacement and maximum at equilibrium.  \n- Energy oscillates between kinetic and potential forms, maintaining total mechanical energy.\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Law                         | Meaning / Use                                           |\n|-------------------------------------|--------------------------------------------------------|\n| $$F = -kx$$                         | Hooke’s Law: restoring force in a spring              |\n| $$a = -\\frac{k}{m}x$$               | Acceleration in SHM proportional to displacement       |\n| $$T = 2\\pi \\sqrt{\\frac{m}{k}}$$    | Period of mass-spring system                            |\n| $$f = \\frac{1}{T}$$                 | Frequency, reciprocal of period                         |\n| $$\\omega = 2\\pi f = \\sqrt{\\frac{k}{m}}$$ | Angular frequency of mass-spring oscillator            |\n| $$T = 2\\pi \\sqrt{\\frac{L}{g}}$$    | Period of simple pendulum (small angles)                |\n| $$E = K + U = \\frac{1}{2}kA^2$$    | Total mechanical energy in SHM (constant)               |\n| $$K = \\frac{1}{2}mv^2$$             | Kinetic energy during oscillation                        |\n| $$U = \\frac{1}{2}kx^2$$             | Potential energy stored in spring                        |\n\n## Connections & Comparisons\n\n| Aspect                  | Mass-Spring System                                | Simple Pendulum                                  |\n|-------------------------|-------------------------------------------------|-------------------------------------------------|\n| Restoring Force         | $$F = -kx$$ (spring force)                       | $$F = -mg \\sin \\theta \\approx -mg \\theta$$ (gravity) |\n| Period Formula          | $$T = 2\\pi \\sqrt{\\frac{m}{k}}$$                  | $$T = 2\\pi \\sqrt{\\frac{L}{g}}$$                  |\n| Dependence on Amplitude | Period independent of amplitude (ideal SHM)      | Period independent of amplitude (small angles)  |\n| Energy Storage          | Elastic potential energy in spring                | Gravitational potential energy                    |\n| Angular Frequency       | $$\\omega = \\sqrt{\\frac{k}{m}}$$                   | $$\\omega = \\sqrt{\\frac{g}{L}}$$                   |\n\n## Common AP Exam Traps\n\n- Confusing **period** and **frequency**; remember $$f = \\frac{1}{T}$$, not equal values.  \n- Using the pendulum period formula for large angles; it only applies for **small-angle approximations**.  \n- Forgetting the negative sign in Hooke’s Law, which indicates the restoring force direction.  \n- Mixing up energy forms: kinetic energy is max at equilibrium, potential energy max at max displacement.  \n- Assuming damping or frictionless conditions without being told; most AP problems assume ideal SHM.  \n\n## Quick Review Checklist\n\n- [ ] Define **simple harmonic motion** and identify examples.  \n- [ ] Calculate **period** and **frequency** for mass-spring and pendulum systems.  \n- [ ] Apply **Hooke’s Law** to find restoring forces and accelerations.  \n- [ ] Derive and use formulas for **angular frequency** $$\\omega$$.  \n- [ ] Analyze energy transformations between **kinetic** and **potential** energy during oscillations.  \n- [ ] Explain the **small-angle approximation** for pendulum motion.  \n- [ ] Solve problems involving total mechanical energy conservation in oscillating systems.  \n- [ ] Distinguish between the characteristics of mass-spring systems and simple pendulums.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Simple Harmonic Motion (SHM)",
-              "definition": "A type of periodic motion where the restoring force is directly proportional to the displacement and acts in the opposite direction."
-            },
-            {
-              "term": "Period of a Spring Oscillator",
-              "definition": "The time it takes for the mass attached to a spring to complete one full cycle of oscillation, dependent on mass and spring constant."
-            },
-            {
-              "term": "Frequency of Oscillation",
-              "definition": "The number of oscillation cycles completed per unit time, typically expressed in hertz (Hz)."
-            },
-            {
-              "term": "Amplitude in Oscillations",
-              "definition": "The maximum displacement from the equilibrium position during one cycle of oscillation."
+              "definition": "An oscillatory motion where the restoring force is directly proportional and opposite to the displacement from the equilibrium position."
             },
             {
               "term": "Restoring Force in SHM",
-              "definition": "The force responsible for returning the system to its equilibrium position, proportional to displacement but opposite in direction."
+              "definition": "The force acting toward the equilibrium position that causes the oscillation and is proportional to the negative of displacement."
+            },
+            {
+              "term": "Period of a Mass-Spring System",
+              "definition": "The time required for one complete oscillation of a mass attached to a spring, calculated as $$T = 2\\pi \\sqrt{\\frac{m}{k}}$$ where $$m$$ is mass and $$k$$ is spring constant."
+            },
+            {
+              "term": "Frequency of Oscillation",
+              "definition": "The number of complete oscillations per unit time, defined as the reciprocal of the period $$f = \\frac{1}{T}$$."
+            },
+            {
+              "term": "Displacement in SHM",
+              "definition": "The variable representing how far an oscillating object is from its equilibrium position at a given time."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following expressions gives the period $$T$$ of a mass $$m$$ attached to a spring with spring constant $$k$$ undergoing simple harmonic motion?",
+              "questionText": "Which equation best represents the restoring force $$F$$ acting on an object in simple harmonic motion?",
               "options": [
-                "$$T = 2\\pi\\sqrt{\\frac{m}{k}}$$",
-                "$$T = 2\\pi\\sqrt{\\frac{k}{m}}$$",
-                "$$T = \\frac{1}{2\\pi}\\sqrt{mk}$$",
-                "$$T = 2\\pi m k$$"
+                "$$F = -kx$$",
+                "$$F = kx$$",
+                "$$F = mg$$",
+                "$$F = mv^2/r$$"
               ],
-              "correctAnswer": "$$T = 2\\pi\\sqrt{\\frac{m}{k}}$$",
+              "correctAnswer": "$$F = -kx$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "The frequency $$f$$ of an oscillator is given by which relationship to its period $$T$$?",
+              "questionText": "What is the period $$T$$ of a mass $$m$$ attached to a spring with spring constant $$k$$?",
               "options": [
-                "$$f = \\frac{1}{T}$$",
-                "$$f = 2\\pi T$$",
-                "$$f = T^2$$",
-                "$$f = \\sqrt{T}$$"
+                "$$T = 2\\pi \\sqrt{\\frac{m}{k}}$$",
+                "$$T = 2\\pi \\sqrt{\\frac{k}{m}}$$",
+                "$$T = \\frac{1}{2\\pi} \\sqrt{\\frac{k}{m}}$$",
+                "$$T = \\frac{1}{2\\pi} \\sqrt{\\frac{m}{k}}$$"
               ],
-              "correctAnswer": "$$f = \\frac{1}{T}$$",
+              "correctAnswer": "$$T = 2\\pi \\sqrt{\\frac{m}{k}}$$",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "In simple harmonic motion, the restoring force is always directed toward the ______ position.",
+              "questionText": "In simple harmonic motion, the frequency $$f$$ is the reciprocal of the ______.",
               "options": [
-                "equilibrium",
-                "maximum displacement",
+                "period",
                 "amplitude",
-                "frequency"
+                "wavelength",
+                "restoring force"
               ],
-              "correctAnswer": "equilibrium",
+              "correctAnswer": "period",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The period of a simple harmonic oscillator increases as the mass attached to the spring ______.",
+              "questionText": "The restoring force in SHM is ______ to the displacement from equilibrium.",
               "options": [
-                "increases",
-                "decreases",
-                "remains the same",
-                "doubles the spring constant"
+                "proportional and opposite",
+                "proportional and identical",
+                "independent",
+                "equal to zero"
               ],
-              "correctAnswer": "increases",
+              "correctAnswer": "proportional and opposite",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -987,71 +994,71 @@
         {
           "flashcards": [
             {
-              "term": "Period of a Simple Pendulum",
-              "definition": "The time required for one complete back-and-forth swing of a mass suspended by a light, rigid rod or string, depending mainly on pendulum length and gravity."
+              "term": "Simple Pendulum Period Formula",
+              "definition": "The time for one complete oscillation of a simple pendulum of length $$L$$ under gravity $$g$$, given by $$T = 2\\pi \\sqrt{\\frac{L}{g}}$$."
             },
             {
-              "term": "Potential Energy in Oscillating Systems",
-              "definition": "The energy stored in the system due to displacement from equilibrium, which converts into kinetic energy during oscillation."
+              "term": "Mechanical Energy in Oscillating Systems",
+              "definition": "The constant total energy in an ideal oscillating system, sum of kinetic and potential energies, with no friction or damping."
             },
             {
-              "term": "Kinetic Energy in Oscillating Systems",
-              "definition": "The energy associated with the motion of the mass as it passes through the equilibrium position during oscillation."
+              "term": "Potential Energy in SHM",
+              "definition": "The energy stored due to displacement, given by $$U = \\frac{1}{2}kx^2$$ for a spring system where $$k$$ is spring constant and $$x$$ is displacement."
             },
             {
-              "term": "Mechanical Energy Conservation in SHM",
-              "definition": "The principle that total energy (kinetic plus potential) remains constant in the absence of non-conservative forces in an oscillating system."
+              "term": "Kinetic Energy in SHM",
+              "definition": "The energy of motion of the oscillating object, calculated by $$K = \\frac{1}{2}mv^2$$ where $$m$$ is mass and $$v$$ is instantaneous velocity."
             },
             {
-              "term": "Damping Effects in Oscillations",
-              "definition": "The gradual reduction of amplitude over time due to non-conservative forces like friction or air resistance."
+              "term": "Frequency and Period Relationship in Pendulums",
+              "definition": "The frequency is the reciprocal of period where $$f = \\frac{1}{T} = \\frac{1}{2\\pi} \\sqrt{\\frac{g}{L}}$$ for a simple pendulum under gravity."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which formula gives the period $$T$$ of a simple pendulum of length $$L$$ near Earth's surface with gravitational acceleration $$g$$?",
+              "questionText": "What is the expression for the period $$T$$ of a simple pendulum of length $$L$$ under gravity $$g$$?",
               "options": [
-                "$$T = 2\\pi\\sqrt{\\frac{L}{g}}$$",
-                "$$T = 2\\pi\\sqrt{\\frac{g}{L}}$$",
-                "$$T = \\frac{1}{2\\pi}\\sqrt{Lg}$$",
-                "$$T = 2\\pi g L$$"
+                "$$T = 2\\pi \\sqrt{\\frac{L}{g}}$$",
+                "$$T = 2\\pi \\sqrt{\\frac{g}{L}}$$",
+                "$$T = \\pi \\sqrt{\\frac{L}{g}}$$",
+                "$$T = \\frac{1}{2\\pi} \\sqrt{\\frac{L}{g}}$$"
               ],
-              "correctAnswer": "$$T = 2\\pi\\sqrt{\\frac{L}{g}}$$",
+              "correctAnswer": "$$T = 2\\pi \\sqrt{\\frac{L}{g}}$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "At the maximum displacement of an oscillating mass on a spring, what is the kinetic energy and potential energy respectively?",
+              "questionText": "In an ideal oscillating system undergoing SHM, how does the total mechanical energy behave over time?",
               "options": [
-                "Kinetic energy is zero; potential energy is maximum",
-                "Kinetic energy is maximum; potential energy is zero",
-                "Both kinetic and potential energy are zero",
-                "Kinetic and potential energy are equal"
+                "It remains constant",
+                "It gradually increases",
+                "It gradually decreases",
+                "It oscillates between zero and maximum"
               ],
-              "correctAnswer": "Kinetic energy is zero; potential energy is maximum",
+              "correctAnswer": "It remains constant",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The total mechanical energy in an ideal simple harmonic oscillator is the sum of the kinetic energy and ______ energy.",
+              "questionText": "In a mass-spring system, the potential energy at displacement $$x$$ is given by ______.",
               "options": [
-                "potential",
-                "thermal",
-                "chemical",
-                "electrical"
+                "$$\\frac{1}{2}kx^2$$",
+                "$$kx$$",
+                "$$\\frac{1}{2}mv^2$$",
+                "$$mgx$$"
               ],
-              "correctAnswer": "potential",
+              "correctAnswer": "$$\\frac{1}{2}kx^2$$",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Over time, damping forces cause the amplitude of oscillations to ______.",
+              "questionText": "For a simple pendulum, the frequency $$f$$ is inversely proportional to the square root of the ______.",
               "options": [
-                "decrease",
-                "increase",
-                "remain constant",
-                "oscillate unpredictably"
+                "length $$L$$",
+                "mass $$m$$",
+                "gravity $$g$$",
+                "amplitude $$A$$"
               ],
-              "correctAnswer": "decrease",
+              "correctAnswer": "length $$L$$",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1062,75 +1069,76 @@
       "unitNumber": 8,
       "unitName": "Fluids",
       "description": "Density, pressure, Archimedes' principle, buoyancy, fluid flow continuity, and Bernoulli's equation.",
+      "note": "# Unit 8: Fluids\n\n## Overview\nThis unit explores the behavior of fluids at rest and in motion, focusing on **density**, **pressure**, **buoyancy**, and **fluid flow**. Understanding these principles is crucial for solving AP Physics 1 problems involving liquids and gases, including applications of **Archimedes' principle**, **continuity equation**, and **Bernoulli's equation**.\n\n## Key Concepts at a Glance\n\n| **Concept**                | **What It Is**                                                                 | **Why It Matters (AP angle)**                                              |\n|---------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------|\n| **Density** ($\\rho$)      | Mass per unit volume of a substance: $\\rho = \\frac{m}{V}$                      | Determines how fluids exert pressure and whether objects float or sink.   |\n| **Pressure** ($P$)        | Force per unit area exerted by a fluid: $P = \\frac{F}{A}$                      | Fundamental for understanding fluid statics and dynamics problems.        |\n| **Pascal’s Principle**    | Pressure applied to an enclosed fluid is transmitted undiminished throughout. | Basis for hydraulic systems and pressure calculations in fluids.          |\n| **Archimedes' Principle** | Buoyant force equals the weight of displaced fluid: $F_b = \\rho_{fluid} g V$  | Explains flotation and buoyancy, key for solving related AP problems.      |\n| **Buoyancy**              | Upward force exerted by a fluid opposing gravity on submerged objects.         | Determines if objects sink, float, or remain suspended in fluids.          |\n| **Continuity Equation**   | $A_1 v_1 = A_2 v_2$; fluid flow rate is constant in incompressible fluids.     | Used to analyze fluid flow speed changes in pipes and channels.            |\n| **Bernoulli’s Equation**  | $P + \\frac{1}{2} \\rho v^2 + \\rho g h = \\text{constant}$ along a streamline.   | Connects pressure, velocity, and height; essential for fluid dynamics.     |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Density ($\\\\rho = \\\\frac{m}{V}$)\"] --> B[\"Pressure ($P = \\\\frac{F}{A}$)\"]\n    B --> C[\"Pascal's Principle: Pressure transmitted equally\"]\n    C --> D[\"Hydraulic Systems: Force amplification\"]\n    B --> E[\"Archimedes' Principle\"]\n    E --> F[\"Buoyant Force ($F_b = \\\\rho_{fluid} g V$)\"]\n    F --> G[\"Object floats, sinks, or is suspended\"]\n    H[\"Fluid Flow\"] --> I[\"Continuity Equation ($A_1 v_1 = A_2 v_2$)\"]\n    I --> J[\"Velocity changes with cross-sectional area\"]\n    J --> K[\"Bernoulli's Equation ($P + \\\\frac{1}{2} \\\\rho v^2 + \\\\rho g h = \\\\text{const}$)\"]\n    K --> L[\"Pressure-velocity-height relationship\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Law                         | Description                                                                                   |\n|-------------------------------------|-----------------------------------------------------------------------------------------------|\n| $$\\rho = \\frac{m}{V}$$              | **Density:** mass per unit volume                                                             |\n| $$P = \\frac{F}{A}$$                 | **Pressure:** force per unit area                                                             |\n| $$P = P_0 + \\rho g h$$              | **Pressure in a fluid at depth:** $P_0$ is surface pressure, $h$ is depth                     |\n| $$F_b = \\rho_{fluid} g V_{displaced}$$ | **Buoyant force:** upward force on submerged object                                           |\n| $$A_1 v_1 = A_2 v_2$$               | **Continuity equation:** flow rate constant for incompressible fluids                          |\n| $$P + \\frac{1}{2} \\rho v^2 + \\rho g h = \\text{constant}$$ | **Bernoulli’s equation:** conservation of energy per unit volume along a streamline           |\n| Pascal’s Principle                  | Pressure applied to enclosed fluid transmits undiminished throughout fluid                    |\n\n## Connections & Comparisons\n\n| Concept                 | Description                                      | Key Differences / Connections                      |\n|-------------------------|------------------------------------------------|---------------------------------------------------|\n| **Pressure vs. Depth**  | Pressure increases with depth in a fluid        | $$P = P_0 + \\rho g h$$ shows direct proportionality to depth |\n| **Buoyancy vs. Weight** | Buoyant force opposes weight                     | Object floats if $$F_b \\geq mg$$, sinks if $$F_b < mg$$       |\n| **Continuity vs. Bernoulli** | Continuity relates area and velocity; Bernoulli relates pressure, velocity, height | Continuity ensures mass conservation; Bernoulli ensures energy conservation |\n| **Static vs. Dynamic Fluids** | Static fluids exert pressure equally; dynamic fluids have velocity and pressure changes | Pascal’s principle applies to static fluids; Bernoulli applies to moving fluids |\n\n## Common AP Exam Traps\n\n- Confusing **pressure** with **force**; pressure depends on area, force does not.\n- Forgetting that **density** is mass/volume, not just mass or volume alone.\n- Misapplying **Bernoulli’s equation** between points not on the same streamline.\n- Neglecting the effect of **fluid height** in pressure calculations.\n- Assuming **buoyant force** acts only on fully submerged objects; it acts on any submerged volume.\n- Using **continuity equation** for compressible fluids (like gases at high speeds) where it does not hold.\n\n## Quick Review Checklist\n\n- [ ] Define and calculate **density** and its role in fluids.\n- [ ] Explain how **pressure** varies with depth and area.\n- [ ] Apply **Pascal’s principle** to hydraulic systems.\n- [ ] Calculate **buoyant force** using Archimedes' principle.\n- [ ] Determine whether an object will **float, sink, or remain suspended**.\n- [ ] Use the **continuity equation** to relate fluid speed and cross-sectional area.\n- [ ] Apply **Bernoulli’s equation** to solve fluid flow problems.\n- [ ] Distinguish between static and dynamic fluid scenarios on the AP exam.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Density",
-              "definition": "Mass per unit volume of a substance, mathematically expressed as $$\\rho = \\frac{m}{V}$$."
+              "definition": "A scalar quantity defined as mass per unit volume, expressed as $$\\rho = \\frac{m}{V}$$ where $$m$$ is mass and $$V$$ is volume."
             },
             {
               "term": "Pressure",
-              "definition": "Force applied perpendicular to the surface of an object per unit area over which that force is distributed, given by $$P = \\frac{F}{A}$$."
+              "definition": "Force exerted perpendicular to a surface per unit area, mathematically given by $$P=\\frac{F}{A}$$, usually measured in pascals (Pa)."
             },
             {
-              "term": "Fluid",
-              "definition": "A substance that continuously deforms (flows) under an applied shear stress, including liquids and gases."
+              "term": "Hydrostatic pressure",
+              "definition": "Pressure exerted by a fluid at rest due to the weight of the fluid above, calculated by $$P=\\rho gh$$ where $$\\rho$$ is fluid density, $$g$$ acceleration due to gravity, and $$h$$ depth."
             },
             {
-              "term": "Absolute Pressure",
-              "definition": "The total pressure exerted on a system, calculated as the sum of atmospheric pressure and gauge pressure."
+              "term": "Pascal's principle",
+              "definition": "A principle stating that a change in pressure applied to an enclosed incompressible fluid is transmitted undiminished throughout the fluid."
             },
             {
-              "term": "Gauge Pressure",
-              "definition": "The pressure relative to atmospheric pressure; it is the difference between absolute pressure and atmospheric pressure."
+              "term": "Atmospheric pressure",
+              "definition": "The pressure exerted by the weight of the atmosphere at a given point, approximately $$1.01 \\times 10^5$$ Pa at sea level."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which expression correctly relates the pressure at a depth $$h$$ in a fluid of density $$\\rho$$ under gravitational acceleration $$g$$ to atmospheric pressure $$P_0$$?",
+              "questionText": "Which of the following correctly expresses the pressure exerted by a fluid at depth $$h$$ in a container?",
               "options": [
-                "$$P = P_0 - \\rho g h$$",
-                "$$P = P_0 + \\rho g h$$",
-                "$$P = \\rho g h$$",
-                "$$P = P_0 \\cdot \\rho g h$$"
+                "$$P = \\frac{F}{A}$$",
+                "$$P = \\rho gh$$",
+                "$$P = mg$$",
+                "$$P = \\frac{m}{V}$$"
               ],
-              "correctAnswer": "$$P = P_0 + \\rho g h$$",
+              "correctAnswer": "$$P = \\rho gh$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Density is most accurately described as:",
+              "questionText": "According to Pascal's principle, if the pressure on a confined fluid is increased at one point, what happens to the pressure throughout the fluid?",
               "options": [
-                "The ratio of volume to mass.",
-                "Mass per unit volume of a substance.",
-                "Force per unit area applied on a surface.",
-                "The weight of a fluid inside a container."
+                "It increases only at the point of application.",
+                "It decreases.",
+                "It remains constant everywhere.",
+                "It increases equally throughout the fluid."
               ],
-              "correctAnswer": "Mass per unit volume of a substance.",
+              "correctAnswer": "It increases equally throughout the fluid.",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The pressure exerted by a fluid at rest increases with depth according to the equation $$P = P_0 + \\rho g \\; \\underline{\\hspace{1cm}}$$.",
+              "questionText": "Density is defined as mass divided by ______.",
               "options": [
                 "volume",
-                "height",
-                "depth",
-                "area"
+                "area",
+                "length",
+                "force"
               ],
-              "correctAnswer": "depth",
+              "correctAnswer": "volume",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The quantity that measures the amount of matter per unit volume in a fluid is called ______.",
+              "questionText": "The unit of pressure in SI units is the ______.",
               "options": [
-                "pressure",
-                "density",
-                "force",
-                "weight"
+                "newton",
+                "pascal",
+                "joule",
+                "watt"
               ],
-              "correctAnswer": "density",
+              "correctAnswer": "pascal",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1138,71 +1146,71 @@
         {
           "flashcards": [
             {
-              "term": "Archimedes' Principle",
-              "definition": "The buoyant force on an object submerged in a fluid equals the weight of the fluid displaced by the object."
+              "term": "Archimedes' principle",
+              "definition": "A law stating that a body wholly or partially immersed in a fluid experiences an upward buoyant force equal to the weight of the fluid displaced."
             },
             {
-              "term": "Buoyant Force",
-              "definition": "The upward force exerted by a fluid opposing the weight of an immersed object."
+              "term": "Buoyancy",
+              "definition": "The upward force exerted on an object submerged in a fluid, caused by differences in pressure acting on its surfaces."
             },
             {
-              "term": "Continuity Equation",
-              "definition": "The principle expressing that for an incompressible fluid, the product of cross-sectional area and fluid velocity is constant along a streamline, $$A_1 v_1 = A_2 v_2$$."
+              "term": "Continuity equation for fluid flow",
+              "definition": "An expression of conservation of mass for an incompressible fluid, $$A_1 v_1 = A_2 v_2$$, relating cross-sectional area and flow velocity at two points."
             },
             {
-              "term": "Bernoulli's Equation",
-              "definition": "An expression of conservation of energy for flowing fluids relating pressure, kinetic, and potential energy per unit volume: $$P + \\frac{1}{2}\\rho v^2 + \\rho g h = \\text{constant}$$."
+              "term": "Bernoulli's equation",
+              "definition": "A principle relating fluid pressure, velocity, and elevation along a streamline: $$P + \\frac{1}{2} \\rho v^2 + \\rho gh = \\text{constant}$$."
             },
             {
-              "term": "Fluids in Motion",
-              "definition": "The study of fluid behavior when subjected to varying flow speeds, pressures, and elevations described by principles such as Bernoulli's equation and the continuity equation."
+              "term": "Laminar flow",
+              "definition": "A type of fluid flow characterized by smooth, parallel layers of fluid with no disruption between the layers."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "According to Archimedes' principle, the buoyant force acting on a submerged object is equal to:",
+              "questionText": "Which principle explains why an object submerged in a fluid feels an upward force equal to the fluid displaced?",
               "options": [
-                "The weight of the object.",
-                "The volume of the object.",
-                "The weight of the displaced fluid.",
-                "The density of the fluid times the volume of the object."
+                "Pascal's principle",
+                "Archimedes' principle",
+                "Bernoulli's equation",
+                "Continuity equation"
               ],
-              "correctAnswer": "The weight of the displaced fluid.",
+              "correctAnswer": "Archimedes' principle",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "In a horizontal pipe with varying cross-sectional area, the fluid velocity increases where the area:",
+              "questionText": "According to the continuity equation for an incompressible fluid, if the cross-sectional area of a pipe decreases, what happens to the fluid's velocity?",
               "options": [
-                "Increases.",
-                "Decreases.",
-                "Is constant.",
-                "Is zero."
+                "Velocity decreases",
+                "Velocity increases",
+                "Velocity remains the same",
+                "Velocity becomes zero"
               ],
-              "correctAnswer": "Decreases.",
+              "correctAnswer": "Velocity increases",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The buoyant force on an object submerged in a fluid equals the _____ of the fluid displaced by the object.",
+              "questionText": "Bernoulli's equation relates pressure, velocity, and ______ in a flowing fluid.",
               "options": [
+                "temperature",
                 "mass",
-                "volume",
-                "weight",
+                "height",
                 "density"
               ],
-              "correctAnswer": "weight",
+              "correctAnswer": "height",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Bernoulli's equation relates pressure, fluid velocity, and gravitational potential energy per unit volume along a __________.",
+              "questionText": "The buoyant force on an object is equal to the weight of the ______ it displaces.",
               "options": [
-                "closed loop",
-                "streamline",
-                "surface",
-                "boundary"
+                "object",
+                "fluid",
+                "air",
+                "solid"
               ],
-              "correctAnswer": "streamline",
+              "correctAnswer": "fluid",
               "lessonType": "fillInTheBlank"
             }
           ]

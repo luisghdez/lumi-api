@@ -1,0 +1,138 @@
+{
+  "lesson1": {
+    "flashcards": [
+      {
+        "term": "Mole",
+        "definition": "The amount of substance containing $$6.022\\times10^{23}$$ representative particles; it connects particle counts to measurable laboratory masses."
+      },
+      {
+        "term": "Avogadro's number",
+        "definition": "A constant equal to $$6.022\\times10^{23}\\ \\mathrm{mol^{-1}}$$ used to convert between amount in moles and number of particles."
+      },
+      {
+        "term": "Molar mass",
+        "definition": "The mass of one mole of a substance, expressed in $$\\mathrm{g\\ mol^{-1}}$$, calculated by summing the atomic masses in its chemical formula."
+      },
+      {
+        "term": "Percent composition",
+        "definition": "The percent by mass of each element in a compound, determined from the element’s total mass contribution divided by the compound’s molar mass and multiplied by $$100\\%$$."
+      },
+      {
+        "term": "Mass spectrometry",
+        "definition": "An analytical technique that separates ions based on their mass-to-charge ratios and provides isotope masses and relative abundances."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "A sample contains $$1.50\\ \\mathrm{mol}$$ of $$\\mathrm{Al_2O_3}$$. How many oxygen atoms are present in the sample?",
+        "options": [
+          "$$3.01\\times10^{23}$$ atoms",
+          "$$6.02\\times10^{23}$$ atoms",
+          "$$1.81\\times10^{24}$$ atoms",
+          "$$3.62\\times10^{24}$$ atoms"
+        ],
+        "correctAnswer": "$$1.81\\times10^{24}$$ atoms"
+      },
+      {
+        "questionText": "What is the percent by mass of oxygen in $$\\mathrm{Na_2SO_4}$$? Use atomic masses $$\\mathrm{Na}=22.99$$, $$\\mathrm{S}=32.06$$, and $$\\mathrm{O}=16.00$$.",
+        "options": [
+          "$$37.3\\%$$",
+          "$$49.7\\%$$",
+          "$$62.7\\%$$",
+          "$$74.6\\%$$"
+        ],
+        "correctAnswer": "$$49.7\\%$$"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "To convert a measured mass of $$\\mathrm{CO_2}$$ in grams to the number of $$\\mathrm{CO_2}$$ molecules, one should ______.",
+        "options": [
+          "multiply by the molar mass of $$\\mathrm{CO_2}$$ and divide by $$N_A$$",
+          "divide by the molar mass of $$\\mathrm{CO_2}$$ and multiply by $$N_A$$",
+          "divide by $$44.01\\ \\mathrm{g\\ mol^{-1}}$$ and divide by $$N_A$$",
+          "multiply by $$44.01\\ \\mathrm{g\\ mol^{-1}}$$ and multiply by $$N_A$$"
+        ],
+        "correctAnswer": "divide by the molar mass of $$\\mathrm{CO_2}$$ and multiply by $$N_A$$"
+      },
+      {
+        "questionText": "The atomic mass listed on the periodic table is best described as ______.",
+        "options": [
+          "the mass of the most abundant isotope only",
+          "the arithmetic mean of the mass numbers of all isotopes",
+          "the weighted average of naturally occurring isotopes",
+          "the sum of all isotope masses multiplied by $$100$$"
+        ],
+        "correctAnswer": "the weighted average of naturally occurring isotopes"
+      }
+    ]
+  },
+  "lesson2": {
+    "flashcards": [
+      {
+        "term": "Electron configuration",
+        "definition": "The arrangement of electrons among orbitals in an atom or ion, written using energy levels, subshells, and superscripts to show occupancy."
+      },
+      {
+        "term": "Aufbau principle",
+        "definition": "The rule stating that electrons occupy lower-energy orbitals before higher-energy orbitals in the ground state."
+      },
+      {
+        "term": "Hund's rule",
+        "definition": "The rule stating that electrons fill degenerate orbitals singly with parallel spins before pairing occurs."
+      },
+      {
+        "term": "Effective nuclear charge",
+        "definition": "The net positive attraction experienced by an electron in a multielectron atom after accounting for shielding by other electrons."
+      },
+      {
+        "term": "Ionization energy",
+        "definition": "The minimum energy required to remove an electron from a gaseous atom or ion in its ground state."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "Which electron configuration is correct for $$\\mathrm{Fe^{3+}}$$ in its ground state?",
+        "options": [
+          "$$[\\mathrm{Ar}]\\,4s^{2}3d^{3}$$",
+          "$$[\\mathrm{Ar}]\\,4s^{1}3d^{4}$$",
+          "$$[\\mathrm{Ar}]\\,3d^{5}$$",
+          "$$[\\mathrm{Ar}]\\,4s^{2}3d^{5}$$"
+        ],
+        "correctAnswer": "$$[\\mathrm{Ar}]\\,3d^{5}$$"
+      },
+      {
+        "questionText": "Among $$\\mathrm{Na}$$, $$\\mathrm{Mg}$$, $$\\mathrm{Al}$$, and $$\\mathrm{Si}$$, which element has the greatest second ionization energy, and why?",
+        "options": [
+          "$$\\mathrm{Na}$$, because its valence electron is in a higher principal energy level",
+          "$$\\mathrm{Mg}$$, because removing the second electron produces a stable noble-gas configuration",
+          "$$\\mathrm{Al}$$, because its first electron removed is from a $$3p$$ orbital",
+          "$$\\mathrm{Si}$$, because it has the greatest effective nuclear charge in the set"
+        ],
+        "correctAnswer": "$$\\mathrm{Mg}$$, because removing the second electron produces a stable noble-gas configuration"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "In a photoelectron spectrum, a peak at lower binding energy corresponds to electrons that are ______.",
+        "options": [
+          "lower energy and closer to the nucleus",
+          "higher energy and farther from the nucleus",
+          "higher nuclear charge with no additional shielding",
+          "lower shielding and smaller atomic radius"
+        ],
+        "correctAnswer": "higher energy and farther from the nucleus"
+      },
+      {
+        "questionText": "Across a period from left to right, atomic radius generally decreases because ______.",
+        "options": [
+          "principal energy level decreases",
+          "effective nuclear charge increases",
+          "valence electrons experience more shielding by electrons in the same shell",
+          "nuclear charge decreases"
+        ],
+        "correctAnswer": "effective nuclear charge increases"
+      }
+    ]
+  }
+}

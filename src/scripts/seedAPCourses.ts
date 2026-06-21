@@ -181,9 +181,33 @@ async function writeCourse(exam: APExam, existingId: string | null): Promise<voi
     await batch.commit();
   }
 
-  const action = existingId ? "Updated" : "Created";
+  // Write unit notes subcollection — one doc per unit
+  const unitsWithNotes = exam.units.filter((u) => u.note);
+  if (unitsWithNotes.length > 0) {
+    if (existingId) {
+      // Delete stale note docs before rewriting
+      const oldNotes = await courseRef.collection("notes").get();
+      const delBatch = db.batch();
+      oldNotes.docs.forEach((d) => delBatch.delete(d.ref));
+      await delBatch.commit();
+    }
+
+    const notesBatch = db.batch();
+    for (const unit of unitsWithNotes) {
+      notesBatch.set(courseRef.collection("notes").doc(`unit-${unit.unitNumber}`), {
+        unitNumber: unit.unitNumber,
+        unitName:   unit.unitName,
+        content:    unit.note,
+        updatedAt:  admin.firestore.FieldValue.serverTimestamp(),
+      });
+    }
+    await notesBatch.commit();
+  }
+
+  const noteCount = unitsWithNotes.length;
+  const action    = existingId ? "Updated" : "Created";
   console.log(
-    `  ✅ ${action} "${exam.apSubject}" (${lessonCount} lessons across ${exam.units.length} units) → ${courseRef.id}`
+    `  ✅ ${action} "${exam.apSubject}" (${lessonCount} lessons, ${noteCount} unit notes) → ${courseRef.id}`
   );
 }
 
@@ -230,12 +254,16 @@ async function deleteAll(): Promise<void> {
 
   for (const doc of snapshot.docs) {
     const data    = doc.data();
-    const lessons = await doc.ref.collection("lessons").get();
-    const batch   = db.batch();
+    const [lessons, notes] = await Promise.all([
+      doc.ref.collection("lessons").get(),
+      doc.ref.collection("notes").get(),
+    ]);
+    const batch = db.batch();
     lessons.docs.forEach((l) => batch.delete(l.ref));
+    notes.docs.forEach((n)   => batch.delete(n.ref));
     await batch.commit();
     await doc.ref.delete();
-    console.log(`  🗑  Deleted "${data.title ?? doc.id}" (${lessons.size} lessons)`);
+    console.log(`  🗑  Deleted "${data.title ?? doc.id}" (${lessons.size} lessons, ${notes.size} notes)`);
   }
 
   console.log(`\n✅ Deleted ${snapshot.size} ap_catalog course(s).`);

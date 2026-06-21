@@ -5,75 +5,76 @@
       "unitNumber": 1,
       "unitName": "The Living World: Ecosystems",
       "description": "Ecosystem structure, energy flow, food webs, biogeochemical cycles (carbon, nitrogen, phosphorus, water).",
+      "note": "# Unit 1: The Living World: Ecosystems\n\n## Overview\nThis unit explores the **structure and function of ecosystems**, focusing on how energy flows and matter cycles through living and nonliving components. Understanding these dynamics is crucial for analyzing environmental impacts and sustainability, a core skill tested on the AP Environmental Science exam.\n\n## Key Concepts at a Glance\n\n| **Concept**              | **What It Is**                                                                 | **Why It Matters (AP angle)**                                         |\n|-------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| **Ecosystem Structure**  | The organization of biotic (producers, consumers, decomposers) and abiotic components. | Foundation for understanding ecological interactions and energy flow. |\n| **Energy Flow**          | Movement of energy through trophic levels via food chains/webs.                | Explains ecosystem productivity and limits on biomass at higher levels. |\n| **Food Webs**            | Complex networks of feeding relationships among organisms.                     | Illustrates ecosystem stability and the impact of species removal.    |\n| **Biogeochemical Cycles**| Circulation of elements (C, N, P, H₂O) through ecosystems and atmosphere.      | Key to understanding nutrient availability and human impacts.        |\n| **Primary Productivity** | Rate at which autotrophs convert solar energy into chemical energy.            | Determines energy base for all consumers; tested in energy budget questions. |\n| **Trophic Levels**       | Hierarchical levels in an ecosystem based on feeding relationships.            | Helps analyze energy transfer efficiency and biomagnification.       |\n| **Decomposition**        | Breakdown of organic matter by decomposers, recycling nutrients.               | Critical for nutrient cycling and ecosystem sustainability.           |\n| **Limiting Nutrients**   | Nutrients that limit ecosystem productivity (often N or P).                    | Important for understanding eutrophication and ecosystem health.     |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    Sun[\"Solar Energy\"] --> Producers[\"Producers (Autotrophs)\"]\n    Producers --> PrimaryConsumers[\"Primary Consumers (Herbivores)\"]\n    PrimaryConsumers --> SecondaryConsumers[\"Secondary Consumers (Carnivores)\"]\n    SecondaryConsumers --> TertiaryConsumers[\"Tertiary Consumers (Top Carnivores)\"]\n    Producers --> Decomposers[\"Decomposers (Bacteria, Fungi)\"]\n    PrimaryConsumers --> Decomposers\n    SecondaryConsumers --> Decomposers\n    TertiaryConsumers --> Decomposers\n    Decomposers --> SoilNutrients[\"Soil Nutrients\"]\n    SoilNutrients --> Producers\n```\n\n**Biogeochemical Cycles Overview**\n\n```mermaid\nflowchart LR\n    Carbon[\"Carbon Cycle\"] --> Atmosphere[\"CO₂ in Atmosphere\"]\n    Atmosphere --> Photosynthesis[\"Photosynthesis by Producers\"]\n    Photosynthesis --> Biomass[\"Carbon in Biomass\"]\n    Biomass --> Respiration[\"Respiration & Decomposition\"]\n    Respiration --> Atmosphere\n    Biomass --> FossilFuels[\"Fossil Fuel Formation (Long-term)\"]\n    FossilFuels --> Combustion[\"Combustion (Human Impact)\"]\n    Combustion --> Atmosphere\n\n    Nitrogen[\"Nitrogen Cycle\"] --> NitrogenFixation[\"N₂ Fixation by Bacteria\"]\n    NitrogenFixation --> Ammonium[\"NH₄⁺\"]\n    Ammonium --> Nitrification[\"Nitrification\"]\n    Nitrification --> Nitrates[\"NO₃⁻\"]\n    Nitrates --> Assimilation[\"Assimilation by Plants\"]\n    Assimilation --> OrganicN[\"Organic Nitrogen in Biomass\"]\n    OrganicN --> Ammonification[\"Ammonification\"]\n    Ammonification --> Ammonium\n    Nitrates --> Denitrification[\"Denitrification (Back to N₂)\"]\n    Denitrification --> Nitrogen\n\n    Phosphorus[\"Phosphorus Cycle\"] --> Weathering[\"Weathering of Rocks\"]\n    Weathering --> Phosphates[\"PO₄³⁻ in Soil\"]\n    Phosphates --> Uptake[\"Plant Uptake\"]\n    Uptake --> BiomassP[\"Phosphorus in Biomass\"]\n    BiomassP --> DecompositionP[\"Decomposition\"]\n    DecompositionP --> Phosphates\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Rule**                              | **Meaning**                                                                                  |\n|------------------------------------------------|----------------------------------------------------------------------------------------------|\n| $$\\text{GPP} = \\text{Total solar energy captured by autotrophs}$$ | **Gross Primary Productivity:** total energy captured via photosynthesis.                    |\n| $$\\text{NPP} = \\text{GPP} - \\text{Respiration by autotrophs}$$   | **Net Primary Productivity:** energy available to consumers.                                 |\n| $$\\text{Energy transfer efficiency} \\approx 10\\%$$               | Approximate energy passed from one trophic level to the next (rule of 10%).                   |\n| $$\\text{Ecological Efficiency} = \\frac{\\text{Energy at higher trophic level}}{\\text{Energy at lower trophic level}} \\times 100\\%$$ | Percentage of energy transferred between trophic levels.                                    |\n| **Law of Conservation of Matter**                | Matter cycles through ecosystems; cannot be created or destroyed, only transformed.          |\n| **Limiting Nutrient Principle**                   | Ecosystem productivity is limited by the scarcest essential nutrient (often N or P).         |\n\n## Connections & Comparisons\n\n| **Concept**           | **Energy Flow**                                    | **Nutrient Cycling**                               | **Ecosystem Stability**                           |\n|-----------------------|---------------------------------------------------|---------------------------------------------------|--------------------------------------------------|\n| **Definition**        | Movement of energy through trophic levels.        | Movement and transformation of chemical elements.| Ability of ecosystem to maintain structure/function. |\n| **Directionality**    | One-way flow: energy enters as sunlight, lost as heat. | Cyclic: nutrients reused repeatedly.               | Depends on biodiversity, food web complexity.    |\n| **Limitation**        | Energy loss (~90%) limits length of food chains.  | Availability of limiting nutrients controls productivity. | Disruptions (species loss) can cause collapse.   |\n| **Human Impact**      | Fossil fuel use alters energy balance indirectly. | Fertilizer runoff disrupts nutrient cycles (eutrophication). | Habitat destruction reduces stability.            |\n\n## Common AP Exam Traps\n\n- Confusing **energy flow** (one-way, lost as heat) with **matter cycling** (recycled indefinitely).\n- Assuming **all energy** consumed by an organism is transferred to the next trophic level (only ~10% is).\n- Misidentifying **limiting nutrients**; nitrogen and phosphorus are most common but context-dependent.\n- Overlooking the role of **decomposers** in nutrient cycling and energy flow.\n- Mixing up **GPP** and **NPP**; remember NPP is energy available to consumers after autotroph respiration.\n\n## Quick Review Checklist\n\n- [ ] Define and describe **ecosystem structure** and its components.\n- [ ] Explain **energy flow** through trophic levels and calculate energy transfer efficiency.\n- [ ] Interpret and construct **food webs** showing feeding relationships.\n- [ ] Describe the major **biogeochemical cycles**: carbon, nitrogen, phosphorus, and water.\n- [ ] Differentiate between **GPP** and **NPP** and their ecological significance.\n- [ ] Identify **limiting nutrients** and explain their role in ecosystem productivity.\n- [ ] Explain the role of **decomposers** in ecosystems.\n- [ ] Analyze human impacts on energy flow and nutrient cycling (e.g., fossil fuel combustion, fertilizer use).",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Ecosystem",
-              "definition": "A community of living organisms interacting with the nonliving components of their environment, functioning as a system."
+              "term": "Ecosystem Structure",
+              "definition": "The organization of biotic and abiotic components within a defined area, including producers, consumers, decomposers, and physical environment."
             },
             {
-              "term": "Producers",
-              "definition": "Organisms that use photosynthesis or chemosynthesis to create organic compounds from inorganic substances, forming the base of the food chain."
+              "term": "Primary Productivity",
+              "definition": "The rate at which plants and other photosynthetic organisms produce organic compounds in an ecosystem, measured as energy fixed per unit area per unit time."
             },
             {
-              "term": "Primary Consumers",
-              "definition": "Organisms that obtain energy by feeding directly on producers, typically herbivores."
+              "term": "Energy Flow",
+              "definition": "The transfer of energy through trophic levels in an ecosystem, starting with solar energy captured by autotrophs and passed on to consumers and decomposers."
             },
             {
-              "term": "Trophic Level",
-              "definition": "A position in a food chain or ecological pyramid occupied by a group of organisms that share the same function in the food web."
+              "term": "Trophic Levels",
+              "definition": "The hierarchical positions organisms occupy in a food chain or food web, determined by their source of energy."
             },
             {
               "term": "Food Web",
-              "definition": "A complex network of feeding relationships and energy flow among organisms in an ecosystem."
+              "definition": "A complex network of feeding relationships illustrating how energy and nutrients circulate among organisms in an ecosystem."
             }
           ],
           "multipleChoice": [
             {
               "questionText": "Which of the following best describes the role of decomposers in an ecosystem?",
               "options": [
-                "They produce organic material using sunlight.",
-                "They consume primary consumers directly.",
-                "They break down dead organic material, recycling nutrients back into the system.",
-                "They are apex predators at the top of the food chain."
+                "They convert solar energy into chemical energy through photosynthesis.",
+                "They transfer energy directly from producers to tertiary consumers.",
+                "They break down dead organic matter releasing nutrients back to the environment.",
+                "They consume primary producers and pass energy to higher trophic levels."
               ],
-              "correctAnswer": "They break down dead organic material, recycling nutrients back into the system.",
+              "correctAnswer": "They break down dead organic matter releasing nutrients back to the environment.",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "In an energy pyramid, which trophic level typically contains the greatest biomass?",
+              "questionText": "Primary productivity in an ecosystem is primarily limited by which factor?",
               "options": [
-                "Secondary consumers",
-                "Primary producers",
-                "Tertiary consumers",
-                "Quaternary consumers"
+                "Availability of herbivores",
+                "Amount of solar radiation",
+                "Number of decomposers",
+                "Trophic levels"
               ],
-              "correctAnswer": "Primary producers",
+              "correctAnswer": "Amount of solar radiation",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "Energy flow through an ecosystem is ______, moving from producers to consumers and eventually to decomposers.",
+              "questionText": "The position an organism occupies in a food chain or web is called its ______.",
               "options": [
-                "cyclical",
-                "one-directional",
-                "random",
-                "static"
+                "trophic level",
+                "biogeochemical cycle",
+                "niche",
+                "ecosystem"
               ],
-              "correctAnswer": "one-directional",
+              "correctAnswer": "trophic level",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The term used for organisms that make their own food through photosynthesis is ______.",
+              "questionText": "The energy captured by autotrophs during photosynthesis is stored as ______.",
               "options": [
-                "primary consumers",
-                "producers",
-                "decomposers",
-                "omnivores"
+                "chemical energy",
+                "thermal energy",
+                "kinetic energy",
+                "nuclear energy"
               ],
-              "correctAnswer": "producers",
+              "correctAnswer": "chemical energy",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -82,70 +83,70 @@
           "flashcards": [
             {
               "term": "Carbon Cycle",
-              "definition": "The biogeochemical cycle involving the movement of carbon through the atmosphere, biosphere, hydrosphere, and geosphere."
+              "definition": "The biogeochemical process by which carbon is exchanged among the atmosphere, oceans, soil, plants, and animals."
             },
             {
               "term": "Nitrogen Fixation",
-              "definition": "The biological or abiotic process that converts atmospheric nitrogen gas into forms usable by living organisms."
+              "definition": "The conversion of atmospheric nitrogen gas into ammonia or related nitrogenous compounds usable by plants, typically mediated by bacteria."
             },
             {
               "term": "Phosphorus Cycle",
-              "definition": "The movement of phosphorus through lithospheric, hydrologic, and biological components without a significant atmospheric phase."
+              "definition": "The movement of phosphorus through lithospheric, hydrospheric, and biospheric components without a gaseous phase."
             },
             {
-              "term": "Hydrologic Cycle",
-              "definition": "The continuous movement of water within the Earth and atmosphere, including processes such as evaporation, condensation, and precipitation."
+              "term": "Water Cycle",
+              "definition": "The continuous circulation of water through evaporation, condensation, precipitation, infiltration, and runoff."
             },
             {
-              "term": "Nitrification",
-              "definition": "The microbial process that converts ammonia into nitrites and then nitrates, making nitrogen available to plants."
+              "term": "Biogeochemical Cycle",
+              "definition": "A natural pathway by which essential elements move through the biotic and abiotic compartments of the Earth."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which process in the nitrogen cycle converts atmospheric nitrogen into ammonia?",
+              "questionText": "Which process converts nitrogen gas into forms usable by plants?",
               "options": [
                 "Denitrification",
-                "Nitrogen fixation",
                 "Nitrification",
+                "Nitrogen fixation",
                 "Ammonification"
               ],
               "correctAnswer": "Nitrogen fixation",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Phosphorus is unique among biogeochemical cycles because it does NOT typically involve which reservoir?",
+              "questionText": "Unlike carbon and nitrogen cycles, the phosphorus cycle does not typically include which component?",
               "options": [
-                "Atmosphere",
-                "Soil",
-                "Water bodies",
-                "Rocks"
+                "Atmospheric phase",
+                "Soil absorption",
+                "Biological uptake",
+                "Sedimentation"
               ],
-              "correctAnswer": "Atmosphere",
+              "correctAnswer": "Atmospheric phase",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The step in the nitrogen cycle where ammonia is converted to nitrate ions is called ______.",
+              "questionText": "In the water cycle, the process by which water vapor cools and changes back into liquid is called ______.",
               "options": [
-                "nitrification",
-                "denitrification",
-                "nitrogen fixation",
-                "ammonification"
+                "condensation",
+                "evaporation",
+                "transpiration",
+                "precipitation"
               ],
-              "correctAnswer": "nitrification",
+              "correctAnswer": "condensation",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The process by which water vapor turns into liquid water in the atmosphere is known as ______.",
+              "questionText": "The process by which bacteria convert ammonia into nitrates, which plants can absorb, is known as ______.",
               "options": [
-                "transpiration",
-                "evaporation",
-                "precipitation",
-                "condensation"
+                "nitrification",
+                "nitrogen fixation",
+                "denitrification",
+                "ammonification"
               ],
-              "correctAnswer": "condensation",
+              "correctAnswer": "nitrification",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -156,75 +157,76 @@
       "unitNumber": 2,
       "unitName": "The Living World: Biodiversity",
       "description": "Natural ecosystem services, biodiversity hotspots, island biogeography, and threats to biodiversity.",
+      "note": "# Unit 2: The Living World: Biodiversity\n\n## Overview\nThis unit explores **biodiversity**, the variety of life on Earth, and its critical role in maintaining ecosystem services that support human well-being. You will learn about **biodiversity hotspots**, principles of **island biogeography**, and the major **threats to biodiversity**, all essential for understanding environmental stability and conservation strategies on the AP Environmental Science exam.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                                     |\n|--------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------|\n| **Biodiversity**          | The variety of all life forms: genetic, species, and ecosystem diversity       | Foundation for ecosystem resilience; often tested in conservation contexts       |\n| **Ecosystem Services**    | Benefits humans receive from ecosystems (provisioning, regulating, cultural)  | Links biodiversity to human survival and economic value                          |\n| **Biodiversity Hotspots** | Regions with exceptionally high species richness and endemism under threat     | Prioritization for conservation efforts; often referenced in case studies       |\n| **Island Biogeography**   | Theory explaining species richness on islands based on size and isolation     | Helps predict species extinction and colonization patterns                       |\n| **Endemic Species**       | Species found only in a specific geographic area                               | Indicator of unique biodiversity; vulnerable to habitat loss                     |\n| **Habitat Fragmentation** | Breaking of habitats into smaller, isolated patches                            | Major threat to biodiversity; affects gene flow and species survival             |\n| **Invasive Species**      | Non-native species that disrupt native ecosystems                              | Causes native species decline; common exam example of biodiversity threat        |\n| **Extinction**            | Permanent loss of species                                                      | Central concept in biodiversity loss; linked to human activities and natural events |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Biodiversity\"] --> B[\"Ecosystem Services\"]\n    B --> C[\"Provisioning (food, water)\"]\n    B --> D[\"Regulating (climate, disease control)\"]\n    B --> E[\"Cultural (recreation, spiritual)\"]\n    A --> F[\"Biodiversity Hotspots\"]\n    F --> G[\"High Species Richness\"]\n    F --> H[\"High Endemism\"]\n    A --> I[\"Island Biogeography\"]\n    I --> J[\"Species Immigration\"]\n    I --> K[\"Species Extinction\"]\n    J & K --> L[\"Species Richness on Islands\"]\n    A --> M[\"Threats to Biodiversity\"]\n    M --> N[\"Habitat Loss/Fragmentation\"]\n    M --> O[\"Invasive Species\"]\n    M --> P[\"Pollution\"]\n    M --> Q[\"Climate Change\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Rule**                         | **Definition / Explanation**                                                                                   |\n|-------------------------------------------|---------------------------------------------------------------------------------------------------------------|\n| $$ S = cA^z $$                            | **Species-Area Relationship:** Species richness ($S$) increases with habitat area ($A$); $c$ and $z$ are constants. |\n| **Equilibrium Theory of Island Biogeography** | Species richness on an island balances **immigration** and **extinction** rates, influenced by island size and distance from mainland. |\n| **Endemic Species Definition**            | Species native to and restricted within a specific geographic location.                                        |\n| **Habitat Fragmentation Effects**         | Leads to smaller, isolated populations → increased extinction risk due to reduced gene flow and edge effects.  |\n| **Ecosystem Services Categories**         | Provisioning, Regulating, Cultural, Supporting (e.g., nutrient cycling).                                        |\n\n## Connections & Comparisons\n\n| **Concept**              | **Cause/Mechanism**                         | **Effect on Biodiversity**                      | **Conservation Implication**                      |\n|--------------------------|--------------------------------------------|------------------------------------------------|--------------------------------------------------|\n| **Island Biogeography**   | Island size and isolation                   | Smaller, isolated islands have fewer species    | Protect larger habitats and corridors             |\n| **Habitat Fragmentation** | Human land use divides continuous habitat  | Isolated patches reduce species survival        | Restore connectivity; create wildlife corridors   |\n| **Invasive Species**      | Introduction of non-native species          | Outcompete or prey on native species            | Prevent introductions; manage invasives            |\n| **Biodiversity Hotspots** | High endemism + habitat loss                | High extinction risk                             | Focus conservation resources here                  |\n\n## Common AP Exam Traps\n- Confusing **species richness** (number of species) with **species evenness** (relative abundance).\n- Misapplying the **species-area relationship** by assuming linear rather than power-law scaling.\n- Overlooking that **island biogeography** applies to habitat \"islands\" on land, not just literal islands.\n- Assuming all **invasive species** are harmful without considering context or ecosystem impact.\n- Ignoring the role of **ecosystem services** beyond provisioning (e.g., cultural and regulating services).\n\n## Quick Review Checklist\n- [ ] Define and differentiate **genetic, species, and ecosystem biodiversity**.\n- [ ] Explain the importance of **ecosystem services** and provide examples.\n- [ ] Identify characteristics of **biodiversity hotspots** and their conservation value.\n- [ ] Describe the **species-area relationship** and apply the formula $$ S = cA^z $$.\n- [ ] Summarize the **equilibrium theory of island biogeography** and factors affecting species richness.\n- [ ] List major **threats to biodiversity** and their ecological impacts.\n- [ ] Explain how **habitat fragmentation** affects species survival and gene flow.\n- [ ] Recognize examples and impacts of **invasive species** on native ecosystems.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Ecosystem services",
-              "definition": "Benefits that humans receive directly or indirectly from natural ecosystems, including provisioning, regulating, supporting, and cultural services."
+              "term": "Ecosystem Services",
+              "definition": "Benefits provided by natural ecosystems that support life and human economies, including provisioning, regulating, supporting, and cultural services."
             },
             {
-              "term": "Provisioning services",
-              "definition": "Products obtained from ecosystems such as food, fresh water, fuel, fiber, and genetic resources."
+              "term": "Provisioning Services",
+              "definition": "Ecosystem benefits that include the production of food, fresh water, fuel, fiber, and genetic resources."
             },
             {
-              "term": "Regulating services",
-              "definition": "Natural processes that regulate environmental conditions, like climate regulation, disease control, and water purification."
+              "term": "Biodiversity Hotspots",
+              "definition": "Regions with exceptionally high levels of endemic species experiencing significant habitat loss, making them conservation priorities."
             },
             {
-              "term": "Supporting services",
-              "definition": "Fundamental ecological processes such as nutrient cycling, soil formation, and primary production that maintain other ecosystem services."
+              "term": "Supporting Services",
+              "definition": "Ecosystem functions such as nutrient cycling and soil formation that maintain conditions for life on Earth."
             },
             {
-              "term": "Cultural services",
-              "definition": "Non-material benefits obtained from ecosystems through spiritual enrichment, cognitive development, recreation, and aesthetic experiences."
+              "term": "Island Biogeography Theory",
+              "definition": "A model explaining species richness on islands as a balance between immigration and extinction rates, influenced by island size and distance from the mainland."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following best exemplifies a regulating ecosystem service?",
+              "questionText": "Which of the following is an example of a regulating ecosystem service?",
               "options": [
                 "Pollination of crops by bees",
-                "Harvesting of timber from a forest",
-                "Recreational hiking in a national park",
-                "Spiritual value of sacred forests"
+                "Timber harvested from forests",
+                "Recreation opportunities in parks",
+                "Soil formation through decomposition"
               ],
               "correctAnswer": "Pollination of crops by bees",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which category of ecosystem services includes the production of medicines derived from plants?",
+              "questionText": "According to island biogeography theory, which factor generally increases the number of species on an island?",
               "options": [
-                "Provisioning services",
-                "Supporting services",
-                "Cultural services",
-                "Regulating services"
+                "Smaller island size",
+                "Greater distance from mainland",
+                "Larger island size",
+                "Higher rates of extinction"
               ],
-              "correctAnswer": "Provisioning services",
+              "correctAnswer": "Larger island size",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "Biodiversity hotspots are regions that contain a high number of endemic species and have experienced ______ loss of native vegetation.",
+              "questionText": "Biodiversity hotspots are regions that have a high number of ______ species and have lost at least 70% of their original habitat.",
               "options": [
-                "less than 10%",
-                "more than 70%",
-                "around 50%",
-                "no significant"
+                "endemic",
+                "migratory",
+                "aquatic",
+                "invasive"
               ],
-              "correctAnswer": "more than 70%",
+              "correctAnswer": "endemic",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Island biogeography theory primarily explains species richness based on island size and ______ from the mainland.",
+              "questionText": "Provisioning services from ecosystems include products such as food, water, and ______.",
               "options": [
-                "distance",
-                "altitude",
-                "average temperature",
-                "soil type"
+                "fuel",
+                "temperature regulation",
+                "pollination",
+                "cultural heritage"
               ],
-              "correctAnswer": "distance",
+              "correctAnswer": "fuel",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -232,71 +234,71 @@
         {
           "flashcards": [
             {
-              "term": "Biodiversity hotspot",
-              "definition": "A biogeographic region with significant levels of endemic species that has lost at least 70% of its original habitat."
+              "term": "Habitat Fragmentation",
+              "definition": "The process by which large continuous habitats are divided into smaller, isolated patches, reducing biodiversity and ecosystem function."
             },
             {
-              "term": "Island biogeography theory",
-              "definition": "A model describing how the number of species on an island is determined by the balance between immigration and extinction rates influenced by island size and isolation."
+              "term": "Edge Effects",
+              "definition": "Changes in population or community structures that occur at the boundary of two habitats, often leading to altered microclimates and species composition."
             },
             {
-              "term": "Habitat fragmentation",
-              "definition": "The process by which large habitats are broken into smaller, isolated patches, negatively affecting species survival and ecosystem processes."
+              "term": "Invasive Species",
+              "definition": "Non-native organisms introduced to an ecosystem that cause harm to native species, ecosystem processes, or human interests."
             },
             {
-              "term": "Invasive species",
-              "definition": "Non-native organisms introduced to an environment that cause harm to native species, ecosystem function, or human interests."
+              "term": "Endangered Species",
+              "definition": "A species at risk of extinction throughout all or a significant portion of its range due to factors such as habitat loss or overexploitation."
             },
             {
-              "term": "Edge effects",
-              "definition": "Changes in population or community structures that occur at the boundaries of habitat fragments, often leading to increased predation or invasive species."
+              "term": "Biodiversity Threats",
+              "definition": "Human-related factors such as habitat destruction, pollution, climate change, overharvesting, and invasive species that negatively impact species richness and ecosystem health."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "According to island biogeography theory, which island is expected to have the lowest species richness?",
+              "questionText": "Which of the following is a direct effect of habitat fragmentation?",
               "options": [
-                "A large island close to the mainland",
-                "A small island close to the mainland",
-                "A large island far from the mainland",
-                "A small island far from the mainland"
+                "Increased biodiversity due to edge habitats",
+                "Isolation of populations leading to decreased gene flow",
+                "Expansion of species ranges",
+                "Increased availability of resources for all species"
               ],
-              "correctAnswer": "A small island far from the mainland",
+              "correctAnswer": "Isolation of populations leading to decreased gene flow",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which threat to biodiversity involves human-induced division of continuous habitats into smaller patches?",
+              "questionText": "Which threat to biodiversity involves the introduction of non-native species that harm native ecosystems?",
               "options": [
                 "Habitat fragmentation",
-                "Invasive species introduction",
-                "Climate change",
-                "Deforestation"
+                "Pollution",
+                "Invasive species",
+                "Climate change"
               ],
-              "correctAnswer": "Habitat fragmentation",
+              "correctAnswer": "Invasive species",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "Invasive species can outcompete native species because they often lack natural ______ in the new environment.",
+              "questionText": "______ effects refer to the environmental changes and altered conditions that occur at the boundary between habitat patches.",
               "options": [
-                "predators",
-                "nutrients",
-                "pollinators",
-                "symbiotic partners"
+                "Edge",
+                "Core",
+                "Fragmentation",
+                "Buffer"
               ],
-              "correctAnswer": "predators",
+              "correctAnswer": "Edge",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Edge effects typically result in increased ______, which can harm interior forest species in fragmented habitats.",
+              "questionText": "A species classified as ______ is at a high risk of extinction in the near future due to declining population or habitat.",
               "options": [
-                "predation",
-                "photosynthesis",
-                "soil fertility",
-                "groundwater recharge"
+                "endangered",
+                "common",
+                "invasive",
+                "keystone"
               ],
-              "correctAnswer": "predation",
+              "correctAnswer": "endangered",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -307,73 +309,74 @@
       "unitNumber": 3,
       "unitName": "Populations",
       "description": "Population dynamics, carrying capacity, survivorship curves, age structure, and human population growth.",
+      "note": "# Unit 3: Populations\n\n## Overview\nThis unit explores **population dynamics**, focusing on how populations grow, interact with their environment, and change over time. Understanding concepts like **carrying capacity**, **survivorship curves**, and **age structure** is essential for analyzing human impacts on ecosystems and predicting future population trends — a key skill for the AP Environmental Science exam.\n\n## Key Concepts at a Glance\n\n| **Concept**           | **What It Is**                                                                 | **Why It Matters (AP angle)**                                    |\n|-----------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------|\n| **Population Dynamics**| Study of how populations change in size and composition over time              | Foundation for understanding species survival and ecosystem health |\n| **Carrying Capacity (K)** | Maximum population size an environment can sustain indefinitely               | Critical for predicting population limits and resource depletion |\n| **Exponential Growth** | Population increase under ideal conditions, producing a J-shaped curve        | Models invasive species and early human population growth       |\n| **Logistic Growth**    | Population growth that slows as it approaches carrying capacity, S-shaped curve| Reflects realistic population limits and resource constraints   |\n| **Survivorship Curves**| Graphs showing the number or proportion of individuals surviving at each age  | Helps identify reproductive strategies and mortality patterns   |\n| **Age Structure**      | Distribution of individuals among different age groups                         | Influences population growth trends and social resource needs   |\n| **Human Population Growth** | Patterns and factors influencing the global human population size and growth rates | Central to environmental impact and sustainability discussions  |\n| **Density-Dependent Factors** | Factors whose effects on population vary with population density (e.g., disease) | Explains natural regulation of populations                      |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Birth Rate (b)\"] --> B[\"Population Size (N)\"]\n    C[\"Death Rate (d)\"] --> B\n    B --> D[\"Population Growth Rate (r = b - d)\"]\n    D --> E{\"Growth Pattern\"}\n    E -->|r > 0, unlimited resources| F[\"Exponential Growth\"]\n    E -->|r > 0, limited resources| G[\"Logistic Growth\"]\n    G --> H[\"Carrying Capacity (K)\"]\n    H --> I[\"Population Stabilizes\"]\n    F --> J[\"Rapid Population Increase\"]\n```\n\n### Explanation:\n- **Birth rate (b)** and **death rate (d)** determine the **growth rate (r)**.\n- When resources are unlimited, populations grow exponentially.\n- When resources are limited, growth slows and stabilizes near carrying capacity.\n- Density-dependent factors regulate population size near **K**.\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Rule                         | Meaning / Use                                                                                  |\n|--------------------------------------|-----------------------------------------------------------------------------------------------|\n| $$ r = b - d $$                      | **Population growth rate:** difference between birth rate and death rate per individual       |\n| $$ \\frac{dN}{dt} = rN $$             | **Exponential growth equation:** rate of population change over time                           |\n| $$ \\frac{dN}{dt} = rN \\left(1 - \\frac{N}{K}\\right) $$ | **Logistic growth equation:** growth rate slows as population approaches carrying capacity     |\n| **Carrying Capacity (K)**             | Maximum sustainable population size in a habitat                                             |\n| **Survivorship Curve Types:**         | Type I (low early mortality), Type II (constant mortality), Type III (high early mortality)   |\n| **Age Structure Diagrams**            | Show population distribution by age and sex, predicting growth trends                         |\n\n## Connections & Comparisons\n\n| Concept 1             | Concept 2             | Comparison / Connection                                                                                  |\n|-----------------------|----------------------|---------------------------------------------------------------------------------------------------------|\n| **Exponential Growth** | **Logistic Growth**   | Exponential assumes unlimited resources; logistic incorporates resource limits and carrying capacity.   |\n| **Type I Survivorship**| **Type III Survivorship** | Type I: high survival into old age (e.g., humans); Type III: high juvenile mortality (e.g., fish).       |\n| **Density-Dependent Factors** | **Density-Independent Factors** | Density-dependent vary with population size (e.g., disease); density-independent affect populations regardless of size (e.g., natural disasters). |\n| **Age Structure: Expanding** | **Age Structure: Declining** | Expanding has broad base (many young); declining has narrow base (few young), predicting future growth or shrinkage. |\n\n## Common AP Exam Traps\n\n- Confusing **exponential** and **logistic** growth curves; remember logistic growth levels off at **K**.\n- Misinterpreting **survivorship curves**: Type II shows constant mortality, not increasing or decreasing.\n- Overlooking the role of **age structure** in predicting population growth trends.\n- Assuming **carrying capacity (K)** is fixed; it can change with environmental conditions.\n- Mixing up **density-dependent** and **density-independent** factors — their effects differ fundamentally.\n\n## Quick Review Checklist\n\n- [ ] Define and explain **population dynamics** and factors influencing population size.\n- [ ] Describe and differentiate **exponential** vs. **logistic growth** and interpret their graphs.\n- [ ] Calculate population growth rate using $$ r = b - d $$ and apply growth equations.\n- [ ] Interpret and classify **survivorship curves** (Types I, II, III).\n- [ ] Analyze **age structure diagrams** to predict population trends.\n- [ ] Explain the concept of **carrying capacity (K)** and its ecological significance.\n- [ ] Identify examples of **density-dependent** and **density-independent** population controls.\n- [ ] Discuss patterns and implications of **human population growth** globally.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Population dynamics",
-              "definition": "The study of how populations change in size and composition over time due to birth rates, death rates, immigration, and emigration."
+              "term": "Population Dynamics",
+              "definition": "The study of how and why the number of individuals in a population changes over time, including birth rates, death rates, immigration, and emigration."
             },
             {
-              "term": "Carrying capacity",
-              "definition": "The maximum number of individuals of a particular species that an environment can sustainably support based on available resources."
+              "term": "Carrying Capacity",
+              "definition": "The maximum number of individuals of a species that an environment can sustainably support without degradation of resources."
             },
             {
-              "term": "Exponential growth",
-              "definition": "Population increase under ideal conditions where resources are unlimited, resulting in a J-shaped growth curve."
+              "term": "Exponential Growth",
+              "definition": "A population growth pattern characterized by a constant rate of increase per unit time, resulting in a J-shaped curve when plotted on a graph."
             },
             {
-              "term": "Logistic growth",
-              "definition": "Population increase that slows as it approaches carrying capacity, producing an S-shaped curve reflecting resource limitations."
+              "term": "Logistic Growth",
+              "definition": "A population growth pattern in which the growth rate decreases as the population size approaches the carrying capacity, forming an S-shaped curve."
             },
             {
-              "term": "Density-dependent factors",
-              "definition": "Environmental influences on population growth that change in intensity as a function of population density, such as disease or competition."
+              "term": "Density-Dependent Factors",
+              "definition": "Environmental factors whose effects on population size vary with population density, such as disease, competition, and predation."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following best describes carrying capacity?",
+              "questionText": "Which of the following best describes the carrying capacity of an environment?",
               "options": [
-                "The minimum population size needed for reproduction",
-                "The maximum population size that an environment can sustain indefinitely",
-                "The number of offspring produced per individual",
-                "The rate at which a population grows exponentially"
+                "The number of births per year in a population",
+                "The maximum population size that can be supported indefinitely",
+                "Population size during exponential growth",
+                "The minimum viable population size needed for survival"
               ],
-              "correctAnswer": "The maximum population size that an environment can sustain indefinitely",
+              "correctAnswer": "The maximum population size that can be supported indefinitely",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "A population growing without any environmental limits is exhibiting which type of growth?",
+              "questionText": "In which growth model does the population growth rate slow as the population approaches carrying capacity?",
               "options": [
-                "Logistic growth",
                 "Exponential growth",
-                "Equilibrium growth",
-                "Density-dependent growth"
+                "Logistic growth",
+                "Linear growth",
+                "Declining growth"
               ],
-              "correctAnswer": "Exponential growth",
+              "correctAnswer": "Logistic growth",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "A population experiences ______ growth when resources become limited and growth rate slows as it nears carrying capacity.",
+              "questionText": "Population growth that occurs when resources are unlimited and increases at a constant rate is called ______ growth.",
               "options": [
-                "exponential",
                 "logistic",
+                "exponential",
                 "linear",
-                "stationary"
+                "density-dependent"
               ],
-              "correctAnswer": "logistic",
+              "correctAnswer": "exponential",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Factors such as predation and competition that intensify with increasing population size are called ______ factors.",
+              "questionText": "Factors such as competition and disease that intensify as a population's density increases are known as ______ factors.",
               "options": [
-                "density-dependent",
                 "density-independent",
+                "biotic",
                 "abiotic",
-                "biotic"
+                "density-dependent"
               ],
               "correctAnswer": "density-dependent",
               "lessonType": "fillInTheBlank"
@@ -383,71 +386,71 @@
         {
           "flashcards": [
             {
-              "term": "Survivorship curve",
-              "definition": "A graph showing the number or proportion of individuals surviving at each age for a given species or population."
+              "term": "Survivorship Curve",
+              "definition": "A graph that represents the number or proportion of individuals surviving at each age for a given species or group."
             },
             {
-              "term": "Age structure",
-              "definition": "The distribution of individuals among different ages in a population, which influences population growth trends."
+              "term": "Age Structure",
+              "definition": "The distribution of individuals of different ages within a population, often displayed in age pyramids."
             },
             {
-              "term": "Type I survivorship curve",
-              "definition": "A curve characterized by high survivorship through early and middle life, followed by a rapid decline in older age groups."
+              "term": "Replacement-Level Fertility",
+              "definition": "The average number of children per woman needed to keep a population size stable, typically about 2.1 in developed countries."
             },
             {
-              "term": "Type III survivorship curve",
-              "definition": "A curve where many offspring die young, but those that survive early death live much longer."
+              "term": "Demographic Transition",
+              "definition": "A model describing population change over time through stages characterized by varying birth and death rates as a country develops economically."
             },
             {
-              "term": "Human population growth",
-              "definition": "The increase in the number of individuals in the human species, influenced by factors including birth rates, death rates, and technology."
+              "term": "Human Population Growth Rate",
+              "definition": "The rate at which the number of individuals in the human population increases in a given time period, calculated by births minus deaths plus net migration."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which type of survivorship curve is typical of species that produce few offspring but invest heavily in their survival?",
+              "questionText": "A population with most of its individuals in the younger age groups is likely to experience:",
               "options": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV"
+                "Population decline",
+                "Stable population size",
+                "Rapid population growth",
+                "Population aging"
               ],
-              "correctAnswer": "Type I",
+              "correctAnswer": "Rapid population growth",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "The shape of a population's age structure can help predict which of the following?",
+              "questionText": "During which stage of the demographic transition do birth rates and death rates both decline, leading to slower population growth?",
               "options": [
-                "Future resource availability",
-                "The genetic diversity of the population",
-                "Future population growth patterns",
-                "The species' carrying capacity"
+                "Stage 1: Pre-industrial",
+                "Stage 2: Transitional",
+                "Stage 3: Industrial",
+                "Stage 4: Post-industrial"
               ],
-              "correctAnswer": "Future population growth patterns",
+              "correctAnswer": "Stage 3: Industrial",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "A population with a broad base in its age structure diagram indicates a high proportion of ______ individuals.",
+              "questionText": "A graph showing the percentage of individuals surviving at each age is called a ______ curve.",
               "options": [
-                "elderly",
-                "juvenile",
-                "reproductive-age",
-                "post-reproductive"
+                "carrying capacity",
+                "survivorship",
+                "fecundity",
+                "age structure"
               ],
-              "correctAnswer": "juvenile",
+              "correctAnswer": "survivorship",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Human population growth has accelerated in recent centuries primarily due to declines in ______ rates.",
+              "questionText": "When each woman has approximately ______ children, the population size remains stable over time.",
               "options": [
-                "immigration",
-                "birth",
-                "death",
-                "emigration"
+                "1.5",
+                "3.5",
+                "2.1",
+                "4.0"
               ],
-              "correctAnswer": "death",
+              "correctAnswer": "2.1",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -458,75 +461,76 @@
       "unitNumber": 4,
       "unitName": "Earth Systems and Resources",
       "description": "Plate tectonics, soil formation, atmosphere layers, solar radiation, and Earth's water systems.",
+      "note": "# Unit 4: Earth Systems and Resources\n\n## Overview\nThis unit explores the dynamic systems shaping Earth’s surface and atmosphere, including **plate tectonics**, **soil formation**, **atmospheric layers**, **solar radiation**, and **Earth’s water systems**. Understanding these processes is essential for analyzing environmental patterns, resource distribution, and human impacts on natural systems, all critical for the AP Environmental Science exam.\n\n## Key Concepts at a Glance\n\n| **Concept**             | **What It Is**                                                                 | **Why It Matters (AP angle)**                                         |\n|------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| **Plate Tectonics**     | Movement of Earth's lithospheric plates causing earthquakes, volcanism, and mountain building | Explains natural hazards and resource locations (minerals, geothermal energy) |\n| **Soil Formation**      | Process involving weathering, organic matter accumulation, and horizon development | Determines soil fertility and ecosystem productivity                 |\n| **Atmosphere Layers**   | Stratified layers: Troposphere, Stratosphere, Mesosphere, Thermosphere, Exosphere | Controls climate, weather, and protects life from solar radiation    |\n| **Solar Radiation**     | Energy from the sun driving Earth's climate and photosynthesis                  | Influences temperature gradients, weather patterns, and energy flow  |\n| **Hydrologic Cycle**    | Movement of water through evaporation, condensation, precipitation, runoff     | Essential for freshwater availability and ecosystem health           |\n| **Earth’s Water Systems** | Distribution and movement of surface and groundwater                          | Critical for human consumption, agriculture, and habitat sustainability |\n| **Weathering & Erosion** | Breakdown and transport of rocks and minerals                                 | Shapes landscapes and affects soil and sediment quality              |\n| **Greenhouse Effect**   | Trapping of heat by atmospheric gases                                          | Regulates Earth’s temperature; linked to climate change              |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Solar Radiation\"] --> B[\"Atmospheric Heating\"]\n    B --> C[\"Temperature Gradients\"]\n    C --> D[\"Wind & Weather Patterns\"]\n    D --> E[\"Evaporation from Oceans & Land\"]\n    E --> F[\"Cloud Formation (Condensation)\"]\n    F --> G[\"Precipitation\"]\n    G --> H[\"Surface Runoff & Infiltration\"]\n    H --> I[\"Groundwater Flow\"]\n    I --> E\n    H --> J[\"Rivers & Lakes\"]\n    J --> K[\"Oceans\"]\n    K --> E\n```\n\n```mermaid\nflowchart LR\n    A[\"Mantle Convection\"] --> B[\"Plate Movement\"]\n    B --> C[\"Divergent Boundaries\"]\n    B --> D[\"Convergent Boundaries\"]\n    B --> E[\"Transform Boundaries\"]\n    C --> F[\"Seafloor Spreading\"]\n    D --> G[\"Subduction Zones & Mountain Building\"]\n    E --> H[\"Earthquakes\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Law**                      | **Description**                                                                                   |\n|--------------------------------------|-------------------------------------------------------------------------------------------------|\n| $$\\text{Soil Formation Rate} = f(\\text{Climate, Organisms, Relief, Parent Material, Time})$$ | Five factors controlling soil development (Jenny’s factors)                                    |\n| $$Q = \\sigma T^4$$                   | Stefan-Boltzmann Law: Radiant energy emitted by a blackbody proportional to temperature to the fourth power (used in Earth’s energy balance) |\n| $$\\text{Albedo} = \\frac{\\text{Reflected Radiation}}{\\text{Incoming Radiation}}$$ | Fraction of solar energy reflected by a surface (affects Earth's temperature)                  |\n| $$\\text{Hydrologic Cycle Components:}$$<br>Evaporation + Transpiration = Condensation + Precipitation + Runoff | Mass balance of water movement through Earth’s systems                                         |\n| **Plate Tectonics Principles:**<br>- **Divergent:** Plates move apart<br>- **Convergent:** Plates collide<br>- **Transform:** Plates slide past | Governs geological activity and landscape formation                                            |\n| **Greenhouse Effect:**<br>Solar radiation absorbed → Earth emits infrared → Greenhouse gases trap heat | Explains Earth's surface temperature regulation                                               |\n\n## Connections & Comparisons\n\n| **Concept**             | **Cause / Mechanism**                         | **Effect / Outcome**                          | **Environmental Significance**                      |\n|------------------------|----------------------------------------------|-----------------------------------------------|----------------------------------------------------|\n| **Troposphere vs Stratosphere** | Troposphere heated from Earth's surface; Stratosphere heated by ozone absorption | Troposphere: weather occurs; Stratosphere: ozone layer protects UV | Weather dynamics vs UV protection                    |\n| **Divergent vs Convergent Boundaries** | Divergent: plates separate; Convergent: plates collide | Divergent: new crust forms; Convergent: crust destroyed, mountains formed | Ocean ridges vs earthquakes and mountain ranges     |\n| **Solar Radiation vs Albedo** | Incoming solar energy vs reflected energy    | High albedo = cooler surface; Low albedo = warmer surface | Influences climate feedback loops                    |\n| **Surface Water vs Groundwater** | Surface runoff and lakes vs infiltration into aquifers | Surface water is more accessible; groundwater is more stable but slower to replenish | Water resource management and contamination risks   |\n\n## Common AP Exam Traps\n\n- Confusing **weathering** (rock breakdown) with **erosion** (rock transport).\n- Misidentifying **plate boundary types** and their associated features (e.g., subduction only at convergent boundaries).\n- Overlooking the role of **albedo** in climate regulation; assuming all solar radiation is absorbed.\n- Mixing up **atmospheric layers** and their characteristics (e.g., ozone layer is in the stratosphere, not troposphere).\n- Forgetting that **soil formation** is a slow process influenced by multiple factors, not just climate.\n\n## Quick Review Checklist\n\n- [ ] Explain the mechanisms and effects of **plate tectonics** and identify boundary types.\n- [ ] Describe the factors and stages involved in **soil formation**.\n- [ ] Identify and characterize the **layers of the atmosphere** and their significance.\n- [ ] Understand the flow of **solar radiation** through Earth’s systems and its impact on climate.\n- [ ] Illustrate the **hydrologic cycle** and the movement of water through different reservoirs.\n- [ ] Differentiate between **weathering** and **erosion** and their environmental roles.\n- [ ] Describe the **greenhouse effect** and its influence on Earth’s temperature.\n- [ ] Compare and contrast **surface water** and **groundwater** in terms of availability and use.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Plate Tectonics",
-              "definition": "A scientific theory explaining the movement of Earth's lithospheric plates and the associated phenomena such as earthquakes, volcanic activity, and mountain building."
+              "definition": "A scientific theory explaining the movement of Earth's lithosphere broken into plates that interact at their boundaries, leading to geological phenomena such as earthquakes, volcanism, and mountain-building."
             },
             {
-              "term": "Soil Formation",
-              "definition": "The process by which rocks and organic materials break down and combine to form a medium capable of supporting plant life, influenced by factors like climate, organisms, topography, parent material, and time."
+              "term": "Convergent Boundary",
+              "definition": "A plate boundary where two tectonic plates move toward each other, often resulting in subduction zones or continental collision and mountain formation."
+            },
+            {
+              "term": "Soil Horizon",
+              "definition": "A distinct layer of soil development characterized by physical, chemical, and biological properties, typically designated as O, A, E, B, or C layers."
             },
             {
               "term": "Lithosphere",
-              "definition": "The rigid, outermost shell of the Earth that includes the crust and the uppermost mantle, broken into tectonic plates."
+              "definition": "The rigid, outermost shell of the Earth comprising the crust and uppermost mantle, which is broken into tectonic plates."
             },
             {
-              "term": "Asthenosphere",
-              "definition": "A semi-fluid layer beneath the lithosphere composed of partially molten rock that allows tectonic plates to move."
-            },
-            {
-              "term": "Convergent Plate Boundary",
-              "definition": "A boundary where two tectonic plates move toward each other, often resulting in subduction or continental collision."
+              "term": "Divergent Boundary",
+              "definition": "A tectonic plate boundary where plates move apart from each other, commonly associated with seafloor spreading and the creation of new oceanic crust."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following processes is primarily responsible for the creation of mountains at convergent plate boundaries?",
+              "questionText": "Which of the following processes is primarily responsible for the formation of new oceanic crust?",
               "options": [
-                "Seafloor spreading",
-                "Subduction and continental collision",
-                "Transform fault movement",
-                "Rifting and crustal thinning"
+                "Subduction at convergent boundaries",
+                "Seafloor spreading at divergent boundaries",
+                "Transform fault sliding",
+                "Continental collision"
               ],
-              "correctAnswer": "Subduction and continental collision",
+              "correctAnswer": "Seafloor spreading at divergent boundaries",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which factor is NOT considered one of the five major influences on soil formation?",
+              "questionText": "What type of plate boundary is most commonly associated with deep ocean trenches and volcanic arcs?",
               "options": [
-                "Parent material",
-                "Sunspot activity",
-                "Climate",
-                "Topography"
+                "Convergent boundary with subduction",
+                "Divergent boundary",
+                "Transform boundary",
+                "Passive margin"
               ],
-              "correctAnswer": "Sunspot activity",
+              "correctAnswer": "Convergent boundary with subduction",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The ______ is the rigid layer of Earth's surface broken into plates that move over the more ductile asthenosphere.",
+              "questionText": "The _____ horizon in soil profiles is predominantly composed of organic material and decaying matter.",
+              "options": [
+                "O",
+                "A",
+                "B",
+                "C"
+              ],
+              "correctAnswer": "O",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The Earth's rigid outer shell that includes both the crust and upper mantle is called the ______.",
               "options": [
                 "lithosphere",
                 "asthenosphere",
                 "mesosphere",
-                "stratosphere"
+                "hydrosphere"
               ],
               "correctAnswer": "lithosphere",
-              "lessonType": "fillInTheBlank"
-            },
-            {
-              "questionText": "At a ______ boundary, tectonic plates slide past each other horizontally, often causing earthquakes without creating or destroying crust.",
-              "options": [
-                "transform",
-                "divergent",
-                "convergent",
-                "subduction"
-              ],
-              "correctAnswer": "transform",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -535,28 +539,28 @@
           "flashcards": [
             {
               "term": "Atmosphere Layers",
-              "definition": "The distinct layers of gases surrounding Earth, differentiated by temperature gradients and composition, including the troposphere, stratosphere, mesosphere, thermosphere, and exosphere."
+              "definition": "Distinct strata of gases surrounding Earth, differentiated by temperature gradients and composition, including the troposphere, stratosphere, mesosphere, thermosphere, and exosphere."
             },
             {
               "term": "Solar Radiation",
-              "definition": "Energy emitted by the sun in the form of electromagnetic waves, which drives Earth's climate and weather systems through absorption and reflection."
+              "definition": "Electromagnetic energy emitted by the sun, which provides Earth with light and heat and drives atmospheric and oceanic circulation."
             },
             {
-              "term": "Hydrologic Cycle",
-              "definition": "The continuous movement of water on, above, and below Earth's surface involving processes like evaporation, condensation, precipitation, and runoff."
+              "term": "Water Table",
+              "definition": "The upper boundary of an aquifer or saturated zone beneath the Earth’s surface where soil or rock is fully saturated with groundwater."
             },
             {
-              "term": "Ozone Layer",
-              "definition": "A region within the stratosphere containing a high concentration of ozone molecules that absorb and protect the Earth from most of the sun's ultraviolet radiation."
+              "term": "Evapotranspiration",
+              "definition": "The combined process of water evaporation from soil and plant surfaces plus transpiration from plants."
             },
             {
-              "term": "Thermohaline Circulation",
-              "definition": "A deep-ocean process driven by differences in water density, controlled by temperature (thermo) and salinity (haline), which influences global climate by distributing heat."
+              "term": "Aquifer",
+              "definition": "An underground layer of permeable rock, sediment, or soil that holds and transmits groundwater."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which layer of the atmosphere contains the ozone layer responsible for blocking harmful ultraviolet radiation?",
+              "questionText": "Which atmospheric layer contains the ozone layer that absorbs ultraviolet radiation?",
               "options": [
                 "Stratosphere",
                 "Troposphere",
@@ -567,38 +571,38 @@
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "What process describes the movement of water from Earth's surface into the atmosphere?",
+              "questionText": "What term describes the process by which water vapor returns to liquid form in the atmosphere, forming clouds?",
               "options": [
-                "Evaporation",
-                "Precipitation",
                 "Condensation",
-                "Runoff"
+                "Evaporation",
+                "Sublimation",
+                "Precipitation"
               ],
-              "correctAnswer": "Evaporation",
+              "correctAnswer": "Condensation",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The ______ cycle describes the continuous circulation of water through evaporation, condensation, and precipitation.",
+              "questionText": "The upper limit of groundwater saturation is called the ______.",
               "options": [
-                "hydrologic",
-                "carbon",
-                "nitrogen",
-                "phosphorus"
+                "water table",
+                "aquifer",
+                "watershed",
+                "zone of aeration"
               ],
-              "correctAnswer": "hydrologic",
+              "correctAnswer": "water table",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Solar radiation reaching Earth is mostly in the form of ______ radiation and is essential for driving atmospheric and oceanic processes.",
+              "questionText": "The process that includes both evaporation and plant transpiration is known as ______.",
               "options": [
-                "shortwave",
-                "longwave",
-                "infrared",
-                "ultraviolet"
+                "evapotranspiration",
+                "infiltration",
+                "precipitation",
+                "condensation"
               ],
-              "correctAnswer": "shortwave",
+              "correctAnswer": "evapotranspiration",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -609,75 +613,76 @@
       "unitNumber": 5,
       "unitName": "Land and Water Use",
       "description": "Agriculture, pest management, forestry, mining, fishing, and sustainable land and water practices.",
+      "note": "# Unit 5: Land and Water Use\n\n## Overview  \nThis unit explores how humans use land and water resources through **agriculture**, **pest management**, **forestry**, **mining**, and **fishing**, emphasizing their environmental impacts and sustainability challenges. Understanding these topics is critical for the AP Environmental Science exam because they illustrate the balance between resource use and conservation, a core theme in environmental science.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                          |\n|--------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| **Industrial Agriculture**| Large-scale farming using synthetic fertilizers, pesticides, and machinery    | Impacts on soil, water, biodiversity; linked to sustainability issues |\n| **Integrated Pest Management (IPM)** | Combining biological, cultural, mechanical, and chemical methods to control pests | Reduces pesticide use and environmental harm; promotes sustainable agriculture |\n| **Deforestation**         | Clearing forests for timber, agriculture, or development                       | Leads to habitat loss, carbon release, and soil degradation           |\n| **Mining (Surface & Subsurface)** | Extraction of minerals and resources from earth’s crust                     | Causes land degradation, water pollution, and ecosystem disruption    |\n| **Overfishing**           | Harvesting fish faster than populations can replenish                          | Threatens marine biodiversity and food security                       |\n| **Sustainable Land Use**  | Practices that maintain ecosystem services while allowing resource use        | Essential for long-term environmental health and human well-being     |\n| **Water Management (Irrigation & Watershed)** | Techniques to distribute and conserve freshwater for agriculture and human use | Impacts water availability, soil salinization, and ecosystem health   |\n| **Forest Management**     | Practices like selective logging and reforestation to maintain forest health  | Balances resource extraction with conservation                        |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Agricultural Practices\"] --> B[\"Soil Health\"]\n    A --> C[\"Water Use & Irrigation\"]\n    A --> D[\"Pest Management\"]\n    B --> E[\"Crop Yield & Sustainability\"]\n    C --> E\n    D --> E\n    E --> F[\"Environmental Impacts\"]\n    F --> G[\"Soil Erosion\"]\n    F --> H[\"Water Pollution\"]\n    F --> I[\"Biodiversity Loss\"]\n    G --> J[\"Reduced Agricultural Productivity\"]\n    H --> K[\"Aquatic Ecosystem Damage\"]\n    I --> L[\"Ecosystem Instability\"]\n```\n\n### Explanation:  \n- **Agricultural practices** affect **soil health**, **water use**, and **pest management**.  \n- These factors determine **crop yield** and **sustainability**.  \n- Unsustainable practices lead to **environmental impacts** such as **soil erosion**, **water pollution**, and **biodiversity loss**, which feedback negatively on productivity and ecosystem stability.\n\n## Essential Formulas / Laws / Rules\n\n| **Name**                      | **Formula / Definition**                                                                                   |\n|-------------------------------|------------------------------------------------------------------------------------------------------------|\n| **Soil Erosion Rate**          | $$E = R \\times K \\times LS \\times C \\times P$$ where: <br> \\(E\\) = soil loss (tons/ha/year) <br> \\(R\\) = rainfall erosivity <br> \\(K\\) = soil erodibility <br> \\(LS\\) = slope length and steepness <br> \\(C\\) = cover-management factor <br> \\(P\\) = support practice factor |\n| **Maximum Sustainable Yield (MSY)** | The largest harvest that can be taken from a species' stock over an indefinite period without reducing future yields. |\n| **Water Footprint**            | Total volume of freshwater used to produce goods/services, often measured in liters per unit product.      |\n| **Law of the Minimum**         | Growth is controlled not by total resources available, but by the scarcest resource (limiting factor).     |\n| **Pesticide Treadmill**        | The cycle where pests develop resistance, leading to increased pesticide use and escalating environmental harm. |\n\n## Connections & Comparisons\n\n| **Concept**                 | **Benefits**                             | **Drawbacks**                            | **Sustainability Potential**           |\n|----------------------------|----------------------------------------|----------------------------------------|---------------------------------------|\n| **Industrial Agriculture** | High yields, efficient production      | Soil degradation, pesticide pollution  | Low without sustainable practices     |\n| **Integrated Pest Management** | Reduced chemical use, ecosystem balance | Requires knowledge, monitoring         | High                                  |\n| **Clearcutting (Forestry)** | Maximizes timber yield                  | Habitat destruction, erosion            | Low                                   |\n| **Selective Logging**       | Maintains forest structure              | Lower immediate yield                   | High                                  |\n| **Surface Mining**          | Easier access to minerals                | Large-scale land disturbance           | Low                                   |\n| **Subsurface Mining**       | Less surface impact                      | Dangerous, subsidence risks             | Moderate                              |\n\n## Common AP Exam Traps\n\n- Confusing **industrial agriculture** with **subsistence agriculture**; the former is large-scale and mechanized, the latter small-scale and labor-intensive.  \n- Assuming all pesticides are harmful without recognizing the role of **Integrated Pest Management** in reducing chemical use.  \n- Overlooking the difference between **maximum sustainable yield** and **overfishing**; MSY aims to prevent depletion but is often exceeded.  \n- Believing **deforestation** only affects carbon cycles; it also impacts soil, water, and biodiversity.  \n- Ignoring the environmental consequences of **irrigation**, such as **salinization** and **waterlogging**.\n\n## Quick Review Checklist\n\n- [ ] Explain the environmental impacts of **industrial agriculture** and how **sustainable practices** can mitigate them.  \n- [ ] Describe the principles and methods of **Integrated Pest Management (IPM)**.  \n- [ ] Compare **clearcutting** and **selective logging** in terms of ecological effects.  \n- [ ] Identify the main environmental consequences of **mining** and differentiate between **surface** and **subsurface mining**.  \n- [ ] Define **maximum sustainable yield** and explain its significance in fisheries management.  \n- [ ] Analyze how **irrigation practices** affect soil and water resources.  \n- [ ] Discuss causes and consequences of **overfishing** and strategies to prevent it.  \n- [ ] Summarize sustainable land and water use practices that balance human needs and ecosystem health.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Monoculture",
-              "definition": "An agricultural practice involving the cultivation of a single crop species over a large area, often leading to increased vulnerability to pests and diseases."
+              "definition": "An agricultural practice of growing a single crop species over a large area for consecutive seasons, often leading to increased vulnerability to pests and diseases."
             },
             {
               "term": "Integrated Pest Management (IPM)",
-              "definition": "A pest control strategy that combines biological, cultural, physical, and chemical tools in a way that minimizes economic, health, and environmental risks."
+              "definition": "A sustainable approach to controlling pests that combines biological, cultural, mechanical, and chemical methods to minimize environmental impact."
             },
             {
               "term": "Contour Plowing",
-              "definition": "A soil conservation technique where plowing is done along the contours of the land to reduce soil erosion by water."
-            },
-            {
-              "term": "Terracing",
-              "definition": "The construction of stepped levels on steep terrain to reduce runoff and soil erosion, enabling cultivation on hilly landscapes."
+              "definition": "A soil conservation technique in which plowing is done along the contours of a slope to reduce soil erosion and runoff."
             },
             {
               "term": "Green Revolution",
-              "definition": "A period marked by significant increase in agricultural production worldwide through the use of improved seeds, fertilizers, pesticides, and irrigation techniques during the mid-20th century."
+              "definition": "A period marked by the introduction of high-yield crop varieties, chemical fertilizers, and advanced irrigation that greatly increased agricultural productivity globally from the 1940s to 1960s."
+            },
+            {
+              "term": "Desertification",
+              "definition": "The degradation of land in arid and semi-arid areas caused by factors such as drought and inappropriate agriculture, resulting in the reduction of its biological productivity."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which method reduces soil erosion by plowing perpendicular to the slope of the land?",
+              "questionText": "Which agricultural practice is designed to decrease pest populations by using natural predators and cultural controls before resorting to chemicals?",
               "options": [
-                "Contour Plowing",
-                "Strip Cropping",
-                "Monoculture",
-                "Terracing"
+                "Monoculture farming",
+                "Integrated Pest Management",
+                "Slash-and-burn agriculture",
+                "Crop rotation"
               ],
-              "correctAnswer": "Contour Plowing",
+              "correctAnswer": "Integrated Pest Management",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "In Integrated Pest Management, which of the following is emphasized to minimize pesticide use?",
+              "questionText": "What is the primary purpose of contour plowing in agriculture?",
               "options": [
-                "Biological control agents",
-                "Increasing pesticide dosages",
-                "Monoculture practices",
-                "Genetically engineered crops"
+                "To increase planting density",
+                "To reduce soil erosion on slopes",
+                "To improve irrigation efficiency",
+                "To promote pest resistance"
               ],
-              "correctAnswer": "Biological control agents",
+              "correctAnswer": "To reduce soil erosion on slopes",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The agricultural practice that involves planting a single type of crop over a large area is called ______.",
+              "questionText": "The __________ was a significant increase in agricultural productivity driven by improved crop varieties and synthetic fertilizers.",
               "options": [
-                "Terracing",
-                "Monoculture",
-                "Integrated Pest Management",
-                "Polyculture"
+                "Green Revolution",
+                "Industrial Revolution",
+                "Agricultural Revolution",
+                "Neolithic Revolution"
               ],
-              "correctAnswer": "Monoculture",
+              "correctAnswer": "Green Revolution",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Building a series of level steps on hillsides to enable farming and reduce erosion is known as ______.",
+              "questionText": "__________ is the process by which fertile land becomes desert typically due to drought, deforestation, or inappropriate agricultural practices.",
               "options": [
-                "Contour Plowing",
-                "Terracing",
-                "Crop Rotation",
-                "No-till Farming"
+                "Desertification",
+                "Eutrophication",
+                "Salinization",
+                "Afforestation"
               ],
-              "correctAnswer": "Terracing",
+              "correctAnswer": "Desertification",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -685,71 +690,71 @@
         {
           "flashcards": [
             {
-              "term": "Selective Cutting",
-              "definition": "A forestry practice where only mature or specific trees are harvested, promoting sustainable forest regeneration and minimizing habitat disruption."
-            },
-            {
-              "term": "Surface Mining",
-              "definition": "A method of extracting minerals or coal near the earth's surface through removal of soil and rock layers, often leading to significant environmental disturbance."
-            },
-            {
-              "term": "Maximum Sustainable Yield (MSY)",
-              "definition": "The largest average catch or harvest that can be taken from a specific natural resource stock over an indefinite period under constant environmental conditions."
+              "term": "Selective Logging",
+              "definition": "A forestry practice that involves cutting down only mature trees while leaving younger trees and the overall forest structure intact to preserve ecosystem functionality."
             },
             {
               "term": "Bycatch",
-              "definition": "Non-target species that are unintentionally caught during commercial fishing operations, contributing to ecological imbalance."
+              "definition": "Non-target species that are unintentionally caught during commercial fishing activities, often leading to ecological imbalance."
             },
             {
-              "term": "Drip Irrigation",
-              "definition": "An efficient irrigation technique that delivers water directly to plant roots through a network of tubes and emitters, reducing water waste."
+              "term": "Tailings",
+              "definition": "The waste material left over after valuable minerals are extracted from ore during mining, often stored in large piles or ponds and potentially toxic."
+            },
+            {
+              "term": "Aquaculture",
+              "definition": "The farming of aquatic organisms such as fish, shellfish, and algae under controlled conditions to meet demand and reduce pressure on wild populations."
+            },
+            {
+              "term": "Eutrophication",
+              "definition": "A process in aquatic ecosystems where excess nutrients, mainly nitrogen and phosphorus, lead to excessive plant and algal growth, depleting oxygen and harming aquatic life."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which forestry practice is designed to reduce ecological impact by harvesting specific trees rather than clear-cutting?",
+              "questionText": "Which mining waste byproduct poses significant risks to surrounding ecosystems due to the presence of heavy metals and acidic drainage?",
               "options": [
-                "Clear-Cutting",
-                "Selective Cutting",
-                "Strip Mining",
-                "Slash-and-Burn"
+                "Tailings",
+                "Ore",
+                "Overburden",
+                "Smelting slag"
               ],
-              "correctAnswer": "Selective Cutting",
+              "correctAnswer": "Tailings",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "In fisheries management, what does the term 'Maximum Sustainable Yield' refer to?",
+              "questionText": "What fishing practice is most associated with high mortality rates of unintended species caught alongside target fish?",
               "options": [
-                "The largest harvest allowing a population to remain stable",
-                "The minimum catch needed to deplete a fish stock",
-                "The total fish biomass available at any given time",
-                "The amount caught during the peak spawning season"
+                "Selective logging",
+                "Bycatch",
+                "Aquaculture",
+                "Drift netting"
               ],
-              "correctAnswer": "The largest harvest allowing a population to remain stable",
+              "correctAnswer": "Bycatch",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "______ refers to the unintended capture of non-target species during commercial fishing activities.",
+              "questionText": "__________ refers to the deliberate cultivation of aquatic organisms to supplement wild catch and improve food security.",
               "options": [
-                "Bycatch",
-                "Trawling",
-                "Overfishing",
-                "Aquaculture"
+                "Aquaculture",
+                "Desertification",
+                "Selective Logging",
+                "Eutrophication"
               ],
-              "correctAnswer": "Bycatch",
+              "correctAnswer": "Aquaculture",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "A water-efficient irrigation system that delivers water directly to the roots of plants through tubing is called ______.",
+              "questionText": "Excessive nutrient input from agricultural runoff into water bodies can cause ________, leading to low oxygen levels and fish kills.",
               "options": [
-                "Drip Irrigation",
-                "Flood Irrigation",
-                "Sprinkler Irrigation",
-                "Furrow Irrigation"
+                "Eutrophication",
+                "Salinization",
+                "Deforestation",
+                "Biomagnification"
               ],
-              "correctAnswer": "Drip Irrigation",
+              "correctAnswer": "Eutrophication",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -760,75 +765,76 @@
       "unitNumber": 6,
       "unitName": "Energy Resources and Consumption",
       "description": "Fossil fuels, nuclear energy, renewable energy sources, global energy consumption, and energy efficiency.",
+      "note": "# Unit 6: Energy Resources and Consumption\n\n## Overview\nThis unit explores the major **energy sources** used globally, including **fossil fuels**, **nuclear energy**, and **renewables**, alongside patterns of **global energy consumption** and strategies for improving **energy efficiency**. Understanding these topics is crucial for analyzing environmental impacts and sustainability challenges on the AP Environmental Science exam.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                               |\n|--------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------|\n| **Fossil Fuels**          | Energy sources formed from ancient organic matter: coal, oil, natural gas      | Major global energy source; linked to pollution, climate change, and reserves depletion |\n| **Nuclear Energy**        | Energy from nuclear fission of uranium or plutonium isotopes                   | Low greenhouse gas emissions but concerns over waste, accidents, and costs  |\n| **Renewable Energy**      | Energy from naturally replenished sources: solar, wind, hydro, geothermal, biomass | Key to sustainable energy; reduces fossil fuel dependence and emissions    |\n| **Energy Efficiency**     | Using less energy to perform the same task                                     | Reduces environmental impact and energy costs; critical for sustainable consumption |\n| **Global Energy Consumption** | Patterns and trends in energy use worldwide                                  | Reflects economic development and environmental impact; influences policy   |\n| **Peak Oil & Reserves**   | The point of maximum oil extraction rate and remaining fossil fuel quantities  | Predicts resource scarcity and drives transition to alternatives            |\n| **Externalities of Energy Use** | Environmental and social costs not reflected in market prices               | Important for evaluating true costs and benefits of energy sources          |\n| **Energy Return on Investment (EROI)** | Ratio of energy output to energy input for an energy source             | Measures efficiency and viability of energy sources                         |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Energy Sources\"] --> B[\"Fossil Fuels\"]\n    A --> C[\"Nuclear Energy\"]\n    A --> D[\"Renewable Energy\"]\n\n    B --> E[\"Extraction (Mining, Drilling)\"]\n    E --> F[\"Combustion for Energy\"]\n    F --> G[\"Emissions (CO_2, pollutants)\"]\n    G --> H[\"Environmental Impact (Climate change, acid rain)\"]\n\n    C --> I[\"Nuclear Fission\"]\n    I --> J[\"Heat Generation\"]\n    J --> K[\"Electricity Production\"]\n    K --> L[\"Radioactive Waste\"]\n    L --> M[\"Waste Storage & Risk Management\"]\n\n    D --> N[\"Solar, Wind, Hydro, Geothermal, Biomass\"]\n    N --> O[\"Electricity or Heat Production\"]\n    O --> P[\"Low Emissions\"]\n    P --> Q[\"Sustainable Energy Supply\"]\n\n    subgraph Energy Efficiency\n        R[\"Energy Input\"] --> S[\"Energy Output\"]\n        S --> T[\"Energy Loss Reduction\"]\n    end\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Law**                        | **Definition / Use**                                                                                   |\n|-----------------------------------------|------------------------------------------------------------------------------------------------------|\n| $$\\text{Energy Return on Investment (EROI)} = \\frac{\\text{Energy Output}}{\\text{Energy Input}}$$ | Measures net energy gained from an energy source; higher is better                                   |\n| $$\\text{Efficiency} = \\frac{\\text{Useful Energy Output}}{\\text{Total Energy Input}} \\times 100\\%$$ | Percentage of energy converted to useful work                                                       |\n| $$\\text{Combustion Reaction (general)}: \\quad \\text{Hydrocarbon} + O_2 \\rightarrow CO_2 + H_2O + \\text{Energy}$$ | Represents burning fossil fuels releasing energy and greenhouse gases                               |\n| **Law of Conservation of Energy**       | Energy cannot be created or destroyed, only transformed; important in energy flow analysis           |\n| **Peak Oil Concept**                     | The point when oil production reaches maximum rate, after which production declines                  |\n\n## Connections & Comparisons\n\n| **Energy Source**      | **Advantages**                          | **Disadvantages**                         | **Environmental Impact**                 |\n|-----------------------|---------------------------------------|------------------------------------------|-----------------------------------------|\n| **Coal**              | Abundant, cheap, high energy density  | High CO_2 emissions, air pollutants      | Acid rain, smog, greenhouse gases       |\n| **Natural Gas**        | Cleaner than coal, flexible use       | Methane leaks, still a fossil fuel       | Lower CO_2 but potent methane emissions |\n| **Nuclear**            | Low greenhouse gas emissions, reliable | Radioactive waste, accident risk, costly | Long-term waste storage, accident hazards|\n| **Solar & Wind**       | Renewable, low emissions               | Intermittent supply, land/resource use   | Minimal emissions, habitat disruption    |\n| **Biomass**            | Renewable, can reduce waste            | Can compete with food production          | CO_2 neutral if sustainably managed     |\n\n## Common AP Exam Traps\n\n- Confusing **energy efficiency** with **energy conservation**: efficiency means using technology to reduce waste; conservation means reducing overall energy use.\n- Assuming **renewable energy** is always zero impact; some renewables have environmental trade-offs (e.g., habitat disruption).\n- Overlooking **externalities**: fossil fuel prices often exclude environmental and health costs.\n- Misunderstanding **peak oil**: it refers to production rate peak, not total depletion.\n- Mixing up **nuclear fission** (splitting atoms) with **nuclear fusion** (combining atoms), only fission is currently used commercially.\n\n## Quick Review Checklist\n\n- [ ] Define and compare major **fossil fuels** and their environmental impacts  \n- [ ] Explain the process and risks of **nuclear energy** production  \n- [ ] Identify key types of **renewable energy** and their pros/cons  \n- [ ] Calculate and interpret **energy efficiency** and **EROI**  \n- [ ] Describe global patterns and consequences of **energy consumption**  \n- [ ] Understand the concept of **peak oil** and its implications  \n- [ ] Recognize **externalities** in energy economics  \n- [ ] Differentiate between **energy conservation** and **energy efficiency**  \n\n---\n\nThis guide equips you with the foundational knowledge to analyze energy sources, their environmental impacts, and sustainability challenges essential for the AP Environmental Science exam.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Fossil Fuels",
-              "definition": "Energy sources formed from the compressed remains of ancient plants and animals, primarily including coal, oil, and natural gas."
+              "definition": "Energy-rich substances formed from the remains of ancient organisms over millions of years, primarily including coal, oil, and natural gas."
             },
             {
-              "term": "Coal Formation",
-              "definition": "The process by which plant material is converted over millions of years under heat and pressure into a carbon-rich combustible rock."
-            },
-            {
-              "term": "Peak Oil",
-              "definition": "A theoretical point in time when the maximum rate of extraction of petroleum is reached, after which production is expected to enter terminal decline."
+              "term": "Carbon Footprint of Fossil Fuels",
+              "definition": "The total amount of carbon dioxide emissions released into the atmosphere as a result of combustion and extraction of these energy sources."
             },
             {
               "term": "Nuclear Fission",
-              "definition": "A nuclear reaction where an atomic nucleus splits into smaller parts, releasing a significant amount of energy used for power generation."
+              "definition": "A process in which the nucleus of a heavy atom splits into two lighter nuclei, releasing a large amount of energy used in electricity generation."
             },
             {
-              "term": "Uranium-235",
-              "definition": "A naturally occurring isotope used as fuel in nuclear reactors because it can sustain a chain reaction of nuclear fission."
+              "term": "Renewable Energy Source",
+              "definition": "An energy source that is naturally replenished on a human timescale, such as sunlight, wind, hydropower, and geothermal energy."
+            },
+            {
+              "term": "Energy Density",
+              "definition": "A measure of the amount of energy stored in a given system or region of space per unit volume or mass."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following best explains why coal is considered a nonrenewable resource?",
+              "questionText": "Which of the following energy sources is formed primarily from ancient organic matter buried and subjected to heat and pressure over millions of years?",
               "options": [
-                "It is formed from plant material in a short geological time frame.",
-                "Its extraction causes very little environmental damage.",
-                "The rate of formation is much slower than the rate of consumption.",
-                "It is primarily used for producing nuclear energy."
+                "Solar energy",
+                "Fossil fuels",
+                "Nuclear energy",
+                "Wind energy"
               ],
-              "correctAnswer": "The rate of formation is much slower than the rate of consumption.",
+              "correctAnswer": "Fossil fuels",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "What characteristic of uranium-235 makes it suitable for use as nuclear reactor fuel?",
+              "questionText": "Which process is central to the functioning of nuclear power plants that generate electricity?",
               "options": [
-                "It readily undergoes fusion to release energy.",
-                "It can sustain a chain reaction through fission.",
-                "It is abundant in the Earth's atmosphere.",
-                "It emits solar radiation that can generate electricity."
+                "Combustion of uranium",
+                "Nuclear fission",
+                "Hydraulic fracturing",
+                "Photosynthesis"
               ],
-              "correctAnswer": "It can sustain a chain reaction through fission.",
+              "correctAnswer": "Nuclear fission",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The process in which an atomic nucleus splits into smaller nuclei, releasing energy, is called ______.",
+              "questionText": "The combustion of ________ releases significant amounts of carbon dioxide, contributing to global warming.",
               "options": [
-                "nuclear fission",
-                "photosynthesis",
-                "combustion",
-                "radioactive decay"
+                "natural gas",
+                "nuclear fuel",
+                "wind energy",
+                "solar panels"
               ],
-              "correctAnswer": "nuclear fission",
+              "correctAnswer": "natural gas",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Coal primarily forms from decomposed ______ subjected to heat and pressure over millions of years.",
+              "questionText": "Energy from the sun harnessed through photovoltaic cells is an example of ________ energy.",
               "options": [
-                "animal remains",
-                "volcanic ash",
-                "plant material",
-                "marine sediments"
+                "renewable",
+                "fossil fuel",
+                "nuclear",
+                "geothermal"
               ],
-              "correctAnswer": "plant material",
+              "correctAnswer": "renewable",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -836,71 +842,71 @@
         {
           "flashcards": [
             {
-              "term": "Renewable Energy",
-              "definition": "Energy derived from natural processes that are replenished constantly, such as sunlight, wind, rain, tides, and geothermal heat."
+              "term": "Global Energy Consumption",
+              "definition": "The total amount of energy used worldwide, encompassing residential, commercial, industrial, and transportation sectors."
             },
             {
               "term": "Energy Efficiency",
-              "definition": "A measure of how well energy input is converted into useful output, minimizing wasted energy in processes or devices."
+              "definition": "The ratio of useful energy output to total energy input, indicating how effectively energy is converted for practical use."
             },
             {
-              "term": "Photovoltaic Cells",
-              "definition": "Devices that convert sunlight directly into electricity by the photovoltaic effect."
+              "term": "Hydroelectric Power",
+              "definition": "Energy generated by harnessing the kinetic energy of flowing water to produce electricity."
             },
             {
-              "term": "Global Energy Consumption",
-              "definition": "The total energy used by all human activities worldwide, including transportation, industry, residential, and commercial use."
+              "term": "Geothermal Energy",
+              "definition": "Thermal energy derived from the Earth’s internal heat used for electricity generation and direct heating applications."
             },
             {
-              "term": "Energy Conservation",
-              "definition": "The practice of reducing energy use through behavioral or technological changes to lessen environmental impact and resource depletion."
+              "term": "Capacity Factor",
+              "definition": "The ratio of actual energy produced by a power plant over a period of time to the energy it could have produced at full capacity during the same time."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following is considered a renewable energy source?",
+              "questionText": "Which sector typically accounts for the largest share of global energy consumption?",
               "options": [
-                "Coal",
-                "Natural gas",
-                "Wind",
-                "Uranium"
+                "Residential",
+                "Industrial",
+                "Agricultural",
+                "Transportation"
               ],
-              "correctAnswer": "Wind",
+              "correctAnswer": "Industrial",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which of the following best describes energy efficiency in appliances?",
+              "questionText": "Which renewable energy source utilizes the Earth’s internal heat to generate electricity or provide heating?",
               "options": [
-                "Using more energy to increase performance",
-                "Converting energy input into maximum useful work with minimal waste",
-                "Reducing the cost of energy resources",
-                "Using energy only at night"
+                "Solar",
+                "Wind",
+                "Geothermal",
+                "Hydropower"
               ],
-              "correctAnswer": "Converting energy input into maximum useful work with minimal waste",
+              "correctAnswer": "Geothermal",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "Solar panels that convert sunlight directly into electrical energy use ______ cells.",
+              "questionText": "A higher ________ indicates better performance of a power plant by producing energy closer to its maximum capacity.",
               "options": [
-                "photovoltaic",
-                "thermal",
-                "geothermal",
-                "fuel"
+                "capacity factor",
+                "emission rate",
+                "carbon footprint",
+                "energy density"
               ],
-              "correctAnswer": "photovoltaic",
+              "correctAnswer": "capacity factor",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Energy conservation can reduce global energy consumption and help decrease emissions of ______ gases.",
+              "questionText": "Improving ________ in buildings and appliances reduces wasted energy and lowers overall energy demand.",
               "options": [
-                "greenhouse",
-                "noble",
-                "inert",
-                "inorganic"
+                "energy efficiency",
+                "hydraulic fracturing",
+                "fuel combustion",
+                "carbon trading"
               ],
-              "correctAnswer": "greenhouse",
+              "correctAnswer": "energy efficiency",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -911,75 +917,76 @@
       "unitNumber": 7,
       "unitName": "Atmospheric Pollution",
       "description": "Air pollutants, photochemical smog, acid deposition, stratospheric ozone depletion, and indoor air quality.",
+      "note": "# Unit 7: Atmospheric Pollution\n\n## Overview\nThis unit explores the sources, types, and impacts of **atmospheric pollution**, including **photochemical smog**, **acid deposition**, **stratospheric ozone depletion**, and **indoor air quality**. Understanding these concepts is critical for the AP Environmental Science exam because they connect human activities to environmental and health consequences, and highlight regulatory and technological responses.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                                                                 |\n|--------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|\n| **Primary Pollutants**    | Pollutants emitted directly from sources (e.g., $$\\text{CO}$$, $$\\text{SO}_2$$) | Basis for understanding pollution formation and control strategies.                                           |\n| **Secondary Pollutants**  | Formed by chemical reactions in the atmosphere (e.g., ozone, $$\\text{NO}_3$$)   | Explains complex atmospheric chemistry and smog formation.                                                    |\n| **Photochemical Smog**    | Brownish haze formed by $$\\text{NO}_x$$ and VOCs under sunlight                 | Illustrates human impact on urban air quality and respiratory health.                                         |\n| **Acid Deposition**       | Acidic rain, snow, or fog caused by $$\\text{SO}_2$$ and $$\\text{NO}_x$$         | Connects air pollution to ecosystem damage and soil chemistry changes.                                        |\n| **Stratospheric Ozone Depletion** | Thinning of ozone layer due to CFCs and halons                             | Highlights global environmental issues and international policy (Montreal Protocol).                           |\n| **Indoor Air Quality**    | Pollution inside buildings from radon, asbestos, VOCs, and combustion sources  | Emphasizes human health risks and the importance of ventilation and regulation.                               |\n| **Atmospheric Layers**    | Troposphere and stratosphere where pollution and ozone dynamics occur          | Provides context for pollutant behavior and ozone layer protection.                                           |\n| **Air Quality Standards** | EPA regulations like NAAQS for pollutants                                     | Shows how science informs policy to protect public health and environment.                                    |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Primary Pollutants (e.g., $$\\text{NO}_x$$, VOCs, $$\\text{SO}_2$$)\"] --> B[\"Photochemical Reactions (sunlight-driven)\"]\n    B --> C[\"Secondary Pollutants (e.g., Ozone, PANs)\"]\n    C --> D[\"Photochemical Smog Formation\"]\n    A --> E[\"Acid Deposition\"]\n    E --> F[\"Acid Rain, Snow, Fog\"]\n    F --> G[\"Ecosystem & Soil Damage\"]\n    H[\"CFCs and Halons\"] --> I[\"Stratospheric Ozone Depletion\"]\n    I --> J[\"Increased UV Radiation\"]\n    K[\"Indoor Pollutants (radon, VOCs, asbestos)\"] --> L[\"Indoor Air Quality Issues\"]\n    L --> M[\"Human Health Effects\"]\n```\n\n### Explanation:\n- **Primary pollutants** like $$\\text{NO}_x$$ and VOCs react under sunlight to form **photochemical smog**.\n- $$\\text{SO}_2$$ and $$\\text{NO}_x$$ contribute to **acid deposition**, damaging ecosystems.\n- **CFCs** break down ozone in the **stratosphere**, increasing harmful UV exposure.\n- Indoor pollutants cause health issues due to poor ventilation.\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Law**                          | **Description**                                                                                  |\n|-------------------------------------------|------------------------------------------------------------------------------------------------|\n| $$\\text{NO} + \\text{O}_2 \\rightarrow \\text{NO}_2$$ | Formation of nitrogen dioxide, a key smog precursor.                                            |\n| $$\\text{NO}_2 + \\text{UV light} \\rightarrow \\text{NO} + \\text{O}$$ | Photolysis of $$\\text{NO}_2$$ producing atomic oxygen.                                          |\n| $$\\text{O} + \\text{O}_2 \\rightarrow \\text{O}_3$$ | Formation of ozone (a secondary pollutant) in photochemical smog.                               |\n| $$\\text{SO}_2 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_3$$ | Sulfur dioxide dissolves in water forming sulfurous acid (acid rain precursor).                 |\n| $$\\text{NO}_2 + \\text{H}_2\\text{O} \\rightarrow \\text{HNO}_3 + \\text{HNO}_2$$ | Nitrogen dioxide forms nitric and nitrous acids (acid rain components).                         |\n| **Montreal Protocol (1987)**               | International treaty phasing out ozone-depleting substances like CFCs.                         |\n| **NAAQS (National Ambient Air Quality Standards)** | EPA standards limiting concentrations of key pollutants (e.g., $$\\text{PM}_{2.5}$$, $$\\text{O}_3$$). |\n\n## Connections & Comparisons\n\n| **Concept**               | **Cause(s)**                         | **Effect(s)**                      | **Mitigation**                       |\n|--------------------------|------------------------------------|----------------------------------|------------------------------------|\n| **Photochemical Smog**    | $$\\text{NO}_x$$ + VOCs + sunlight  | Respiratory problems, reduced visibility | Emission controls, catalytic converters |\n| **Acid Deposition**       | $$\\text{SO}_2$$ + $$\\text{NO}_x$$ + water vapor | Soil acidification, aquatic damage | Scrubbers, low-sulfur fuels         |\n| **Stratospheric Ozone Depletion** | CFCs, halons                     | Increased UV exposure, skin cancer risk | Montreal Protocol, CFC alternatives |\n| **Indoor Air Pollution**  | Radon, asbestos, VOCs, combustion  | Lung cancer, respiratory illness | Ventilation, air filters, regulations |\n\n## Common AP Exam Traps\n\n- Confusing **primary** and **secondary pollutants**; remember primary are emitted directly, secondary form in atmosphere.\n- Misidentifying **ozone** as always harmful; ozone is beneficial in the stratosphere but harmful in the troposphere.\n- Overlooking the role of **sunlight** in photochemical smog formation.\n- Assuming all acid deposition is caused by $$\\text{SO}_2$$ alone; $$\\text{NO}_x$$ also contributes significantly.\n- Mixing up **indoor** vs. **outdoor** air pollution sources and effects.\n\n## Quick Review Checklist\n\n- [ ] Define and distinguish **primary** vs. **secondary pollutants**.\n- [ ] Explain the chemical reactions forming **photochemical smog**.\n- [ ] Describe causes and environmental impacts of **acid deposition**.\n- [ ] Summarize the causes and consequences of **stratospheric ozone depletion**.\n- [ ] Identify major indoor air pollutants and their health effects.\n- [ ] Understand the role of **atmospheric layers** in pollution dynamics.\n- [ ] Recall key air quality regulations like **NAAQS** and **Montreal Protocol**.\n- [ ] Analyze human and ecological impacts of atmospheric pollution and mitigation strategies.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Primary Air Pollutants",
-              "definition": "Substances emitted directly into the atmosphere from sources such as combustion engines, industrial processes, and natural events like volcanic eruptions."
+              "definition": "Substances emitted directly into the atmosphere from sources such as combustion of fossil fuels and volcanic eruptions, which have immediate harmful effects on health and environment."
             },
             {
               "term": "Secondary Air Pollutants",
-              "definition": "Pollutants formed in the atmosphere through chemical reactions involving primary pollutants and other atmospheric components under the influence of sunlight."
+              "definition": "Compounds formed in the atmosphere through chemical reactions involving primary pollutants and atmospheric components, often more harmful than their precursors."
             },
             {
               "term": "Photochemical Smog",
-              "definition": "A type of air pollution characterized by a brownish haze resulting from the reaction of sunlight with nitrogen oxides and volatile organic compounds, forming ozone and other oxidants."
+              "definition": "A type of air pollution characterized by a brownish haze formed when sunlight-driven reactions between nitrogen oxides and volatile organic compounds produce ozone and other oxidants."
             },
             {
               "term": "Acid Deposition",
-              "definition": "The process by which sulfur dioxide and nitrogen oxides react with atmospheric moisture to form acidic compounds that fall to the Earth's surface as precipitation or dry particles."
+              "definition": "The process by which acidic components, primarily sulfuric and nitric acids, fall to the Earth's surface through precipitation or as dry particles, causing environmental harm."
             },
             {
-              "term": "Particulate Matter (PM)",
-              "definition": "A mixture of tiny solid and liquid particles suspended in air, including dust, soot, and aerosols, which can penetrate deep into the lungs and cause health problems."
+              "term": "Catalytic Converter",
+              "definition": "A vehicle emission control device that uses catalysts to convert toxic gases and pollutants in exhaust gas into less harmful substances before release to the atmosphere."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following is a primary air pollutant directly emitted from combustion processes?",
+              "questionText": "Which of the following is a characteristic component of photochemical smog?",
               "options": [
-                "Ozone (O₃)",
-                "Sulfur dioxide (SO₂)",
-                "Nitric acid (HNO₃)",
-                "Peroxyacyl nitrates (PANs)"
+                "Sulfuric acid",
+                "Ozone",
+                "Particulate matter",
+                "Carbon monoxide"
               ],
-              "correctAnswer": "Sulfur dioxide (SO₂)",
+              "correctAnswer": "Ozone",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Photochemical smog forms primarily through the action of:",
+              "questionText": "Acid deposition primarily results from emissions of which gases?",
               "options": [
-                "CO2 reacting with water vapor",
-                "Sunlight driving reactions between nitrogen oxides and volatile organic compounds",
-                "Volcanic emissions interacting with atmospheric moisture",
-                "Sulfur dioxide reacting with atmospheric oxygen"
+                "Nitrogen oxides and sulfur dioxide",
+                "Methane and carbon dioxide",
+                "Ozone and nitric acid",
+                "Volatile organic compounds and ozone"
               ],
-              "correctAnswer": "Sunlight driving reactions between nitrogen oxides and volatile organic compounds",
+              "correctAnswer": "Nitrogen oxides and sulfur dioxide",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "______ is an atmospheric mixture resulting primarily from reactions involving nitrogen oxides and volatile organic compounds under sunlight.",
+              "questionText": "________ are pollutants released directly into the atmosphere and include substances like carbon monoxide and sulfur dioxide.",
               "options": [
-                "Photochemical smog",
-                "Acid rain",
-                "Stratospheric ozone",
-                "Particulate matter"
+                "Primary air pollutants",
+                "Secondary air pollutants",
+                "Photochemical oxidants",
+                "Particulates"
               ],
-              "correctAnswer": "Photochemical smog",
+              "correctAnswer": "Primary air pollutants",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Acid deposition results when sulfur dioxide and nitrogen oxides combine with ______ in the atmosphere.",
+              "questionText": "The formation of photochemical smog is catalyzed by the presence of ________, which drives the reaction between nitrogen oxides and volatile organic compounds.",
               "options": [
-                "water vapor",
-                "ozone",
-                "carbon monoxide",
-                "methane"
+                "Sunlight",
+                "Carbon dioxide",
+                "Rainfall",
+                "Thermal inversion"
               ],
-              "correctAnswer": "water vapor",
+              "correctAnswer": "Sunlight",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -988,70 +995,70 @@
           "flashcards": [
             {
               "term": "Stratospheric Ozone Depletion",
-              "definition": "A reduction in the concentration of ozone molecules in the stratosphere due to chemical reactions involving chlorofluorocarbons and other ozone-depleting substances."
+              "definition": "A reduction in the concentration of ozone molecules in the Earth’s stratosphere, primarily caused by anthropogenic halogen-containing compounds, leading to increased ultraviolet radiation at the surface."
             },
             {
-              "term": "Montreal Protocol",
-              "definition": "An international treaty established to phase out the production and use of substances responsible for stratospheric ozone depletion."
+              "term": "Chlorofluorocarbons (CFCs)",
+              "definition": "Synthetic compounds once widely used as refrigerants and propellants, notable for their stability and ability to catalyze ozone destruction in the stratosphere."
             },
             {
               "term": "Indoor Air Quality",
-              "definition": "The condition of the air inside buildings influenced by sources such as tobacco smoke, building materials, radon, and biological contaminants."
+              "definition": "The condition of the air inside buildings as it relates to the health and comfort of occupants, influenced by pollutants such as radon, formaldehyde, and particulate matter."
             },
             {
               "term": "Radon",
-              "definition": "A colorless, odorless radioactive gas generated by the natural decay of uranium in soil, which can accumulate indoors and increase the risk of lung cancer."
+              "definition": "A naturally occurring radioactive gas that can accumulate in buildings, particularly basements, and poses significant lung cancer risk upon prolonged exposure."
             },
             {
-              "term": "Sick Building Syndrome",
-              "definition": "A condition in which occupants of a building experience acute health symptoms linked to poor indoor air quality, often without a specific identifiable cause."
+              "term": "Thermal Inversion",
+              "definition": "A meteorological condition where a layer of warmer air traps pollutants near the ground, preventing normal convection and exacerbating air pollution episodes."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which gas is primarily responsible for the depletion of stratospheric ozone?",
+              "questionText": "Which of the following substances is primarily responsible for stratospheric ozone depletion?",
               "options": [
-                "Methane (CH₄)",
+                "Carbon dioxide",
                 "Chlorofluorocarbons (CFCs)",
-                "Carbon monoxide (CO)",
-                "Nitrous oxide (N₂O)"
+                "Nitrogen oxides",
+                "Methane"
               ],
               "correctAnswer": "Chlorofluorocarbons (CFCs)",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "The international agreement aimed at reducing substances that destroy the ozone layer is called the:",
+              "questionText": "Radon gas accumulation indoors is a concern mainly because it is:",
               "options": [
-                "Kyoto Protocol",
-                "Paris Agreement",
-                "Montreal Protocol",
-                "Geneva Convention"
+                "Highly flammable",
+                "Radioactive and carcinogenic",
+                "A strong oxidant",
+                "A greenhouse gas"
               ],
-              "correctAnswer": "Montreal Protocol",
+              "correctAnswer": "Radioactive and carcinogenic",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "Exposure to ______ gas indoors is a significant risk factor for lung cancer due to its radioactive properties.",
+              "questionText": "A ________ occurs when a warm air layer sits above a cooler air layer near the surface, trapping pollutants below.",
               "options": [
-                "radon",
-                "carbon monoxide",
-                "ozone",
-                "sulfur dioxide"
+                "Thermal inversion",
+                "Convective lift",
+                "Temperature gradient",
+                "Ozone hole"
               ],
-              "correctAnswer": "radon",
+              "correctAnswer": "Thermal inversion",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Symptoms such as headaches, dizziness, and irritation linked to poor ventilation and indoor contaminants are commonly associated with ______.",
+              "questionText": "The depletion of the ozone layer increases the risk of ________ due to greater ultraviolet radiation reaching the Earth’s surface.",
               "options": [
-                "Sick Building Syndrome",
-                "Photochemical smog",
-                "Acid deposition",
-                "Stratospheric ozone depletion"
+                "Skin cancer",
+                "Asthma",
+                "Acid rain",
+                "Global warming"
               ],
-              "correctAnswer": "Sick Building Syndrome",
+              "correctAnswer": "Skin cancer",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1062,75 +1069,76 @@
       "unitNumber": 8,
       "unitName": "Aquatic and Terrestrial Pollution",
       "description": "Water pollution sources, thermal pollution, solid and hazardous waste, and pollution remediation strategies.",
+      "note": "# Unit 8: Aquatic and Terrestrial Pollution\n\n## Overview\nThis unit explores the sources, types, and impacts of **water and land pollution**, including **thermal pollution**, **solid and hazardous waste**, and strategies for **pollution remediation**. Understanding these concepts is crucial for analyzing human impacts on ecosystems and evaluating environmental policies on the AP Environmental Science exam.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                                  |\n|--------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Point vs. Nonpoint Sources** | Point sources are identifiable pollution origins; nonpoint sources are diffuse. | Differentiating sources aids in pollution control strategies and policy design. |\n| **Thermal Pollution**     | Discharge of heated water into natural water bodies, altering temperature regimes. | Affects aquatic life by reducing dissolved oxygen; common in industrial processes. |\n| **Eutrophication**        | Nutrient enrichment causing algal blooms and oxygen depletion in aquatic systems. | Demonstrates nutrient pollution effects and ecosystem responses.               |\n| **Solid Waste**           | Non-liquid refuse including municipal garbage and industrial byproducts.        | Managing solid waste is key to reducing land pollution and conserving resources. |\n| **Hazardous Waste**       | Waste harmful to human health or environment due to toxicity, reactivity, or flammability. | Requires special handling and disposal; linked to environmental contamination. |\n| **Bioremediation**        | Use of living organisms to detoxify polluted environments.                      | A sustainable pollution remediation method tested on AP exam scenarios.       |\n| **Landfills & Incineration** | Common waste disposal methods with distinct environmental impacts.             | Understanding pros/cons is essential for evaluating waste management policies. |\n| **Pollution Remediation Strategies** | Techniques to reduce or remove pollutants from ecosystems.                   | Critical for AP questions on environmental solutions and human impact mitigation. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Pollution Sources\"]\n    A --> B[\"Point Sources\"]\n    A --> C[\"Nonpoint Sources\"]\n\n    B --> D[\"Industrial Discharge\"]\n    B --> E[\"Sewage Treatment Plants\"]\n\n    C --> F[\"Agricultural Runoff\"]\n    C --> G[\"Urban Runoff\"]\n\n    D --> H[\"Thermal Pollution\"]\n    E --> I[\"Nutrient Pollution (Eutrophication)\"]\n    F --> I\n    G --> I\n\n    H --> J[\"Reduced DO in Water\"]\n    I --> K[\"Algal Blooms\"]\n    K --> L[\"Hypoxia / Dead Zones\"]\n\n    M[\"Waste Types\"]\n    M --> N[\"Solid Waste\"]\n    M --> O[\"Hazardous Waste\"]\n\n    N --> P[\"Landfills\"]\n    N --> Q[\"Incineration\"]\n\n    O --> R[\"Special Disposal\"]\n    O --> S[\"Bioremediation\"]\n\n    T[\"Pollution Remediation\"]\n    T --> S\n    T --> U[\"Physical Removal\"]\n    T --> V[\"Chemical Treatment\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Name/Rule**                 | **Definition / Formula**                                                                                       |\n|------------------------------|---------------------------------------------------------------------------------------------------------------|\n| **Dissolved Oxygen (DO) & Temperature** | $$ DO \\propto \\frac{1}{Temperature} $$ (Inverse relationship: higher temperature → lower DO)               |\n| **Biochemical Oxygen Demand (BOD)**      | Amount of oxygen required by aerobic organisms to decompose organic matter: high BOD indicates pollution.  |\n| **Eutrophication Process**               | Excess $$ \\text{N} \\text{ and } \\text{P} \\rightarrow \\text{Algal Bloom} \\rightarrow \\text{Hypoxia} $$     |\n| **RCRA (Resource Conservation and Recovery Act)** | Regulates solid and hazardous waste management in the U.S.                                                  |\n| **CERCLA (Superfund Act)**                | Governs cleanup of hazardous waste sites.                                                                   |\n| **Leachate**                             | Contaminated liquid formed when water passes through waste in landfills; must be contained to prevent pollution. |\n\n## Connections & Comparisons\n\n| **Concept**           | **Cause/Source**                     | **Environmental Impact**                  | **Remediation Strategy**                 |\n|----------------------|------------------------------------|------------------------------------------|-----------------------------------------|\n| **Thermal Pollution** | Industrial cooling water discharge | ↓ Dissolved oxygen, fish kills           | Cooling ponds, cooling towers           |\n| **Eutrophication**    | Nutrient runoff (N, P fertilizers) | Algal blooms, hypoxia, dead zones        | Reduce fertilizer use, buffer strips    |\n| **Landfills**         | Solid waste disposal               | Groundwater contamination via leachate  | Liners, leachate collection systems     |\n| **Incineration**      | Burning solid waste                | Air pollution (dioxins, particulates)   | Scrubbers, filters                      |\n| **Hazardous Waste**   | Toxic chemical byproducts          | Soil and water contamination             | Secure landfills, bioremediation, chemical neutralization |\n\n## Common AP Exam Traps\n\n- Confusing **point** and **nonpoint** pollution sources; remember point sources are single, identifiable locations.\n- Assuming **thermal pollution** adds chemicals—it primarily affects temperature and oxygen levels.\n- Overlooking that **eutrophication** results from nutrient overload, not just any pollution.\n- Believing **all waste incineration** is environmentally friendly; it can release toxic emissions if uncontrolled.\n- Ignoring the difference between **solid waste** and **hazardous waste** in terms of handling and risks.\n\n## Quick Review Checklist\n\n- [ ] Distinguish between **point** and **nonpoint** sources of pollution with examples.\n- [ ] Explain how **thermal pollution** affects aquatic ecosystems.\n- [ ] Describe the process and consequences of **eutrophication**.\n- [ ] Identify types of **solid** and **hazardous waste** and their environmental risks.\n- [ ] Compare **landfill** and **incineration** as waste management methods.\n- [ ] Summarize key laws regulating waste disposal (e.g., **RCRA**, **CERCLA**).\n- [ ] Outline common **pollution remediation** strategies, including **bioremediation**.\n- [ ] Interpret the relationship between **temperature**, **BOD**, and **dissolved oxygen** in water quality.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Point Source Pollution",
-              "definition": "A type of pollution that enters a water body from a single, identifiable location such as a pipe or a drainage ditch."
+              "term": "Point source pollution",
+              "definition": "Contamination that originates from a single, identifiable source, such as a pipe or a drain, allowing for easier management and regulation."
             },
             {
-              "term": "Nonpoint Source Pollution",
-              "definition": "Pollutants that come from diffuse sources and are often carried into water bodies by runoff, making them difficult to control individually."
+              "term": "Nonpoint source pollution",
+              "definition": "Diffuse contamination that does not come from a single discrete source, typically caused by runoff from agricultural or urban areas."
             },
             {
-              "term": "Thermal Pollution",
-              "definition": "The degradation of water quality by any process that changes ambient water temperature, often caused by discharges from industrial processes or power plants."
+              "term": "Thermal pollution",
+              "definition": "An increase in water temperature caused by human activity, which can decrease oxygen levels and harm aquatic ecosystems."
             },
             {
               "term": "Eutrophication",
-              "definition": "A process in which excess nutrients, particularly nitrogen and phosphorus, lead to dense plant growth and subsequent oxygen depletion in a water body."
+              "definition": "A process where excess nutrients in water bodies lead to algal blooms and subsequent oxygen depletion, negatively impacting aquatic life."
             },
             {
               "term": "Bioaccumulation",
-              "definition": "The gradual buildup of toxic substances, such as heavy metals or pesticides, in an organism's tissues over time, often through its food intake."
+              "definition": "The gradual buildup of toxic substances, such as heavy metals or pesticides, in organisms over time through exposure or consumption."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following best describes a primary consequence of thermal pollution in aquatic ecosystems?",
+              "questionText": "Which of the following is an example of point source pollution?",
               "options": [
-                "Increased dissolved oxygen levels",
-                "Decreased metabolic rates of organisms",
-                "Reduced oxygen solubility in water",
-                "Increased nutrient availability"
+                "Runoff from agricultural fields",
+                "Discharge from a wastewater treatment plant",
+                "Urban stormwater runoff",
+                "Airborne pollutants from vehicles"
               ],
-              "correctAnswer": "Reduced oxygen solubility in water",
+              "correctAnswer": "Discharge from a wastewater treatment plant",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Nonpoint source pollution is most challenging to manage because it:",
+              "questionText": "Thermal pollution typically affects aquatic ecosystems by:",
               "options": [
-                "Originates from multiple diffuse locations",
-                "Comes from a single identifiable source",
-                "Is always caused by industrial discharge",
-                "Is regulated strictly by the EPA"
+                "Increasing dissolved oxygen levels",
+                "Lowering water temperature",
+                "Decreasing oxygen solubility in water",
+                "Removing heavy metals from water"
               ],
-              "correctAnswer": "Originates from multiple diffuse locations",
+              "correctAnswer": "Decreasing oxygen solubility in water",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "A common effect of eutrophication is a(n) ______ in dissolved oxygen, leading to hypoxic conditions.",
+              "questionText": "______ pollution is characterized by contaminants entering water bodies from diffuse sources like runoff rather than a single discharge point.",
               "options": [
-                "increase",
-                "decrease",
-                "stabilization",
-                "neutrality"
+                "Point source",
+                "Thermal",
+                "Nonpoint source",
+                "Biological"
               ],
-              "correctAnswer": "decrease",
+              "correctAnswer": "Nonpoint source",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Bioaccumulation refers to the buildup of harmful substances in an organism's tissues, typically caused by consuming contaminated ______.",
+              "questionText": "The process of ______ results from excess nutrient enrichment causing excessive algal growth and subsequent oxygen depletion in aquatic systems.",
               "options": [
-                "water",
-                "food",
-                "air",
-                "soil"
+                "Bioaccumulation",
+                "Eutrophication",
+                "Thermal pollution",
+                "Sedimentation"
               ],
-              "correctAnswer": "food",
+              "correctAnswer": "Eutrophication",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1138,71 +1146,71 @@
         {
           "flashcards": [
             {
-              "term": "Solid Waste",
-              "definition": "Discarded material from human activities that is not liquid or gas, typically including household garbage, construction debris, and agricultural refuse."
+              "term": "Solid waste management",
+              "definition": "The systematic control of collection, storage, treatment, and disposal of solid materials discarded by society to reduce environmental impact."
             },
             {
-              "term": "Hazardous Waste",
-              "definition": "Waste material that poses substantial or potential threats to public health or the environment due to its toxicity, reactivity, flammability, or corrosivity."
-            },
-            {
-              "term": "Leachate",
-              "definition": "A contaminated liquid formed when water percolates through solid waste in a landfill, potentially transporting hazardous substances into surrounding soil and groundwater."
+              "term": "Hazardous waste",
+              "definition": "Waste material that is dangerous or potentially harmful to human health or the environment due to its toxicity, reactivity, corrosiveness, or flammability."
             },
             {
               "term": "Bioremediation",
-              "definition": "The use of living organisms, such as bacteria or plants, to detoxify or remove pollutants from soil, water, or air environments."
+              "definition": "The use of living organisms, such as bacteria or plants, to detoxify or remove pollutants from soil, water, or air."
+            },
+            {
+              "term": "Phytoremediation",
+              "definition": "A remediation technique that employs plants to absorb, degrade, or immobilize contaminants from soil or water."
             },
             {
               "term": "Incineration",
-              "definition": "A waste treatment process that involves the combustion of organic substances contained in waste materials, reducing volume and sometimes generating energy."
+              "definition": "A waste treatment process involving combustion at high temperatures to reduce waste volume and potentially generate energy, requiring pollution control measures."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which waste management technique is primarily intended to reduce the volume and toxicity of hazardous waste by burning?",
+              "questionText": "Which of the following descriptions best fits hazardous waste?",
               "options": [
-                "Landfilling",
-                "Recycling",
-                "Incineration",
-                "Composting"
+                "Non-biodegradable kitchen scraps",
+                "Materials that can cause harm due to toxicity or reactivity",
+                "Recyclable paper and plastics",
+                "Common household garbage"
               ],
-              "correctAnswer": "Incineration",
+              "correctAnswer": "Materials that can cause harm due to toxicity or reactivity",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Leachate management is critical in landfills because leachate may:",
+              "questionText": "Which remediation strategy uses microbes to break down pollutants in contaminated sites?",
               "options": [
-                "Enhance soil fertility",
-                "Spread hazardous contaminants",
-                "Reduce methane production",
-                "Increase aerobic microbial activity"
+                "Phytoremediation",
+                "Incineration",
+                "Bioremediation",
+                "Landfilling"
               ],
-              "correctAnswer": "Spread hazardous contaminants",
+              "correctAnswer": "Bioremediation",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "Bioremediation involves using ______ to degrade environmental pollutants into less harmful substances.",
+              "questionText": "______ is a technique that utilizes plants to clean up contaminants from soil or water.",
               "options": [
-                "chemical solvents",
-                "living organisms",
-                "mechanical filters",
-                "synthetic polymers"
+                "Incineration",
+                "Phytoremediation",
+                "Composting",
+                "Bioremediation"
               ],
-              "correctAnswer": "living organisms",
+              "correctAnswer": "Phytoremediation",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Hazardous waste must be carefully managed because it is characterized by properties such as toxicity, reactivity, or ______.",
+              "questionText": "A common disadvantage of incineration as a waste management method is the production of ______ that must be controlled to prevent air pollution.",
               "options": [
-                "weight",
-                "solubility",
-                "flammability",
-                "odor"
+                "Methane gas",
+                "Ash and toxic emissions",
+                "Groundwater contamination",
+                "Electronic waste"
               ],
-              "correctAnswer": "flammability",
+              "correctAnswer": "Ash and toxic emissions",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1213,75 +1221,76 @@
       "unitNumber": 9,
       "unitName": "Global Change",
       "description": "Climate change drivers, global warming impacts, ocean acidification, loss of biodiversity, and environmental policy.",
+      "note": "# Unit 9: Global Change\n\n## Overview\nThis unit explores the drivers and consequences of **global environmental change**, focusing on **climate change**, **ocean acidification**, and **biodiversity loss**. Understanding these processes and related **environmental policies** is crucial for analyzing human impacts on Earth systems and for success on the AP Environmental Science exam.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                              |\n|--------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------|\n| **Greenhouse Effect**    | Trapping of infrared radiation by atmospheric gases like $$CO_2$$ and $$CH_4$$ | Fundamental to understanding **global warming** and climate change       |\n| **Global Warming**       | Increase in Earth's average surface temperature due to enhanced greenhouse gases | Drives many environmental changes tested on the exam                      |\n| **Ocean Acidification**  | Decrease in ocean pH caused by absorption of atmospheric $$CO_2$$               | Impacts marine life and ecosystems, a key example of global change effects |\n| **Loss of Biodiversity** | Decline in species richness and ecosystem complexity                           | Highlights consequences of habitat destruction and climate change         |\n| **Carbon Cycle Disruption** | Alteration of natural carbon fluxes by fossil fuel burning and deforestation | Central to understanding anthropogenic climate drivers                    |\n| **Environmental Policy** | Laws and agreements aimed at mitigating environmental damage                   | Important for evaluating human responses to global change                 |\n| **Feedback Loops**       | Processes that amplify or dampen climate change effects                        | Explains complexity and potential tipping points in climate systems       |\n| **Mitigation vs Adaptation** | Strategies to reduce emissions vs coping with climate impacts               | Key framework for environmental management questions                       |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Fossil Fuel Combustion\"] --> B[\"Increased Atmospheric $$CO_2$$\"]\n    B --> C[\"Enhanced Greenhouse Effect\"]\n    C --> D[\"Global Warming\"]\n    D --> E[\"Ice Melt & Sea Level Rise\"]\n    D --> F[\"Ocean Acidification\"]\n    D --> G[\"Loss of Biodiversity\"]\n    F --> H[\"Coral Bleaching & Marine Species Decline\"]\n    G --> I[\"Ecosystem Disruption\"]\n    D --> J[\"Climate Feedback Loops\"]\n    J --> C\n```\n\n- **Explanation:**\n  1. Burning fossil fuels releases $$CO_2$$, increasing greenhouse gases.\n  2. This enhances the greenhouse effect, raising global temperatures.\n  3. Consequences include melting ice, rising seas, ocean acidification, and biodiversity loss.\n  4. Feedback loops (e.g., permafrost thaw releasing methane) can accelerate warming.\n\n## Essential Formulas / Laws / Rules\n\n| **Name**                  | **Formula / Definition**                                                                                  |\n|---------------------------|----------------------------------------------------------------------------------------------------------|\n| **Radiative Forcing**     | $$ \\Delta F = \\alpha \\ln \\left(\\frac{C}{C_0}\\right) $$ where $$C$$ = current $$CO_2$$ concentration, $$C_0$$ = preindustrial level, $$\\alpha$$ ≈ 5.35 W/m² |\n| **Ocean Acidification**   | $$CO_2 + H_2O \\leftrightarrow H_2CO_3 \\leftrightarrow H^+ + HCO_3^-$$ (carbonic acid formation lowers pH) |\n| **Greenhouse Gas Warming Potential** | Relative measure of heat trapped by gases over 100 years (e.g., $$CH_4$$ ≈ 28× $$CO_2$$)             |\n| **Keeling Curve**         | Graph showing rising atmospheric $$CO_2$$ concentrations since 1958                                      |\n| **Biodiversity Loss Metrics** | Species richness, evenness, and extinction rates                                                        |\n| **Kyoto Protocol & Paris Agreement** | International treaties aiming to reduce greenhouse gas emissions                                  |\n\n## Connections & Comparisons\n\n| **Concept**               | **Cause**                          | **Effect**                              | **Mitigation/Policy**                     |\n|--------------------------|----------------------------------|---------------------------------------|-------------------------------------------|\n| **Global Warming**       | Increased $$CO_2$$ from fossil fuels | Rising temperatures, extreme weather | Emission caps, renewable energy           |\n| **Ocean Acidification**  | Absorption of atmospheric $$CO_2$$  | Lower pH, coral bleaching             | Reducing $$CO_2$$ emissions, marine protected areas |\n| **Loss of Biodiversity** | Habitat destruction, climate change | Species extinction, ecosystem collapse | Conservation laws, habitat restoration    |\n| **Feedback Loops**       | Melting ice, permafrost thaw       | Amplified warming                     | Difficult to mitigate; focus on prevention |\n\n## Common AP Exam Traps\n\n- Confusing **global warming** (temperature increase) with **ozone depletion** (stratospheric ozone loss).\n- Thinking **ocean acidification** is caused by pollution other than $$CO_2$$ absorption.\n- Overlooking the role of **feedback loops** in accelerating climate change.\n- Assuming all biodiversity loss is due only to climate change, ignoring habitat destruction and invasive species.\n- Misinterpreting **mitigation** (reducing causes) vs **adaptation** (adjusting to effects).\n\n## Quick Review Checklist\n\n- [ ] Explain the **greenhouse effect** and identify major greenhouse gases.\n- [ ] Describe the main **drivers** and **impacts** of global warming.\n- [ ] Illustrate the process and consequences of **ocean acidification**.\n- [ ] Summarize causes and effects of **biodiversity loss**.\n- [ ] Interpret the **carbon cycle** and how human activities disrupt it.\n- [ ] Identify key **environmental policies** addressing global change.\n- [ ] Analyze examples of **climate feedback loops**.\n- [ ] Differentiate between **mitigation** and **adaptation** strategies.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Greenhouse gases",
-              "definition": "Atmospheric gases that trap heat by absorbing infrared radiation emitted from Earth's surface, significantly influencing the planet's temperature."
+              "definition": "Atmospheric components that trap infrared radiation, leading to warming of Earth's surface and lower atmosphere."
             },
             {
-              "term": "Anthropogenic climate drivers",
-              "definition": "Human activities such as fossil fuel combustion and deforestation that increase concentrations of heat-trapping gases in the atmosphere."
+              "term": "Anthropogenic carbon emissions",
+              "definition": "Release of carbon dioxide and other carbon compounds into the atmosphere resulting from human activities such as burning fossil fuels and deforestation."
             },
             {
-              "term": "Radiative forcing",
-              "definition": "The change in energy flux in the atmosphere caused by natural or anthropogenic factors, measured in watts per square meter."
+              "term": "Albedo effect",
+              "definition": "The reflection coefficient of Earth's surface, where lighter surfaces reflect more solar radiation, influencing temperature regulation."
             },
             {
-              "term": "Positive feedback loop",
-              "definition": "A process that amplifies an initial change, such as melting ice reducing albedo and causing further warming."
+              "term": "Ocean acidification",
+              "definition": "A chemical process in which increased atmospheric carbon dioxide dissolves into seawater, lowering pH and affecting marine life."
             },
             {
-              "term": "Carbon dioxide equivalent (CO$_2$e)",
-              "definition": "A metric used to compare the global warming potential of different greenhouse gases to that of carbon dioxide over a specified time frame."
+              "term": "Permafrost thawing",
+              "definition": "The seasonal or permanent melting of permanently frozen ground, releasing stored greenhouse gases like methane into the atmosphere."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following gases has the highest global warming potential over a 100-year period?",
+              "questionText": "Which of the following best describes the primary cause of recent increases in atmospheric CO$$_2$$ concentrations?",
               "options": [
-                "Carbon dioxide (CO$_2$)",
-                "Methane (CH$_4$)",
-                "Nitrous oxide (N$_2$O)",
-                "Ozone (O$_3$)"
+                "Volcanic eruptions",
+                "Deforestation and burning of fossil fuels",
+                "Increased photosynthesis by plants",
+                "Decomposition of organic matter in wetlands"
               ],
-              "correctAnswer": "Nitrous oxide (N$_2$O)",
+              "correctAnswer": "Deforestation and burning of fossil fuels",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which process describes the primary anthropogenic driver of increased atmospheric CO$_2$ levels since the Industrial Revolution?",
+              "questionText": "Ocean acidification primarily affects marine organisms by:",
               "options": [
-                "Volcanic eruptions releasing CO$_2$",
-                "Deforestation reducing photosynthesis",
-                "Burning of fossil fuels releasing carbon",
-                "Natural respiration cycles of forests"
+                "Increasing seawater temperature",
+                "Decreasing seawater pH, affecting calcium carbonate shell formation",
+                "Reducing oxygen levels in ocean water",
+                "Increasing salinity levels"
               ],
-              "correctAnswer": "Burning of fossil fuels releasing carbon",
+              "correctAnswer": "Decreasing seawater pH, affecting calcium carbonate shell formation",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The increase in Earth's average surface temperature due to trapped infrared radiation is caused primarily by ______.",
+              "questionText": "The ____ effect refers to Earth's surface reflecting solar radiation, and is a key factor in regulating global temperatures.",
               "options": [
-                "carbon monoxide",
-                "greenhouse gases",
-                "nitrogen",
-                "oxygen"
+                "Albedo",
+                "Greenhouse",
+                "Thermal conduction",
+                "Ozone"
               ],
-              "correctAnswer": "greenhouse gases",
+              "correctAnswer": "Albedo",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The amplification of warming due to melting ice reducing Earth's reflectivity is an example of a ______ feedback loop.",
+              "questionText": "The thawing of permanently frozen ground known as ____ releases methane, a potent greenhouse gas, into the atmosphere.",
               "options": [
-                "negative",
-                "positive",
-                "neutral",
-                "delayed"
+                "Permafrost",
+                "Sublimation",
+                "Desertification",
+                "Eutrophication"
               ],
-              "correctAnswer": "positive",
+              "correctAnswer": "Permafrost",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1289,71 +1298,71 @@
         {
           "flashcards": [
             {
-              "term": "Ocean acidification",
-              "definition": "A decrease in seawater pH caused by absorption of excess atmospheric CO$_2$, which affects marine calcifying organisms."
+              "term": "Biodiversity loss",
+              "definition": "The reduction in variety and variability of living organisms and the ecosystems they inhabit, often due to habitat destruction and climate change."
             },
             {
-              "term": "Loss of biodiversity",
-              "definition": "The reduction of species variety and abundance in ecosystems, often resulting from habitat destruction, climate change, and pollution."
+              "term": "Mitigation strategies",
+              "definition": "Actions aimed at reducing the magnitude or rate of long-term climate change, such as emission reductions and carbon sequestration."
             },
             {
-              "term": "Endangered Species Act (ESA)",
-              "definition": "A U.S. federal law designed to protect critically threatened species and their habitats to prevent extinction."
+              "term": "Adaptation measures",
+              "definition": "Adjustments in ecological, social, or economic systems in response to actual or expected climatic stimuli to moderate harm or exploit beneficial opportunities."
             },
             {
               "term": "Kyoto Protocol",
-              "definition": "An international treaty aimed at reducing greenhouse gas emissions by setting binding targets for participating countries."
+              "definition": "An international treaty that commits its parties to reduce greenhouse gas emissions based on scientific consensus on global warming."
             },
             {
-              "term": "Albedo effect",
-              "definition": "The proportion of solar energy reflected from Earth's surface, influencing temperature and climate patterns."
+              "term": "Carbon footprint",
+              "definition": "The total greenhouse gas emissions caused directly and indirectly by a person, organization, event, or product, expressed as carbon dioxide equivalent."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which marine impact is directly caused by increased absorption of atmospheric CO$_2$ into ocean waters?",
+              "questionText": "Which of the following is an example of a climate change mitigation strategy?",
               "options": [
-                "Ocean acidification",
-                "Thermal stratification",
-                "Eutrophication",
-                "Coral bleaching caused by temperature"
+                "Building sea walls to protect coastlines",
+                "Reducing carbon emissions through renewable energy use",
+                "Developing drought-resistant crop varieties",
+                "Relocating species to cooler habitats"
               ],
-              "correctAnswer": "Ocean acidification",
+              "correctAnswer": "Reducing carbon emissions through renewable energy use",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which environmental policy established legally binding emission reduction targets for developed countries?",
+              "questionText": "The Kyoto Protocol primarily aimed to:",
               "options": [
-                "Paris Agreement",
-                "Montreal Protocol",
-                "Kyoto Protocol",
-                "Clean Air Act"
+                "Adapt ecosystems to climate change",
+                "Enhance biodiversity conservation",
+                "Commit countries to reduce greenhouse gas emissions",
+                "Fund climate change research initiatives"
               ],
-              "correctAnswer": "Kyoto Protocol",
+              "correctAnswer": "Commit countries to reduce greenhouse gas emissions",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The decrease in mean ocean water pH due to dissolved carbon dioxide leads to ______, threatening shell-forming marine organisms.",
+              "questionText": "The total greenhouse gas emissions attributed to an individual or organization is called their ____ footprint.",
               "options": [
-                "eutrophication",
-                "ocean acidification",
-                "hypoxia",
-                "thermal pollution"
+                "Carbon",
+                "Ecological",
+                "Water",
+                "Nitrogen"
               ],
-              "correctAnswer": "ocean acidification",
+              "correctAnswer": "Carbon",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The U.S. legislation aimed at protecting species facing extinction is known as the ______.",
+              "questionText": "Efforts to reduce harm from climate impacts by adjusting natural or human systems are known as ____ measures.",
               "options": [
-                "Clean Water Act",
-                "Endangered Species Act",
-                "National Environmental Policy Act",
-                "Resource Conservation and Recovery Act"
+                "Adaptation",
+                "Mitigation",
+                "Conservation",
+                "Restoration"
               ],
-              "correctAnswer": "Endangered Species Act",
+              "correctAnswer": "Adaptation",
               "lessonType": "fillInTheBlank"
             }
           ]

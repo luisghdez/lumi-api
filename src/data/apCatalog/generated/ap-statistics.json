@@ -5,75 +5,76 @@
       "unitNumber": 1,
       "unitName": "Exploring One-Variable Data",
       "description": "Distributions, summary statistics (mean, median, SD, IQR), graphical displays, and Normal distributions.",
+      "note": "# Unit 1: Exploring One-Variable Data\n\n## Overview\nThis unit introduces the foundational tools for summarizing and describing **one-variable data** sets. You will learn how to analyze data distributions using graphical displays and numerical summary statistics, and understand the properties of the **Normal distribution**, a key model in statistics. Mastery of these concepts is essential for interpreting data and answering AP exam questions involving data description and inference.\n\n## Key Concepts at a Glance\n\n| **Concept**           | **What It Is**                                                                 | **Why It Matters (AP angle)**                                               |\n|----------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------|\n| **Distribution**      | The pattern of variation of data values, showing frequency or relative frequency | Understanding shape, center, and spread helps interpret data and detect bias or outliers |\n| **Measures of Center**| Numerical summaries indicating typical data values: **mean** and **median**    | Distinguishes data sets and informs about skewness; often tested in context of robustness |\n| **Measures of Spread**| Quantifies variability: **standard deviation (SD)** and **interquartile range (IQR)** | Essential for describing data variability and comparing distributions      |\n| **Shape of Distribution** | Describes data form: symmetric, skewed, uniform, or bimodal                  | Shape affects choice of summary statistics and inference methods            |\n| **Outliers**          | Data points that lie far from the rest of the data                             | Identifying outliers is crucial for correct interpretation and analysis     |\n| **Graphical Displays**| Visual tools: **histograms**, **boxplots**, **dotplots**                       | Visualizing data helps reveal distribution features and supports analysis   |\n| **Normal Distribution**| A symmetric, bell-shaped distribution defined by mean $$\\mu$$ and SD $$\\sigma$$ | Central to many AP problems; underlies many inference procedures            |\n| **Empirical Rule**    | Approximate percentage of data within 1, 2, and 3 SDs from the mean in Normal data | Enables quick estimation of probabilities and data spread in Normal models  |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Collect One-Variable Data\"] --> B[\"Visualize Data\"]\n    B --> C[\"Identify Distribution Shape\"]\n    C --> D[\"Calculate Summary Statistics\"]\n    D --> E[\"Interpret Center and Spread\"]\n    E --> F[\"Detect Outliers\"]\n    F --> G[\"Compare to Theoretical Models (e.g., Normal)\"]\n```\n\n**Explanation:**\n\n1. **Collect One-Variable Data**: Gather quantitative measurements.\n2. **Visualize Data**: Use histograms, boxplots, or dotplots to see distribution.\n3. **Identify Distribution Shape**: Determine if data is symmetric, skewed, or has unusual features.\n4. **Calculate Summary Statistics**: Compute mean, median, SD, and IQR.\n5. **Interpret Center and Spread**: Understand what these statistics reveal about the data.\n6. **Detect Outliers**: Use graphical and numerical methods to find extreme values.\n7. **Compare to Theoretical Models**: Assess if data approximates a Normal distribution for further inference.\n\n## Essential Formulas / Laws / Rules\n\n| **Name**                  | **Formula / Definition**                                                                                      |\n|---------------------------|--------------------------------------------------------------------------------------------------------------|\n| **Mean**                  | $$ \\bar{x} = \\frac{1}{n} \\sum_{i=1}^n x_i $$                                                                |\n| **Median**                | Middle value when data is ordered; if even $$n$$, average of two middle values                                |\n| **Range**                 | $$ \\text{Range} = x_{\\max} - x_{\\min} $$                                                                     |\n| **Interquartile Range (IQR)** | $$ \\text{IQR} = Q_3 - Q_1 $$ where $$Q_1$$ and $$Q_3$$ are the 25th and 75th percentiles                      |\n| **Standard Deviation (SD)**| $$ s = \\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar{x})^2} $$                                               |\n| **Outlier Rule (1.5 × IQR)** | Data point is an outlier if $$x < Q_1 - 1.5 \\times IQR$$ or $$x > Q_3 + 1.5 \\times IQR$$                      |\n| **Empirical Rule**        | For Normal distribution: <br> $$\\approx 68\\%$$ within $$\\mu \\pm 1\\sigma$$ <br> $$\\approx 95\\%$$ within $$\\mu \\pm 2\\sigma$$ <br> $$\\approx 99.7\\%$$ within $$\\mu \\pm 3\\sigma$$ |\n| **Z-score**               | Standardized value: $$ z = \\frac{x - \\mu}{\\sigma} $$ (population) or $$ z = \\frac{x - \\bar{x}}{s} $$ (sample)  |\n\n## Connections & Comparisons\n\n| **Concept**          | **Mean**                                         | **Median**                                       | **When to Use Which?**                              |\n|----------------------|-------------------------------------------------|-------------------------------------------------|----------------------------------------------------|\n| **Definition**       | Arithmetic average                               | Middle value in ordered data                      | Median is resistant to outliers; mean is sensitive |\n| **Effect of Skew**   | Pulled toward skewed tail                        | Remains near center of bulk of data               | Use median for skewed distributions                 |\n| **Effect of Outliers**| Highly affected                                  | Robust, less affected                             | Median preferred if outliers present                 |\n| **AP Exam Context**  | Often used with symmetric data                   | Preferred for skewed data                         | Recognize which measure better represents center    |\n\n| **Measure of Spread** | **Standard Deviation (SD)**                        | **Interquartile Range (IQR)**                      |\n|----------------------|---------------------------------------------------|----------------------------------------------------|\n| **Definition**       | Average distance from mean                         | Range of middle 50% of data                         |\n| **Sensitivity**      | Sensitive to outliers                              | Resistant to outliers                               |\n| **Units**            | Same as original data                              | Same as original data                               |\n| **AP Exam Context**  | Used with mean and symmetric data                  | Used with median and skewed data                    |\n\n## Common AP Exam Traps\n\n- Confusing **mean** and **median**: mean is affected by extreme values, median is not.\n- Forgetting to use **IQR** and **median** for skewed data instead of SD and mean.\n- Misapplying the **1.5 × IQR rule** for outliers (e.g., mixing up $$Q_1$$ and $$Q_3$$).\n- Interpreting the **Empirical Rule** percentages as exact for non-Normal data.\n- Calculating **standard deviation** incorrectly by dividing by $$n$$ instead of $$n-1$$ for a sample.\n- Overlooking the shape of the distribution when choosing summary statistics or interpreting data.\n\n## Quick Review Checklist\n\n- [ ] Describe the **shape**, **center**, and **spread** of a one-variable data distribution.\n- [ ] Calculate and interpret **mean**, **median**, **standard deviation**, and **IQR**.\n- [ ] Identify and explain the impact of **outliers** on summary statistics.\n- [ ] Construct and interpret **histograms**, **boxplots**, and **dotplots**.\n- [ ] Apply the **1.5 × IQR rule** to detect outliers.\n- [ ] Understand and use the **Empirical Rule** for Normal distributions.\n- [ ] Calculate and interpret **z-scores** for standardizing data.\n- [ ] Decide when to use **mean/SD** versus **median/IQR** based on data shape.\n\n---\n\nThis guide prepares you to confidently analyze and summarize one-variable data, a critical skill for AP Statistics success.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Distribution of a dataset",
-              "definition": "The arrangement of data values showing the frequency of each value or range of values."
+              "term": "Distribution of a variable",
+              "definition": "The pattern of variation of the values taken by a variable, typically described by its shape, center, spread, and outliers."
             },
             {
               "term": "Mean",
-              "definition": "The arithmetic average of a set of numerical values, found by summing the values and dividing by the count of values."
+              "definition": "The sum of all observed values divided by the number of observations, representing a measure of central tendency sensitive to extreme values."
             },
             {
               "term": "Median",
-              "definition": "The middle value when all data points are arranged in order, such that half the data are above and half are below this value."
+              "definition": "The middle value of a data set when the observations are ordered from smallest to largest, serving as a resistant measure of center."
             },
             {
-              "term": "Standard Deviation",
-              "definition": "A measure of spread that quantifies the average distance of data points from the mean."
+              "term": "Standard deviation",
+              "definition": "A measure of spread that quantifies the average distance of each data point from the mean, sensitive to outliers."
             },
             {
-              "term": "Interquartile Range (IQR)",
-              "definition": "The difference between the third quartile and the first quartile, representing the range of the middle 50% of the data."
+              "term": "Interquartile range (IQR)",
+              "definition": "The difference between the third quartile and the first quartile, measuring the spread of the middle 50% of the data and resistant to extreme values."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which measure of center is most appropriate for skewed data distributions?",
+              "questionText": "Which of the following best describes the difference between the mean and median in a strongly right-skewed distribution?",
               "options": [
-                "Mean",
-                "Median",
-                "Mode",
-                "Range"
+                "The mean is greater than the median",
+                "The mean equals the median",
+                "The median is greater than the mean",
+                "The mean and median cannot be compared"
               ],
-              "correctAnswer": "Median",
+              "correctAnswer": "The mean is greater than the median",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "What does a larger standard deviation indicate about a dataset?",
+              "questionText": "If a data set has an unusually large value, which statistic will be most affected?",
               "options": [
-                "Data values are closer to the mean",
-                "Data values are more spread out",
-                "The median is higher than the mean",
-                "The dataset is normally distributed"
+                "Median",
+                "Interquartile Range",
+                "Mean",
+                "Mode"
               ],
-              "correctAnswer": "Data values are more spread out",
+              "correctAnswer": "Mean",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The _______ is calculated by ordering the data and selecting the middle value.",
+              "questionText": "In a symmetric distribution, the mean and ______ are approximately equal in value.",
               "options": [
-                "Mean",
-                "Median",
-                "Mode",
-                "Range"
+                "median",
+                "mode",
+                "variance",
+                "range"
               ],
-              "correctAnswer": "Median",
+              "correctAnswer": "median",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The interquartile range (IQR) is found by subtracting the _______ from the _______.",
+              "questionText": "The measure of spread that is calculated as $$Q_3 - Q_1$$ is called the ______.",
               "options": [
-                "first quartile, third quartile",
-                "minimum, maximum",
-                "third quartile, first quartile",
-                "mean, median"
+                "interquartile range",
+                "standard deviation",
+                "variance",
+                "range"
               ],
-              "correctAnswer": "third quartile, first quartile",
+              "correctAnswer": "interquartile range",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -82,42 +83,42 @@
           "flashcards": [
             {
               "term": "Histogram",
-              "definition": "A graphical display that organizes data into bins or intervals to show the frequency distribution of a quantitative variable."
+              "definition": "A type of bar graph used to display the distribution of quantitative data by grouping values into bins with adjacent intervals."
             },
             {
               "term": "Boxplot",
-              "definition": "A graphical summary that shows the five-number summary (minimum, first quartile, median, third quartile, maximum) and potential outliers."
+              "definition": "A graphical display summarizing data through its five-number summary and highlighting potential outliers with whiskers and points."
             },
             {
-              "term": "Normal Distribution",
-              "definition": "A symmetric, bell-shaped distribution characterized by its mean and standard deviation, where data near the mean are more frequent in occurrence."
+              "term": "Normal distribution",
+              "definition": "A symmetric, bell-shaped distribution characterized by its mean and standard deviation and described by the empirical 68-95-99.7 rule."
             },
             {
-              "term": "68-95-99.7 Rule",
-              "definition": "The empirical rule stating that approximately 68%, 95%, and 99.7% of data lie within one, two, and three standard deviations from the mean in a normal distribution."
+              "term": "Empirical Rule",
+              "definition": "A guideline stating that for a normal distribution, approximately 68% of observations fall within one standard deviation from the mean, 95% within two, and 99.7% within three."
             },
             {
               "term": "Z-score",
-              "definition": "The number of standard deviations a data point is from the mean, calculated as $$z = \\frac{x - \\mu}{\\sigma}$$ for a population."
+              "definition": "A standardized value indicating how many standard deviations an observation is from the mean of its distribution."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which graphical display is best for identifying outliers in a dataset?",
+              "questionText": "In a boxplot, what does the box represent?",
               "options": [
-                "Histogram",
-                "Boxplot",
-                "Dotplot",
-                "Bar graph"
+                "The interquartile range",
+                "The range between minimum and maximum",
+                "The mean and standard deviation",
+                "Outliers in the data"
               ],
-              "correctAnswer": "Boxplot",
+              "correctAnswer": "The interquartile range",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "According to the 68-95-99.7 Rule, approximately what percentage of data falls within two standard deviations of the mean in a normal distribution?",
+              "questionText": "According to the empirical rule, about what percent of data falls within two standard deviations from the mean in a normal distribution?",
               "options": [
-                "68%",
                 "95%",
+                "68%",
                 "99.7%",
                 "50%"
               ],
@@ -127,25 +128,25 @@
           ],
           "fillInTheBlank": [
             {
-              "questionText": "A data value with a z-score of 2 is ______ standard deviations above the mean.",
+              "questionText": "A data value located 2 standard deviations above the mean has a z-score of ______.",
               "options": [
-                "1",
                 "2",
                 "-2",
+                "1",
                 "0"
               ],
               "correctAnswer": "2",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "In a normal distribution, about ______% of data lies within three standard deviations of the mean.",
+              "questionText": "A histogram with a long right tail indicates a ______ distribution.",
               "options": [
-                "68",
-                "95",
-                "99.7",
-                "100"
+                "right-skewed",
+                "left-skewed",
+                "symmetric",
+                "uniform"
               ],
-              "correctAnswer": "99.7",
+              "correctAnswer": "right-skewed",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -156,75 +157,76 @@
       "unitNumber": 2,
       "unitName": "Exploring Two-Variable Data",
       "description": "Scatterplots, correlation, least-squares regression, residuals, and influential points.",
+      "note": "# Unit 2: Exploring Two-Variable Data\n\n## Overview\nThis unit focuses on analyzing relationships between two quantitative variables using **scatterplots**, **correlation**, and **least-squares regression**. Understanding how to describe, model, and interpret these relationships is essential for answering AP Statistics questions about association strength, prediction, and data patterns.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                           |\n|--------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------------|\n| **Scatterplot**           | A graphical display of paired data points showing the relationship between two variables. | Visualizes direction, form, and strength of association.               |\n| **Correlation ($r$)**     | A numerical measure of the strength and direction of a linear relationship between two variables. | Quantifies linear association; used in interpreting data patterns.    |\n| **Least-Squares Regression Line (LSRL)** | The line that minimizes the sum of squared residuals, used to predict $y$ from $x$. | Provides a predictive model and basis for residual analysis.           |\n| **Residual**              | The difference between an observed value and the predicted value from the LSRL: $$ \\text{residual} = y - \\hat{y} $$ | Measures prediction error; key for assessing model fit.                |\n| **Coefficient of Determination ($r^2$)** | The proportion of variation in $y$ explained by the linear model with $x$. | Indicates how well the regression line fits the data.                   |\n| **Influential Points**    | Data points that significantly affect the slope or position of the regression line. | Can distort regression results; must be identified and interpreted.    |\n| **Direction, Form, Strength** | Describes the pattern of association: positive/negative, linear/nonlinear, strong/weak. | Guides selection of appropriate models and interpretation.             |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Start with paired data (x, y)\"] --> B[\"Create a scatterplot\"]\n    B --> C{\"Assess association\"}\n    C --> D[\"Direction (positive/negative)\"]\n    C --> E[\"Form (linear/nonlinear)\"]\n    C --> F[\"Strength (weak/moderate/strong)\"]\n    F --> G[\"Calculate correlation coefficient ($r$)\"]\n    G --> H[\"Fit least-squares regression line: $$\\hat{y} = a + bx$$\"]\n    H --> I[\"Calculate residuals: $$e = y - \\hat{y}$$\"]\n    I --> J[\"Analyze residual plot for patterns\"]\n    J --> K[\"Identify influential points\"]\n    K --> L[\"Use model for prediction and interpretation\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Rule                          | Description                                                    |\n|---------------------------------------|----------------------------------------------------------------|\n| $$ r = \\frac{1}{n-1} \\sum \\left(\\frac{x_i - \\bar{x}}{s_x}\\right)\\left(\\frac{y_i - \\bar{y}}{s_y}\\right) $$ | Correlation coefficient measuring linear association.          |\n| $$ \\hat{y} = a + bx $$                 | Least-squares regression line equation predicting $y$ from $x$.|\n| $$ b = r \\frac{s_y}{s_x} $$             | Slope of the LSRL, linking correlation and standard deviations.|\n| $$ a = \\bar{y} - b \\bar{x} $$           | Intercept of the LSRL.                                         |\n| $$ \\text{residual} = y - \\hat{y} $$    | Difference between observed and predicted values.              |\n| $$ r^2 = \\text{proportion of variance explained} $$ | Coefficient of determination; measures goodness of fit.        |\n\n**Rules:**\n\n- **Correlation $r$** ranges from $$-1$$ to $$1$$; values near $$\\pm 1$$ indicate strong linear relationships.\n- Correlation does **not** imply causation.\n- The LSRL minimizes the sum of squared residuals $$\\sum e_i^2$$.\n- Residual plots should show no pattern if the linear model is appropriate.\n- Influential points can be identified by large residuals or leverage (extreme $x$ values).\n\n## Connections & Comparisons\n\n| Concept                  | Definition / Role                                | Relation to Others                               | Impact on Analysis                              |\n|--------------------------|------------------------------------------------|-------------------------------------------------|------------------------------------------------|\n| **Correlation ($r$)**    | Measures linear association strength and direction. | Determines slope sign and magnitude in LSRL.    | High $|r|$ → strong linear fit; low $|r|$ → weak. |\n| **LSRL**                 | Predicts $y$ from $x$ minimizing squared residuals. | Uses $r$ to calculate slope; depends on data spread. | Basis for prediction; affected by influential points. |\n| **Residuals**            | Differences between observed and predicted $y$. | Used to check model fit and identify outliers.  | Patterns indicate poor model choice or data issues. |\n| **Influential Points**   | Points that disproportionately affect regression line. | Can change slope and intercept significantly.   | Must be investigated to avoid misleading conclusions. |\n\n## Common AP Exam Traps\n\n- Confusing **correlation** with **causation** — correlation does not prove one variable causes changes in another.\n- Misinterpreting the **slope** as a simple difference rather than a rate of change in predicted $y$ per unit $x$.\n- Forgetting that **residuals** are observed minus predicted ($y - \\hat{y}$), not the other way around.\n- Ignoring **influential points** that can drastically change the regression line.\n- Assuming a **linear model** is appropriate without checking residual plots for patterns or nonlinearity.\n\n## Quick Review Checklist\n\n- [ ] Interpret scatterplots to describe direction, form, and strength of association.\n- [ ] Calculate and interpret the correlation coefficient $$r$$.\n- [ ] Write the equation of the least-squares regression line and explain slope and intercept.\n- [ ] Compute residuals and use residual plots to assess model fit.\n- [ ] Understand and calculate the coefficient of determination $$r^2$$.\n- [ ] Identify and explain the impact of influential points on regression analysis.\n- [ ] Distinguish between correlation and causation.\n- [ ] Use the regression model appropriately for prediction and interpretation.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Scatterplot",
-              "definition": "A graphical representation showing the relationship between two quantitative variables by plotting points with one variable on the horizontal axis and the other on the vertical axis."
+              "definition": "A graphical representation used to display the relationship between two quantitative variables by plotting data points on a Cartesian plane."
             },
             {
-              "term": "Correlation coefficient",
-              "definition": "A numerical measure that quantifies the strength and direction of the linear relationship between two quantitative variables, ranging from -1 to 1."
+              "term": "Correlation",
+              "definition": "A numerical measure that quantifies the strength and direction of a linear relationship between two quantitative variables, taking values between -1 and 1."
             },
             {
-              "term": "Positive association",
-              "definition": "A type of relationship where increases in one variable generally correspond to increases in the other variable."
+              "term": "Positive Association",
+              "definition": "A pattern in bivariate data where increases in one variable tend to be accompanied by increases in the other variable."
             },
             {
-              "term": "Negative association",
-              "definition": "A relationship where increases in one variable generally correspond to decreases in the other variable."
+              "term": "Negative Association",
+              "definition": "A pattern in bivariate data where increases in one variable tend to be accompanied by decreases in the other variable."
             },
             {
-              "term": "Strength of a relationship",
-              "definition": "An assessment of how closely the points in a scatterplot fall to a form such as a line, indicating how well one variable predicts the other."
+              "term": "No Association",
+              "definition": "A situation in which there is no discernible pattern or relationship between two variables when plotted on a scatterplot."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following values of the correlation coefficient $$r$$ indicates the strongest negative linear relationship between two variables?",
+              "questionText": "Which of the following correlation coefficients indicates the strongest negative linear relationship between two variables?",
               "options": [
-                "$$r = -0.95$$",
-                "$$r = -0.60$$",
-                "$$r = 0$$",
-                "$$r = 0.80$$"
+                "$$-0.95$$",
+                "$$-0.50$$",
+                "$$0.50$$",
+                "$$0.95$$"
               ],
-              "correctAnswer": "$$r = -0.95$$",
+              "correctAnswer": "$$-0.95$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "In a scatterplot displaying height versus weight for a sample of adults, the points tend to rise from left to right. What can be concluded?",
+              "questionText": "What does a scatterplot with points roughly forming a straight line with a downward slope indicate?",
               "options": [
-                "There is a positive association between height and weight.",
-                "There is a negative association between height and weight.",
-                "The variables are uncorrelated.",
-                "The correlation coefficient is zero."
+                "A positive association",
+                "A negative association",
+                "No association",
+                "An outlier"
               ],
-              "correctAnswer": "There is a positive association between height and weight.",
+              "correctAnswer": "A negative association",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The correlation coefficient $$r$$ can only measure the strength of a ________ relationship between two variables.",
+              "questionText": "The value of the correlation coefficient $$r$$ always lies between ______ and ______.",
               "options": [
-                "linear",
-                "causal",
-                "nonlinear",
-                "random"
+                "$$-1$$ and $$1$$",
+                "$$0$$ and $$1$$",
+                "$$-100$$ and $$100$$",
+                "$$-10$$ and $$10$$"
               ],
-              "correctAnswer": "linear",
+              "correctAnswer": "$$-1$$ and $$1$$",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "In a scatterplot, points that are widely spread from any form represent a ________ association between variables.",
+              "questionText": "In a scatterplot, if the points show no clear pattern, the two variables are said to have ______ association.",
               "options": [
-                "weak",
-                "strong",
-                "perfect",
-                "none"
+                "positive",
+                "negative",
+                "no",
+                "perfect"
               ],
-              "correctAnswer": "weak",
+              "correctAnswer": "no",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -232,71 +234,71 @@
         {
           "flashcards": [
             {
-              "term": "Least-squares regression line",
-              "definition": "The line that minimizes the sum of the squared vertical distances (residuals) between observed values and the line's predicted values for a response variable."
+              "term": "Least-Squares Regression Line",
+              "definition": "A straight line that minimizes the sum of the squares of the vertical distances of the data points from the line, used to model the relationship between the explanatory and response variables."
             },
             {
               "term": "Residual",
-              "definition": "The difference between an observed value of the response variable and its predicted value found using the regression line."
+              "definition": "The difference between the observed value of the response variable and the value predicted by the regression line, calculated as $$\\text{observed} - \\text{predicted}$$."
             },
             {
-              "term": "Influential point",
-              "definition": "A data point that significantly affects the position or slope of the least-squares regression line due to its extreme value in the explanatory variable."
+              "term": "Influential Point",
+              "definition": "A data point that significantly affects the slope or position of the regression line when included or excluded from the analysis."
             },
             {
-              "term": "Interpretation of slope in regression",
-              "definition": "The estimated change in the response variable for each one-unit increase in the explanatory variable, holding all else constant."
+              "term": "Coefficient of Determination ($$r^2$$)",
+              "definition": "The proportion of the variance in the response variable that is explained by the explanatory variable in a linear regression model."
             },
             {
-              "term": "Coefficient of determination $$r^2$$",
-              "definition": "The proportion of the variation in the response variable explained by the linear model relating it to the explanatory variable."
+              "term": "Extrapolation",
+              "definition": "The use of a regression model to predict values of the response variable for explanatory variable values outside the range of the data used to create the model."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "What does a residual of zero indicate about a data point in relation to the regression line?",
+              "questionText": "What is the primary goal of the least-squares regression line?",
               "options": [
-                "The observed value equals the predicted value.",
-                "The data point is influential.",
-                "The data point is an outlier.",
-                "The correlation is zero."
+                "To maximize the correlation coefficient",
+                "To minimize the sum of squared residuals",
+                "To maximize the sum of residuals",
+                "To equalize positive and negative residuals"
               ],
-              "correctAnswer": "The observed value equals the predicted value.",
+              "correctAnswer": "To minimize the sum of squared residuals",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which characteristic most accurately describes an influential point in a scatterplot?",
+              "questionText": "A data point located far from the other data along the explanatory variable axis and strongly affecting the regression line is known as:",
               "options": [
-                "Has an extreme explanatory variable value and changes the regression line slope.",
-                "Has the largest residual but lies near the mean of explanatory values.",
-                "Is always an outlier only in the response variable.",
-                "Lies perfectly on the regression line."
+                "An outlier",
+                "A residual",
+                "An influential point",
+                "A lurking variable"
               ],
-              "correctAnswer": "Has an extreme explanatory variable value and changes the regression line slope.",
+              "correctAnswer": "An influential point",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The slope of the least-squares regression line indicates the estimated change in the ________ variable for a one-unit increase in the explanatory variable.",
+              "questionText": "The residual for a given observation is calculated as the observed value minus the ______ value.",
               "options": [
-                "response",
-                "explanatory",
-                "residual",
-                "correlation"
+                "predicted",
+                "mean",
+                "median",
+                "mode"
               ],
-              "correctAnswer": "response",
+              "correctAnswer": "predicted",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The coefficient of determination $$r^2$$ represents the proportion of the ________ in the response variable explained by the linear relationship with the explanatory variable.",
+              "questionText": "The coefficient of determination, denoted as $$r^2$$, measures the proportion of ______ in the response variable explained by the explanatory variable.",
               "options": [
-                "variation",
-                "outliers",
-                "residuals",
-                "explanatory variation"
+                "variance",
+                "mean",
+                "median",
+                "standard deviation"
               ],
-              "correctAnswer": "variation",
+              "correctAnswer": "variance",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -307,75 +309,76 @@
       "unitNumber": 3,
       "unitName": "Collecting Data",
       "description": "Survey design, sampling methods, experimental design, randomization, and sources of bias.",
+      "note": "# Unit 3: Collecting Data\n\n## Overview\nThis unit covers the fundamental principles and methods used to collect data in statistics, including **survey design**, **sampling methods**, **experimental design**, **randomization**, and identifying **sources of bias**. Mastery of these topics is crucial for designing valid studies and interpreting data accurately, which are frequently tested on the AP Statistics exam.\n\n## Key Concepts at a Glance\n\n| **Concept**           | **What It Is**                                                                 | **Why It Matters (AP angle)**                                      |\n|----------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------|\n| **Sampling Methods**  | Techniques to select a subset of a population (e.g., SRS, stratified, cluster) | Determines representativeness and validity of inferences          |\n| **Bias**             | Systematic errors that distort data collection or interpretation               | Identifying bias is key to evaluating study credibility           |\n| **Randomization**     | Using chance to assign subjects or select samples                              | Minimizes bias and balances confounding variables                  |\n| **Experimental Design**| Planning how to assign treatments and measure responses                       | Ensures valid cause-effect conclusions                             |\n| **Control Group**     | A baseline group receiving no treatment or placebo                            | Provides a comparison to isolate treatment effects                 |\n| **Blinding**          | Keeping subjects or researchers unaware of treatment assignments              | Reduces placebo effects and observer bias                          |\n| **Survey Design**     | Crafting questions and protocols to collect data                              | Avoids measurement bias and improves data quality                  |\n| **Confounding Variables** | Variables related to both treatment and outcome that can bias results      | Recognizing confounders is essential for valid causal inference    |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Define Population & Research Question\"] --> B[\"Choose Sampling Method\"]\n    B --> C[\"Collect Sample Data\"]\n    C --> D[\"Design Experiment or Survey\"]\n    D --> E[\"Randomize Assignments (if experiment)\"]\n    E --> F[\"Conduct Study & Collect Data\"]\n    F --> G[\"Analyze Data & Identify Bias\"]\n    G --> H[\"Draw Conclusions\"]\n```\n\n### Explanation:\n1. **Define Population & Research Question**: Specify who or what you want to study and what you want to learn.\n2. **Choose Sampling Method**: Decide how to select a representative subset.\n3. **Collect Sample Data**: Gather data from the selected sample.\n4. **Design Experiment or Survey**: Plan treatment assignments or survey questions.\n5. **Randomize Assignments**: Use chance to assign treatments or select samples.\n6. **Conduct Study & Collect Data**: Implement the design and record results.\n7. **Analyze Data & Identify Bias**: Look for systematic errors or confounding.\n8. **Draw Conclusions**: Make inferences about the population.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition**                         | **Description**                                                                                  |\n|----------------------------------------------|------------------------------------------------------------------------------------------------|\n| **Simple Random Sample (SRS)**                | Every group of $$n$$ individuals has equal chance of selection                                  |\n| **Stratified Sampling**                        | Population divided into strata; SRS taken from each stratum                                     |\n| **Cluster Sampling**                           | Population divided into clusters; entire clusters randomly selected                             |\n| **Randomization Principle**                    | Use of chance to assign treatments or select samples to reduce bias                             |\n| **Control Principle**                          | Use of control groups to isolate treatment effects                                             |\n| **Replication Principle**                      | Repeating the experiment on many subjects to reduce chance variation                            |\n| **Blinding**                                   | Single or double blinding to reduce bias                                                       |\n| **Bias Types**                                 | - **Selection bias:** Non-random sample selection<br>- **Response bias:** Misleading answers<br>- **Nonresponse bias:** Missing data from some subjects |\n| **Confounding Variable**                        | A variable related to both treatment and outcome that can distort causal inference             |\n\n## Connections & Comparisons\n\n| **Concept**           | **Definition**                                   | **When to Use**                          | **Strengths**                         | **Weaknesses**                       |\n|-----------------------|-------------------------------------------------|-----------------------------------------|-------------------------------------|------------------------------------|\n| **Simple Random Sample (SRS)** | Every individual has equal chance           | When population is homogeneous and accessible | Minimizes bias, easy to analyze     | May be impractical for large populations |\n| **Stratified Sampling** | Divide population into strata, sample each      | When population has distinct subgroups   | Ensures representation of subgroups | Requires knowledge of strata        |\n| **Cluster Sampling**    | Randomly select entire clusters                  | When population is naturally grouped    | Cost-effective, easier logistics    | Higher sampling error, less precise |\n| **Randomization vs. Control** | Randomization assigns treatments; control groups provide baseline | Experiments to infer causality           | Controls confounding, reduces bias  | Requires careful design             |\n\n## Common AP Exam Traps\n\n- Confusing **random sampling** (selecting individuals) with **random assignment** (assigning treatments).\n- Assuming a **voluntary response sample** is representative — it is almost always biased.\n- Overlooking **confounding variables** when interpreting cause-effect relationships.\n- Misidentifying the **type of bias** present in a scenario (e.g., confusing response bias with selection bias).\n- Forgetting that **blinding** reduces bias but does not eliminate all sources of error.\n\n## Quick Review Checklist\n\n- [ ] Explain the difference between **random sampling** and **random assignment**.\n- [ ] Identify and describe common **sampling methods**: SRS, stratified, cluster.\n- [ ] Define and recognize different **types of bias** in data collection.\n- [ ] Describe the principles of **experimental design**: control, randomization, replication.\n- [ ] Explain the purpose and methods of **blinding** in experiments.\n- [ ] Recognize **confounding variables** and their impact on conclusions.\n- [ ] Design a simple survey or experiment minimizing bias and confounding.\n- [ ] Interpret scenarios to identify appropriate sampling and experimental methods.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Simple Random Sample (SRS)",
-              "definition": "A sampling method in which every member of a population has an equal chance of being selected, and each selection is independent of others."
+              "definition": "A sampling method where every group of $$n$$ individuals in the population has an equal chance of being selected."
             },
             {
-              "term": "Stratified Sampling",
-              "definition": "A sampling technique that involves dividing the population into homogeneous subgroups and then taking a random sample from each subgroup."
+              "term": "Stratified Random Sample",
+              "definition": "A sampling technique that divides the population into homogeneous groups called strata and randomly samples individuals from each stratum."
             },
             {
               "term": "Systematic Sampling",
-              "definition": "A method where members from a population are selected at regular intervals, starting from a randomly chosen point."
+              "definition": "A method that selects every $$k^\\text{th}$$ individual from a list after a random starting point is chosen."
             },
             {
-              "term": "Voluntary Response Bias",
-              "definition": "A type of bias that occurs when individuals choose themselves to be part of a sample, often skewing the results due to strong opinions."
+              "term": "Cluster Sampling",
+              "definition": "A sampling method where the population is divided into heterogeneous groups, some clusters are randomly selected, and then all individuals within chosen clusters are surveyed."
             },
             {
-              "term": "Nonresponse Bias",
-              "definition": "Bias introduced when some members of a sampled group do not respond to the survey, leading to unrepresentative samples."
+              "term": "Sampling Frame",
+              "definition": "A list or representation of all the individuals in the population from which a sample is drawn."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which sampling method ensures that every possible sample of a given size has an equal chance of selection?",
+              "questionText": "Which sampling method involves dividing the population into groups based on characteristics, then randomly selecting individuals from each group?",
               "options": [
-                "Convenience Sampling",
                 "Simple Random Sample",
-                "Stratified Sampling",
+                "Stratified Random Sample",
+                "Cluster Sampling",
                 "Systematic Sampling"
               ],
-              "correctAnswer": "Simple Random Sample",
+              "correctAnswer": "Stratified Random Sample",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "What is the primary advantage of stratified sampling over simple random sampling?",
+              "questionText": "In a Simple Random Sample of size $$n$$, each possible combination of $$n$$ individuals has what probability of being selected?",
               "options": [
-                "It requires less overall data collection.",
-                "It guarantees equal sample sizes for each group.",
-                "It reduces variability by accounting for population subgroups.",
-                "It avoids the use of randomization."
+                "Equal to 1\\/n",
+                "Equal to the size of the population",
+                "Equal probabilities for all combinations",
+                "Dependent on the order of selection"
               ],
-              "correctAnswer": "It reduces variability by accounting for population subgroups.",
+              "correctAnswer": "Equal probabilities for all combinations",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "In ______ sampling, every individual in a population has the same probability of being included in the sample.",
+              "questionText": "A sampling method that selects every $$k^\\text{th}$$ element from a list after a random start is called ______ sampling.",
               "options": [
-                "simple random",
                 "stratified",
-                "convenience",
-                "systematic"
+                "cluster",
+                "systematic",
+                "simple random"
               ],
-              "correctAnswer": "simple random",
+              "correctAnswer": "systematic",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "______ bias can occur when participants with strong opinions are more likely to volunteer for a survey.",
+              "questionText": "A list or set of all individuals from which a sample is drawn is called the ______.",
               "options": [
-                "Voluntary response",
-                "Nonresponse",
-                "Sampling",
-                "Response"
+                "sampling frame",
+                "population",
+                "sample size",
+                "sampling bias"
               ],
-              "correctAnswer": "Voluntary response",
+              "correctAnswer": "sampling frame",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -384,70 +387,70 @@
           "flashcards": [
             {
               "term": "Randomization",
-              "definition": "The practice of using chance to assign subjects to treatments, ensuring each subject has an equal probability of assignment to control for confounding variables."
-            },
-            {
-              "term": "Block Design",
-              "definition": "An experimental design technique where subjects are grouped into blocks based on a characteristic before random assignment to treatments to reduce variability."
-            },
-            {
-              "term": "Double-Blind Experiment",
-              "definition": "An experiment where neither the subjects nor the researchers interacting with them know which treatment the subjects receive, to prevent bias."
+              "definition": "The process of using chance to assign experimental units to treatments to reduce bias and ensure comparability among groups."
             },
             {
               "term": "Confounding Variable",
-              "definition": "An extraneous variable that is related to both the treatment and the response, potentially obscuring the true effect of the treatment."
+              "definition": "An extraneous factor that is related to both the treatment and the response variable, which may distort the apparent effect of the treatment."
             },
             {
               "term": "Placebo Effect",
-              "definition": "A phenomenon where participants experience changes in their condition due to their expectations from receiving a treatment, despite it being inactive."
+              "definition": "A phenomenon where subjects experience changes in response simply because they believe they are receiving treatment, even if the treatment is inert."
+            },
+            {
+              "term": "Blocking",
+              "definition": "Grouping similar experimental units together and then randomly assigning treatments within these groups to reduce variability."
+            },
+            {
+              "term": "Selection Bias",
+              "definition": "A systematic error caused by non-random sampling of participants, leading to a sample that is not representative of the population."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "What is the main purpose of randomization in an experimental study?",
+              "questionText": "In an experiment, what is the primary purpose of randomization in assignment to treatment groups?",
               "options": [
-                "To reduce the number of subjects needed",
-                "To evenly distribute confounding variables across treatment groups",
-                "To ensure a larger sample size",
-                "To avoid using control groups"
+                "To create equal sample sizes",
+                "To eliminate the placebo effect",
+                "To reduce the influence of confounding variables",
+                "To ensure subjects receive all treatments"
               ],
-              "correctAnswer": "To evenly distribute confounding variables across treatment groups",
+              "correctAnswer": "To reduce the influence of confounding variables",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "In an experiment, what type of design involves grouping subjects by a variable believed to affect the response before assigning treatments randomly?",
+              "questionText": "Which method helps control variability by grouping similar experimental units before randomly assigning treatments?",
               "options": [
-                "Completely randomized design",
-                "Crossover design",
-                "Block design",
-                "Factorial design"
+                "Confounding",
+                "Blocking",
+                "Sampling",
+                "Randomization"
               ],
-              "correctAnswer": "Block design",
+              "correctAnswer": "Blocking",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "A ______ experiment is one in which both the subject and the experimenter are unaware of the treatment assignments.",
+              "questionText": "When subjects respond to a dummy treatment because they believe it will help, this is known as the ______ effect.",
               "options": [
-                "single-blind",
-                "double-blind",
-                "control",
-                "block"
+                "confounding",
+                "selection bias",
+                "placebo",
+                "blocking"
               ],
-              "correctAnswer": "double-blind",
+              "correctAnswer": "placebo",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "A variable that influences both the explanatory and response variables causing a potential false association is called a ______ variable.",
+              "questionText": "A systematic error in sampling that results in a sample not representative of the population is called ______ bias.",
               "options": [
-                "response",
+                "randomization",
+                "selection",
                 "confounding",
-                "control",
-                "blocking"
+                "measurement"
               ],
-              "correctAnswer": "confounding",
+              "correctAnswer": "selection",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -458,75 +461,76 @@
       "unitNumber": 4,
       "unitName": "Probability, Random Variables, and Probability Distributions",
       "description": "Probability rules, conditional probability, binomial and geometric distributions, and expected value.",
+      "note": "# Unit 4: Probability, Random Variables, and Probability Distributions\n\n## Overview\nThis unit introduces the foundational concepts of **probability**, including rules and conditional probability, which are essential for understanding randomness and uncertainty. It also covers **random variables** and key discrete probability distributions such as the **binomial** and **geometric** distributions, along with the concept of **expected value**, all critical for solving AP Statistics problems involving chance and prediction.\n\n## Key Concepts at a Glance\n\n| **Concept**                | **What It Is**                                                                 | **Why It Matters (AP angle)**                                      |\n|---------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------|\n| **Probability Rules**      | Basic laws governing probabilities: complement, addition, multiplication rules| Foundation for calculating event likelihoods on the exam          |\n| **Conditional Probability**| Probability of an event given another event has occurred                       | Essential for problems involving dependent events and Bayes’ Rule |\n| **Random Variable (RV)**   | A variable whose values depend on chance outcomes                              | Models outcomes numerically; basis for distributions               |\n| **Discrete Probability Distribution** | Assigns probabilities to discrete RV values                          | Enables calculation of probabilities and expectations              |\n| **Binomial Distribution** | Models number of successes in fixed trials with constant success probability   | Common AP model for repeated independent trials                    |\n| **Geometric Distribution**| Models number of trials until first success                                   | Useful for “waiting time” problems                                 |\n| **Expected Value (Mean)**  | Long-run average or mean value of a random variable                           | Summarizes center of distribution; used in decision-making         |\n| **Independence**           | Two events are independent if occurrence of one does not affect the other    | Determines when multiplication rule applies                        |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Define Events & Sample Space\"] --> B[\"Apply Probability Rules\"]\n    B --> C[\"Calculate Conditional Probability\"]\n    C --> D[\"Identify Random Variable (Discrete)\"]\n    D --> E[\"Determine Probability Distribution\"]\n    E --> F[\"Check Distribution Type\"]\n    F --> G[\"Binomial Distribution\"]\n    F --> H[\"Geometric Distribution\"]\n    G --> I[\"Calculate Expected Value: $$\\mu = np$$\"]\n    H --> J[\"Calculate Expected Value: $$\\mu = \\frac{1}{p}$$\"]\n```\n\n**Explanation:**\n\n1. Define events and sample space.\n2. Use probability rules to find event probabilities.\n3. Calculate conditional probabilities if events are dependent.\n4. Define a discrete random variable representing outcomes numerically.\n5. Assign probabilities to each possible value (probability distribution).\n6. Identify if the distribution fits binomial or geometric models.\n7. Calculate expected value accordingly.\n\n## Essential Formulas / Laws / Rules\n\n| **Name**                     | **Formula / Definition**                                                                                   |\n|------------------------------|------------------------------------------------------------------------------------------------------------|\n| **Probability Complement Rule** | $$P(A^c) = 1 - P(A)$$                                                                                     |\n| **Addition Rule (General)**   | $$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$$                                                               |\n| **Addition Rule (Mutually Exclusive)** | $$P(A \\cup B) = P(A) + P(B)$$                                                                           |\n| **Multiplication Rule (Independent Events)** | $$P(A \\cap B) = P(A) \\times P(B)$$                                                                    |\n| **Conditional Probability**   | $$P(A|B) = \\frac{P(A \\cap B)}{P(B)}, \\quad P(B) > 0$$                                                      |\n| **Binomial Probability**      | $$P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}, \\quad k=0,1,\\ldots,n$$                                          |\n| **Binomial Expected Value**   | $$\\mu = E(X) = np$$                                                                                        |\n| **Geometric Probability**     | $$P(X = k) = (1-p)^{k-1} p, \\quad k=1,2,3,\\ldots$$                                                        |\n| **Geometric Expected Value**  | $$\\mu = E(X) = \\frac{1}{p}$$                                                                              |\n| **Expected Value (Discrete RV)** | $$E(X) = \\sum x_i P(X = x_i)$$                                                                           |\n\n## Connections & Comparisons\n\n| **Concept**           | **Binomial Distribution**                                    | **Geometric Distribution**                               | **Key Differences**                                      |\n|-----------------------|--------------------------------------------------------------|----------------------------------------------------------|----------------------------------------------------------|\n| **Scenario**          | Number of successes in fixed number of independent trials    | Number of trials until first success                      | Binomial: fixed trials; Geometric: variable trials       |\n| **Support (Possible Values)** | $$k = 0, 1, ..., n$$                                         | $$k = 1, 2, 3, ...$$                                     | Binomial starts at 0; geometric starts at 1              |\n| **Probability Mass Function (PMF)** | $$\\binom{n}{k} p^k (1-p)^{n-k}$$                             | $$(1-p)^{k-1} p$$                                        | Binomial involves combinations; geometric is a geometric series |\n| **Expected Value**     | $$np$$                                                       | $$\\frac{1}{p}$$                                          | Reflects different interpretations of \"average\"          |\n| **Use Cases**          | Number of successes in fixed trials (e.g., 5 coin flips)     | Trials until first success (e.g., first heads in coin flips) | Different problem types on AP exam                         |\n\n## Common AP Exam Traps\n\n- Confusing **independence** with **mutually exclusive**: Independent events can occur together; mutually exclusive cannot.\n- Forgetting to adjust probabilities when using **conditional probability**; always check the given condition.\n- Misapplying the **binomial formula** when trials are not independent or success probability changes.\n- Using the **geometric distribution** formula starting at $$k=0$$ instead of $$k=1$$ (number of trials until first success).\n- Mixing up **expected value** with most probable outcome; expected value is a long-run average, not necessarily a likely single outcome.\n\n## Quick Review Checklist\n\n- [ ] Explain and apply the **basic probability rules** (complement, addition, multiplication).\n- [ ] Calculate **conditional probabilities** and interpret their meaning.\n- [ ] Define a **random variable** and distinguish between discrete and continuous types.\n- [ ] Construct and interpret **discrete probability distributions**.\n- [ ] Identify when to use **binomial** vs. **geometric distributions**.\n- [ ] Calculate probabilities using the **binomial** and **geometric PMFs**.\n- [ ] Compute the **expected value** of a discrete random variable.\n- [ ] Recognize and avoid common pitfalls related to independence and distribution assumptions.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Addition Rule for Probability",
-              "definition": "The rule that calculates the probability of the union of two events by adding their individual probabilities and then subtracting the probability of their intersection."
+              "term": "Addition Rule of Probability",
+              "definition": "States that for any two events, the probability of their union is equal to the sum of their individual probabilities minus the probability of their intersection."
             },
             {
               "term": "Multiplication Rule for Independent Events",
-              "definition": "The rule stating that the probability of the intersection of two independent events equals the product of their individual probabilities."
+              "definition": "Determines the probability that two independent events both occur by multiplying their individual probabilities."
             },
             {
               "term": "Conditional Probability",
-              "definition": "The probability of one event occurring given that another event has already occurred, calculated as the ratio of the intersection of both events to the probability of the given event."
+              "definition": "The probability of an event occurring given that another event has already occurred, denoted by $$ P(A \\mid B) $$."
             },
             {
               "term": "Complement Rule",
-              "definition": "The probability of an event not occurring, found by subtracting the probability of the event from one."
+              "definition": "States that the probability of an event not occurring is equal to one minus the probability that the event does occur."
             },
             {
-              "term": "Disjoint Events",
-              "definition": "Two events that cannot happen simultaneously, meaning their intersection has zero probability."
+              "term": "Independent Events",
+              "definition": "Two events where the occurrence of one does not affect the probability of the occurrence of the other."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "If events A and B are disjoint with $$P(A) = 0.3$$ and $$P(B) = 0.4$$, what is $$P(A \\, \\text{or} \\, B)$$?",
+              "questionText": "If events A and B are mutually exclusive, which of the following is true?",
               "options": [
-                "0.12",
-                "0.7",
-                "0.1",
-                "0.3"
+                "$$ P(A \\cap B) = P(A) + P(B) $$",
+                "$$ P(A \\cup B) = P(A) + P(B) $$",
+                "$$ P(B \\mid A) = P(B) $$",
+                "$$ P(A) = P(B) $$"
               ],
-              "correctAnswer": "0.7",
+              "correctAnswer": "$$ P(A \\cup B) = P(A) + P(B) $$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "What is the probability of event B given event A, denoted $$P(B|A)$$, if $$P(A) = 0.5$$ and $$P(A \\, \\cap \\, B) = 0.2$$?",
+              "questionText": "Given that $$ P(A) = 0.3 $$, $$ P(B) = 0.5 $$, and $$ P(A \\cap B) = 0.15 $$, what is $$ P(A \\mid B) $$?",
               "options": [
-                "0.4",
-                "0.2",
+                "0.3",
                 "0.5",
-                "0.7"
+                "0.15",
+                "0.3"
               ],
-              "correctAnswer": "0.4",
+              "correctAnswer": "0.3",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The formula for conditional probability is $$P(B|A) = \\frac{P(A \\, \\cap \\, B)}{______}$$.",
+              "questionText": "The probability that event A does not occur is given by $$ P(\\text{not } A) = 1 - $$ ______.",
               "options": [
-                "$$P(A)$$",
-                "$$P(B)$$",
-                "$$P(A \\cup B)$$",
-                "$$1 - P(A)$$"
+                "$$ P(A) $$",
+                "$$ P(B) $$",
+                "$$ P(A \\cup B) $$",
+                "$$ P(A \\cap B) $$"
               ],
-              "correctAnswer": "$$P(A)$$",
+              "correctAnswer": "$$ P(A) $$",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Two events are called ______ if their intersection has zero probability.",
+              "questionText": "Two events are considered ______ if the occurrence of one does not change the probability of the other.",
               "options": [
-                "Independent",
-                "Mutually exclusive",
-                "Complementary",
-                "Complement"
+                "independent",
+                "equally likely",
+                "mutually exclusive",
+                "complementary"
               ],
-              "correctAnswer": "Mutually exclusive",
+              "correctAnswer": "independent",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -535,70 +539,70 @@
           "flashcards": [
             {
               "term": "Binomial Distribution",
-              "definition": "A discrete probability distribution describing the number of successes in a fixed number of independent trials each with the same probability of success."
+              "definition": "A discrete probability distribution representing the number of successes in a fixed number of independent trials with the same probability of success."
             },
             {
               "term": "Geometric Distribution",
-              "definition": "A discrete probability distribution representing the number of trials needed to get the first success, where each trial is independent and has the same probability of success."
+              "definition": "A probability distribution representing the number of trials needed to get the first success in a sequence of independent trials with the same probability of success."
             },
             {
-              "term": "Expected Value of a Random Variable",
-              "definition": "The long-run average value of repetitions of the experiment it represents, calculated as the sum of all possible outcomes weighted by their probabilities."
+              "term": "Expected Value",
+              "definition": "The long-run average or mean value of a random variable, calculated as the sum of each outcome multiplied by its probability."
+            },
+            {
+              "term": "Random Variable",
+              "definition": "A numeric outcome of a random phenomenon, which can be either discrete or continuous."
             },
             {
               "term": "Variance of a Random Variable",
-              "definition": "A measure of spread that quantifies the average squared deviation of each possible outcome from the expected value."
-            },
-            {
-              "term": "Conditions for a Binomial Setting",
-              "definition": "The required assumptions: fixed number of trials, each trial independent, each trial has only two outcomes, and the probability of success is the same for every trial."
+              "definition": "A measure of the spread of a random variable's possible values, calculated as the expected value of the squared deviation from its mean."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "What is the expected value $$E(X)$$ of a binomial random variable $$X$$ with parameters $$n = 10$$ and $$p = 0.3$$?",
+              "questionText": "Which of the following is a parameter of a binomial distribution?",
               "options": [
-                "3",
-                "7",
-                "0.3",
-                "10"
+                "Number of trials, probability of success, number of successes",
+                "Sample mean, sample variance, number of trials",
+                "Probability of first success, number of failures, number of trials",
+                "Trial result, experimental outcome, number of failures"
               ],
-              "correctAnswer": "3",
+              "correctAnswer": "Number of trials, probability of success, number of successes",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which condition is NOT required for a binomial setting?",
+              "questionText": "What is the expected value of a binomial random variable with parameters $$ n = 10 $$ and $$ p = 0.3 $$?",
               "options": [
-                "Trials are independent",
-                "Number of trials is fixed",
-                "Number of possible successes is fixed in advance",
-                "Probability of success is the same for each trial"
+                "3",
+                "7",
+                "5",
+                "30"
               ],
-              "correctAnswer": "Number of possible successes is fixed in advance",
+              "correctAnswer": "3",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The geometric distribution models the number of ______ until the first success.",
+              "questionText": "The expected value of a discrete random variable $$ X $$ is calculated by summing the products of each value of $$ X $$ and its corresponding ______.",
               "options": [
-                "failures",
-                "successes",
-                "trials",
-                "events"
+                "probabilities",
+                "variances",
+                "standard deviations",
+                "mean"
               ],
-              "correctAnswer": "trials",
+              "correctAnswer": "probabilities",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The variance of a binomial random variable $$X$$ is calculated using the formula $$Var(X) = np(1-p)$$ where $$n$$ is the number of trials and $$p$$ is the ______ of success on each trial.",
+              "questionText": "The number of trials up to and including the first success follows a ______ distribution.",
               "options": [
-                "probability",
-                "number",
-                "expected value",
-                "variance"
+                "geometric",
+                "binomial",
+                "normal",
+                "uniform"
               ],
-              "correctAnswer": "probability",
+              "correctAnswer": "geometric",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -609,75 +613,76 @@
       "unitNumber": 5,
       "unitName": "Sampling Distributions",
       "description": "Central Limit Theorem, sampling distribution of the sample mean and proportion, and standard error.",
+      "note": "# Unit 5: Sampling Distributions\n\n## Overview\nThis unit explores **sampling distributions**, focusing on the behavior of sample means and proportions across repeated samples. Understanding the **Central Limit Theorem (CLT)** and the concept of **standard error** is crucial for making valid inferences about populations from samples, a foundational skill for the AP Statistics exam.\n\n## Key Concepts at a Glance\n\n| **Concept**                    | **What It Is**                                                                 | **Why It Matters (AP angle)**                                      |\n|-------------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------|\n| **Sampling Distribution**     | The probability distribution of a statistic (e.g., sample mean or proportion) over all possible samples of a fixed size. | Basis for inference; allows probability statements about statistics. |\n| **Sample Mean ($\\bar{x}$)**   | The average value of a sample drawn from a population.                         | Central statistic for estimating population mean $\\mu$.          |\n| **Sample Proportion ($\\hat{p}$)** | The fraction of successes in a sample.                                         | Used to estimate population proportion $p$.                      |\n| **Central Limit Theorem (CLT)** | States that the sampling distribution of the sample mean approaches normality as sample size increases, regardless of population shape. | Justifies use of normal models for inference even if population is not normal. |\n| **Standard Error (SE)**       | The standard deviation of a sampling distribution; measures variability of a statistic. | Quantifies uncertainty in estimates; used in confidence intervals and hypothesis tests. |\n| **Shape of Sampling Distribution** | Depends on sample size and population distribution; approaches normal with large $n$. | Determines when normal approximation is valid.                    |\n| **Mean of Sampling Distribution** | Equals the population parameter (e.g., $E(\\bar{x}) = \\mu$).                    | Ensures unbiasedness of sample statistics.                         |\n| **Conditions for Normal Approximation** | Rules like $np \\geq 10$ and $n(1-p) \\geq 10$ for proportions; $n \\geq 30$ for means. | Guides correct application of normal models on the exam.          |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Population with mean $\\mu$ and SD $\\sigma$\"] --> B[\"Draw random sample of size $n$\"]\n    B --> C[\"Calculate sample statistic (e.g., $\\bar{x}$ or $\\hat{p}$)\"]\n    C --> D[\"Repeat sampling many times\"]\n    D --> E[\"Form sampling distribution of statistic\"]\n    E --> F{\"Is sample size $n$ large?\"}\n    F -- Yes --> G[\"Sampling distribution approx. Normal (CLT)\"]\n    F -- No --> H[\"Sampling distribution shape depends on population\"]\n    G --> I[\"Mean of sampling distribution = population parameter\"]\n    G --> J[\"Standard error = $\\frac{\\sigma}{\\sqrt{n}}$ or $\\sqrt{\\frac{p(1-p)}{n}}$\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| Formula / Rule                          | Description                                             |\n|---------------------------------------|---------------------------------------------------------|\n| $$ \\text{Mean of } \\bar{x} = \\mu $$  | Sampling distribution of sample mean centers at population mean. |\n| $$ \\text{SE}_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}} $$ | Standard error of sample mean; $\\sigma$ is population SD. |\n| $$ \\text{Mean of } \\hat{p} = p $$    | Sampling distribution of sample proportion centers at population proportion. |\n| $$ \\text{SE}_{\\hat{p}} = \\sqrt{\\frac{p(1-p)}{n}} $$ | Standard error of sample proportion.                     |\n| **Central Limit Theorem:**             | For sufficiently large $n$, $$ \\bar{x} \\sim N\\left(\\mu, \\frac{\\sigma}{\\sqrt{n}}\\right) $$ regardless of population shape. |\n| **Normal Approximation Conditions:**  | For proportions: $$ np \\geq 10 \\quad \\text{and} \\quad n(1-p) \\geq 10 $$; for means: $$ n \\geq 30 $$ (if population not normal). |\n\n## Connections & Comparisons\n\n| Aspect                  | Sample Mean ($\\bar{x}$)                              | Sample Proportion ($\\hat{p}$)                         |\n|-------------------------|-----------------------------------------------------|------------------------------------------------------|\n| Parameter estimated      | Population mean $\\mu$                               | Population proportion $p$                            |\n| Sampling distribution    | Mean: $\\mu$; SE: $\\frac{\\sigma}{\\sqrt{n}}$          | Mean: $p$; SE: $\\sqrt{\\frac{p(1-p)}{n}}$             |\n| Shape of distribution   | Approaches normal by CLT if $n$ large                | Approaches normal if $np \\geq 10$ and $n(1-p) \\geq 10$|\n| Underlying data type     | Quantitative (numerical)                             | Categorical (binary success/failure)                  |\n| Use on AP exam           | Confidence intervals and hypothesis tests for means | Confidence intervals and hypothesis tests for proportions |\n\n## Common AP Exam Traps\n\n- Confusing **population standard deviation ($\\sigma$)** with **standard error (SE)**; SE decreases with larger $n$.\n- Applying the **normal approximation** when sample size or success/failure counts are too small.\n- Forgetting that the **sampling distribution of $\\bar{x}$ is centered at $\\mu$**, not the sample mean itself.\n- Using **sample standard deviation ($s$)** instead of population SD ($\\sigma$) when calculating SE without acknowledging approximation.\n- Misinterpreting the **CLT** as requiring the population to be normal; it applies to the sampling distribution for large $n$ regardless of population shape.\n\n## Quick Review Checklist\n\n- [ ] Define and explain **sampling distribution** and its importance.\n- [ ] State and apply the **Central Limit Theorem** for sample means.\n- [ ] Calculate and interpret the **standard error** for sample means and proportions.\n- [ ] Identify when the **normal approximation** is appropriate for proportions and means.\n- [ ] Distinguish between **sample statistics** and **population parameters**.\n- [ ] Describe the shape, center, and spread of sampling distributions.\n- [ ] Solve problems involving probabilities of sample means or proportions using normal models.\n- [ ] Recognize common pitfalls related to sample size and distribution assumptions on the AP exam.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Central Limit Theorem (CLT)",
-              "definition": "A fundamental theorem stating that the distribution of the sample mean approaches a normal distribution as the sample size increases, regardless of the population's distribution, provided the samples are independent and the sample size is sufficiently large."
+              "term": "Central Limit Theorem",
+              "definition": "A fundamental theorem stating that, for a sufficiently large sample size, the sampling distribution of the sample mean will be approximately normal regardless of the population's distribution."
             },
             {
-              "term": "Sampling distribution of the sample mean",
-              "definition": "The probability distribution of all possible sample means computed from samples of a specific size drawn from the same population."
+              "term": "Sampling Distribution of the Sample Mean",
+              "definition": "The probability distribution of all possible values of the sample mean calculated from samples of the same size taken from a population."
             },
             {
-              "term": "Standard error of the sample mean",
-              "definition": "The standard deviation of the sampling distribution of the sample mean, calculated as the population standard deviation divided by the square root of the sample size."
+              "term": "Population Mean vs. Sample Mean",
+              "definition": "The population mean is the average of all observations in the entire population, while the sample mean is the average of observations in a particular sample drawn from that population."
             },
             {
-              "term": "Sample size effect on distribution shape",
-              "definition": "As the size of the sample increases, the sampling distribution of the sample mean becomes approximately normal due to the Central Limit Theorem, even if the population distribution is not normal."
+              "term": "Standard Error of the Mean",
+              "definition": "The standard deviation of the sampling distribution of the sample mean, quantifying how much sample means vary from the true population mean."
             },
             {
-              "term": "Conditions for CLT application",
-              "definition": "Samples must be independent, and the sample size must be large enough (commonly $$n \\geq 30$$) or the population distribution must be normal to justify using the Central Limit Theorem."
+              "term": "Shape of Sampling Distribution for Small Samples",
+              "definition": "If the original population is normally distributed, the sampling distribution of the sample mean is normal for any sample size; otherwise, larger samples are needed for the distribution to be approximately normal."
             }
           ],
           "multipleChoice": [
             {
               "questionText": "Which of the following best describes the Central Limit Theorem?",
               "options": [
-                "The sample proportion distribution becomes uniform as sample size increases.",
-                "The sample mean distribution approaches normality as sample size increases.",
-                "The population mean equals the sample mean for any sample size.",
-                "The variance of the sampling distribution increases with sample size."
+                "The distribution of sample proportions becomes normal as sample size increases.",
+                "The sum of any set of random variables is always normally distributed.",
+                "The sampling distribution of the sample mean approaches normality as sample size increases, regardless of the population distribution.",
+                "If the population distribution is uniform, sample means will also be uniform."
               ],
-              "correctAnswer": "The sample mean distribution approaches normality as sample size increases.",
+              "correctAnswer": "The sampling distribution of the sample mean approaches normality as sample size increases, regardless of the population distribution.",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "What is the standard error of the sample mean when the population standard deviation $$\\sigma = 12$$ and sample size $$n = 36$$?",
+              "questionText": "What happens to the standard error of the mean when the sample size increases?",
               "options": [
-                "$$2$$",
-                "$$12$$",
-                "$$4$$",
-                "$$3$$"
+                "It increases proportionally to the square root of the sample size.",
+                "It remains the same regardless of sample size.",
+                "It decreases because it is inversely proportional to the square root of the sample size.",
+                "It increases linearly with the sample size."
               ],
-              "correctAnswer": "$$2$$",
+              "correctAnswer": "It decreases because it is inversely proportional to the square root of the sample size.",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The Central Limit Theorem ensures the sampling distribution of the sample mean will be approximately ______ when $$n$$ is large.",
+              "questionText": "The mean of the sampling distribution of the sample mean is equal to the ______ of the population.",
               "options": [
-                "normal",
-                "uniform",
-                "skewed",
-                "bimodal"
+                "variance",
+                "standard deviation",
+                "mean",
+                "median"
               ],
-              "correctAnswer": "normal",
+              "correctAnswer": "mean",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The standard error of the sample mean is calculated as $$\\frac{\\sigma}{\\sqrt{______}}$$.",
+              "questionText": "According to the Central Limit Theorem, the sampling distribution of the sample mean becomes approximately normal as the sample size becomes ______.",
               "options": [
-                "n",
-                "\\mu",
-                "p",
-                "\\sigma"
+                "smaller",
+                "exactly 3",
+                "larger",
+                "infinitely large"
               ],
-              "correctAnswer": "n",
+              "correctAnswer": "larger",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -685,71 +690,71 @@
         {
           "flashcards": [
             {
-              "term": "Sampling distribution of a sample proportion",
-              "definition": "The probability distribution of sample proportions obtained from all possible samples of the same size drawn from a population."
+              "term": "Sampling Distribution of the Sample Proportion",
+              "definition": "The probability distribution of all possible sample proportions calculated from samples of the same size drawn from a population."
             },
             {
-              "term": "Standard error of the sample proportion",
-              "definition": "A measure of variability for the sampling distribution of the sample proportion, calculated as $$\\sqrt{\\frac{p(1-p)}{n}}$$ where $$p$$ is the population proportion and $$n$$ is the sample size."
+              "term": "Standard Error of a Sample Proportion",
+              "definition": "The standard deviation of the sampling distribution of the sample proportion, calculated using the formula $$\\sqrt{\\frac{p(1-p)}{n}}$$ where $$p$$ is the population proportion and $$n$$ is the sample size."
             },
             {
-              "term": "Conditions for normal approximation of sample proportions",
-              "definition": "The sample must be drawn randomly and independently, and both $$np \\geq 10$$ and $$n(1-p) \\geq 10$$ must hold to approximate the sampling distribution of the sample proportion by a normal distribution."
+              "term": "Conditions for Using Normal Approximation to the Sampling Distribution of a Proportion",
+              "definition": "Both $$np \\geq 10$$ and $$n(1-p) \\geq 10$$ must hold for the sampling distribution of the sample proportion to be approximated by a normal distribution."
             },
             {
-              "term": "Role of standard error in inference",
-              "definition": "Standard error quantifies the typical distance between a sample statistic and the corresponding population parameter, which is essential for constructing confidence intervals and conducting hypothesis tests."
+              "term": "Interpretation of Standard Error",
+              "definition": "A measure of variability indicating how much the sample statistic, such as the sample mean or proportion, is expected to vary from sample to sample."
             },
             {
-              "term": "Effect of increasing sample size on standard error",
-              "definition": "Increasing the sample size decreases the standard error, leading to a more precise estimate of the population parameter."
+              "term": "Effect of Increasing Sample Size on Sampling Distribution",
+              "definition": "Increasing the sample size decreases the standard error, resulting in a sampling distribution that is more concentrated around the population parameter."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which condition must be met to use a normal approximation for the sampling distribution of a sample proportion?",
+              "questionText": "Which formula represents the standard error of a sample proportion?",
               "options": [
-                "Sample size $$n$$ must be less than 10.",
-                "Both $$np$$ and $$n(1-p)$$ must be at least 10.",
-                "Population distribution must be normal.",
-                "No conditions are required to use normal approximation."
+                "$$\\frac{p}{n}$$",
+                "$$\\sqrt{\\frac{p(1-p)}{n}}$$",
+                "$$\\frac{n}{p(1-p)}$$",
+                "$$\\frac{1}{\\sqrt{n}}$$"
               ],
-              "correctAnswer": "Both $$np$$ and $$n(1-p)$$ must be at least 10.",
+              "correctAnswer": "$$\\sqrt{\\frac{p(1-p)}{n}}$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "If the population proportion $$p = 0.4$$ and the sample size is $$n = 100$$, what is the standard error of the sample proportion?",
+              "questionText": "Under which conditions can the sampling distribution of the sample proportion be approximated by a normal distribution?",
               "options": [
-                "$$0.04$$",
-                "$$0.04899$$",
-                "$$0.24$$",
-                "$$0.06$$"
+                "When $$np \\geq 10$$ and $$n(1-p) \\geq 10$$",
+                "When $$n < 10$$",
+                "When $$p = 0.5$$",
+                "When $$n > 100$$"
               ],
-              "correctAnswer": "$$0.04899$$",
+              "correctAnswer": "When $$np \\geq 10$$ and $$n(1-p) \\geq 10$$",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The formula for the standard error of a sample proportion is $$\\sqrt{\\frac{______ (1 - ______)}{n}}$$.",
+              "questionText": "The standard error of a sample proportion decreases as the sample size ______.",
               "options": [
-                "p",
-                "n",
-                "\\mu",
-                "\\sigma"
+                "increases",
+                "decreases",
+                "remains constant",
+                "is irrelevant"
               ],
-              "correctAnswer": "p",
+              "correctAnswer": "increases",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "To apply the Central Limit Theorem for sample proportions, one commonly requires both $$np$$ and $$n(1-p)$$ to be ______ or greater.",
+              "questionText": "The sampling distribution of the sample proportion has mean equal to the population ______.",
               "options": [
-                "10",
-                "5",
-                "30",
-                "50"
+                "mean",
+                "variance",
+                "proportion",
+                "standard deviation"
               ],
-              "correctAnswer": "10",
+              "correctAnswer": "proportion",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -760,75 +765,76 @@
       "unitNumber": 6,
       "unitName": "Inference for Categorical Data: Proportions",
       "description": "Confidence intervals and significance tests for one and two proportions; Type I and II errors.",
+      "note": "# Unit 6: Inference for Categorical Data: Proportions\n\n## Overview\nThis unit focuses on making **inferences about population proportions** using sample data. You will learn how to construct **confidence intervals** and perform **significance tests** for one and two proportions, while understanding the implications of **Type I and Type II errors**. Mastery of these concepts is essential for interpreting categorical data and answering AP Statistics free-response and multiple-choice questions involving proportions.\n\n## Key Concepts at a Glance\n\n| **Concept**                 | **What It Is**                                                                 | **Why It Matters (AP angle)**                                         |\n|----------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| **Population Proportion ($p$)** | The true proportion of a population with a certain categorical trait.           | Basis for inference; unknown parameter to estimate or test.           |\n| **Sample Proportion ($\\hat{p}$)**   | The proportion observed in a sample used to estimate $p$.                        | Point estimate for confidence intervals and hypothesis tests.        |\n| **Confidence Interval (CI)**       | Range of plausible values for $p$ with a specified confidence level (e.g., 95%). | Shows estimation uncertainty; often tested on AP exam.                |\n| **Significance Test for One Proportion** | Hypothesis test to assess if $p$ equals a claimed value using sample data.         | Core inference method; requires correct test statistic and $p$-value. |\n| **Two-Proportion Inference**       | Comparing two population proportions via difference or ratio.                      | Common AP scenario; involves pooled vs. unpooled methods.             |\n| **Type I Error ($\\alpha$)**         | Rejecting a true null hypothesis (false positive).                                | Understanding error rates guides test interpretation.                |\n| **Type II Error ($\\beta$)**         | Failing to reject a false null hypothesis (false negative).                       | Relates to test power; important for evaluating test effectiveness.   |\n| **Conditions for Inference**        | Requirements like independence, random sampling, and sample size for normal approx.| Ensures validity of inference methods; frequently tested concept.     |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Start with Sample Data\"] --> B[\"Check Conditions:\\n- Randomness\\n- Independence\\n- Sample size (np, n(1-p) ≥ 10)\"]\n    B --> C{\"Inference Type?\"}\n    C -->|One Proportion| D[\"Calculate Sample Proportion $\\hat{p}$\"]\n    C -->|Two Proportions| E[\"Calculate $\\hat{p}_1$, $\\hat{p}_2$\"]\n    D --> F[\"Choose Method:\\n- Confidence Interval\\n- Significance Test\"]\n    E --> F\n    F --> G{\"Confidence Interval\"}\n    F --> H{\"Significance Test\"}\n    G --> I[\"Compute SE:\\n$$SE = \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$ (one prop)\"]\n    G --> J[\"Compute Margin of Error:\\n$$ME = z^* \\times SE$$\"]\n    G --> K[\"Construct CI:\\n$$\\hat{p} \\pm ME$$\"]\n    H --> L[\"Set Hypotheses:\\n$$H_0: p = p_0$$\\n$$H_a: p \\neq p_0, > p_0, < p_0$$\"]\n    H --> M[\"Calculate Test Statistic:\\n$$z = \\frac{\\hat{p} - p_0}{SE}$$\"]\n    H --> N[\"Find $p$-value from $z$\"]\n    H --> O[\"Make Decision:\\nReject $H_0$ if $p$-value < $\\alpha$\"]\n    I --> K\n    J --> K\n    L --> M\n    M --> N\n    N --> O\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Name**                         | **Formula / Definition**                                                                                     |\n|---------------------------------|-------------------------------------------------------------------------------------------------------------|\n| **Sample Proportion**            | $$\\hat{p} = \\frac{x}{n}$$ where $x$ = number of successes, $n$ = sample size                                  |\n| **Standard Error (One Proportion)** | $$SE = \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$                                                                |\n| **Confidence Interval for $p$** | $$\\hat{p} \\pm z^* \\times SE$$ where $z^*$ corresponds to confidence level (e.g., 1.96 for 95%)               |\n| **Hypothesis Test Statistic (One Proportion)** | $$z = \\frac{\\hat{p} - p_0}{\\sqrt{\\frac{p_0(1-p_0)}{n}}}$$ where $p_0$ is null hypothesized proportion      |\n| **Standard Error (Two Proportions)** | $$SE = \\sqrt{\\frac{\\hat{p}_1(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2(1-\\hat{p}_2)}{n_2}}$$                      |\n| **Pooled Proportion (for tests)** | $$\\hat{p} = \\frac{x_1 + x_2}{n_1 + n_2}$$ used when $H_0: p_1 = p_2$                                         |\n| **Test Statistic (Two Proportions)** | $$z = \\frac{\\hat{p}_1 - \\hat{p}_2}{\\sqrt{\\hat{p}(1-\\hat{p})\\left(\\frac{1}{n_1} + \\frac{1}{n_2}\\right)}}$$    |\n| **Type I Error ($\\alpha$)**      | Probability of rejecting $H_0$ when it is true                                                               |\n| **Type II Error ($\\beta$)**      | Probability of failing to reject $H_0$ when it is false                                                      |\n\n## Connections & Comparisons\n\n| **Concept**                  | **Confidence Interval**                                    | **Significance Test**                                         | **Type I vs. Type II Errors**                            |\n|-----------------------------|------------------------------------------------------------|--------------------------------------------------------------|---------------------------------------------------------|\n| **Purpose**                 | Estimate plausible values for $p$                          | Assess evidence against $H_0$                                 | Errors in decision-making during hypothesis testing     |\n| **Outcome**                 | Interval range with confidence level (e.g., 95%)          | $p$-value and reject/do not reject decision                  | $\\alpha$: false positive; $\\beta$: false negative       |\n| **Use of $p$-value**        | Not used                                                   | Central to decision-making                                    | Related to $\\alpha$ (Type I error rate)                  |\n| **Calculation**             | Uses sample proportion and critical $z^*$ value            | Uses test statistic $z$ and null proportion $p_0$             | Depends on sample size, effect size, and significance level |\n| **Interpretation**          | \"We are 95% confident $p$ lies in this interval.\"          | \"Data provide (or do not provide) convincing evidence.\"       | Balancing errors affects test design and conclusions    |\n\n## Common AP Exam Traps\n\n- Confusing **sample proportion ($\\hat{p}$)** with **population proportion ($p$)**; always remember $p$ is unknown.\n- Using the **sample proportion** instead of the **null proportion ($p_0$)** in the denominator of the test statistic for significance tests.\n- Forgetting to check **conditions** (randomness, independence, sample size) before performing inference.\n- Misinterpreting a **confidence interval** as a probability statement about $p$ after the interval is computed (confidence level refers to the method, not the specific interval).\n- Mixing up **Type I** and **Type II errors** or their consequences in context.\n- Using the **unpooled standard error** when the null hypothesis assumes equal proportions (should use pooled SE).\n- Not adjusting the **critical $z^*$ value** for confidence levels other than 95%.\n\n## Quick Review Checklist\n\n- [ ] Define and calculate **sample proportion** and **population proportion**.\n- [ ] Check conditions for inference on proportions.\n- [ ] Construct and interpret **confidence intervals** for one and two proportions.\n- [ ] Set up and perform **hypothesis tests** for one and two proportions.\n- [ ] Calculate and interpret **standard errors** and **test statistics** correctly.\n- [ ] Understand and explain **Type I and Type II errors** in context.\n- [ ] Distinguish between **pooled** and **unpooled** methods for two-proportion tests.\n- [ ] Interpret results in the context of the problem, including **$p$-values** and **confidence levels**.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Confidence interval for a population proportion",
-              "definition": "An interval estimate that provides a range of plausible values for a population proportion based on sample data and a specified confidence level."
+              "term": "Confidence Interval for a Proportion",
+              "definition": "A range of values, constructed from sample data, within which the true population proportion is believed to lie with a certain level of confidence."
             },
             {
-              "term": "Standard error of a sample proportion",
-              "definition": "The estimated standard deviation of the sampling distribution of a sample proportion, calculated as $$\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$ where $$\\hat{p}$$ is the sample proportion and $$n$$ is the sample size."
+              "term": "Standard Error of a Sample Proportion",
+              "definition": "An estimate of the standard deviation of the sampling distribution of a sample proportion, calculated as $$\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$ where $$\\hat{p}$$ is the sample proportion and $$n$$ is the sample size."
             },
             {
-              "term": "Z* critical value",
-              "definition": "The number of standard errors to extend from the sample statistic to create a confidence interval; determined by the desired confidence level and corresponding to the quantiles of the standard normal distribution."
+              "term": "Conditions for Inference on a Single Proportion",
+              "definition": "Requirements including that the data come from a random sample or randomized experiment, the sampled observations are independent, and the sample size is large enough so that both $$np \\geq 10$$ and $$n(1-p) \\geq 10$$."
             },
             {
-              "term": "Validity conditions for inference about a proportion",
-              "definition": "Requirements that the sample must be a random sample, the observations are independent, and the sample size is large enough so that both $$np$$ and $$n(1-p)$$ are at least 10 to use normal approximation methods."
+              "term": "Interpretation of a 95% Confidence Interval",
+              "definition": "If we take many samples and construct a confidence interval from each, approximately 95% of these intervals will contain the true population proportion."
             },
             {
-              "term": "Interpretation of a confidence level",
-              "definition": "The long-run proportion of confidence intervals constructed in the same way from repeated samples that will contain the true population parameter."
+              "term": "Critical Value for a Confidence Interval",
+              "definition": "The multiplier from the standard normal distribution corresponding to the desired confidence level, such as $$z^* = 1.96$$ for a 95% confidence interval."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following best describes the meaning of a 95% confidence interval for a population proportion?",
+              "questionText": "Which of the following is the correct formula to calculate the standard error of the sample proportion $$\\hat{p}$$ in a large sample?",
               "options": [
-                "There is a 95% chance that the population proportion lies within this interval.",
-                "95% of the sample data fall within this interval.",
-                "If we repeated the sampling process many times, approximately 95% of the constructed intervals would contain the true population proportion.",
-                "The sample proportion is 95% likely to be in this interval."
+                "$$\\sqrt{\\frac{p(1-p)}{n}}$$",
+                "$$\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$",
+                "$$\\frac{\\hat{p}}{n}$$",
+                "$$\\frac{1}{\\sqrt{n}}$$"
               ],
-              "correctAnswer": "If we repeated the sampling process many times, approximately 95% of the constructed intervals would contain the true population proportion.",
+              "correctAnswer": "$$\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "What is the formula for the standard error of the sample proportion $$\\hat{p}$$?",
+              "questionText": "What does a 95% confidence interval for a population proportion represent?",
               "options": [
-                "$$\\sqrt{\\frac{p(1-p)}{n}}$$",
-                "$$\\frac{1}{\\sqrt{n}}$$",
-                "$$\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$",
-                "$$\\hat{p} \\times n$$"
+                "The probability that the population proportion is in the interval is 0.95",
+                "95% of the sample data fall within the interval",
+                "About 95% of similarly constructed intervals from repeated random samples will contain the true population proportion",
+                "The population proportion falls exactly at the midpoint of the interval with 95% confidence"
               ],
-              "correctAnswer": "$$\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$$",
+              "correctAnswer": "About 95% of similarly constructed intervals from repeated random samples will contain the true population proportion",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The critical value used to construct a 99% confidence interval from a standard normal distribution is approximately ______.",
+              "questionText": "A necessary condition for using the normal approximation to construct a confidence interval for a population proportion is that both $$np$$ and $$n(1-p)$$ are ______ or greater.",
               "options": [
-                "2.33",
-                "1.96",
-                "1.64",
-                "2.58"
+                "5",
+                "10",
+                "15",
+                "20"
               ],
-              "correctAnswer": "2.58",
+              "correctAnswer": "10",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "To satisfy the validity condition for inference about a proportion, the expected number of successes and failures in the sample must both be at least ______.",
+              "questionText": "The critical value for a 99% confidence interval for a population proportion is approximately ______.",
               "options": [
-                "10",
-                "30",
-                "5",
-                "15"
+                "1.645",
+                "1.96",
+                "2.33",
+                "2.58"
               ],
-              "correctAnswer": "10",
+              "correctAnswer": "2.58",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -836,71 +842,71 @@
         {
           "flashcards": [
             {
-              "term": "Null hypothesis for a test about one proportion",
-              "definition": "A statement that the population proportion equals a specified value, typically denoted as $$H_0: p = p_0$$, serving as the baseline assumption for significance testing."
+              "term": "Hypothesis Test for a Single Proportion",
+              "definition": "A statistical procedure using sample data to evaluate the plausibility of a claim about a population proportion by calculating a test statistic and corresponding p-value under a null hypothesis."
             },
             {
-              "term": "Type I error",
-              "definition": "The mistake made when rejecting a true null hypothesis; the probability of making this error is denoted by the significance level $$\\alpha$$."
+              "term": "Type I Error",
+              "definition": "Incorrectly rejecting the null hypothesis when it is actually true; often referred to as a false positive."
             },
             {
-              "term": "Type II error",
-              "definition": "Failing to reject a false null hypothesis; the probability of this error is denoted by $$\\beta$$ and depends on the true population parameter and test conditions."
+              "term": "Type II Error",
+              "definition": "Failing to reject the null hypothesis when the alternative hypothesis is true; often referred to as a false negative."
             },
             {
-              "term": "Test statistic for a hypothesis test about one proportion",
-              "definition": "A standardized value computed as $$z = \\frac{\\hat{p} - p_0}{\\sqrt{\\frac{p_0 (1-p_0)}{n}}}$$ that indicates how far the sample proportion is from the null value in units of standard error."
+              "term": "Pooled Proportion",
+              "definition": "An estimate of the common population proportion, calculated by combining successes and sample sizes from two groups, used in two-proportion hypothesis tests under the null hypothesis."
             },
             {
-              "term": "P-value",
-              "definition": "The probability, assuming the null hypothesis is true, of observing a test statistic as extreme or more extreme than the one calculated from the sample data; used to assess strength of evidence against $$H_0$$."
+              "term": "Conditions for Comparing Two Proportions",
+              "definition": "Requirements include independent random samples from two populations or groups, independence within samples, and large enough sample sizes such that the number of successes and failures in each group is at least 10."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "In a test about a population proportion, what does the p-value represent?",
+              "questionText": "In a hypothesis test comparing two population proportions, what is the pooled proportion used for?",
               "options": [
-                "The probability that the null hypothesis is true.",
-                "The probability of obtaining the observed sample proportion under the alternative hypothesis.",
-                "The probability of observing a test statistic as extreme as the one calculated if the null hypothesis is true.",
-                "The proportion of times the null hypothesis will be rejected in repeated samples."
+                "Estimating the difference between the two sample proportions",
+                "Estimating the common population proportion under the null hypothesis",
+                "Calculating the standard error of each sample proportion separately",
+                "Determining the alternative hypothesis"
               ],
-              "correctAnswer": "The probability of observing a test statistic as extreme as the one calculated if the null hypothesis is true.",
+              "correctAnswer": "Estimating the common population proportion under the null hypothesis",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which of the following describes a Type I error?",
+              "questionText": "Which of the following best describes a Type II error?",
               "options": [
-                "Failing to reject a false null hypothesis.",
-                "Rejecting a true null hypothesis.",
-                "Rejecting a false alternative hypothesis.",
-                "Failing to reject a true alternative hypothesis."
+                "Rejecting the null hypothesis when it is true",
+                "Failing to reject the null hypothesis when the alternative is true",
+                "Rejecting the alternative hypothesis when it is true",
+                "Failing to collect enough data"
               ],
-              "correctAnswer": "Rejecting a true null hypothesis.",
+              "correctAnswer": "Failing to reject the null hypothesis when the alternative is true",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "In the formula for the test statistic $$z = \\frac{\\hat{p} - p_0}{\\sqrt{\\frac{p_0 (1-p_0)}{n}}}$$, $$p_0$$ represents the ______.",
+              "questionText": "In a significance test for one population proportion, the test statistic is calculated as $$z = \\frac{\\hat{p} - p_0}{\\sqrt{\\frac{p_0(1-p_0)}{n}}}$$, where $$p_0$$ is the ______ proportion.",
               "options": [
-                "null hypothesized proportion",
-                "sample proportion",
-                "true population proportion",
-                "alternative proportion"
+                "sample",
+                "null hypothesis",
+                "alternative hypothesis",
+                "pooled"
               ],
-              "correctAnswer": "null hypothesized proportion",
+              "correctAnswer": "null hypothesis",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The probability of making a Type II error is denoted by ______.",
+              "questionText": "When comparing two proportions, the sampling distribution of $$\\hat{p}_1 - \\hat{p}_2$$ is approximately normal if the sample sizes are large enough and the samples are ______.",
               "options": [
-                "$$\\beta$$",
-                "$$\\alpha$$",
-                "power",
-                "p-value"
+                "dependent",
+                "matched pairs",
+                "independent",
+                "very small"
               ],
-              "correctAnswer": "$$\\beta$$",
+              "correctAnswer": "independent",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -911,75 +917,76 @@
       "unitNumber": 7,
       "unitName": "Inference for Quantitative Data: Means",
       "description": "t-distributions, confidence intervals, and hypothesis tests for one sample mean and two means.",
+      "note": "# Unit 7: Inference for Quantitative Data: Means\n\n## Overview\nThis unit focuses on making statistical inferences about population means using **t-distributions**, **confidence intervals**, and **hypothesis tests**. Understanding how to analyze one or two sample means is essential for interpreting data when population standard deviations are unknown, a common scenario on the AP Statistics exam.\n\n## Key Concepts at a Glance\n\n| **Concept**               | **What It Is**                                                                 | **Why It Matters (AP angle)**                                         |\n|--------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------|\n| **t-Distribution**        | A probability distribution used instead of the normal when population SD is unknown and sample size is small. | Enables valid inference about means when $$\\sigma$$ is unknown.      |\n| **One-Sample t-Interval**| Confidence interval estimating a population mean $$\\mu$$ using sample mean $$\\bar{x}$$ and sample SD $$s$$. | Builds confidence intervals when $$\\sigma$$ is unknown, a common AP task. |\n| **Two-Sample t-Interval**| Confidence interval comparing the difference between two population means $$\\mu_1 - \\mu_2$$. | Tests for differences between groups, a frequent exam scenario.      |\n| **One-Sample t-Test**     | Hypothesis test for a population mean $$\\mu$$ using sample data and $$t$$ statistic. | Tests claims about a mean when $$\\sigma$$ is unknown.                |\n| **Two-Sample t-Test**     | Hypothesis test comparing two population means $$\\mu_1$$ and $$\\mu_2$$.         | Assesses whether two groups differ significantly, common on AP exams.|\n| **Conditions for t Procedures** | Assumptions: random sampling, independence, normality or large sample size. | Ensures validity of inference procedures, critical for correct answers. |\n| **Degrees of Freedom (df)**| Parameter that adjusts the shape of the t-distribution based on sample size.   | Affects critical values and p-values; must be calculated or approximated. |\n| **P-Value Interpretation**| Probability of observing data as extreme as the sample, assuming $$H_0$$ is true. | Central to decision-making in hypothesis testing.                     |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Start: Collect Sample Data\"] --> B[\"Check Conditions: Randomness, Independence, Normality\"]\n    B --> C{\"Conditions Met?\"}\n    C -- Yes --> D[\"Choose Inference Type\"]\n    C -- No --> E[\"Consider Data Transformations or Nonparametric Methods\"]\n    D --> F{\"One Sample or Two Samples?\"}\n    F -- One Sample --> G[\"Calculate Sample Mean $$\\\\bar{x}$$ and Sample SD $$s$$\"]\n    F -- Two Samples --> H[\"Calculate Sample Means $$\\\\bar{x}_1, \\\\bar{x}_2$$ and SDs $$s_1, s_2$$\"]\n    G --> I[\"Find Degrees of Freedom $$df = n-1$$\"]\n    H --> J[\"Calculate Degrees of Freedom (Conservative: $$df = \\\\min(n_1 -1, n_2 -1)$$)\"]\n    I --> K[\"Construct Confidence Interval or Compute $$t$$ Statistic\"]\n    J --> K\n    K --> L{\"Perform Hypothesis Test or Construct CI\"}\n    L --> M[\"Interpret Results in Context\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Rule**                              | **Description**                                                                                 |\n|------------------------------------------------|------------------------------------------------------------------------------------------------|\n| $$ t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} $$   | One-sample t-test statistic for testing $$H_0: \\mu = \\mu_0$$                                   |\n| $$ df = n - 1 $$                                | Degrees of freedom for one-sample t-test or interval                                          |\n| $$ t^* = \\text{critical t-value from } t_{df} \\text{ table} $$ | Critical value for confidence intervals or hypothesis tests                                   |\n| One-sample confidence interval:                 | $$ \\bar{x} \\pm t^* \\frac{s}{\\sqrt{n}} $$                                                      |\n| Two-sample t-test statistic:                     | $$ t = \\frac{(\\bar{x}_1 - \\bar{x}_2) - (\\mu_1 - \\mu_2)}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}} $$ |\n| Conservative degrees of freedom (two-sample):  | $$ df = \\min(n_1 - 1, n_2 - 1) $$                                                             |\n| Two-sample confidence interval:                  | $$ (\\bar{x}_1 - \\bar{x}_2) \\pm t^* \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}} $$             |\n| Conditions for t procedures:                      | - Random sample or randomized experiment<br>- Independence<br>- Normal population or large $$n$$ (Central Limit Theorem) |\n\n## Connections & Comparisons\n\n| **Concept**               | **One-Sample t Procedures**                          | **Two-Sample t Procedures**                          | **Z Procedures (Known $$\\sigma$$)**                  |\n|--------------------------|-----------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------|\n| **Purpose**               | Inference about one population mean $$\\mu$$         | Inference about difference between two means $$\\mu_1 - \\mu_2$$ | Inference about means when population SD $$\\sigma$$ is known |\n| **Test Statistic**        | $$ t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} $$        | $$ t = \\frac{(\\bar{x}_1 - \\bar{x}_2) - (\\mu_1 - \\mu_2)}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}} $$ | $$ z = \\frac{\\bar{x} - \\mu_0}{\\sigma/\\sqrt{n}} $$   |\n| **Degrees of Freedom**    | $$ n - 1 $$                                          | Approximate or conservative: $$ \\min(n_1 -1, n_2 -1) $$ | Not applicable (normal distribution used)            |\n| **When to Use**           | $$\\sigma$$ unknown, small or moderate $$n$$          | $$\\sigma$$ unknown, comparing two groups             | $$\\sigma$$ known, rare in practice                    |\n| **Confidence Interval**   | $$ \\bar{x} \\pm t^* \\frac{s}{\\sqrt{n}} $$            | $$ (\\bar{x}_1 - \\bar{x}_2) \\pm t^* \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}} $$ | $$ \\bar{x} \\pm z^* \\frac{\\sigma}{\\sqrt{n}} $$        |\n\n## Common AP Exam Traps\n\n- Confusing when to use **t-distribution** vs. **normal distribution**; always use t when $$\\sigma$$ is unknown.\n- Forgetting to check **conditions** (randomness, independence, normality) before performing inference.\n- Using the wrong **degrees of freedom** or ignoring how it affects critical values.\n- Misinterpreting the **p-value** as the probability that $$H_0$$ is true rather than the probability of data given $$H_0$$.\n- Mixing up **one-sample** and **two-sample** procedures, especially in hypothesis tests and confidence intervals.\n\n## Quick Review Checklist\n\n- [ ] Explain when and why to use the **t-distribution** instead of the normal distribution.\n- [ ] Calculate and interpret a **one-sample t-confidence interval** for a population mean.\n- [ ] Perform and interpret a **one-sample t-test** for a population mean.\n- [ ] Calculate and interpret a **two-sample t-confidence interval** for the difference between means.\n- [ ] Perform and interpret a **two-sample t-test** comparing two population means.\n- [ ] Verify and explain the **conditions** required for valid t-procedures.\n- [ ] Compute and apply the correct **degrees of freedom** for t-tests and intervals.\n- [ ] Interpret **p-values** and make decisions about hypotheses in context.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Student's t-distribution",
-              "definition": "A probability distribution used when estimating population parameters when the sample size is small and population standard deviation is unknown, characterized by heavier tails than the normal distribution."
+              "term": "t-distribution",
+              "definition": "A probability distribution that is symmetric and bell-shaped but has heavier tails than the normal distribution, used for inference about a population mean when the sample size is small and the population standard deviation is unknown."
             },
             {
               "term": "Degrees of freedom in t-distribution",
-              "definition": "The parameter that influences the shape of the t-distribution, calculated as the sample size minus one for a single sample mean."
+              "definition": "The parameter that determines the exact shape of the t-distribution, typically calculated as the sample size minus one for one-sample inference."
             },
             {
-              "term": "One-sample t-confidence interval",
-              "definition": "An interval estimate of a population mean constructed using a sample mean, sample standard deviation, and the appropriate t critical value."
+              "term": "One-sample t-confidence interval for a mean",
+              "definition": "An interval estimate of a population mean calculated as $$\\bar{x} \\pm t^* \\frac{s}{\\sqrt{n}}$$ where $$\\bar{x}$$ is the sample mean, $$s$$ is the sample standard deviation, $$n$$ is the sample size, and $$t^*$$ is the critical value from the t-distribution."
             },
             {
-              "term": "Assumptions for one-sample t procedures",
-              "definition": "Conditions including independence of observations, random sampling, and approximate normality of the population distribution or large sample size for validity of inference."
+              "term": "Conditions for inference about a mean with t-procedures",
+              "definition": "Requirements that include a random sample, independence of observations, and approximate normality of the population distribution or a sufficiently large sample size to justify the use of t-distributions."
             },
             {
-              "term": "Formula for one-sample t-statistic",
-              "definition": "A standardized value calculated as $$ t = \\frac{\\bar{x} - \\mu_0}{s / \\sqrt{n}} $$ used to test hypotheses about a population mean."
+              "term": "t-test for one population mean",
+              "definition": "A hypothesis test that uses the t-statistic $$t=\\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$$ to assess whether the population mean differs from a specified value $$\\mu_0$$, where $$\\bar{x}$$ and $$s$$ are from the sample."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following best describes the shape of the Student’s t-distribution as the degrees of freedom increase?",
+              "questionText": "Which of the following is true about the t-distribution compared to the normal distribution?",
               "options": [
-                "It becomes more skewed to the right",
-                "It approaches the standard normal distribution",
-                "It becomes more peaked and narrower",
-                "It becomes uniform"
+                "It is symmetric with heavier tails, and its shape depends on degrees of freedom.",
+                "It is always narrower than the normal distribution.",
+                "It is left-skewed and used when sample size is large.",
+                "It requires the population standard deviation to be known."
               ],
-              "correctAnswer": "It approaches the standard normal distribution",
+              "correctAnswer": "It is symmetric with heavier tails, and its shape depends on degrees of freedom.",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which condition is NOT necessary for performing a one-sample t-test about a mean?",
+              "questionText": "When constructing a one-sample t-confidence interval for the mean, what does the $$t^*$$ value represent?",
               "options": [
-                "Observations must be independent",
-                "Population distribution must be approximately normal if the sample size is small",
-                "Population standard deviation must be known",
-                "Data must be from a random sample or randomized experiment"
+                "The critical value from the normal distribution.",
+                "The sample mean.",
+                "The sample standard deviation.",
+                "The critical value from the t-distribution with appropriate degrees of freedom."
               ],
-              "correctAnswer": "Population standard deviation must be known",
+              "correctAnswer": "The critical value from the t-distribution with appropriate degrees of freedom.",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The critical value $$ t^* $$ used in a one-sample t-interval depends on the sample size through the ______.",
+              "questionText": "The degrees of freedom for a one-sample t-test with sample size $$n$$ is ______.",
               "options": [
-                "mean",
-                "standard deviation",
-                "degrees of freedom",
-                "hypothesized mean"
+                "$$n - 1$$",
+                "$$n + 1$$",
+                "$$n$$",
+                "$$n - 2$$"
               ],
-              "correctAnswer": "degrees of freedom",
+              "correctAnswer": "$$n - 1$$",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "For a one-sample t-confidence interval, the margin of error formula is $$ t^* \\times \\frac{______}{\\sqrt{n}} $$.",
+              "questionText": "A key condition for using t-procedures is that the sample is drawn ______ from the population.",
               "options": [
-                "population mean",
-                "sample standard deviation",
-                "population standard deviation",
-                "sample size"
+                "randomly",
+                "with replacement",
+                "consecutively",
+                "from a normal distribution"
               ],
-              "correctAnswer": "sample standard deviation",
+              "correctAnswer": "randomly",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -987,71 +994,71 @@
         {
           "flashcards": [
             {
-              "term": "Two-sample t-test for means",
-              "definition": "A hypothesis test used to compare the means of two independent populations when variances are unknown and samples are small or moderate size."
+              "term": "Two-sample t-test for independent means",
+              "definition": "A hypothesis test comparing the means of two independent groups using a t-statistic calculated based on separate sample means, standard deviations, and sizes, assessing if the population means differ."
+            },
+            {
+              "term": "Two-sample t-confidence interval for difference in means",
+              "definition": "An interval estimate for the difference $$\\mu_1 - \\mu_2$$ between two population means, constructed as $$(\\bar{x}_1 - \\bar{x}_2) \\pm t^* \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}$$ where sample statistics are used."
             },
             {
               "term": "Pooled vs. unpooled two-sample t-test",
-              "definition": "Approaches differ by whether population variances are assumed equal (pooled) or not (unpooled); unpooled is more general and common when variances are unknown."
+              "definition": "The choice between assuming equal population variances (pooled) or not (unpooled) when performing a two-sample t-test; the unpooled test does not combine variances and is standard when variances are unknown and possibly unequal."
             },
             {
-              "term": "Degrees of freedom for two-sample t-test (unpooled)",
-              "definition": "A calculated approximation often using the Welch-Satterthwaite equation to account for different sample variances and sizes."
+              "term": "Conditions for two-sample t-procedures",
+              "definition": "Requirements including independence between groups, random samples, and the approximate normality of populations or large sample sizes to justify the use of the t-distribution for inference about differences in means."
             },
             {
-              "term": "Two-sample t-confidence interval",
-              "definition": "An interval estimating the difference between two population means, constructed using sample means, sample standard deviations, and the appropriate t critical value."
-            },
-            {
-              "term": "Assumptions for two-sample t procedures",
-              "definition": "Include independent random samples from each population, independence between samples, and normality of each population or sufficiently large samples for validity."
+              "term": "Interpretation of a two-sample t-confidence interval",
+              "definition": "A statement with a specified confidence level that the interval constructed from sample data contains the true difference between the population means."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which of the following is an assumption specific to two-sample t-tests comparing means that is not required for the one-sample t-test?",
+              "questionText": "When performing a two-sample t-test assuming unequal variances, the test is called:",
               "options": [
-                "Independence of observations within each sample",
-                "Normality of the populations",
-                "Random sampling or assignment",
-                "Independence between the two samples"
+                "pooled t-test",
+                "unpooled t-test",
+                "z-test for means",
+                "paired t-test"
               ],
-              "correctAnswer": "Independence between the two samples",
+              "correctAnswer": "unpooled t-test",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "When the variances of two populations are unknown and unequal, which formula is typically used to estimate the degrees of freedom for the two-sample t-test?",
+              "questionText": "Which condition is NOT required for valid two-sample t-inference about means?",
               "options": [
-                "Student's t-distribution with $$ n_1 + n_2 - 2 $$ degrees of freedom",
-                "Normal distribution",
-                "Welch-Satterthwaite approximation",
-                "F-distribution"
+                "Random samples or randomized experiments",
+                "Independent samples",
+                "Population standard deviations known",
+                "Approximately normal populations or large samples"
               ],
-              "correctAnswer": "Welch-Satterthwaite approximation",
+              "correctAnswer": "Population standard deviations known",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The standard error for the difference of two independent sample means used in the two-sample t-test is calculated as $$ \\sqrt{\\frac{s_1^2}{n_1} + \\frac{______}{n_2}} $$.",
+              "questionText": "The formula for the standard error of the difference between two means is $$\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}$$ where $$s_1$$ and $$s_2$$ are the ______.",
               "options": [
-                "population variance",
-                "sample variance of the second sample",
-                "population mean",
-                "sample mean of the first sample"
+                "sample standard deviations",
+                "population means",
+                "sample sizes",
+                "degrees of freedom"
               ],
-              "correctAnswer": "sample variance of the second sample",
+              "correctAnswer": "sample standard deviations",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "In a two-sample t-confidence interval, the degrees of freedom for the t-distribution are often approximated by the ______ formula.",
+              "questionText": "In a two-sample confidence interval, a result that includes zero suggests ______.",
               "options": [
-                "pooled variance",
-                "Welch-Satterthwaite",
-                "central limit theorem",
-                "binomial"
+                "no significant difference between population means",
+                "the populations have equal variances",
+                "the sample sizes are too small",
+                "the confidence level is too high"
               ],
-              "correctAnswer": "Welch-Satterthwaite",
+              "correctAnswer": "no significant difference between population means",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1062,33 +1069,34 @@
       "unitNumber": 8,
       "unitName": "Inference for Categorical Data: Chi-Square",
       "description": "Chi-square goodness of fit, homogeneity, and independence tests; expected counts.",
+      "note": "# Unit 8: Inference for Categorical Data: Chi-Square\n\n## Overview\nThis unit focuses on **chi-square tests** used to analyze categorical data, including the **goodness of fit**, **homogeneity**, and **independence** tests. Understanding how to calculate expected counts and interpret chi-square statistics is essential for making inferences about population distributions and relationships between categorical variables on the AP exam.\n\n## Key Concepts at a Glance\n\n| **Concept**                  | **What It Is**                                                                 | **Why It Matters (AP angle)**                                                    |\n|-----------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Chi-Square Statistic**    | A measure of how observed counts differ from expected counts under a model.    | Central test statistic for all chi-square inference procedures.                 |\n| **Expected Counts**          | The counts expected in each category if the null hypothesis is true.           | Basis for calculating the chi-square statistic; must be ≥ 5 for validity.       |\n| **Goodness of Fit Test**     | Tests if a single categorical variable matches a specified distribution.        | Used to check if observed data fits a claimed or theoretical distribution.      |\n| **Test of Homogeneity**      | Compares distributions of a categorical variable across multiple populations.   | Determines if different groups have the same distribution on a categorical trait.|\n| **Test of Independence**     | Tests if two categorical variables are independent in a single population.      | Assesses association or relationship between two categorical variables.         |\n| **Degrees of Freedom (df)**  | Number of independent values that can vary in the calculation of a statistic.   | Determines the shape of the chi-square distribution and critical values.        |\n| **Conditions for Chi-Square**| Requirements like independence and minimum expected counts for test validity.  | Ensures the chi-square approximation is appropriate for inference.              |\n| **P-value Interpretation**   | Probability of observing a chi-square statistic as extreme as the one calculated under \\(H_0\\). | Guides decision to reject or fail to reject the null hypothesis.                |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Start with categorical data\"] --> B[\"State hypotheses\"]\n    B --> C[\"Calculate expected counts\"]\n    C --> D[\"Check conditions: independence, expected counts ≥ 5\"]\n    D --> E[\"Compute chi-square statistic: \\(\\chi^2 = \\sum \\frac{(O - E)^2}{E}\\)\"]\n    E --> F[\"Find degrees of freedom\"]\n    F --> G[\"Determine p-value from \\(\\chi^2\\) distribution\"]\n    G --> H[\"Make conclusion: reject or fail to reject \\(H_0\\)\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Name**                   | **Formula / Definition**                                                                                   |\n|----------------------------|------------------------------------------------------------------------------------------------------------|\n| **Chi-Square Statistic**   | $$ \\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i} $$ where \\(O_i\\) = observed count, \\(E_i\\) = expected count       |\n| **Expected Counts (Goodness of Fit)** | $$ E_i = n \\times p_i $$ where \\(n\\) = total sample size, \\(p_i\\) = hypothesized proportion for category \\(i\\) |\n| **Expected Counts (Two-Way Tables)** | $$ E_{ij} = \\frac{(\\text{row total}_i)(\\text{column total}_j)}{\\text{grand total}} $$                    |\n| **Degrees of Freedom (Goodness of Fit)** | $$ df = k - 1 $$ where \\(k\\) = number of categories                                                     |\n| **Degrees of Freedom (Homogeneity/Independence)** | $$ df = (r - 1)(c - 1) $$ where \\(r\\) = rows, \\(c\\) = columns in contingency table                       |\n| **Conditions for Chi-Square Tests** | - Observations independent<br>- Expected counts \\(E_i \\geq 5\\) for all categories                          |\n| **Hypotheses**             | - Goodness of Fit: \\(H_0\\): data fits specified distribution<br> - Homogeneity: \\(H_0\\): distributions equal across groups<br> - Independence: \\(H_0\\): variables independent |\n\n## Connections & Comparisons\n\n| **Test Type**       | **Purpose**                                  | **Data Structure**                | **Hypotheses**                          | **Degrees of Freedom**         |\n|---------------------|----------------------------------------------|---------------------------------|---------------------------------------|-------------------------------|\n| **Goodness of Fit**  | Test if one categorical variable fits a distribution | One categorical variable, one sample | \\(H_0\\): observed distribution matches expected | \\(k - 1\\)                     |\n| **Test of Homogeneity** | Compare distributions across multiple populations | Two categorical variables, multiple samples | \\(H_0\\): distributions are the same across groups | \\((r - 1)(c - 1)\\)            |\n| **Test of Independence** | Test association between two categorical variables | Two categorical variables, one sample | \\(H_0\\): variables are independent          | \\((r - 1)(c - 1)\\)            |\n\n## Common AP Exam Traps\n\n- Confusing **goodness of fit** with **tests of independence/homogeneity** — remember goodness of fit uses one sample and one variable.\n- Forgetting to check that **expected counts are all at least 5**; small expected counts invalidate the test.\n- Misinterpreting the **degrees of freedom**, especially for two-way tables.\n- Treating the chi-square test as a test about means or proportions rather than counts.\n- Using chi-square tests on data that are **not independent** (e.g., matched pairs or repeated measures).\n\n## Quick Review Checklist\n\n- [ ] State null and alternative hypotheses correctly for each chi-square test type.\n- [ ] Calculate expected counts for both one-way and two-way tables.\n- [ ] Compute the chi-square statistic using observed and expected counts.\n- [ ] Determine degrees of freedom for goodness of fit and two-way tests.\n- [ ] Verify conditions for chi-square test validity (independence, expected counts).\n- [ ] Use chi-square distribution to find p-values and make conclusions.\n- [ ] Distinguish between goodness of fit, homogeneity, and independence tests.\n- [ ] Interpret results in context, explaining what rejecting or failing to reject \\(H_0\\) means.",
       "lessons": [
         {
           "flashcards": [
             {
               "term": "Chi-square goodness-of-fit test",
-              "definition": "A statistical procedure used to determine whether observed categorical data frequencies differ significantly from expected frequencies under a specified theoretical distribution."
+              "definition": "A statistical test used to determine if a sample data set matches a population with a specific distribution across categories."
             },
             {
-              "term": "Expected counts",
-              "definition": "The theoretical frequencies calculated under the null hypothesis, representing the number of occurrences expected in each category if the model fits the data well."
+              "term": "Observed counts",
+              "definition": "The actual frequencies recorded in each category of a categorical variable from the sample data."
             },
             {
-              "term": "Null hypothesis in goodness-of-fit",
-              "definition": "The assumption that the observed categorical data follow a specified distribution or pattern with no significant deviation."
+              "term": "Expected counts in chi-square tests",
+              "definition": "The theoretical frequencies for each category calculated under the null hypothesis, assuming no difference between observed and expected distributions."
             },
             {
-              "term": "Degrees of freedom for goodness-of-fit test",
-              "definition": "Calculated as the number of categories minus one, reflecting the number of independent values that can vary in the calculation of the test statistic."
+              "term": "Null hypothesis in chi-square goodness-of-fit",
+              "definition": "The assumption that the categorical variable has the specified distribution in the population."
             },
             {
-              "term": "Chi-square test statistic formula",
-              "definition": "A summation over all categories of the squared difference between observed and expected counts divided by the expected counts: $$\\chi^2 = \\sum \\frac{(O - E)^2}{E}$$."
+              "term": "Degrees of freedom for the goodness-of-fit test",
+              "definition": "The parameter calculated as one less than the number of categories, used to determine the chi-square distribution for the test."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "In a chi-square goodness-of-fit test with 5 categories, what are the degrees of freedom?",
+              "questionText": "In a chi-square goodness-of-fit test with 5 categories, what is the degrees of freedom used to find the p-value?",
               "options": [
                 "4",
                 "5",
@@ -1099,36 +1107,36 @@
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which of the following best describes the expected counts in a chi-square test?",
+              "questionText": "Which of the following best describes the expected counts in a chi-square goodness-of-fit test?",
               "options": [
-                "Observed frequencies from the sample",
-                "Frequencies predicted by the null hypothesis",
-                "Sample proportions",
-                "Residuals between observed and expected values"
+                "Frequencies predicted by the null hypothesis based on the population distribution",
+                "Observed sample frequencies from the data",
+                "Randomly generated counts for each category",
+                "Counts that make the chi-square statistic equal to zero"
               ],
-              "correctAnswer": "Frequencies predicted by the null hypothesis",
+              "correctAnswer": "Frequencies predicted by the null hypothesis based on the population distribution",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "The chi-square test statistic measures the total squared difference between observed and ______ counts, scaled by the expected counts.",
+              "questionText": "The test statistic for a chi-square goodness-of-fit test is calculated as $$\\sum \\frac{(O_i - E_i)^2}{E_i}$$, where $$O_i$$ are the ______ and $$E_i$$ are the expected counts.",
               "options": [
-                "predicted",
-                "expected",
-                "sample",
-                "null"
+                "observed counts",
+                "expected counts",
+                "sample means",
+                "category proportions"
               ],
-              "correctAnswer": "expected",
+              "correctAnswer": "observed counts",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The null hypothesis in a chi-square goodness-of-fit test states that the observed data follow a ______ distribution.",
+              "questionText": "The null hypothesis for a chi-square goodness-of-fit test states that the population distribution is equal to the ______ distribution.",
               "options": [
                 "specified",
-                "random",
-                "uniform",
-                "normal"
+                "sample",
+                "alternative",
+                "uniform"
               ],
               "correctAnswer": "specified",
               "lessonType": "fillInTheBlank"
@@ -1138,71 +1146,71 @@
         {
           "flashcards": [
             {
-              "term": "Chi-square test for homogeneity",
-              "definition": "A statistical test used to determine whether the distribution of a categorical variable is the same across two or more independent populations."
+              "term": "Chi-square test of homogeneity",
+              "definition": "A test used to determine whether different populations have the same distribution of a categorical variable."
             },
             {
-              "term": "Chi-square test for independence",
-              "definition": "A test that evaluates whether there is a significant association between two categorical variables in a single population."
+              "term": "Chi-square test of independence",
+              "definition": "A test used to assess whether two categorical variables are associated or independent in a single population."
             },
             {
-              "term": "Conditions for chi-square test validity",
-              "definition": "Requirements including independence of observations, sample size sufficiently large so that all expected counts are at least 5, and categorical data type to ensure reliable test results."
+              "term": "Contingency table",
+              "definition": "A two-dimensional table displaying the frequency counts of observations for combinations of two categorical variables."
             },
             {
-              "term": "Calculating expected counts in a two-way table",
-              "definition": "Found by multiplying the row total and column total for each cell and dividing by the overall sample size: $$E = \\frac{(\\text{row total})(\\text{column total})}{\\text{grand total}}$$."
+              "term": "Expected count in a cell of a contingency table",
+              "definition": "Calculated under the assumption of independence as $$\\frac{(row\\,total) \\times (column\\,total)}{grand\\,total}$$ for that cell."
             },
             {
-              "term": "Degrees of freedom for chi-square test of independence",
-              "definition": "Calculated as $$ (\\text{number of rows} - 1) \\times (\\text{number of columns} - 1) $$ reflecting the number of independent comparisons."
+              "term": "Conditions for chi-square tests",
+              "definition": "Includes having all expected counts at least 5 and data collected from a random sample or randomized experiment."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "What is the formula for expected counts in a cell for a chi-square test of independence?",
+              "questionText": "Which formula correctly computes the expected count for a cell in a two-way table under the assumption of independence?",
               "options": [
-                "(row total × column total) ÷ grand total",
-                "(observed count × grand total) ÷ row total",
-                "(observed count + expected count) ÷ 2",
-                "(row total + column total) ÷ grand total"
+                "$(\\text{row total} \\times \\text{column total}) / \\text{grand total}",
+                "$(\\text{row total} + \\text{column total}) / \\text{grand total}",
+                "$(\\text{row total} - \\text{column total}) / \\text{grand total}",
+                "$(\\text{row total} \\div \\text{column total}) \\times \\text{grand total}"
               ],
-              "correctAnswer": "(row total × column total) ÷ grand total",
+              "correctAnswer": "$(\\text{row total} \\times \\text{column total}) / \\text{grand total}",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which condition must be met for valid chi-square tests?",
+              "questionText": "What is the main question addressed by the chi-square test of homogeneity?",
               "options": [
-                "All expected counts are at least 5",
-                "All observed counts are equal",
-                "Samples must have equal sizes",
-                "Data must be normally distributed"
+                "Do different populations have the same distribution for a categorical variable?",
+                "Are two variables independent in one population?",
+                "Does a sample fit a specified distribution?",
+                "Is the mean of one group equal to another group?"
               ],
-              "correctAnswer": "All expected counts are at least 5",
+              "correctAnswer": "Do different populations have the same distribution for a categorical variable?",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "In a chi-square test of homogeneity, we compare ______ distributions of a categorical variable across different populations.",
+              "questionText": "In a chi-square test of independence, the degrees of freedom is calculated as $$(\\text{number of rows} - 1) \\times (\\text{number of columns} - 1)$$, where rows and columns refer to the dimensions of the ______.",
               "options": [
-                "the same",
-                "different",
-                "normal",
-                "sample"
+                "contingency table",
+                "frequency histogram",
+                "scatterplot",
+                "boxplot"
               ],
-              "correctAnswer": "the same",
+              "correctAnswer": "contingency table",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The degrees of freedom for a chi-square test of independence is calculated by multiplying the number of rows minus one by the number of ______ minus one.",
+              "questionText": "One condition for performing a chi-square test is that all expected counts must be at least ______ to ensure the approximation to the chi-square distribution is valid.",
               "options": [
-                "columns",
-                "categories",
-                "samples",
-                "variables"
+                "5",
+                "10",
+                "1",
+                "0"
               ],
-              "correctAnswer": "columns",
+              "correctAnswer": "5",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1213,75 +1221,76 @@
       "unitNumber": 9,
       "unitName": "Inference for Quantitative Data: Slopes",
       "description": "Inference for slope of regression line, confidence intervals, and t-test for slope.",
+      "note": "# Unit 9: Inference for Quantitative Data: Slopes\n\n## Overview\nThis unit focuses on making **statistical inferences about the slope** of a regression line, which quantifies the relationship between two quantitative variables. You will learn how to construct **confidence intervals** and perform **t-tests** for the slope, crucial skills for interpreting linear models and answering AP exam questions on regression inference.\n\n## Key Concepts at a Glance\n\n| **Concept**                  | **What It Is**                                                                 | **Why It Matters (AP angle)**                                              |\n|-----------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------|\n| **Regression Line Slope ($\\beta_1$)** | The rate of change in the response variable for a one-unit increase in the explanatory variable. | Central parameter tested in inference to understand linear relationships. |\n| **Null Hypothesis for Slope** | Usually $H_0: \\beta_1 = 0$, meaning no linear association between variables.   | Basis for testing if the explanatory variable significantly predicts the response. |\n| **Alternative Hypothesis**    | $H_a: \\beta_1 \\neq 0$, $\\beta_1 > 0$, or $\\beta_1 < 0$ depending on context.    | Determines directionality of the test, affecting p-value interpretation.  |\n| **Standard Error of Slope ($SE_{\\hat{\\beta}_1}$)** | Measures variability of the estimated slope from sample to sample.             | Used to calculate test statistics and confidence intervals.               |\n| **t-Test for Slope**          | Test statistic: $$ t = \\frac{\\hat{\\beta}_1 - \\beta_{1,0}}{SE_{\\hat{\\beta}_1}} $$ with $df = n-2$. | Determines if slope differs significantly from hypothesized value (usually 0). |\n| **Confidence Interval for Slope** | $$ \\hat{\\beta}_1 \\pm t^*_{df} \\times SE_{\\hat{\\beta}_1} $$                     | Provides a range of plausible values for the true slope at a given confidence level. |\n| **Conditions for Inference**  | Linearity, independence, normality of residuals, equal variance (homoscedasticity). | Ensures validity of inference procedures on slope.                         |\n| **Interpretation of Results** | Translating statistical output into meaningful conclusions about the relationship. | Essential for AP free-response and multiple-choice questions.              |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Collect bivariate quantitative data\"] --> B[\"Check conditions for linear regression inference\"]\n    B --> C[\"Calculate least squares regression line\"]\n    C --> D[\"Estimate slope ($\\hat{\\beta}_1$) and standard error ($SE_{\\hat{\\beta}_1}$)\"]\n    D --> E[\"Formulate hypotheses: $H_0: \\beta_1=0$, $H_a$ as appropriate\"]\n    E --> F[\"Calculate test statistic: $t = \\frac{\\hat{\\beta}_1 - 0}{SE_{\\hat{\\beta}_1}}$\"]\n    F --> G[\"Find p-value using $t$ distribution with $df = n-2$\"]\n    G --> H{\"Decision: Reject $H_0$?\"}\n    H -- Yes --> I[\"Conclude significant linear relationship\"]\n    H -- No --> J[\"Fail to conclude significant relationship\"]\n    D --> K[\"Construct confidence interval: $\\hat{\\beta}_1 \\pm t^* \\times SE_{\\hat{\\beta}_1}$\"]\n    K --> L[\"Interpret interval in context\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Name**                    | **Formula / Definition**                                                                                      |\n|-----------------------------|--------------------------------------------------------------------------------------------------------------|\n| **Slope Estimate**           | $$ \\hat{\\beta}_1 = \\frac{S_{xy}}{S_{xx}} = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum (x_i - \\bar{x})^2} $$ |\n| **Standard Error of Slope**  | $$ SE_{\\hat{\\beta}_1} = \\frac{s}{\\sqrt{\\sum (x_i - \\bar{x})^2}} $$ where $$ s = \\sqrt{\\frac{\\sum (y_i - \\hat{y}_i)^2}{n-2}} $$ |\n| **t-Test Statistic for Slope** | $$ t = \\frac{\\hat{\\beta}_1 - \\beta_{1,0}}{SE_{\\hat{\\beta}_1}} $$ with degrees of freedom $$ df = n-2 $$          |\n| **Confidence Interval for Slope** | $$ \\hat{\\beta}_1 \\pm t^*_{df} \\times SE_{\\hat{\\beta}_1} $$ where $$ t^*_{df} $$ is the critical value from the $$ t $$ distribution |\n| **Degrees of Freedom**       | $$ df = n - 2 $$ (accounts for estimating two parameters: slope and intercept)                                |\n| **Hypotheses for Slope**     | $$ H_0: \\beta_1 = 0 $$ (no linear association) <br> $$ H_a: \\beta_1 \\neq 0, \\beta_1 > 0, \\text{ or } \\beta_1 < 0 $$ |\n| **Conditions for Valid Inference** | - Linearity <br> - Independence of observations <br> - Normality of residuals <br> - Equal variance (homoscedasticity) |\n\n## Connections & Comparisons\n\n| **Concept**                 | **Slope Inference**                              | **Correlation Inference**                          | **Mean Inference (t-test)**                        |\n|-----------------------------|-------------------------------------------------|---------------------------------------------------|----------------------------------------------------|\n| **Parameter Tested**         | Slope ($\\beta_1$) of regression line            | Population correlation coefficient ($\\rho$)       | Population mean ($\\mu$)                             |\n| **Hypotheses**               | $H_0: \\beta_1=0$ vs $H_a$ depends on context    | $H_0: \\rho=0$ vs $H_a$ depends on context          | $H_0: \\mu = \\mu_0$ vs $H_a$                        |\n| **Test Statistic**           | $$ t = \\frac{\\hat{\\beta}_1 - 0}{SE_{\\hat{\\beta}_1}} $$ | $$ t = \\frac{r \\sqrt{n-2}}{\\sqrt{1-r^2}} $$         | $$ t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}} $$       |\n| **Degrees of Freedom**       | $n-2$                                            | $n-2$                                             | $n-1$                                              |\n| **Interpretation**           | Effect of one variable on another (slope)       | Strength and direction of linear association       | Difference from a hypothesized mean                 |\n| **Conditions**               | Linearity, normal residuals, equal variance     | Linearity, bivariate normality                      | Normality or large sample size                       |\n\n## Common AP Exam Traps\n\n- Confusing the **null hypothesis for slope** with that for correlation; slope tests if the rate of change is zero, not just association.\n- Forgetting to use **degrees of freedom = n - 2** for slope inference, leading to incorrect critical values or p-values.\n- Misinterpreting the **confidence interval for slope** as a prediction interval for individual values.\n- Ignoring the **conditions for inference**, especially the linearity and normality of residuals, which can invalidate results.\n- Using the wrong **alternative hypothesis direction**, especially on one-sided tests, which affects p-value calculation.\n\n## Quick Review Checklist\n\n- [ ] Explain what the **slope ($\\beta_1$)** represents in a regression context.\n- [ ] State the **null and alternative hypotheses** for testing slope.\n- [ ] Calculate the **standard error of the slope** from regression output.\n- [ ] Perform a **t-test for slope** and interpret the p-value.\n- [ ] Construct and interpret a **confidence interval for the slope**.\n- [ ] Verify and explain the **conditions required for inference** on slope.\n- [ ] Differentiate between inference for slope and correlation.\n- [ ] Avoid common pitfalls such as misinterpretation of hypotheses and degrees of freedom.",
       "lessons": [
         {
           "flashcards": [
             {
-              "term": "Slope of the least-squares regression line",
-              "definition": "The rate at which the predicted response variable changes for each one-unit increase in the explanatory variable, calculated to minimize the sum of squared residuals."
+              "term": "Slope of the Least Squares Regression Line",
+              "definition": "Represents the estimated change in the response variable for a one-unit increase in the explanatory variable."
             },
             {
-              "term": "Confidence interval for the slope",
-              "definition": "A range of plausible values for the true slope parameter of the population regression line, constructed using the estimated slope and its standard error with a t-distribution."
+              "term": "Standard Error of the Slope",
+              "definition": "Measures the typical distance that the estimated slope of the regression line falls from the true slope in repeated samples."
             },
             {
-              "term": "Standard error of the slope estimate",
-              "definition": "A measure of the average amount by which the estimated slope varies from the true slope due to sampling variability."
+              "term": "t-Statistic for Testing Slope",
+              "definition": "Calculated as the ratio of the difference between the estimated slope and a hypothesized value to the standard error of the slope, used to assess the slope's significance."
             },
             {
-              "term": "t-test for slope significance",
-              "definition": "A hypothesis test that assesses whether the population slope differs from zero, indicating a linear relationship between explanatory and response variables."
+              "term": "Null Hypothesis for Slope Test",
+              "definition": "States that there is no linear relationship between the explanatory and response variables, implying the slope equals zero."
             },
             {
-              "term": "Degrees of freedom in regression inference",
-              "definition": "The number of independent pieces of information available to estimate the variability of the slope, calculated as one less than the sample size."
+              "term": "Alternative Hypothesis for Slope Test",
+              "definition": "States that there is a linear relationship between variables; the slope differs from zero, either in a specified direction or any direction depending on the test."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "What does it mean if the 95% confidence interval for the slope of a regression line does not contain zero?",
+              "questionText": "What does the slope of a least squares regression line indicate in the context of quantitative data?",
               "options": [
-                "The relationship between variables is not linear",
-                "The slope is not statistically significantly different from zero",
-                "There is evidence of a significant linear relationship between variables",
-                "The standard error of the slope is zero"
+                "The predicted value of the response variable when the explanatory variable is zero.",
+                "The estimated change in the response variable for a one-unit increase in the explanatory variable.",
+                "The strength of the linear relationship between two variables.",
+                "The total variation explained by the regression model."
               ],
-              "correctAnswer": "There is evidence of a significant linear relationship between variables",
+              "correctAnswer": "The estimated change in the response variable for a one-unit increase in the explanatory variable.",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "Which quantity is used as the denominator in the test statistic for the t-test on the slope?",
+              "questionText": "Which of the following best describes the standard error of the slope in a linear regression?",
               "options": [
-                "Estimated slope",
-                "Standard error of the slope",
-                "Residual standard error",
-                "Sample variance of the explanatory variable"
+                "It is the standard deviation of the response variable.",
+                "It measures the variability of the estimated slope around the true slope across samples.",
+                "It estimates the mean value of the explanatory variable.",
+                "It measures the total variation in the response variable."
               ],
-              "correctAnswer": "Standard error of the slope",
+              "correctAnswer": "It measures the variability of the estimated slope around the true slope across samples.",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "When constructing a $$100(1-\\alpha)\\%$$ confidence interval for the slope $$\\beta$$, the critical value comes from a ______ distribution.",
+              "questionText": "The test statistic used for testing the slope $$\\beta_1$$ of the regression line is calculated as $$t = \\frac{b_1 - \\beta_1}{\\text{______}}$$.",
               "options": [
-                "normal",
-                "chi-square",
-                "t",
-                "F"
+                "standard deviation of $$b_1$$",
+                "standard error of the slope",
+                "mean square error",
+                "residual standard error"
               ],
-              "correctAnswer": "t",
+              "correctAnswer": "standard error of the slope",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "The test statistic for testing $$H_0: \\beta=0$$ is calculated as $$t=\\frac{\\hat{\\beta}-0}{SE_{\\hat{\\beta}}}$$, where $$SE_{\\hat{\\beta}}$$ stands for ______.",
+              "questionText": "In hypothesis testing for slope, the null hypothesis usually states that $$\\beta_1 = \\text{______}$$.",
               "options": [
-                "standard error of the slope",
-                "standard deviation of residuals",
-                "sample mean of y",
-                "sample size"
+                "1",
+                "0",
+                "-1",
+                "a positive value"
               ],
-              "correctAnswer": "standard error of the slope",
+              "correctAnswer": "0",
               "lessonType": "fillInTheBlank"
             }
           ]
@@ -1289,71 +1298,71 @@
         {
           "flashcards": [
             {
-              "term": "Interpreting t-test results for slope",
-              "definition": "Evaluating the p-value obtained from the t-test to decide whether there is sufficient evidence to conclude a linear association exists between the variables."
+              "term": "Confidence Interval for the Slope",
+              "definition": "An interval estimate calculated from sample data that provides a range of plausible values for the true slope of the regression line with a specified level of confidence."
             },
             {
-              "term": "Assumptions for inference on regression slope",
-              "definition": "Conditions including linearity, independence, normality of residuals, and equal variance that must hold for the validity of slope inference."
+              "term": "Degrees of Freedom for Slope Inference",
+              "definition": "Calculated as the number of observations minus 2, representing the number of independent pieces of information available for estimating variability in regression."
             },
             {
-              "term": "Residuals in regression analysis",
-              "definition": "Differences between observed values and predicted values from the regression line, used to check model assumptions and goodness of fit."
+              "term": "Conditions for Inference on Slope",
+              "definition": "Includes linearity, independence of observations, normality of residuals, and constant variance of residuals across values of the explanatory variable."
             },
             {
-              "term": "Effect of sample size on slope inference",
-              "definition": "Larger samples generally yield smaller standard errors and more precise confidence intervals for the slope, enhancing the power of the hypothesis test."
+              "term": "Interpretation of a Significant t-Test for Slope",
+              "definition": "Indicates sufficient evidence to conclude a linear relationship exists between explanatory and response variables in the population."
             },
             {
-              "term": "Interpretation of a non-significant slope test",
-              "definition": "Concluding that the data do not provide sufficient evidence to claim a linear relationship exists between the explanatory and response variables."
+              "term": "Relationship Between t-Test and Confidence Interval for Slope",
+              "definition": "If the confidence interval for the slope does not contain zero, the corresponding two-sided t-test will reject the null hypothesis at the matching significance level."
             }
           ],
           "multipleChoice": [
             {
-              "questionText": "Which condition is necessary to perform valid inference for the slope of a regression line?",
+              "questionText": "Which of the following is NOT typically a condition for conducting inference on the slope of a regression line?",
               "options": [
-                "The explanatory variable must be categorical",
-                "Residuals should be approximately normally distributed",
-                "Sample size must be less than 10",
-                "Regression line must pass through the origin"
+                "Linearity",
+                "Independence of observations",
+                "Equal sample sizes for explanatory variable groups",
+                "Constant variance of residuals"
               ],
-              "correctAnswer": "Residuals should be approximately normally distributed",
+              "correctAnswer": "Equal sample sizes for explanatory variable groups",
               "lessonType": "multipleChoice"
             },
             {
-              "questionText": "If the p-value of a t-test for slope is 0.12, what conclusion is appropriate at the 0.05 significance level?",
+              "questionText": "If a 95% confidence interval for the slope of the regression line is (0.5, 2.3), what conclusion can be drawn at the 5% significance level?",
               "options": [
-                "Reject the null hypothesis; slope is significantly different from zero",
-                "Fail to reject the null hypothesis; insufficient evidence to conclude slope differs from zero",
-                "Accept that the slope equals zero",
-                "The variables are strongly correlated"
+                "Fail to reject null hypothesis; the slope could be zero.",
+                "Reject null hypothesis; there is sufficient evidence the slope is greater than zero.",
+                "The slope is exactly 1.4.",
+                "There is insufficient data to draw any conclusion."
               ],
-              "correctAnswer": "Fail to reject the null hypothesis; insufficient evidence to conclude slope differs from zero",
+              "correctAnswer": "Reject null hypothesis; there is sufficient evidence the slope is greater than zero.",
               "lessonType": "multipleChoice"
             }
           ],
           "fillInTheBlank": [
             {
-              "questionText": "One of the key assumptions for inference about the slope is that the residuals are ______ with constant variance and roughly normal distribution.",
+              "questionText": "For inference on slope, the degrees of freedom used to calculate the t-distribution critical values is ______.",
               "options": [
-                "dependent",
-                "independent",
-                "correlated",
-                "heteroscedastic"
+                "$$n - 1$$",
+                "$$n - 2$$",
+                "$$n$$",
+                "$$n - 3$$"
               ],
-              "correctAnswer": "independent",
+              "correctAnswer": "$$n - 2$$",
               "lessonType": "fillInTheBlank"
             },
             {
-              "questionText": "Increasing the sample size will generally ______ the width of the confidence interval for the slope.",
+              "questionText": "When the residuals have roughly constant spread and are normally distributed across all values of the explanatory variable, the condition of ______ is satisfied.",
               "options": [
-                "increase",
-                "not change",
-                "decrease",
-                "make infinite"
+                "linearity",
+                "normality of residuals",
+                "equal variance",
+                "independence"
               ],
-              "correctAnswer": "decrease",
+              "correctAnswer": "equal variance",
               "lessonType": "fillInTheBlank"
             }
           ]

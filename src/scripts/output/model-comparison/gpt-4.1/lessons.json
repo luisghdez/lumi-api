@@ -1,0 +1,138 @@
+{
+  "lesson1": {
+    "flashcards": [
+      {
+        "term": "Avogadro's number",
+        "definition": "The number of entities in one mole of a substance; equal to $$6.022 \\times 10^{23}$$."
+      },
+      {
+        "term": "Mass spectrometry",
+        "definition": "An analytical technique that separates ions based on their mass-to-charge ratio, allowing determination of isotopic abundances and atomic masses."
+      },
+      {
+        "term": "Photoelectric effect",
+        "definition": "The phenomenon where electrons are ejected from a material after absorption of light with sufficient energy."
+      },
+      {
+        "term": "Empirical formula",
+        "definition": "A representation showing the simplest whole-number ratio of elements in a compound."
+      },
+      {
+        "term": "Mole",
+        "definition": "A unit for counting particles such as atoms or molecules, related to a specific quantity defined by Avogadro's number."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "Which technique provides data about isotopic abundances and the atomic mass of an element?",
+        "options": [
+          "Gravimetric analysis",
+          "Chromatography",
+          "Mass spectrometry",
+          "Flame test"
+        ],
+        "correctAnswer": "Mass spectrometry"
+      },
+      {
+        "questionText": "A sample containing $$2.00$$ moles of sulfur has how many atoms?",
+        "options": [
+          "$$1.20 \\times 10^{24}$$",
+          "$$3.01 \\times 10^{23}$$",
+          "$$6.02 \\times 10^{24}$$",
+          "$$9.03 \\times 10^{24}$$"
+        ],
+        "correctAnswer": "$$1.20 \\times 10^{24}$$"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "The simplest whole-number ratio of the elements in a compound is represented by the ______.",
+        "options": [
+          "empirical formula",
+          "Lewis structure",
+          "molecular formula",
+          "structural formula"
+        ],
+        "correctAnswer": "empirical formula"
+      },
+      {
+        "questionText": "The number of particles in one mole is called ______.",
+        "options": [
+          "Planck's constant",
+          "Avogadro's number",
+          "Faraday's constant",
+          "Molarity"
+        ],
+        "correctAnswer": "Avogadro's number"
+      }
+    ]
+  },
+  "lesson2": {
+    "flashcards": [
+      {
+        "term": "Photoelectron spectroscopy (PES)",
+        "definition": "A technique used to measure the energies required to remove electrons from atoms or molecules, providing insights into electronic structure."
+      },
+      {
+        "term": "Aufbau Principle",
+        "definition": "The guideline stating that electrons fill atomic orbitals in the order of increasing energy, from lowest to highest."
+      },
+      {
+        "term": "Ionization energy",
+        "definition": "The amount of energy necessary to remove the outermost electron from a gaseous atom or ion in its ground state."
+      },
+      {
+        "term": "Atomic radius",
+        "definition": "The distance from the nucleus to the outermost electron shell in a neutral atom, generally measured in picometers."
+      },
+      {
+        "term": "Electronegativity",
+        "definition": "A measure of how strongly an atom attracts electrons in a chemical bond."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "Which statement about periodic trends is correct?",
+        "options": [
+          "Atomic radius increases from left to right across a period.",
+          "Ionization energy decreases across a period.",
+          "Electronegativity increases from left to right across a period.",
+          "Atomic radius increases as you move up a group."
+        ],
+        "correctAnswer": "Electronegativity increases from left to right across a period."
+      },
+      {
+        "questionText": "According to the Aufbau Principle, which orbital is filled first?",
+        "options": [
+          "3d",
+          "2p",
+          "1s",
+          "2s"
+        ],
+        "correctAnswer": "1s"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "The energy required to remove an electron from a gaseous atom is called ______.",
+        "options": [
+          "binding energy",
+          "ionization energy",
+          "electronegativity",
+          "atomic radius"
+        ],
+        "correctAnswer": "ionization energy"
+      },
+      {
+        "questionText": "As you move across a period from left to right, the atomic radius ______.",
+        "options": [
+          "decreases",
+          "increases",
+          "remains constant",
+          "doubles"
+        ],
+        "correctAnswer": "decreases"
+      }
+    ]
+  }
+}

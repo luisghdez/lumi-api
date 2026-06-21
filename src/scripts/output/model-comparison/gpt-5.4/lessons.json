@@ -1,0 +1,138 @@
+{
+  "lesson1": {
+    "flashcards": [
+      {
+        "term": "Mole",
+        "definition": "The amount of substance containing $$6.022\\times10^{23}$$ elementary entities, used to count particles by relating them to measurable mass."
+      },
+      {
+        "term": "Molar mass",
+        "definition": "The mass of one mole of a substance, typically expressed in $$\\text{g/mol}$$, numerically equal to the sum of atomic masses in a formula."
+      },
+      {
+        "term": "Average atomic mass",
+        "definition": "The weighted mean of an element’s naturally occurring isotopes based on their relative abundances, reported in atomic mass units."
+      },
+      {
+        "term": "Mass spectrometry",
+        "definition": "An analytical technique that ionizes particles and separates them according to $$m/z$$ to determine isotopic masses and relative abundances."
+      },
+      {
+        "term": "Percent abundance",
+        "definition": "The fraction of atoms of a particular isotope in a natural sample, expressed as a percentage and used in weighted-average calculations."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "A sample of neon contains $$90.48\\%$$ of an isotope with mass $$19.992\\ \\text{amu}$$, $$0.27\\%$$ of an isotope with mass $$20.994\\ \\text{amu}$$, and $$9.25\\%$$ of an isotope with mass $$21.991\\ \\text{amu}$$. What is the average atomic mass of neon?",
+        "options": [
+          "$$20.18\\ \\text{amu}$$",
+          "$$20.99\\ \\text{amu}$$",
+          "$$21.25\\ \\text{amu}$$",
+          "$$19.99\\ \\text{amu}$$"
+        ],
+        "correctAnswer": "$$20.18\\ \\text{amu}$$"
+      },
+      {
+        "questionText": "A compound with molar mass $$180.16\\ \\text{g/mol}$$ has a sample mass of $$36.03\\ \\text{g}$$. How many molecules are present in the sample?",
+        "options": [
+          "$$1.20\\times10^{23}$$ molecules",
+          "$$6.02\\times10^{23}$$ molecules",
+          "$$3.01\\times10^{23}$$ molecules",
+          "$$2.00\\times10^{22}$$ molecules"
+        ],
+        "correctAnswer": "$$1.20\\times10^{23}$$ molecules"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "In a mass spectrum, ions are separated on the basis of their ______ ratio.",
+        "options": [
+          "mass-to-charge",
+          "neutron-to-proton",
+          "charge-to-radius",
+          "energy-to-frequency"
+        ],
+        "correctAnswer": "mass-to-charge"
+      },
+      {
+        "questionText": "If $$0.250\\ \\text{mol}$$ of atoms are present, the number of atoms is ______.",
+        "options": [
+          "$$1.51\\times10^{23}$$",
+          "$$6.02\\times10^{23}$$",
+          "$$2.41\\times10^{24}$$",
+          "$$3.01\\times10^{22}$$"
+        ],
+        "correctAnswer": "$$1.51\\times10^{23}$$"
+      }
+    ]
+  },
+  "lesson2": {
+    "flashcards": [
+      {
+        "term": "Electron configuration",
+        "definition": "A notation showing how electrons are distributed among atomic orbitals in an atom or ion, following energy ordering and quantum rules."
+      },
+      {
+        "term": "Photoelectron spectroscopy",
+        "definition": "A technique in which electromagnetic radiation ejects electrons from atoms, and the measured kinetic energies reveal relative binding energies."
+      },
+      {
+        "term": "Effective nuclear charge",
+        "definition": "The net positive attraction experienced by an electron after accounting for shielding by other electrons."
+      },
+      {
+        "term": "Atomic radius",
+        "definition": "A measure of atom size based on distances between nuclei, which generally decreases across a period and increases down a group."
+      },
+      {
+        "term": "First ionization energy",
+        "definition": "The energy required to remove the outermost electron from a gaseous atom in its ground state."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "Which species has the electron configuration $$1s^22s^22p^63s^23p^6$$?",
+        "options": [
+          "Ar",
+          "K^+",
+          "Cl^-",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      },
+      {
+        "questionText": "The first ionization energy of aluminum is lower than that of magnesium primarily because the electron removed from aluminum is in a(n)",
+        "options": [
+          "$$3p$$ orbital, which is higher in energy than a $$3s$$ orbital",
+          "$$3s$$ orbital, which is more shielded than a $$2p$$ orbital",
+          "$$3p$$ orbital, which penetrates closer to the nucleus than a $$3s$$ orbital",
+          "$$2p$$ orbital, which is fully filled and therefore easier to remove"
+        ],
+        "correctAnswer": "$$3p$$ orbital, which is higher in energy than a $$3s$$ orbital"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "In photoelectron spectroscopy, electrons with greater binding energy produce photoelectrons with ______ kinetic energy when the same frequency of light is used.",
+        "options": [
+          "lower",
+          "higher",
+          "identical",
+          "zero"
+        ],
+        "correctAnswer": "lower"
+      },
+      {
+        "questionText": "Across a period from left to right, atomic radius generally ______ because the increasing nuclear charge pulls electrons closer while shielding changes little.",
+        "options": [
+          "decreases",
+          "increases",
+          "remains constant",
+          "becomes undefined"
+        ],
+        "correctAnswer": "decreases"
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "lesson1": {
+    "flashcards": [
+      {
+        "term": "Mole",
+        "definition": "The SI amount-of-substance unit corresponding to $$6.022\\times10^{23}$$ specified entities (atoms, molecules, or ions)."
+      },
+      {
+        "term": "Molar mass",
+        "definition": "The mass of $$1$$ mole of a substance, expressed in $$\\text{g mol}^{-1}$$, numerically equal to the formula mass in $$\\text{u}$$."
+      },
+      {
+        "term": "Mass spectrometry",
+        "definition": "An analytical technique that ionizes particles and separates them by $$m/z$$ to reveal isotopic composition and relative abundances."
+      },
+      {
+        "term": "Isotopes",
+        "definition": "Atoms of the same element that contain identical numbers of protons but different numbers of neutrons, leading to distinct masses."
+      },
+      {
+        "term": "Average atomic mass",
+        "definition": "The weighted mean of the masses of naturally occurring nuclides of an element, using fractional abundances as weights."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "Element X has two stable nuclides: $$62.93\\ \\text{u}$$ at $$69.1\\%$$ abundance and $$64.93\\ \\text{u}$$ at $$30.9\\%$$ abundance. What is the average atomic mass of X?",
+        "options": [
+          "$$63.55\\ \\text{u}$$",
+          "$$63.10\\ \\text{u}$$",
+          "$$63.00\\ \\text{u}$$",
+          "$$64.00\\ \\text{u}$$"
+        ],
+        "correctAnswer": "$$63.55\\ \\text{u}$$"
+      },
+      {
+        "questionText": "A mass spectrum of element Q shows two prominent peaks at $$m/z=70$$ and $$m/z=72$$ with relative intensities of approximately 3:1. What is the approximate percent abundance of the heavier nuclide?",
+        "options": [
+          "$$25\\%$$",
+          "$$33\\%$$",
+          "$$50\\%$$",
+          "$$75\\%$$"
+        ],
+        "correctAnswer": "$$25\\%$$"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "One mole of silicon contains ______ atoms.",
+        "options": [
+          "$$6.022\\times10^{23}$$",
+          "$$1.000\\times10^{23}$$",
+          "$$3.011\\times10^{23}$$",
+          "$$12.044\\times10^{23}$$"
+        ],
+        "correctAnswer": "$$6.022\\times10^{23}$$"
+      },
+      {
+        "questionText": "In a typical mass spectrum, the horizontal axis is labeled ______.",
+        "options": [
+          "$$m/z$$",
+          "wavelength",
+          "pH",
+          "temperature"
+        ],
+        "correctAnswer": "$$m/z$$"
+      }
+    ]
+  },
+  "lesson2": {
+    "flashcards": [
+      {
+        "term": "Electron configuration",
+        "definition": "Arrangement of electrons among atomic orbitals described by notation such as $$1s^22s^22p^6\\ldots$$ and determined by the aufbau principle, the Pauli exclusion principle, and Hund’s rule."
+      },
+      {
+        "term": "Hund’s rule",
+        "definition": "Within a set of degenerate orbitals, electrons occupy different orbitals with parallel spins before pairing occurs."
+      },
+      {
+        "term": "Photoelectron spectroscopy (PES)",
+        "definition": "A technique that measures the kinetic energies of ejected electrons to determine their binding energies, revealing subshell structure and relative electron counts."
+      },
+      {
+        "term": "Effective nuclear charge",
+        "definition": "The net positive attraction experienced by a given electron in a multi-electron atom, approximated by $$Z_{\\text{eff}}=Z-S$$ where $$S$$ accounts for shielding by other electrons."
+      },
+      {
+        "term": "First ionization energy",
+        "definition": "The minimum energy required to remove the outermost electron from a gaseous atom in its ground state, typically reported per mole of atoms."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "A PES for a neutral atom shows three groups of peaks whose relative areas are 2 (highest binding energy), 2 (intermediate), and 1 (lowest). The highest-binding-energy group corresponds to the $$1s$$ subshell, followed by $$2s$$, then $$2p$$. Which element best matches these data?",
+        "options": [
+          "Boron",
+          "Carbon",
+          "Nitrogen",
+          "Oxygen"
+        ],
+        "correctAnswer": "Boron"
+      },
+      {
+        "questionText": "Which statement best explains why $$IE_1(\\text{O})<IE_1(\\text{N})$$ despite oxygen’s greater nuclear charge?",
+        "options": [
+          "In oxygen, one $$2p$$ orbital is doubly occupied, increasing electron–electron repulsion and lowering the energy needed to remove an electron.",
+          "Oxygen has a smaller atomic radius than nitrogen, reducing shielding and making electron removal easier.",
+          "Oxygen has a lower nuclear charge than nitrogen, so its valence electron is less attracted.",
+          "Oxygen’s valence electrons are in a higher principal energy level than nitrogen’s, so they are easier to remove."
+        ],
+        "correctAnswer": "In oxygen, one $$2p$$ orbital is doubly occupied, increasing electron–electron repulsion and lowering the energy needed to remove an electron."
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "The approximate relationship $$Z_{\\text{eff}}=Z-______$$ is used to estimate the net attraction on a valence electron.",
+        "options": [
+          "$$S$$",
+          "$$n$$",
+          "$$m$$",
+          "$$IE_1$$"
+        ],
+        "correctAnswer": "$$S$$"
+      },
+      {
+        "questionText": "In PES, electrons from the $$1s$$ subshell have binding energies that are ______ those from the $$2p$$ subshell.",
+        "options": [
+          "greater than",
+          "less than",
+          "equal to",
+          "unrelated to"
+        ],
+        "correctAnswer": "greater than"
+      }
+    ]
+  }
+}
