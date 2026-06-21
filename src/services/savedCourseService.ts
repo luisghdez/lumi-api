@@ -13,6 +13,7 @@ interface SavedCourseOptimizedInput {
   description: string;
   subject: string;
   hasEmbeddings: boolean;
+  tags?: string[];
   // AP catalog fields — only populated when courseType === "ap_catalog"
   courseType?: "standard" | "ap_catalog";
   apSubject?: string;
@@ -52,6 +53,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       saved: true,
       subject: subject,
       courseType,
+      tags: courseData?.tags ?? [],
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,
@@ -185,6 +187,7 @@ export async function createSavedCourseOptimized(userId: string, data: SavedCour
       saved: true,
       subject: data.subject,
       courseType: data.courseType || "standard",
+      tags: data.tags ?? [],
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,

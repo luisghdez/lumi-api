@@ -22,6 +22,54 @@ import { APExam } from "../data/apCatalog/types";
 
 const GENERATED_DIR = path.join(__dirname, "../data/apCatalog/generated");
 
+// ─── Subject tag mapping ──────────────────────────────────────────────────────
+// Mirrors the Flutter _kApSubjectMeta subjectTag values so course cards display
+// the correct discipline tag instead of the fallback "#Classic".
+const AP_SUBJECT_TAGS: Record<string, string> = {
+  // STEM
+  "AP Biology":                              "Science",
+  "AP Chemistry":                            "Science",
+  "AP Computer Science A":                   "CS",
+  "AP Computer Science Principles":          "CS",
+  "AP Environmental Science":               "Science",
+  "AP Physics 1: Algebra-Based":            "Science",
+  "AP Physics 2: Algebra-Based":            "Science",
+  "AP Physics C: Mechanics":                "Science",
+  "AP Physics C: Electricity and Magnetism": "Science",
+  // Math
+  "AP Calculus AB":                          "Math",
+  "AP Calculus BC":                          "Math",
+  "AP Precalculus":                          "Math",
+  "AP Statistics":                           "Math",
+  // Social Studies
+  "AP African American Studies":             "History",
+  "AP Comparative Government and Politics":  "Gov & Politics",
+  "AP Human Geography":                      "Geography",
+  "AP Macroeconomics":                       "Economics",
+  "AP Microeconomics":                       "Economics",
+  "AP Psychology":                           "Social Science",
+  "AP United States Government and Politics":"Gov & Politics",
+  "AP United States History":               "History",
+  "AP World History: Modern":               "History",
+  // Humanities
+  "AP Art History":                          "Arts",
+  "AP English Language and Composition":    "English",
+  "AP English Literature and Composition":  "English",
+  "AP European History":                    "History",
+  "AP Music Theory":                        "Arts",
+  "AP Seminar":                             "Research",
+  "AP Research":                            "Research",
+  // Languages
+  "AP Chinese Language and Culture":        "Language",
+  "AP French Language and Culture":         "Language",
+  "AP German Language and Culture":         "Language",
+  "AP Italian Language and Culture":        "Language",
+  "AP Japanese Language and Culture":       "Language",
+  "AP Latin":                               "Language",
+  "AP Spanish Language and Culture":        "Language",
+  "AP Spanish Literature and Culture":      "Language",
+};
+
 // ─── Load generated JSON exams ────────────────────────────────────────────────
 
 function loadGeneratedExams(): APExam[] {
@@ -137,12 +185,15 @@ async function writeCourse(exam: APExam, existingId: string | null): Promise<voi
   const mergedFlashcards = exam.units.flatMap((u) => u.lessons.flatMap((l) => l.flashcards));
   const description      = buildCourseDescription(exam);
 
+  const subjectTag = AP_SUBJECT_TAGS[exam.apSubject] ?? "AP Course";
+
   const courseData: Record<string, unknown> = {
     title:         exam.apSubject,
     description,
     subject:       exam.apSubject,
     courseType:    "ap_catalog",
     apSubject:     exam.apSubject,
+    tags:          [subjectTag],
     createdBy:     "system",
     createdByName: "Lumi",
     visibility:    "Public",

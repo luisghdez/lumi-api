@@ -256,6 +256,7 @@ export async function updateCourseContent(
           let savedCount = 0;
           let createdBy = undefined;
           let createdByName = undefined;
+          let tags: string[] | undefined = undefined;
           try {
             const courseRef = db.collection("courses").doc(data.courseId || doc.id);
             const courseSnapshot = await courseRef.get();
@@ -264,6 +265,11 @@ export async function updateCourseContent(
               savedCount = courseData?.savedCount || 0;
               createdBy = courseData?.createdBy;
               createdByName = courseData?.createdByName;
+              // Always use tags from the live course document so existing saved
+              // course docs (written before tags were added) show the right tag.
+              if (Array.isArray(courseData?.tags)) {
+                tags = courseData!.tags as string[];
+              }
             }
           } catch (error) {
             console.error(`Error fetching course data for ${data.courseId || doc.id}:`, error);
@@ -278,6 +284,8 @@ export async function updateCourseContent(
             savedCount,
             createdBy,
             createdByName,
+            // Override with live course doc tags (covers pre-existing saved docs)
+            ...(tags !== undefined && { tags }),
           };
         })
       );
