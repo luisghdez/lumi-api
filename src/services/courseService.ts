@@ -603,7 +603,7 @@ export const getAPUnitNote = async (
     return {
       unitNumber: d.unitNumber ?? unitNumber,
       unitName:   d.unitName   ?? "",
-      content:    d.note       ?? "",
+      content:    d.content    ?? d.note ?? "",
     };
   } catch (error) {
     console.error(`Error fetching unit note ${unitNumber} for course ${courseId}:`, error);
