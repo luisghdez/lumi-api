@@ -1,0 +1,138 @@
+{
+  "lesson1": {
+    "flashcards": [
+      {
+        "term": "Mole",
+        "definition": "A unit representing exactly $$6.022 \\times 10^{23}$$ particles of a substance, used to count atoms, molecules, or ions."
+      },
+      {
+        "term": "Molar Mass",
+        "definition": "The mass of one mole of a substance, expressed in grams per mole, numerically equivalent to the atomic or molecular mass in amu."
+      },
+      {
+        "term": "Mass Spectrometry",
+        "definition": "An analytical technique that separates ions based on their mass-to-charge ratio, allowing determination of isotopic composition and molecular weights."
+      },
+      {
+        "term": "Atomic Mass Unit (amu)",
+        "definition": "A unit of mass equal to one twelfth the mass of a carbon-12 atom, used to express atomic and molecular masses."
+      },
+      {
+        "term": "Avogadro's Number",
+        "definition": "The number of constituent particles contained in one mole of a substance, precisely $$6.022 \\times 10^{23}$$."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "What is the molar mass of $$\\mathrm{CO_2}$$ if the atomic masses of carbon and oxygen are approximately 12 amu and 16 amu, respectively?",
+        "options": [
+          "44 g/mol",
+          "28 g/mol",
+          "32 g/mol",
+          "16 g/mol"
+        ],
+        "correctAnswer": "44 g/mol"
+      },
+      {
+        "questionText": "In mass spectrometry, ions are separated based on their:",
+        "options": [
+          "mass-to-charge ratio",
+          "velocity",
+          "atomic number",
+          "ionization energy"
+        ],
+        "correctAnswer": "mass-to-charge ratio"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "A mole contains exactly ______ particles, a number known as Avogadro's number.",
+        "options": [
+          "$$6.022 \\times 10^{23}$$",
+          "$$3.00 \\times 10^{8}$$",
+          "$$1.67 \\times 10^{-24}$$",
+          "$$9.11 \\times 10^{-31}$$"
+        ],
+        "correctAnswer": "$$6.022 \\times 10^{23}$$"
+      },
+      {
+        "questionText": "The unit amu is defined as one twelfth the mass of a ______ atom.",
+        "options": [
+          "carbon-12",
+          "oxygen-16",
+          "hydrogen-1",
+          "nitrogen-14"
+        ],
+        "correctAnswer": "carbon-12"
+      }
+    ]
+  },
+  "lesson2": {
+    "flashcards": [
+      {
+        "term": "Electron Configuration",
+        "definition": "The arrangement of electrons in an atom's orbitals, designated by principal energy levels, subshells, and electron counts."
+      },
+      {
+        "term": "Photoelectron Spectroscopy (PES)",
+        "definition": "An experimental technique that measures the kinetic energy of electrons ejected from atoms or molecules to determine ionization energies and electron arrangements."
+      },
+      {
+        "term": "Ionization Energy",
+        "definition": "The energy required to remove one mole of electrons from one mole of gaseous atoms or ions."
+      },
+      {
+        "term": "Electronegativity",
+        "definition": "A dimensionless measure of an atom's ability to attract bonding electrons when chemically combined with another atom."
+      },
+      {
+        "term": "Periodic Trends",
+        "definition": "Patterns observed in atomic properties, such as atomic radius, ionization energy, and electronegativity, that vary predictably across periods and groups."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "Which electron configuration corresponds to a chlorine atom?",
+        "options": [
+          "$$1s^2 2s^2 2p^6 3s^2 3p^5$$",
+          "$$1s^2 2s^2 2p^6 3s^2 3p^6$$",
+          "$$1s^2 2s^2 2p^5$$",
+          "$$1s^2 2s^2 2p^6$$"
+        ],
+        "correctAnswer": "$$1s^2 2s^2 2p^6 3s^2 3p^5$$"
+      },
+      {
+        "questionText": "Within a period on the periodic table, ionization energy generally:",
+        "options": [
+          "increases from left to right",
+          "decreases from left to right",
+          "remains constant",
+          "increases down a group"
+        ],
+        "correctAnswer": "increases from left to right"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "Photoelectron spectroscopy provides information about electron binding energies by measuring the kinetic energy of electrons ejected by ______ radiation.",
+        "options": [
+          "ultraviolet",
+          "infrared",
+          "visible",
+          "gamma"
+        ],
+        "correctAnswer": "ultraviolet"
+      },
+      {
+        "questionText": "Atomic radius tends to decrease from left to right across a period due to increasing ______ charge, which pulls electrons closer to the nucleus.",
+        "options": [
+          "effective nuclear",
+          "shielding",
+          "mass",
+          "neutron"
+        ],
+        "correctAnswer": "effective nuclear"
+      }
+    ]
+  }
+}

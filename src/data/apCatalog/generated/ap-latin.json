@@ -1,0 +1,765 @@
+{
+  "apSubject": "AP Latin",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Vergil's Aeneid, Book 1",
+      "description": "Juno's wrath, the storm, Carthage, and Aeneas's arrival — translation and interpretation of required lines.",
+      "note": "# Unit 1: Vergil's Aeneid, Book 1\n\n## Overview\nThis unit introduces **Book 1 of Vergil’s *Aeneid*** through the central episodes of **Juno’s anger**, **Aeolus’s storm**, **Neptune’s intervention**, and **Aeneas’s arrival at Carthage**. For the AP exam, these lines matter because they establish major themes—**fate, divine conflict, leadership, suffering, and Rome’s destiny**—while also providing rich material for **translation, grammar, scansion, and literary analysis**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Juno’s wrath** | Juno’s hostility toward the Trojans, motivated by past grievances and fear of Rome’s future power | Frequently tested as a source of **divine motivation**, **causation**, and thematic tension between **personal anger** and **fate** |\n| **Fate vs. divine resistance** | Jupiter’s plan guarantees Roman destiny, but gods like Juno try to delay it | Essential for interpreting how Vergil presents **fatum** as inevitable even when suffering occurs |\n| **Epic simile and imagery** | Extended comparisons and vivid descriptive language, especially in storm and leadership scenes | AP questions often ask students to identify **literary devices** and explain their effect on tone or meaning |\n| **Aeneas as leader** | Aeneas conceals fear, encourages his men, and models endurance | Important for analyzing **characterization** and the Roman ideal of **pietas** |\n| **Hospitality and foreignness** | The Trojans arrive as displaced strangers and encounter the new city of Carthage | Helps frame themes of **exile**, **identity**, and political relationships between peoples |\n| **Dido and Carthage** | Dido appears as a powerful queen overseeing civic order and city-building | AP passages may ask students to interpret **leadership**, **foreshadowing**, and Rome-Carthage tensions |\n| **Grammar and syntax** | Ablative absolutes, participles, indirect statement, poetic word order, and ellipsis appear throughout the required lines | Success on AP Latin depends on accurate **close reading** of Vergilian syntax, not just vocabulary recognition |\n| **Roman values in epic** | Concepts such as **pietas**, endurance, duty, and subordination of self to destiny | Core interpretive lens for free-response and multiple-choice literary analysis |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Juno remembers past injuries and fears Rome's future\"] --> B[\"She approaches Aeolus\"]\n    B --> C[\"Aeolus releases the winds\"]\n    C --> D[\"Storm scatters the Trojan fleet\"]\n    D --> E[\"Aeneas and his men suffer fear and loss\"]\n    E --> F[\"Neptune notices disorder at sea\"]\n    F --> G[\"Neptune calms the waters and rebukes the winds\"]\n    G --> H[\"Trojans reach the Libyan coast\"]\n    H --> I[\"Aeneas explores and encounters Carthage\"]\n    I --> J[\"Dido receives the Trojans\"]\n```\n\n### How to read this sequence\n1. **Juno** acts out of personal resentment, but her actions cannot overturn **fate**.\n2. **Aeolus** becomes an instrument of divine conflict, showing the hierarchy and rivalry among gods.\n3. The **storm** creates both immediate danger and an opportunity for Aeneas to display leadership.\n4. **Neptune’s intervention** restores cosmic order and suggests that not all gods support Juno.\n5. The arrival at **Carthage** shifts the poem from survival at sea to political and emotional complexity on land.\n\n## Essential Formulas / Laws / Rules\n\n### Key interpretive and reading rules for this unit\n| **Rule / Principle** | **What to Remember** |\n|---|---|\n| **Fate is ultimate** | Divine beings may **delay** events, but they do not ultimately defeat **Jupiter’s plan**. |\n| **Pietas defines Aeneas** | Aeneas is judged not by personal desire alone but by **duty to gods, family, and mission**. |\n| **Poetic word order is meaningful** | Delayed subjects, separated adjectives, and hyperbaton often emphasize emotion, grandeur, or disorder. |\n| **Context determines case function** | In poetry, identify the **core syntax first**: subject, main verb, object, then add modifiers. |\n| **Participles are interpretively important** | A participle may convey **time, cause, concession, or vivid description**; do not translate mechanically. |\n| **Epic similes do more than decorate** | A simile often deepens characterization or links human events to larger social or natural patterns. |\n| **Speeches reveal leadership and theme** | Public speech in epic is rarely filler; it shapes morale, identity, and moral interpretation. |\n\n### High-yield grammar features to watch\n- **Ablative absolute**: often sets background circumstance.\n- **Indirect statement** after verbs of saying, thinking, perceiving.\n- **Infinitives** used in narration can compress action.\n- **Vocatives** and **exclamations** heighten emotional force.\n- **Historical present** may make action feel immediate.\n- **Hyperbaton** and **enjambment** can mirror confusion, grandeur, or emotional strain.\n\n## Connections & Comparisons\n\n| **Comparison** | **Juno** | **Neptune** | **Why the Contrast Matters** |\n|---|---|---|---|\n| **Relationship to order** | Disrupts the Trojans through rage | Restores order to sea and cosmos | Highlights chaos versus control |\n| **Motivation** | Personal resentment and fear | Defense of authority and proper domain | Shows different divine priorities |\n| **Effect on Aeneas** | Causes suffering and delay | Enables survival and forward movement | Reinforces fate’s progress despite obstacles |\n\n| **Comparison** | **Aeneas** | **Dido** | **Why the Contrast Matters** |\n|---|---|---|---|\n| **Political role** | Exiled leader seeking a homeland | Ruling queen building a city | Frames both as founders, but in different stages |\n| **Emotional position** | Suppresses fear for his men’s sake | Appears ordered and authoritative in public | Sets up later emotional and political tension |\n| **Symbolic function** | Carrier of Roman destiny | Representative of Carthage and alternate power | Important for foreshadowing Rome-Carthage conflict |\n\n## Common AP Exam Traps\n- Confusing **Juno’s personal motives** with **fate itself**. Juno can obstruct, but she does not determine Rome’s destiny.\n- Treating **Aeneas’s speech** as simple optimism. Often he is **concealing fear** while performing leadership.\n- Missing the force of **poetic syntax** by translating word-by-word instead of locating the **main clause** first.\n- Identifying a literary device without explaining its **effect**. On AP questions, naming **simile**, **alliteration**, or **hyperbaton** is not enough.\n- Assuming **Carthage** is only a setting. In Book 1, it is already politically and symbolically significant.\n\n## Quick Review Checklist\n- [ ] I can explain **why Juno hates the Trojans** and how that motivates the action of Book 1.\n- [ ] I can describe how the **storm episode** develops the theme of **fate versus divine opposition**.\n- [ ] I can identify how **Aeneas demonstrates leadership** during crisis.\n- [ ] I can translate lines with **participles**, **ablative absolutes**, and **indirect statement** accurately.\n- [ ] I can recognize and explain the effect of **epic similes**, **imagery**, and **poetic word order**.\n- [ ] I can compare **Juno’s disruption** with **Neptune’s restoration of order**.\n- [ ] I can explain the significance of **Carthage** and **Dido** in the opening movement of the epic.\n- [ ] I can connect Book 1 to broader themes of **pietas**, **suffering**, and **Rome’s destined future**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "saevae memorem Iunonis ob iram",
+              "definition": "A phrase emphasizing that the goddess’s hostility remains enduring and active, establishing divine anger as a central cause of the hero’s prolonged suffering."
+            },
+            {
+              "term": "arma virumque",
+              "definition": "The programmatic opening that joins warfare with the experience of a single hero, signaling both epic conflict and personal journey as major themes."
+            },
+            {
+              "term": "fato profugus",
+              "definition": "An expression describing exile driven by destiny, highlighting that wandering occurs under divine necessity rather than mere chance."
+            },
+            {
+              "term": "Aeolus’s cave of winds",
+              "definition": "The place from which controlled destructive forces are released at a goddess’s request, showing how natural disorder in the poem is tied to divine intervention."
+            },
+            {
+              "term": "apostrophe to Italy",
+              "definition": "A direct address to the long-sought destination that heightens the emotional intensity of near-arrival and sudden loss."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In the opening of Book 1, what is the primary effect of Vergil’s use of \"multa quoque et bello passus, dum conderet urbem\" in relation to Aeneas’s characterization?",
+              "options": [
+                "It presents him as a leader whose suffering is purposeful and connected to a future foundation.",
+                "It portrays him chiefly as a reckless warrior driven by personal anger.",
+                "It minimizes divine influence by making his struggles entirely self-caused.",
+                "It suggests his hardships end before he reaches Italy."
+              ],
+              "correctAnswer": "It presents him as a leader whose suffering is purposeful and connected to a future foundation.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "When Juno persuades Aeolus to release the winds, which interpretation best explains the episode’s significance in Book 1?",
+              "options": [
+                "It demonstrates that cosmic and political disorder can be set in motion through divine resentment.",
+                "It proves that Neptune lacks authority over the sea from the beginning of the epic.",
+                "It shows that Jupiter has already abandoned the Trojan destiny entirely.",
+                "It establishes that Aeneas prefers storm-driven wandering to the mission given him by fate."
+              ],
+              "correctAnswer": "It demonstrates that cosmic and political disorder can be set in motion through divine resentment.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In the proem, Aeneas is described as \"______,\" a phrase that underscores exile governed by destiny.",
+              "options": [
+                "fato profugus",
+                "pius iratus",
+                "dux superbus",
+                "hostis Latinus"
+              ],
+              "correctAnswer": "fato profugus",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the storm scene, the god who calms the sea and rebukes the winds is ______.",
+              "options": [
+                "Apollo",
+                "Aeolus",
+                "Neptune",
+                "Mercury"
+              ],
+              "correctAnswer": "Neptune",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "simile of the statesman calming a crowd",
+              "definition": "A comparison in which a political leader restores order to a turbulent assembly, illuminating the sea god’s authority through civic imagery familiar to Roman readers."
+            },
+            {
+              "term": "Aeneas as pius leader",
+              "definition": "A portrayal of the Trojan commander as one who suppresses personal fear, encourages companions, and remains committed to divine mission and communal survival."
+            },
+            {
+              "term": "Carthage as a rising city",
+              "definition": "The North African settlement is depicted as energetic, organized, and prosperous, with imagery of construction that invites comparison to Roman civic achievement."
+            },
+            {
+              "term": "Venus’s disguise as a huntress",
+              "definition": "The goddess conceals her identity while guiding her son, creating dramatic irony and revealing continued divine management of his path."
+            },
+            {
+              "term": "Dido’s justice and leadership",
+              "definition": "The queen is introduced as a capable ruler who establishes laws, distributes labor, and oversees civic development, making her politically impressive from the outset."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "What is the most important effect of the simile comparing Neptune calming the sea to a statesman quieting a crowd?",
+              "options": [
+                "It links divine control over nature with ideals of civic authority and ordered leadership.",
+                "It reduces Neptune to a powerless observer of human politics.",
+                "It shows that the mob, not the god, is responsible for restoring calm.",
+                "It suggests that Roman political life is inherently more chaotic than the natural world."
+              ],
+              "correctAnswer": "It links divine control over nature with ideals of civic authority and ordered leadership.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In Aeneas’s first view of Carthage, why does Vergil emphasize construction activity and social organization?",
+              "options": [
+                "To present the city as an impressive center of order and achievement before its later conflict with Rome is known.",
+                "To portray the inhabitants as incapable of disciplined labor without Trojan guidance.",
+                "To show that Carthage has already fallen into civil war by the time of Aeneas’s arrival.",
+                "To imply that Aeneas immediately rejects the city as uncivilized and insignificant."
+              ],
+              "correctAnswer": "To present the city as an impressive center of order and achievement before its later conflict with Rome is known.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The comparison of Carthaginians at work to bees in early summer is an example of an epic ______.",
+              "options": [
+                "catalog",
+                "simile",
+                "apostrophe",
+                "invocation"
+              ],
+              "correctAnswer": "simile",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When guiding Aeneas near Carthage, Venus appears in the guise of a ______.",
+              "options": [
+                "priestess",
+                "queen",
+                "huntress",
+                "sailor"
+              ],
+              "correctAnswer": "huntress",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Vergil's Aeneid, Books 2 and 4",
+      "description": "Fall of Troy and Dido's tragedy — epic conventions, character, and Vergilian themes.",
+      "note": "# Unit 2: Vergil's Aeneid, Books 2 and 4\n\n## Overview\nThis unit focuses on two of the most important books of Vergil’s **Aeneid**: **Book 2**, Aeneas’s narration of the **fall of Troy**, and **Book 4**, the rise and collapse of **Dido’s relationship** with Aeneas. These books matter on the AP exam because they showcase major **epic conventions**, **Vergilian style**, and central themes such as **pietas**, **furor**, fate, leadership, and the costs of Rome’s destiny.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Epic convention** | Traditional features of epic poetry: invocation, extended similes, divine intervention, heroic narrative, speeches, and descent into crisis | AP passages often ask students to identify how Vergil adapts Greek epic conventions for Roman purposes |\n| **Pietas** | Duty to gods, family, and destiny; Aeneas’s defining virtue | Essential for interpreting Aeneas’s choices, especially when they conflict with personal emotion |\n| **Furor** | Destructive passion, rage, or irrational impulse | A major contrast to **pietas**; appears in the sack of Troy and in Dido’s emotional collapse |\n| **Fate vs. free will** | The tension between divine destiny and human decision-making | Frequently tested through character motivation and divine causation |\n| **Narrative perspective** | In Book 2, Aeneas tells Troy’s fall as a first-person retrospective narrative | Students must notice how narration shapes sympathy, suspense, and interpretation |\n| **Dido as tragic figure** | Queen of Carthage whose love for Aeneas leads to political and personal ruin | A prime character-analysis topic; AP questions may focus on sympathy, responsibility, and tragedy |\n| **Divine intervention** | Gods influence events directly and indirectly, especially **Juno**, **Venus**, **Mercury**, and **Jupiter** | Important for explaining plot development and Roman views of human limitation |\n| **Roman values and Augustan ideology** | Vergil connects individual suffering to Rome’s future greatness | AP often rewards recognition of how personal episodes serve a larger national mission |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Fall of Troy begins\"] --> B[\"Aeneas reacts with grief and anger\"]\n    B --> C[\"Temptation toward heroic furor\"]\n    C --> D[\"Divine revelation redirects Aeneas\"]\n    D --> E[\"Aeneas embraces pietas\"]\n    E --> F[\"Escape from Troy with family and followers\"]\n    F --> G[\"Journey toward destined future in Italy\"]\n\n    G --> H[\"Arrival at Carthage\"]\n    H --> I[\"Dido and Aeneas drawn together\"]\n    I --> J[\"Love deepens through divine influence\"]\n    J --> K[\"Conflict between personal desire and fate\"]\n    K --> L[\"Mercury reminds Aeneas of mission\"]\n    L --> M[\"Aeneas departs in obedience to fate\"]\n    M --> N[\"Dido experiences despair and furor\"]\n    N --> O[\"Dido's suicide and curse\"]\n```\n\nThis sequence highlights a central pattern in both books: **emotion and destruction** threaten to overwhelm Aeneas and Dido, but Vergil repeatedly measures characters by their relationship to **fate** and **duty**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What to Know** |\n|---|---|\n| **Aeneas as model of pietas** | Aeneas is not defined mainly by battlefield glory but by loyalty to **gods**, **family**, and **destiny**. |\n| **Furor is destructive** | Characters ruled by **furor** lose judgment; Vergil often presents it as socially and politically dangerous. |\n| **The gods shape human action** | Divine beings influence events, but mortal characters are still morally readable through their responses. |\n| **Book 2 is retrospective narration** | Aeneas recounts Troy after the fact, so the narrative combines emotional immediacy with reflective hindsight. |\n| **Book 4 is both love story and political tragedy** | Dido’s passion is personal, but its consequences affect **Carthage**, Aeneas’s mission, and Rome’s future conflict with Carthage. |\n| **Appearances can deceive** | The **Trojan Horse**, Sinon’s speech, and even the “marriage” scene in Book 4 all involve ambiguity, persuasion, or misreading. |\n| **Vergil blends sympathy with judgment** | Readers are invited to feel compassion for Dido and Trojan suffering while still seeing the force of fate and Roman mission. |\n| **Similes and speeches reveal character** | On the AP exam, literary analysis often depends on how Vergil uses simile, direct speech, and imagery to frame emotion or action. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Book 2: Fall of Troy** | **Book 4: Dido’s Tragedy** | **Connection / Significance** |\n|---|---|---|---|\n| **Aeneas and emotion** | Feels grief, rage, and warrior impulse during Troy’s destruction | Feels attachment and hesitation when leaving Dido | In both books, Aeneas must subordinate emotion to **pietas** |\n| **Role of the gods** | Venus reveals the true divine forces behind Troy’s fall | Jupiter and Mercury intervene to restart Aeneas’s mission | Divine action clarifies that human events serve larger destiny |\n| **Furor** | Seen in war, panic, and indiscriminate destruction | Seen in erotic obsession, curses, and suicide | **Furor** is not only martial; it also operates psychologically and politically |\n| **Tragic loss** | Priam, Creusa, and Troy itself are destroyed | Dido, her reputation, and Carthage’s stability are ruined | Vergil links personal suffering to historical transformation |\n\n```mermaid\nflowchart LR\n    A[\"Pietas\"] --> C[\"Aeneas's duty-driven action\"]\n    B[\"Furor\"] --> D[\"Destructive excess\"]\n    C --> E[\"Roman future\"]\n    D --> F[\"Personal and civic ruin\"]\n```\n\n## Common AP Exam Traps\n\n- Confusing **sympathy for Dido** with the idea that Vergil fully endorses her choices; the poem is compassionate, but it also shows the destructiveness of **furor**.\n- Treating Aeneas as emotionless; he is deeply emotional, but the key issue is that he ultimately acts according to **pietas**.\n- Forgetting that **Book 2** is narrated by Aeneas himself; this affects tone, emphasis, and credibility.\n- Assuming divine intervention removes all human responsibility; the gods influence events, but characters are still judged by how they respond.\n- Oversimplifying Dido and Aeneas as merely “romantic” figures; their relationship also has **political**, **moral**, and **historical** implications.\n\n## Quick Review Checklist\n\n- [ ] Explain how **Book 2** presents the **fall of Troy** through Aeneas’s retrospective first-person narration.\n- [ ] Identify major **epic conventions** in Books 2 and 4 and explain Vergil’s Roman adaptation of them.\n- [ ] Define **pietas** and **furor** and apply both concepts to Aeneas and Dido.\n- [ ] Describe how **divine intervention** affects key events in Troy and Carthage.\n- [ ] Analyze why Aeneas leaves Dido and how that decision reflects fate and duty.\n- [ ] Explain why Dido is a **tragic figure** rather than a simple villain or obstacle.\n- [ ] Discuss how Vergil connects individual suffering to Rome’s larger future.\n- [ ] Recognize how speeches, similes, and imagery shape character and theme in AP-style passage analysis.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "In medias res",
+              "definition": "A narrative technique in which the story begins in the middle of the action and earlier events are later recounted by a character."
+            },
+            {
+              "term": "Wooden Horse",
+              "definition": "The deceptive offering left by the Greeks that enabled armed enemies to enter the city after being brought within the walls."
+            },
+            {
+              "term": "Laocoon",
+              "definition": "A Trojan priest whose warning against Greek trickery is ignored after divine serpents kill him and his sons, influencing the city's fatal decision."
+            },
+            {
+              "term": "Pietas",
+              "definition": "A Roman virtue of dutiful devotion to gods, family, and destined responsibilities, especially evident when a leader subordinates personal desire to obligation."
+            },
+            {
+              "term": "Creusa",
+              "definition": "The wife lost during the escape from the burning city, whose apparition reveals a divinely ordained future and urges continued flight."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In Aeneas' account of Troy's fall, what most directly persuades the Trojans to bring the horse inside the city?",
+              "options": [
+                "Sinon’s fabricated story and the death of Laocoon",
+                "Hector’s command from the underworld",
+                "A direct oracle from Apollo to Priam",
+                "Anchises’ insistence that the object is sacred"
+              ],
+              "correctAnswer": "Sinon’s fabricated story and the death of Laocoon",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which action in Book 2 most clearly demonstrates Aeneas' defining sense of Roman duty?",
+              "options": [
+                "He abandons his household gods to save time in flight",
+                "He carries Anchises while leading Ascanius out of Troy",
+                "He chooses to die in battle beside Priam",
+                "He remains in the palace after Hector’s apparition"
+              ],
+              "correctAnswer": "He carries Anchises while leading Ascanius out of Troy",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Vergil structures Aeneas’ narrative of Troy so that earlier events are recounted after the epic has already begun, a technique called ______.",
+              "options": [
+                "in medias res",
+                "ekphrasis",
+                "apostrophe",
+                "invocation"
+              ],
+              "correctAnswer": "in medias res",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When Aeneas escapes burning Troy, he carries his father and the sacred household gods, highlighting the Roman value of ______.",
+              "options": [
+                "pietas",
+                "furor",
+                "otium",
+                "superbia"
+              ],
+              "correctAnswer": "pietas",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Furor",
+              "definition": "Destructive, irrational passion that disrupts order and opposes disciplined obedience to destiny, especially in scenes of love, rage, and political disorder."
+            },
+            {
+              "term": "Dido",
+              "definition": "The queen of Carthage whose love for the Trojan leader leads to neglect of civic responsibilities and ultimately to self-destruction."
+            },
+            {
+              "term": "Mercury",
+              "definition": "The divine messenger sent by Jupiter to remind the Trojan leader of his mission and command his departure from Carthage."
+            },
+            {
+              "term": "Fama",
+              "definition": "The personified force of rumor that spreads news rapidly, magnifies scandal, and intensifies the political consequences of the lovers’ relationship."
+            },
+            {
+              "term": "Curse of Dido",
+              "definition": "The dying imprecation that calls for perpetual hostility between her people and the descendants of the Trojan refugees, foreshadowing later wars."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In Book 4, why does Jupiter send Mercury to Aeneas?",
+              "options": [
+                "To command him to remember his destiny in Italy and leave Carthage",
+                "To arrange a marriage alliance between Trojans and Carthaginians",
+                "To punish him for desecrating Juno’s temple",
+                "To instruct him to return to Sicily before winter"
+              ],
+              "correctAnswer": "To command him to remember his destiny in Italy and leave Carthage",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best captures Vergil’s portrayal of Dido in Book 4?",
+              "options": [
+                "She is presented as a ruler whose passion comes into conflict with political and moral order",
+                "She is depicted primarily as a comic obstacle to Trojan progress",
+                "She remains consistently indifferent to Aeneas and focused only on trade",
+                "She is rewarded by the gods for placing love above civic duty"
+              ],
+              "correctAnswer": "She is presented as a ruler whose passion comes into conflict with political and moral order",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The personified force that publicizes and exaggerates the affair between Aeneas and Dido is ______.",
+              "options": [
+                "Fama",
+                "Pietas",
+                "Fortuna",
+                "Discordia"
+              ],
+              "correctAnswer": "Fama",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Dido’s final prayer for lasting enmity between Carthage and the Trojans functions as a literary foreshadowing of the ______.",
+              "options": [
+                "Punic Wars",
+                "Social War",
+                "Peloponnesian War",
+                "Gallic Wars"
+              ],
+              "correctAnswer": "Punic Wars",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Vergil's Aeneid, Books 6, 8, and 12",
+      "description": "Underworld descent, Shield of Aeneas, and final battle — duty, fate, and Roman identity.",
+      "note": "# Unit 3: Vergil's *Aeneid*, Books 6, 8, and 12\n\n## Overview\nThis unit centers on three pivotal moments in Vergil’s *Aeneid*: **Aeneas’s descent into the Underworld** in Book 6, the **forging and interpretation of the Shield of Aeneas** in Book 8, and the **final duel with Turnus** in Book 12. These books are crucial for the AP exam because they bring together major themes—**fate**, **pietas**, **Roman destiny**, **violence**, and **leadership**—while showcasing Vergil’s most important literary and stylistic techniques.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Pietas** | Aeneas’s defining virtue: duty to gods, family, and destiny above personal desire. | You may need to explain how Aeneas’s actions reflect or strain **pietas**, especially in Books 6 and 12. |\n| **Fatum** | The divine plan that guarantees Rome’s future. | AP questions often ask how characters respond to **fate** and how fate shapes the poem’s moral framework. |\n| **Katabasis** | A hero’s descent into the Underworld, especially Aeneas’s journey in Book 6. | This episode reveals prophecy, Roman mission, and Aeneas’s growth; it is central for interpretation and literary analysis. |\n| **Roman identity** | The poem’s construction of Rome’s values, history, and imperial purpose. | Book 8 and Book 6 especially connect mythic past to Augustan Rome; this is a major interpretive focus. |\n| **Ekphrasis** | A vivid literary description of an object, especially the **Shield of Aeneas**. | AP passages may ask how imagery on the shield creates meaning beyond simple description. |\n| **Furor vs. order** | The contrast between destructive passion and disciplined duty. | Turnus often represents **furor**; Aeneas is tested between restraint and rage, especially in the final scene. |\n| **Prophecy and revelation** | Anchises’s vision and future Roman heroes in Book 6. | Students must connect prophecy to theme, characterization, and Augustan political meaning. |\n| **Mercy and revenge** | The unresolved moral tension in Aeneas’s killing of Turnus. | A frequent AP issue is whether the ending confirms Aeneas’s justice or exposes the cost of empire. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Book 6: Descent to Underworld\"] --> B[\"Revelation of fate and Roman future\"]\n    B --> C[\"Aeneas better understands his mission\"]\n    C --> D[\"Book 8: Alliance with Evander and gift of shield\"]\n    D --> E[\"Shield depicts future Roman history\"]\n    E --> F[\"Aeneas carries Rome's destiny into battle\"]\n    F --> G[\"Book 12: Final conflict with Turnus\"]\n    G --> H[\"Choice between restraint and vengeance\"]\n    H --> I[\"Ending tests pietas, justice, and Roman identity\"]\n```\n\nThis unit follows a clear progression:\n1. **Book 6** gives Aeneas **knowledge** of his mission.\n2. **Book 8** gives him **symbolic confirmation** of Rome’s future through the shield.\n3. **Book 12** forces him to **act** in accordance with—or in tension with—that mission.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Aeneas as model of pietas** | Aeneas is repeatedly defined by **duty**, but Vergil complicates that ideal by showing emotional conflict and moments of violence. |\n| **Fate is ultimate** | Gods may delay events, but they do not overturn **fatum**. Jupiter’s plan for Rome will be fulfilled. |\n| **Underworld geography matters** | Know the broad structure: entrance, regions of the dead, punishment, blessed groves, meeting with Anchises. Exact cartography is less important than symbolic function. |\n| **Anchises’s pageant of heroes** | This vision links Aeneas directly to future Roman leaders and culminates in Rome’s imperial mission. |\n| **Roman mission statement** | Anchises defines Roman greatness not in art or philosophy, but in rule: to govern, impose peace, spare the conquered, and subdue the proud. |\n| **Shield as prophecy in images** | The shield is not random decoration; it visually narrates Rome’s future, climaxing in **Augustus’s triumph**. |\n| **Turnus as foil** | Turnus often serves as Aeneas’s counterpart: brave and admirable, but driven more by **passion** than by destiny-bound duty. |\n| **Final killing of Turnus** | Aeneas hesitates, sees Pallas’s baldric, and kills Turnus. This moment must be read in terms of **revenge**, **justice**, **furor**, and **pietas**. |\n\n## Connections & Comparisons\n\n| **Element** | **Book 6** | **Book 8** | **Book 12** | **Connection / Contrast** |\n|---|---|---|---|---|\n| **Aeneas’s role** | Seeker of truth | Bearer of destiny | Agent of final settlement | He moves from understanding fate to enacting it. |\n| **Main symbolic mode** | **Prophecy** and revelation | **Ekphrasis** and visual symbolism | **Action** and moral decision | Vergil shifts from vision to image to deed. |\n| **Roman future** | Spoken by Anchises | Engraved on shield | Secured through combat | Rome’s destiny is first foretold, then displayed, then won. |\n| **Central tension** | Grief vs. duty | Hope vs. present struggle | Mercy vs. vengeance | The poem repeatedly tests whether duty can master emotion. |\n\n```mermaid\nflowchart LR\n    A[\"Aeneas\"] --> B[\"Pietas\"]\n    A --> C[\"Human emotion\"]\n    D[\"Turnus\"] --> E[\"Furor\"]\n    D --> C\n    B --> F[\"Roman order and destiny\"]\n    E --> G[\"Chaos, delay, destruction\"]\n    C --> H[\"Vergil's moral complexity\"]\n```\n\n## Common AP Exam Traps\n\n- Do not treat **Aeneas** as a simple, flawless hero; Vergil often presents him as **conflicted**, especially in the ending.\n- Do not assume the **Shield of Aeneas** only celebrates Rome; it glorifies Roman destiny, but it also frames history through war and struggle.\n- Do not confuse **fate** with **divine whim**: the gods intervene, but **Jupiter’s larger plan** remains fixed.\n- Do not oversimplify **Turnus** as a villain; he is often noble, courageous, and tragic, which makes the ending more morally difficult.\n- Do not read the Underworld episode only as mythology; on the AP exam, it often matters as a vehicle for **political, ethical, and Roman ideological meaning**.\n\n## Quick Review Checklist\n\n- [ ] Explain how **Aeneas’s katabasis** in Book 6 deepens his understanding of fate and duty.\n- [ ] Describe the importance of **Anchises’s prophecy** and the future Roman heroes.\n- [ ] Identify how **Roman identity** is constructed through Book 6 and Book 8.\n- [ ] Explain what makes the **Shield of Aeneas** an example of **ekphrasis** and why its imagery matters.\n- [ ] Compare **Aeneas** and **Turnus** as foils, especially through **pietas** and **furor**.\n- [ ] Analyze the tension between **personal emotion** and **public duty** in these books.\n- [ ] Explain why the final killing of **Turnus** is morally and politically significant.\n- [ ] Recognize major AP-style themes: **fate**, **leadership**, **violence**, **Roman destiny**, and **Augustan ideology**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "katabasis",
+              "definition": "A descent into the realm of the dead that allows a hero to gain knowledge unavailable among the living and return with greater understanding of destiny and obligation."
+            },
+            {
+              "term": "Golden Bough",
+              "definition": "A sacred token required for entry into the world below, signifying divine approval and proper ritual preparation."
+            },
+            {
+              "term": "Anchises’ parade of Roman heroes",
+              "definition": "A prophetic revelation in the lower world that links the Trojan mission to the future greatness of Rome and its leaders."
+            },
+            {
+              "term": "Roman pietas",
+              "definition": "A governing value shown through devotion to gods, family, and assigned mission, even when personal desire or grief would pull in another direction."
+            },
+            {
+              "term": "Palinurus",
+              "definition": "The lost helmsman whose unrest among the dead highlights the importance of burial rites and the costs of the journey to Italy."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In Book 6, Anchises’ presentation of future Roman figures primarily serves to emphasize which idea?",
+              "options": [
+                "The superiority of Greek culture over Roman culture",
+                "The inevitability of Rome’s imperial destiny under divine guidance",
+                "The futility of military achievement in human history",
+                "The rejection of family lineage as a basis for political authority"
+              ],
+              "correctAnswer": "The inevitability of Rome’s imperial destiny under divine guidance",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Why is Aeneas required to obtain the Golden Bough before entering the underworld?",
+              "options": [
+                "It proves his physical strength in single combat",
+                "It functions as a ritual sign of divine sanction for the journey",
+                "It grants him the power to defeat all the shades he encounters",
+                "It allows him to reverse the decree of fate concerning Troy"
+              ],
+              "correctAnswer": "It functions as a ritual sign of divine sanction for the journey",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Before Aeneas can descend to the underworld, the Sibyl instructs him to find the ______ as a divinely approved offering.",
+              "options": [
+                "palladium",
+                "Golden Bough",
+                "laurel crown",
+                "Trojan standard"
+              ],
+              "correctAnswer": "Golden Bough",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the underworld, Aeneas meets his father ______, who explains the souls of future Romans and their destiny.",
+              "options": [
+                "Evander",
+                "Ascanius",
+                "Anchises",
+                "Lausus"
+              ],
+              "correctAnswer": "Anchises",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Shield of Aeneas",
+              "definition": "A divinely forged piece of armor whose scenes present Roman history in advance, culminating in victory at Actium and the triumph of Augustus."
+            },
+            {
+              "term": "ecphrasis",
+              "definition": "An extended, vivid description of a work of art that carries thematic and interpretive significance within the narrative."
+            },
+            {
+              "term": "Actium",
+              "definition": "The climactic historical battle depicted on the hero’s armor, representing the defeat of eastern rivals and the emergence of Augustan rule."
+            },
+            {
+              "term": "Turnus",
+              "definition": "The chief Italian opponent in the final conflict, whose bravery, anger, and appeal for mercy frame the poem’s morally complex ending."
+            },
+            {
+              "term": "Pallas’ baldric",
+              "definition": "The war-belt taken as spoils by the Rutulian leader, whose sight provokes the Trojan hero’s final act of vengeance."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "The imagery on Aeneas’ shield in Book 8 most clearly contributes to the poem’s larger purpose by",
+              "options": [
+                "undermining the significance of Roman history through irony alone",
+                "connecting the Trojan hero’s struggles to the future achievements of Rome",
+                "showing that Aeneas rejects all involvement in warfare",
+                "proving that the gods no longer influence mortal affairs"
+              ],
+              "correctAnswer": "connecting the Trojan hero’s struggles to the future achievements of Rome",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "At the end of Book 12, Aeneas kills Turnus after seeing",
+              "options": [
+                "Latinus urging continued resistance",
+                "Juno descending from Olympus",
+                "the belt stripped from Pallas",
+                "the Trojan ships burning again"
+              ],
+              "correctAnswer": "the belt stripped from Pallas",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The extended description of Aeneas’ armor in Book 8 is an example of ______, a literary device often used to deepen thematic meaning.",
+              "options": [
+                "anaphora",
+                "ecphrasis",
+                "apostrophe",
+                "chiasmus"
+              ],
+              "correctAnswer": "ecphrasis",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The final duel of Book 12 ends when Aeneas sees the ______ worn by Turnus and is moved to avenge his ally.",
+              "options": [
+                "helmet of Mezentius",
+                "spear of Latinus",
+                "shield of Vulcan",
+                "belt of Pallas"
+              ],
+              "correctAnswer": "belt of Pallas",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Caesar's Gallic War, Books 1, 6, and 7",
+      "description": "Caesar's prose style, military campaigns, and Roman perspectives on Gallic peoples.",
+      "note": "# Unit 4: Caesar's Gallic War, Books 1, 6, and 7\n\n## Overview\nThis unit focuses on selections from **Caesar’s _Commentarii de Bello Gallico_**, especially from **Books 1, 6, and 7**, with attention to **prose style**, **military narrative**, and **Roman attitudes toward Gallic and Germanic peoples**. For the AP exam, students must be able to read Caesar closely for **grammar, syntax, and rhetoric**, while also interpreting how his narrative choices shape themes of **leadership, warfare, ethnography, and imperial ideology**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Caesar’s prose style** | Clear, compressed, highly controlled Latin prose with frequent **ablative absolutes**, **indirect statement**, and strategic word order. | AP passages often test how syntax creates emphasis, pace, and authority. |\n| **Commentary as self-presentation** | Caesar writes in the **third person**, presenting himself as measured, rational, and justified. | Students must recognize that the text is not neutral history but a crafted political narrative. |\n| **Military leadership and strategy** | Descriptions of campaigns, troop movement, sieges, morale, and tactical adaptation. | AP questions often connect literal events to larger themes of Roman discipline and virtus. |\n| **Ethnographic description** | In **Book 6**, Caesar describes **Gauls**, **Germans**, and **Druids**, often by contrast with Rome. | Important for analyzing Roman cultural bias and how “the other” is constructed. |\n| **Orgetorix and Helvetian migration** | In **Book 1**, Caesar narrates the Helvetii’s planned migration and Roman intervention. | A key example of how Caesar frames Roman action as defensive and necessary. |\n| **Vercingetorix and Gallic resistance** | In **Book 7**, Vercingetorix unites many Gallic tribes against Rome. | Central to themes of resistance, leadership, and the limits of Roman control. |\n| **Siege narrative and Alesia** | Caesar’s account of the siege of **Alesia**, including engineering and encirclement. | Tests understanding of technical vocabulary, sequencing, and the glorification of Roman ingenuity. |\n| **Roman values vs. barbarian stereotypes** | Caesar contrasts **disciplina**, **constantia**, and organization with perceived Gallic volatility or Germanic ferocity. | Students should evaluate how literary portrayal supports Roman imperial ideology. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Major Narrative Arc in Books 1, 6, and 7\n    Book 1 : Helvetian migration begins\n           : Caesar presents threat to Roman security\n           : Roman intervention and military response\n    Book 6 : Ethnographic digression on Gauls and Germans\n           : Druids, social customs, religion, values\n           : Contrast between Roman and non-Roman cultures\n    Book 7 : Vercingetorix unifies Gallic resistance\n           : Scorched-earth strategy and shifting alliances\n           : Siege of Alesia and Roman victory\n```\n\n### How Caesar’s narrative typically works\n1. **A threat or disturbance is introduced**.  \n   - Migration, rebellion, alliance-building, or military movement creates tension.\n\n2. **Caesar frames the situation as requiring Roman action**.  \n   - He often emphasizes **necessity**, **defense**, or **prevention**.\n\n3. **Strategic decisions are narrated in concise sequence**.  \n   - Marches, speeches, fortifications, and battlefield reactions appear with strong syntactic control.\n\n4. **Roman discipline is contrasted with enemy behavior**.  \n   - Caesar often highlights **order**, **foresight**, and **engineering** on the Roman side.\n\n5. **The outcome reinforces Caesar’s authority**.  \n   - Even difficulty or danger ultimately showcases his command and Roman superiority.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Historical present** | Caesar frequently uses present tense verbs in narrative to increase immediacy and vividness. |\n| **Indirect statement** | After verbs of saying, thinking, perceiving, Caesar commonly uses **accusative + infinitive**. Be ready to identify the subject accusative and tense of the infinitive. |\n| **Ablative absolute** | A noun and participle in the ablative often provide background circumstance, time, cause, or concession. |\n| **Participial compression** | Caesar often condenses action into participles rather than subordinate clauses, making prose dense but efficient. |\n| **Purpose and result clauses** | Distinguish **ut** clauses by context: intended action versus actual outcome. |\n| **Relative clauses of characteristic** | Watch for subjunctive in relative clauses that describe the sort of person or thing involved. |\n| **Third-person self-reference** | Caesar refers to himself as **Caesar**, creating an impression of objectivity while enhancing authority. |\n| **Ethnographic contrast** | Descriptions of non-Roman peoples are often selective and rhetorical, not purely descriptive. |\n\n### High-value interpretive rules\n- **Do not assume Caesar is a neutral historian**.\n- **Narrative order** often shapes judgment: Caesar places facts to justify Roman action.\n- **Speeches and descriptions** reveal values as much as events.\n- **Grammar and rhetoric** work together: syntax often reinforces power, urgency, or control.\n\n## Connections & Comparisons\n\n| **Comparison** | **Caesar’s Presentation** | **Interpretive Significance** |\n|---|---|---|\n| **Helvetii vs. Romans** | Helvetii are mobile, potentially threatening, and disruptive; Romans are defenders of order. | Supports Caesar’s claim that intervention is justified. |\n| **Gauls vs. Germans** | Gauls are more socially complex and somewhat closer to Roman civilization; Germans are portrayed as harsher and more primitive. | Book 6 uses contrast to rank foreign peoples and define Roman identity indirectly. |\n| **Caesar vs. Vercingetorix** | Both are intelligent, decisive leaders, but Caesar is shown as disciplined and successful. | Highlights Caesar’s admiration for worthy opponents while preserving Roman superiority. |\n| **Military force vs. engineering** | Victory comes not only from battle but from roads, walls, camps, and siegeworks. | Emphasizes Roman organization and practical intelligence as imperial strengths. |\n\n```mermaid\nflowchart LR\n    A[\"Roman disciplina\"] --> B[\"Efficient command\"]\n    B --> C[\"Military success\"]\n    C --> D[\"Justification of Roman rule\"]\n\n    E[\"Gallic resistance\"] --> F[\"Described as unstable or reactive\"]\n    F --> G[\"Need for Roman intervention\"]\n```\n\n## Common AP Exam Traps\n- Confusing **Caesar’s narrative voice** with true objectivity; his third-person style is rhetorical, not neutral.\n- Treating **ethnographic passages** as factual anthropology rather than politically useful Roman description.\n- Missing how **syntax affects meaning**, especially in **ablative absolutes**, **participles**, and **indirect statement**.\n- Assuming “barbarian” depictions are simple insults; often Caesar gives enemies admirable qualities while still subordinating them to Roman superiority.\n- Focusing only on plot and not on **how** Caesar tells the story through selection, compression, and contrast.\n\n## Quick Review Checklist\n- [ ] Explain how **Caesar’s prose style** creates clarity, authority, and speed.\n- [ ] Identify and translate **indirect statement**, **ablative absolute**, and key **subjunctive** uses in context.\n- [ ] Summarize the significance of the **Helvetian migration** in **Book 1**.\n- [ ] Describe how **Book 6** constructs Roman views of **Gauls**, **Germans**, and **Druids**.\n- [ ] Analyze how Caesar presents himself as a justified and effective leader.\n- [ ] Explain the role of **Vercingetorix** in **Book 7** and why he matters as an opponent.\n- [ ] Describe the strategic importance of the **siege of Alesia**.\n- [ ] Compare **Roman values** with Caesar’s portrayal of non-Roman peoples and explain the ideological effect.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "commentarii",
+              "definition": "A concise prose form that presents events in an apparently factual, straightforward manner while still allowing the author to shape interpretation and emphasize personal authority."
+            },
+            {
+              "term": "indirect statement",
+              "definition": "A construction in which a verb of saying, thinking, perceiving, or reporting introduces an accusative subject with an infinitive to convey reported content."
+            },
+            {
+              "term": "Helvetii",
+              "definition": "A Gallic people whose attempted migration from their homeland becomes the opening major conflict of the campaign narrative in Book 1."
+            },
+            {
+              "term": "Ariovistus",
+              "definition": "A German king portrayed as a threatening foreign leader whose growing power in Gaul justifies Roman intervention in Book 1."
+            },
+            {
+              "term": "diviciacus",
+              "definition": "A leading Aeduan noble associated with diplomacy, loyalty to Rome, and persuasive appeals that influence Roman decisions in Gaul."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In Book 1 of the Gallic War, Caesar's preference for clear periodic prose and selective omission most directly supports which larger narrative purpose?",
+              "options": [
+                "To present his campaigns as rational, necessary, and well controlled",
+                "To imitate archaic epic diction for elevated effect",
+                "To foreground private emotional conflict over public action",
+                "To reject political self-presentation in favor of pure ethnography"
+              ],
+              "correctAnswer": "To present his campaigns as rational, necessary, and well controlled",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "When Caesar reports what Gallic leaders say or think, the frequent use of accusative-and-infinitive constructions primarily allows him to do which of the following?",
+              "options": [
+                "Integrate reported viewpoints into a tightly controlled Roman narrative voice",
+                "Shift the narrative fully into first-person dialogue",
+                "Avoid all subordination and causal explanation",
+                "Mark every reported claim as certainly false"
+              ],
+              "correctAnswer": "Integrate reported viewpoints into a tightly controlled Roman narrative voice",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Book 1, Caesar presents the migration of the ______ as an immediate strategic danger requiring Roman action.",
+              "options": [
+                "Helvetii",
+                "Belgae",
+                "Treveri",
+                "Sequani"
+              ],
+              "correctAnswer": "Helvetii",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The German leader defeated by Caesar in Book 1 is ______.",
+              "options": [
+                "Vercingetorix",
+                "Ariovistus",
+                "Orgetorix",
+                "Ambiorix"
+              ],
+              "correctAnswer": "Ariovistus",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "ethnography",
+              "definition": "A descriptive mode that explains the customs, social structures, religious practices, and values of a people, often revealing as much about the observer as about the subjects described."
+            },
+            {
+              "term": "druids",
+              "definition": "A learned elite in Gaul associated with religious authority, education, legal judgment, and the preservation of tradition."
+            },
+            {
+              "term": "Germani",
+              "definition": "Peoples beyond the Rhine whom the narrative contrasts with the Gauls in order to emphasize perceived toughness, simplicity, and military danger."
+            },
+            {
+              "term": "Vercingetorix",
+              "definition": "An Arvernian leader who unifies major Gallic resistance against Rome in Book 7 through strategy, discipline, and appeals to common defense."
+            },
+            {
+              "term": "Alesia",
+              "definition": "The site of a decisive siege in which Roman fortification, logistics, and double lines of defense overcome both internal and external opposition."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In Book 6, Caesar's description of Gauls and Germans is best understood as serving which dual purpose?",
+              "options": [
+                "It provides ethnographic information while also reinforcing Roman political and military claims",
+                "It abandons all narrative agenda in favor of objective anthropology",
+                "It focuses exclusively on religious ritual without strategic relevance",
+                "It argues that Gauls and Germans are culturally indistinguishable from Romans"
+              ],
+              "correctAnswer": "It provides ethnographic information while also reinforcing Roman political and military claims",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "At Alesia in Book 7, Caesar's military success depends most directly on which tactical advantage?",
+              "options": [
+                "The coordinated use of fortifications against enemies inside and outside the siege lines",
+                "Superior Roman naval power on the Atlantic coast",
+                "A surprise winter crossing of the Alps",
+                "Immediate support from a large Spartan alliance"
+              ],
+              "correctAnswer": "The coordinated use of fortifications against enemies inside and outside the siege lines",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Book 6, Caesar identifies the learned religious class in Gaul as the ______.",
+              "options": [
+                "equites",
+                "senatores",
+                "druids",
+                "clientes"
+              ],
+              "correctAnswer": "druids",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The principal Gallic commander who organizes large-scale resistance to Caesar in Book 7 is ______.",
+              "options": [
+                "Diviciacus",
+                "Vercingetorix",
+                "Dumnorix",
+                "Ariovistus"
+              ],
+              "correctAnswer": "Vercingetorix",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Comparative Analysis and Sight Translation",
+      "description": "Thematic essay comparing Vergil and Caesar; strategies for unseen Latin sight translation.",
+      "note": "# Unit 5: Comparative Analysis and Sight Translation\n\n## Overview\nThis unit prepares you for two closely related AP Latin skills: writing a **thematic comparative essay** on **Vergil** and **Caesar**, and completing an **unseen sight translation** with accuracy and control. It matters because the AP exam rewards not just literal comprehension of Latin, but also your ability to connect **language, style, theme, and authorial purpose** under timed conditions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Comparative thematic analysis** | Examining how **Vergil** and **Caesar** treat a shared idea such as leadership, war, duty, or human cost | The AP essay expects you to compare texts meaningfully, not summarize them separately |\n| **Authorial purpose** | The reason an author shapes a passage in a particular way | Strong essays explain **why** a stylistic or thematic choice matters |\n| **Genre awareness** | Recognizing that **epic poetry** and **historical prose/commentary** use different conventions | Helps you explain differences in tone, structure, and representation |\n| **Close reading of Latin** | Careful attention to diction, syntax, imagery, and rhetorical effects | Essential for both essay evidence and sight translation accuracy |\n| **Sight translation strategy** | A repeatable method for decoding unseen Latin | Prevents panic and improves speed, accuracy, and grammatical control |\n| **Syntactic parsing** | Identifying subject, verb, clause structure, modifiers, and constructions | The fastest route to understanding unfamiliar sentences |\n| **Contextual inference** | Using grammar, word families, and surrounding sense to infer unknown vocabulary | AP passages often include words you may not know directly |\n| **Evidence-based argumentation** | Supporting claims with precise textual references and analysis | High-scoring AP writing depends on interpretation backed by the Latin |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Read the prompt or passage] --> B[Identify the main task]\n    B --> C[\"For essay: isolate theme, authors, and comparison point\"]\n    B --> D[\"For sight translation: locate main verb(s) and subject(s)\"]\n    C --> E[Select textual evidence from both authors]\n    E --> F[Compare theme, tone, style, and purpose]\n    F --> G[Build analytical claim]\n    G --> H[Write concise, evidence-based analysis]\n    D --> I[Mark clauses, phrases, and constructions]\n    I --> J[Resolve syntax before vocabulary guessing]\n    J --> K[Infer unfamiliar words from context]\n    K --> L[Draft smooth but accurate translation]\n    L --> M[Check meaning, grammar, and English clarity]\n```\n\n### Recommended sight translation workflow\n1. **Read the whole sentence or passage once** without translating word-by-word.\n2. Find the **main verb** first, then the **subject**.\n3. Mark obvious **subordinate clauses**, participles, infinitives, and ablative absolutes.\n4. Connect modifiers to the correct nouns by **case, number, and gender**.\n5. Translate the **core clause** before adding descriptive details.\n6. Infer unknown vocabulary from **roots, derivatives, and context**.\n7. Revise into clear English while preserving the Latin meaning.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Compare, do not parallel-summarize** | A strong comparative essay makes a direct claim about both authors in relation to a theme; it does not discuss **Caesar** and **Vergil** in isolation |\n| **Theme + technique + effect** | Analysis should move from **what** the author presents, to **how** it is presented, to **why** that choice matters |\n| **Genre shapes meaning** | **Vergil’s epic** often elevates events through imagery, emotion, and destiny; **Caesar’s prose** often projects clarity, control, and political or military authority |\n| **Translate syntax before style** | In sight translation, establish grammatical structure first; polished English comes after accurate parsing |\n| **Main clause first** | When a sentence is difficult, isolate the main clause, then attach subordinate elements in order |\n| **Unknown word rule** | Do not stop at one unfamiliar word; determine its likely function from morphology and context |\n| **Literal is not always accurate** | Good translation preserves meaning and grammar, not necessarily Latin word order |\n| **Use textual evidence precisely** | In essays, refer to specific actions, phrases, images, or rhetorical features rather than vague generalizations |\n\n### Common constructions to watch in sight translation\n- **Ablative absolute**\n- **Indirect statement** with accusative subject + infinitive\n- **Purpose** and **result clauses**\n- **Relative clauses**\n- **Participial phrases**\n- **Passive verbs**\n- **Gerunds** and **gerundives**, especially with necessity or purpose\n- **Dative** of reference, indirect object, or possession\n\n## Connections & Comparisons\n\n| **Feature** | **Vergil** | **Caesar** | **AP significance** |\n|---|---|---|---|\n| **Genre** | **Epic poetry** | **Historical/political prose** | Explains why style and narrative perspective differ |\n| **War** | Often emphasizes **pathos**, fate, and the human cost | Often emphasizes **strategy**, discipline, and command | Useful for thematic comparison essays on conflict |\n| **Leadership** | Leaders may be shaped by **duty, destiny, and internal conflict** | Leaders are often shown through **action, decision, and authority** | Helps distinguish moral vs practical portrayals |\n| **Style** | Elevated diction, imagery, symbolism, dramatic texture | Direct syntax, compressed narrative, rhetorical self-control | Strong comparison requires attention to form, not just content |\n| **Reader effect** | Invites emotional and moral reflection | Encourages trust in judgment and clarity of events | Connects literary technique to authorial purpose |\n\n```mermaid\nflowchart LR\n    A[Shared AP Theme] --> B[War]\n    A --> C[Leadership]\n    A --> D[Duty]\n    B --> E[Vergil: emotional and fated conflict]\n    B --> F[Caesar: tactical and political conflict]\n    C --> G[Vergil: heroic burden]\n    C --> H[Caesar: effective command]\n    D --> I[Vergil: destiny and pietas]\n    D --> J[Caesar: obligation to campaign, state, or soldiers]\n```\n\n## Common AP Exam Traps\n- Confusing **summary** with **analysis**: retelling what happens is not the same as explaining how an author develops a theme.\n- Ignoring **genre differences**: do not treat **epic poetry** and **military prose** as if they operate by the same stylistic rules.\n- Translating strictly by **Latin word order** instead of grammatical relationships.\n- Letting one unknown word derail the whole sentence; often the syntax reveals most of the meaning.\n- Making broad claims like “both authors show war is bad” without discussing **specific evidence**, **tone**, or **authorial method**.\n\n## Quick Review Checklist\n- [ ] I can explain how a **comparative thematic essay** differs from two separate mini-essays.\n- [ ] I can identify at least three major themes that can connect **Vergil** and **Caesar**.\n- [ ] I can describe how **genre** affects tone, style, and presentation in each author.\n- [ ] I can support a comparison using **specific textual evidence** rather than vague summary.\n- [ ] I can begin a sight translation by locating the **main verb**, **subject**, and **clause structure**.\n- [ ] I can recognize major Latin constructions such as **ablative absolutes**, **indirect statements**, and **purpose clauses**.\n- [ ] I can infer the likely meaning of an unfamiliar word using **morphology** and **context**.\n- [ ] I can produce an English translation that is both **grammatically accurate** and **readable**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Comparative Analysis Essay",
+              "definition": "A written response that develops a defensible claim about shared themes, contrasting perspectives, or differing literary methods across prescribed passages and supports that claim with specific evidence from both authors."
+            },
+            {
+              "term": "Diction",
+              "definition": "An author’s deliberate choice of vocabulary, including level of formality, concreteness, and connotation, used to shape tone and meaning."
+            },
+            {
+              "term": "Word Order",
+              "definition": "The arrangement of sentence elements for emphasis, suspense, contrast, or rhythm rather than according to a fixed positional pattern."
+            },
+            {
+              "term": "Aeneas and Pietas",
+              "definition": "A leadership ideal centered on duty to gods, family, and mission, often presented as requiring self-restraint and sacrifice for a larger destiny."
+            },
+            {
+              "term": "Caesarian Commentarii Style",
+              "definition": "A prose manner marked by clarity, compression, apparent objectivity, and selective presentation that advances the author’s political and military self-fashioning."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a comparative essay on leadership, which thesis most effectively sets up analysis of both Caesar and Vergil at an AP level?",
+              "options": [
+                "Caesar and Vergil both describe Roman leaders, but they do so in different ways.",
+                "Vergil presents leadership as morally costly service to fate and community, whereas Caesar presents it as rational, disciplined command that legitimizes conquest.",
+                "Aeneas is a hero in epic poetry, while Caesar is a general in historical prose.",
+                "Roman literature often includes war, religion, and politics as major themes."
+              ],
+              "correctAnswer": "Vergil presents leadership as morally costly service to fate and community, whereas Caesar presents it as rational, disciplined command that legitimizes conquest.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student argues that Caesar’s use of third-person self-reference most strongly contributes to which effect in comparison with Vergil’s narration?",
+              "options": [
+                "It guarantees that his account is entirely unbiased and historically complete.",
+                "It creates an impression of detachment and authority while still allowing careful control over his public image.",
+                "It makes his prose more emotional and less strategic than epic narration.",
+                "It prevents readers from identifying him as the central actor in the campaign."
+              ],
+              "correctAnswer": "It creates an impression of detachment and authority while still allowing careful control over his public image.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In comparative analysis, a discussion of how Vergil delays a key verb to heighten suspense is primarily analysis of Latin ______.",
+              "options": [
+                "meter",
+                "syntax",
+                "genre",
+                "geography"
+              ],
+              "correctAnswer": "syntax",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When Aeneas places divine command above personal desire, Vergil most clearly emphasizes the Roman value of ______.",
+              "options": [
+                "furor",
+                "pietas",
+                "otium",
+                "luxuria"
+              ],
+              "correctAnswer": "pietas",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Sight Translation",
+              "definition": "The process of reading an unfamiliar passage by identifying morphology, clause structure, and context in order to produce an accurate and coherent English rendering."
+            },
+            {
+              "term": "Main Clause First Strategy",
+              "definition": "An approach to unfamiliar prose or verse that begins by locating the finite verb and its subject in the central statement before attaching subordinate elements."
+            },
+            {
+              "term": "Participial Phrase",
+              "definition": "A verbal adjective construction that modifies a noun and can express attendant circumstance, cause, time, concession, or description depending on context."
+            },
+            {
+              "term": "Subordinate Clause Marker",
+              "definition": "A signaling word such as one introducing purpose, result, indirect question, condition, or cum clause, used to map relationships between ideas."
+            },
+            {
+              "term": "Ablative Absolute",
+              "definition": "A grammatically independent construction consisting of a noun and participial element in the same case, often translated as a temporal, causal, or concessive phrase."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A strong first step in AP Latin sight translation of an unfamiliar passage is to",
+              "options": [
+                "translate line by line in English word order without identifying clause boundaries.",
+                "locate the main finite verb or verbs, determine clause structure, and then connect modifiers to their nouns.",
+                "begin with any dictionary meaning that seems plausible and revise only if absolutely necessary.",
+                "ignore participles until the end because they rarely affect the sentence’s central meaning."
+              ],
+              "correctAnswer": "locate the main finite verb or verbs, determine clause structure, and then connect modifiers to their nouns.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In an unseen passage, the presence of ut followed by a subjunctive verb should lead a student first to consider whether the clause is",
+              "options": [
+                "purpose or result, depending on context.",
+                "an ablative absolute modifying the main verb.",
+                "indirect statement after a verb of saying.",
+                "a relative clause of characteristic only."
+              ],
+              "correctAnswer": "purpose or result, depending on context.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In sight translation, a noun plus participle in the ablative with no clear syntactic tie to the main clause is often an ______.",
+              "options": [
+                "indirect statement",
+                "ablative absolute",
+                "accusative of respect",
+                "gerundive of obligation"
+              ],
+              "correctAnswer": "ablative absolute",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a student identifies a relative pronoun and then searches for the noun it refers to, the student is establishing the clause’s ______.",
+              "options": [
+                "antecedent",
+                "caesura",
+                "protasis",
+                "apodosis"
+              ],
+              "correctAnswer": "antecedent",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

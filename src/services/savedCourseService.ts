@@ -13,6 +13,10 @@ interface SavedCourseOptimizedInput {
   description: string;
   subject: string;
   hasEmbeddings: boolean;
+  tags?: string[];
+  // AP catalog fields — only populated when courseType === "ap_catalog"
+  courseType?: "standard" | "ap_catalog";
+  apSubject?: string;
 }
 
 export async function createSavedCourse(userId: string, data: SavedCourseInput): Promise<{ id: string, hasEmbeddings: boolean, subject: string }> {
@@ -28,6 +32,7 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
     const courseDescription = courseData?.description || null;
     const hasEmbeddings = courseData?.hasEmbeddings || false;
     const subject = courseData?.subject || null;
+    const courseType = courseData?.courseType || "standard";
 
     const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
     for (let i = 1; i <= data.lessonCount; i++) {
@@ -40,24 +45,31 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       .collection("savedCourses")
       .doc(data.courseId);
 
-    await savedCourseRef.set({
+    const savedDoc: Record<string, unknown> = {
       courseId: data.courseId,
       title: courseTitle,
       description: courseDescription,
       hasEmbeddings,
       saved: true,
       subject: subject,
+      courseType,
+      tags: courseData?.tags ?? [],
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,
       },
       lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
-    });
+    };
+
+    if (courseType === "ap_catalog") {
+      if (courseData?.apSubject !== undefined) savedDoc.apSubject = courseData.apSubject;
+    }
+
+    await savedCourseRef.set(savedDoc);
 
     // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {
-      // Increment savedCount on the course document
       const courseRef = db.collection("courses").doc(data.courseId);
       transaction.update(courseRef, {
         savedCount: admin.firestore.FieldValue.increment(1),
@@ -89,6 +101,7 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
     const courseDescription = courseData?.description || null;
     const hasEmbeddings = courseData?.hasEmbeddings || false;
     const subject = courseData?.subject || null;
+    const courseType = courseData?.courseType || "standard";
 
     const lessonsSnapshot = await courseRef.collection("lessons").get();
     const lessonCount = lessonsSnapshot.size;
@@ -104,24 +117,30 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       .collection("savedCourses")
       .doc(courseId);
 
-    await savedCourseRef.set({
+    const savedDoc: Record<string, unknown> = {
       courseId: courseId,
       title: courseTitle,
       description: courseDescription,
       hasEmbeddings,
       saved: true,
       subject: subject,
+      courseType,
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,
       },
       lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
-    });
+    };
+
+    if (courseType === "ap_catalog") {
+      if (courseData?.apSubject !== undefined) savedDoc.apSubject = courseData.apSubject;
+    }
+
+    await savedCourseRef.set(savedDoc);
 
     // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {
-      // Increment savedCount on the course document
       const courseRef = db.collection("courses").doc(courseId);
       transaction.update(courseRef, {
         savedCount: admin.firestore.FieldValue.increment(1),
@@ -160,21 +179,29 @@ export async function createSavedCourseOptimized(userId: string, data: SavedCour
       .collection("savedCourses")
       .doc(data.courseId);
 
-    // Create saved course document with provided data (no DB read required)
-    await savedCourseRef.set({
+    const savedDoc: Record<string, unknown> = {
       courseId: data.courseId,
       title: data.title,
       description: data.description,
       hasEmbeddings: data.hasEmbeddings,
       saved: true,
       subject: data.subject,
+      courseType: data.courseType || "standard",
+      tags: data.tags ?? [],
       progress: {
         overallScore: 0,
         lessons: lessonsProgress,
       },
       lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
-    });
+    };
+
+    if (data.courseType === "ap_catalog") {
+      if (data.apSubject !== undefined) savedDoc.apSubject = data.apSubject;
+    }
+
+    // Create saved course document with provided data (no DB read required)
+    await savedCourseRef.set(savedDoc);
 
     // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {

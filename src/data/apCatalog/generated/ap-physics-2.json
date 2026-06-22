@@ -1,0 +1,1069 @@
+{
+  "apSubject": "AP Physics 2: Algebra-Based",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Fluids",
+      "description": "Fluid statics and dynamics: pressure, buoyancy, continuity equation, and Bernoulli's principle in depth.",
+      "note": "# Unit 1: Fluids\n\n## Overview\nThis unit introduces how **fluids** behave at rest and in motion, focusing on **pressure**, **buoyant force**, the **continuity equation**, and **Bernoulli’s principle**. These ideas are heavily tested on the AP Physics 2 exam because they connect conceptual reasoning, algebraic modeling, and real-world situations such as floating objects, fluid flow in pipes, and pressure differences in liquids and gases.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Density** | Mass per unit volume of a substance. | Used to compare substances, determine whether objects float or sink, and calculate buoyant force and pressure effects. |\n| **Pressure** | Force distributed over an area. | Central to explaining fluid statics, hydraulics, and why pressure changes with depth. |\n| **Hydrostatic Pressure** | Pressure in a fluid due to the weight of the fluid above it. | Frequently appears in problems involving depth, open containers, and manometers. |\n| **Pascal’s Principle** | A pressure change applied to an enclosed fluid is transmitted throughout the fluid. | Explains hydraulic lifts and force multiplication; AP questions often test area-force relationships. |\n| **Buoyancy** | Upward force exerted by a fluid on an immersed object. | Essential for floating, sinking, and submerged-object problems; tied directly to **Archimedes’ principle**. |\n| **Continuity Equation** | Relationship showing conservation of mass in flowing fluids. | Used to compare speed and cross-sectional area in pipes; often paired with Bernoulli reasoning. |\n| **Bernoulli’s Principle** | Relates pressure, speed, and height in streamline fluid flow. | A major AP concept for understanding why faster-moving fluid can correspond to lower pressure. |\n| **Ideal vs. Real Fluids** | Ideal fluids are incompressible and nonviscous; real fluids may have viscosity and turbulence. | AP questions often assume ideal fluid conditions, so students must recognize model assumptions. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Fluid at rest or in motion\"] --> B[\"Determine situation type\"]\n    B --> C[\"Static fluid\"]\n    B --> D[\"Moving fluid\"]\n\n    C --> E[\"Use pressure ideas\"]\n    E --> F[\"$$P = \\\\frac{F}{A}$$\"]\n    E --> G[\"$$P = P_0 + \\\\rho g h$$\"]\n    E --> H[\"Compare depths and surfaces\"]\n\n    C --> I[\"Check for buoyancy\"]\n    I --> J[\"Displaced fluid creates upward force\"]\n    J --> K[\"$$F_B = \\\\rho_{fluid} g V_{disp}$$\"]\n    K --> L[\"Float, sink, or remain suspended?\"]\n\n    D --> M[\"Use conservation of mass\"]\n    M --> N[\"$$A_1 v_1 = A_2 v_2$$\"]\n\n    D --> O[\"Use energy per unit volume\"]\n    O --> P[\"$$P + \\\\frac{1}{2}\\\\rho v^2 + \\\\rho g y = \\\\text{constant}$$\"]\n    P --> Q[\"Relate pressure, speed, and height\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Quantity** | **Expression** | **Meaning / Use** |\n|---|---|---|\n| **Density** | $$\\rho = \\frac{m}{V}$$ | Relates mass and volume; useful for fluid identification and buoyancy. |\n| **Pressure** | $$P = \\frac{F}{A}$$ | Pressure increases when force increases or area decreases. |\n| **Hydrostatic Pressure** | $$P = P_0 + \\rho g h$$ | Pressure at depth $$h$$ in a fluid open to the atmosphere. |\n| **Pressure Difference** | $$\\Delta P = \\rho g \\Delta h$$ | Useful when comparing two points in the same fluid. |\n| **Pascal’s Principle** | $$P_1 = P_2 \\Rightarrow \\frac{F_1}{A_1} = \\frac{F_2}{A_2}$$ | Basis for hydraulic systems. |\n| **Buoyant Force** | $$F_B = \\rho_{fluid} g V_{disp}$$ | Weight of the displaced fluid. |\n| **Floating Condition** | $$F_B = mg$$ | For an object floating in equilibrium. |\n| **Continuity Equation** | $$A_1 v_1 = A_2 v_2$$ | For steady flow of an incompressible fluid. |\n| **Bernoulli’s Equation** | $$P + \\frac{1}{2}\\rho v^2 + \\rho g y = \\text{constant}$$ | Connects pressure, speed, and height along a streamline. |\n| **Special Bernoulli Comparison** | $$P_1 + \\frac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\frac{1}{2}\\rho v_2^2 + \\rho g y_2$$ | Compare two locations in the same moving fluid. |\n\n**Must-know rules and assumptions:**\n- **Pressure in a static fluid** depends on **depth**, not container shape.\n- In the same connected static fluid, points at the same depth have the same pressure.\n- **Buoyant force** depends on the **fluid displaced**, not directly on the object’s total mass.\n- **Continuity** and **Bernoulli** usually assume an **ideal fluid**: incompressible, nonviscous, and steady flow.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Connected** | **Key Difference** |\n|---|---|---|\n| **Pressure vs. Force** | Pressure is created by force acting over an area. | **Force** is measured in newtons; **pressure** is force per area. |\n| **Hydrostatic Pressure vs. Bernoulli Pressure Effects** | Both involve pressure in fluids. | Hydrostatic pressure comes from fluid weight at depth; Bernoulli describes pressure changes due to speed and height in moving fluids. |\n| **Buoyancy vs. Weight** | Both are forces acting on an object in a fluid. | **Weight** acts downward due to gravity; **buoyant force** acts upward due to displaced fluid. |\n| **Continuity vs. Bernoulli** | Both describe moving fluids and are often used together. | Continuity comes from **mass conservation**; Bernoulli comes from **energy conservation**. |\n\n### Useful conceptual comparison\n- In a **narrower pipe**, fluid speed is typically **greater** because of $$A_1 v_1 = A_2 v_2$$.\n- If height is unchanged, greater speed usually means **lower pressure** by Bernoulli’s principle.\n- This does **not** mean “moving fluids always have low pressure”; pressure depends on the full balance of speed, height, and surrounding conditions.\n\n## Common AP Exam Traps\n\n- Confusing **pressure** with **force**. A larger pressure does not necessarily mean a larger total force unless the area is also considered.\n- Assuming pressure depends on the **shape** or total volume of the container. In hydrostatics, pressure at a point depends on $$\\rho$$, $$g$$, and $$h$$.\n- Forgetting that **buoyant force** is based on the **displaced fluid volume**, not always the object’s full volume. For floating objects, only part of the object may be submerged.\n- Reversing the continuity relationship: when area decreases, **speed increases**, not decreases.\n- Using **Bernoulli’s equation** between points that are not on the same streamline or in situations where viscosity, turbulence, or pumps make the ideal model invalid.\n\n## Quick Review Checklist\n\n- [ ] I can define **density** and use $$\\rho = \\frac{m}{V}$$ in fluid problems.\n- [ ] I can calculate **pressure** from force and area using $$P = \\frac{F}{A}$$.\n- [ ] I can explain why pressure in a fluid increases with depth using $$P = P_0 + \\rho g h$$.\n- [ ] I can apply **Pascal’s principle** to hydraulic systems and relate forces to areas.\n- [ ] I can calculate **buoyant force** and determine whether an object floats, sinks, or is neutrally buoyant.\n- [ ] I can use $$A_1 v_1 = A_2 v_2$$ to compare fluid speeds in different parts of a pipe.\n- [ ] I can apply **Bernoulli’s equation** to relate pressure, speed, and height in moving fluids.\n- [ ] I can distinguish when to use **fluid statics** ideas versus **fluid dynamics** ideas on an AP-style problem.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Pressure in a fluid",
+              "definition": "The force exerted per unit area on a surface. In a fluid at rest, it acts perpendicular to any boundary and is transmitted throughout the fluid."
+            },
+            {
+              "term": "Hydrostatic pressure",
+              "definition": "The increase in pressure with depth caused by the weight of the fluid above, modeled by $$P=P_0+\\rho gh$$ for a point at depth $$h$$ below the surface."
+            },
+            {
+              "term": "Gauge pressure",
+              "definition": "The amount by which the pressure of a system exceeds atmospheric pressure, given by $$P_{\\text{abs}}-P_{\\text{atm}}$$."
+            },
+            {
+              "term": "Pascal's principle",
+              "definition": "A change in pressure applied to an enclosed fluid is transmitted undiminished to every portion of the fluid and to the walls of its container."
+            },
+            {
+              "term": "Buoyant force",
+              "definition": "The upward force exerted by a fluid on an immersed object, equal in magnitude to the weight of the displaced fluid: $$F_B=\\rho_{\\text{fluid}}V_{\\text{disp}}g$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A sealed container holds an incompressible fluid. A small piston of area $$A_1$$ applies a force $$F_1$$, and a larger piston of area $$A_2=5A_1$$ supports a load. Neglecting height differences, what load force can be supported when the applied force is $$F_1=120\\ \\text{N}$$?",
+              "options": [
+                "$$24\\ \\text{N}$$",
+                "$$120\\ \\text{N}$$",
+                "$$600\\ \\text{N}$$",
+                "$$3000\\ \\text{N}$$"
+              ],
+              "correctAnswer": "$$600\\ \\text{N}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A solid block of density $$0.75\\rho_{\\text{water}}$$ floats at rest in fresh water. What fraction of the block's volume is submerged?",
+              "options": [
+                "$$0.25$$",
+                "$$0.50$$",
+                "$$0.75$$",
+                "$$1.33$$"
+              ],
+              "correctAnswer": "$$0.75$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "At a depth $$h$$ below the surface of a fluid open to the atmosphere, the absolute pressure is ______.",
+              "options": [
+                "$$P_{\\text{atm}}-\\rho gh$$",
+                "$$\\rho gh$$",
+                "$$P_{\\text{atm}}+\\rho gh$$",
+                "$$\\frac{P_{\\text{atm}}}{\\rho gh}$$"
+              ],
+              "correctAnswer": "$$P_{\\text{atm}}+\\rho gh$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A fully submerged object displaces a volume $$V$$ of fluid of density $$\\rho$$. The magnitude of the upward force from the fluid is ______.",
+              "options": [
+                "$$\\rho Vg$$",
+                "$$\\frac{V}{\\rho g}$$",
+                "$$mg-\\rho Vg$$",
+                "$$\\rho g/V$$"
+              ],
+              "correctAnswer": "$$\\rho Vg$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Continuity equation",
+              "definition": "For steady flow of an incompressible fluid, the volume flow rate remains constant along a streamline, so $$A_1v_1=A_2v_2$$."
+            },
+            {
+              "term": "Volume flow rate",
+              "definition": "The volume of fluid passing through a cross section per unit time, given by $$Q=Av$$ for uniform flow through area $$A$$ at speed $$v$$."
+            },
+            {
+              "term": "Bernoulli's principle",
+              "definition": "For an ideal fluid in steady flow, the sum $$P+\\frac{1}{2}\\rho v^2+\\rho gy$$ remains constant along a streamline."
+            },
+            {
+              "term": "Dynamic pressure",
+              "definition": "The kinetic-energy-per-unit-volume term in fluid flow, represented by $$\\frac{1}{2}\\rho v^2$$."
+            },
+            {
+              "term": "Torricelli's theorem",
+              "definition": "For fluid exiting a small opening in a tank open to the atmosphere, the efflux speed from a depth $$h$$ below the surface is $$v=\\sqrt{2gh}$$, assuming ideal flow."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Water flows steadily through a horizontal pipe that narrows from cross-sectional area $$A$$ to $$\\frac{1}{3}A$$. If the speed in the wider section is $$2\\ \\text{m/s}$$, what is the speed in the narrower section?",
+              "options": [
+                "$$\\frac{2}{3}\\ \\text{m/s}$$",
+                "$$2\\ \\text{m/s}$$",
+                "$$6\\ \\text{m/s}$$",
+                "$$18\\ \\text{m/s}$$"
+              ],
+              "correctAnswer": "$$6\\ \\text{m/s}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "An ideal incompressible fluid flows through a horizontal tube. At one point the speed is $$3\\ \\text{m/s}$$ and the pressure is $$1.8\\times10^5\\ \\text{Pa}$$. At a second point the speed is $$5\\ \\text{m/s}$$. If the fluid density is $$1000\\ \\text{kg/m}^3$$, what is the pressure at the second point?",
+              "options": [
+                "$$1.64\\times10^5\\ \\text{Pa}$$",
+                "$$1.72\\times10^5\\ \\text{Pa}$$",
+                "$$1.80\\times10^5\\ \\text{Pa}$$",
+                "$$1.96\\times10^5\\ \\text{Pa}$$"
+              ],
+              "correctAnswer": "$$1.72\\times10^5\\ \\text{Pa}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For steady flow of an incompressible fluid through a pipe, if the cross-sectional area decreases, the fluid speed must ______ to keep $$Q=Av$$ constant.",
+              "options": [
+                "decrease",
+                "become zero",
+                "increase",
+                "remain unchanged"
+              ],
+              "correctAnswer": "increase",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For ideal fluid flow along a streamline, if height remains constant and speed increases, the pressure must ______ according to Bernoulli's equation.",
+              "options": [
+                "increase",
+                "decrease",
+                "remain zero",
+                "oscillate randomly"
+              ],
+              "correctAnswer": "decrease",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Thermodynamics",
+      "description": "Ideal gas law, kinetic theory, first and second laws of thermodynamics, heat engines, and entropy.",
+      "note": "# Unit 2: Thermodynamics\n\n## Overview\nThis unit studies how **energy** moves and changes form through **heat**, **work**, and the behavior of **gases**. For the AP Physics 2 exam, you must connect particle-level ideas from **kinetic theory** to macroscopic laws like the **ideal gas law**, the **first law of thermodynamics**, and the **second law of thermodynamics**, especially in reasoning about **engines**, **efficiency**, and **entropy**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Ideal Gas Law** | Relationship among **pressure**, **volume**, **temperature**, and amount of gas: $$PV=nRT$$ | Frequently used to predict how a gas changes during heating, cooling, compression, or expansion |\n| **Kinetic Theory** | Model that explains gas behavior by the motion of many tiny particles | Lets you justify why temperature relates to average molecular kinetic energy |\n| **Internal Energy** | Total microscopic energy of a system; for an ideal gas, it depends only on temperature | Essential for applying the **first law** and comparing thermodynamic states |\n| **First Law of Thermodynamics** | Energy conservation for thermal systems: heat added can change internal energy and/or do work | One of the most common free-response and multiple-choice tools in this unit |\n| **PV Diagrams and Work** | Graphical representation of thermodynamic processes; area under a curve gives work done by the gas | AP questions often ask students to interpret processes visually and compare work values |\n| **Second Law of Thermodynamics** | Natural processes increase overall entropy; heat does not spontaneously flow from cold to hot | Explains why no engine can be $$100\\%$$ efficient and why some processes are irreversible |\n| **Heat Engines** | Devices that convert thermal energy into useful work by operating between hot and cold reservoirs | You must calculate efficiency and reason about energy flow in cyclic processes |\n| **Entropy** | Measure of energy dispersal or number of possible microscopic arrangements | Used conceptually to determine whether a process is spontaneous or reversible |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Gas system in an initial state\"] --> B[\"Energy transfer occurs as heat: $$Q$$\"]\n    A --> C[\"Energy transfer occurs as work: $$W$$\"]\n    B --> D[\"Internal energy changes: $$\\Delta U$$\"]\n    C --> D\n    D --> E[\"State variables may change: $$P$$, $$V$$, $$T$$\"]\n    E --> F[\"Process shown on a $$PV$$ diagram\"]\n    F --> G[\"For a cycle, system may return to initial state\"]\n    G --> H[\"Over a full cycle: $$\\Delta U = 0$$\"]\n    H --> I[\"Net heat input becomes net work output\"]\n    I --> J[\"Heat engine efficiency limited by second law and entropy increase\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Quantity** | **Expression / Definition** | **What to Remember** |\n|---|---|---|\n| **Ideal Gas Law** | $$PV=nRT$$ | Connects the macroscopic state variables of an ideal gas |\n| **Pressure from force** | $$P=\\frac{F}{A}$$ | Useful foundation for understanding gas pressure |\n| **Average translational kinetic energy** | $$K_{\\text{avg}}=\\frac{3}{2}k_B T$$ | Temperature measures average kinetic energy per molecule |\n| **Internal energy of an ideal monatomic gas** | $$U=\\frac{3}{2}nRT$$ | For an ideal gas, internal energy depends only on temperature |\n| **First law of thermodynamics** | $$\\Delta U = Q - W$$ | Here, $$W$$ is work done **by the system** |\n| **Work done by a gas** | $$W=\\int P\\,dV$$ | On a $$PV$$ diagram, this is the area under the curve |\n| **Constant-pressure work** | $$W=P\\Delta V$$ | Valid only if pressure remains constant |\n| **Efficiency of a heat engine** | $$e=\\frac{W}{Q_H}=1-\\frac{Q_C}{Q_H}$$ | Always less than $$1$$ |\n| **Second law of thermodynamics** | No cyclic engine can convert all absorbed heat into work | Some energy must be rejected to a colder reservoir |\n| **Entropy change for a reversible process** | $$\\Delta S=\\frac{Q_{\\text{rev}}}{T}$$ | Entropy helps determine reversibility and spontaneity |\n| **Thermal efficiency limit for an ideal reversible engine** | $$e_{\\text{max}}=1-\\frac{T_C}{T_H}$$ | Temperatures must be in **kelvins** |\n\n### Important process types\n- **Isothermal process**: temperature constant, so for an ideal gas $$\\Delta U=0$$.\n- **Isochoric process**: volume constant, so $$W=0$$.\n- **Isobaric process**: pressure constant, so $$W=P\\Delta V$$.\n- **Adiabatic process**: no heat transfer, so $$Q=0$$.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They’re Connected** | **Key Difference** |\n|---|---|---|\n| **Heat** vs. **Temperature** | Both relate to thermal behavior | **Temperature** measures average kinetic energy; **heat** is energy transferred due to temperature difference |\n| **Internal Energy** vs. **Heat** | Heat transfer can change internal energy | **Internal energy** is stored in the system; **heat** is energy in transit |\n| **Work** vs. **Heat** | Both are methods of energy transfer | **Work** transfers energy by macroscopic force through distance; **heat** transfers energy because of temperature difference |\n| **First Law** vs. **Second Law** | Both govern thermodynamic systems | **First law** says energy is conserved; **second law** limits direction of processes and efficiency |\n| **Reversible** vs. **Irreversible** processes | Both describe thermodynamic changes | **Reversible** processes are idealized and entropy-neutral for the universe; **irreversible** ones increase total entropy |\n\n```mermaid\nflowchart LR\n    A[\"Hot reservoir at $$T_H$$\"] --> B[\"Heat input $$Q_H$$\"]\n    B --> C[\"Engine\"]\n    C --> D[\"Work output $$W$$\"]\n    C --> E[\"Heat expelled $$Q_C$$\"]\n    E --> F[\"Cold reservoir at $$T_C$$\"]\n    D --> G[\"Useful mechanical output\"]\n    F --> H[\"Second law requires $$Q_C > 0$$ for any real engine\"]\n```\n\n## Common AP Exam Traps\n- Confusing **heat** with **temperature**. A system can have a high temperature without transferring heat unless there is a temperature difference.\n- Forgetting the sign convention in $$\\Delta U = Q - W$$. If the gas does work on the surroundings, then $$W>0$$ and the system loses internal energy unless heat is added.\n- Using Celsius instead of **kelvins** in gas law or efficiency calculations. Absolute temperature must be used in equations such as $$PV=nRT$$ and $$e_{\\text{max}}=1-\\frac{T_C}{T_H}$$.\n- Assuming internal energy always changes when pressure or volume changes. For an **ideal gas**, internal energy depends only on temperature.\n- Thinking a larger area on a $$PV$$ diagram always means more heat transferred. The area under the curve corresponds to **work**, not necessarily heat.\n\n## Quick Review Checklist\n- [ ] I can apply the **ideal gas law** $$PV=nRT$$ to solve for a missing variable.\n- [ ] I can explain how **kinetic theory** connects temperature to particle motion and average kinetic energy.\n- [ ] I can use the **first law of thermodynamics** $$\\Delta U = Q - W$$ with correct signs.\n- [ ] I can determine the **work done by a gas** from a process description or a $$PV$$ diagram.\n- [ ] I can identify **isothermal**, **isochoric**, **isobaric**, and **adiabatic** processes and state what remains constant in each.\n- [ ] I can calculate or compare **heat engine efficiency** using $$e=\\frac{W}{Q_H}=1-\\frac{Q_C}{Q_H}$$.\n- [ ] I can explain why the **second law of thermodynamics** prevents a perfectly efficient engine.\n- [ ] I can reason qualitatively about **entropy** and decide whether a process is more reversible or more spontaneous.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Ideal Gas Law",
+              "definition": "A relationship among pressure, volume, temperature, and amount of gas for a dilute gas system, given by $$PV=nRT$$."
+            },
+            {
+              "term": "Kinetic Theory of Gases",
+              "definition": "A model that explains macroscopic gas behavior by treating particles as tiny objects in constant random motion with negligible intermolecular forces except during collisions."
+            },
+            {
+              "term": "Root-Mean-Square Speed",
+              "definition": "A characteristic particle speed related to average translational kinetic energy, given for an ideal gas by $$v_{\\mathrm{rms}}=\\sqrt{\\frac{3k_B T}{m}}$$."
+            },
+            {
+              "term": "Average Translational Kinetic Energy",
+              "definition": "The energy associated with random particle motion in an ideal gas; for each particle it depends only on absolute temperature and equals $$\\frac{3}{2}k_B T$$."
+            },
+            {
+              "term": "Internal Energy of an Ideal Monatomic Gas",
+              "definition": "The total microscopic kinetic energy of the particles in a sample with negligible intermolecular potential energy, given by $$U=\\frac{3}{2}nRT$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A rigid container holds an ideal gas. The absolute temperature of the gas is doubled while the amount of gas remains constant. Which statement correctly describes the gas?",
+              "options": [
+                "The pressure doubles because $$P\\propto T$$ when $$V$$ and $$n$$ are constant.",
+                "The pressure remains constant because the volume does not change.",
+                "The average kinetic energy of the molecules remains constant because the container is rigid.",
+                "The pressure is cut in half because collisions become less frequent at higher temperature."
+              ],
+              "correctAnswer": "The pressure doubles because $$P\\propto T$$ when $$V$$ and $$n$$ are constant.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Two sealed containers hold different ideal gases at the same absolute temperature. Container A has particles of mass $$m$$, and container B has particles of mass $$4m$$. Which comparison is correct?",
+              "options": [
+                "The particles in A have twice the root-mean-square speed of the particles in B.",
+                "The particles in B have twice the average translational kinetic energy of the particles in A.",
+                "The particles in A have four times the average translational kinetic energy of the particles in B.",
+                "The particles in both containers have the same root-mean-square speed because the temperatures are equal."
+              ],
+              "correctAnswer": "The particles in A have twice the root-mean-square speed of the particles in B.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For an ideal gas sample with constant amount and volume, the ratio $$\\frac{P}{T}$$ remains ______.",
+              "options": [
+                "constant",
+                "zero",
+                "equal to the volume",
+                "inversely proportional to the number of moles"
+              ],
+              "correctAnswer": "constant",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "According to kinetic theory, increasing the absolute temperature of an ideal gas increases the particles' average translational kinetic energy because it is proportional to ______.",
+              "options": [
+                "$$T$$",
+                "$$\\frac{1}{T}$$",
+                "$$V$$ only",
+                "$$P^2$$"
+              ],
+              "correctAnswer": "$$T$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "First Law of Thermodynamics",
+              "definition": "An energy principle stating that the change in a system's internal energy equals energy added by heating minus energy transferred by the system through mechanical work: $$\\Delta U=Q-W$$."
+            },
+            {
+              "term": "Isothermal Process",
+              "definition": "A thermodynamic change that occurs at constant temperature; for an ideal gas, internal energy does not change, so $$\\Delta U=0$$ and therefore $$Q=W$$."
+            },
+            {
+              "term": "Heat Engine Efficiency",
+              "definition": "The fraction of energy absorbed from a high-temperature reservoir that is converted into useful work, given by $$e=\\frac{W}{Q_H}=1-\\frac{Q_C}{Q_H}$$."
+            },
+            {
+              "term": "Second Law of Thermodynamics",
+              "definition": "A principle stating that natural thermal processes have a preferred direction and that no cyclic device can convert all absorbed thermal energy into work."
+            },
+            {
+              "term": "Entropy",
+              "definition": "A state variable related to the number of possible microscopic arrangements and the dispersal of energy; for an isolated system, total value does not decrease."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A gas in a cylinder absorbs $$600\\ \\mathrm{J}$$ of heat and does $$250\\ \\mathrm{J}$$ of work on the surroundings. What is the change in the internal energy of the gas?",
+              "options": [
+                "$$+350\\ \\mathrm{J}$$",
+                "$$-350\\ \\mathrm{J}$$",
+                "$$+850\\ \\mathrm{J}$$",
+                "$$-850\\ \\mathrm{J}$$"
+              ],
+              "correctAnswer": "$$+350\\ \\mathrm{J}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A heat engine absorbs $$1200\\ \\mathrm{J}$$ from a hot reservoir each cycle and rejects $$900\\ \\mathrm{J}$$ to a cold reservoir. What is the engine's efficiency?",
+              "options": [
+                "$$0.25$$",
+                "$$0.75$$",
+                "$$0.33$$",
+                "$$0.50$$"
+              ],
+              "correctAnswer": "$$0.25$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "During an isothermal process for an ideal gas, the change in internal energy is ______.",
+              "options": [
+                "$$0$$",
+                "positive and equal to $$Q$$",
+                "negative and equal to $$W$$",
+                "always greater than $$Q$$"
+              ],
+              "correctAnswer": "$$0$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "According to the second law of thermodynamics, the total entropy of an isolated system can ______.",
+              "options": [
+                "increase or remain constant",
+                "only decrease",
+                "remain zero in every process",
+                "be converted completely into work"
+              ],
+              "correctAnswer": "increase or remain constant",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Electric Force, Field, and Potential",
+      "description": "Coulomb's law, electric field lines, Gauss's law, electric potential energy, and equipotential surfaces.",
+      "note": "# Unit 3: Electric Force, Field, and Potential\n\n## Overview\nThis unit develops the core ideas of **electrostatics**: how charges interact through **electric force**, how those interactions are described by an **electric field**, and how energy is stored and transferred through **electric potential**. These ideas are heavily tested on the AP Physics 2 exam through conceptual reasoning, multiple representations, and algebraic problem-solving involving **Coulomb’s law**, **Gauss’s law**, and **potential relationships**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Electric charge** | A fundamental property that can be positive or negative; charge is conserved and quantized. | Many AP questions begin with identifying charge interactions and using **conservation of charge** qualitatively. |\n| **Coulomb’s law** | The electric force between two point charges depends on the product of the charges and inversely on the square of the distance between them. | Essential for calculating force magnitude/direction and comparing how force changes when distance or charge changes. |\n| **Electric field** | A vector field that gives force per unit charge at a point. | AP problems often ask students to distinguish **field** from **force** and determine field direction due to charge arrangements. |\n| **Electric field lines** | A visual model showing field direction and relative strength. | Frequently used in conceptual questions about symmetry, relative magnitude, and motion of test charges. |\n| **Gauss’s law** | The net electric flux through a closed surface depends on enclosed charge. | On the AP exam, this is mainly used conceptually and with high-symmetry situations to connect **flux** and **charge enclosed**. |\n| **Electric potential energy** | Energy associated with the configuration of charges in an electric system. | Important for analyzing work, energy changes, and motion in electric fields. |\n| **Electric potential** | Potential energy per unit charge; a scalar quantity. | Students must connect **potential**, **work**, and **field**, especially when comparing points in space. |\n| **Equipotential surfaces** | Surfaces where electric potential is constant. | AP questions often test the relationship between **equipotentials** and **electric field direction**. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Charges create electric interactions] --> B[Use Coulomb's law for force between point charges]\n    A --> C[Define electric field as force per unit charge]\n    C --> D[Represent field with vectors or field lines]\n    D --> E[Use symmetry and flux ideas with Gauss's law]\n    C --> F[Connect field to changes in electric potential]\n    F --> G[Relate potential to potential energy]\n    G --> H[Use energy ideas to predict motion, work, and system changes]\n```\n\nA useful problem-solving progression for this unit is:\n\n1. **Identify the source charges** and whether the question asks about **force**, **field**, **potential**, or **energy**.\n2. Decide whether the quantity is **vector** or **scalar**.\n   - **Force** and **electric field** are vectors.\n   - **Potential** and **potential energy** are scalars.\n3. Choose the right model:\n   - **Coulomb’s law** for force between point charges\n   - **Superposition** for multiple charges\n   - **Gauss’s law** for symmetric charge distributions\n   - **Energy/potential equations** for work and motion\n4. Check direction, sign, and units.\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Relationship** | **Formula / Rule** | **What to Remember** |\n|---|---|---|\n| **Coulomb’s law** | $$F = k\\frac{|q_1 q_2|}{r^2}$$ | Force is attractive for opposite charges and repulsive for like charges. |\n| **Electric field definition** | $$\\vec{E} = \\frac{\\vec{F}}{q}$$ | Field direction is the direction of force on a **positive** test charge. |\n| **Field from a point charge** | $$E = k\\frac{|q|}{r^2}$$ | For a positive source charge, field points outward; for a negative source charge, inward. |\n| **Superposition** | $$\\vec{E}_{\\text{net}} = \\sum \\vec{E}_i$$ | Add electric fields as vectors. |\n| **Electric flux** | $$\\Phi_E = \\vec{E}\\cdot \\vec{A} = EA\\cos\\theta$$ | Flux depends on field strength, area, and orientation. |\n| **Gauss’s law** | $$\\Phi_E = \\frac{q_{\\text{enc}}}{\\varepsilon_0}$$ | Only **enclosed charge** affects net flux through a closed surface. |\n| **Electric potential energy of two point charges** | $$U = k\\frac{q_1 q_2}{r}$$ | Sign matters: opposite charges give negative potential energy. |\n| **Electric potential** | $$V = \\frac{U}{q}$$ | Potential is energy per unit charge. |\n| **Potential from a point charge** | $$V = k\\frac{q}{r}$$ | Potential is scalar, so contributions add algebraically. |\n| **Potential difference and work** | $$\\Delta V = \\frac{\\Delta U}{q}$$ and $$W = -\\Delta U$$ | Electric forces do positive work when potential energy decreases. |\n| **Uniform field and potential difference** | $$\\Delta V = -Ed$$ | Valid when displacement is parallel to a uniform field. |\n| **Field and equipotentials** | The electric field is perpendicular to equipotential surfaces. | No work is done moving along an equipotential. |\n\n## Connections & Comparisons\n\n| **Pair** | **Similarities** | **Key Difference** | **AP Reminder** |\n|---|---|---|---|\n| **Electric force** vs. **electric field** | Both describe electric interactions and have direction. | **Force** depends on the test charge: $$\\vec{F} = q\\vec{E}$$. **Field** exists whether or not a test charge is present. | Do not confuse the source-created field with the force experienced by a specific charge. |\n| **Electric potential energy** vs. **electric potential** | Both relate to energy in electric systems. | **Potential energy** depends on the actual charge placed in the field; **potential** does not. | A point can have a high or low **potential** independent of the test charge chosen. |\n| **Field lines** vs. **equipotential lines/surfaces** | Both represent electric behavior in space. | Field lines show direction of **$$\\vec{E}$$**; equipotentials show constant **$$V$$**. | Field lines always cross equipotentials at right angles. |\n| **Coulomb’s law** vs. **Gauss’s law** | Both describe effects of electric charge. | Coulomb’s law is often used for point charges; Gauss’s law is most useful with strong symmetry. | Gauss’s law is always true, but not always the easiest way to calculate **$$E$$**. |\n\n## Common AP Exam Traps\n\n- **Mixing up scalar and vector quantities**: **electric field** and **force** require direction and vector addition, while **electric potential** adds algebraically.\n- **Assuming zero net enclosed charge means zero field everywhere**: A Gaussian surface with $$q_{\\text{enc}} = 0$$ has zero **net flux**, but the field at points on the surface may still be nonzero.\n- **Using the sign incorrectly in energy and potential**: For opposite charges, $$U$$ is negative; for a negative source charge, $$V$$ is negative.\n- **Believing field lines can cross**: If they crossed, the field would have two directions at one point, which is impossible.\n- **Forgetting that moving along an equipotential requires no work by the electric force**: Since $$\\Delta V = 0$$, the electric potential energy does not change.\n\n## Quick Review Checklist\n\n- [ ] I can apply **Coulomb’s law** to find how electric force changes with charge and distance.\n- [ ] I can determine the **direction** of electric force and electric field for positive and negative charges.\n- [ ] I can use **superposition** to find the net electric field from multiple charges.\n- [ ] I can interpret **electric field line diagrams** and relate line density to field strength.\n- [ ] I can explain **electric flux** and use **Gauss’s law** conceptually or with symmetric charge distributions.\n- [ ] I can distinguish between **electric potential energy** and **electric potential**.\n- [ ] I can calculate or compare **potential** and **potential energy** for point-charge systems.\n- [ ] I can explain why **equipotential surfaces** are perpendicular to electric field lines and why no work is done along them.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Coulomb's law",
+              "definition": "The magnitude of the interaction between two point charges is proportional to the product of the charges and inversely proportional to the square of the distance between them: $$F = k\\dfrac{|q_1 q_2|}{r^2}$$. The force acts along the line connecting the charges and may be attractive or repulsive depending on the signs."
+            },
+            {
+              "term": "Electric field",
+              "definition": "A vector quantity defined as the force per unit positive test charge at a location: $$\\vec{E} = \\dfrac{\\vec{F}}{q}$$. For a point charge, its magnitude is $$E = k\\dfrac{|q|}{r^2}$$ and its direction is away from positive charge and toward negative charge."
+            },
+            {
+              "term": "Superposition",
+              "definition": "The principle stating that the net effect from multiple sources is found by combining the individual contributions. For vectors such as force or field, this requires vector addition of each contribution at the point of interest."
+            },
+            {
+              "term": "Electric field lines",
+              "definition": "A visual model in which tangent directions show the direction of the field and line density indicates relative magnitude. They begin on positive charge and end on negative charge or at infinity, and they never cross."
+            },
+            {
+              "term": "Uniform electric field",
+              "definition": "A region where the vector quantity describing force per unit charge has constant magnitude and direction throughout. Between large parallel plates, this is often approximated as constant, leading to $$\\Delta V = -Ed$$ when displacement is parallel to the field."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Two point charges, $$+2q$$ and $$-8q$$, are separated by distance $$r$$. A third charge is placed midway between them. Which statement correctly compares the magnitudes of the electric fields produced at the midpoint by the two source charges?",
+              "options": [
+                "The field from $$-8q$$ is 4 times the field from $$+2q$$.",
+                "The field from $$-8q$$ is 2 times the field from $$+2q$$.",
+                "The two fields have equal magnitude.",
+                "The field from $$+2q$$ is 4 times the field from $$-8q$$."
+              ],
+              "correctAnswer": "The field from $$-8q$$ is 4 times the field from $$+2q$$.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A negative point charge is moved from point $$A$$ to point $$B$$ in a region where the electric field points to the right. If the charge moves to the right, which statement is correct?",
+              "options": [
+                "The electric force on the charge is to the left, so the field does negative work on the charge.",
+                "The electric force on the charge is to the right, so the field does positive work on the charge.",
+                "The electric force on the charge is to the left, so the field does positive work on the charge.",
+                "The electric force on the charge is zero because the charge is negative."
+              ],
+              "correctAnswer": "The electric force on the charge is to the left, so the field does negative work on the charge.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "At a point located distance $$r$$ from a point charge $$q$$, the magnitude of the electric field is ______.",
+              "options": [
+                "$$k\\dfrac{|q|}{r^2}$$",
+                "$$k\\dfrac{|q|}{r}$$",
+                "$$k\\dfrac{|q|}{2r^2}$$",
+                "$$k\\dfrac{r^2}{|q|}$$"
+              ],
+              "correctAnswer": "$$k\\dfrac{|q|}{r^2}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When determining the net electric field due to several charges, the correct procedure is to add the individual fields using ______.",
+              "options": [
+                "vector addition",
+                "scalar multiplication",
+                "conservation of momentum",
+                "dimensional analysis only"
+              ],
+              "correctAnswer": "vector addition",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Gauss's law",
+              "definition": "A relationship between the net electric flux through any closed surface and the total enclosed charge: $$\\Phi_E = \\oint \\vec{E}\\cdot d\\vec{A} = \\dfrac{Q_{\\text{enc}}}{\\varepsilon_0}$$. It is especially useful when symmetry allows the field magnitude to be constant over parts of the surface."
+            },
+            {
+              "term": "Electric flux",
+              "definition": "A measure of how much a vector field passes through a surface, calculated as $$\\Phi_E = \\vec{E}\\cdot \\vec{A} = EA\\cos\\theta$$ for a flat surface in a uniform field, where $$\\theta$$ is the angle between the field and the area vector."
+            },
+            {
+              "term": "Electric potential difference",
+              "definition": "The change in electric potential energy per unit charge between two points: $$\\Delta V = \\dfrac{\\Delta U}{q}$$. It is also related to work done by the field through $$\\Delta U = -W_{\\text{field}}$$."
+            },
+            {
+              "term": "Electric potential energy",
+              "definition": "Energy associated with the configuration of charged objects. For two point charges, it is given by $$U = k\\dfrac{q_1 q_2}{r}$$, with the sign determined by the signs of the charges."
+            },
+            {
+              "term": "Equipotential surfaces",
+              "definition": "Locations where the electric potential is the same everywhere. Moving a charge along such a surface requires no work by the electric field, and these surfaces are always perpendicular to field lines."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A spherical Gaussian surface encloses a net charge of $$+Q$$. Additional charges outside the surface create a nonzero electric field at the surface. Which statement must be true?",
+              "options": [
+                "The net electric flux through the surface is $$\\dfrac{Q}{\\varepsilon_0}$$.",
+                "The electric field must have the same magnitude at every point on the surface.",
+                "The net electric flux through the surface is zero because external charges are present.",
+                "Gauss's law cannot be applied unless the field is uniform on the surface."
+              ],
+              "correctAnswer": "The net electric flux through the surface is $$\\dfrac{Q}{\\varepsilon_0}$$.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A positive charge moves from one equipotential surface to another of lower electric potential. Which statement is correct?",
+              "options": [
+                "Its electric potential energy decreases.",
+                "Its electric potential energy increases.",
+                "The electric field does no work because potential is defined everywhere.",
+                "Its change in electric potential energy is independent of charge."
+              ],
+              "correctAnswer": "Its electric potential energy decreases.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a flat surface of area $$A$$ in a uniform electric field $$\\vec{E}$$, the electric flux is $$\\Phi_E = ______$$.",
+              "options": [
+                "$$EA\\cos\\theta$$",
+                "$$EA\\sin\\theta$$",
+                "$$\\dfrac{E}{A}$$",
+                "$$\\dfrac{A}{E}$$"
+              ],
+              "correctAnswer": "$$EA\\cos\\theta$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Field lines intersect equipotential surfaces at ______ angles.",
+              "options": [
+                "right",
+                "acute",
+                "obtuse",
+                "zero"
+              ],
+              "correctAnswer": "right",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Electric Circuits",
+      "description": "Current, resistance, Ohm's law, Kirchhoff's rules, series and parallel circuits, capacitors, and RC circuits.",
+      "note": "# Unit 4: Electric Circuits\n\n## Overview\nThis unit introduces how **electric current** moves through circuits and how devices like **resistors** and **capacitors** affect that motion. For the AP Physics 2 exam, you must be able to analyze **series and parallel circuits**, apply **Ohm’s law** and **Kirchhoff’s rules**, and explain how energy and charge behave in **steady-state** and **RC circuits**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Current** | The rate of flow of charge through a conductor. | You must connect current to charge flow and use it in circuit calculations. |\n| **Resistance** | A measure of how much a material or device opposes current. | Central to predicting how voltage and current relate in circuits. |\n| **Ohm’s Law** | The relationship between voltage, current, and resistance for an ohmic resistor. | Frequently tested in both conceptual and quantitative problems. |\n| **Series Circuits** | Components arranged in a single path so the same current passes through each. | You must determine equivalent resistance and voltage drops. |\n| **Parallel Circuits** | Components connected across the same two points, sharing the same potential difference. | Common AP topic for comparing current distribution and equivalent resistance. |\n| **Kirchhoff’s Rules** | Conservation-based rules for current at junctions and voltage around loops. | Essential for analyzing multi-loop or nontrivial circuits. |\n| **Capacitance** | The ability of a device to store charge per unit potential difference. | Appears in capacitor networks and energy storage questions. |\n| **RC Circuits** | Circuits with resistors and capacitors that show time-dependent charging and discharging. | Important for interpreting transient behavior and exponential change. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Battery provides potential difference\"] --> B[\"Charges move: current forms\"]\n    B --> C[\"Resistors oppose current\"]\n    C --> D[\"Apply Ohm's law to each element\"]\n    D --> E[\"Use series/parallel rules for simplification\"]\n    E --> F[\"Use Kirchhoff's rules for complex loops/junctions\"]\n    F --> G[\"Find current, voltage, and power in each branch\"]\n    G --> H[\"If capacitor is present, charge and current may change with time\"]\n    H --> I[\"In RC charging/discharging, use exponential relationships\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Quantity** | **Expression** | **Meaning / Use** |\n|---|---|---|\n| **Current** | $$I=\\frac{\\Delta Q}{\\Delta t}$$ | Current is the rate of charge flow. |\n| **Ohm’s Law** | $$V=IR$$ | Relates potential difference, current, and resistance for an ohmic resistor. |\n| **Resistance from material** | $$R=\\rho \\frac{L}{A}$$ | Resistance depends on resistivity, length, and cross-sectional area. |\n| **Power** | $$P=IV$$ | Rate of energy transfer in a circuit element. |\n| **Power forms** | $$P=I^{2}R \\qquad P=\\frac{V^{2}}{R}$$ | Useful depending on what quantities are known. |\n| **Series resistors** | $$R_{\\text{eq}}=R_{1}+R_{2}+\\cdots$$ | Equivalent resistance increases in series. |\n| **Parallel resistors** | $$\\frac{1}{R_{\\text{eq}}}=\\frac{1}{R_{1}}+\\frac{1}{R_{2}}+\\cdots$$ | Equivalent resistance decreases in parallel. |\n| **Junction rule** | $$\\sum I_{\\text{in}}=\\sum I_{\\text{out}}$$ | Charge is conserved at a junction. |\n| **Loop rule** | $$\\sum \\Delta V=0$$ | Energy is conserved around any closed loop. |\n| **Capacitance** | $$C=\\frac{Q}{V}$$ | Defines how much charge is stored per volt. |\n| **Capacitors in parallel** | $$C_{\\text{eq}}=C_{1}+C_{2}+\\cdots$$ | Parallel capacitors add directly. |\n| **Capacitors in series** | $$\\frac{1}{C_{\\text{eq}}}=\\frac{1}{C_{1}}+\\frac{1}{C_{2}}+\\cdots$$ | Series capacitors reduce equivalent capacitance. |\n| **Energy in capacitor** | $$U=\\frac{1}{2}CV^{2}=\\frac{1}{2}QV=\\frac{Q^{2}}{2C}$$ | Energy stored in the electric field of a capacitor. |\n| **RC time constant** | $$\\tau=RC$$ | Sets the timescale for charging or discharging. |\n| **Charging capacitor** | $$Q(t)=CV\\left(1-e^{-t/RC}\\right)$$ | Charge grows exponentially toward a maximum. |\n| **Charging current** | $$I(t)=\\frac{V}{R}e^{-t/RC}$$ | Current decreases as the capacitor charges. |\n| **Discharging capacitor** | $$Q(t)=Q_{0}e^{-t/RC}$$ | Stored charge decays exponentially. |\n\n### Must-know qualitative rules\n- In a **series circuit**, the **current** is the same through every element.\n- In a **parallel circuit**, the **potential difference** across each branch is the same.\n- A capacitor in a **steady-state DC circuit** behaves like an **open circuit**.\n- At the instant an uncharged capacitor begins charging, it behaves approximately like a **wire** with respect to current path; after a long time, current in that branch goes to zero.\n\n## Connections & Comparisons\n\n| **Topic** | **Series** | **Parallel** | **AP Takeaway** |\n|---|---|---|---|\n| **Resistors** | Same **current** through each resistor | Same **voltage** across each branch | Know which quantity stays constant. |\n| **Equivalent resistance** | $$R_{\\text{eq}}$$ increases as resistors are added | $$R_{\\text{eq}}$$ decreases as branches are added | Parallel resistance is always less than the smallest branch resistance. |\n| **Capacitors** | Same **charge** on each capacitor | Same **voltage** across each capacitor | Capacitor rules are opposite of resistor rules in many ways. |\n| **Equivalent capacitance** | $$C_{\\text{eq}}$$ decreases in series | $$C_{\\text{eq}}$$ increases in parallel | A very common comparison question. |\n\n```mermaid\nflowchart LR\n    A[\"Resistors in series\"] --> B[\"Same current\"]\n    A --> C[\"Voltages add\"]\n    D[\"Resistors in parallel\"] --> E[\"Same voltage\"]\n    D --> F[\"Currents add\"]\n    G[\"Capacitors in series\"] --> H[\"Same charge\"]\n    G --> I[\"Voltages add\"]\n    J[\"Capacitors in parallel\"] --> K[\"Same voltage\"]\n    J --> L[\"Charges add\"]\n```\n\n## Common AP Exam Traps\n\n- Confusing what stays constant in **series** versus **parallel**: for resistors, **current** is the same in series, but **voltage** is the same in parallel.\n- Forgetting that **resistor** and **capacitor** combination rules are reversed: resistors add in series, but capacitors add in parallel.\n- Assuming a capacitor always allows current in a DC circuit. In **steady state**, a capacitor branch carries **no current**.\n- Using **Kirchhoff’s loop rule** with inconsistent sign conventions. Pick a loop direction and treat voltage rises and drops consistently.\n- Thinking the battery “supplies current.” More precisely, the battery supplies **potential difference**, and the circuit determines the resulting current.\n\n## Quick Review Checklist\n\n- [ ] Define **current**, **resistance**, and **capacitance** in words and with equations.\n- [ ] Apply **Ohm’s law** $$V=IR$$ to solve for unknown circuit quantities.\n- [ ] Find equivalent resistance for **series** and **parallel** resistor networks.\n- [ ] Use **Kirchhoff’s junction rule** and **loop rule** to analyze multiloop circuits.\n- [ ] Determine how **current** and **voltage** are distributed in series and parallel branches.\n- [ ] Calculate **power** and explain where electrical energy is transferred or stored.\n- [ ] Find equivalent capacitance for **series** and **parallel** capacitor arrangements.\n- [ ] Describe and calculate **charging** and **discharging** behavior in an **RC circuit**, including the meaning of $$\\tau=RC$$.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Electric current",
+              "definition": "The rate at which electric charge passes a point in a circuit, modeled by $$I=\\frac{\\Delta Q}{\\Delta t}$$."
+            },
+            {
+              "term": "Resistance",
+              "definition": "A property of a material or device that relates potential difference to current and opposes charge flow, given for a uniform conductor by $$R=\\rho \\frac{L}{A}$$."
+            },
+            {
+              "term": "Ohm's law",
+              "definition": "The linear relationship for an ideal conductor in which potential difference across a device equals current through it times its resistance: $$\\Delta V=IR$$."
+            },
+            {
+              "term": "Resistivity",
+              "definition": "An intrinsic material property that determines how strongly a substance impedes charge flow and appears in $$R=\\rho \\frac{L}{A}$$."
+            },
+            {
+              "term": "Electrical power",
+              "definition": "The rate at which electrical energy is transferred or transformed in a circuit element, expressed as $$P=I\\Delta V=I^2R=\\frac{(\\Delta V)^2}{R}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student connects a resistor to an ideal battery and measures a current of $$0.40\\ \\text{A}$$ when the potential difference across the resistor is $$12\\ \\text{V}$$. If the potential difference is increased to $$18\\ \\text{V}$$ and the resistor remains ohmic, what is the new current?",
+              "options": [
+                "$$0.27\\ \\text{A}$$",
+                "$$0.40\\ \\text{A}$$",
+                "$$0.60\\ \\text{A}$$",
+                "$$0.90\\ \\text{A}$$"
+              ],
+              "correctAnswer": "$$0.60\\ \\text{A}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Two wires are made of the same material and have the same length, but wire X has twice the diameter of wire Y. Which statement correctly compares their resistances?",
+              "options": [
+                "Wire X has one-fourth the resistance of wire Y.",
+                "Wire X has one-half the resistance of wire Y.",
+                "Wire X has twice the resistance of wire Y.",
+                "Wire X has four times the resistance of wire Y."
+              ],
+              "correctAnswer": "Wire X has one-fourth the resistance of wire Y.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For any circuit element, the rate of electrical energy transfer is given by ______.",
+              "options": [
+                "$$P=I\\Delta V$$",
+                "$$P=\\frac{I}{\\Delta V}$$",
+                "$$P=\\frac{R}{I}$$",
+                "$$P=\\Delta V-IR$$"
+              ],
+              "correctAnswer": "$$P=I\\Delta V$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For a uniform conductor, increasing the cross-sectional area while holding length and material constant causes the resistance to ______.",
+              "options": [
+                "increase proportionally",
+                "remain unchanged",
+                "decrease",
+                "become zero"
+              ],
+              "correctAnswer": "decrease",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Kirchhoff's junction rule",
+              "definition": "The conservation statement that the algebraic sum of currents entering and leaving a node is zero, reflecting conservation of charge."
+            },
+            {
+              "term": "Kirchhoff's loop rule",
+              "definition": "The conservation statement that the algebraic sum of potential differences around any closed path is zero, reflecting conservation of energy."
+            },
+            {
+              "term": "Equivalent resistance in series",
+              "definition": "For components connected end to end so the same current passes through each, the single replacement value is found from $$R_{\\text{eq}}=R_1+R_2+\\cdots$$."
+            },
+            {
+              "term": "Equivalent resistance in parallel",
+              "definition": "For components connected across the same two nodes so each has the same potential difference, the single replacement value satisfies $$\\frac{1}{R_{\\text{eq}}}=\\frac{1}{R_1}+\\frac{1}{R_2}+\\cdots$$."
+            },
+            {
+              "term": "Capacitor charging in an RC circuit",
+              "definition": "The time-dependent process in which charge and potential difference increase toward maximum values with characteristic time constant $$\\tau=RC$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A battery is connected to two resistors, $$6\\ \\Omega$$ and $$3\\ \\Omega$$, in parallel. What is the equivalent resistance of the combination?",
+              "options": [
+                "$$9\\ \\Omega$$",
+                "$$4.5\\ \\Omega$$",
+                "$$2\\ \\Omega$$",
+                "$$1\\ \\Omega$$"
+              ],
+              "correctAnswer": "$$2\\ \\Omega$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In a simple series RC circuit with an initially uncharged capacitor connected to an ideal battery, which quantity is greatest immediately after the switch is closed?",
+              "options": [
+                "The charge on the capacitor",
+                "The current in the circuit",
+                "The voltage across the capacitor",
+                "The energy stored in the capacitor"
+              ],
+              "correctAnswer": "The current in the circuit",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to Kirchhoff's loop rule, the algebraic sum of the potential differences around any closed loop must equal ______.",
+              "options": [
+                "$$0$$",
+                "$$I$$",
+                "$$R$$",
+                "$$\\frac{Q}{C}$$"
+              ],
+              "correctAnswer": "$$0$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The characteristic time constant for a circuit containing a resistor and capacitor is ______.",
+              "options": [
+                "$$\\tau=RC$$",
+                "$$\\tau=\\frac{R}{C}$$",
+                "$$\\tau=IR$$",
+                "$$\\tau=\\frac{Q}{V}$$"
+              ],
+              "correctAnswer": "$$\\tau=RC$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Magnetism and Electromagnetic Induction",
+      "description": "Magnetic force, magnetic fields, Biot–Savart law, Faraday's law, Lenz's law, and inductors.",
+      "note": "# Unit 5: Magnetism and Electromagnetic Induction\n\n## Overview\nThis unit develops the ideas of **magnetic fields**, **magnetic forces**, and how changing magnetic conditions produce **induced emf** and **current**. For the AP Physics 2 exam, students must connect field models, force relationships, and induction laws across conceptual reasoning, experimental setups, and algebra-based problem solving.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Magnetic Field** | A vector field that describes the magnetic influence of moving charges, currents, and magnets. | You must interpret field direction, field-line patterns, and how fields affect charges and wires. |\n| **Magnetic Force on a Charge** | The force on a moving charge in a magnetic field depends on charge, speed, field strength, and angle. | AP questions often test direction using the **right-hand rule** and whether magnetic force changes speed or only direction. |\n| **Magnetic Force on a Current-Carrying Wire** | A wire carrying current in a magnetic field experiences a force. | Important for reasoning about motors, wire motion, and force comparisons. |\n| **Biot–Savart Law** | A relationship that gives the magnetic field produced by a small current element. | Used conceptually to determine how current geometry affects magnetic field strength and direction. |\n| **Magnetic Flux** | A measure of how much magnetic field passes through an area. | Central to **Faraday’s law**; AP problems often ask what changes flux. |\n| **Faraday’s Law** | A changing magnetic flux induces an emf in a loop or coil. | One of the most tested ideas in this unit; students must predict when induction occurs and how strong it is. |\n| **Lenz’s Law** | The induced current creates a magnetic field that opposes the change in flux that caused it. | Frequently tested as a direction/reasoning question; it explains the negative sign in Faraday’s law. |\n| **Inductors / Self-Induction** | A changing current in a circuit can induce an emf in the same circuit or another nearby circuit. | Links magnetism to circuits; AP may ask about energy storage, opposition to changing current, and induced emf. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Current or moving charge produces magnetic field\"] --> B[\"Magnetic field interacts with charge or wire\"]\n    B --> C[\"Magnetic force changes motion or pushes wire\"]\n    A --> D[\"Magnetic field passes through area of loop\"]\n    D --> E[\"Magnetic flux changes\"]\n    E --> F[\"Induced emf is produced (Faraday's law)\"]\n    F --> G[\"Induced current may flow if circuit is closed\"]\n    G --> H[\"Induced magnetic field opposes flux change (Lenz's law)\"]\n    G --> I[\"Current change can create self-induced emf in inductor\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Quantity** | **Expression** | **What to Know** |\n|---|---|---|\n| **Magnetic force on a charge** | $$F_B = qvB\\sin\\theta$$ | Applies to a charge moving in a magnetic field; maximum at $$\\theta = 90^\\circ$$ and zero when velocity is parallel to the field. |\n| **Magnetic force on a wire** | $$F_B = ILB\\sin\\theta$$ | For a straight wire segment of length $$L$$ in a uniform field. |\n| **Magnetic field from a long straight wire** | $$B = \\frac{\\mu_0 I}{2\\pi r}$$ | Field strength decreases with distance $$r$$ from the wire. |\n| **Biot–Savart law** | $$dB = \\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\ell \\sin\\theta}{r^2}$$ | Describes the contribution of a small current element to the magnetic field. |\n| **Magnetic flux** | $$\\Phi_B = BA\\cos\\theta$$ | Flux depends on field strength, area, and orientation of the area vector. |\n| **Faraday’s law** | $$\\mathcal{E} = -\\frac{d\\Phi_B}{dt}$$ | A changing magnetic flux induces emf; for $$N$$ turns, $$\\mathcal{E} = -N\\frac{d\\Phi_B}{dt}$$. |\n| **Lenz’s law** | Included by the negative sign in $$\\mathcal{E} = -\\frac{d\\Phi_B}{dt}$$ | The induced current opposes the **change** in flux, not necessarily the original field itself. |\n| **Inductor emf** | $$\\mathcal{E}_L = -L\\frac{dI}{dt}$$ | An inductor resists changes in current. |\n| **Energy stored in an inductor** | $$U = \\frac{1}{2}LI^2$$ | Magnetic fields can store energy, similar to how capacitors store electric energy. |\n\n### Direction Rules You Must Know\n- Use the **right-hand rule** for the direction of **magnetic field** around a current-carrying wire.\n- Use the **right-hand rule** for **magnetic force** on a positive charge; reverse the direction for a negative charge.\n- For **Lenz’s law**, first identify whether flux is increasing or decreasing, then determine the induced field that opposes that change.\n\n## Connections & Comparisons\n\n| **Pair / Relationship** | **Similarities** | **Key Difference** | **AP Significance** |\n|---|---|---|---|\n| **Electric Field vs. Magnetic Field** | Both are vector fields that exert forces and can store energy. | Electric fields act on charges whether moving or not; magnetic fields act on moving charges or currents. | AP often asks why a stationary charge feels no magnetic force. |\n| **Magnetic Force on Charge vs. Electric Force on Charge** | Both can change a particle’s motion. | Electric force can do work and change speed; magnetic force is perpendicular to motion and typically changes direction only. | Critical for reasoning about circular motion and energy changes. |\n| **Faraday’s Law vs. Lenz’s Law** | Both describe electromagnetic induction. | Faraday’s law gives the magnitude of induced emf; Lenz’s law gives its direction. | Many free-response and MC questions require both together. |\n| **Inductor vs. Resistor** | Both affect current in a circuit. | A resistor opposes current itself; an inductor opposes **changes** in current. | Important in transient circuit reasoning. |\n\n## Common AP Exam Traps\n- Confusing **magnetic field direction** with **magnetic force direction**; they are not generally the same.\n- Forgetting that a **stationary charge** experiences no magnetic force because $$v = 0$$ in $$F_B = qvB\\sin\\theta$$.\n- Thinking **Lenz’s law** opposes the existing magnetic field; it actually opposes the **change in magnetic flux**.\n- Missing the angle in **flux** calculations: $$\\Phi_B = BA\\cos\\theta$$ uses the angle between the field and the **area vector**, not always the plane itself.\n- Assuming induction requires a stronger field only; flux can also change because of changing **area**, changing **orientation**, or moving the loop into or out of the field.\n\n## Quick Review Checklist\n- [ ] I can explain what a **magnetic field** is and determine its direction around a straight current-carrying wire.\n- [ ] I can calculate or compare **magnetic force** on a moving charge using $$F_B = qvB\\sin\\theta$$.\n- [ ] I can calculate or compare **magnetic force** on a wire using $$F_B = ILB\\sin\\theta$$.\n- [ ] I can use the **right-hand rule** correctly for magnetic field and magnetic force situations.\n- [ ] I can explain how **Biot–Savart reasoning** connects current geometry to magnetic field direction and strength.\n- [ ] I can calculate **magnetic flux** with $$\\Phi_B = BA\\cos\\theta$$ and describe ways flux can change.\n- [ ] I can apply **Faraday’s law** and **Lenz’s law** to determine the magnitude and direction of induced emf or current.\n- [ ] I can explain what an **inductor** does and use $$\\mathcal{E}_L = -L\\frac{dI}{dt}$$ and $$U = \\frac{1}{2}LI^2$$ conceptually or algebraically.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Magnetic force on a moving charge",
+              "definition": "The interaction on a charged particle moving through a magnetic field, with magnitude $$F=qvB\\sin\\theta$$ and direction given by the right-hand rule for positive charge; it is perpendicular to both the velocity and the field."
+            },
+            {
+              "term": "Magnetic force on a current-carrying wire",
+              "definition": "The interaction on a segment of wire carrying current in a magnetic field, given by $$F=ILB\\sin\\theta$$ for a straight segment, with direction found from the right-hand rule."
+            },
+            {
+              "term": "Magnetic field of a long straight wire",
+              "definition": "For a point a distance $$r$$ from a very long current-carrying conductor, the magnitude is $$B=\\dfrac{\\mu_0 I}{2\\pi r}$$ and the circular direction follows the right-hand grip rule."
+            },
+            {
+              "term": "Biot–Savart law",
+              "definition": "A relation that gives the contribution of a small current element to the field at a point: $$dB=\\dfrac{\\mu_0}{4\\pi}\\dfrac{I\\,d\\ell\\sin\\theta}{r^2}$$, allowing fields of more complicated conductors to be found by integration."
+            },
+            {
+              "term": "Magnetic flux",
+              "definition": "A measure of how much magnetic field passes through a surface, calculated by $$\\Phi_B=BA\\cos\\theta$$ for a uniform field over a flat area, where $$\\theta$$ is the angle between the field and the area vector."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A proton enters a region of uniform magnetic field with velocity perpendicular to the field. Which statement correctly describes the proton's motion if no other forces act?",
+              "options": [
+                "Its speed decreases because the field does negative work on it.",
+                "Its speed remains constant while its direction changes, producing circular motion.",
+                "Its speed increases because the field accelerates it along the field direction.",
+                "It moves in a straight line because magnetic forces act only on neutral particles."
+              ],
+              "correctAnswer": "Its speed remains constant while its direction changes, producing circular motion.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Two long parallel wires carry currents in the same direction. Which statement about the interaction between the wires is correct?",
+              "options": [
+                "They repel because each wire produces a field parallel to the other's current.",
+                "They attract because the magnetic force between parallel currents in the same direction is inward.",
+                "They experience no net force because the fields cancel everywhere between them.",
+                "They alternate between attraction and repulsion as charge builds up on the wires."
+              ],
+              "correctAnswer": "They attract because the magnetic force between parallel currents in the same direction is inward.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a straight wire segment of length $$L$$ carrying current $$I$$ in a uniform magnetic field $$B$$ at angle $$\\theta$$, the magnitude of the magnetic force is $$F=______$$.",
+              "options": [
+                "$$ILB\\sin\\theta$$",
+                "$$qvB\\sin\\theta$$",
+                "$$BA\\cos\\theta$$",
+                "$$\\dfrac{\\mu_0 I}{2\\pi r}$$"
+              ],
+              "correctAnswer": "$$ILB\\sin\\theta$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "At a distance $$r$$ from a long straight wire carrying current $$I$$, the magnetic field magnitude is $$B=______$$.",
+              "options": [
+                "$$\\dfrac{\\mu_0 I}{2\\pi r}$$",
+                "$$\\mu_0 n I$$",
+                "$$\\dfrac{\\mu_0 I r}{2\\pi}$$",
+                "$$\\dfrac{\\mu_0 qv}{4\\pi r^2}$$"
+              ],
+              "correctAnswer": "$$\\dfrac{\\mu_0 I}{2\\pi r}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Faraday's law",
+              "definition": "The induced emf in a loop equals the negative rate of change of magnetic flux through the loop: $$\\mathcal{E}=-\\dfrac{d\\Phi_B}{dt}$$, or $$\\mathcal{E}=-N\\dfrac{d\\Phi_B}{dt}$$ for $$N$$ turns."
+            },
+            {
+              "term": "Lenz's law",
+              "definition": "The direction of induced current is such that the magnetic field it creates opposes the change in flux that produced it."
+            },
+            {
+              "term": "Motional emf",
+              "definition": "The potential difference produced across a conductor moving through a magnetic field, commonly expressed for perpendicular motion as $$\\mathcal{E}=BLv$$."
+            },
+            {
+              "term": "Self-inductance",
+              "definition": "The property of a circuit element by which a changing current in it produces an emf in the same element, described by $$\\mathcal{E}_L=-L\\dfrac{dI}{dt}$$."
+            },
+            {
+              "term": "Energy stored in an inductor",
+              "definition": "The electrical energy associated with current in such a circuit element, given by $$U=\\dfrac{1}{2}LI^2$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A conducting loop is in a uniform magnetic field directed into the page. The field strength increases with time. Which statement correctly describes the induced current in the loop?",
+              "options": [
+                "Clockwise, because the loop must reinforce the increasing inward flux.",
+                "Counterclockwise, because the loop must create a field out of the page to oppose the increase.",
+                "Clockwise, because the magnetic field does positive work on charges in the loop.",
+                "No induced current exists because the loop is not moving."
+              ],
+              "correctAnswer": "Counterclockwise, because the loop must create a field out of the page to oppose the increase.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A bar magnet is moved toward a conducting loop along the loop's axis. Which change would increase the magnitude of the induced emf?",
+              "options": [
+                "Reducing the speed of the magnet",
+                "Orienting the loop so its area vector is more nearly aligned with the changing field",
+                "Using a loop with smaller area while keeping all else the same",
+                "Moving the magnet so slowly that the flux is nearly constant"
+              ],
+              "correctAnswer": "Orienting the loop so its area vector is more nearly aligned with the changing field",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a coil with $$N$$ turns, Faraday's law gives the induced emf as $$\\mathcal{E}=______$$.",
+              "options": [
+                "$$-N\\dfrac{d\\Phi_B}{dt}$$",
+                "$$N\\Phi_B$$",
+                "$$BLv$$",
+                "$$\\dfrac{1}{2}LI^2$$"
+              ],
+              "correctAnswer": "$$-N\\dfrac{d\\Phi_B}{dt}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The energy stored in an inductor carrying current $$I$$ is $$U=______$$.",
+              "options": [
+                "$$\\dfrac{1}{2}LI^2$$",
+                "$$LI$$",
+                "$$\\dfrac{1}{2}CV^2$$",
+                "$$I^2R$$"
+              ],
+              "correctAnswer": "$$\\dfrac{1}{2}LI^2$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Geometric and Physical Optics",
+      "description": "Reflection, refraction, Snell's law, lenses, mirrors, diffraction, interference, and the double-slit experiment.",
+      "note": "# Unit 6: Geometric and Physical Optics\n\n## Overview\nThis unit covers how light behaves as both a **ray** and a **wave**, including **reflection**, **refraction**, image formation by **mirrors** and **lenses**, and wave effects such as **interference** and **diffraction**. On the AP exam, students must connect diagrams, qualitative reasoning, and equations to explain how light travels, bends, forms images, and produces bright and dark patterns.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Reflection** | Light bouncing off a surface so that the **angle of incidence** equals the **angle of reflection** | Frequently tested with ray diagrams and surface geometry |\n| **Refraction** | Light changing direction when it moves between media with different optical properties | Central to predicting bending of light and image formation |\n| **Snell’s Law** | Quantitative rule relating incident and refracted angles in two media | Essential for solving boundary-crossing problems |\n| **Index of Refraction** | A measure of how much light slows in a medium, defined by $$n = \\frac{c}{v}$$ | Connects wave speed, bending, and optical density |\n| **Thin Lenses** | Curved transparent objects that converge or diverge light rays | Used to find image location, type, orientation, and magnification |\n| **Spherical Mirrors** | Concave and convex mirrors that form images by reflection | Common AP problems involve sign conventions and ray tracing |\n| **Interference** | Superposition of light waves producing constructive and destructive patterns | Key to understanding bright and dark fringes |\n| **Diffraction / Double-Slit** | Spreading and overlapping of waves after passing through openings | Important physical optics topic showing light’s wave nature |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Light encounters boundary or obstacle] --> B{What happens?}\n    B --> C[Reflection at surface]\n    B --> D[Refraction into new medium]\n    B --> E[Passes through lens or reflects from mirror]\n    B --> F[Diffraction through slit or around edge]\n\n    C --> G[Use law of reflection]\n    D --> H[Use Snell's law and index of refraction]\n    E --> I[Trace principal rays]\n    I --> J[Locate image]\n    J --> K[Determine real or virtual, upright or inverted, magnified or reduced]\n    F --> L[Waves overlap]\n    L --> M[Interference pattern forms]\n    M --> N[Use path difference or fringe equations]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Rule** | **Expression or Statement** | **Use** |\n|---|---|---|\n| **Law of Reflection** | $$\\theta_i = \\theta_r$$ | Predicts the reflected ray direction |\n| **Index of Refraction** | $$n = \\frac{c}{v}$$ | Relates light speed in a medium to vacuum speed |\n| **Snell’s Law** | $$n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2$$ | Determines refraction angle |\n| **Critical Angle** | $$\\sin \\theta_c = \\frac{n_2}{n_1} \\quad \\text{for} \\quad n_1 > n_2$$ | Used for **total internal reflection** |\n| **Mirror / Lens Equation** | $$\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$$ | Finds image distance |\n| **Magnification** | $$m = \\frac{h_i}{h_o} = -\\frac{d_i}{d_o}$$ | Gives image size and orientation |\n| **Wave Speed Relationship** | $$v = f\\lambda$$ | Helps connect frequency, wavelength, and medium changes |\n| **Young’s Double-Slit Bright Fringe** | $$d \\sin \\theta = m\\lambda$$ | Gives angles for constructive interference |\n| **Double-Slit Dark Fringe** | $$d \\sin \\theta = \\left(m+\\frac{1}{2}\\right)\\lambda$$ | Gives angles for destructive interference |\n| **Small-Angle Fringe Position** | $$y_m \\approx \\frac{m\\lambda L}{d}$$ | Finds fringe spacing on a distant screen |\n| **Diffraction Grating / Single-Slit Minimum Idea** | For minima in single-slit diffraction: $$a \\sin \\theta = m\\lambda, \\quad m=1,2,3,\\dots$$ | Predicts dark regions from diffraction |\n\n### Sign conventions to know\n- For **converging lenses** and **concave mirrors**, $$f > 0$$.\n- For **diverging lenses** and **convex mirrors**, $$f < 0$$.\n- A **real image** has $$d_i > 0$$; a **virtual image** has $$d_i < 0$$.\n- If $$m > 0$$, the image is **upright**; if $$m < 0$$, the image is **inverted**.\n\n## Connections & Comparisons\n\n| **Topic** | **Geometric Optics** | **Physical Optics** | **Key Connection** |\n|---|---|---|---|\n| **Model of light** | Treats light as rays | Treats light as waves | Same light can require different models depending on the phenomenon |\n| **Main phenomena** | Reflection, refraction, image formation | Interference, diffraction | AP questions may ask which model best explains an observation |\n| **Typical tools** | Ray diagrams, Snell’s law, lens/mirror equations | Path difference, wavelength, fringe equations | Both often involve angles and geometry |\n| **Evidence about light** | Rays explain direction and images | Waves explain bright/dark patterns | Double-slit experiment strongly supports wave behavior |\n\n### Lens vs. Mirror image formation\n\n| **Optical Element** | **Converging Type** | **Diverging Type** | **Typical Image Possibilities** |\n|---|---|---|---|\n| **Lens** | Convex lens | Concave lens | Can form real or virtual images depending on object position |\n| **Mirror** | Concave mirror | Convex mirror | Concave can form real or virtual; convex forms virtual, reduced images |\n\n## Common AP Exam Traps\n\n- Confusing the **angle with the surface** and the **angle with the normal**. In optics equations, angles are measured from the **normal**.\n- Forgetting that when light enters a medium with **higher index of refraction**, its **speed decreases** and it bends **toward the normal**.\n- Mixing up **real** and **virtual** images: a real image forms where rays actually converge, while a virtual image forms where rays only appear to originate.\n- Using lens/mirror equations correctly but ignoring the meaning of the sign of $$d_i$$ or $$m$$.\n- Assuming diffraction and interference require separate ideas; on the AP exam, **diffraction spreads waves**, making **interference patterns** possible.\n\n## Quick Review Checklist\n\n- [ ] I can apply the **law of reflection** and correctly measure angles from the **normal**.\n- [ ] I can use $$n = \\frac{c}{v}$$ and explain how light speed and wavelength change in a new medium.\n- [ ] I can solve refraction problems with $$n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2$$.\n- [ ] I can explain and calculate **critical angle** and **total internal reflection**.\n- [ ] I can draw principal rays for **lenses** and **mirrors** and identify image characteristics.\n- [ ] I can use $$\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$$ and $$m = -\\frac{d_i}{d_o}$$ with correct sign conventions.\n- [ ] I can distinguish when **geometric optics** or **wave optics** is the better model.\n- [ ] I can describe and calculate the bright and dark fringes in the **double-slit experiment** using $$d \\sin \\theta = m\\lambda$$ and related relationships.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Law of Reflection",
+              "definition": "For a smooth boundary, the angle measured from the normal for an incoming ray equals the angle measured from the normal for the outgoing ray."
+            },
+            {
+              "term": "Snell's Law",
+              "definition": "The relationship $$n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2$$ connects the indices of two media to the angles a ray makes with the normal as it crosses their boundary."
+            },
+            {
+              "term": "Index of Refraction",
+              "definition": "A quantity defined by $$n=\\frac{c}{v}$$ that indicates how much a wave slows in a medium compared with its speed in vacuum."
+            },
+            {
+              "term": "Total Internal Reflection",
+              "definition": "The complete return of a ray back into its original medium when it tries to pass from larger optical density to smaller optical density at an incident angle greater than a threshold angle."
+            },
+            {
+              "term": "Critical Angle",
+              "definition": "The incident angle in the higher-index medium for which the transmitted ray in the lower-index medium travels along the boundary, satisfying $$\\sin \\theta_c = \\frac{n_2}{n_1}$$ when $$n_1>n_2$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A light ray travels from water with $$n=1.33$$ into air with $$n=1.00$$. Which statement is correct when the incident angle in water is increased from $$0^\\circ$$ toward $$90^\\circ$$?",
+              "options": [
+                "The refracted angle decreases continuously and no special threshold exists.",
+                "The refracted angle increases, reaching $$90^\\circ$$ at the critical angle, and beyond that no refracted ray emerges.",
+                "The reflected ray disappears once the incident angle exceeds the critical angle.",
+                "The frequency of the light changes at the boundary, causing total internal reflection."
+              ],
+              "correctAnswer": "The refracted angle increases, reaching $$90^\\circ$$ at the critical angle, and beyond that no refracted ray emerges.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A ray in air strikes a flat glass surface at an angle of $$30^\\circ$$ to the normal. The glass has index $$1.50$$. What is the angle of refraction?",
+              "options": [
+                "About $$19^\\circ$$",
+                "About $$30^\\circ$$",
+                "About $$49^\\circ$$",
+                "About $$60^\\circ$$"
+              ],
+              "correctAnswer": "About $$19^\\circ$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When light enters a medium with a larger index of refraction from a medium with a smaller index, the ray bends ______ the normal.",
+              "options": [
+                "toward",
+                "away from",
+                "parallel to",
+                "perpendicular to"
+              ],
+              "correctAnswer": "toward",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For a ray going from a medium with index $$n_1$$ into a medium with index $$n_2$$, the condition for the onset of total internal reflection is that $$n_1$$ is ______ $$n_2$$.",
+              "options": [
+                "greater than",
+                "less than",
+                "equal to",
+                "independent of"
+              ],
+              "correctAnswer": "greater than",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Thin Lens Equation",
+              "definition": "For an ideal lens, object distance, image distance, and focal length are related by $$\\frac{1}{f}=\\frac{1}{d_o}+\\frac{1}{d_i}$$ using the standard sign convention."
+            },
+            {
+              "term": "Magnification",
+              "definition": "The ratio $$m=\\frac{h_i}{h_o}=-\\frac{d_i}{d_o}$$ gives the size and orientation of an image relative to its object."
+            },
+            {
+              "term": "Double-Slit Interference",
+              "definition": "A pattern of alternating bright and dark bands produced when coherent waves from two openings combine, with bright fringes at path differences $$m\\lambda$$ and dark fringes at $$\\left(m+\\frac{1}{2}\\right)\\lambda$$."
+            },
+            {
+              "term": "Single-Slit Diffraction",
+              "definition": "The spreading of a wave after passing through a narrow opening, with minima for a slit of width $$a$$ occurring at $$a\\sin\\theta=m\\lambda$$ for nonzero integers $$m$$."
+            },
+            {
+              "term": "Constructive Interference",
+              "definition": "The reinforcement that occurs when overlapping waves arrive in phase so their displacements add to produce greater amplitude."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "An object is placed $$30\\ \\text{cm}$$ in front of a converging lens with focal length $$10\\ \\text{cm}$$. Which statement correctly describes the image?",
+              "options": [
+                "A real, inverted image forms $$15\\ \\text{cm}$$ from the lens.",
+                "A virtual, upright image forms $$15\\ \\text{cm}$$ from the lens.",
+                "A real, upright image forms $$20\\ \\text{cm}$$ from the lens.",
+                "A virtual, inverted image forms $$20\\ \\text{cm}$$ from the lens."
+              ],
+              "correctAnswer": "A real, inverted image forms $$15\\ \\text{cm}$$ from the lens.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In a double-slit experiment, monochromatic light of wavelength $$\\lambda$$ passes through slits separated by distance $$d$$ and forms fringes on a distant screen. If the slit separation is doubled while all else remains constant, what happens to the spacing of adjacent bright fringes on the screen?",
+              "options": [
+                "It doubles.",
+                "It is cut in half.",
+                "It remains the same.",
+                "It becomes four times as large."
+              ],
+              "correctAnswer": "It is cut in half.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a converging lens, an object placed inside the focal length produces a ______ image.",
+              "options": [
+                "virtual and upright",
+                "real and inverted",
+                "real and upright",
+                "virtual and inverted"
+              ],
+              "correctAnswer": "virtual and upright",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In a double-slit interference pattern, a bright fringe occurs when the path difference between the two slits is ______.",
+              "options": [
+                "$$m\\lambda$$",
+                "$$\\left(m+\\frac{1}{2}\\right)\\lambda$$",
+                "$$\\frac{\\lambda}{4}$$",
+                "$$\\frac{d}{L}$$"
+              ],
+              "correctAnswer": "$$m\\lambda$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "unitName": "Quantum, Atomic, and Nuclear Physics",
+      "description": "Photoelectric effect, de Broglie wavelength, atomic models, nuclear reactions, radioactive decay, and mass-energy equivalence.",
+      "note": "# Unit 7: Quantum, Atomic, and Nuclear Physics\n\n## Overview\nThis unit introduces the **quantum** and **nuclear** ideas that classical physics cannot explain, including the **photoelectric effect**, **matter waves**, **atomic energy levels**, **radioactive decay**, and **nuclear reactions**. On the AP exam, these topics often test your ability to connect **models**, **graphs**, and **equations** to physical meaning rather than just compute answers.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Photoelectric effect** | Emission of electrons from a metal when light of sufficiently high frequency strikes it | Tests the idea that light is quantized into **photons** and that energy depends on **frequency**, not intensity |\n| **Photon energy** | Light energy carried in packets with energy $$E = hf$$ | Essential for solving threshold frequency, work function, and emitted electron energy questions |\n| **de Broglie wavelength** | Matter has wave properties with wavelength $$\\lambda = \\frac{h}{p}$$ | Used to compare wave behavior of particles with different momentum |\n| **Atomic energy levels** | Electrons in atoms occupy discrete allowed energies | Explains emission and absorption spectra and why atoms produce line spectra instead of continuous spectra |\n| **Bohr model** | A simplified atomic model with quantized electron energy levels | Common AP context for transitions, photon emission, and energy differences |\n| **Radioactive decay** | Spontaneous transformation of unstable nuclei | Students must identify decay type and conserve **mass number** and **atomic number** in nuclear equations |\n| **Half-life** | Time required for half of a radioactive sample to decay | Frequently tested with decay graphs, fractions remaining, and exponential reasoning |\n| **Mass-energy equivalence** | Mass can be converted to energy according to $$E = mc^2$$ | Critical for nuclear binding energy, fission, fusion, and reaction energy calculations |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Light incident on metal] --> B{Is photon frequency above threshold?}\n    B -->|No| C[No electrons emitted]\n    B -->|Yes| D[Electrons emitted]\n    D --> E[Photon energy given by $$E = hf$$]\n    E --> F[Some energy used to overcome work function]\n    F --> G[Remaining energy becomes electron kinetic energy]\n\n    H[Excited atom or nucleus] --> I[Transition to lower energy state]\n    I --> J[Energy released as photon or particle]\n\n    K[Unstable nucleus] --> L[Radioactive decay]\n    L --> M[Alpha, beta, or gamma emission]\n    M --> N[New nucleus formed]\n    N --> O[Mass difference may correspond to released energy]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Relationship** | **Expression / Rule** | **What to Know** |\n|---|---|---|\n| **Photon energy** | $$E = hf$$ | Photon energy increases with **frequency** |\n| **Speed of light relation** | $$c = f\\lambda$$ | Connects wavelength and frequency for electromagnetic waves |\n| **Photoelectric equation** | $$K_{\\max} = hf - \\phi$$ | Maximum electron kinetic energy equals photon energy minus **work function** |\n| **Threshold frequency** | $$f_0 = \\frac{\\phi}{h}$$ | No photoelectrons are emitted for $$f < f_0$$ |\n| **Electron kinetic energy** | $$K_{\\max} = eV_s$$ | If stopping potential is given, use it to find maximum kinetic energy |\n| **de Broglie wavelength** | $$\\lambda = \\frac{h}{p} = \\frac{h}{mv}$$ | Larger momentum means shorter wavelength |\n| **Energy of emitted or absorbed photon** | $$\\Delta E = hf$$ | Photon energy matches the difference between atomic energy levels |\n| **Mass-energy equivalence** | $$E = mc^2$$ | A small mass defect corresponds to large energy |\n| **Radioactive decay model** | $$N = N_0\\left(\\frac{1}{2}\\right)^{t/T_{1/2}}$$ | Amount remaining after time $$t$$ depends on half-life |\n| **Alpha decay rule** | $$^{A}_{Z}X \\rightarrow ^{A-4}_{Z-2}Y + ^{4}_{2}\\text{He}$$ | Mass number decreases by $$4$$, atomic number by $$2$$ |\n| **Beta minus decay rule** | $$^{A}_{Z}X \\rightarrow ^{A}_{Z+1}Y + ^{0}_{-1}e$$ | Mass number stays the same, atomic number increases by $$1$$ |\n| **Gamma decay rule** | $$^{A}_{Z}X^{*} \\rightarrow ^{A}_{Z}X + \\gamma$$ | No change in mass number or atomic number |\n\n### Must-know qualitative rules\n- **Increasing light intensity** increases the **number** of emitted photoelectrons, but not their maximum kinetic energy, if frequency stays fixed above threshold.\n- **Increasing light frequency** increases the **energy per photon** and therefore can increase emitted electron kinetic energy.\n- **Atomic spectra** are **discrete** because atomic energies are quantized.\n- In **nuclear reactions**, conserve both **mass number** and **atomic number**.\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key AP Connection** |\n|---|---|---|---|\n| **Intensity vs frequency in photoelectric effect** | **Intensity** changes number of photons arriving each second | **Frequency** changes energy per photon | AP questions often ask which one affects electron emission and kinetic energy |\n| **Classical wave model vs quantum model of light** | Predicts energy should depend on intensity | Shows energy is quantized as $$E = hf$$ | The photoelectric effect supports the quantum model |\n| **Atomic transitions vs nuclear transitions** | Involve electron energy levels and usually lower energies | Involve changes in the nucleus and much larger energies | Helps distinguish spectra questions from nuclear reaction questions |\n| **Fission vs fusion** | Heavy nucleus splits into smaller nuclei | Light nuclei combine into heavier nucleus | Both can release energy through mass defect and binding energy changes |\n\n## Common AP Exam Traps\n- Confusing **light intensity** with **light frequency** in the **photoelectric effect**. Only frequency determines whether electrons are emitted and their maximum kinetic energy.\n- Forgetting that **below threshold frequency**, no electrons are emitted no matter how intense the light is.\n- Mixing up **atomic number** and **mass number** when balancing **nuclear equations**.\n- Assuming **gamma decay** changes the identity of the nucleus. It does not change either atomic number or mass number.\n- Using **continuous-energy** thinking for atoms; on the AP exam, electrons in atoms occupy **discrete** energy levels.\n\n## Quick Review Checklist\n- [ ] Explain how the **photoelectric effect** supports the particle model of light.\n- [ ] Use $$E = hf$$ and $$c = f\\lambda$$ to relate photon energy, frequency, and wavelength.\n- [ ] Apply $$K_{\\max} = hf - \\phi$$ to determine whether photoelectrons are emitted and how energetic they are.\n- [ ] Calculate or compare **de Broglie wavelengths** using $$\\lambda = \\frac{h}{p}$$.\n- [ ] Describe how **atomic energy level transitions** produce **emission** or **absorption** spectra.\n- [ ] Balance **alpha**, **beta**, and **gamma** decay equations using conservation of mass number and atomic number.\n- [ ] Solve half-life problems using fractions remaining or $$N = N_0\\left(\\frac{1}{2}\\right)^{t/T_{1/2}}$$.\n- [ ] Explain how **mass defect** leads to released energy through $$E = mc^2$$ in **fission** or **fusion**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Photoelectric effect",
+              "definition": "The emission of electrons from a material when incident electromagnetic radiation has a frequency high enough that individual photons transfer sufficient energy to overcome the material's work function."
+            },
+            {
+              "term": "Work function",
+              "definition": "The minimum energy required to remove an electron from the surface of a material, often used in the relation $$K_{\\max}=hf-\\phi$$."
+            },
+            {
+              "term": "Threshold frequency",
+              "definition": "The smallest incident frequency that can eject electrons from a given surface, determined by $$f_0=\\phi/h$$."
+            },
+            {
+              "term": "Photon energy",
+              "definition": "The energy carried by one quantum of electromagnetic radiation, given by $$E=hf$$."
+            },
+            {
+              "term": "de Broglie wavelength",
+              "definition": "The wavelength associated with a particle of momentum $$p$$, given by $$\\lambda=h/p$$, showing wave-particle duality for matter."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Light of frequency $$f$$ shines on a metal surface with work function $$\\phi$$. If $$hf>\\phi$$, which change will increase the maximum kinetic energy of the emitted electrons?",
+              "options": [
+                "Increase the light intensity while keeping frequency constant",
+                "Decrease the light frequency while keeping intensity constant",
+                "Increase the light frequency while keeping intensity constant",
+                "Use a larger metal surface area while keeping the same light source"
+              ],
+              "correctAnswer": "Increase the light frequency while keeping intensity constant",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "An electron and a proton have equal magnitudes of momentum. Which statement about their associated wavelengths is correct?",
+              "options": [
+                "The electron has a longer wavelength because it has less mass",
+                "The proton has a longer wavelength because it has greater mass",
+                "They have the same wavelength because $$\\lambda=h/p$$",
+                "They have the same wavelength because they have equal kinetic energy"
+              ],
+              "correctAnswer": "They have the same wavelength because $$\\lambda=h/p$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For incident radiation on a metal surface, the maximum kinetic energy of emitted electrons is given by $$K_{\\max}=hf-\\______$$.",
+              "options": [
+                "\\phi",
+                "p",
+                "mc^2",
+                "\\lambda"
+              ],
+              "correctAnswer": "\\phi",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "According to matter-wave theory, the wavelength of a particle is $$\\lambda=\\frac{h}{______}$$.",
+              "options": [
+                "p",
+                "f",
+                "\\phi",
+                "c"
+              ],
+              "correctAnswer": "p",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Bohr model",
+              "definition": "A model in which electrons occupy discrete energy levels around the nucleus and emit or absorb photons when transitioning between those levels, with photon energy given by $$\\Delta E=hf$$."
+            },
+            {
+              "term": "Radioactive decay",
+              "definition": "A spontaneous nuclear process in which an unstable nucleus transforms into a different nucleus or energy state by emitting particles or electromagnetic radiation."
+            },
+            {
+              "term": "Half-life",
+              "definition": "The time required for the number of undecayed nuclei in a sample to decrease to one-half its original value."
+            },
+            {
+              "term": "Mass-energy equivalence",
+              "definition": "The principle that a change in mass corresponds to an energy change according to $$E=mc^2$$, central to nuclear reactions and binding energy."
+            },
+            {
+              "term": "Binding energy",
+              "definition": "The energy required to completely separate a nucleus into its individual nucleons, equal in magnitude to the energy released when the nucleus forms from free nucleons."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A hydrogen atom transitions from a higher energy level to a lower energy level. Which statement best describes the emitted photon?",
+              "options": [
+                "Its energy equals the sum of the two energy levels",
+                "Its energy equals the difference between the two energy levels",
+                "Its frequency is independent of the energy-level change",
+                "Its wavelength increases as the energy difference increases"
+              ],
+              "correctAnswer": "Its energy equals the difference between the two energy levels",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A radioactive sample has an initial activity of $$A_0$$. After two half-lives, what is its activity?",
+              "options": [
+                "$$A_0/2$$",
+                "$$A_0/4$$",
+                "$$2A_0$$",
+                "$$A_0/8$$"
+              ],
+              "correctAnswer": "$$A_0/4$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The energy released or absorbed in a nuclear reaction due to a change in mass is related by $$E=______$$.",
+              "options": [
+                "mc^2",
+                "hf",
+                "h/p",
+                "qV"
+              ],
+              "correctAnswer": "mc^2",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If a nucleus emits a helium-4 nucleus, the process is called ______ decay.",
+              "options": [
+                "alpha",
+                "beta",
+                "gamma",
+                "positron"
+              ],
+              "correctAnswer": "alpha",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,917 @@
+{
+  "apSubject": "AP Macroeconomics",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Basic Economic Concepts",
+      "description": "Scarcity, production possibilities, comparative advantage, trade, and economic systems overview.",
+      "note": "# Unit 1: Basic Economic Concepts\n\n## Overview\nThis unit introduces the foundational ideas of **economics**: **scarcity**, **choice**, **opportunity cost**, **production possibilities**, **comparative advantage**, **trade**, and basic **economic systems**. These concepts matter on the AP exam because they appear repeatedly in both multiple-choice and free-response questions as the logic behind later macroeconomic models.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Scarcity** | The condition that **resources are limited** while human wants are unlimited. | Scarcity is the basic reason economics exists; many AP questions begin with trade-offs caused by limited resources. |\n| **Factors of Production** | The inputs used to produce goods and services: **land, labor, capital, and entrepreneurship**. | Students must identify which resource is changing and how that affects production and economic growth. |\n| **Opportunity Cost** | The value of the **next best alternative forgone** when a choice is made. | A frequent AP trap is confusing total cost with opportunity cost; the exam often asks what must be given up. |\n| **Production Possibilities Curve (PPC)** | A graph showing the **maximum combinations** of two goods an economy can produce with available resources and technology. | The PPC is central for analyzing **efficiency**, **underutilization**, **growth**, and **trade-offs**. |\n| **Efficiency** | Using resources so that maximum output is produced; on a PPC, this means points **on** the curve. | AP questions often ask students to classify points as **efficient**, **inefficient**, or **unattainable**. |\n| **Absolute Advantage** | The ability to produce more of a good using the same resources, or the same amount using fewer resources. | Useful, but less important than comparative advantage; AP questions often contrast the two. |\n| **Comparative Advantage** | The ability to produce a good at a **lower opportunity cost** than another producer. | One of the most tested concepts in Unit 1 because it explains **specialization** and **gains from trade**. |\n| **Economic Systems** | The ways societies organize production and distribution: **market**, **command**, and **mixed** economies. | Students must compare how different systems answer the basic economic questions of **what**, **how**, and **for whom** to produce. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart LR\n    A[Scarcity] --> B[Choices must be made]\n    B --> C[Each choice has an opportunity cost]\n    C --> D[PPC shows trade-offs]\n    D --> E[Specialization based on comparative advantage]\n    E --> F[Trade]\n    F --> G[Greater total output and consumption possibilities]\n```\n\n### How to read this chain\n1. **Scarcity** forces individuals, firms, and governments to make choices.\n2. Every choice creates an **opportunity cost**.\n3. Those trade-offs can be modeled with the **PPC**.\n4. When producers specialize according to **comparative advantage**, total production rises.\n5. **Trade** allows parties to consume beyond what they could achieve alone.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **What You Must Know** |\n|---|---|\n| **Opportunity Cost** | $$\\text{Opportunity Cost of Good A} = \\frac{\\text{Good B given up}}{\\text{Good A gained}}$$ |\n| **Slope of a Linear PPC** | $$\\text{Slope} = \\frac{\\Delta y}{\\Delta x}$$ In economics, the slope reflects the **opportunity cost** of moving from one good to another. |\n| **Comparative Advantage Rule** | The producer with the **lower opportunity cost** of making a good has the **comparative advantage** in that good. |\n| **Absolute Advantage Rule** | The producer that can make **more output** with the same inputs has the **absolute advantage**. |\n| **PPC Point Meanings** | **On** the PPC = efficient; **inside** the PPC = inefficient or underutilized resources; **outside** the PPC = unattainable with current resources and technology. |\n| **Economic Growth on a PPC** | An increase in resource quantity, resource quality, or technology shifts the PPC **outward**. |\n| **Law of Increasing Opportunity Cost** | As more of one good is produced, larger amounts of the other good must be given up, so opportunity cost rises. This creates a **bowed-out PPC**. |\n| **Specialization and Trade Rule** | If two parties specialize according to **comparative advantage** and trade at a mutually acceptable rate, **both can gain**. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Related** | **Key Difference** |\n|---|---|---|\n| **Scarcity vs. Shortage** | Both involve limited availability. | **Scarcity** is universal and permanent; a **shortage** is temporary and often market-specific. |\n| **Absolute Advantage vs. Comparative Advantage** | Both compare producers’ abilities. | **Absolute advantage** compares productivity; **comparative advantage** compares opportunity cost. Trade depends on **comparative advantage**. |\n| **Efficiency vs. Inefficiency** | Both refer to resource use relative to the PPC. | **Efficiency** means producing on the PPC; **inefficiency** means producing inside it. |\n| **Movement Along PPC vs. Shift of PPC** | Both change production possibilities. | A **movement along** the PPC reflects reallocating existing resources; a **shift** reflects a change in resources or technology. |\n\n```mermaid\nflowchart TD\n    A[Production Possibilities Curve] --> B[Point on curve]\n    A --> C[Point inside curve]\n    A --> D[Point outside curve]\n    B --> E[Efficient production]\n    C --> F[Unemployment or underutilization]\n    D --> G[Currently unattainable]\n```\n\n## Common AP Exam Traps\n\n- **Comparative advantage is not the same as absolute advantage.** A country can have an absolute advantage in both goods and still benefit from trade if opportunity costs differ.\n- **Opportunity cost must be calculated using what is given up**, not what is gained. Read production tables carefully.\n- A point **inside** the PPC is not “better” because it is safer or more realistic; it represents **inefficiency**.\n- A **bowed-out PPC** reflects **increasing opportunity cost**, not constant opportunity cost. A straight-line PPC implies constant opportunity cost.\n- **Trade does not require one side to be worse at everything.** Gains from trade come from specialization based on comparative advantage, not from equal productivity.\n\n## Quick Review Checklist\n\n- [ ] Define **scarcity** and explain why it forces economic choices.\n- [ ] Identify the **four factors of production**: **land, labor, capital, and entrepreneurship**.\n- [ ] Calculate **opportunity cost** from a word problem, table, or PPC.\n- [ ] Distinguish between **absolute advantage** and **comparative advantage**.\n- [ ] Determine which producer should specialize in which good using **lower opportunity cost**.\n- [ ] Interpret a **PPC** by identifying efficient, inefficient, and unattainable points.\n- [ ] Explain the difference between a **movement along** a PPC and an **outward or inward shift**.\n- [ ] Compare **market**, **command**, and **mixed** economic systems in terms of how they answer basic economic questions.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Scarcity",
+              "definition": "The condition in which limited resources are insufficient to satisfy unlimited human wants, forcing individuals and societies to make choices."
+            },
+            {
+              "term": "Opportunity Cost",
+              "definition": "The value of the next-best alternative forgone when a choice is made."
+            },
+            {
+              "term": "Production Possibilities Curve",
+              "definition": "A model that shows the maximum combinations of two goods or categories of goods that can be produced with available resources and technology when resources are fully employed."
+            },
+            {
+              "term": "Allocative Efficiency",
+              "definition": "An outcome in which the mix of output reflects consumer preferences, occurring where the marginal benefit of the last unit equals its marginal cost."
+            },
+            {
+              "term": "Productive Efficiency",
+              "definition": "An outcome in which goods and services are produced at the lowest possible cost, using all available resources without waste."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A nation can produce either consumer goods or capital goods. If it moves from a point inside its production possibilities curve to a point on the curve, which of the following most likely occurs?",
+              "options": [
+                "Unemployment decreases and productive efficiency increases",
+                "Opportunity cost falls to zero",
+                "Resources become less specialized",
+                "The economy experiences technological decline"
+              ],
+              "correctAnswer": "Unemployment decreases and productive efficiency increases",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which of the following best explains why the production possibilities curve is typically bowed outward from the origin?",
+              "options": [
+                "Resources are not equally suited to producing all goods",
+                "Consumer preferences change as output rises",
+                "The economy always operates inefficiently",
+                "Prices of goods are assumed to be constant"
+              ],
+              "correctAnswer": "Resources are not equally suited to producing all goods",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "On a production possibilities curve, producing more of one good generally requires giving up some of another good because of ______.",
+              "options": [
+                "opportunity cost",
+                "economic equity",
+                "absolute advantage",
+                "price ceiling"
+              ],
+              "correctAnswer": "opportunity cost",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A point located inside a production possibilities curve indicates ______.",
+              "options": [
+                "inefficient use of resources",
+                "allocative efficiency",
+                "economic growth",
+                "full employment"
+              ],
+              "correctAnswer": "inefficient use of resources",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Absolute Advantage",
+              "definition": "The ability of a producer to make more of a good or service than another producer using the same quantity of resources, or to make the same amount using fewer resources."
+            },
+            {
+              "term": "Comparative Advantage",
+              "definition": "The ability of a producer to make a good or service at a lower opportunity cost than another producer."
+            },
+            {
+              "term": "Specialization",
+              "definition": "A situation in which individuals, firms, or nations concentrate their resources on producing the goods and services for which they are relatively most efficient."
+            },
+            {
+              "term": "Command Economy",
+              "definition": "An economic system in which decisions about production, resource allocation, and prices are made primarily by the government."
+            },
+            {
+              "term": "Market Economy",
+              "definition": "An economic system in which households and firms, acting in their own interest, make most production and consumption decisions through voluntary exchange."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Country A can produce $$10$$ tons of wheat or $$5$$ tons of steel, while Country B can produce $$8$$ tons of wheat or $$2$$ tons of steel. Which country has the comparative advantage in steel?",
+              "options": [
+                "Country A, because its opportunity cost of steel is lower",
+                "Country B, because it can produce wheat more efficiently",
+                "Country A, because it has the absolute advantage in both goods",
+                "Country B, because trade eliminates opportunity cost"
+              ],
+              "correctAnswer": "Country A, because its opportunity cost of steel is lower",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which of the following is most characteristic of a mixed economy?",
+              "options": [
+                "All resources are allocated exclusively through central planning",
+                "Private property and markets exist alongside government intervention",
+                "Firms are prohibited from seeking profit",
+                "Consumers have no role in determining output"
+              ],
+              "correctAnswer": "Private property and markets exist alongside government intervention",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A country should specialize in and export the good for which it has a ______.",
+              "options": [
+                "comparative advantage",
+                "trade deficit",
+                "higher price level",
+                "circular flow"
+              ],
+              "correctAnswer": "comparative advantage",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If one producer can make a good using fewer inputs than another producer, the first producer has ______ in that good.",
+              "options": [
+                "absolute advantage",
+                "comparative advantage in all goods",
+                "a market failure",
+                "diminishing returns"
+              ],
+              "correctAnswer": "absolute advantage",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Economic Indicators and the Business Cycle",
+      "description": "GDP measurement, business cycle phases, unemployment types, inflation, price indices, and CPI vs. GDP deflator.",
+      "note": "# Unit 2: Economic Indicators and the Business Cycle\n\n## Overview\nThis unit introduces the main **macroeconomic indicators** economists use to measure the health of an economy: **GDP**, **unemployment**, and **inflation**. For the AP exam, you need to know not only what these indicators measure, but also how to calculate them, interpret them, and connect them to phases of the **business cycle**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Gross Domestic Product (GDP)** | The total market value of all **final goods and services** produced within a country in a given period | Central measure of output; AP questions often test what counts in GDP and how to calculate it |\n| **Nominal GDP vs. Real GDP** | **Nominal GDP** uses current prices; **real GDP** adjusts for price changes using a base year | Important for separating changes in output from changes in prices |\n| **Business Cycle** | Fluctuations in real output over time: **expansion**, **peak**, **contraction**, and **trough** | Students must interpret economic conditions and identify phases from data or graphs |\n| **Unemployment** | The share of the labor force actively seeking work but unable to find it | AP often asks students to distinguish among types of unemployment and calculate rates |\n| **Types of Unemployment** | **Frictional**, **structural**, and **cyclical** unemployment | Key for explaining causes of unemployment and linking them to business cycle conditions |\n| **Inflation** | A sustained increase in the general price level over time | Essential for interpreting purchasing power, price indices, and policy concerns |\n| **Consumer Price Index (CPI)** | A price index based on a fixed market basket of consumer goods and services | Used to measure inflation from the consumer perspective; heavily tested in calculations |\n| **GDP Deflator** | A price index comparing nominal GDP to real GDP | Useful for measuring inflation across all domestically produced final goods and services |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart LR\n    A[Expansion] --> B[Peak]\n    B --> C[Contraction or Recession]\n    C --> D[Trough]\n    D --> A\n\n    A --> E[Real GDP rises]\n    A --> F[Unemployment falls]\n    C --> G[Real GDP falls]\n    C --> H[Cyclical unemployment rises]\n```\n\n### How the indicators connect\n1. During an **expansion**, **real GDP** tends to rise and **cyclical unemployment** tends to fall.\n2. At the **peak**, output is near its short-run maximum before growth slows.\n3. During a **contraction**, real output falls, and unemployment usually rises.\n4. At the **trough**, the economy reaches its lowest point before recovery begins.\n5. Meanwhile, **inflation** may rise or fall depending on changes in aggregate demand, costs, and output conditions.\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Rule** | **Meaning / Use** |\n|---|---|\n| $$GDP = C + I + G + (X - M)$$ | Expenditure approach to GDP: **consumption**, **investment**, **government spending**, and **net exports** |\n| $$\\text{Real GDP} = \\frac{\\text{Nominal GDP}}{\\text{Price Index}} \\times 100$$ | Converts nominal output into inflation-adjusted output |\n| $$\\text{GDP Deflator} = \\frac{\\text{Nominal GDP}}{\\text{Real GDP}} \\times 100$$ | Measures the overall price level for domestically produced final goods and services |\n| $$\\text{Inflation Rate} = \\frac{\\text{CPI in Year 2} - \\text{CPI in Year 1}}{\\text{CPI in Year 1}} \\times 100$$ | Percent change in CPI from one year to the next |\n| $$\\text{CPI} = \\frac{\\text{Cost of Market Basket in Current Year}}{\\text{Cost of Market Basket in Base Year}} \\times 100$$ | Measures consumer prices using a fixed basket |\n| $$\\text{Unemployment Rate} = \\frac{\\text{Unemployed}}{\\text{Labor Force}} \\times 100$$ | Percent of the labor force without a job but actively seeking work |\n| $$\\text{Labor Force Participation Rate} = \\frac{\\text{Labor Force}}{\\text{Adult Population}} \\times 100$$ | Measures the share of adults working or seeking work |\n\n### Must-know rules\n- **GDP includes only final goods and services**, not intermediate goods, to avoid **double counting**.\n- **GDP counts production within a country’s borders**, regardless of who owns the resources.\n- Used goods are **not counted** in GDP, but the value of services involved in their sale may be counted.\n- **Transfer payments** are **not included** in GDP because they do not reflect current production.\n- **Cyclical unemployment** changes with the business cycle; **frictional** and **structural** unemployment can exist even in a healthy economy.\n\n## Connections & Comparisons\n\n| **Comparison** | **CPI** | **GDP Deflator** | **AP Significance** |\n|---|---|---|---|\n| **What it measures** | Prices of a fixed basket bought by consumers | Prices of all final goods and services produced domestically | Students must know they are both inflation measures, but not identical |\n| **Basket type** | Fixed basket | Changing basket based on current production | Explains why the measures can move differently |\n| **Includes imports?** | Yes, if consumers buy them | No, because imports are not part of domestic production | Frequent AP distinction |\n| **Used for** | Cost of living, inflation from consumer viewpoint | Broad economy-wide price level | Useful when comparing inflation measures |\n\n| **Comparison** | **Nominal GDP** | **Real GDP** | **AP Significance** |\n|---|---|---|---|\n| **Price basis** | Current year prices | Base year prices | Helps determine whether output actually changed |\n| **Affected by inflation?** | Yes | No, adjusted for inflation | Essential for identifying true economic growth |\n| **Best for measuring output growth** | No | Yes | AP often asks which measure is better for comparing years |\n\n## Common AP Exam Traps\n- Confusing **nominal GDP** with **real GDP**. If prices rise but output does not, nominal GDP may increase while real GDP stays unchanged.\n- Counting **intermediate goods** in GDP. Only **final goods and services** should be included.\n- Assuming all unemployment is bad in the same way. **Frictional unemployment** is often natural and can reflect normal job search.\n- Forgetting that discouraged workers are **not** counted as unemployed because they are not actively seeking work.\n- Mixing up **CPI** and **GDP deflator**: **CPI** includes imported consumer goods, while the **GDP deflator** does not.\n\n## Quick Review Checklist\n- [ ] I can define **GDP** and identify what is and is not included in it.\n- [ ] I can use $$GDP = C + I + G + (X - M)$$ to calculate total output.\n- [ ] I can distinguish between **nominal GDP** and **real GDP** and explain why **real GDP** is better for measuring growth.\n- [ ] I can identify the phases of the **business cycle**: **expansion**, **peak**, **contraction**, and **trough**.\n- [ ] I can calculate the **unemployment rate** and explain the difference between **frictional**, **structural**, and **cyclical** unemployment.\n- [ ] I can calculate **CPI** and the **inflation rate** using a market basket.\n- [ ] I can calculate and interpret the **GDP deflator**.\n- [ ] I can compare **CPI** and **GDP deflator** and explain why they may produce different inflation measures.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Gross Domestic Product (GDP)",
+              "definition": "The market value of all final goods and services produced within a country's borders in a given period, usually measured annually or quarterly."
+            },
+            {
+              "term": "Final good",
+              "definition": "An item purchased by its end user and not used as an input in the production of another product during the same period."
+            },
+            {
+              "term": "Nominal GDP",
+              "definition": "A measure of output valued using current-year prices, so changes can reflect both production and price level changes."
+            },
+            {
+              "term": "Real GDP",
+              "definition": "A measure of output valued using prices from a base year, allowing comparison of production across time without the effects of inflation."
+            },
+            {
+              "term": "Business cycle",
+              "definition": "Recurring fluctuations in overall economic activity characterized by expansions and contractions in real output over time."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which transaction would be included in the calculation of current-year GDP?",
+              "options": [
+                "The purchase of 100 shares of stock in an online brokerage account",
+                "A used car sold by one household to another",
+                "A bakery's purchase of flour to make bread sold this year",
+                "A newly produced machine purchased by a domestic firm"
+              ],
+              "correctAnswer": "A newly produced machine purchased by a domestic firm",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "If nominal GDP increased by $$8\\%$$ while the overall price level increased by $$3\\%$$, which of the following is the best approximation of the growth rate of real GDP?",
+              "options": [
+                "$$3\\%$$",
+                "$$5\\%$$",
+                "$$8\\%$$",
+                "$$11\\%$$"
+              ],
+              "correctAnswer": "$$5\\%$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Using the expenditure approach, GDP is calculated as $$C + I + G + (X - M)$$, where $$I$$ represents ______.",
+              "options": [
+                "household spending on services",
+                "business investment spending",
+                "all government transfer payments",
+                "net exports"
+              ],
+              "correctAnswer": "business investment spending",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When real GDP falls for a period of time and unemployment tends to rise, the economy is most likely in the ______ phase of the business cycle.",
+              "options": [
+                "peak",
+                "expansion",
+                "contraction",
+                "trough"
+              ],
+              "correctAnswer": "contraction",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Frictional unemployment",
+              "definition": "Short-term joblessness that occurs when workers are between jobs or are searching for positions that better match their skills and preferences."
+            },
+            {
+              "term": "Structural unemployment",
+              "definition": "Joblessness caused by a mismatch between workers' skills or locations and the needs of employers, often due to technological change or shifts in demand."
+            },
+            {
+              "term": "Consumer Price Index (CPI)",
+              "definition": "A measure of the average change over time in the prices paid by urban consumers for a fixed market basket of goods and services."
+            },
+            {
+              "term": "GDP deflator",
+              "definition": "A price index found by comparing nominal output to inflation-adjusted output, capturing the prices of domestically produced final goods and services."
+            },
+            {
+              "term": "Inflation",
+              "definition": "A sustained increase in the overall price level of goods and services in an economy over time."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A worker loses a job in coal mining because electric utilities shift permanently toward renewable energy sources, and the worker's skills are not easily transferable. This worker is best classified as experiencing",
+              "options": [
+                "frictional unemployment",
+                "structural unemployment",
+                "seasonal unemployment",
+                "cyclical unemployment"
+              ],
+              "correctAnswer": "structural unemployment",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which of the following explains why the GDP deflator can differ from the CPI?",
+              "options": [
+                "The GDP deflator includes imports, while the CPI excludes them",
+                "The CPI uses only current-year quantities, while the GDP deflator uses only base-year quantities",
+                "The GDP deflator measures prices of domestically produced final goods and services, while the CPI includes imported consumer goods",
+                "The CPI excludes services, while the GDP deflator includes services"
+              ],
+              "correctAnswer": "The GDP deflator measures prices of domestically produced final goods and services, while the CPI includes imported consumer goods",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The inflation rate between two years is most directly calculated as the percentage change in the ______.",
+              "options": [
+                "unemployment rate",
+                "consumer price index",
+                "real GDP growth rate",
+                "labor force participation rate"
+              ],
+              "correctAnswer": "consumer price index",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If nominal GDP is $$\\$600$$ billion and real GDP is $$\\$500$$ billion, then the GDP deflator is ______.",
+              "options": [
+                "$$83.3$$",
+                "$$100$$",
+                "$$120$$",
+                "$$150$$"
+              ],
+              "correctAnswer": "$$120$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "National Income and Price Determination",
+      "description": "Aggregate demand and supply, multiplier effect, fiscal policy, automatic stabilizers, and recessionary/inflationary gaps.",
+      "note": "# Unit 3: National Income and Price Determination\n\n## Overview\nThis unit explains how **aggregate demand** and **aggregate supply** determine the economy’s **price level** and **real output** in the short run and long run. It is essential for the AP exam because students must analyze **shifts in AD/AS**, identify **recessionary** and **inflationary gaps**, and evaluate how **fiscal policy** and the **multiplier effect** change equilibrium.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Aggregate Demand (AD)** | The total demand for a nation’s goods and services at different price levels: $$AD = C + I + G + (X - M)$$ | You must know why AD slopes downward and what causes AD to shift. |\n| **Short-Run Aggregate Supply (SRAS)** | Output firms will produce at different price levels when some input prices are sticky | AP questions often test SRAS shifts from input costs, productivity, or expectations. |\n| **Long-Run Aggregate Supply (LRAS)** | The economy’s full-employment output, or **potential output** | Critical for identifying whether the economy has a **gap** and for long-run adjustment. |\n| **Equilibrium Price Level and Real GDP** | The intersection of **AD** and **SRAS** | This determines short-run macroeconomic equilibrium and is central to graph analysis. |\n| **Recessionary Gap** | When equilibrium real GDP is below full-employment GDP | Students must connect this to unemployment, deflationary pressure, and expansionary policy. |\n| **Inflationary Gap** | When equilibrium real GDP exceeds full-employment GDP | Often tested with demand-pull inflation and contractionary policy responses. |\n| **Multiplier Effect** | The idea that an initial change in spending causes a larger change in real GDP | Frequently appears in fiscal policy multiple-choice and FRQ calculations. |\n| **Automatic Stabilizers** | Government programs and tax structures that automatically reduce fluctuations | Important for distinguishing automatic from discretionary fiscal policy. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Change in spending or costs] --> B[Shift in AD or SRAS]\n    B --> C[New short-run equilibrium]\n    C --> D[Change in real GDP]\n    C --> E[Change in price level]\n    D --> F[\"Possible output gap (recessionary or inflationary)\"]\n    F --> G[Pressure on wages and resource prices]\n    G --> H[Shift in SRAS toward LRAS]\n    H --> I[Long-run equilibrium at full-employment output]\n```\n\n### Fiscal policy transmission\n```mermaid\nflowchart LR\n    A[Government changes taxes or spending] --> B[Change in disposable income or direct spending]\n    B --> C[Change in consumption or aggregate demand]\n    C --> D[Multiplier effect]\n    D --> E[Change in real GDP and price level]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Rule** | **Meaning / Use** |\n|---|---|\n| $$GDP = C + I + G + (X - M)$$ | Basic expenditure approach; on AP Macro, this also helps define **AD**. |\n| $$AD = C + I + G + (X - M)$$ | Total planned spending at each price level. |\n| $$MPC = \\frac{\\Delta C}{\\Delta Y_d}$$ | **Marginal propensity to consume**: fraction of extra disposable income spent. |\n| $$MPS = \\frac{\\Delta S}{\\Delta Y_d}$$ | **Marginal propensity to save**: fraction of extra disposable income saved. |\n| $$MPC + MPS = 1$$ | Key relationship used in multiplier problems. |\n| $$\\text{Spending Multiplier} = \\frac{1}{1 - MPC} = \\frac{1}{MPS}$$ | Used for changes in **government spending**, **investment**, or other autonomous spending. |\n| $$\\text{Tax Multiplier} = \\frac{-MPC}{1 - MPC}$$ | Tax changes have a smaller effect than equal-sized spending changes. |\n| **Recessionary gap** | Occurs when equilibrium output is **less than** full-employment output. |\n| **Inflationary gap** | Occurs when equilibrium output is **greater than** full-employment output. |\n| **Long-run adjustment rule** | If output is below LRAS, nominal wages and input prices tend to fall, shifting **SRAS right**. If output is above LRAS, nominal wages and input prices tend to rise, shifting **SRAS left**. |\n\n### Must-know shift rules\n- **AD shifts right** when **consumption**, **investment**, **government spending**, or **net exports** rise.\n- **AD shifts left** when those components fall.\n- **SRAS shifts right** with lower input costs, higher productivity, or lower business taxes.\n- **SRAS shifts left** with higher input costs, supply shocks, or lower productivity.\n- **LRAS** changes only when the economy’s productive capacity changes, such as with labor force growth, capital growth, or technology.\n\n## Connections & Comparisons\n\n| **Comparison** | **Aggregate Demand** | **Short-Run Aggregate Supply** | **Long-Run Aggregate Supply** |\n|---|---|---|---|\n| **What shifts it?** | Changes in $$C, I, G, X, M$$ | Input prices, productivity, business taxes | Quantity/quality of resources, technology, institutions |\n| **Why does it matter?** | Changes spending in the economy | Changes production costs in the short run | Shows **full-employment output** |\n| **Typical AP result of rightward shift** | Higher real GDP and higher price level | Higher real GDP and lower price level | More potential output |\n| **Typical AP result of leftward shift** | Lower real GDP and lower price level | Lower real GDP and higher price level | Less potential output |\n\n### Fiscal policy comparison\n\n| **Policy Type** | **Tool** | **Used For** | **Likely Effect on AD** |\n|---|---|---|---|\n| **Expansionary fiscal policy** | Increase $$G$$ or decrease taxes | Close a **recessionary gap** | **AD shifts right** |\n| **Contractionary fiscal policy** | Decrease $$G$$ or increase taxes | Close an **inflationary gap** | **AD shifts left** |\n| **Automatic stabilizers** | Progressive taxes, unemployment benefits | Smooth fluctuations without new legislation | Reduce the size of AD swings |\n\n## Common AP Exam Traps\n- Confusing a **movement along AD** with a **shift of AD**. A change in the **price level** causes movement along the curve; a change in **$$C, I, G, \\text{or } (X-M)$$** shifts it.\n- Assuming **LRAS** shifts whenever **AD** shifts. **AD** changes short-run equilibrium, but **LRAS** only changes when productive capacity changes.\n- Forgetting that the **tax multiplier** is **smaller in magnitude** than the **spending multiplier**.\n- Mixing up **recessionary gap** and **inflationary gap**. Below full-employment GDP means recessionary; above it means inflationary.\n- Treating **automatic stabilizers** as **discretionary fiscal policy**. Automatic stabilizers work without a new law being passed.\n\n## Quick Review Checklist\n- [ ] I can define **aggregate demand**, **SRAS**, and **LRAS**.\n- [ ] I can explain why **AD** slopes downward and what causes it to shift.\n- [ ] I can identify factors that shift **SRAS** versus factors that shift **LRAS**.\n- [ ] I can determine equilibrium **real GDP** and **price level** from an **AD-AS** graph.\n- [ ] I can identify a **recessionary gap** or **inflationary gap** relative to **LRAS**.\n- [ ] I can calculate and apply the **spending multiplier** and **tax multiplier**.\n- [ ] I can explain how **expansionary** and **contractionary fiscal policy** affect **AD**.\n- [ ] I can describe how **automatic stabilizers** reduce business cycle fluctuations.\n- [ ] I can explain how the economy self-adjusts from a short-run gap back to **long-run equilibrium**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Aggregate Demand",
+              "definition": "The total quantity of domestically produced final goods and services that households, firms, government, and foreign buyers are willing and able to purchase at different overall price levels."
+            },
+            {
+              "term": "Short-Run Aggregate Supply",
+              "definition": "The relationship showing the quantity of real output firms will produce at different overall price levels when some input prices, especially nominal wages, are slow to adjust."
+            },
+            {
+              "term": "Long-Run Aggregate Supply",
+              "definition": "The vertical relationship showing the economy's full-employment real output, determined by available resources, technology, and institutions rather than the overall price level."
+            },
+            {
+              "term": "Consumption Function",
+              "definition": "The relationship between disposable income and household spending, indicating how much spending changes when after-tax income changes."
+            },
+            {
+              "term": "Marginal Propensity to Consume",
+              "definition": "The fraction of an additional dollar of disposable income that households spend on consumption rather than save."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "If households become more optimistic about future income and employment, which immediate macroeconomic effect is most likely in the United States, assuming no change in price level?",
+              "options": [
+                "Aggregate demand shifts right because consumption spending increases.",
+                "Short-run aggregate supply shifts right because nominal wages fall.",
+                "Long-run aggregate supply shifts right because potential output rises immediately.",
+                "Aggregate demand shifts left because saving automatically rises more than consumption."
+              ],
+              "correctAnswer": "Aggregate demand shifts right because consumption spending increases.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "An economy is initially in long-run equilibrium. A sharp increase in input prices reduces firms' profitability at each price level. In the short run, this change will most likely cause which combination of effects?",
+              "options": [
+                "A leftward shift of short-run aggregate supply, higher price level, and lower real output",
+                "A rightward shift of aggregate demand, lower price level, and higher real output",
+                "A rightward shift of long-run aggregate supply, higher real output, and no change in price level",
+                "A leftward shift of aggregate demand, lower price level, and lower real output"
+              ],
+              "correctAnswer": "A leftward shift of short-run aggregate supply, higher price level, and lower real output",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In the simple spending model, the spending multiplier equals $$\\frac{1}{1-MPC}$$, so if the marginal propensity to consume is $$0.8$$, the multiplier is ______.",
+              "options": [
+                "2",
+                "4",
+                "5",
+                "10"
+              ],
+              "correctAnswer": "5",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A decrease in the overall price level increases the purchasing power of money balances and tends to raise consumption spending; this is known as the ______ effect.",
+              "options": [
+                "interest rate",
+                "foreign exchange",
+                "wealth",
+                "crowding-out"
+              ],
+              "correctAnswer": "wealth",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Spending Multiplier",
+              "definition": "The ratio of the total change in real GDP to an initial change in autonomous spending, arising because one person's spending becomes another person's income."
+            },
+            {
+              "term": "Recessionary Gap",
+              "definition": "The amount by which equilibrium real output falls short of the full-employment level, creating cyclical unemployment and downward pressure on prices over time."
+            },
+            {
+              "term": "Inflationary Gap",
+              "definition": "The amount by which equilibrium real output exceeds the full-employment level, creating upward pressure on prices and wages over time."
+            },
+            {
+              "term": "Automatic Stabilizers",
+              "definition": "Features of the fiscal system that change government spending or tax collections without new legislation, reducing fluctuations in real GDP over the business cycle."
+            },
+            {
+              "term": "Crowding Out",
+              "definition": "A reduction in private investment caused by higher interest rates when government borrowing increases the demand for loanable funds."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Suppose the economy is in a recessionary gap and the government increases spending by $$\\$40$$ billion. If the marginal propensity to consume is $$0.75$$ and there is no crowding out, what is the maximum predicted change in real GDP?",
+              "options": [
+                "$$\\$30$$ billion",
+                "$$\\$40$$ billion",
+                "$$\\$120$$ billion",
+                "$$\\$160$$ billion"
+              ],
+              "correctAnswer": "$$\\$160$$ billion",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which policy change best illustrates an automatic stabilizer operating during an economic downturn?",
+              "options": [
+                "Congress passes a new infrastructure bill after lengthy debate.",
+                "Tax revenues fall and unemployment benefit payments rise as incomes decline.",
+                "The central bank sells government securities to reduce inflationary pressure.",
+                "Firms cut nominal wages to restore full employment output."
+              ],
+              "correctAnswer": "Tax revenues fall and unemployment benefit payments rise as incomes decline.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When equilibrium real GDP exceeds full-employment output, the economy has an ______ gap.",
+              "options": [
+                "inflationary",
+                "recessionary",
+                "cyclical",
+                "deflationary"
+              ],
+              "correctAnswer": "inflationary",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Expansionary fiscal policy intended to close a recessionary gap would most directly involve increasing government spending or ______ taxes.",
+              "options": [
+                "raising",
+                "indexing",
+                "lowering",
+                "withholding"
+              ],
+              "correctAnswer": "lowering",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Financial Sector",
+      "description": "Money supply, money creation, Federal Reserve, monetary policy tools, and money market/loanable funds models.",
+      "note": "# Unit 4: Financial Sector\n\n## Overview\nThis unit explains how **money**, **banks**, and the **Federal Reserve** interact to influence the economy. For the AP exam, you must understand how the **money supply** is measured and created, how **monetary policy tools** shift interest rates, and how to analyze outcomes in the **money market** and **loanable funds market**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Money** | Any asset that serves as a **medium of exchange**, **unit of account**, and **store of value** | AP questions often test whether something qualifies as money and whether it performs money’s three functions |\n| **Money Supply** | The total amount of liquid financial assets in the economy, especially **$$M_1$$** and **$$M_2$$** | You may need to identify what counts in each measure and connect changes in money supply to interest rates |\n| **Fractional Reserve Banking** | A banking system in which banks keep only a fraction of deposits as reserves and lend out the rest | Central to understanding **money creation** and the **money multiplier** |\n| **Required Reserve Ratio** | The fraction of deposits banks must hold as reserves | Determines how much lending banks can do and affects the maximum expansion of the money supply |\n| **Money Multiplier** | The maximum amount the banking system can expand deposits from an initial change in reserves | Frequently appears in quantitative AP questions involving reserve requirements and deposit expansion |\n| **Federal Reserve** | The central bank of the United States that regulates banks and conducts **monetary policy** | You must know the Fed’s structure, role, and policy tools |\n| **Monetary Policy Tools** | **Open market operations**, **discount rate**, and **reserve requirements** | AP asks how each tool changes reserves, money supply, and interest rates |\n| **Money Market and Loanable Funds** | Models showing how the supply and demand for money and borrowing/saving determine interest rates | Essential for graph analysis and for linking policy changes to macro outcomes |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Federal Reserve changes policy tool\"] --> B[\"Bank reserves change\"]\n    B --> C[\"Banks change lending\"]\n    C --> D[\"Money supply changes\"]\n    D --> E[\"Nominal interest rate changes in money market\"]\n    E --> F[\"Investment spending changes\"]\n    F --> G[\"Aggregate demand changes\"]\n    G --> H[\"Real output and price level may change\"]\n\n    A2[\"New deposit enters banking system\"] --> B2[\"Bank keeps required reserves\"]\n    B2 --> C2[\"Bank lends excess reserves\"]\n    C2 --> D2[\"Loan becomes new deposit in another bank\"]\n    D2 --> B2\n```\n\n### Two essential chains to remember\n1. **Money creation process**\n   1. A bank receives a deposit.\n   2. It holds **required reserves**.\n   3. It lends **excess reserves**.\n   4. The loan is spent and redeposited elsewhere.\n   5. The process repeats, expanding the money supply.\n\n2. **Monetary policy transmission**\n   1. The **Fed** changes bank reserves.\n   2. This shifts the **money supply**.\n   3. Interest rates in the **money market** change.\n   4. **Investment** and sometimes **consumption** change.\n   5. **Aggregate demand** shifts.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Meaning / Use** |\n|---|---|\n| $$\\text{Required Reserves} = \\text{Deposits} \\times \\text{Required Reserve Ratio}$$ | Minimum reserves a bank must hold |\n| $$\\text{Excess Reserves} = \\text{Actual Reserves} - \\text{Required Reserves}$$ | Amount available for new lending |\n| $$\\text{Simple Money Multiplier} = \\frac{1}{\\text{Required Reserve Ratio}}$$ | Maximum potential deposit expansion |\n| $$\\text{Maximum Change in Money Supply} = \\text{Excess Reserves} \\times \\frac{1}{\\text{Required Reserve Ratio}}$$ | Used in banking expansion problems |\n| **Open market purchase** | Fed buys bonds, increasing bank reserves, increasing money supply, and lowering interest rates |\n| **Open market sale** | Fed sells bonds, decreasing bank reserves, decreasing money supply, and raising interest rates |\n| **Lower discount rate** | Encourages banks to borrow from the Fed, increasing reserves and money supply |\n| **Higher discount rate** | Discourages bank borrowing from the Fed, decreasing reserves and money supply |\n| **Lower reserve requirement** | Increases lending ability and increases the money multiplier |\n| **Higher reserve requirement** | Reduces lending ability and decreases the money multiplier |\n\n### Money market rules\n- **Money demand** slopes downward because at lower interest rates, people prefer to hold more money.\n- **Money supply** is typically drawn as **vertical**, set by the Fed.\n- If **money supply increases**, the equilibrium interest rate **falls**.\n- If **money demand increases**, the equilibrium interest rate **rises**.\n\n### Loanable funds rules\n- **Supply of loanable funds** comes mainly from saving.\n- **Demand for loanable funds** comes mainly from borrowers, especially firms seeking investment funds and governments borrowing through deficits.\n- An increase in the **supply** of loanable funds lowers real interest rates.\n- An increase in the **demand** for loanable funds raises real interest rates.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Differ / Connect** | **AP Exam Importance** |\n|---|---|---|\n| **Money Market vs. Loanable Funds Market** | The **money market** determines the **nominal interest rate** through money supply and money demand. The **loanable funds market** determines the **real interest rate** through saving and borrowing. | Students often confuse which graph to use and what shifts each curve |\n| **Expansionary vs. Contractionary Monetary Policy** | **Expansionary** policy increases reserves and money supply to lower interest rates. **Contractionary** policy decreases reserves and money supply to raise interest rates. | Common graphing and policy-identification question type |\n| **Required Reserves vs. Excess Reserves** | **Required reserves** must be held; **excess reserves** can be lent out. | Crucial in money creation calculations |\n| **Open Market Operations vs. Discount Rate vs. Reserve Requirement** | All affect reserves, but **open market operations** are the Fed’s most commonly used tool because they are flexible and precise. | AP often asks which tool the Fed most often uses |\n\n```mermaid\nflowchart LR\n    A[\"Expansionary monetary policy\"] --> B[\"Increase bank reserves\"]\n    B --> C[\"Increase money supply\"]\n    C --> D[\"Lower nominal interest rate\"]\n    D --> E[\"Increase investment\"]\n    E --> F[\"Increase aggregate demand\"]\n\n    G[\"Contractionary monetary policy\"] --> H[\"Decrease bank reserves\"]\n    H --> I[\"Decrease money supply\"]\n    I --> J[\"Higher nominal interest rate\"]\n    J --> K[\"Decrease investment\"]\n    K --> L[\"Decrease aggregate demand\"]\n```\n\n## Common AP Exam Traps\n- Confusing **money demand** with **demand for bonds** or **demand for loanable funds**. These are not the same graph or concept.\n- Forgetting that the **money market** uses the **nominal interest rate**, while the **loanable funds market** focuses on the **real interest rate**.\n- Assuming the **money multiplier** gives the actual change in money supply in all cases. On AP, it is usually a **maximum** or **simple** multiplier unless otherwise specified.\n- Mixing up **open market purchases** and **open market sales**. A **purchase** by the Fed is expansionary; a **sale** is contractionary.\n- Believing banks can lend all deposits. They can lend only **excess reserves**, not required reserves.\n\n## Quick Review Checklist\n- [ ] Define the three functions of **money**: **medium of exchange**, **unit of account**, and **store of value**\n- [ ] Distinguish between **$$M_1$$** and **$$M_2$$**\n- [ ] Calculate **required reserves**, **excess reserves**, and the **simple money multiplier**\n- [ ] Explain how **fractional reserve banking** creates money\n- [ ] Identify how each Fed tool changes **bank reserves**, **money supply**, and **interest rates**\n- [ ] Draw and interpret the **money market** graph, including shifts in money supply and money demand\n- [ ] Draw and interpret the **loanable funds market** graph, including shifts in supply and demand\n- [ ] Explain how **expansionary** and **contractionary monetary policy** affect **investment** and **aggregate demand**",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "M1",
+              "definition": "A measure of the most liquid forms of money, including currency in circulation, checkable deposits, and traveler's checks."
+            },
+            {
+              "term": "M2",
+              "definition": "A broader measure of the money supply that includes highly liquid assets plus savings deposits, small time deposits, and retail money market mutual fund balances."
+            },
+            {
+              "term": "Liquidity",
+              "definition": "The ease with which an asset can be converted into cash with little or no loss of value."
+            },
+            {
+              "term": "Required reserve ratio",
+              "definition": "The fraction of checkable deposits that banks must hold rather than lend, as set by the central bank."
+            },
+            {
+              "term": "Money multiplier",
+              "definition": "The maximum potential expansion of the money supply from an initial change in reserves, calculated as $$\\frac{1}{\\text{required reserve ratio}}$$ in the simplified banking model."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Assume the required reserve ratio is $$0.10$$, banks hold no excess reserves, and the public holds no currency. If the central bank purchases $$\\$500$$ million in government securities, the maximum change in the money supply is",
+              "options": [
+                "$$\\$500$$ million",
+                "$$\\$1$$ billion",
+                "$$\\$5$$ billion",
+                "$$\\$10$$ billion"
+              ],
+              "correctAnswer": "$$\\$5$$ billion",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which of the following would most likely be included in $$M2$$ but not in $$M1$$?",
+              "options": [
+                "Currency held by households",
+                "Checkable deposits",
+                "Small-denomination time deposits",
+                "Traveler's checks"
+              ],
+              "correctAnswer": "Small-denomination time deposits",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In the simple money creation model, if the required reserve ratio is $$0.25$$, the maximum money multiplier is ______.",
+              "options": [
+                "$$2$$",
+                "$$4$$",
+                "$$5$$",
+                "$$8$$"
+              ],
+              "correctAnswer": "$$4$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A commercial bank receives a new demand deposit of $$\\$2{,}000$$ and the required reserve ratio is $$0.20$$. If the bank holds no excess reserves, required reserves equal ______.",
+              "options": [
+                "$$\\$200$$",
+                "$$\\$400$$",
+                "$$\\$1{,}000$$",
+                "$$\\$1{,}600$$"
+              ],
+              "correctAnswer": "$$\\$400$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Federal funds rate",
+              "definition": "The interest rate banks charge one another for overnight loans of reserves."
+            },
+            {
+              "term": "Open-market operations",
+              "definition": "Central bank purchases or sales of government securities used to change bank reserves and influence short-term interest rates."
+            },
+            {
+              "term": "Discount rate",
+              "definition": "The interest rate charged by the central bank on loans it makes directly to commercial banks."
+            },
+            {
+              "term": "Expansionary monetary policy",
+              "definition": "Actions by the central bank intended to increase the money supply, lower interest rates, and raise aggregate demand."
+            },
+            {
+              "term": "Loanable funds market",
+              "definition": "A model showing how the real interest rate is determined by the supply of saving and the demand for borrowing for investment and other spending."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "If the central bank wants to decrease short-term interest rates and increase aggregate demand during a recession, which policy action is most appropriate?",
+              "options": [
+                "Sell government securities in the open market",
+                "Increase the required reserve ratio",
+                "Buy government securities in the open market",
+                "Increase the discount rate"
+              ],
+              "correctAnswer": "Buy government securities in the open market",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In the loanable funds market, a larger government budget deficit financed by borrowing will most likely cause which of the following in the short run, all else equal?",
+              "options": [
+                "A decrease in the demand for loanable funds and a lower real interest rate",
+                "An increase in the demand for loanable funds and a higher real interest rate",
+                "An increase in the supply of loanable funds and a lower real interest rate",
+                "A decrease in the supply of loanable funds and a higher real interest rate"
+              ],
+              "correctAnswer": "An increase in the demand for loanable funds and a higher real interest rate",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When the central bank sells government securities, bank reserves typically ______, causing the money supply to contract.",
+              "options": [
+                "increase",
+                "decrease",
+                "remain constant",
+                "double"
+              ],
+              "correctAnswer": "decrease",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the money market model, if real GDP increases, the demand for money shifts to the ______.",
+              "options": [
+                "left",
+                "right",
+                "downward",
+                "vertical"
+              ],
+              "correctAnswer": "right",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Long-Run Consequences of Stabilization Policies",
+      "description": "Phillips curve, short- vs. long-run aggregate supply, crowding out, and alternative macroeconomic views.",
+      "note": "# Unit 5: Long-Run Consequences of Stabilization Policies\n\n## Overview\nThis unit explains how **stabilization policies** affect the economy over time, especially through the **Phillips curve**, **short-run and long-run aggregate supply**, **crowding out**, and competing macroeconomic perspectives. For the AP exam, you must distinguish between **short-run gains** from policy and the **long-run adjustments** that can eliminate those gains while creating inflation, higher interest rates, or changing expectations.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Short-Run Phillips Curve (SRPC)** | A curve showing an inverse relationship between **inflation** and **unemployment** in the short run. | AP questions often ask how demand shocks move the economy **along** the SRPC. |\n| **Long-Run Phillips Curve (LRPC)** | A vertical curve at the **natural rate of unemployment**. In the long run, there is no tradeoff between inflation and unemployment. | Essential for showing why expansionary policy cannot permanently reduce unemployment below the natural rate. |\n| **Adaptive Expectations** | The idea that people adjust inflation expectations based on past inflation. | Explains why the **SRPC shifts** after repeated inflationary policy. |\n| **Short-Run Aggregate Supply (SRAS)** | The upward-sloping aggregate supply curve in the short run, when some input prices are sticky. | Needed to analyze short-run output and price level effects of stabilization policy. |\n| **Long-Run Aggregate Supply (LRAS)** | The vertical aggregate supply curve at **full-employment output**. | Shows that in the long run, output returns to potential output rather than staying above it. |\n| **Crowding Out** | When government borrowing raises interest rates and reduces private investment spending. | Common AP application of **expansionary fiscal policy**, especially when deficits increase. |\n| **Monetarist View** | A school of thought emphasizing the role of the **money supply** and arguing that discretionary policy can destabilize the economy. | AP may compare monetarist skepticism to Keynesian support for active stabilization. |\n| **Rational Expectations / New Classical View** | The idea that people use all available information to predict policy effects, limiting the real impact of anticipated policy. | Helps explain why some economists think systematic policy may have little effect on real output. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Expansionary policy increases AD\"] --> B[\"Real output rises above potential output\"]\n    B --> C[\"Unemployment falls below natural rate\"]\n    C --> D[\"Inflation rises\"]\n    D --> E[\"Workers and firms adjust inflation expectations\"]\n    E --> F[\"SRAS shifts left\"]\n    F --> G[\"Output returns to LRAS (full employment)\"]\n    G --> H[\"Price level is higher than before\"]\n\n    I[\"Government deficit spending\"] --> J[\"Government demand for loanable funds rises\"]\n    J --> K[\"Real interest rate rises\"]\n    K --> L[\"Private investment falls\"]\n    L --> M[\"Crowding out reduces long-run growth effects\"]\n```\n\n### What this means\n1. In the **short run**, expansionary fiscal or monetary policy can reduce cyclical unemployment.\n2. If output rises above **potential output**, the economy enters an **inflationary gap**.\n3. Over time, **input costs** and **inflation expectations** rise, shifting **SRAS left**.\n4. The economy returns to **full-employment output** in the long run, but at a **higher price level**.\n5. With **fiscal policy**, borrowing can raise interest rates and reduce private investment through **crowding out**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Expression** | **What You Must Know** |\n|---|---|\n| $$Y_f$$ | **Full-employment output**; the level of output shown by **LRAS**. |\n| **SRPC rule** | In the short run, lower unemployment is typically associated with higher inflation. |\n| **LRPC rule** | In the long run, unemployment returns to the **natural rate**, so there is no permanent inflation-unemployment tradeoff. |\n| $$\\text{Real interest rate} = \\text{Nominal interest rate} - \\text{Expected inflation}$$ | Useful for understanding borrowing, investment, and crowding out. |\n| **Crowding out rule** | Expansionary fiscal policy financed by borrowing may increase interest rates and reduce **private investment**. |\n| **Long-run adjustment rule** | If actual output exceeds potential output, wages and resource prices rise, causing **SRAS** to shift left until output returns to $$Y_f$$. |\n| **Natural rate of unemployment** | The unemployment rate that exists when the economy is at full employment; includes **frictional** and **structural** unemployment, not cyclical unemployment. |\n| **Monetarist rule of thumb** | Changes in the **money supply** are a major cause of changes in nominal GDP and inflation over time. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Short Run** | **Long Run** | **AP Significance** |\n|---|---|---|---|\n| **Phillips Curve** | **SRPC** shows a tradeoff between inflation and unemployment. | **LRPC** is vertical at the natural rate of unemployment. | Students must know that the tradeoff is temporary, not permanent. |\n| **Aggregate Supply** | **SRAS** can shift because wages and input prices are sticky. | **LRAS** is vertical at potential output. | Explains why policy affects output temporarily but not permanently. |\n| **Expansionary Fiscal Policy** | Increases **AD**, raises output and employment. | Can raise price level and cause **crowding out**. | AP often asks for both the short-run benefit and long-run cost. |\n| **Keynesian vs. Monetarist / New Classical** | **Keynesians** support active stabilization policy. | **Monetarists** and **new classical economists** worry about lags, expectations, and inflation. | Important for evaluating policy effectiveness, not just graphing it. |\n\n```mermaid\nflowchart LR\n    A[\"Keynesian view\"] --> B[\"Active fiscal and monetary policy can stabilize output\"]\n    C[\"Monetarist view\"] --> D[\"Policy lags and money supply instability can worsen fluctuations\"]\n    E[\"New Classical / Rational Expectations view\"] --> F[\"Anticipated policy has limited effect on real output\"]\n```\n\n## Common AP Exam Traps\n- Confusing a **movement along** the **short-run Phillips curve** with a **shift** of the curve. Demand changes usually cause movement along the SRPC; changing inflation expectations shifts it.\n- Assuming policymakers can permanently keep unemployment below the **natural rate**. In the long run, unemployment returns to the natural rate.\n- Forgetting that **crowding out** mainly limits the effectiveness of **fiscal policy**, especially when government borrowing raises interest rates.\n- Mixing up **SRAS** and **LRAS** adjustment. In the long run, it is **SRAS** that shifts to restore equilibrium at **LRAS**.\n- Believing all schools of thought support discretionary stabilization equally. **Keynesian**, **monetarist**, and **new classical** economists differ sharply on policy effectiveness.\n\n## Quick Review Checklist\n- [ ] Explain the difference between the **short-run Phillips curve** and the **long-run Phillips curve**.\n- [ ] Show how **expansionary policy** can reduce unemployment in the short run.\n- [ ] Explain why the economy returns to **full-employment output** in the long run.\n- [ ] Describe how rising inflation expectations can shift the **SRPC**.\n- [ ] Use **SRAS**, **AD**, and **LRAS** to explain long-run adjustment from an inflationary gap.\n- [ ] Explain **crowding out** using the **loanable funds** or interest rate mechanism.\n- [ ] Compare **Keynesian**, **monetarist**, and **new classical** views of stabilization policy.\n- [ ] Identify why short-run policy success may create long-run costs such as higher inflation or reduced investment.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Short-Run Phillips Curve",
+              "definition": "A downward-sloping relationship showing that, in the short run, lower unemployment is typically associated with higher inflation, and higher unemployment with lower inflation."
+            },
+            {
+              "term": "Long-Run Phillips Curve",
+              "definition": "A vertical relationship at the economy’s natural rate of unemployment, indicating no persistent trade-off between inflation and unemployment over time."
+            },
+            {
+              "term": "Natural Rate of Unemployment",
+              "definition": "The rate of joblessness that exists when the economy is producing at its full-employment level of output, including frictional and structural joblessness but excluding cyclical joblessness."
+            },
+            {
+              "term": "Expected Inflation",
+              "definition": "The rate of overall price increase that workers, firms, and lenders anticipate when making wage, pricing, and contracting decisions."
+            },
+            {
+              "term": "Demand-Pull Inflation",
+              "definition": "A sustained rise in the overall price level caused by increases in aggregate demand that push output beyond full-employment output in the short run."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Suppose policymakers use expansionary policy to reduce unemployment below its natural rate. According to the expectations-augmented Phillips curve, what is the most likely long-run outcome?",
+              "options": [
+                "Unemployment remains permanently below the natural rate with no change in inflation",
+                "Inflation falls as unemployment stays below the natural rate",
+                "Unemployment returns to the natural rate and inflation remains higher",
+                "The short-run aggregate supply curve shifts right enough to eliminate inflation"
+              ],
+              "correctAnswer": "Unemployment returns to the natural rate and inflation remains higher",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "An economy is initially at long-run equilibrium. If aggregate demand increases unexpectedly, which combination best describes the short-run effect?",
+              "options": [
+                "Inflation decreases and unemployment rises",
+                "Inflation increases and unemployment falls",
+                "Inflation and unemployment both increase",
+                "Inflation and unemployment both decrease"
+              ],
+              "correctAnswer": "Inflation increases and unemployment falls",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In the long run, attempts to keep unemployment below its natural rate mainly produce higher expected inflation, causing the short-run Phillips curve to shift ______.",
+              "options": [
+                "leftward",
+                "rightward",
+                "downward",
+                "vertically"
+              ],
+              "correctAnswer": "rightward",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When actual inflation exceeds expected inflation, real wages are temporarily lower than firms anticipated, so employment tends to move ______ the natural rate.",
+              "options": [
+                "above",
+                "below",
+                "equal to",
+                "permanently beyond"
+              ],
+              "correctAnswer": "below",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Long-Run Aggregate Supply",
+              "definition": "A vertical curve showing the quantity of real output produced when all prices and wages are fully flexible and the economy operates at full employment."
+            },
+            {
+              "term": "Crowding Out",
+              "definition": "A reduction in private investment spending caused by higher interest rates that result from government borrowing in the loanable funds market."
+            },
+            {
+              "term": "Monetarist View",
+              "definition": "A perspective emphasizing the role of money supply in determining nominal spending and arguing that discretionary policy often destabilizes the economy because of timing problems."
+            },
+            {
+              "term": "Classical View",
+              "definition": "A perspective holding that flexible prices and wages move the economy toward full employment, so active stabilization policy is generally unnecessary in the long run."
+            },
+            {
+              "term": "Keynesian View",
+              "definition": "A perspective holding that prices and wages can be sticky, so changes in aggregate demand can affect real output and employment for significant periods."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which situation best illustrates crowding out following an increase in government borrowing to finance a budget deficit?",
+              "options": [
+                "Interest rates fall, causing private investment spending to rise",
+                "Interest rates rise, causing private investment spending to fall",
+                "Taxes fall, causing aggregate supply to shift right",
+                "Net exports rise because domestic bonds become less attractive"
+              ],
+              "correctAnswer": "Interest rates rise, causing private investment spending to fall",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best distinguishes the long-run aggregate supply curve from the short-run aggregate supply curve?",
+              "options": [
+                "The long-run aggregate supply curve is horizontal because output is fixed at all price levels",
+                "The long-run aggregate supply curve is vertical because real output depends on resources and productivity, not the price level",
+                "The short-run aggregate supply curve is vertical because nominal wages are fully flexible",
+                "The short-run aggregate supply curve is downward sloping because lower prices increase output"
+              ],
+              "correctAnswer": "The long-run aggregate supply curve is vertical because real output depends on resources and productivity, not the price level",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to the classical view, if wages and prices are flexible, the economy will self-correct toward ______ output after a recessionary gap.",
+              "options": [
+                "potential",
+                "zero",
+                "minimum",
+                "nominal"
+              ],
+              "correctAnswer": "potential",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A monetarist is most likely to argue that discretionary stabilization policy is limited by long and variable ______.",
+              "options": [
+                "lags",
+                "multipliers",
+                "tariffs",
+                "quotas"
+              ],
+              "correctAnswer": "lags",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Open Economy: International Trade and Finance",
+      "description": "Balance of payments, current and capital accounts, exchange rates, and trade deficits/surpluses.",
+      "note": "# Unit 6: Open Economy: International Trade and Finance\n\n## Overview\nThis unit explains how economies interact through **trade**, **financial flows**, and **exchange rates**. For the AP exam, you need to understand how the **balance of payments**, **foreign exchange market**, and **trade deficits/surpluses** connect to macroeconomic outcomes like **net exports**, **aggregate demand**, and **currency appreciation or depreciation**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Open economy** | An economy that trades goods, services, and financial assets with other countries | AP questions often contrast open and closed economies, especially when analyzing **net exports** and international capital flows |\n| **Balance of payments** | A record of all economic transactions between a country and the rest of the world | You may need to classify transactions and explain why the accounts must balance overall |\n| **Current account** | Tracks trade in **goods and services**, **income flows**, and **transfers** | A **trade deficit** or **surplus** appears here; AP questions often link this to **net exports** |\n| **Financial account** | Tracks purchases of **real and financial assets** across countries | Important for understanding how capital inflows and outflows offset current account imbalances |\n| **Foreign exchange market** | The market where currencies are bought and sold | Central to questions about **exchange rate determination** using **supply** and **demand** |\n| **Exchange rate** | The price of one currency in terms of another | AP students must predict effects of appreciation/depreciation on **imports**, **exports**, and **aggregate demand** |\n| **Appreciation / Depreciation** | An **appreciation** raises a currency’s value; a **depreciation** lowers it | Frequently tested because they change **export competitiveness** and **import prices** |\n| **Trade deficit / surplus** | A **deficit** means imports exceed exports; a **surplus** means exports exceed imports | Students must connect trade balances to **current account**, **capital inflows**, and macroeconomic performance |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Foreign demand for domestic currency rises] --> B[Demand for currency increases]\n    B --> C[Currency appreciates]\n    C --> D[Domestic exports become more expensive abroad]\n    C --> E[Foreign imports become cheaper domestically]\n    D --> F[Exports fall]\n    E --> G[Imports rise]\n    F --> H[Net exports decrease]\n    G --> H\n    H --> I[Aggregate demand decreases]\n\n    J[Foreign demand for domestic currency falls] --> K[Demand for currency decreases]\n    K --> L[Currency depreciates]\n    L --> M[Domestic exports become cheaper abroad]\n    L --> N[Foreign imports become more expensive domestically]\n    M --> O[Exports rise]\n    N --> P[Imports fall]\n    O --> Q[Net exports increase]\n    P --> Q\n    Q --> R[Aggregate demand increases]\n```\n\n### How the accounts connect\n1. A country that imports more than it exports has a **current account deficit**.\n2. That deficit must be matched by a **financial account surplus** because foreign sellers receive funds that are often used to buy domestic assets.\n3. In AP terms, the **balance of payments** balances because international transactions are recorded twice: once as a payment and once as a receipt.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Meaning / Use** |\n|---|---|\n| $$GDP = C + I + G + X_n$$ | In an open economy, **net exports** are part of aggregate expenditure |\n| $$X_n = X - M$$ | **Net exports** equal **exports minus imports** |\n| **Current account** includes **goods, services, income, and transfers** | Know what belongs here versus the financial account |\n| **Financial account** includes purchases of **stocks, bonds, real estate, businesses, and other assets** | AP often asks where capital inflows and outflows are recorded |\n| $$\\text{Current Account} + \\text{Financial Account} \\approx 0$$ | In simplified AP treatment, deficits in one account are offset by surpluses in the other |\n| **Currency appreciation** | A stronger currency makes **imports cheaper** and **exports more expensive** |\n| **Currency depreciation** | A weaker currency makes **exports cheaper** and **imports more expensive** |\n| **Demand for a currency** comes from foreigners wanting that country’s **goods, services, or assets** | Helps explain shifts in the foreign exchange market |\n| **Supply of a currency** comes from residents wanting **foreign goods, services, or assets** | Helps explain why imports and capital outflows affect exchange rates |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Key Difference / Connection** | **AP Exam Significance** |\n|---|---|---|\n| **Current account** vs. **Financial account** | The current account records trade-related flows; the financial account records asset purchases | A current account deficit is typically paired with a financial account surplus |\n| **Appreciation** vs. **Depreciation** | Appreciation raises currency value; depreciation lowers it | Students must predict the effect on **exports**, **imports**, and **net exports** |\n| **Trade deficit** vs. **Trade surplus** | Deficit: $$M > X$$. Surplus: $$X > M$$ | You may need to connect these to **aggregate demand** and international borrowing/lending |\n| **Demand for currency** vs. **Supply of currency** | Demand comes from foreigners buying domestic products/assets; supply comes from domestic buyers seeking foreign products/assets | Useful for graphing exchange rate changes in the **FOREX market** |\n\n```mermaid\nflowchart LR\n    A[Higher domestic interest rates] --> B[Foreign investors buy domestic assets]\n    B --> C[Demand for domestic currency rises]\n    C --> D[Currency appreciates]\n    D --> E[Net exports fall]\n\n    F[Lower domestic interest rates] --> G[Foreign investors buy fewer domestic assets]\n    G --> H[Demand for domestic currency falls]\n    H --> I[Currency depreciates]\n    I --> J[Net exports rise]\n```\n\n## Common AP Exam Traps\n- **Do not confuse** the **current account** with the **financial account**. Trade in goods and services goes in the current account; purchases of assets go in the financial account.\n- A **trade deficit** is **not automatically “bad”** in AP analysis. It may reflect strong domestic income, high demand for imports, or capital inflows.\n- **Appreciation** hurts **net exports**, while **depreciation** helps **net exports**. Students often reverse this.\n- In the foreign exchange market, demand for a currency rises when foreigners want that country’s **exports** or **assets**—not when domestic consumers want imports.\n- Remember the AP simplification: if one major account is negative, the other tends to be positive so the overall **balance of payments** balances.\n\n## Quick Review Checklist\n- [ ] Define an **open economy** and explain how it differs from a closed economy.\n- [ ] Calculate **net exports** using $$X_n = X - M$$.\n- [ ] Identify whether a transaction belongs in the **current account** or **financial account**.\n- [ ] Explain why a **current account deficit** is offset by a **financial account surplus**.\n- [ ] Use **supply** and **demand** to explain exchange rate changes in the **foreign exchange market**.\n- [ ] Predict how **currency appreciation** affects **exports**, **imports**, and **aggregate demand**.\n- [ ] Predict how **currency depreciation** affects **exports**, **imports**, and **aggregate demand**.\n- [ ] Connect changes in **interest rates** or capital flows to changes in **currency value** and **net exports**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Balance of Payments",
+              "definition": "A systematic record of all economic transactions between residents of one nation and the rest of the world over a given period."
+            },
+            {
+              "term": "Current Account",
+              "definition": "The portion of international accounts that records trade in goods and services, net investment income, and unilateral transfers."
+            },
+            {
+              "term": "Capital and Financial Account",
+              "definition": "The portion of international accounts that records purchases and sales of assets, including stocks, bonds, real estate, and direct investment across borders."
+            },
+            {
+              "term": "Trade Deficit",
+              "definition": "A condition in which the value of a nation's imports of goods and services exceeds the value of its exports."
+            },
+            {
+              "term": "Net Capital Inflow",
+              "definition": "A situation in which foreign purchases of domestic assets exceed domestic purchases of foreign assets."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A country is running a current account deficit. Which of the following must also be true, assuming the balance of payments accounts are measured consistently?",
+              "options": [
+                "The country must have a capital and financial account surplus of equal size, ignoring statistical discrepancies.",
+                "The country must be experiencing a recession.",
+                "The country must have tariffs high enough to reduce imports.",
+                "The country must have a balanced government budget."
+              ],
+              "correctAnswer": "The country must have a capital and financial account surplus of equal size, ignoring statistical discrepancies.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which of the following transactions would be recorded as a credit in the current account of the United States?",
+              "options": [
+                "A U.S. firm imports semiconductor equipment from Japan.",
+                "A U.S. household buys stock issued by a German company.",
+                "A French tourist purchases hotel accommodations in New York.",
+                "The U.S. Treasury repays principal on debt held by foreign investors."
+              ],
+              "correctAnswer": "A French tourist purchases hotel accommodations in New York.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When a nation imports more goods and services than it exports, it has a ______ in goods and services trade.",
+              "options": [
+                "trade surplus",
+                "trade deficit",
+                "capital outflow",
+                "balanced budget"
+              ],
+              "correctAnswer": "trade deficit",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If foreign investors buy more domestic financial assets than domestic investors buy foreign financial assets, the country experiences a ______.",
+              "options": [
+                "net capital inflow",
+                "current account surplus",
+                "trade embargo",
+                "floating deficit"
+              ],
+              "correctAnswer": "net capital inflow",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Exchange Rate",
+              "definition": "The price of one nation's currency in terms of another nation's currency."
+            },
+            {
+              "term": "Appreciation",
+              "definition": "An increase in the value of one currency relative to another in the foreign exchange market."
+            },
+            {
+              "term": "Depreciation",
+              "definition": "A decrease in the value of one currency relative to another in the foreign exchange market."
+            },
+            {
+              "term": "Demand for Currency",
+              "definition": "The amount of a nation's money that foreigners wish to buy at various prices in order to purchase that nation's goods, services, or assets."
+            },
+            {
+              "term": "Supply of Currency",
+              "definition": "The amount of a nation's money that domestic residents wish to exchange for foreign money at various prices in order to buy foreign goods, services, or assets."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "If the U.S. dollar appreciates relative to the euro, which of the following is the most likely short-run effect, all else equal?",
+              "options": [
+                "U.S. exports to Europe become less expensive to Europeans, increasing U.S. net exports.",
+                "European goods become more expensive to U.S. consumers, decreasing U.S. imports.",
+                "U.S. goods become more expensive to Europeans, decreasing U.S. net exports.",
+                "The demand for euros in foreign exchange markets decreases because U.S. tourists stop traveling abroad."
+              ],
+              "correctAnswer": "U.S. goods become more expensive to Europeans, decreasing U.S. net exports.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which of the following would most likely increase the demand for the Mexican peso in the foreign exchange market?",
+              "options": [
+                "Mexican inflation rises relative to inflation in the United States.",
+                "U.S. investors increase purchases of Mexican government bonds.",
+                "Mexico imposes strict limits on foreign investment inflows.",
+                "Mexican households increase imports of U.S. consumer goods."
+              ],
+              "correctAnswer": "U.S. investors increase purchases of Mexican government bonds.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Under a flexible exchange rate system, an increase in foreign demand for a nation's exports will tend to cause that nation's currency to ______.",
+              "options": [
+                "depreciate",
+                "appreciate",
+                "be fixed by the central bank",
+                "lose all purchasing power"
+              ],
+              "correctAnswer": "appreciate",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When the price of one currency in terms of another is determined by market forces without a preset official target, the system is called a ______ exchange rate system.",
+              "options": [
+                "floating",
+                "pegged",
+                "managed price ceiling",
+                "mercantilist"
+              ],
+              "correctAnswer": "floating",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

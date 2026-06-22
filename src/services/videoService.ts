@@ -1,5 +1,8 @@
 import { admin, db } from "../config/firebaseConfig";
+import { areUsersFriends, getFriends } from "./friendService";
+import { pushFriendVideoPosted, pushVideoLiked } from "./notification_service";
 import {
+  buildSlideStoragePath,
   buildVideoThumbnailStoragePath,
   buildVideoStoragePath,
   createSignedStorageReadUrl,
@@ -7,12 +10,15 @@ import {
   createSignedVideoThumbnailUploadUrl,
   createSignedVideoUploadUrl,
   deleteStoredVideo,
+  findExistingAdaptivePlaybackPath,
   getStoredVideoMetadata,
+  isSlidePathForVideo,
   SignedUploadTarget,
 } from "./videoStorageService";
 
 export type VideoVisibility = "public" | "friends" | "private";
 export type VideoStatus = "uploading" | "processing" | "ready" | "failed" | "deleted";
+export type ContentKind = "video" | "slideshow";
 
 export interface CreateVideoInput {
   caption?: string;
@@ -20,23 +26,57 @@ export interface CreateVideoInput {
   subject?: string;
   thumbnailMimeType?: string;
   visibility?: VideoVisibility;
+  contentKind?: ContentKind;
+  slideCount?: number;
+  slideMimeTypes?: string[];
+  defaultSlideDurationMs?: number;
+}
+
+export interface CompleteSlideInput {
+  storagePath: string;
+  order: number;
+  durationMs?: number;
 }
 
 export interface CompleteVideoUploadInput {
   durationMs?: number;
   thumbnailUrl?: string;
+  slides?: CompleteSlideInput[];
 }
+
+export interface VideoSlideResponse {
+  url: string;
+  order: number;
+  durationMs: number | null;
+}
+
+export interface SlideUploadTarget extends SignedUploadTarget {
+  order: number;
+}
+
+export type CreateVideoUploadResult = {
+  video: VideoResponse;
+  upload: SignedUploadTarget | null;
+  thumbnailUpload: SignedUploadTarget | null;
+  slideUploads?: SlideUploadTarget[];
+};
 
 export interface VideoComment {
   id: string;
   authorId: string;
   authorName: string;
+  /** URL or avatar id / `"default"` — same convention as video owner. */
   authorProfilePicture: string;
   text: string;
   likeCount: number;
+  likedByMe: boolean;
+  /** `null` for top-level; parent comment id for replies. */
+  parentCommentId: string | null;
   createdAt: string | null;
   updatedAt: string | null;
 }
+
+export type PlaybackFormat = "hls" | "dash" | "progressive";
 
 export interface VideoResponse {
   id: string;
@@ -46,7 +86,14 @@ export interface VideoResponse {
   caption: string;
   subject: string;
   storagePath: string;
+  contentKind: ContentKind;
+  isSlideshow: boolean;
+  slides: VideoSlideResponse[];
+  /** GCS object used for playback (HLS/DASH master when present, else progressive `storagePath`). */
+  playbackStoragePath: string;
   playbackUrl: string | null;
+  /** Hint for VideoFormat / demuxer: derived from `playbackStoragePath` extension. */
+  playbackFormat: PlaybackFormat;
   thumbnailUrl: string | null;
   thumbnailStoragePath: string | null;
   mimeType: string;
@@ -61,13 +108,26 @@ export interface VideoResponse {
   updatedAt: string | null;
 }
 
+interface VideoSlidePersisted {
+  storagePath: string;
+  order: number;
+  durationMs: number;
+}
+
 interface VideoDocument {
   ownerId: string;
   ownerName: string;
   ownerProfilePicture: string;
   caption: string;
   subject: string;
+  /** Empty for slideshow drafts (no single progressive file). */
   storagePath: string;
+  contentKind?: ContentKind;
+  slideCount?: number;
+  defaultSlideDurationMs?: number;
+  slides?: VideoSlidePersisted[];
+  /** When set, signed `playbackUrl` targets this object (e.g. HLS master .m3u8) instead of progressive `storagePath`. */
+  playbackStoragePath?: string | null;
   playbackUrl: string | null;
   thumbnailUrl: string | null;
   thumbnailStoragePath: string | null;
@@ -98,10 +158,26 @@ const MAX_SUBJECT_LENGTH = 120;
 const MAX_COMMENT_LENGTH = 500;
 const DEFAULT_PAGE_LIMIT = 20;
 const MAX_PAGE_LIMIT = 50;
+const MIN_SLIDESHOW_SLIDES = 2;
+const MAX_SLIDESHOW_SLIDES = 20;
 
 function assertVideoMimeType(mimeType: string): void {
   if (!mimeType || !mimeType.toLowerCase().startsWith("video/")) {
     throw new ServiceError(400, "mimeType must be a video MIME type");
+  }
+}
+
+function assertSlideshowDraftMimeType(mimeType: string): void {
+  const lower = (mimeType || "").toLowerCase();
+  if (!lower.startsWith("image/")) {
+    throw new ServiceError(400, "mimeType must be an image type for slideshow (e.g. image/slideshow)");
+  }
+}
+
+function assertSlideImageMimeType(mimeType: string): void {
+  const lower = (mimeType || "").toLowerCase();
+  if (!lower.startsWith("image/")) {
+    throw new ServiceError(400, "Each slideMimeTypes entry must be an image MIME type");
   }
 }
 
@@ -110,6 +186,10 @@ function assertThumbnailMimeType(mimeType?: string): void {
   if (!mimeType.toLowerCase().startsWith("image/")) {
     throw new ServiceError(400, "thumbnailMimeType must be an image MIME type");
   }
+}
+
+function isSlideshowDoc(data: VideoDocument): boolean {
+  return (data.contentKind || "video") === "slideshow";
 }
 
 function normalizeVisibility(visibility?: VideoVisibility): VideoVisibility {
@@ -208,14 +288,29 @@ async function getUserSnapshot(userId: string): Promise<FirebaseFirestore.Docume
   return userDoc;
 }
 
-function canReadVideo(video: VideoDocument, viewerId: string): boolean {
+async function canReadVideo(video: VideoDocument, viewerId: string): Promise<boolean> {
   if (video.status === "deleted") return false;
   if (video.ownerId === viewerId) return true;
-  return video.status === "ready" && video.visibility === "public";
+  if (video.status !== "ready") return false;
+
+  const visibility = video.visibility || "public";
+  if (visibility === "public") return true;
+  if (visibility === "private") return false;
+  if (visibility === "friends") {
+    return areUsersFriends(viewerId, video.ownerId);
+  }
+  return false;
 }
 
-function canInteractWithVideo(video: VideoDocument, viewerId: string): boolean {
-  return video.status === "ready" && canReadVideo(video, viewerId);
+async function canInteractWithVideo(video: VideoDocument, viewerId: string): Promise<boolean> {
+  return video.status === "ready" && (await canReadVideo(video, viewerId));
+}
+
+function playbackFormatFromStoragePath(path: string): PlaybackFormat {
+  const lower = path.toLowerCase();
+  if (lower.endsWith(".m3u8")) return "hls";
+  if (lower.endsWith(".mpd")) return "dash";
+  return "progressive";
 }
 
 async function serializeVideo(
@@ -227,15 +322,45 @@ async function serializeVideo(
     await doc.ref.collection("likes").doc(viewerId).get()
   ).exists;
 
-  const playbackUrl =
-    data.status === "ready" && data.storagePath
-      ? await createSignedVideoPlaybackUrl(data.storagePath)
+  const slideshow = isSlideshowDoc(data);
+  const contentKind: ContentKind = data.contentKind || "video";
+
+  const pathForPlayback =
+    !slideshow &&
+    data.status === "ready" &&
+    (data.playbackStoragePath || data.storagePath)
+      ? data.playbackStoragePath || data.storagePath
       : null;
 
-  const thumbnailUrl =
+  const playbackUrl =
+    pathForPlayback ? await createSignedVideoPlaybackUrl(pathForPlayback) : null;
+
+  const playbackFormat: PlaybackFormat = pathForPlayback
+    ? playbackFormatFromStoragePath(pathForPlayback)
+    : "progressive";
+
+  let thumbnailUrl: string | null =
     data.status === "ready" && data.thumbnailStoragePath
       ? await createSignedStorageReadUrl(data.thumbnailStoragePath)
       : data.thumbnailUrl || null;
+
+  const persistedSlides = [...(data.slides || [])].sort((a, b) => a.order - b.order);
+  let slidesOut: VideoSlideResponse[] = [];
+  if (slideshow && data.status === "ready" && persistedSlides.length > 0) {
+    slidesOut = await Promise.all(
+      persistedSlides.map(async (s) => ({
+        url: await createSignedStorageReadUrl(s.storagePath),
+        order: s.order,
+        durationMs: typeof s.durationMs === "number" ? s.durationMs : null,
+      }))
+    );
+    if (!thumbnailUrl && persistedSlides[0]?.storagePath) {
+      thumbnailUrl = await createSignedStorageReadUrl(persistedSlides[0].storagePath);
+    }
+  }
+
+  const playbackStoragePathOut =
+    pathForPlayback || (slideshow ? "" : data.storagePath || "");
 
   return {
     id: doc.id,
@@ -244,8 +369,13 @@ async function serializeVideo(
     ownerProfilePicture: data.ownerProfilePicture,
     caption: data.caption,
     subject: data.subject || "",
-    storagePath: data.storagePath,
+    storagePath: data.storagePath || "",
+    contentKind,
+    isSlideshow: slideshow,
+    slides: slidesOut,
+    playbackStoragePath: playbackStoragePathOut,
     playbackUrl,
+    playbackFormat,
     thumbnailUrl,
     thumbnailStoragePath: data.thumbnailStoragePath || null,
     mimeType: data.mimeType,
@@ -261,20 +391,103 @@ async function serializeVideo(
   };
 }
 
-export async function createVideoUpload(
-  ownerId: string,
-  input: CreateVideoInput
-): Promise<{ video: VideoResponse; upload: SignedUploadTarget; thumbnailUpload: SignedUploadTarget | null }> {
-  assertVideoMimeType(input.mimeType);
+export async function createVideoUpload(ownerId: string, input: CreateVideoInput): Promise<CreateVideoUploadResult> {
   assertThumbnailMimeType(input.thumbnailMimeType);
 
   const userDoc = await getUserSnapshot(ownerId);
   const userData = userDoc.data() || {};
   const videoRef = db.collection(VIDEOS_COLLECTION).doc();
-  const storagePath = buildVideoStoragePath(ownerId, videoRef.id, input.mimeType);
+  const videoId = videoRef.id;
+
+  const isSlideshow = input.contentKind === "slideshow";
+
+  if (isSlideshow) {
+    assertSlideshowDraftMimeType(input.mimeType);
+    const slideCount = input.slideCount;
+    if (
+      typeof slideCount !== "number" ||
+      !Number.isInteger(slideCount) ||
+      slideCount < MIN_SLIDESHOW_SLIDES ||
+      slideCount > MAX_SLIDESHOW_SLIDES
+    ) {
+      throw new ServiceError(
+        400,
+        `slideCount is required for slideshow and must be between ${MIN_SLIDESHOW_SLIDES} and ${MAX_SLIDESHOW_SLIDES}`
+      );
+    }
+    if (input.slideMimeTypes && input.slideMimeTypes.length !== slideCount) {
+      throw new ServiceError(400, "slideMimeTypes length must match slideCount");
+    }
+    if (input.slideMimeTypes) {
+      for (const m of input.slideMimeTypes) {
+        assertSlideImageMimeType(m);
+      }
+    }
+    const defaultSlideDurationMs =
+      typeof input.defaultSlideDurationMs === "number" && input.defaultSlideDurationMs > 0
+        ? Math.floor(input.defaultSlideDurationMs)
+        : 3500;
+
+    const slideUploads: SlideUploadTarget[] = [];
+    for (let order = 0; order < slideCount; order += 1) {
+      const slideMime = input.slideMimeTypes?.[order] ?? "image/jpeg";
+      const slidePath = buildSlideStoragePath(ownerId, videoId, order, slideMime);
+      const signed = await createSignedVideoUploadUrl(slidePath, slideMime);
+      slideUploads.push({ ...signed, order });
+    }
+    slideUploads.sort((a, b) => a.order - b.order);
+
+    const thumbnailStoragePath = input.thumbnailMimeType
+      ? buildVideoThumbnailStoragePath(ownerId, videoId, input.thumbnailMimeType)
+      : null;
+    const thumbnailUpload =
+      input.thumbnailMimeType && thumbnailStoragePath
+        ? await createSignedVideoThumbnailUploadUrl(thumbnailStoragePath, input.thumbnailMimeType)
+        : null;
+
+    const video: VideoDocument = {
+      ownerId,
+      ownerName: userData.name || "Unknown User",
+      ownerProfilePicture: userData.profilePicture || "default",
+      caption: normalizeCaption(input.caption),
+      subject: normalizeSubject(input.subject),
+      storagePath: "",
+      contentKind: "slideshow",
+      slideCount,
+      defaultSlideDurationMs,
+      slides: [],
+      playbackStoragePath: null,
+      playbackUrl: null,
+      thumbnailUrl: null,
+      thumbnailStoragePath,
+      mimeType: input.mimeType,
+      sizeBytes: null,
+      durationMs: null,
+      status: "uploading",
+      visibility: normalizeVisibility(input.visibility),
+      likeCount: 0,
+      commentCount: 0,
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    };
+
+    await videoRef.set(video);
+    const createdDoc = await videoRef.get();
+
+    return {
+      video: await serializeVideo(createdDoc, ownerId),
+      upload: null,
+      thumbnailUpload,
+      slideUploads,
+    };
+  }
+
+  assertVideoMimeType(input.mimeType);
+
+  const storagePath = buildVideoStoragePath(ownerId, videoId, input.mimeType);
   const upload = await createSignedVideoUploadUrl(storagePath, input.mimeType);
   const thumbnailStoragePath = input.thumbnailMimeType
-    ? buildVideoThumbnailStoragePath(ownerId, videoRef.id, input.thumbnailMimeType)
+    ? buildVideoThumbnailStoragePath(ownerId, videoId, input.thumbnailMimeType)
     : null;
   const thumbnailUpload =
     input.thumbnailMimeType && thumbnailStoragePath
@@ -288,6 +501,8 @@ export async function createVideoUpload(
     caption: normalizeCaption(input.caption),
     subject: normalizeSubject(input.subject),
     storagePath,
+    contentKind: "video",
+    playbackStoragePath: null,
     playbackUrl: null,
     thumbnailUrl: null,
     thumbnailStoragePath,
@@ -312,6 +527,90 @@ export async function createVideoUpload(
   };
 }
 
+async function verifySlideshowSlidesAndBuildPersisted(
+  video: VideoDocument,
+  ownerId: string,
+  videoId: string,
+  input: CompleteVideoUploadInput
+): Promise<{ slides: VideoSlidePersisted[]; totalDurationMs: number; sizeBytes: number }> {
+  const slideCount = video.slideCount;
+  if (typeof slideCount !== "number" || slideCount < MIN_SLIDESHOW_SLIDES) {
+    throw new ServiceError(400, "Invalid slideshow draft: missing slideCount");
+  }
+  const rawSlides = input.slides;
+  if (!rawSlides || !Array.isArray(rawSlides) || rawSlides.length !== slideCount) {
+    throw new ServiceError(400, `slides must be an array of length ${slideCount}`);
+  }
+
+  const defaultDur =
+    typeof video.defaultSlideDurationMs === "number" && video.defaultSlideDurationMs > 0
+      ? video.defaultSlideDurationMs
+      : 3500;
+
+  const sorted = [...rawSlides].sort((a, b) => a.order - b.order);
+  for (let i = 0; i < slideCount; i += 1) {
+    if (sorted[i]?.order !== i) {
+      throw new ServiceError(400, "slides must include order 0 through slideCount-1 exactly once");
+    }
+  }
+
+  let sizeBytes = 0;
+  const slides: VideoSlidePersisted[] = [];
+
+  for (const s of sorted) {
+    const storagePath = (s.storagePath || "").trim();
+    const expectedPrefix = `videos/${ownerId}/${videoId}/slides/slide_${s.order}`;
+    if (
+      !storagePath ||
+      !isSlidePathForVideo(ownerId, videoId, storagePath) ||
+      !storagePath.startsWith(expectedPrefix)
+    ) {
+      throw new ServiceError(400, "Invalid slide storagePath for this video");
+    }
+    const meta = await getStoredVideoMetadata(storagePath);
+    if (!meta) {
+      throw new ServiceError(400, `Slide file not found in storage (order ${s.order})`);
+    }
+    if (typeof meta.sizeBytes === "number") {
+      sizeBytes += meta.sizeBytes;
+    }
+    const dur =
+      typeof s.durationMs === "number" && s.durationMs > 0 ? Math.floor(s.durationMs) : defaultDur;
+    slides.push({ storagePath, order: s.order, durationMs: dur });
+  }
+
+  const totalDurationMs = slides.reduce((acc, n) => acc + n.durationMs, 0);
+
+  return { slides, totalDurationMs, sizeBytes };
+}
+
+/** Fire-and-forget: notify accepted friends when a post becomes ready and is not private. */
+async function notifyFriendsOfNewVideoPost(
+  videoId: string,
+  ownerId: string,
+  ownerName: string,
+  visibility: VideoVisibility | undefined
+): Promise<void> {
+  const vis = visibility ?? "public";
+  if (vis === "private") return;
+  try {
+    const friends = await getFriends(ownerId, false);
+    const actorName = ownerName || "Someone";
+    await Promise.allSettled(
+      friends.map((friend) =>
+        pushFriendVideoPosted({
+          recipientUserId: friend.id,
+          actorId: ownerId,
+          actorName,
+          videoId,
+        })
+      )
+    );
+  } catch (err) {
+    console.error("notifyFriendsOfNewVideoPost:", err);
+  }
+}
+
 export async function completeVideoUpload(
   videoId: string,
   ownerId: string,
@@ -332,6 +631,37 @@ export async function completeVideoUpload(
     throw new ServiceError(404, "Video not found");
   }
 
+  if (isSlideshowDoc(video)) {
+    const { slides, totalDurationMs, sizeBytes } = await verifySlideshowSlidesAndBuildPersisted(
+      video,
+      ownerId,
+      videoId,
+      input
+    );
+
+    if (video.thumbnailStoragePath) {
+      const storedThumbnailMetadata = await getStoredVideoMetadata(video.thumbnailStoragePath);
+      if (!storedThumbnailMetadata) {
+        throw new ServiceError(400, "Uploaded thumbnail file was not found in storage");
+      }
+    }
+
+    await videoRef.update({
+      status: "ready",
+      slides,
+      sizeBytes: sizeBytes || video.sizeBytes || null,
+      durationMs: totalDurationMs,
+      mimeType: "image/slideshow",
+      thumbnailUrl: video.thumbnailStoragePath ? null : input.thumbnailUrl || video.thumbnailUrl || null,
+      playbackStoragePath: admin.firestore.FieldValue.delete(),
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
+
+    void notifyFriendsOfNewVideoPost(videoId, ownerId, video.ownerName || "", video.visibility);
+
+    return getVideoById(videoId, ownerId);
+  }
+
   const storedMetadata = await getStoredVideoMetadata(video.storagePath);
   if (!storedMetadata) {
     throw new ServiceError(400, "Uploaded video file was not found in storage");
@@ -344,31 +674,50 @@ export async function completeVideoUpload(
     }
   }
 
+  const adaptivePath = await findExistingAdaptivePlaybackPath(video.ownerId, videoId);
+
   await videoRef.update({
     status: "ready",
     sizeBytes: storedMetadata.sizeBytes ?? video.sizeBytes ?? null,
     mimeType: storedMetadata.contentType || video.mimeType,
     durationMs: typeof input.durationMs === "number" ? input.durationMs : video.durationMs ?? null,
     thumbnailUrl: video.thumbnailStoragePath ? null : input.thumbnailUrl || video.thumbnailUrl || null,
+    ...(adaptivePath
+      ? { playbackStoragePath: adaptivePath }
+      : { playbackStoragePath: admin.firestore.FieldValue.delete() }),
     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
   });
+
+  void notifyFriendsOfNewVideoPost(videoId, ownerId, video.ownerName || "", video.visibility);
 
   return getVideoById(videoId, ownerId);
 }
 
 export async function getVideoById(videoId: string, viewerId: string): Promise<VideoResponse> {
-  const videoDoc = await db.collection(VIDEOS_COLLECTION).doc(videoId).get();
+  let videoDoc = await db.collection(VIDEOS_COLLECTION).doc(videoId).get();
 
   if (!videoDoc.exists) {
     throw new ServiceError(404, "Video not found");
   }
 
-  const video = videoDoc.data() as VideoDocument;
+  let video = videoDoc.data() as VideoDocument;
   if (video.status === "deleted") {
     throw new ServiceError(404, "Video not found");
   }
-  if (!canReadVideo(video, viewerId)) {
+  if (!(await canReadVideo(video, viewerId))) {
     throw new ServiceError(403, "You do not have access to this video");
+  }
+
+  if (video.status === "ready" && !video.playbackStoragePath && !isSlideshowDoc(video)) {
+    const adaptivePath = await findExistingAdaptivePlaybackPath(video.ownerId, videoId);
+    if (adaptivePath) {
+      await videoDoc.ref.update({
+        playbackStoragePath: adaptivePath,
+        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+      videoDoc = await videoDoc.ref.get();
+      video = videoDoc.data() as VideoDocument;
+    }
   }
 
   return serializeVideo(videoDoc, viewerId);
@@ -422,7 +771,13 @@ export async function getUserVideos(
     .where("status", "==", "ready");
 
   if (!isOwner) {
-    query = query.where("visibility", "==", "public");
+    const viewerIsFriendOfOwner = await areUsersFriends(viewerId, profileUserId);
+    if (viewerIsFriendOfOwner) {
+      // Match `canReadVideo`: friends may see `visibility: "friends"` on this profile.
+      query = query.where("visibility", "in", ["public", "friends"]);
+    } else {
+      query = query.where("visibility", "==", "public");
+    }
   }
 
   query = query
@@ -466,9 +821,24 @@ export async function deleteVideo(videoId: string, ownerId: string): Promise<voi
     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
   });
 
+  if (isSlideshowDoc(video) && video.slides?.length) {
+    for (const s of video.slides) {
+      if (s.storagePath) {
+        await deleteStoredVideo(s.storagePath);
+      }
+    }
+  }
+
   await deleteStoredVideo(video.storagePath);
   if (video.thumbnailStoragePath) {
     await deleteStoredVideo(video.thumbnailStoragePath);
+  }
+  if (
+    video.playbackStoragePath &&
+    video.playbackStoragePath !== video.storagePath &&
+    video.playbackStoragePath !== video.thumbnailStoragePath
+  ) {
+    await deleteStoredVideo(video.playbackStoragePath);
   }
 }
 
@@ -476,7 +846,7 @@ export async function likeVideo(videoId: string, userId: string): Promise<{ like
   const videoRef = db.collection(VIDEOS_COLLECTION).doc(videoId);
   const likeRef = videoRef.collection("likes").doc(userId);
 
-  return db.runTransaction(async (transaction) => {
+  const result = await db.runTransaction(async (transaction) => {
     const videoDoc = await transaction.get(videoRef);
     const likeDoc = await transaction.get(likeRef);
 
@@ -485,13 +855,14 @@ export async function likeVideo(videoId: string, userId: string): Promise<{ like
     }
 
     const video = videoDoc.data() as VideoDocument;
-    if (!canInteractWithVideo(video, userId)) {
+    if (!(await canInteractWithVideo(video, userId))) {
       throw new ServiceError(403, "You do not have access to this video");
     }
 
+    const ownerId = video.ownerId;
     const currentLikeCount = video.likeCount || 0;
     if (likeDoc.exists) {
-      return { liked: true, likeCount: currentLikeCount };
+      return { liked: true, likeCount: currentLikeCount, newlyLiked: false, ownerId };
     }
 
     transaction.set(likeRef, {
@@ -503,8 +874,24 @@ export async function likeVideo(videoId: string, userId: string): Promise<{ like
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    return { liked: true, likeCount: currentLikeCount + 1 };
+    return { liked: true, likeCount: currentLikeCount + 1, newlyLiked: true, ownerId };
   });
+
+  if (result.newlyLiked && result.ownerId !== userId) {
+    let likerName = "Someone";
+    const likerSnap = await db.collection("users").doc(userId).get();
+    if (likerSnap.exists) {
+      likerName = String(likerSnap.data()?.name || "Someone");
+    }
+    void pushVideoLiked({
+      ownerUserId: result.ownerId,
+      likerId: userId,
+      likerName,
+      videoId,
+    });
+  }
+
+  return { liked: result.liked, likeCount: result.likeCount };
 }
 
 export async function unlikeVideo(videoId: string, userId: string): Promise<{ liked: boolean; likeCount: number }> {
@@ -520,7 +907,7 @@ export async function unlikeVideo(videoId: string, userId: string): Promise<{ li
     }
 
     const video = videoDoc.data() as VideoDocument;
-    if (!canInteractWithVideo(video, userId)) {
+    if (!(await canInteractWithVideo(video, userId))) {
       throw new ServiceError(403, "You do not have access to this video");
     }
 
@@ -542,13 +929,19 @@ export async function unlikeVideo(videoId: string, userId: string): Promise<{ li
 export async function createVideoComment(
   videoId: string,
   authorId: string,
-  text: string
+  text: string,
+  parentCommentId?: string | null
 ): Promise<VideoComment> {
   const normalizedText = normalizeComment(text);
   const userDoc = await getUserSnapshot(authorId);
   const userData = userDoc.data() || {};
   const videoRef = db.collection(VIDEOS_COLLECTION).doc(videoId);
   const commentRef = videoRef.collection("comments").doc();
+
+  const parentId =
+    typeof parentCommentId === "string" && parentCommentId.trim().length > 0
+      ? parentCommentId.trim()
+      : null;
 
   await db.runTransaction(async (transaction) => {
     const videoDoc = await transaction.get(videoRef);
@@ -558,8 +951,16 @@ export async function createVideoComment(
     }
 
     const video = videoDoc.data() as VideoDocument;
-    if (!canInteractWithVideo(video, authorId)) {
+    if (!(await canInteractWithVideo(video, authorId))) {
       throw new ServiceError(403, "You do not have access to this video");
+    }
+
+    if (parentId) {
+      const parentRef = videoRef.collection("comments").doc(parentId);
+      const parentSnap = await transaction.get(parentRef);
+      if (!parentSnap.exists) {
+        throw new ServiceError(404, "Parent comment not found");
+      }
     }
 
     transaction.set(commentRef, {
@@ -567,6 +968,7 @@ export async function createVideoComment(
       authorName: userData.name || "Unknown User",
       authorProfilePicture: userData.profilePicture || "default",
       text: normalizedText,
+      parentCommentId: parentId,
       likeCount: 0,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
@@ -578,18 +980,28 @@ export async function createVideoComment(
   });
 
   const createdComment = await commentRef.get();
-  return serializeComment(createdComment);
+  return serializeComment(createdComment, authorId);
 }
 
-function serializeComment(doc: FirebaseFirestore.DocumentSnapshot): VideoComment {
+async function serializeComment(
+  doc: FirebaseFirestore.DocumentSnapshot,
+  viewerId: string
+): Promise<VideoComment> {
   const data = doc.data() || {};
+  const likeSnap = await doc.ref.collection("likes").doc(viewerId).get();
+  const parentRaw = data.parentCommentId;
+  const parentCommentId =
+    typeof parentRaw === "string" && parentRaw.length > 0 ? parentRaw : null;
+
   return {
     id: doc.id,
     authorId: data.authorId,
     authorName: data.authorName,
-    authorProfilePicture: data.authorProfilePicture,
+    authorProfilePicture: data.authorProfilePicture || "default",
     text: data.text,
-    likeCount: data.likeCount || 0,
+    likeCount: Math.max(0, data.likeCount || 0),
+    likedByMe: likeSnap.exists,
+    parentCommentId,
     createdAt: serializeTimestamp(data.createdAt),
     updatedAt: serializeTimestamp(data.updatedAt),
   };
@@ -619,15 +1031,41 @@ export async function getVideoComments(
   }
 
   const snapshot = await query.get();
-  const docs = snapshot.docs.slice(0, limit);
-  const comments = docs.map(serializeComment);
+  const pageDocs = snapshot.docs.slice(0, limit);
+  const comments = await Promise.all(pageDocs.map((d) => serializeComment(d, viewerId)));
   const hasNextPage = snapshot.docs.length > limit;
-  const lastDoc = docs[docs.length - 1];
+  const lastSnapshotDoc = pageDocs.length > 0 ? pageDocs[pageDocs.length - 1] : null;
 
   return {
     comments,
-    nextCursor: hasNextPage && lastDoc ? encodeCursor(lastDoc.get("createdAt"), lastDoc.id) : null,
+    nextCursor:
+      hasNextPage && lastSnapshotDoc
+        ? encodeCursor(lastSnapshotDoc.get("createdAt"), lastSnapshotDoc.id)
+        : null,
   };
+}
+
+async function deleteCommentLikes(commentRef: FirebaseFirestore.DocumentReference): Promise<void> {
+  const likesSnap = await commentRef.collection("likes").get();
+  if (likesSnap.empty) return;
+  const batch = db.batch();
+  likesSnap.docs.forEach((d) => batch.delete(d.ref));
+  await batch.commit();
+}
+
+async function deleteCommentCascade(
+  videoRef: FirebaseFirestore.DocumentReference,
+  commentId: string
+): Promise<number> {
+  const children = await videoRef.collection("comments").where("parentCommentId", "==", commentId).get();
+  let removed = 0;
+  for (const child of children.docs) {
+    removed += await deleteCommentCascade(videoRef, child.id);
+  }
+  const commentRef = videoRef.collection("comments").doc(commentId);
+  await deleteCommentLikes(commentRef);
+  await commentRef.delete();
+  return removed + 1;
 }
 
 export async function deleteVideoComment(
@@ -637,6 +1075,38 @@ export async function deleteVideoComment(
 ): Promise<void> {
   const videoRef = db.collection(VIDEOS_COLLECTION).doc(videoId);
   const commentRef = videoRef.collection("comments").doc(commentId);
+
+  const commentSnap = await commentRef.get();
+  if (!commentSnap.exists) {
+    throw new ServiceError(404, "Comment not found");
+  }
+
+  const videoSnap = await videoRef.get();
+  if (!videoSnap.exists) {
+    throw new ServiceError(404, "Video not found");
+  }
+
+  const video = videoSnap.data() as VideoDocument;
+  const comment = commentSnap.data() || {};
+  if (comment.authorId !== userId && video.ownerId !== userId) {
+    throw new ServiceError(403, "Only the comment author or video owner can delete this comment");
+  }
+
+  const removed = await deleteCommentCascade(videoRef, commentId);
+  await videoRef.update({
+    commentCount: admin.firestore.FieldValue.increment(-removed),
+    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+  });
+}
+
+export async function likeVideoComment(
+  videoId: string,
+  commentId: string,
+  userId: string
+): Promise<{ liked: boolean; likeCount: number; comment: VideoComment }> {
+  const videoRef = db.collection(VIDEOS_COLLECTION).doc(videoId);
+  const commentRef = videoRef.collection("comments").doc(commentId);
+  const likeRef = commentRef.collection("likes").doc(userId);
 
   await db.runTransaction(async (transaction) => {
     const videoDoc = await transaction.get(videoRef);
@@ -650,15 +1120,119 @@ export async function deleteVideoComment(
     }
 
     const video = videoDoc.data() as VideoDocument;
-    const comment = commentDoc.data() || {};
-    if (comment.authorId !== userId && video.ownerId !== userId) {
-      throw new ServiceError(403, "Only the comment author or video owner can delete this comment");
+    if (!(await canInteractWithVideo(video, userId))) {
+      throw new ServiceError(403, "You do not have access to this video");
     }
 
-    transaction.delete(commentRef);
-    transaction.update(videoRef, {
-      commentCount: admin.firestore.FieldValue.increment(-1),
+    const likeDoc = await transaction.get(likeRef);
+    if (likeDoc.exists) {
+      return;
+    }
+
+    transaction.set(likeRef, {
+      userId,
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
+    transaction.update(commentRef, {
+      likeCount: admin.firestore.FieldValue.increment(1),
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     });
   });
+
+  const fresh = await commentRef.get();
+  const comment = await serializeComment(fresh, userId);
+  return { liked: true, likeCount: comment.likeCount, comment };
+}
+
+export async function unlikeVideoComment(
+  videoId: string,
+  commentId: string,
+  userId: string
+): Promise<{ liked: boolean; likeCount: number; comment: VideoComment }> {
+  const videoRef = db.collection(VIDEOS_COLLECTION).doc(videoId);
+  const commentRef = videoRef.collection("comments").doc(commentId);
+  const likeRef = commentRef.collection("likes").doc(userId);
+
+  await db.runTransaction(async (transaction) => {
+    const videoDoc = await transaction.get(videoRef);
+    const commentDoc = await transaction.get(commentRef);
+
+    if (!videoDoc.exists) {
+      throw new ServiceError(404, "Video not found");
+    }
+    if (!commentDoc.exists) {
+      throw new ServiceError(404, "Comment not found");
+    }
+
+    const video = videoDoc.data() as VideoDocument;
+    if (!(await canInteractWithVideo(video, userId))) {
+      throw new ServiceError(403, "You do not have access to this video");
+    }
+
+    const likeDoc = await transaction.get(likeRef);
+    if (!likeDoc.exists) {
+      return;
+    }
+
+    transaction.delete(likeRef);
+    transaction.update(commentRef, {
+      likeCount: admin.firestore.FieldValue.increment(-1),
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
+  });
+
+  const fresh = await commentRef.get();
+  const comment = await serializeComment(fresh, userId);
+  return { liked: false, likeCount: comment.likeCount, comment };
+}
+
+/** Safe fields for link previews / public JSON (public + ready videos only). No playback URLs. */
+export interface PublicVideoShareMeta {
+  id: string;
+  ownerName: string;
+  caption: string;
+  subject: string;
+  thumbnailUrl: string | null;
+  durationMs: number | null;
+  likeCount: number;
+  commentCount: number;
+  createdAt: string | null;
+}
+
+/**
+ * Returns metadata for a **public** and **ready** video (for OG / unfurl).
+ * Private, friends-only, uploading, or deleted → null (treat as 404 for callers).
+ */
+export async function getPublicVideoShareMeta(videoId: string): Promise<PublicVideoShareMeta | null> {
+  const doc = await db.collection(VIDEOS_COLLECTION).doc(videoId).get();
+  if (!doc.exists) return null;
+
+  const data = doc.data() as VideoDocument;
+  if (data.status === "deleted" || data.status !== "ready" || data.visibility !== "public") {
+    return null;
+  }
+
+  let thumbnailUrl =
+    data.thumbnailStoragePath
+      ? await createSignedStorageReadUrl(data.thumbnailStoragePath)
+      : data.thumbnailUrl || null;
+
+  if (!thumbnailUrl && isSlideshowDoc(data) && data.slides?.length) {
+    const first = [...data.slides].sort((a, b) => a.order - b.order)[0];
+    if (first?.storagePath) {
+      thumbnailUrl = await createSignedStorageReadUrl(first.storagePath);
+    }
+  }
+
+  return {
+    id: doc.id,
+    ownerName: data.ownerName,
+    caption: data.caption,
+    subject: data.subject || "",
+    thumbnailUrl,
+    durationMs: data.durationMs ?? null,
+    likeCount: data.likeCount || 0,
+    commentCount: data.commentCount || 0,
+    createdAt: serializeTimestamp(data.createdAt),
+  };
 }

@@ -1,0 +1,917 @@
+{
+  "apSubject": "AP Japanese Language and Culture",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Families and Communities",
+      "description": "Language and culture related to family structures, community life, social roles, and interpersonal relationships.",
+      "note": "# Unit 1: Families and Communities\n\n## Overview\nThis unit introduces the **language, perspectives, and cultural practices** used to discuss **family structures**, **community life**, **social expectations**, and **interpersonal relationships** in Japanese-speaking contexts. It matters for the AP exam because students must interpret and produce language about **identity**, **social roles**, and **everyday interactions** while showing awareness of how **culture shapes communication**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Family structure** | Ways families are organized, including **nuclear families**, **extended families**, multigenerational households, and changing modern patterns | Frequently appears in **reading, listening, and cultural comparison** tasks; students must describe and compare family life accurately |\n| **Social roles** | Expected responsibilities of **parents, children, elders, neighbors, teachers, and community members** | Helps with interpreting social expectations and explaining behavior in **interpersonal speaking** and **presentational writing** |\n| **In-group / out-group awareness** | The distinction between **uchi** (**inside group**) and **soto** (**outside group**) in relationships and language use | Essential for understanding **politeness**, self-reference, and how Japanese speakers adjust language by relationship |\n| **Politeness and register** | Use of **plain**, **polite**, and sometimes **honorific/humble** language depending on context | A major AP skill: choosing language appropriate to **audience**, **setting**, and **social distance** |\n| **Community life** | Participation in neighborhoods, schools, clubs, festivals, and local support networks | Common source of AP themes involving **belonging**, **cooperation**, and **shared responsibility** |\n| **Interpersonal relationships** | Friendships, family ties, peer relations, and obligations such as helping, respecting, and maintaining harmony | Important for interpreting dialogue and expressing opinions about **conflict**, **support**, and **expectations** |\n| **Cultural values** | Ideas such as **wa** (**harmony**), **respect for elders**, **group responsibility**, and mutual dependence | Often needed for strong **cultural comparison** responses and deeper text interpretation |\n| **Changing society** | Shifts in marriage patterns, birth rates, gender roles, aging population, and work-life balance | Useful for connecting traditional patterns with **contemporary issues**, a common AP comparison move |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Individual identity] --> B[Family role]\n    B --> C[Language choice]\n    C --> D[Interaction with others]\n    D --> E[Community participation]\n    E --> F[Sense of belonging]\n    F --> G[Shared values and expectations]\n    G --> C\n```\n\n### How this relationship works\n1. A person’s **identity** shapes their role within the **family** and community.\n2. That role affects **language choices**, especially levels of **politeness** and expressions of respect.\n3. Language use influences how smoothly interactions happen with **family members**, **peers**, and **community members**.\n4. Successful interaction supports **participation**, belonging, and **social harmony**.\n5. In turn, community values reinforce future behavior and communication.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “rules” are key **communication and cultural principles** rather than equations.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Register must match relationship** | Use more **polite language** with teachers, elders, unfamiliar people, and formal situations; less formal language may be used with close friends and family |\n| **Language reflects social distance** | Japanese often marks whether someone is **inside** or **outside** one’s group; wording changes based on who is speaking to whom |\n| **Family terms change by context** | Terms for **your own family** may differ from terms used when referring to **someone else’s family** in respectful conversation |\n| **Indirectness can signal politeness** | Speakers may avoid overly direct disagreement in order to preserve **wa** (**harmony**) |\n| **Community identity matters** | Individual choices are often discussed in relation to **family expectations**, school life, or neighborhood norms |\n| **Cultural comparison needs evidence** | On the AP exam, do not just say “Japan is different”; explain **how** and **why**, using specific practices or perspectives |\n| **Relationships shape obligation** | Expectations such as helping family, respecting elders, or contributing to the group often guide behavior and language |\n\n### High-value language patterns to recognize\n- **Introducing family/community members**\n- **Describing responsibilities and routines**\n- **Expressing respect, gratitude, obligation, and advice**\n- **Comparing traditional and modern lifestyles**\n- **Explaining how relationships affect choices**\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection / Contrast** | **AP Relevance** |\n|---|---|---|\n| **Traditional family roles** vs. **changing modern roles** | Traditional expectations may emphasize clearer divisions of duty; modern life may show more flexible roles and work-life negotiation | Useful for **compare/contrast** writing and cultural comparison speaking |\n| **Uchi** vs. **soto** | **Uchi** refers to one’s in-group; **soto** refers to outsiders, affecting language and behavior | Helps explain why speakers shift **register**, humility, or formality |\n| **Individual preference** vs. **group harmony** | Personal desires may be expressed carefully when they affect the family or group | Important for interpreting opinions and indirect communication |\n| **Family support** vs. **community support** | Care and belonging can come from both relatives and broader networks like schools, clubs, and neighborhoods | Supports stronger answers about how Japanese society organizes relationships |\n\n```mermaid\nflowchart LR\n    A[Family] --> B[Daily support]\n    A --> C[Identity formation]\n    D[Community] --> E[Shared activities]\n    D --> F[Belonging and responsibility]\n    C --> G[Interpersonal behavior]\n    F --> G\n```\n\n## Common AP Exam Traps\n\n- Confusing **casual speech** with universally acceptable speech; AP tasks require attention to **audience and formality**.\n- Treating Japanese family life as completely uniform; be ready to discuss **variation** and **social change**.\n- Overgeneralizing cultural values such as **harmony** without giving a concrete example from family or community life.\n- Mixing up how to refer to **your own family** versus **another person’s family** in socially appropriate ways.\n- Assuming direct translation from English works; Japanese often expresses relationships and obligations more **indirectly** and contextually.\n\n## Quick Review Checklist\n\n- [ ] I can describe different **family structures** in Japanese-speaking contexts.\n- [ ] I can explain how **social roles** influence expectations within families and communities.\n- [ ] I understand **uchi** and **soto** and how they affect communication.\n- [ ] I can choose an appropriate **register** based on audience and relationship.\n- [ ] I can compare **traditional** and **contemporary** family or community patterns.\n- [ ] I can explain how values like **harmony**, **respect**, and **group responsibility** shape behavior.\n- [ ] I can interpret or discuss **interpersonal relationships** in families, schools, and neighborhoods.\n- [ ] I can support a **cultural comparison** with specific examples instead of broad generalizations.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "家族構成",
+              "definition": "The makeup of a household, including who lives together and how members are related by blood, marriage, or adoption."
+            },
+            {
+              "term": "核家族",
+              "definition": "A household consisting primarily of parents and their children, rather than multiple generations living together."
+            },
+            {
+              "term": "拡大家族",
+              "definition": "A family arrangement in which grandparents, aunts, uncles, or other relatives are included in the same household or daily support network."
+            },
+            {
+              "term": "敬語",
+              "definition": "A system of speech used to show respect, humility, or social distance depending on the relationship between speakers."
+            },
+            {
+              "term": "内・外",
+              "definition": "A cultural distinction between one’s in-group and out-group that influences language choice, behavior, and social expectations."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A Japanese student is introducing her mother to a teacher and refers to her own mother as 「母」 rather than 「お母さん」. Which concept best explains this language choice?",
+              "options": [
+                "Using plain style to show anger",
+                "Adjusting speech based on in-group and out-group relationships",
+                "Avoiding family terms in formal settings",
+                "Using slang to sound more natural"
+              ],
+              "correctAnswer": "Adjusting speech based on in-group and out-group relationships",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which situation best illustrates the use of 敬語 in a community context?",
+              "options": [
+                "A teenager texting a close friend with abbreviations",
+                "A student using respectful language when speaking to the principal",
+                "Siblings arguing casually at home",
+                "A child speaking to a younger cousin"
+              ],
+              "correctAnswer": "A student using respectful language when speaking to the principal",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In AP Japanese cultural comparisons, a household made up mainly of parents and their children is called a ______.",
+              "options": [
+                "核家族",
+                "拡大家族",
+                "地域社会",
+                "敬語"
+              ],
+              "correctAnswer": "核家族",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When speaking to someone from outside one’s immediate group, Japanese speakers often adjust register because of the cultural distinction known as ______.",
+              "options": [
+                "内・外",
+                "年中行事",
+                "自己主張",
+                "部活動"
+              ],
+              "correctAnswer": "内・外",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "地域社会",
+              "definition": "The local network of people, institutions, and shared practices that shape daily life in a neighborhood or town."
+            },
+            {
+              "term": "役割分担",
+              "definition": "The allocation of responsibilities among individuals in a household or group according to expectation, age, status, or circumstance."
+            },
+            {
+              "term": "先輩・後輩関係",
+              "definition": "A hierarchical social relationship in which experience or seniority affects obligations, language use, and behavior."
+            },
+            {
+              "term": "近所付き合い",
+              "definition": "Regular interaction with nearby residents, often involving greetings, mutual assistance, and participation in local events."
+            },
+            {
+              "term": "世代間関係",
+              "definition": "Interactions between age groups, especially younger and older people, that reflect differing responsibilities, values, and communication styles."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which example best reflects 先輩・後輩関係 in Japanese school or community life?",
+              "options": [
+                "Two strangers negotiating prices at a market",
+                "A younger club member deferring to an older member’s advice and using more polite language",
+                "Parents asking a child to choose the family budget",
+                "Neighbors ignoring one another to preserve privacy"
+              ],
+              "correctAnswer": "A younger club member deferring to an older member’s advice and using more polite language",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains why participation in local festivals and neighborhood associations is culturally significant in Japan?",
+              "options": [
+                "It primarily serves to replace school education",
+                "It helps strengthen community ties and shared responsibility",
+                "It is legally required in all municipalities",
+                "It reduces the need for respectful language"
+              ],
+              "correctAnswer": "It helps strengthen community ties and shared responsibility",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The term ______ refers to the local community network that influences everyday life, shared norms, and social participation.",
+              "options": [
+                "地域社会",
+                "核家族",
+                "敬語",
+                "進学率"
+              ],
+              "correctAnswer": "地域社会",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In discussions of household expectations, ______ describes how responsibilities are divided among family or group members.",
+              "options": [
+                "役割分担",
+                "内・外",
+                "世代間関係",
+                "方言"
+              ],
+              "correctAnswer": "役割分担",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Personal and Public Identities",
+      "description": "Exploration of self-identity, cultural identity, national identity, and how they intersect in personal and public life.",
+      "note": "# Unit 2: Personal and Public Identities\n\n## Overview\nThis unit examines how **personal identity** and **public identity** are shaped by family, school, community, language, and national culture in Japanese-speaking contexts. For the AP Exam, this theme matters because students must interpret texts, audio, and cultural perspectives while also presenting and comparing how identity is expressed in both Japanese and their own communities.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Personal identity** | A person’s sense of self, including values, interests, goals, and personality. | Frequently appears in **interpersonal speaking** and **presentational writing** prompts about self-introduction, aspirations, and self-expression. |\n| **Public identity** | How a person is perceived in society through roles, behavior, appearance, and expectations. | Important for understanding how speakers adjust language and behavior depending on audience and situation. |\n| **Cultural identity** | Identity formed through shared traditions, beliefs, customs, and practices. | Helps students analyze how Japanese cultural norms influence communication, lifestyle, and belonging. |\n| **National identity** | A sense of connection to a nation through history, symbols, language, and civic values. | Often appears in comparisons involving Japan, globalization, and ideas of what it means to be “Japanese.” |\n| **Social roles and expectations** | Norms connected to age, gender, school status, family position, or workplace role. | Essential for interpreting **register**, **politeness**, and implied meaning in AP listening and reading tasks. |\n| **Group belonging vs. individuality** | The tension between fitting into a group and expressing one’s unique self. | A common cultural theme in AP prompts, especially when comparing Japanese and U.S. perspectives. |\n| **Language and identity** | The way speech style, honorifics, dialect, and word choice reflect identity and relationships. | Crucial for understanding why speakers use **plain form**, **polite form**, or more formal expressions. |\n| **Changing identity in modern society** | How identity shifts because of globalization, technology, migration, and social change. | Useful for cultural comparison essays and presentational speaking on contemporary Japanese society. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Family background] --> E[Personal identity]\n    B[School and peers] --> E\n    C[Community and culture] --> E\n    D[Media and society] --> E\n    E --> F[Language choices]\n    E --> G[Behavior and self-expression]\n    F --> H[Public identity]\n    G --> H\n    H --> I[Social feedback]\n    I --> E\n```\n\n### How this relationship works\n1. **Personal identity** develops through influences such as family, school, peer groups, and culture.\n2. That identity is expressed through **language**, **behavior**, appearance, and participation in society.\n3. These outward expressions shape one’s **public identity**.\n4. Society then responds with expectations, approval, pressure, or exclusion.\n5. That feedback can reinforce or reshape a person’s self-understanding.\n\nThis cycle is especially relevant in Japanese because communication often reflects awareness of **social context**, **in-group/out-group distinctions**, and **appropriate formality**.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language-and-culture unit, the “rules” are key **principles**, **communication patterns**, and **cultural norms** rather than numerical formulas.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Identity is context-dependent** | A person may present different aspects of identity at home, at school, online, or in public. |\n| **Language reflects relationship** | In Japanese, identity and social role are often signaled through **register**, including **plain**, **polite**, and honorific language. |\n| **Inside vs. outside groups** | The distinction between **uchi** and **soto** influences self-presentation, politeness, and group belonging. |\n| **Tatemae and honne** | **Tatemae** is the socially appropriate public stance; **honne** is one’s true feeling or private opinion. This distinction often helps explain indirect communication. |\n| **Identity is shaped by community expectations** | School rules, family roles, workplace norms, and social customs can influence how individuals act in public. |\n| **Cultural comparison requires evidence** | On the AP exam, comparisons should use specific cultural examples rather than vague generalizations. |\n| **Multiple identities coexist** | A person can simultaneously hold personal, cultural, linguistic, regional, and national identities. |\n| **Modern identity is dynamic** | Globalization, social media, and diversity challenge older ideas of fixed or uniform identity. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key AP Insight** |\n|---|---|---|---|\n| **Private vs. public self** | **Honne**: true feelings, personal beliefs | **Tatemae**: socially appropriate expression | Useful when analyzing indirect speech, social harmony, and why a speaker may not say exactly what they think. |\n| **Individual vs. group** | Self-expression, uniqueness, personal goals | Harmony, belonging, group responsibility | Many AP cultural comparisons ask students to explain how these values are balanced in Japanese society. |\n| **Local vs. national identity** | Regional dialect, local traditions, hometown pride | Shared language, institutions, national symbols | Important for discussing how identity in Japan is not completely uniform. |\n| **Traditional vs. modern identity** | Established gender roles, family expectations, formal norms | Changing lifestyles, global influences, digital self-presentation | Often appears in readings about youth culture, work, or social change. |\n\n```mermaid\nflowchart LR\n    A[Personal identity] --> B[Self-expression]\n    C[Cultural norms] --> B\n    B --> D[Public identity]\n    D --> E[Social acceptance or pressure]\n    E --> F[Identity adjustment]\n```\n\n## Common AP Exam Traps\n\n- Confusing **personal identity** with **national identity**. A prompt about self-image or family role is not necessarily asking about patriotism or citizenship.\n- Overgeneralizing Japanese culture as completely uniform. Be prepared to recognize **regional**, **generational**, and **individual** differences.\n- Ignoring **register**. On the AP exam, shifts between casual and formal language often reveal relationship, status, or social setting.\n- Treating **tatemae** as dishonesty. It is better understood as socially appropriate expression that supports harmony.\n- Making unsupported comparisons with one’s own culture. AP responses score higher when they include **specific examples** rather than broad claims.\n\n## Quick Review Checklist\n\n- [ ] Explain the difference between **personal identity**, **public identity**, **cultural identity**, and **national identity**.\n- [ ] Describe how **family**, **school**, and **community** shape a person’s sense of self.\n- [ ] Identify how **language choice** in Japanese reflects role, relationship, and social expectation.\n- [ ] Explain **uchi / soto** and how group belonging affects behavior and communication.\n- [ ] Compare **honne** and **tatemae** using a concrete cultural example.\n- [ ] Discuss the tension between **individuality** and **group harmony** in Japanese society.\n- [ ] Analyze how **modern influences** such as globalization or social media can change identity.\n- [ ] Support a cultural comparison with at least one **specific example** from Japanese-speaking contexts.\n\n--- \n\n### Final AP Tip\nWhen studying this unit, focus on how identity is **expressed**, not just how it is defined. On the exam, strong answers connect **language**, **social context**, and **cultural perspective** to show how identity operates in real life.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "自己紹介",
+              "definition": "A culturally appropriate presentation of one’s background, role, interests, and relationship to others, often adjusted by context and audience."
+            },
+            {
+              "term": "敬語",
+              "definition": "A system of speech forms used to show respect, humility, or politeness depending on social relationship and situation."
+            },
+            {
+              "term": "内と外",
+              "definition": "A distinction between one’s in-group and out-group that influences language choice, behavior, and social expectations."
+            },
+            {
+              "term": "本音と建前",
+              "definition": "The contrast between one’s true feelings and the socially appropriate position expressed in public."
+            },
+            {
+              "term": "役割語",
+              "definition": "Patterns of speech associated with social identity categories such as age, gender, occupation, or status, often used to signal persona."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a Japanese school interview, a student shifts from casual speech with friends to more formal language with a teacher. Which concept best explains this change?",
+              "options": [
+                "敬語",
+                "擬音語",
+                "省略",
+                "外来語"
+              ],
+              "correctAnswer": "敬語",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student says one thing in public to preserve harmony but expresses a different private opinion later to a close friend. Which pair of concepts is most directly involved?",
+              "options": [
+                "本音と建前",
+                "義理と人情",
+                "侘び寂び",
+                "年中行事"
+              ],
+              "correctAnswer": "本音と建前",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In discussions of Japanese social identity, the distinction between in-group and out-group is often described as ______.",
+              "options": [
+                "内と外",
+                "少子高齢化",
+                "終身雇用",
+                "帰国子女"
+              ],
+              "correctAnswer": "内と外",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Speech patterns that signal a persona through features associated with age, status, or occupation are called ______.",
+              "options": [
+                "役割語",
+                "和製英語",
+                "四字熟語",
+                "連用形"
+              ],
+              "correctAnswer": "役割語",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "帰国子女",
+              "definition": "A young person who has returned after living abroad and may navigate multiple linguistic and cultural frameworks in school and society."
+            },
+            {
+              "term": "ハーフ",
+              "definition": "A common social label for a person with one Japanese parent and one non-Japanese parent, often raising questions about belonging and representation."
+            },
+            {
+              "term": "多文化共生",
+              "definition": "A social ideal in which people from differing linguistic and cultural backgrounds live together through mutual respect and participation."
+            },
+            {
+              "term": "国民性",
+              "definition": "Shared characteristics commonly associated with a nation’s people, often discussed critically because such generalizations can oversimplify diversity."
+            },
+            {
+              "term": "若者文化",
+              "definition": "Contemporary practices and values associated with younger generations that shape expression, belonging, and social identity."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which term best relates to public discussions about creating communities where residents of different backgrounds participate on equal footing?",
+              "options": [
+                "多文化共生",
+                "受験地獄",
+                "先輩後輩",
+                "単身赴任"
+              ],
+              "correctAnswer": "多文化共生",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which term refers specifically to a child or adolescent who returns to Japan after living overseas and may face adjustment issues in language and identity?",
+              "options": [
+                "帰国子女",
+                "浪人生",
+                "留学生",
+                "社会人"
+              ],
+              "correctAnswer": "帰国子女",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Generalized claims about traits supposedly shared by a nation’s people are often discussed under the label ______.",
+              "options": [
+                "国民性",
+                "方言",
+                "終活",
+                "部活動"
+              ],
+              "correctAnswer": "国民性",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Fashion, music, slang, and online expression that shape peer belonging among younger generations are often grouped as ______.",
+              "options": [
+                "若者文化",
+                "年功序列",
+                "冠婚葬祭",
+                "義務教育"
+              ],
+              "correctAnswer": "若者文化",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Contemporary Life",
+      "description": "Everyday modern life including education, work, leisure, and social media across cultures.",
+      "note": "# Unit 3: Contemporary Life\n\n## Overview\nThis unit explores **contemporary everyday life** in Japan and compares it with students’ own cultures, focusing on **education, work, leisure, technology, and social media**. For the AP exam, this matters because students must interpret and produce language about real-world routines, social expectations, and cultural perspectives in **interpersonal, interpretive, and presentational communication**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Education systems** | School structure, schedules, entrance exams, club activities, and student expectations in Japan | Frequently appears in readings, audio, and comparison tasks; helps students discuss **school life** and cultural values |\n| **Work culture** | Ideas about employment, part-time jobs, office norms, work-life balance, and responsibility | Supports cultural comparisons about **career goals**, **social roles**, and **modern pressures** |\n| **Leisure and hobbies** | How people spend free time, including sports, travel, gaming, music, and social outings | Common theme in conversations and presentations about **daily life** and personal interests |\n| **Technology in daily life** | Use of smartphones, apps, cashless payment, online platforms, and digital communication | Important for understanding modern routines and describing how technology shapes communication |\n| **Social media and communication** | Platforms, texting styles, online identity, and appropriate digital behavior | Often tested through authentic materials; useful for discussing **advantages, risks, and etiquette** |\n| **Cultural expectations and etiquette** | Norms related to politeness, group harmony, punctuality, and public behavior | Essential for interpreting why people act a certain way and for avoiding superficial comparisons |\n| **Balance between individual and group** | Tension between personal preference and group responsibility in school, work, and friendships | A major cultural lens for analyzing Japanese society and constructing stronger AP cultural comparisons |\n| **Changing modern lifestyles** | Shifts in family roles, work patterns, study habits, and media use across generations | Helps students explain **continuity and change** rather than treating culture as fixed |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Daily responsibilities] --> B[School or work routines]\n    B --> C[Use of technology]\n    C --> D[Communication with friends, family, coworkers]\n    D --> E[Leisure choices]\n    E --> F[Social media sharing]\n    F --> G[Public/private identity]\n    G --> H[Social expectations and feedback]\n    H --> A\n```\n\n### How to read this cycle\n1. **Contemporary life** is shaped by recurring daily routines such as school, commuting, work, and homework.\n2. These routines are increasingly mediated by **technology**.\n3. Technology influences how people **communicate**, organize free time, and present themselves online.\n4. Online and offline behavior is then evaluated according to **social norms**, which reinforces or reshapes future behavior.\n5. On the AP exam, students should be able to describe not just activities, but also the **relationship between behavior, values, and social expectations**.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “rules” are key **cultural and communication principles** rather than mathematical formulas.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Context matters** | Meaning depends heavily on **situation, relationship, and level of formality**. A response appropriate for a friend may be inappropriate for a teacher or supervisor. |\n| **Politeness levels are culturally significant** | Students should recognize when **plain**, **polite**, or more respectful language is appropriate in school, workplace, and public settings. |\n| **Group harmony influences behavior** | In many contexts, decisions and communication reflect concern for **wa**, or social harmony, rather than only individual preference. |\n| **Authentic comparison is required** | On the AP exam, strong responses compare **Japanese-speaking communities** with the student’s own or another community using **specific examples**. |\n| **Modern life includes both benefits and pressures** | Technology, school, and work create convenience but also stress, time pressure, and expectations of constant availability. |\n| **Cultural practices reflect perspectives** | A practice such as club participation, punctuality, or careful online behavior should be connected to a deeper **cultural value or perspective**. |\n| **Avoid overgeneralization** | Not every Japanese person has the same lifestyle; responses should acknowledge **variation by age, region, and individual circumstances**. |\n\n### High-value vocabulary categories\nStudents should be ready to discuss:\n- **school routines**: classes, exams, clubs, commuting, homework\n- **work life**: part-time jobs, office culture, schedules, responsibility\n- **free time**: hobbies, outings, sports, entertainment\n- **digital life**: messaging, posting, online shopping, mobile apps\n- **social issues**: stress, balance, privacy, peer pressure\n\n## Connections & Comparisons\n\n| **Comparison** | **Japanese Context** | **Possible Contrast in Other Cultures** | **AP Use** |\n|---|---|---|---|\n| **School life** | Strong emphasis on **club activities**, group identity, and exam preparation | Greater emphasis in some places on individual choice or flexible scheduling | Useful for cultural comparison essays and speaking prompts |\n| **Work expectations** | **Punctuality**, responsibility, and dedication may be highly emphasized | Other cultures may prioritize personal time or informality more strongly | Helps explain values behind workplace behavior |\n| **Leisure time** | Free time may be shaped by busy school/work schedules and group plans | Other contexts may allow more spontaneous or individual leisure | Supports nuanced discussion of modern lifestyle pressures |\n| **Social media use** | Online behavior may reflect concern for privacy, image, and social harmony | In other cultures, self-expression may be more direct or public | Important for discussing communication style and digital etiquette |\n\n```mermaid\nflowchart LR\n    A[Education] --> D[Time pressure]\n    B[Work] --> D\n    C[Technology] --> E[Constant connection]\n    D --> F[Need for leisure and balance]\n    E --> F\n    F --> G[Questions about well-being, identity, and social expectations]\n```\n\n## Common AP Exam Traps\n\n- Confusing **cultural patterns** with absolute rules. Avoid saying “all Japanese people” do the same thing.\n- Describing a practice without explaining the **cultural perspective** behind it. AP responses need both.\n- Making vague comparisons such as “Japan is more serious.” Use **specific examples** from school, work, or social media.\n- Ignoring **register and audience** in speaking or writing. Contemporary life topics often require attention to appropriate politeness.\n- Treating technology as only positive or only negative. Stronger answers address **both convenience and social pressure**.\n\n## Quick Review Checklist\n\n- [ ] I can describe major features of **school life** in Japan, including schedules, exams, and club activities.\n- [ ] I can explain key aspects of **work culture** and connect them to broader social values.\n- [ ] I can discuss **leisure activities** and how free time may differ across cultures.\n- [ ] I can explain how **technology** shapes daily communication and routines.\n- [ ] I can compare **social media use** in Japan with another cultural context using specific examples.\n- [ ] I can identify how **politeness, group harmony, and social expectations** influence behavior.\n- [ ] I can make a strong AP-style comparison between a **cultural practice** and its underlying **perspective**.\n- [ ] I can avoid stereotypes and instead describe **variation and change** in contemporary Japanese life.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "通勤・通学ラッシュ",
+              "definition": "Peak morning and evening congestion on public transportation and roads as large numbers of people travel to school or work in metropolitan areas."
+            },
+            {
+              "term": "部活動",
+              "definition": "School-based extracurricular groups that often meet regularly after classes and can shape students’ time management, social relationships, and school identity."
+            },
+            {
+              "term": "アルバイト",
+              "definition": "Part-time employment commonly held by students or other workers to earn income, gain experience, or balance financial and personal responsibilities."
+            },
+            {
+              "term": "敬語",
+              "definition": "A system of socially appropriate language choices used to show respect, humility, or politeness depending on status, role, and situation."
+            },
+            {
+              "term": "ワークライフバランス",
+              "definition": "The effort to maintain a sustainable relationship between job demands and personal life, including family, rest, and leisure."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student comparing school life in Japan and the United States notes that many Japanese students remain on campus for organized activities after classes end. Which factor best explains this pattern?",
+              "options": [
+                "A stronger emphasis on school-based clubs and team activities",
+                "A national ban on private tutoring after school",
+                "A shorter academic year in Japan",
+                "A requirement that all students hold part-time jobs"
+              ],
+              "correctAnswer": "A stronger emphasis on school-based clubs and team activities",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In a formal job interview in Japan, which language choice is most appropriate for a candidate speaking to the interviewer?",
+              "options": [
+                "Using plain casual forms throughout the interview",
+                "Using respectful and polite speech appropriate to status differences",
+                "Avoiding all first-person references because they are impolite",
+                "Speaking in regional dialect to appear friendly"
+              ],
+              "correctAnswer": "Using respectful and polite speech appropriate to status differences",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In many Japanese cities, the period of greatest congestion on trains during the morning commute is called ______.",
+              "options": [
+                "通勤・通学ラッシュ",
+                "ゴールデンウィーク",
+                "ホームステイ",
+                "年中行事"
+              ],
+              "correctAnswer": "通勤・通学ラッシュ",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A student trying to balance homework, club participation, family obligations, and rest is concerned with ______.",
+              "options": [
+                "ワークライフバランス",
+                "初詣",
+                "方言",
+                "梅雨"
+              ],
+              "correctAnswer": "ワークライフバランス",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "SNS",
+              "definition": "Online platforms that allow users to share messages, images, and videos, build networks, and participate in public or private digital communication."
+            },
+            {
+              "term": "既読スルー",
+              "definition": "A situation in messaging culture in which someone appears to have seen a message but does not reply, sometimes creating social tension or uncertainty."
+            },
+            {
+              "term": "フリーター",
+              "definition": "A person who mainly works in nonregular part-time or temporary positions rather than pursuing long-term full-time employment."
+            },
+            {
+              "term": "テレワーク",
+              "definition": "A work arrangement in which duties are performed away from a central office, typically through digital communication tools and networked devices."
+            },
+            {
+              "term": "少子高齢化",
+              "definition": "A demographic trend marked by low birth rates and a growing elderly population, affecting schools, labor supply, and social services."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which contemporary development has most directly increased the frequency of remote meetings and flexible workplace arrangements in Japan and other countries?",
+              "options": [
+                "The spread of telework supported by digital communication tools",
+                "A decrease in internet access in urban areas",
+                "The elimination of service-sector jobs",
+                "A return to exclusively paper-based office systems"
+              ],
+              "correctAnswer": "The spread of telework supported by digital communication tools",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Why is the demographic trend of low birth rates and an aging population a significant issue in contemporary society?",
+              "options": [
+                "It tends to increase the number of school-age children rapidly",
+                "It can create pressure on the labor force and social support systems",
+                "It eliminates the need for workplace reform",
+                "It guarantees that rural communities will grow"
+              ],
+              "correctAnswer": "It can create pressure on the labor force and social support systems",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A worker who completes tasks from home using video calls, shared documents, and online systems is participating in ______.",
+              "options": [
+                "テレワーク",
+                "留学",
+                "就職活動",
+                "伝統芸能"
+              ],
+              "correctAnswer": "テレワーク",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When someone reads a message on a chat app but does not respond, this may be described as ______.",
+              "options": [
+                "既読スルー",
+                "年賀状",
+                "文化祭",
+                "帰国子女"
+              ],
+              "correctAnswer": "既読スルー",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Global Challenges",
+      "description": "Major global issues such as climate change, poverty, migration, public health, and human rights.",
+      "note": "# Unit 4: Global Challenges\n\n## Overview\nIn this unit, you explore how Japanese-speaking communities discuss and respond to major **global challenges** such as **climate change**, **poverty**, **migration**, **public health**, and **human rights**. For the AP exam, this matters because you must not only understand these issues culturally and linguistically, but also compare perspectives, interpret authentic sources, and express well-supported ideas in Japanese.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Climate Change** | Long-term shifts in weather patterns caused largely by human activity, especially greenhouse gas emissions. | Frequently appears in readings, audio texts, and persuasive prompts about environmental responsibility and policy. |\n| **Sustainability** | Using resources in ways that protect the environment and support future generations. | Helps you discuss solutions, community actions, and government or personal responsibility in Japanese. |\n| **Poverty / Economic Inequality** | Unequal access to income, education, health care, and opportunity. | Important for comparing social conditions across Japan and other countries and for discussing causes and solutions. |\n| **Migration / Immigration** | Movement of people across regions or national borders for work, safety, family, or education. | Common in intercultural comparison; connects to labor shortages, multiculturalism, and social integration in Japan. |\n| **Public Health** | The protection and improvement of community health through policy, education, and medical systems. | Appears in contexts such as aging society, pandemics, health campaigns, and access to care. |\n| **Human Rights** | Basic rights and freedoms that all people should have. | Useful for discussing discrimination, gender equality, labor conditions, refugee issues, and social justice. |\n| **Globalization** | Increased global interconnectedness in economics, culture, communication, and movement of people. | Supports comparison of local and global effects and helps explain why challenges cross national boundaries. |\n| **Civic Responsibility / Social Action** | Actions by individuals, groups, or governments to address public problems. | Central to persuasive writing and speaking tasks that ask you to propose responses to global issues. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Global challenge emerges] --> B[Media and public awareness]\n    B --> C[Discussion of causes and impact]\n    C --> D[Government policy response]\n    C --> E[NGO / community action]\n    C --> F[Individual behavior change]\n    D --> G[Short-term results]\n    E --> G\n    F --> G\n    G --> H[Evaluation of effectiveness]\n    H --> I[Further reform or new challenges]\n```\n\n### How to think about this process\n1. A **global issue** becomes visible through news, education, or lived experience.\n2. People analyze its **causes**, **effects**, and who is most affected.\n3. Different actors respond:\n   - **Governments** create laws, funding, or regulations.\n   - **Communities / NGOs** organize support and advocacy.\n   - **Individuals** change daily habits or attitudes.\n4. Society then evaluates whether the response was **effective**, **fair**, and **sustainable**.\n5. On the AP exam, you may need to describe this chain clearly and compare how Japan and another society respond differently.\n\n## Essential Formulas / Laws / Rules\n\nSince AP Japanese is not a formula-based course, focus on the following **core principles, vocabulary functions, and cultural rules**:\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Support claims with evidence** | When discussing global challenges, give a clear opinion and back it up with **examples**, **reasons**, or **source-based details**. |\n| **Compare cultures precisely** | Do not make vague statements like “Japan is different.” Explain **how**, **why**, and **in what context**. |\n| **Distinguish cause, effect, and solution** | Be able to separate the **problem** itself from its **causes**, **consequences**, and **possible responses**. |\n| **Use register appropriately** | For formal AP writing and speaking, use polite and academic language when addressing social issues. |\n| **Recognize multiple perspectives** | Global challenges often involve governments, citizens, activists, workers, migrants, and vulnerable populations with different interests. |\n| **Connect personal and societal impact** | Many AP prompts ask how a global issue affects both **daily life** and **society as a whole**. |\n| **Use issue-specific vocabulary** | Know terms related to environment, economy, health, rights, and policy so you can discuss issues with precision. |\n\n### Useful language functions for this unit\n- **Stating a problem**: explain what the issue is and why it is serious.\n- **Explaining causes**: describe social, economic, political, or environmental reasons.\n- **Describing consequences**: show effects on individuals, communities, and nations.\n- **Proposing solutions**: suggest realistic actions and evaluate their likely impact.\n- **Comparing perspectives**: contrast Japanese views with those of another culture.\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection** | **Important Difference / Comparison** |\n|---|---|---|\n| **Climate Change** vs. **Public Health** | Environmental problems can directly affect health through heat, disasters, pollution, and food insecurity. | Climate change is a broad environmental process; public health focuses on human well-being and policy responses. |\n| **Poverty** vs. **Human Rights** | Poverty can limit access to education, housing, safety, and dignity, making rights harder to realize. | Poverty is an economic and social condition; human rights are ethical and legal principles. |\n| **Migration** vs. **Globalization** | Globalization increases movement of people, ideas, and labor across borders. | Migration is one specific form of movement; globalization is the broader system connecting societies. |\n| **Government Action** vs. **Individual Action** | Both are necessary to address global problems effectively. | Governments can change systems and policy; individuals influence daily practice, awareness, and social norms. |\n\n```mermaid\nflowchart LR\n    A[Poverty] --> B[Limited access to education]\n    A --> C[Health inequality]\n    D[Migration] --> E[Labor opportunities]\n    D --> F[Integration challenges]\n    G[Climate change] --> H[Natural disasters]\n    G --> C\n    H --> D\n    C --> I[Public health pressure]\n```\n\n## Common AP Exam Traps\n- Confusing a **global issue** with only a **personal problem**; AP tasks usually require broader social or cultural analysis.\n- Giving overly general comparisons, such as saying one country “cares more” without specific evidence or examples.\n- Discussing only the **problem** without explaining **causes**, **effects**, or **possible solutions**.\n- Ignoring **multiple perspectives**; many issues affect citizens, policymakers, businesses, and marginalized groups differently.\n- Using memorized opinions that do not respond directly to the **source material** or prompt.\n\n## Quick Review Checklist\n- [ ] I can explain major **global challenges** such as climate change, poverty, migration, public health, and human rights.\n- [ ] I can describe **causes**, **effects**, and **possible solutions** for each issue.\n- [ ] I can compare how **Japan** and another culture respond to a global challenge.\n- [ ] I can identify different **stakeholders** and explain their perspectives.\n- [ ] I can use appropriate **formal Japanese** to discuss social issues clearly.\n- [ ] I can support an opinion with **specific evidence** from examples or authentic sources.\n- [ ] I can connect a global issue to both **daily life** and **larger social systems**.\n- [ ] I can respond to AP-style prompts with clear organization, relevant vocabulary, and cultural insight.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "気候変動",
+              "definition": "長期的な気温・降水量・海面水位などの変化が、主に人間活動による温室効果ガスの増加によって加速している現象。"
+            },
+            {
+              "term": "温室効果ガス",
+              "definition": "大気中で熱を吸収・再放出し、地表付近の気温上昇に関わる気体。二酸化炭素、メタン、亜酸化窒素などが代表例。"
+            },
+            {
+              "term": "再生可能エネルギー",
+              "definition": "自然の循環の中で比較的短期間に補充され、発電や熱利用に用いられる資源。太陽光、風力、水力、地熱などが含まれる。"
+            },
+            {
+              "term": "貧困",
+              "definition": "食料、住居、教育、医療など基本的生活条件への安定したアクセスが不足している状態。相対的な格差の問題としても論じられる。"
+            },
+            {
+              "term": "持続可能な開発目標（SDGs）",
+              "definition": "2015年に国連で採択された、貧困削減、教育、保健、環境保護など多分野の課題解決を目指す国際的な共通目標。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "日本語の授業で、ある国の環境政策について「二酸化炭素の排出量を減らすために、化石燃料への依存を下げている」と説明された。この政策の目的として最も適切なのはどれか。",
+              "options": [
+                "大気中の温室効果ガスを減らし、気温上昇の進行を抑えること",
+                "農業生産を増やすために森林伐採を促進すること",
+                "輸入品の価格を上げて国内消費を減らすこと",
+                "人口増加を防ぐために都市への移住を制限すること"
+              ],
+              "correctAnswer": "大気中の温室効果ガスを減らし、気温上昇の進行を抑えること",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "国際協力に関する記事で、SDGsが重視される理由として最も適切なのはどれか。",
+              "options": [
+                "教育、保健、環境、経済を相互に関連する課題として扱うから",
+                "一国だけで達成できる短期的な景気対策だから",
+                "先進国の文化を世界に統一するための指針だから",
+                "軍事力の均衡を最優先する国際制度だから"
+              ],
+              "correctAnswer": "教育、保健、環境、経済を相互に関連する課題として扱うから",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "太陽光や風力のように、自然の循環の中で継続的に利用できる資源による発電は、______の活用として説明される。",
+              "options": [
+                "再生可能エネルギー",
+                "化石燃料",
+                "大量消費社会",
+                "単一栽培"
+              ],
+              "correctAnswer": "再生可能エネルギー",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "所得の不足だけでなく、教育や医療へのアクセスの欠如も含めてとらえる社会問題は、______である。",
+              "options": [
+                "貧困",
+                "観光開発",
+                "情報化",
+                "高齢化"
+              ],
+              "correctAnswer": "貧困",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "移民・難民",
+              "definition": "就労、教育、安全確保などを理由に国境を越えて移動する人々。後者は迫害や紛争などにより保護を必要とする場合が多い。"
+            },
+            {
+              "term": "公衆衛生",
+              "definition": "個人治療だけでなく、予防接種、衛生管理、健康教育、感染症対策などを通じて社会全体の健康を守る取り組み。"
+            },
+            {
+              "term": "感染症",
+              "definition": "細菌、ウイルス、寄生虫などの病原体によって広がり、地域的または国際的な対策を必要とすることがある病気。"
+            },
+            {
+              "term": "人権",
+              "definition": "国籍、性別、年齢、信条などにかかわらず、すべての人に認められる基本的な尊厳と自由。"
+            },
+            {
+              "term": "差別",
+              "definition": "ある属性を理由に人を不当に区別し、機会や権利を制限する行為や制度。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "ある自治体が、外国から来た住民向けに多言語で医療情報を提供し、予防接種の案内を行っている。この取り組みの主な目的として最も適切なのはどれか。",
+              "options": [
+                "地域全体で感染拡大を防ぎ、健康格差を小さくすること",
+                "病院の数を減らして医療費を削減すること",
+                "観光客を増やして地域経済を活性化すること",
+                "住民登録を厳格化して移住を抑制すること"
+              ],
+              "correctAnswer": "地域全体で感染拡大を防ぎ、健康格差を小さくすること",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "人権に関する討論で、「法の下の平等」が重視される理由として最も適切なのはどれか。",
+              "options": [
+                "すべての人が不当な扱いを受けず、基本的自由を保障されるべきだから",
+                "国家が文化活動を全面的に禁止できるようにするためだから",
+                "経済成長より伝統維持を常に優先するためだから",
+                "選挙権を特定の職業に限定するためだから"
+              ],
+              "correctAnswer": "すべての人が不当な扱いを受けず、基本的自由を保障されるべきだから",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "迫害や紛争などから逃れて国際的な保護を求める人々は、一般に______と呼ばれる。",
+              "options": [
+                "難民",
+                "観光客",
+                "留学生",
+                "通勤者"
+              ],
+              "correctAnswer": "難民",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "ワクチン接種、衛生教育、感染症の監視などを通して社会全体の健康を守る分野は、______である。",
+              "options": [
+                "公衆衛生",
+                "広告産業",
+                "娯楽産業",
+                "私的消費"
+              ],
+              "correctAnswer": "公衆衛生",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Science and Technology",
+      "description": "Impact of scientific advances and technology on society, communication, medicine, and the environment.",
+      "note": "# Unit 5: Science and Technology\n\n## Overview\nThis unit explores how **science** and **technology** shape modern life in Japan and beyond, especially in areas like **communication**, **medicine**, **work**, and the **environment**. For the AP Japanese exam, you need to understand not only key vocabulary and cultural perspectives, but also how to discuss the **benefits**, **drawbacks**, and **social impact** of technological change in spoken and written Japanese.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Technological innovation** | The development of new tools, systems, and digital platforms | Frequently appears in reading/listening passages about daily life, education, and the economy |\n| **Digital communication** | Communication through **SNS**, messaging apps, video calls, and online platforms | Important for comparing traditional vs. modern communication styles in Japan |\n| **Artificial intelligence and automation** | Use of machines and software to perform tasks once done by humans | Helps you discuss efficiency, labor shortages, and concerns about employment |\n| **Medical advances** | Progress in treatment, diagnosis, robotics, and health technology | Common theme for discussing aging society, quality of life, and ethics |\n| **Environmental technology** | Technology used to reduce pollution, save energy, or promote sustainability | Connects science with social responsibility and public policy |\n| **Access and inequality** | Differences in who can use or benefit from technology | Useful for cultural comparisons and discussions of rural/urban or generational gaps |\n| **Privacy and security** | Risks involving personal data, surveillance, and cybercrime | Often used in argumentative prompts asking students to weigh convenience against risk |\n| **Balance between tradition and progress** | Tension between adopting new technology and preserving cultural values | Central AP theme: students must explain how Japan adapts innovation while maintaining social norms |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Scientific advance\"] --> B[\"New technology developed\"]\n    B --> C[\"Adoption by society\"]\n    C --> D[\"Changes in daily life and communication\"]\n    C --> E[\"Improvements in medicine and health care\"]\n    C --> F[\"Environmental benefits or harm\"]\n    D --> G[\"Greater convenience and efficiency\"]\n    E --> G\n    F --> G\n    D --> H[\"New social challenges\"]\n    E --> H\n    F --> H\n    H --> I[\"Public debate, regulation, and adaptation\"]\n    I --> J[\"Further innovation\"]\n```\n\n### How to think about this process\n1. A **scientific discovery** often leads to a practical **technology**.\n2. Society adopts that technology in schools, homes, businesses, or hospitals.\n3. The change creates both **advantages** and **problems**.\n4. People respond through **policy**, **cultural adaptation**, and further innovation.\n\n## Essential Formulas / Laws / Rules\n\nBecause this is a language-and-culture unit rather than a quantitative science unit, the most important “rules” are **discussion frameworks**, **core distinctions**, and **high-frequency expressions**.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Benefit–drawback balance** | Be able to explain both **利点** and **欠点** of a technology rather than presenting only one side. |\n| **Cause-and-effect explanation** | Clearly connect technology to social outcomes: for example, online tools may improve access, but they may also weaken face-to-face interaction. |\n| **Audience and register** | Adjust language depending on task: use more formal phrasing in presentational writing and appropriate politeness in interpersonal speaking. |\n| **Cultural comparison** | Compare how Japan and your own community use or view technology, especially in education, transportation, or communication. |\n| **Evidence from sources** | On AP tasks, support claims using details from audio, charts, articles, or images rather than only personal opinion. |\n| **Present vs. future impact** | Be ready to discuss both current uses of technology and possible future consequences. |\n\n### High-value language patterns\n- **〜によって**: “due to; by means of”\n- **〜おかげで**: “thanks to”\n- **〜一方で**: “on the other hand”\n- **〜ため**: “because of; for the purpose of”\n- **〜ようになった**: “came to be able to; has changed so that”\n- **〜につれて**: “as; with the progress of”\n- **〜ばかりでなく、〜も**: “not only ..., but also ...”\n- **〜という問題がある**: “there is a problem that ...”\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key AP Insight** |\n|---|---|---|---|\n| **Communication style** | **Digital communication**: fast, convenient, wide reach | **Face-to-face communication**: personal, nuanced, relationship-building | AP prompts often ask whether convenience strengthens or weakens human connection |\n| **Impact on work** | **Automation**: efficiency, labor support | **Human labor**: flexibility, empathy, judgment | Important in discussions of Japan’s aging population and workforce shortages |\n| **Medical progress** | **Advanced treatment technologies**: robotics, precise diagnosis | **Ethical concerns**: cost, privacy, unequal access | Students should explain that progress can improve life while also raising social questions |\n| **Environmental effect** | **Green technology**: energy savings, cleaner systems | **Technological consumption**: e-waste, resource use, energy demand | Technology is not automatically “good” for the environment; outcomes depend on use and policy |\n\n```mermaid\nflowchart LR\n    A[\"Convenience\"] --> B[\"Wider technology adoption\"]\n    B --> C[\"Greater efficiency\"]\n    B --> D[\"More dependence on devices\"]\n    D --> E[\"Privacy, security, and social concerns\"]\n    C --> F[\"Support for modern life\"]\n    E --> F\n```\n\n## Common AP Exam Traps\n- Confusing **technology itself** with its **social impact**. On the exam, you often need to explain how people or society are affected, not just name a device.\n- Giving only positive examples. AP tasks reward nuanced answers that address both **advantages** and **disadvantages**.\n- Making unsupported cultural generalizations about Japan, such as assuming all Japanese people welcome new technology in the same way.\n- Ignoring **audience** and **register** in writing or speaking tasks; casual vocabulary may not fit a formal presentational response.\n- Comparing Japan and your own culture too vaguely. Strong AP responses use **specific examples** such as online classes, cashless payment, elderly smartphone use, or medical robots.\n\n## Quick Review Checklist\n- [ ] I can explain how **scientific advances** lead to changes in society.\n- [ ] I can discuss the effects of **digital communication** on human relationships.\n- [ ] I can describe how technology helps address issues in **medicine** and an **aging society**.\n- [ ] I can explain both the positive and negative environmental effects of modern technology.\n- [ ] I can compare **convenience** with concerns about **privacy**, **security**, or overdependence.\n- [ ] I can make a clear **cultural comparison** between Japan and my own community.\n- [ ] I can use appropriate Japanese expressions to show **cause**, **contrast**, and **change over time**.\n- [ ] I can support an opinion about science and technology with **specific evidence** and balanced reasoning.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "情報化社会",
+              "definition": "Digital networks and devices are deeply integrated into daily life, work, education, and civic participation, increasing both convenience and dependence on electronic communication."
+            },
+            {
+              "term": "人工知能",
+              "definition": "Computer-based systems designed to perform tasks that typically require human judgment, such as pattern recognition, prediction, language processing, and decision support."
+            },
+            {
+              "term": "個人情報保護",
+              "definition": "The practice of safeguarding data that can identify a specific person, including rules about collection, storage, sharing, and consent."
+            },
+            {
+              "term": "デジタルデバイド",
+              "definition": "A gap in access to devices, internet connectivity, or technological literacy that can produce unequal educational, economic, and social outcomes."
+            },
+            {
+              "term": "遠隔医療",
+              "definition": "The delivery of health-related consultation and monitoring through communication technology when patient and provider are in different locations."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "日本社会において、技術革新が進む一方で高齢者への影響が議論されることがある。次のうち、その課題として最も適切なのはどれか。",
+              "options": [
+                "オンライン行政サービスの利用に必要な技能や機器への対応が難しいこと",
+                "電子決済の普及によって紙幣の製造量が必ず増えること",
+                "自動翻訳の発達によって国内の方言が完全に消滅すること",
+                "遠隔授業の導入によってすべての地域差が直ちに解消されること"
+              ],
+              "correctAnswer": "オンライン行政サービスの利用に必要な技能や機器への対応が難しいこと",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "個人情報の取り扱いについて、学校が最も適切に配慮している例はどれか。",
+              "options": [
+                "生徒の成績や住所を本人の同意なく公開する",
+                "必要最小限の利用目的を示し、本人の同意を得て管理する",
+                "利便性を優先して、全教職員が無制限に閲覧できるようにする",
+                "退学後も目的を定めず永久に保存し続ける"
+              ],
+              "correctAnswer": "必要最小限の利用目的を示し、本人の同意を得て管理する",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "都市部と地方で、通信環境や機器利用の差が教育機会の不平等につながる問題は、一般に ______ と呼ばれる。",
+              "options": [
+                "デジタルデバイド",
+                "少子高齢化",
+                "地産地消",
+                "終身雇用"
+              ],
+              "correctAnswer": "デジタルデバイド",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "患者が病院へ行かずに、通信機器を使って医師の診察や健康相談を受ける仕組みは ______ である。",
+              "options": [
+                "遠隔医療",
+                "過剰診療",
+                "対面販売",
+                "義務教育"
+              ],
+              "correctAnswer": "遠隔医療",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "再生可能エネルギー",
+              "definition": "Energy obtained from sources that are naturally replenished, such as sunlight, wind, water flow, geothermal heat, and biomass, often discussed as alternatives to fossil fuels."
+            },
+            {
+              "term": "遺伝子治療",
+              "definition": "A medical approach that aims to treat or prevent disease by modifying, replacing, or introducing genetic material in a patient's cells."
+            },
+            {
+              "term": "バイオテクノロジー",
+              "definition": "The application of living organisms, cells, or biological processes to develop products and methods used in medicine, agriculture, and industry."
+            },
+            {
+              "term": "自動化",
+              "definition": "The use of machines, software, or control systems to perform tasks with reduced direct human labor, often increasing efficiency while changing employment patterns."
+            },
+            {
+              "term": "環境負荷",
+              "definition": "The degree of strain placed on ecosystems through resource use, waste production, emissions, or other human activities associated with production and consumption."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "再生可能エネルギーの導入が社会にもたらす効果として、最も適切なものはどれか。",
+              "options": [
+                "化石燃料への依存を減らし、長期的な持続可能性の向上に寄与する",
+                "発電方法にかかわらず、送電設備が一切不要になる",
+                "導入した時点で環境問題が完全に解決する",
+                "季節や天候の影響をまったく受けなくなる"
+              ],
+              "correctAnswer": "化石燃料への依存を減らし、長期的な持続可能性の向上に寄与する",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "医療分野における科学技術の進歩についての説明として、最も適切なのはどれか。",
+              "options": [
+                "遺伝子治療は、特定の病気に対して細胞レベルでの治療可能性を広げる",
+                "バイオテクノロジーは農業にしか応用できない",
+                "新しい医療技術は倫理的課題を生まない",
+                "医療の自動化が進むと医師の判断は常に不要になる"
+              ],
+              "correctAnswer": "遺伝子治療は、特定の病気に対して細胞レベルでの治療可能性を広げる",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "太陽光や風力のように、自然に補充され続ける資源を利用するエネルギーは ______ と呼ばれる。",
+              "options": [
+                "再生可能エネルギー",
+                "化石燃料",
+                "核廃棄物",
+                "産業廃水"
+              ],
+              "correctAnswer": "再生可能エネルギー",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "機械やソフトウェアによって作業を効率化し、人の手による工程を減らすことは ______ である。",
+              "options": [
+                "自動化",
+                "少子化",
+                "手工業",
+                "人口密度"
+              ],
+              "correctAnswer": "自動化",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Beauty and Aesthetics",
+      "description": "Art, music, literature, architecture, and the cultural definition of beauty across different societies.",
+      "note": "# Unit 6: Beauty and Aesthetics\n\n## Overview\nThis unit explores how **beauty** is expressed and interpreted through **art, music, literature, architecture, and everyday cultural practices** in Japanese-speaking contexts. For the AP exam, this matters because students must analyze how **aesthetic values reflect cultural perspectives**, compare them across societies, and discuss them clearly in **interpretive, interpersonal, and presentational communication**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **美意識** | A society’s or individual’s **sense of beauty** and aesthetic judgment. | Helps you explain how Japanese values shape reactions to art, design, and behavior. |\n| **わび・さび** | An aesthetic valuing **simplicity, imperfection, impermanence, and quiet elegance**. | Frequently useful when interpreting traditional arts, tea ceremony, gardens, pottery, and architecture. |\n| **もののあわれ** | Sensitivity to the **transience of life** and the emotional beauty of things that pass. | Key for discussing literature, seasonal imagery, and emotional tone in texts and audio sources. |\n| **伝統と現代** | The relationship between **traditional forms** and **modern/popular culture**. | Important for cultural comparison and for explaining continuity and change in Japanese society. |\n| **自然との調和** | The idea that beauty is often connected to **nature, seasonality, and balance with the environment**. | Useful in analyzing architecture, gardens, poetry, and food presentation. |\n| **表現手段** | The **methods of expression** used in visual art, performance, music, fashion, and literature. | Helps you discuss *how* a work creates meaning, not just *what* it depicts. |\n| **社会と美** | The way beauty standards connect to **identity, status, gender, community, and media influence**. | Supports persuasive and comparative responses about social expectations and cultural norms. |\n| **鑑賞と解釈** | The act of **appreciating, interpreting, and evaluating** artistic or cultural works. | Central to AP tasks requiring evidence-based interpretation of authentic materials. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[文化的価値観] --> B[美の基準]\n    B --> C[芸術・建築・文学・音楽への表現]\n    C --> D[人々の鑑賞・解釈]\n    D --> E[社会的意味づけ]\n    E --> F[新しい美意識の形成]\n    F --> B\n    C --> G[伝統の継承]\n    C --> H[現代的な再解釈]\n    G --> F\n    H --> F\n```\n\n### How to read this relationship\n1. **Cultural values** shape what a society considers beautiful.\n2. Those standards influence **artistic and cultural expression**.\n3. People then **interpret** these works through their own experience and social context.\n4. That interpretation gives beauty **social meaning**, which can reinforce or reshape aesthetic values.\n5. In Japan, this often appears as a dialogue between **tradition** and **modern reinterpretation**.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a non-quantitative unit, the “rules” are the **core cultural principles and analytical moves** you should know.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Beauty is culturally constructed** | Ideas of beauty are not universal; they reflect **history, environment, religion, and social norms**. |\n| **Context matters** | A work should be interpreted through its **historical, social, and cultural setting**, not only through personal opinion. |\n| **Traditional aesthetics often value subtlety** | In Japanese culture, beauty may be found in **restraint, asymmetry, emptiness, silence, and suggestion**, not only in decoration or perfection. |\n| **Nature is a major aesthetic reference** | **Seasons, landscapes, flowers, weather, and natural materials** often carry symbolic and emotional meaning. |\n| **Impermanence can itself be beautiful** | Concepts such as **もののあわれ** and **わび・さび** emphasize that passing time and incompleteness can deepen beauty. |\n| **Form and function are connected** | In architecture, crafts, and daily objects, beauty may come from **practical use, simplicity, and harmony**. |\n| **Compare without oversimplifying** | On the AP exam, avoid saying “Japan values X and other countries value Y” too absolutely; show **variation within cultures**. |\n| **Use evidence from sources** | Whether discussing a poem, image, song, or article, support interpretation with **specific details** from the source. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Traditional Aesthetic** | **Modern / Contemporary Expression** | **Key AP Insight** |\n|---|---|---|---|\n| **Beauty in objects** | Handmade pottery, kimono, calligraphy, tea utensils | Industrial design, fashion, minimalist consumer products | Both may value **simplicity, craftsmanship, and visual balance**, though the forms differ. |\n| **Beauty in space** | Temples, tatami rooms, gardens, engawa | Urban architecture, interior design, public installations | Compare how both can reflect **harmony, intentional emptiness, and relation to nature**. |\n| **Beauty in literature** | Haiku, classical prose, seasonal references | Manga, novels, film scripts, song lyrics | Traditional themes like **transience** still appear in modern media. |\n| **Beauty and identity** | Group norms, ritual, inherited standards | Social media, youth fashion, global influence | Useful for discussing how beauty standards are both **shared** and **changing**. |\n\n```mermaid\nflowchart LR\n    A[伝統美] --> B[現代文化]\n    B --> C[再解釈]\n    C --> D[新しい表現]\n    D --> E[文化的継続性]\n    A --> E\n```\n\n## Common AP Exam Traps\n\n- Confusing **personal preference** with **cultural analysis**. The exam rewards explanation of **why** something is valued in a cultural context.\n- Treating **Japanese aesthetics** as one fixed idea. Japan contains **regional, generational, and individual differences**.\n- Reducing **わび・さび** to simply “old” or “plain.” It more precisely involves **simplicity, imperfection, and quiet depth**.\n- Ignoring the role of **seasonality and nature** in interpreting poems, visual imagery, gardens, or architecture.\n- Comparing cultures in overly broad terms without **specific examples** from texts, audio, images, or personal knowledge.\n\n## Quick Review Checklist\n\n- [ ] I can explain **美意識** and why standards of beauty are shaped by culture.\n- [ ] I can define and apply **わび・さび** and **もののあわれ** in examples.\n- [ ] I can describe how **nature and the seasons** influence Japanese ideas of beauty.\n- [ ] I can compare **traditional** and **modern** artistic or aesthetic expressions in Japan.\n- [ ] I can analyze how **art, music, literature, or architecture** reflect broader cultural values.\n- [ ] I can support my interpretation of a source with **specific evidence** rather than vague opinion.\n- [ ] I can discuss how beauty relates to **identity, society, and media influence**.\n- [ ] I can make a nuanced **cultural comparison** between Japanese aesthetics and those of another society.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "わびさび",
+              "definition": "Aesthetic appreciation centered on simplicity, irregularity, transience, and the quiet beauty of age and imperfection."
+            },
+            {
+              "term": "もののあはれ",
+              "definition": "A sensitivity to the passing nature of life that produces gentle sadness and deeper appreciation of fleeting moments."
+            },
+            {
+              "term": "浮世絵",
+              "definition": "A genre of woodblock prints that flourished in the Edo period, often portraying urban entertainment, famous places, actors, and seasonal scenes."
+            },
+            {
+              "term": "歌舞伎",
+              "definition": "A traditional theatrical form known for stylized movement, elaborate makeup and costumes, and dramatic plots performed on a highly developed stage."
+            },
+            {
+              "term": "茶道",
+              "definition": "A formalized practice of preparing and serving powdered green tea that emphasizes discipline, hospitality, harmony, and refined taste."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which concept best explains the emotional effect created in Japanese literature when a scene of falling cherry blossoms evokes awareness of life’s transience?",
+              "options": [
+                "もののあはれ",
+                "義理",
+                "根回し",
+                "本音"
+              ],
+              "correctAnswer": "もののあはれ",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student comparing Japanese visual culture with European oil painting notes that one medium was especially effective for mass circulation during the Edo period. Which medium best fits that description?",
+              "options": [
+                "能",
+                "浮世絵",
+                "書道",
+                "俳句"
+              ],
+              "correctAnswer": "浮世絵",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Japanese aesthetics, the idea that beauty can be found in imperfection, weathering, and simplicity is called ______.",
+              "options": [
+                "わびさび",
+                "派手",
+                "近代化",
+                "写実主義"
+              ],
+              "correctAnswer": "わびさび",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The ritualized art of preparing powdered green tea, often associated with harmony, respect, purity, and tranquility, is known as ______.",
+              "options": [
+                "茶道",
+                "華道",
+                "剣道",
+                "柔道"
+              ],
+              "correctAnswer": "茶道",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "能",
+              "definition": "A classical dramatic form featuring masks, chant, slow controlled movement, and themes drawn from history, legend, and spirituality."
+            },
+            {
+              "term": "華道",
+              "definition": "The disciplined art of arranging flowers with attention to line, space, seasonality, and balance rather than mere decoration."
+            },
+            {
+              "term": "枯山水",
+              "definition": "A style of dry landscape garden using rocks, gravel, and carefully arranged space to suggest natural scenery in an abstract way."
+            },
+            {
+              "term": "間",
+              "definition": "Aesthetic and communicative value placed on meaningful pause, empty space, or interval in design, performance, and interaction."
+            },
+            {
+              "term": "かわいい",
+              "definition": "A modern cultural ideal associated with charm, softness, playfulness, and approachable visual appeal in consumer and popular culture."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which traditional Japanese performance form is most closely associated with masked actors, highly restrained movement, and a strong influence from Zen aesthetics?",
+              "options": [
+                "文楽",
+                "狂言",
+                "能",
+                "歌舞伎"
+              ],
+              "correctAnswer": "能",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In architecture and garden design, which concept most directly refers to the purposeful use of empty space or pause as an element of beauty?",
+              "options": [
+                "間",
+                "義務",
+                "粋",
+                "年功序列"
+              ],
+              "correctAnswer": "間",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A Japanese dry landscape garden that uses stones and raked gravel to represent natural scenery is called ______.",
+              "options": [
+                "枯山水",
+                "寝殿造",
+                "鳥居",
+                "障子"
+              ],
+              "correctAnswer": "枯山水",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In contemporary Japanese popular culture, the aesthetic category emphasizing charm and endearing visual appeal is often described as ______.",
+              "options": [
+                "かわいい",
+                "渋い",
+                "厳粛",
+                "無常"
+              ],
+              "correctAnswer": "かわいい",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

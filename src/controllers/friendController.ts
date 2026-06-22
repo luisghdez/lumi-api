@@ -1,5 +1,13 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { createFriendRequest, getFriendRequests, getFriends, respondFriendRequest, searchUsers } from "../services/friendService";
+import {
+  createFriendRequest,
+  getFriendRequests,
+  getFriends,
+  removeFriendship,
+  respondFriendRequest,
+  searchUsers,
+  FriendServiceError,
+} from "../services/friendService";
 
 // Controller for handling user search requests.
 export async function searchUsersController(request: FastifyRequest, reply: FastifyReply) {
@@ -100,5 +108,28 @@ export async function getFriendsController(request: FastifyRequest, reply: Fasti
   } catch (error) {
     console.error("Error retrieving friends:", error);
     return reply.status(500).send({ error: "Failed to retrieve friends" });
+  }
+}
+
+export async function removeFriendController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { friendUserId } = request.params as { friendUserId?: string };
+    if (!friendUserId) {
+      return reply.status(400).send({ error: "Missing friendUserId" });
+    }
+
+    await removeFriendship(user.uid, friendUserId);
+    return reply.status(204).send();
+  } catch (error) {
+    if (error instanceof FriendServiceError) {
+      return reply.status(error.statusCode).send({ error: error.message });
+    }
+    console.error("Error removing friend:", error);
+    return reply.status(500).send({ error: "Failed to remove friendship" });
   }
 }

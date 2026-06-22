@@ -1,0 +1,917 @@
+{
+  "apSubject": "AP Italian Language and Culture",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Families and Communities",
+      "description": "Language and culture related to family structures, community life, social roles, and interpersonal relationships.",
+      "note": "# Unit 1: Families and Communities\n\n## Overview\nIn this unit, you explore how **family structures**, **community life**, **social roles**, and **interpersonal relationships** are expressed in Italian-speaking contexts. This matters for the AP exam because you must not only understand vocabulary and cultural perspectives, but also compare Italian and your own communities in **presentational writing**, **speaking**, and **interpretive tasks**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Family structure** | The organization of the family, including **nuclear families**, **extended families**, **single-parent households**, and multigenerational homes | Frequently appears in readings, audio sources, and cultural comparisons about changing Italian society |\n| **Roles and responsibilities** | Expectations tied to age, gender, and position within the family or community | Helps you discuss how traditions influence daily life and how roles are evolving |\n| **Interpersonal relationships** | Relationships among **parents**, **children**, **siblings**, **friends**, neighbors, and classmates | Central for **interpersonal speaking and writing**, especially when expressing opinions, emotions, and advice |\n| **Community life** | How people participate in local life through schools, clubs, religious events, volunteering, and neighborhood networks | Important for understanding how identity is shaped beyond the household |\n| **Tradition vs. change** | The tension between longstanding customs and modern social developments | A common AP theme: you may need to compare historical values with contemporary lifestyles |\n| **Formal and informal address** | The use of **tu**, **Lei**, and culturally appropriate register | Essential for accurate communication and strong scores in interpersonal tasks |\n| **Cultural perspectives on family** | Beliefs and values about loyalty, independence, respect, and belonging | The AP exam rewards students who explain **why** a practice exists, not just **what** happens |\n| **Identity and belonging** | How people see themselves within family, region, and community | Useful in cultural comparison and argumentation about social expectations and personal freedom |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Individual identity] --> B[Family values and expectations]\n    B --> C[Roles in daily life]\n    C --> D[Interactions in school and community]\n    D --> E[Sense of belonging]\n    E --> F[Personal choices and social change]\n    F --> G[New family and community patterns]\n    G --> B\n```\n\n### How this cycle works\n1. A person develops an **identity** shaped by age, background, and experience.\n2. **Family values** influence behavior, obligations, and communication style.\n3. These values shape **roles** such as child, sibling, student, friend, or community member.\n4. Through everyday interactions, the person participates in **community life**.\n5. That participation creates or weakens a **sense of belonging**.\n6. Over time, individuals make choices that may support or challenge tradition.\n7. These choices contribute to broader **social change**, which then affects future family expectations.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “rules” are key **linguistic and cultural principles** rather than mathematical formulas.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Use of formal vs. informal address** | Use **tu** with friends, peers, many family members, and informal contacts; use **Lei** in formal, professional, or respectful situations unless invited to do otherwise |\n| **Register must match context** | A message to a friend should sound different from an email to a teacher, employer, or older stranger |\n| **Culture is perspective, not just vocabulary** | On the AP exam, describe both the **practice** and the **underlying value** behind it |\n| **Support comparisons with evidence** | In cultural comparisons, include specific examples from Italian-speaking communities rather than vague generalizations |\n| **Family vocabulary can imply relationships and hierarchy** | Terms for relatives, titles, and respectful forms of address may reveal closeness, age differences, or social norms |\n| **Avoid overgeneralizing Italy** | Italian-speaking culture includes regional variation, generational differences, and changing social attitudes |\n| **Interpersonal tasks require responsiveness** | You must answer all parts of a prompt, react naturally, and maintain an appropriate tone |\n| **Community participation reflects values** | Schools, neighborhood life, festivals, and volunteer activities often show how communities define solidarity and belonging |\n\n## Connections & Comparisons\n\n| **Comparison** | **Traditional Tendency** | **Contemporary Tendency** | **AP Relevance** |\n|---|---|---|---|\n| **Family structure** | Strong emphasis on close-knit or multigenerational family ties | Greater variety in household types and more independence for young adults | Helps in comparing continuity and change |\n| **Social roles** | More fixed expectations based on age and family role | More flexible roles and negotiation within the family | Useful for discussing generational change |\n| **Community ties** | Local identity and face-to-face relationships are central | Digital communication and mobility reshape belonging | Appears in themes about technology and social life |\n| **Communication style** | Greater attention to hierarchy and formal respect | Increasing informality in some settings, especially among youth | Important for choosing correct register |\n\nYou can also think of these relationships as a comparison of **continuity** and **change**:\n\n```mermaid\nflowchart LR\n    A[Tradition] --> B[Family loyalty]\n    A --> C[Respect for elders]\n    A --> D[Strong local identity]\n    E[Change] --> F[Diverse family models]\n    E --> G[Flexible gender and social roles]\n    E --> H[New forms of community through media and mobility]\n```\n\n## Common AP Exam Traps\n\n- Confusing **Italian cultural tendencies** with absolute rules; avoid statements like “all Italian families are the same.”\n- Using the wrong **register**, especially mixing **tu** and **Lei** in formal situations.\n- Describing a cultural practice without explaining the **perspective** or value behind it.\n- Making comparisons that are too personal or unsupported, instead of connecting to broader **community patterns**.\n- Focusing only on vocabulary for family members and ignoring bigger themes like **identity**, **belonging**, and **social change**.\n\n## Quick Review Checklist\n\n- [ ] I can describe different **family structures** in Italian-speaking communities.\n- [ ] I can explain how **roles and responsibilities** vary by age, relationship, or social context.\n- [ ] I can discuss how **community life** shapes identity and belonging.\n- [ ] I can compare **traditional** and **modern** views of family and social roles.\n- [ ] I can use **formal** and **informal** language appropriately in different scenarios.\n- [ ] I can explain a cultural **practice** and the **perspective** behind it.\n- [ ] I can support a cultural comparison with at least one **specific example** from Italian-speaking culture.\n- [ ] I can respond to AP-style prompts about **interpersonal relationships**, **family expectations**, and **community participation** with clear, culturally appropriate language.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "famiglia nucleare",
+              "definition": "Household structure centered on parents and their children, typically emphasizing the immediate domestic unit rather than a wider network of relatives."
+            },
+            {
+              "term": "famiglia allargata",
+              "definition": "Household or kinship model that includes grandparents, aunts, uncles, cousins, or other relatives who maintain a strong role in daily life and decision-making."
+            },
+            {
+              "term": "ruoli di genere",
+              "definition": "Socially constructed expectations about behaviors, responsibilities, and status associated with being male or female within a given society."
+            },
+            {
+              "term": "convivenza",
+              "definition": "Arrangement in which two people share a home and daily life without being legally married, often reflecting changing social attitudes toward partnership."
+            },
+            {
+              "term": "solidarietà familiare",
+              "definition": "Mutual support system through which relatives provide emotional, practical, and sometimes financial help across generations."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In many Italian-speaking contexts, which factor most directly explains the continued importance of close intergenerational ties within family life?",
+              "options": [
+                "A strong cultural emphasis on mutual support among relatives",
+                "A legal requirement that all adults live with their parents",
+                "A universal rejection of individual autonomy",
+                "A complete absence of state social services"
+              ],
+              "correctAnswer": "A strong cultural emphasis on mutual support among relatives",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which situation best illustrates a shift from traditional to more contemporary family patterns in Italian society?",
+              "options": [
+                "Several generations living under one roof in a rural household",
+                "Marriage arranged exclusively by parents",
+                "An unmarried couple choosing to live together before marriage",
+                "Children having no contact with grandparents"
+              ],
+              "correctAnswer": "An unmarried couple choosing to live together before marriage",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When grandparents, uncles, and cousins play an active role in daily family life, this structure is best described as a ______.",
+              "options": [
+                "famiglia allargata",
+                "famiglia nucleare",
+                "matrimonio civile",
+                "quartiere residenziale"
+              ],
+              "correctAnswer": "famiglia allargata",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The set of expectations a society assigns to men and women in family and social life is known as ______.",
+              "options": [
+                "ruoli di genere",
+                "solidarietà economica",
+                "mobilità sociale",
+                "istruzione obbligatoria"
+              ],
+              "correctAnswer": "ruoli di genere",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "quartiere",
+              "definition": "Local urban area or neighborhood where residents interact, access services, and develop a sense of belonging and shared identity."
+            },
+            {
+              "term": "senso di appartenenza",
+              "definition": "Feeling of connection and identification with a group, place, or community, often reinforced through shared experiences and values."
+            },
+            {
+              "term": "volontariato",
+              "definition": "Unpaid service carried out to benefit others or support a cause, often strengthening civic participation and social cohesion."
+            },
+            {
+              "term": "reti sociali",
+              "definition": "Webs of personal and community relationships through which people exchange information, assistance, and emotional support."
+            },
+            {
+              "term": "integrazione sociale",
+              "definition": "Process by which individuals or groups become active participants in the life of a community while navigating cultural differences and shared norms."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Why is volontariato often considered important in communities in Italy and other Italian-speaking societies?",
+              "options": [
+                "It strengthens civic engagement and supports vulnerable members of society",
+                "It replaces all formal institutions and public services",
+                "It discourages cooperation among generations",
+                "It is required for all residents by national law"
+              ],
+              "correctAnswer": "It strengthens civic engagement and supports vulnerable members of society",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which example best demonstrates integrazione sociale within a local community?",
+              "options": [
+                "A newcomer participates in neighborhood events and builds relationships with local residents",
+                "A family avoids all contact with people outside the home",
+                "Residents refuse to share public spaces with others",
+                "A student rejects all community norms without dialogue"
+              ],
+              "correctAnswer": "A newcomer participates in neighborhood events and builds relationships with local residents",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A resident's feeling of connection to a town, neighborhood, or social group is called ______.",
+              "options": [
+                "senso di appartenenza",
+                "disoccupazione giovanile",
+                "istruzione superiore",
+                "consumo responsabile"
+              ],
+              "correctAnswer": "senso di appartenenza",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The network of relationships through which people receive advice, information, and support is known as ______.",
+              "options": [
+                "reti sociali",
+                "trasporto pubblico",
+                "patrimonio artistico",
+                "parità salariale"
+              ],
+              "correctAnswer": "reti sociali",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Personal and Public Identities",
+      "description": "Exploration of self-identity, cultural identity, national identity, and how they intersect in personal and public life.",
+      "note": "# Unit 2: Personal and Public Identities\n\n## Overview\nIn this unit, you explore how **personal identity** and **public identity** are shaped by factors such as **family**, **language**, **regional culture**, **national belonging**, **gender roles**, and **social expectations** in the Italian-speaking world. This matters for the AP exam because you must be able to **interpret authentic sources**, **compare cultures**, and **express nuanced opinions** about how identity is formed, challenged, and represented.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Identità personale** | A person’s sense of self, including values, experiences, beliefs, and aspirations. | Useful in **presentational writing/speaking** when discussing who we are and how identity develops. |\n| **Identità pubblica** | How individuals are seen by society through roles, reputation, profession, or social image. | Frequently appears in prompts about **social expectations**, **status**, and **public behavior**. |\n| **Identità culturale** | Identity shaped by traditions, customs, language, food, religion, and shared history. | Central for **cultural comparison** tasks involving Italy and the student’s own community. |\n| **Identità nazionale** | A sense of belonging to a nation, often linked to history, civic values, and symbols. | Helps explain topics like **Italian unity**, patriotism, migration, and regional vs. national identity. |\n| **Regionalismo** | The strong influence of local or regional identity in Italy, such as loyalty to one’s city or region. | Important because Italian identity is often **layered**: local, regional, and national at once. |\n| **Stereotipi e pregiudizi** | Simplified or biased ideas about groups of people. | AP tasks may require analyzing how identity is shaped or distorted by **media** and **social attitudes**. |\n| **Appartenenza ed esclusione** | The dynamics of inclusion, acceptance, marginalization, or discrimination within a community. | Relevant when discussing **immigration**, **youth**, **minorities**, and evolving Italian society. |\n| **Lingua e identità** | The role of standard Italian, dialects, and multilingualism in expressing identity. | Common in authentic texts and listening selections about **dialect**, **integration**, and **cultural heritage**. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Esperienze personali] --> B[Formazione dell'identità personale]\n    C[Famiglia e tradizioni] --> B\n    D[Lingua e dialetto] --> B\n    E[Scuola, amici, media] --> B\n    B --> F[Espressione pubblica di sé]\n    F --> G[Riconoscimento sociale]\n    G --> H[Appartenenza]\n    G --> I[Pressione sociale]\n    I --> J[Conflitto o negoziazione dell'identità]\n    H --> K[Partecipazione alla comunità]\n    J --> L[Ridefinizione dell'identità]\n    K --> L\n```\n\n### How to read this relationship map\n1. **Identity begins with lived experience**: family, language, traditions, peers, and institutions all shape the individual.\n2. **Personal identity becomes public** through speech, appearance, behavior, and social roles.\n3. Society then responds with **acceptance**, **expectations**, or **judgment**.\n4. This can create either **belonging** or **conflict**, leading people to **reaffirm**, **adapt**, or **redefine** their identity.\n\n## Essential Formulas / Laws / Rules\n\nFor this unit, there are no mathematical formulas; instead, you should know these **core interpretive and cultural rules**:\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Identity is multilayered** | A person can hold multiple identities at once: **individual**, **family-based**, **regional**, **national**, and **global**. |\n| **Italian identity is not uniform** | Italy has strong **regional differences** in accent, traditions, cuisine, and historical memory. |\n| **Language signals belonging** | Use of **standard Italian**, **dialect**, or another language can express education, origin, solidarity, or distance. |\n| **Public image may differ from private self** | AP prompts often contrast how someone **feels internally** with how society **labels** them externally. |\n| **Identity changes over time** | Migration, education, work, and social change can reshape both personal and collective identities. |\n| **Cultural products reflect identity** | Literature, film, music, advertising, and social media often reveal values and tensions related to identity. |\n| **Comparisons must be specific** | On the AP exam, avoid vague statements like “Italy is different”; give **concrete examples** of practices, perspectives, or products. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key Insight** |\n|---|---|---|---|\n| **Private vs. Public Self** | **Identità personale** | **Identità pubblica** | A person’s inner values may not match how others perceive them. |\n| **Local vs. National Belonging** | **Regionalismo** | **Identità nazionale** | In Italy, attachment to a city or region can be as strong as attachment to the nation. |\n| **Inclusion vs. Exclusion** | **Appartenenza** | **Marginalizzazione** | Communities define themselves partly by whom they include and whom they exclude. |\n| **Heritage vs. Change** | **Tradizione** | **Modernità** | Identity is shaped by preserving the past while adapting to contemporary realities. |\n\n```mermaid\nflowchart LR\n    A[Identità personale] --> C[Comportamento pubblico]\n    B[Identità culturale] --> C\n    C --> D[Percezione sociale]\n    D --> E[Appartenenza o esclusione]\n    E --> F[Identità ridefinita]\n```\n\n## Common AP Exam Traps\n\n- Confusing **cultural identity** with **national identity**. A person may identify strongly with a region, ethnic group, or language community without expressing nationalism.\n- Treating Italy as culturally homogeneous. The AP exam often rewards students who recognize **regional diversity**.\n- Overgeneralizing about stereotypes. If discussing **gender**, **family**, or **immigration**, avoid simplistic claims and support ideas with cultural nuance.\n- Describing identity only as personal choice. Identity is also shaped by **institutions**, **history**, **social class**, and **public expectations**.\n- Making weak cultural comparisons. Do not just say “both cultures value family”; explain **how** and **why** family affects identity in each context.\n\n## Quick Review Checklist\n\n- [ ] I can explain the difference between **personal**, **public**, **cultural**, and **national identity**.\n- [ ] I can describe how **family**, **language**, and **community** influence identity in Italy.\n- [ ] I can discuss the role of **regionalism** in shaping Italian identity.\n- [ ] I can analyze how **stereotypes** and **social expectations** affect public identity.\n- [ ] I can compare **belonging** and **exclusion** in social or cultural contexts.\n- [ ] I can give specific examples of how **dialects** or language choice express identity.\n- [ ] I can connect authentic sources such as articles, interviews, or advertisements to themes of identity.\n- [ ] I can make a clear **cultural comparison** between Italian-speaking communities and my own.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "identità personale",
+              "definition": "L’insieme dinamico di caratteristiche, esperienze, valori e percezioni attraverso cui una persona definisce se stessa nel tempo."
+            },
+            {
+              "term": "identità culturale",
+              "definition": "Il senso di appartenenza a una comunità formato da lingua, tradizioni, pratiche sociali e riferimenti condivisi."
+            },
+            {
+              "term": "stereotipo",
+              "definition": "Generalizzazione semplificata e spesso rigida su un gruppo, che può influenzare giudizi e comportamenti sociali."
+            },
+            {
+              "term": "pregiudizio",
+              "definition": "Opinione o atteggiamento formulato in anticipo verso persone o gruppi, spesso senza conoscenza diretta e completa."
+            },
+            {
+              "term": "integrazione",
+              "definition": "Processo attraverso cui individui o gruppi partecipano pienamente alla vita sociale mantenendo elementi significativi della propria origine."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In un saggio sull’identità, quale situazione illustra meglio il rapporto tra identità personale e influenze sociali?",
+              "options": [
+                "Una studentessa modifica il proprio modo di parlare a seconda che si trovi in famiglia, a scuola o online.",
+                "Un turista visita Roma per una settimana e compra alcuni souvenir.",
+                "Un impiegato sceglie il treno invece dell’automobile per andare al lavoro.",
+                "Uno studente memorizza date storiche per superare un esame."
+              ],
+              "correctAnswer": "Una studentessa modifica il proprio modo di parlare a seconda che si trovi in famiglia, a scuola o online.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Quale affermazione descrive più accuratamente la differenza tra stereotipo e pregiudizio?",
+              "options": [
+                "Lo stereotipo è una rappresentazione semplificata di un gruppo, mentre il pregiudizio è un atteggiamento o giudizio spesso negativo verso quel gruppo.",
+                "Lo stereotipo riguarda solo individui, mentre il pregiudizio riguarda esclusivamente istituzioni.",
+                "Lo stereotipo è sempre positivo, mentre il pregiudizio è sempre neutrale.",
+                "Lo stereotipo deriva da esperienza diretta, mentre il pregiudizio deriva sempre da dati scientifici."
+              ],
+              "correctAnswer": "Lo stereotipo è una rappresentazione semplificata di un gruppo, mentre il pregiudizio è un atteggiamento o giudizio spesso negativo verso quel gruppo.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Quando una persona partecipa attivamente alla società di arrivo senza rinunciare completamente alle proprie tradizioni di origine, si parla di ______.",
+              "options": [
+                "integrazione",
+                "isolamento",
+                "assimilazione totale",
+                "segregazione"
+              ],
+              "correctAnswer": "integrazione",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Il senso di appartenenza costruito attraverso lingua, usanze e riferimenti condivisi è definito ______.",
+              "options": [
+                "identità culturale",
+                "mobilità sociale",
+                "propaganda",
+                "globalizzazione"
+              ],
+              "correctAnswer": "identità culturale",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "identità nazionale",
+              "definition": "Il sentimento di appartenenza a uno Stato o a una comunità immaginata, spesso sostenuto da storia, simboli, istituzioni e memoria collettiva."
+            },
+            {
+              "term": "cittadinanza",
+              "definition": "Status giuridico e civico che comporta diritti, doveri e partecipazione alla vita pubblica di un paese."
+            },
+            {
+              "term": "multiculturalismo",
+              "definition": "Modello sociale che riconosce la coesistenza di più tradizioni e gruppi all’interno dello stesso spazio civile."
+            },
+            {
+              "term": "patrimonio culturale",
+              "definition": "Insieme di beni materiali e immateriali trasmessi tra generazioni e considerati significativi per una comunità."
+            },
+            {
+              "term": "migrazione",
+              "definition": "Spostamento di persone da un luogo a un altro per ragioni economiche, politiche, familiari, ambientali o personali."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quale esempio mostra meglio il ruolo del patrimonio culturale nella formazione dell’identità pubblica in Italia?",
+              "options": [
+                "La tutela dei centri storici e delle tradizioni regionali contribuisce a rafforzare il senso di continuità tra passato e presente.",
+                "L’aumento del prezzo dei biglietti ferroviari determina automaticamente un maggiore orgoglio civico.",
+                "L’uso di telefoni cellulari sostituisce completamente le pratiche culturali locali.",
+                "La popolarità di un singolo atleta elimina le differenze regionali."
+              ],
+              "correctAnswer": "La tutela dei centri storici e delle tradizioni regionali contribuisce a rafforzare il senso di continuità tra passato e presente.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In una discussione AP sul rapporto tra migrazione e identità nazionale, quale affermazione è più convincente?",
+              "options": [
+                "I movimenti migratori possono ridefinire il significato di appartenenza nazionale, introducendo nuove pratiche linguistiche e culturali nello spazio pubblico.",
+                "La migrazione ha effetti solo economici e non influenza mai il dibattito culturale.",
+                "L’identità nazionale resta identica in ogni epoca indipendentemente dai cambiamenti demografici.",
+                "La migrazione cancella inevitabilmente ogni tradizione preesistente."
+              ],
+              "correctAnswer": "I movimenti migratori possono ridefinire il significato di appartenenza nazionale, introducendo nuove pratiche linguistiche e culturali nello spazio pubblico.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Lo status che definisce diritti e doveri di un individuo nei confronti dello Stato è la ______.",
+              "options": [
+                "cittadinanza",
+                "diaspora",
+                "assimilazione",
+                "xenofobia"
+              ],
+              "correctAnswer": "cittadinanza",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quando una società riconosce la presenza di più gruppi culturali e ne valorizza la convivenza, si parla di ______.",
+              "options": [
+                "multiculturalismo",
+                "uniformità forzata",
+                "nazionalismo esclusivo",
+                "emigrazione"
+              ],
+              "correctAnswer": "multiculturalismo",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Contemporary Life",
+      "description": "Everyday modern life including education, work, leisure, and social media across cultures.",
+      "note": "# Unit 3: Contemporary Life\n\n## Overview\nIn **Unit 3: Contemporary Life**, you explore how people in Italian-speaking communities experience **daily life** through **education**, **work**, **leisure**, **technology**, and **social media**. This unit matters for the AP exam because it builds the vocabulary, cultural comparisons, and interpretive/interpersonal/presentational skills needed to discuss how modern life reflects broader **cultural values and perspectives**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Education systems** | School structure, academic expectations, exams, and student life in Italy and other Italian-speaking contexts | Frequently appears in **cultural comparison** and helps you discuss similarities/differences with your own experience |\n| **Work and careers** | Employment, job expectations, internships, unemployment, work-life balance, and professional communication | Useful for **interpersonal speaking/writing** and for interpreting contemporary social issues |\n| **Leisure and free time** | Sports, hobbies, entertainment, travel, and social activities | Provides high-frequency vocabulary and connects to **daily routines** and **cultural practices** |\n| **Technology in daily life** | Smartphones, apps, online communication, digital learning, and remote work | Common theme in audio/text sources; helps explain how modern habits shape communication |\n| **Social media and identity** | Online self-presentation, influencers, privacy, networking, and digital communities | Strong AP topic for discussing **perspectives**, opinions, and generational differences |\n| **Work-life balance** | The relationship between productivity, family life, free time, and personal well-being | Useful in argumentative and comparative tasks involving **values** and **quality of life** |\n| **Youth culture** | Trends, student concerns, peer relationships, and changing norms among young people | Supports authentic discussion of current issues and often appears in youth-oriented sources |\n| **Cultural perspectives on modern life** | The values behind practices such as schooling, commuting, family meals, and technology use | Essential for moving beyond description to **cultural analysis**, a core AP skill |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Daily responsibilities] --> B[School or work routines]\n    B --> C[Use of technology]\n    C --> D[Communication through social media and messaging]\n    D --> E[Relationships, identity, and community]\n    E --> F[Choices about leisure and free time]\n    F --> G[Impact on well-being and work-life balance]\n    G --> H[Broader cultural values and social expectations]\n    H --> B\n```\n\n### How to read this cycle\n1. **Contemporary life** is shaped first by everyday obligations such as school and work.\n2. These routines increasingly depend on **technology**.\n3. Technology influences how people **communicate**, build identity, and maintain relationships.\n4. Those patterns affect **leisure**, stress, and **work-life balance**.\n5. In turn, cultural expectations shape how people approach school, work, and free time.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “must know” material is a set of **communication rules, cultural principles, and AP task expectations** rather than mathematical formulas.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Practice vs. perspective** | On the AP exam, describe not only **what** people do, but also **why** those practices matter culturally |\n| **Compare, don’t just list** | In cultural comparison, explain both **similarities and differences** between your culture and Italian-speaking cultures |\n| **Context matters in register** | Choose **formal** or **informal** language depending on audience, such as a teacher, employer, friend, or online post |\n| **Support opinions with examples** | For speaking and writing tasks, give specific examples from **personal experience**, **course themes**, or **cultural knowledge** |\n| **Interpretive reading/listening** | Identify the **main idea**, **supporting details**, **tone**, and **author/speaker perspective** |\n| **Use thematic vocabulary** | Be ready to discuss **school**, **careers**, **time management**, **digital communication**, and **youth interests** with precision |\n| **Cultural comparison requires nuance** | Avoid stereotypes; note that practices vary by **region**, **generation**, and **social context** |\n| **Contemporary issues connect themes** | Topics like social media, commuting, or job insecurity can connect **families and communities**, **personal identity**, and **global challenges** |\n\n### High-value language functions for this unit\n- **Describing routines**: school schedules, workdays, free-time habits  \n- **Expressing preferences**: technology use, hobbies, study habits  \n- **Comparing systems**: education, work expectations, social norms  \n- **Giving opinions**: benefits and drawbacks of social media or modern lifestyles  \n- **Explaining cause and effect**: how technology changes communication and relationships  \n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection / Contrast** | **AP Relevance** |\n|---|---|---|\n| **Education** vs. **Work** | Education prepares students for professional life, but the transition may involve exams, internships, or economic challenges | Useful for discussing goals, opportunities, and social expectations |\n| **Technology** vs. **Face-to-face interaction** | Technology increases convenience and access, but may reduce direct personal interaction or raise privacy concerns | Common issue in persuasive and comparative responses |\n| **Leisure** vs. **Productivity** | Free time supports well-being, but modern culture often values efficiency and constant availability | Helps analyze **work-life balance** and cultural priorities |\n| **Social media** vs. **Private identity** | Online platforms encourage connection and visibility, but also shape self-image and public perception | Strong topic for discussing youth culture and modern pressures |\n\n```mermaid\nflowchart LR\n    A[Education] --> B[Career opportunities]\n    B --> C[Work routines]\n    C --> D[Need for balance]\n    D --> E[Leisure and well-being]\n    C --> F[Technology use]\n    F --> G[Social media habits]\n    G --> D\n```\n\n## Common AP Exam Traps\n\n- Confusing **cultural products**, **practices**, and **perspectives**. For example, **social media platforms** are products, daily posting habits are practices, and beliefs about connection or self-expression are perspectives.\n- Giving a cultural comparison that is too vague, such as saying one system is “different” without explaining **how** or **why**.\n- Relying on memorized opinions about technology without connecting them to **Italian-speaking cultural contexts**.\n- Using the wrong **register**, especially when discussing school or work situations that require more formal language.\n- Focusing only on vocabulary lists instead of developing the ability to **interpret authentic sources** and respond with evidence.\n\n## Quick Review Checklist\n\n- [ ] I can describe **daily routines** related to school, work, and free time using accurate thematic vocabulary.\n- [ ] I can compare **education systems** or student experiences in my culture and in Italian-speaking communities.\n- [ ] I can explain how **technology** affects communication, learning, and work.\n- [ ] I can discuss advantages and disadvantages of **social media** with specific examples.\n- [ ] I can identify **cultural practices and perspectives** connected to contemporary life.\n- [ ] I can choose an appropriate **formal or informal register** based on the audience and situation.\n- [ ] I can interpret the **main idea, tone, and point of view** in readings or audio about modern life.\n- [ ] I can support an opinion about **work-life balance**, youth culture, or digital habits in a clear AP-style response.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Il sistema scolastico italiano",
+              "definition": "Struttura dell’istruzione in Italia che comprende scuola primaria, secondaria di primo grado e secondaria di secondo grado, con percorsi diversi come licei, istituti tecnici e professionali."
+            },
+            {
+              "term": "Il liceo",
+              "definition": "Percorso di scuola secondaria superiore con forte preparazione teorica e accademica, spesso scelto da studenti che intendono proseguire gli studi universitari."
+            },
+            {
+              "term": "L’alternanza scuola-lavoro",
+              "definition": "Esperienza formativa che collega studio e attività pratiche in contesti professionali per sviluppare competenze utili al mondo del lavoro."
+            },
+            {
+              "term": "Il mercato del lavoro",
+              "definition": "Insieme delle opportunità di impiego, delle condizioni occupazionali e dei rapporti tra datori di lavoro e persone in cerca di occupazione."
+            },
+            {
+              "term": "Il curriculum vitae",
+              "definition": "Documento che riassume formazione, competenze, esperienze professionali e altre qualifiche utili per candidarsi a un impiego."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Nel contesto della vita contemporanea in Italia, quale situazione descrive meglio l’obiettivo dell’alternanza scuola-lavoro?",
+              "options": [
+                "Rafforzare il collegamento tra formazione scolastica ed esperienza professionale",
+                "Sostituire completamente l’istruzione teorica con il lavoro retribuito",
+                "Limitare l’accesso degli studenti all’università",
+                "Eliminare le differenze tra licei e istituti tecnici"
+              ],
+              "correctAnswer": "Rafforzare il collegamento tra formazione scolastica ed esperienza professionale",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Quale affermazione riflette più accuratamente una differenza comune tra liceo e istituto tecnico nel sistema italiano?",
+              "options": [
+                "Il liceo privilegia in genere una preparazione più teorica, mentre l’istituto tecnico integra maggiormente competenze applicate",
+                "Il liceo è riservato solo agli studenti adulti, mentre l’istituto tecnico è obbligatorio",
+                "L’istituto tecnico prepara esclusivamente agli studi classici",
+                "Non esiste alcuna differenza curricolare significativa tra i due percorsi"
+              ],
+              "correctAnswer": "Il liceo privilegia in genere una preparazione più teorica, mentre l’istituto tecnico integra maggiormente competenze applicate",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Per candidarsi a un impiego, uno studente prepara spesso un ______ che presenta esperienze, studi e competenze.",
+              "options": [
+                "curriculum vitae",
+                "orario scolastico",
+                "registro elettronico",
+                "permesso di soggiorno"
+              ],
+              "correctAnswer": "curriculum vitae",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Un percorso di scuola secondaria superiore orientato soprattutto allo studio teorico e alla preparazione universitaria è il ______.",
+              "options": [
+                "liceo",
+                "tirocinio",
+                "concorso",
+                "sindacato"
+              ],
+              "correctAnswer": "liceo",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Il tempo libero",
+              "definition": "Periodo non dedicato a studio o lavoro, spesso usato per attività ricreative, sportive, culturali o sociali."
+            },
+            {
+              "term": "I social media",
+              "definition": "Piattaforme digitali che permettono di creare contenuti, condividere informazioni e interagire con altre persone in tempo reale o differito."
+            },
+            {
+              "term": "La privacy digitale",
+              "definition": "Tutela dei dati personali e del controllo sulle informazioni condivise online, inclusi immagini, messaggi e preferenze individuali."
+            },
+            {
+              "term": "Il volontariato",
+              "definition": "Attività svolta liberamente a beneficio della comunità senza compenso economico, spesso con finalità sociali o civiche."
+            },
+            {
+              "term": "L’equilibrio tra vita privata e lavoro",
+              "definition": "Condizione in cui gli impegni professionali non compromettono in modo eccessivo relazioni personali, benessere e tempo individuale."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quale preoccupazione è più direttamente collegata all’uso dei social media nella vita contemporanea?",
+              "options": [
+                "La diffusione non controllata di dati personali e contenuti condivisi",
+                "La scomparsa completa della comunicazione scritta",
+                "L’impossibilità di mantenere contatti internazionali",
+                "L’eliminazione totale dei mezzi di informazione tradizionali"
+              ],
+              "correctAnswer": "La diffusione non controllata di dati personali e contenuti condivisi",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Dal punto di vista culturale, quale attività rappresenta meglio una forma di partecipazione civica nella società contemporanea?",
+              "options": [
+                "Fare volontariato in un’associazione locale",
+                "Comprare vestiti firmati online",
+                "Guardare una serie televisiva da soli",
+                "Saltare regolarmente gli impegni scolastici"
+              ],
+              "correctAnswer": "Fare volontariato in un’associazione locale",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Quando una persona protegge foto, messaggi e informazioni personali online, sta difendendo la propria ______.",
+              "options": [
+                "privacy digitale",
+                "rete ferroviaria",
+                "occupazione stabile",
+                "scuola dell’obbligo"
+              ],
+              "correctAnswer": "privacy digitale",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Mantenere un buon ______ aiuta a conciliare responsabilità professionali, benessere personale e relazioni sociali.",
+              "options": [
+                "equilibrio tra vita privata e lavoro",
+                "voto di condotta",
+                "trasporto pubblico",
+                "orario d’ufficio"
+              ],
+              "correctAnswer": "equilibrio tra vita privata e lavoro",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Global Challenges",
+      "description": "Major global issues such as climate change, poverty, migration, public health, and human rights.",
+      "note": "# Unit 4: Global Challenges\n\n## Overview\nIn this unit, you explore how **global challenges** such as **climate change**, **poverty**, **migration**, **public health**, and **human rights** shape life in Italy and across the Italian-speaking world. For the AP Italian exam, this unit matters because it builds the vocabulary, cultural comparisons, and argumentative skills needed for **presentational writing**, **interpersonal speaking**, and **interpretive analysis** on contemporary social issues.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Cambiamento climatico** | Long-term shifts in climate patterns, often linked to human activity and rising emissions. | Frequently appears in texts, audio sources, and cultural comparisons about sustainability, policy, and daily life in Italy. |\n| **Povertà e disuguaglianza** | Unequal access to income, education, housing, and opportunity. | Useful for discussing social justice, regional differences, and the impact of economic conditions on communities. |\n| **Migrazione e immigrazione** | Movement of people across regions or countries for work, safety, or better living conditions. | A major topic in Italian society; often tested through debates about integration, identity, and public policy. |\n| **Salute pubblica** | The protection of community health through prevention, education, and healthcare systems. | Important for comparing healthcare access, government responses, and social responsibility. |\n| **Diritti umani** | Basic rights and freedoms that belong to all people. | Central to persuasive essays and speaking tasks involving equality, dignity, and civic responsibility. |\n| **Sostenibilità** | Practices that meet present needs without harming future generations. | Helps students discuss environmental responsibility, transportation, energy, and consumer habits. |\n| **Cittadinanza globale** | Awareness of interdependence among nations and peoples. | Supports nuanced AP responses that connect local issues in Italy to global patterns. |\n| **Responsabilità del governo e della società civile** | The role of institutions, NGOs, and citizens in solving public problems. | Essential for comparing viewpoints and evaluating solutions in argumentative tasks. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Problema globale] --> B[Cause strutturali]\n    B --> C[Effetti sociali ed economici]\n    C --> D[Reazione pubblica]\n    D --> E[Politiche governative]\n    D --> F[Azione della società civile]\n    E --> G[Risultati a breve termine]\n    F --> G\n    G --> H[Conseguenze future]\n    H --> I[Nuove sfide o miglioramenti]\n```\n\n### How to read this process\n1. A **global challenge** begins with **structural causes**, such as inequality, conflict, environmental damage, or weak institutions.  \n2. These causes produce **social and economic effects**, including displacement, unemployment, health risks, or reduced quality of life.  \n3. Society responds through **public opinion**, **government policy**, and **civil society action**.  \n4. These responses create outcomes that may either reduce the problem or generate **new challenges**, making many global issues ongoing and interconnected.\n\n## Essential Formulas / Laws / Rules\n\nFor AP Italian, this section is less about equations and more about the **key principles, vocabulary frames, and communication rules** you must control.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Describe cause and effect clearly** | Use structures such as **a causa di**, **a causa del fatto che**, **perciò**, **quindi**, **di conseguenza** to explain how one global issue leads to another. |\n| **Compare Italy with your own community** | On the AP exam, you must often make a **cultural comparison** rather than only define a problem. |\n| **Support opinions with evidence** | In essays and speaking tasks, cite **examples**, **social trends**, **policies**, or **community effects** instead of making vague claims. |\n| **Distinguish problem from solution** | Be able to separate the **challenge itself** from proposed **responses**, such as laws, education campaigns, renewable energy, or humanitarian aid. |\n| **Use formal register when appropriate** | Topics like human rights, public policy, and migration often require a more **formal and precise tone**. |\n| **Recognize multiple perspectives** | AP tasks reward students who can explain how governments, citizens, migrants, scientists, and activists may see the same issue differently. |\n| **Connect local and global scales** | Show how a challenge affects individuals, cities, Italy, and the wider world. This creates stronger and more sophisticated responses. |\n\n### High-value vocabulary frames\n- **Secondo me, una delle sfide più urgenti è...**\n- **Questo problema è legato a...**\n- **Le conseguenze principali sono...**\n- **Il governo dovrebbe...**\n- **È importante trovare un equilibrio tra... e ...**\n- **Rispetto agli Stati Uniti / al mio paese, in Italia...**\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection / Contrast** | **AP Use** |\n|---|---|---|\n| **Migrazione** vs. **diritti umani** | Migration debates often involve legal borders, but also moral questions about dignity, asylum, and protection. | Useful for persuasive responses that weigh law against humanitarian responsibility. |\n| **Povertà** vs. **salute pubblica** | Poverty often limits access to nutrition, housing, and medical care, worsening health outcomes. | Helps explain how social problems are interconnected rather than isolated. |\n| **Cambiamento climatico** vs. **migrazione** | Environmental damage can contribute to displacement, resource scarcity, and economic instability. | Strong connection for essays that discuss root causes of migration. |\n| **Sostenibilità** vs. **sviluppo economico** | Economic growth may conflict with environmental protection unless policies promote renewable energy and responsible consumption. | Useful for comparing competing priorities and proposing balanced solutions. |\n\n```mermaid\nflowchart LR\n    A[Povertà] --> B[Salute pubblica più fragile]\n    C[Cambiamento climatico] --> D[Instabilità economica]\n    D --> E[Migrazione]\n    F[Diritti umani] --> E\n    G[Sostenibilità] --> H[Possibili soluzioni]\n    H --> C\n    H --> A\n```\n\n## Common AP Exam Traps\n\n- Confusing **migration** only with illegal immigration. On the AP exam, **migrazione** can include refugees, internal migration, economic migration, and family reunification.\n- Writing about a global issue in purely personal terms without making a **broader cultural or societal connection**.\n- Treating Italy as culturally uniform. Regional differences between the **Nord** and the **Sud**, urban and rural areas, or mainland and island communities can matter.\n- Giving simple “yes or no” opinions without explaining **causes, consequences, and possible solutions**.\n- Using memorized vocabulary lists without adapting them to the specific **source material**, prompt, or cultural context.\n\n## Quick Review Checklist\n\n- [ ] I can explain the meaning of **cambiamento climatico**, **povertà**, **migrazione**, **salute pubblica**, and **diritti umani** in clear Italian.\n- [ ] I can describe **cause-and-effect relationships** among global challenges using precise linking expressions.\n- [ ] I can compare how **Italy** and my own community respond to a major global problem.\n- [ ] I can discuss at least two different **perspectives** on issues like immigration, sustainability, or public health.\n- [ ] I can support an opinion with **specific examples**, not just general statements.\n- [ ] I can distinguish between the **problem**, its **causes**, and possible **solutions**.\n- [ ] I can use a mostly **formal, organized register** when writing or speaking about social issues.\n- [ ] I can connect a local Italian example to a **broader global trend** in a culturally informed way.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "cambiamento climatico",
+              "definition": "Alterazione a lungo termine dei modelli meteorologici globali, dovuta in larga parte all'aumento dei gas serra prodotti dalle attività umane."
+            },
+            {
+              "term": "gas serra",
+              "definition": "Sostanze presenti nell'atmosfera che trattengono il calore e contribuiscono all'aumento della temperatura media del pianeta."
+            },
+            {
+              "term": "sviluppo sostenibile",
+              "definition": "Modello di crescita che soddisfa i bisogni del presente senza compromettere la capacità delle generazioni future di soddisfare i propri."
+            },
+            {
+              "term": "povertà assoluta",
+              "definition": "Condizione in cui una persona o una famiglia non dispone delle risorse necessarie per soddisfare bisogni essenziali come cibo, alloggio e cure mediche."
+            },
+            {
+              "term": "insicurezza alimentare",
+              "definition": "Situazione in cui l'accesso regolare a cibo sufficiente, sicuro e nutriente non è garantito."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quale politica pubblica affronta più direttamente sia la riduzione delle emissioni sia la transizione energetica in un paese industrializzato?",
+              "options": [
+                "L'espansione dei sussidi ai combustibili fossili",
+                "L'introduzione di incentivi per le energie rinnovabili",
+                "La diminuzione dei controlli sulla qualità dell'aria",
+                "L'aumento delle importazioni di prodotti monouso"
+              ],
+              "correctAnswer": "L'introduzione di incentivi per le energie rinnovabili",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In un dibattito sulle disuguaglianze globali, quale fattore contribuisce più chiaramente al perpetuarsi della povertà in molte aree del mondo?",
+              "options": [
+                "L'accesso universale all'istruzione secondaria",
+                "La stabilità completa dei prezzi alimentari",
+                "La mancanza di accesso a servizi essenziali",
+                "L'abbondanza di infrastrutture sanitarie"
+              ],
+              "correctAnswer": "La mancanza di accesso a servizi essenziali",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Per ridurre l'impatto ambientale delle città, molte amministrazioni investono nella ______ e nel trasporto pubblico.",
+              "options": [
+                "riforestazione urbana",
+                "desertificazione",
+                "speculazione edilizia",
+                "sovrapproduzione industriale"
+              ],
+              "correctAnswer": "riforestazione urbana",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quando una comunità non riesce a ottenere cibo adeguato in modo stabile, si parla di ______.",
+              "options": [
+                "mobilità sociale",
+                "sicurezza energetica",
+                "insicurezza alimentare",
+                "crescita demografica"
+              ],
+              "correctAnswer": "insicurezza alimentare",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "migrazione",
+              "definition": "Spostamento di persone da un luogo a un altro, temporaneo o permanente, per ragioni economiche, politiche, ambientali o familiari."
+            },
+            {
+              "term": "rifugiato",
+              "definition": "Persona costretta a lasciare il proprio paese a causa di persecuzioni, conflitti o violenze e che necessita di protezione internazionale."
+            },
+            {
+              "term": "salute pubblica",
+              "definition": "Insieme di politiche e interventi volti a prevenire malattie e promuovere il benessere collettivo a livello di popolazione."
+            },
+            {
+              "term": "diritti umani",
+              "definition": "Libertà e garanzie fondamentali riconosciute a ogni individuo indipendentemente da nazionalità, genere, religione o condizione sociale."
+            },
+            {
+              "term": "integrazione sociale",
+              "definition": "Processo attraverso cui nuovi arrivati partecipano pienamente alla vita economica, culturale e civica della società di accoglienza."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quale situazione descrive meglio una sfida tipica legata ai flussi migratori contemporanei in Europa?",
+              "options": [
+                "L'assenza totale di barriere linguistiche nei paesi di arrivo",
+                "La necessità di conciliare accoglienza, sicurezza e inclusione",
+                "La scomparsa delle differenze tra migrazione volontaria e forzata",
+                "L'eliminazione completa delle procedure di asilo"
+              ],
+              "correctAnswer": "La necessità di conciliare accoglienza, sicurezza e inclusione",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Quale intervento è più coerente con gli obiettivi della salute pubblica durante una crisi sanitaria?",
+              "options": [
+                "Limitare la diffusione di informazioni scientifiche affidabili",
+                "Rafforzare la prevenzione e l'accesso alle cure",
+                "Ridurre il coordinamento tra istituzioni sanitarie",
+                "Affidare esclusivamente ai singoli cittadini la gestione dell'emergenza"
+              ],
+              "correctAnswer": "Rafforzare la prevenzione e l'accesso alle cure",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Una persona che fugge dal proprio paese per persecuzioni o guerra può chiedere lo status di ______.",
+              "options": [
+                "turista",
+                "rifugiato",
+                "pendolare",
+                "investitore"
+              ],
+              "correctAnswer": "rifugiato",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quando uno Stato protegge la libertà di espressione e l'uguaglianza davanti alla legge, tutela i ______.",
+              "options": [
+                "dazi commerciali",
+                "diritti umani",
+                "consumi privati",
+                "confini marittimi"
+              ],
+              "correctAnswer": "diritti umani",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Science and Technology",
+      "description": "Impact of scientific advances and technology on society, communication, medicine, and the environment.",
+      "note": "# Unit 5: Science and Technology\n\n## Overview\nIn this unit, you examine how **science** and **technology** shape modern life in the Italian-speaking world, especially in areas such as **communication**, **medicine**, **the environment**, and everyday social interaction. For the AP Exam, this unit matters because you must interpret authentic sources, compare cultural perspectives, and discuss how technological change creates both **opportunities** and **challenges** for individuals and society.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Innovazione tecnologica** | The development and spread of new tools, platforms, and systems. | Often appears in readings and audio sources about social change, productivity, and ethics. |\n| **Comunicazione digitale** | Communication through **social media**, messaging apps, video calls, and online platforms. | Useful for comparing how technology changes relationships, identity, and public discourse. |\n| **Divario digitale** | The gap between people who have access to technology and those who do not. | A strong theme for cultural comparison and argumentative writing about inequality. |\n| **Progresso medico** | Advances in **diagnosis**, **treatment**, biotechnology, and public health. | Frequently linked to debates about quality of life, access to care, and ethical limits. |\n| **Sostenibilità ambientale** | Using science and technology to reduce environmental harm and support long-term ecological balance. | Helps students connect innovation with climate, energy, and responsible citizenship. |\n| **Privacy e sicurezza dei dati** | Protection of personal information in digital environments. | Common in AP-style prompts about the risks of online life and government or corporate surveillance. |\n| **Intelligenza artificiale** | Systems that simulate human reasoning, prediction, or language processing. | Important for discussing automation, employment, ethics, and the future of learning. |\n| **Impatto sociale della tecnologia** | The broader effect of innovation on work, education, family life, and cultural values. | Central to persuasive and interpersonal tasks where students evaluate benefits versus drawbacks. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Scoperta scientifica] --> B[Sviluppo tecnologico]\n    B --> C[Applicazione pratica]\n    C --> D[\"Impatto sulla società (lavoro, scuola, salute)\"]\n    C --> E[\"Impatto sull'ambiente (energia, rifiuti, emissioni)\"]\n    D --> F[Dibattito etico e politico]\n    E --> F\n    F --> G[Regolamentazione o adattamento sociale]\n    G --> H[Nuove innovazioni]\n```\n\n### How to read this process\n1. **Scientific discoveries** often lead to new technologies.\n2. Those technologies are then used in daily life, medicine, communication, or industry.\n3. Their use creates effects on **society** and the **environment**.\n4. These effects provoke **ethical**, **political**, and **cultural** debates.\n5. Society responds through regulation, education, or adaptation, which can encourage further innovation.\n\n## Essential Formulas / Laws / Rules\n\nFor AP Italian, this section focuses on **core principles, vocabulary patterns, and interpretive rules** rather than mathematical formulas.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Discuss both advantages and disadvantages** | When speaking or writing about technology, avoid one-sided responses; AP tasks reward nuanced analysis. |\n| **Connect innovation to daily life** | Be able to explain how technology affects **education**, **health**, **work**, **relationships**, and **the environment**. |\n| **Support claims with examples** | Use concrete examples such as **telemedicina**, **energie rinnovabili**, **social network**, or **didattica a distanza**. |\n| **Compare cultural perspectives** | Be ready to compare practices or attitudes in **Italy** and your own community. |\n| **Use formal register when appropriate** | In presentational writing and speaking, use precise vocabulary and organized argumentation. |\n| **Recognize issue-based vocabulary** | Key terms include **privacy**, **accesso**, **innovazione**, **dipendenza digitale**, **ricerca scientifica**, **sviluppo sostenibile**. |\n| **Explain cause and effect** | Use structures such as **grazie a**, **a causa di**, **di conseguenza**, **perciò**, and **mentre** to show relationships clearly. |\n\n### High-value thematic vocabulary\n- **la tecnologia**\n- **la ricerca**\n- **la scoperta**\n- **l’innovazione**\n- **la rete**\n- **i social media**\n- **la privacy**\n- **i dati personali**\n- **la salute pubblica**\n- **la prevenzione**\n- **l’inquinamento**\n- **le energie rinnovabili**\n- **l’accessibilità**\n- **il divario digitale**\n- **l’intelligenza artificiale**\n- **la sostenibilità**\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection** | **Key Distinction / AP Use** |\n|---|---|---|\n| **Comunicazione digitale** vs. **comunicazione tradizionale** | Both allow people to exchange ideas and maintain relationships. | Digital tools are faster and wider-reaching, but traditional communication may feel more personal and less distracting. |\n| **Progresso medico** vs. **questioni etiche** | Medical innovation can improve survival, prevention, and quality of life. | AP tasks may ask whether all scientific progress is automatically positive; ethics complicates the answer. |\n| **Tecnologia ambientale** vs. **sviluppo industriale** | Both relate to economic growth and modernization. | Industrial expansion may increase pollution, while green technology seeks to reduce long-term damage. |\n| **Accesso tecnologico** vs. **divario digitale** | Technology can expand education and opportunity. | Benefits are uneven when cost, geography, age, or infrastructure limit access. |\n\n```mermaid\nflowchart LR\n    A[Tecnologia] --> B[Benefici]\n    A --> C[Rischi]\n    B --> D[Comunicazione rapida]\n    B --> E[Cure migliori]\n    B --> F[Efficienza energetica]\n    C --> G[Perdita di privacy]\n    C --> H[Dipendenza digitale]\n    C --> I[Disuguaglianze]\n```\n\n## Common AP Exam Traps\n- Confusing **technology itself** with its **social impact**. The exam often wants analysis of consequences, not just description of devices.\n- Giving only positive examples of innovation without addressing **risks**, **limits**, or **ethical concerns**.\n- Making vague claims like “technology is important” without specific support from **health**, **education**, **communication**, or **environmental** contexts.\n- Ignoring the **cultural comparison** angle; AP responses are stronger when they connect Italian-speaking communities to the student’s own context.\n- Overgeneralizing about young people and technology; nuanced responses distinguish between **useful dependence**, **overuse**, and **responsible use**.\n\n## Quick Review Checklist\n- [ ] I can explain how **scientific advances** influence daily life and society.\n- [ ] I can discuss the benefits and drawbacks of **digital communication**.\n- [ ] I can define **divario digitale** and explain why it matters.\n- [ ] I can describe how technology affects **medicine** and **public health**.\n- [ ] I can connect science and technology to **environmental sustainability**.\n- [ ] I can discuss issues of **privacy**, **data security**, and online responsibility.\n- [ ] I can compare perspectives on technology in **Italy** and in my own community.\n- [ ] I can support an argument about innovation with specific vocabulary and clear examples.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "digital divide",
+              "definition": "The unequal access to devices, reliable internet, and digital skills that can create social and economic disparities among different groups."
+            },
+            {
+              "term": "telemedicine",
+              "definition": "The delivery of health-related services at a distance through video calls, digital platforms, and remote monitoring tools."
+            },
+            {
+              "term": "social media algorithms",
+              "definition": "Automated systems that prioritize and recommend online content based on user behavior, engagement, and collected data."
+            },
+            {
+              "term": "renewable energy",
+              "definition": "Power derived from naturally replenished sources such as sunlight, wind, water, and geothermal heat, often used to reduce dependence on fossil fuels."
+            },
+            {
+              "term": "artificial intelligence",
+              "definition": "The capacity of computer systems to perform tasks associated with learning, pattern recognition, decision-making, and language processing."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In una discussione sull'impatto della tecnologia sulla società italiana, quale situazione illustra meglio il divario digitale?",
+              "options": [
+                "Le famiglie rurali con connessioni lente hanno meno accesso alla didattica online e ai servizi pubblici digitali.",
+                "Gli studenti usano più spesso i social network per condividere appunti scolastici.",
+                "Gli ospedali adottano cartelle cliniche elettroniche per migliorare l'organizzazione interna.",
+                "Le aziende investono in robotica per aumentare la produttività industriale."
+              ],
+              "correctAnswer": "Le famiglie rurali con connessioni lente hanno meno accesso alla didattica online e ai servizi pubblici digitali.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Qual è la preoccupazione più rilevante riguardo agli algoritmi dei social media nel contesto della comunicazione pubblica?",
+              "options": [
+                "Possono favorire camere dell'eco e la diffusione di disinformazione attraverso contenuti selezionati automaticamente.",
+                "Eliminano completamente la necessità di verificare le fonti giornalistiche.",
+                "Riducono sempre il tempo trascorso online dagli utenti più giovani.",
+                "Garantiscono che tutti gli utenti ricevano esattamente le stesse notizie."
+              ],
+              "correctAnswer": "Possono favorire camere dell'eco e la diffusione di disinformazione attraverso contenuti selezionati automaticamente.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "La pratica di fornire consulti medici a distanza tramite piattaforme digitali si chiama ______.",
+              "options": [
+                "telemedicina",
+                "biotecnologia",
+                "urbanizzazione",
+                "globalizzazione"
+              ],
+              "correctAnswer": "telemedicina",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quando l'energia viene prodotta da fonti che si rigenerano naturalmente, come il sole e il vento, si parla di ______.",
+              "options": [
+                "energia rinnovabile",
+                "combustibile fossile",
+                "obsolescenza programmata",
+                "miniera a cielo aperto"
+              ],
+              "correctAnswer": "energia rinnovabile",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "biotechnology",
+              "definition": "The use of living organisms, cells, or biological processes to develop products and applications in fields such as medicine, agriculture, and industry."
+            },
+            {
+              "term": "genetic engineering",
+              "definition": "The direct modification of hereditary material in order to alter traits or produce specific biological outcomes."
+            },
+            {
+              "term": "data privacy",
+              "definition": "The protection of personal information from unauthorized collection, use, sharing, or surveillance in digital environments."
+            },
+            {
+              "term": "electronic waste",
+              "definition": "Discarded devices and technological components that can release harmful substances if not reused, recycled, or disposed of properly."
+            },
+            {
+              "term": "sustainable innovation",
+              "definition": "The development of new products and processes that meet present needs while limiting long-term environmental damage and resource depletion."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quale esempio rappresenta meglio una questione etica legata alla privacy dei dati nell'uso delle tecnologie digitali?",
+              "options": [
+                "Un'app raccoglie dati sulla posizione degli utenti senza un consenso informato chiaro.",
+                "Un'università offre corsi online accessibili da dispositivi mobili.",
+                "Un comune installa lampioni a basso consumo energetico.",
+                "Un laboratorio sostituisce documenti cartacei con archivi digitali protetti."
+              ],
+              "correctAnswer": "Un'app raccoglie dati sulla posizione degli utenti senza un consenso informato chiaro.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Perché i rifiuti elettronici costituiscono un problema ambientale significativo?",
+              "options": [
+                "Perché molti dispositivi contengono materiali tossici e metalli difficili da smaltire in modo sicuro.",
+                "Perché tutti i componenti elettronici si decompongono rapidamente senza effetti collaterali.",
+                "Perché il riciclo dei dispositivi elimina completamente il consumo di energia industriale.",
+                "Perché i telefoni cellulari non possono essere riparati né riutilizzati in alcun caso."
+              ],
+              "correctAnswer": "Perché molti dispositivi contengono materiali tossici e metalli difficili da smaltire in modo sicuro.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "La modifica diretta del DNA per ottenere caratteristiche specifiche in un organismo è chiamata ______.",
+              "options": [
+                "ingegneria genetica",
+                "alfabetizzazione digitale",
+                "fibra ottica",
+                "sovrappopolazione"
+              ],
+              "correctAnswer": "ingegneria genetica",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Lo smaltimento scorretto di computer, telefoni e altri dispositivi contribuisce al problema dei ______.",
+              "options": [
+                "rifiuti elettronici",
+                "diritti d'autore",
+                "combustibili sintetici",
+                "social network"
+              ],
+              "correctAnswer": "rifiuti elettronici",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Beauty and Aesthetics",
+      "description": "Art, music, literature, architecture, and the cultural definition of beauty across different societies.",
+      "note": "# Unit 6: Beauty and Aesthetics\n\n## Overview\nThis unit explores how **beauty** is defined, represented, and debated in Italian-speaking contexts through **art, music, literature, architecture, fashion, and public space**. For the AP Italian exam, it matters because students must interpret cultural products and practices, compare perspectives on aesthetics, and discuss how beauty reflects **identity, values, history, and social change**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Beauty as a cultural value** | The idea that standards of beauty are shaped by history, society, and tradition rather than being completely universal. | Helps you analyze **cultural comparisons** and explain how Italians and other societies define what is beautiful. |\n| **Art as cultural expression** | Painting, sculpture, cinema, and design as ways to communicate ideas, beliefs, and identity. | Frequently appears in **interpretive reading/listening** and supports **presentational writing/speaking** about Italian culture. |\n| **Architecture and public space** | Buildings, urban planning, monuments, and piazze that reflect aesthetic ideals and civic life. | Useful for discussing how beauty functions in **daily life**, tourism, and national heritage. |\n| **Literature and beauty** | Poems, novels, and prose that portray beauty, love, nature, and artistic ideals. | Important for identifying **themes, tone, symbolism, and cultural perspective** in texts. |\n| **Music and performance** | Opera, popular music, and regional traditions as artistic forms tied to emotion and identity. | Supports analysis of **audio sources** and discussion of Italy’s global cultural influence. |\n| **Made in Italy / design and fashion** | Italian excellence in style, craftsmanship, industrial design, and fashion. | Often connected to **modern culture**, economics, and how aesthetics shape Italy’s international image. |\n| **Preservation vs. innovation** | The tension between protecting historical beauty and embracing modern artistic or architectural change. | Strong topic for **argumentation** and **comparison** tasks on the AP exam. |\n| **Subjective vs. shared ideals of beauty** | Beauty can be personal, but cultures often establish common standards through media, education, and tradition. | Helps you make nuanced claims instead of treating beauty as either fully objective or fully individual. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Historical context] --> B[Artistic and cultural production]\n    B --> C[Public perception of beauty]\n    C --> D[National and local identity]\n    D --> E[Preservation, promotion, and tourism]\n    E --> F[Global influence and cultural exchange]\n    F --> G[New interpretations of beauty]\n    G --> B\n```\n\n### How to read this cycle\n1. **Historical context** shapes what a society values aesthetically.\n2. Those values appear in **art, architecture, literature, music, and design**.\n3. Cultural products influence **public ideas of beauty**.\n4. These ideas reinforce or challenge **identity** at local and national levels.\n5. Societies then choose what to **preserve, celebrate, export, or modernize**.\n6. International attention and exchange lead to **new artistic trends**, restarting the cycle.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “must know” content consists of **core principles and interpretive rules** rather than equations.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Beauty is culturally constructed** | Do not assume that beauty has one fixed meaning; explain how it depends on **time, place, and perspective**. |\n| **Cultural products reflect cultural values** | Connect works of art, music, literature, or architecture to broader themes such as **history, religion, class, politics, or identity**. |\n| **AP responses require evidence** | When discussing beauty, support claims with **specific examples** from Italian culture, not vague generalizations. |\n| **Compare without oversimplifying** | In comparisons, identify both **similarities and differences** between Italian-speaking cultures and your own. |\n| **Interpret form and meaning together** | Aesthetic choices—style, imagery, structure, sound, and setting—help communicate deeper cultural meanings. |\n| **Context matters** | Renaissance art, Futurism, opera, modern fashion, and contemporary architecture should be understood in their **historical moments**. |\n| **Beauty can be contested** | Be prepared to discuss disagreements: **tradition vs. innovation**, elite art vs. popular culture, preservation vs. development. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Traditional Perspective** | **Modern / Alternative Perspective** | **AP Relevance** |\n|---|---|---|---|\n| **Historical art vs. contemporary art** | Beauty is linked to harmony, proportion, and established artistic models. | Beauty may include experimentation, abstraction, provocation, or social critique. | Useful for comparing how values evolve across time. |\n| **Preservation vs. modernization** | Historic centers, monuments, and classical styles should be protected. | Cities and artists must adapt to present needs and new forms. | Strong theme in cultural comparison and argumentative responses. |\n| **Elite culture vs. popular culture** | Opera, fine art, and canonical literature are often treated as high expressions of beauty. | Film, pop music, street art, and fashion also shape public aesthetics. | Helps avoid narrow definitions of culture on the AP exam. |\n| **Local identity vs. global influence** | Regional traditions preserve distinctive Italian forms of beauty. | Global media and markets spread hybrid styles and new standards. | Important for discussing cultural exchange and globalization. |\n\n## Common AP Exam Traps\n\n- Confusing **beauty** with only **physical appearance**; the unit also includes beauty in **ideas, spaces, performances, craftsmanship, and artistic expression**.\n- Treating Italian culture as uniform; remember the importance of **regional diversity** in architecture, cuisine presentation, music, festivals, and design.\n- Describing artworks or cultural products without explaining their **cultural significance**.\n- Assuming that older art is always valued more highly than modern forms; AP tasks often reward discussion of **change, debate, and innovation**.\n- Making broad claims such as “Italian art is the best” without **specific supporting evidence** or cultural context.\n\n## Quick Review Checklist\n\n- [ ] I can explain how **beauty is defined differently across cultures and time periods**.\n- [ ] I can connect **art, architecture, music, literature, or fashion** to broader Italian cultural values.\n- [ ] I can discuss at least **2–3 concrete examples** of Italian cultural products related to aesthetics.\n- [ ] I can compare **traditional and contemporary** ideas of beauty in Italian-speaking contexts.\n- [ ] I can explain the tension between **preservation and innovation** in Italian culture.\n- [ ] I can analyze how **public spaces and architecture** express identity and beauty.\n- [ ] I can support an AP-style response with **specific evidence and clear cultural interpretation**.\n- [ ] I can avoid stereotypes and present a **nuanced comparison** between Italian culture and my own.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Il Rinascimento",
+              "definition": "Periodo culturale nato in Italia tra Trecento e Cinquecento, caratterizzato dal recupero dei modelli classici, dall'umanesimo e da nuove tecniche artistiche come la prospettiva."
+            },
+            {
+              "term": "Prospettiva lineare",
+              "definition": "Tecnica figurativa che crea l'illusione della profondità su una superficie piana organizzando linee e punti di fuga in modo coerente."
+            },
+            {
+              "term": "Mecenatismo",
+              "definition": "Sostegno economico e sociale offerto da famiglie potenti, istituzioni o individui ad artisti e intellettuali per promuovere opere culturali e prestigio pubblico."
+            },
+            {
+              "term": "Bel canto",
+              "definition": "Tradizione vocale italiana che privilegia purezza del suono, controllo del respiro, agilità ed espressività melodica."
+            },
+            {
+              "term": "Canone di bellezza",
+              "definition": "Insieme di criteri estetici condivisi da una società in un dato periodo storico, spesso influenzati da valori culturali, sociali e politici."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Nel contesto dell'arte italiana, quale innovazione contribuì più direttamente a rendere le rappresentazioni visive del Quattrocento più realistiche dal punto di vista spaziale?",
+              "options": [
+                "L'uso della prospettiva lineare",
+                "L'abbandono della figura umana",
+                "La rinuncia ai temi religiosi",
+                "L'eliminazione della simmetria"
+              ],
+              "correctAnswer": "L'uso della prospettiva lineare",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Quale affermazione descrive meglio il ruolo del mecenatismo nella produzione artistica italiana tra Medioevo e Rinascimento?",
+              "options": [
+                "Permise ad artisti e intellettuali di lavorare grazie al sostegno di élite e istituzioni",
+                "Impose il rifiuto totale dei modelli classici",
+                "Limitò l'arte esclusivamente alla decorazione militare",
+                "Sostituì completamente la committenza religiosa con quella popolare"
+              ],
+              "correctAnswer": "Permise ad artisti e intellettuali di lavorare grazie al sostegno di élite e istituzioni",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "La tecnica che organizza lo spazio pittorico attraverso linee convergenti verso un punto di fuga si chiama ______.",
+              "options": [
+                "chiaroscuro",
+                "prospettiva lineare",
+                "futurismo",
+                "serialismo"
+              ],
+              "correctAnswer": "prospettiva lineare",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Nella tradizione musicale italiana, il termine ______ indica uno stile di canto noto per eleganza vocale e controllo tecnico.",
+              "options": [
+                "verismo",
+                "bel canto",
+                "neorealismo",
+                "madrigalismo"
+              ],
+              "correctAnswer": "bel canto",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Barocco",
+              "definition": "Stile artistico e architettonico dei secoli XVII e XVIII noto per teatralità, movimento, ricchezza ornamentale e forte impatto emotivo."
+            },
+            {
+              "term": "Neorealismo",
+              "definition": "Corrente culturale del dopoguerra che rappresenta la vita quotidiana, i problemi sociali e le condizioni delle classi popolari con tono diretto e realistico."
+            },
+            {
+              "term": "Opera lirica",
+              "definition": "Forma teatrale in cui il testo drammatico viene eseguito principalmente attraverso il canto con accompagnamento orchestrale."
+            },
+            {
+              "term": "Patrimonio culturale",
+              "definition": "Insieme di beni materiali e immateriali ritenuti significativi per l'identità storica, artistica e collettiva di una comunità."
+            },
+            {
+              "term": "Estetica interculturale",
+              "definition": "Approccio che riconosce come le idee di armonia, gusto e valore artistico cambino secondo contesti storici e sociali diversi."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quale caratteristica è più tipica dell'architettura barocca italiana?",
+              "options": [
+                "Linearità austera e rifiuto dell'ornamento",
+                "Drammaticità degli spazi e ricchezza decorativa",
+                "Assenza di effetti scenografici",
+                "Preferenza esclusiva per strutture industriali"
+              ],
+              "correctAnswer": "Drammaticità degli spazi e ricchezza decorativa",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Perché il neorealismo è considerato importante nello studio dell'estetica e della cultura italiana del Novecento?",
+              "options": [
+                "Perché sostituisce la realtà sociale con ambienti mitologici",
+                "Perché valorizza la rappresentazione della vita quotidiana e delle tensioni sociali",
+                "Perché elimina ogni dimensione etica dall'arte",
+                "Perché si limita esclusivamente alla poesia cortese"
+              ],
+              "correctAnswer": "Perché valorizza la rappresentazione della vita quotidiana e delle tensioni sociali",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "La forma teatrale musicale in cui la vicenda è espressa soprattutto attraverso il canto si chiama ______.",
+              "options": [
+                "sonetto",
+                "affresco",
+                "opera lirica",
+                "commedia dell'arte"
+              ],
+              "correctAnswer": "opera lirica",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quando si studiano criteri di bellezza diversi da una società all'altra, si parla di ______.",
+              "options": [
+                "estetica interculturale",
+                "prospettiva lineare",
+                "mecenatismo",
+                "umanesimo civico"
+              ],
+              "correctAnswer": "estetica interculturale",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

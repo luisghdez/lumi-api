@@ -3,6 +3,8 @@ import { createFireStoreUser, deleteFireStoreUser, getUserProfile, updateFireSto
 import { checkStreakOnLogin } from "../services/streakService";
 import { updateFcmTokenForUser } from "../services/userService";
 import { getUserVideos } from "../services/videoService";
+import { getUsersSavedCoursesFromFirebase } from "../services/courseService";
+import { getFriends } from "../services/friendService";
 
 interface CreateUserRequestBody {
   email: string;
@@ -138,27 +140,28 @@ export async function updateFcmTokenController(request: FastifyRequest, reply: F
   }
 }
 
+/** Any authenticated user may list another user’s ready posts; strangers see public only, friends also see `visibility: friends` (same rules as `canReadVideo`). */
 export async function getUserVideosController(
-  request: FastifyRequest,
+  request: FastifyRequest<{
+    Params: { userId: string };
+    Querystring: { cursor?: string; limit?: string };
+  }>,
   reply: FastifyReply
 ) {
   try {
-    const user = (request as any).user;
-    if (!user || !user.uid) {
+    const viewer = (request as any).user;
+    if (!viewer?.uid) {
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    const { userId } = request.params as { userId: string };
+    const { userId } = request.params;
     if (!userId) {
       return reply.status(400).send({ error: "Missing userId parameter" });
     }
 
-    const { cursor, limit } = request.query as {
-      cursor?: string;
-      limit?: string;
-    };
+    const { cursor, limit } = request.query;
 
-    const result = await getUserVideos(userId, user.uid, {
+    const result = await getUserVideos(userId, viewer.uid, {
       cursor,
       limit: limit ? Number(limit) : undefined,
     });
@@ -169,5 +172,99 @@ export async function getUserVideosController(
     const statusCode = typeof (error as any)?.statusCode === "number" ? (error as any).statusCode : 500;
     const message = error instanceof Error ? error.message : "Failed to fetch user videos";
     return reply.status(statusCode).send({ error: message });
+  }
+}
+
+/** Any authenticated user may list another user’s saved courses (same data as their profile). */
+export async function getUserSavedCoursesController(
+  request: FastifyRequest<{
+    Params: { userId: string };
+    Querystring: { page?: string; limit?: string; subject?: string };
+  }>,
+  reply: FastifyReply
+) {
+  try {
+    const viewer = (request as any).user;
+    if (!viewer?.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { userId } = request.params;
+    if (!userId) {
+      return reply.status(400).send({ error: "Missing userId parameter" });
+    }
+
+    const profile = await getUserProfile(userId);
+    if (!profile) {
+      return reply.status(404).send({ error: "User not found" });
+    }
+
+    const page = parseInt(request.query.page || "1", 10);
+    const limit = parseInt(request.query.limit || "10", 10);
+    const subject = request.query.subject;
+
+    if (page < 1) {
+      return reply.status(400).send({ error: "Page must be greater than 0" });
+    }
+    if (limit < 1 || limit > 100) {
+      return reply.status(400).send({ error: "Limit must be between 1 and 100" });
+    }
+
+    const { courses, totalCount, hasNextPage } = await getUsersSavedCoursesFromFirebase(
+      userId,
+      page,
+      limit,
+      subject
+    );
+
+    return reply.status(200).send({
+      message: "Courses retrieved successfully",
+      courses,
+      pagination: {
+        page,
+        limit,
+        totalCount,
+        totalPages: Math.ceil(totalCount / limit),
+        hasNextPage,
+        hasPreviousPage: page > 1,
+      },
+    });
+  } catch (error) {
+    console.error("Error fetching user saved courses:", error);
+    return reply.status(500).send({ error: "Internal Server Error" });
+  }
+}
+
+/** Any authenticated user may list another user’s friends (same contract as GET /friends for that user). */
+export async function getUserFriendsController(
+  request: FastifyRequest<{
+    Params: { userId: string };
+    Querystring: { order?: string };
+  }>,
+  reply: FastifyReply
+) {
+  try {
+    const viewer = (request as any).user;
+    if (!viewer?.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { userId } = request.params;
+    if (!userId) {
+      return reply.status(400).send({ error: "Missing userId parameter" });
+    }
+
+    const profile = await getUserProfile(userId);
+    if (!profile) {
+      return reply.status(404).send({ error: "User not found" });
+    }
+
+    const { order } = request.query;
+    const orderByXp = order === "xp";
+    const friends = await getFriends(userId, orderByXp);
+    return reply.status(200).send({ friends });
+  } catch (error) {
+    console.error("Error fetching user friends:", error);
+    return reply.status(500).send({ error: "Failed to retrieve friends" });
   }
 }

@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import Fastify from "fastify";
+import { parse as secureJsonParse } from "secure-json-parse";
 import cors from "@fastify/cors";
 import multipart from "@fastify/multipart";
 import courseRoutes from "./routes/courseRoutes";
@@ -16,9 +17,38 @@ import notiRoutes from './routes/notifRoutes';
 import cronRoutes from './routes/cronRoutes';
 import AASARoutes from './routes/AASARoutes';
 import videoRoutes from './routes/videoRoutes';
+import videoShareWebRoutes from './routes/videoShareWebRoutes';
+import podcastRoutes from './routes/podcastRoutes';
 
 
 const fastify = Fastify({ logger: true });
+
+// Flutter (and others) send Content-Type: application/json with an empty body on DELETE;
+// Fastify's default parser rejects that — treat empty body as {}.
+fastify.removeContentTypeParser("application/json");
+fastify.addContentTypeParser(
+  "application/json",
+  { parseAs: "string" },
+  function (req, body: string, done) {
+    if (body === "" || body == null) {
+      done(null, {});
+      return;
+    }
+    try {
+      done(
+        null,
+        secureJsonParse(body, null, {
+          protoAction: "error",
+          constructorAction: "error",
+        })
+      );
+    } catch (err: unknown) {
+      const e = err as { statusCode?: number };
+      e.statusCode = 400;
+      done(err as Error, undefined);
+    }
+  }
+);
 
 // Register plugins
 fastify.register(cors);
@@ -38,7 +68,9 @@ fastify.register(ragRoutes);
 fastify.register(notiRoutes)
 fastify.register(cronRoutes);
 fastify.register(AASARoutes);
+fastify.register(videoShareWebRoutes);
 fastify.register(videoRoutes);
+fastify.register(podcastRoutes);
 
 // Health check route
 fastify.get("/", async () => {

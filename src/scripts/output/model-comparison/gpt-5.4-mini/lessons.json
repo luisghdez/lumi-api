@@ -1,0 +1,138 @@
+{
+  "lesson1": {
+    "flashcards": [
+      {
+        "term": "Mole",
+        "definition": "A counting unit equal to $$6.022\\times10^{23}$$ representative particles, connecting atomic-scale quantities to measurable laboratory amounts."
+      },
+      {
+        "term": "Molar mass",
+        "definition": "The mass of one mole of a substance, usually expressed in grams per mole, and numerically equal to the substance’s formula mass."
+      },
+      {
+        "term": "Avogadro’s number",
+        "definition": "The exact counting constant used to convert between particles and moles in chemical calculations."
+      },
+      {
+        "term": "Mass spectrometry",
+        "definition": "An analytical technique that separates ions according to their mass-to-charge ratio, allowing determination of isotopic abundances and average atomic mass."
+      },
+      {
+        "term": "Average atomic mass",
+        "definition": "The weighted average of the isotopic masses of an element based on their natural abundances."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "A sample of an element contains two isotopes: one with mass $$10.01\\ \\text{amu}$$ and abundance $$19.9\\%$$, and one with mass $$11.01\\ \\text{amu}$$ and abundance $$80.1\\%$$. What is the average atomic mass of the element?",
+        "options": [
+          "$$10.81\\ \\text{amu}$$",
+          "$$10.51\\ \\text{amu}$$",
+          "$$11.01\\ \\text{amu}$$",
+          "$$10.01\\ \\text{amu}$$"
+        ],
+        "correctAnswer": "$$10.81\\ \\text{amu}$$"
+      },
+      {
+        "questionText": "A chemist has $$0.250\\ \\text{mol}$$ of a compound. How many representative particles does the sample contain?",
+        "options": [
+          "$$1.51\\times10^{23}$$",
+          "$$6.02\\times10^{23}$$",
+          "$$2.41\\times10^{24}$$",
+          "$$4.00\\times10^{23}$$"
+        ],
+        "correctAnswer": "$$1.51\\times10^{23}$$"
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "The number of particles in $$1\\ \\text{mol}$$ of any substance is called ______.",
+        "options": [
+          "Avogadro’s number",
+          "molar mass",
+          "mass number",
+          "isotopic abundance"
+        ],
+        "correctAnswer": "Avogadro’s number"
+      },
+      {
+        "questionText": "In a mass spectrum, the x-axis typically represents ______.",
+        "options": [
+          "mass-to-charge ratio",
+          "wavelength",
+          "electron spin",
+          "ionization energy"
+        ],
+        "correctAnswer": "mass-to-charge ratio"
+      }
+    ]
+  },
+  "lesson2": {
+    "flashcards": [
+      {
+        "term": "Electron configuration",
+        "definition": "The arrangement of electrons among atomic orbitals in a ground-state or excited-state atom or ion, following energy and filling rules."
+      },
+      {
+        "term": "Aufbau principle",
+        "definition": "The guideline that electrons occupy the lowest-energy available orbitals before higher-energy orbitals are filled."
+      },
+      {
+        "term": "Hund’s rule",
+        "definition": "The rule that electrons occupy degenerate orbitals singly with parallel spins before pairing occurs."
+      },
+      {
+        "term": "Photoelectron spectroscopy",
+        "definition": "A technique that measures the energy required to remove electrons from atoms or ions, revealing orbital energies and electron arrangements."
+      },
+      {
+        "term": "Periodic trend",
+        "definition": "A predictable variation in a physical or chemical property across periods and down groups due to changes in effective nuclear charge, shielding, and distance from the nucleus."
+      }
+    ],
+    "multipleChoice": [
+      {
+        "questionText": "Which ground-state electron configuration is correct for sulfur, $$Z=16$$?",
+        "options": [
+          "$$1s^{2}2s^{2}2p^{6}3s^{2}3p^{4}$$",
+          "$$1s^{2}2s^{2}2p^{6}3s^{2}3p^{6}$$",
+          "$$1s^{2}2s^{2}2p^{6}3s^{1}3p^{5}$$",
+          "$$1s^{2}2s^{2}2p^{5}3s^{2}3p^{5}$$"
+        ],
+        "correctAnswer": "$$1s^{2}2s^{2}2p^{6}3s^{2}3p^{4}$$"
+      },
+      {
+        "questionText": "Which statement best explains why first ionization energy generally increases from left to right across a period?",
+        "options": [
+          "Effective nuclear charge increases while shielding changes only slightly.",
+          "Atomic radius increases dramatically across the period.",
+          "Valence electrons are added to a new principal energy level.",
+          "Nuclear charge decreases because protons are added less rapidly than electrons."
+        ],
+        "correctAnswer": "Effective nuclear charge increases while shielding changes only slightly."
+      }
+    ],
+    "fillInTheBlank": [
+      {
+        "questionText": "The experimental technique that determines electron binding energies by measuring emitted electrons after photon absorption is ______.",
+        "options": [
+          "photoelectron spectroscopy",
+          "mass spectrometry",
+          "X-ray diffraction",
+          "calorimetry"
+        ],
+        "correctAnswer": "photoelectron spectroscopy"
+      },
+      {
+        "questionText": "According to the ______ principle, electrons fill the lowest-energy orbitals available first.",
+        "options": [
+          "Aufbau",
+          "Pauli exclusion",
+          "Hund’s",
+          "Boyle’s"
+        ],
+        "correctAnswer": "Aufbau"
+      }
+    ]
+  }
+}

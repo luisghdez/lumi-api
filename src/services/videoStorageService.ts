@@ -1,7 +1,8 @@
 import { storage } from "../config/firebaseConfig";
 
 const DEFAULT_UPLOAD_URL_TTL_MS = 15 * 60 * 1000;
-const DEFAULT_PLAYBACK_URL_TTL_MS = 60 * 60 * 1000;
+/** Long enough for typical HLS playback sessions before refresh (client re-fetches video). */
+const DEFAULT_PLAYBACK_URL_TTL_MS = 4 * 60 * 60 * 1000;
 
 export interface SignedUploadTarget {
   uploadUrl: string;
@@ -30,6 +31,23 @@ export function buildVideoStoragePath(userId: string, videoId: string, mimeType:
 export function buildVideoThumbnailStoragePath(userId: string, videoId: string, mimeType: string): string {
   const extension = getExtensionFromMimeType(mimeType);
   return `videos/${userId}/${videoId}/thumbnail.${extension}`;
+}
+
+/** Slideshow slide object key: `videos/{userId}/{videoId}/slides/slide_{order}.{ext}` */
+export function buildSlideStoragePath(
+  userId: string,
+  videoId: string,
+  order: number,
+  mimeType: string
+): string {
+  const extension = getExtensionFromMimeType(mimeType);
+  return `videos/${userId}/${videoId}/slides/slide_${order}.${extension}`;
+}
+
+const slideshowSlidesPrefix = (userId: string, videoId: string) => `videos/${userId}/${videoId}/slides/`;
+
+export function isSlidePathForVideo(userId: string, videoId: string, storagePath: string): boolean {
+  return storagePath.startsWith(slideshowSlidesPrefix(userId, videoId)) && storagePath.length < 512;
 }
 
 export async function createSignedStorageUploadUrl(
@@ -94,6 +112,9 @@ export async function createSignedVideoPlaybackUrl(
 }
 
 export async function getStoredVideoMetadata(storagePath: string): Promise<StoredVideoMetadata | null> {
+  if (!storagePath || !String(storagePath).trim()) {
+    return null;
+  }
   const bucket = storage.bucket();
   const file = bucket.file(storagePath);
   const [exists] = await file.exists();
@@ -112,8 +133,39 @@ export async function getStoredVideoMetadata(storagePath: string): Promise<Store
 }
 
 export async function deleteStoredVideo(storagePath: string): Promise<void> {
+  if (!storagePath || !String(storagePath).trim()) {
+    return;
+  }
   const bucket = storage.bucket();
   const file = bucket.file(storagePath);
 
   await file.delete({ ignoreNotFound: true });
+}
+
+/** Common locations for packaged adaptive streams (transcoder uploads next to `original.*`). */
+function adaptiveMasterCandidates(userId: string, videoId: string): string[] {
+  const base = `videos/${userId}/${videoId}`;
+  return [
+    `${base}/master.m3u8`,
+    `${base}/hls/master.m3u8`,
+    `${base}/index.m3u8`,
+    `${base}/manifest.mpd`,
+    `${base}/dash/manifest.mpd`,
+  ];
+}
+
+/**
+ * Returns the first existing adaptive manifest path (HLS before DASH), or null.
+ * Use after upload/transcode so playback can prefer multi-bitrate streams.
+ */
+export async function findExistingAdaptivePlaybackPath(
+  userId: string,
+  videoId: string
+): Promise<string | null> {
+  const bucket = storage.bucket();
+  for (const path of adaptiveMasterCandidates(userId, videoId)) {
+    const [exists] = await bucket.file(path).exists();
+    if (exists) return path;
+  }
+  return null;
 }

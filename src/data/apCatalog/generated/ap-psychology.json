@@ -1,0 +1,765 @@
+{
+  "apSubject": "AP Psychology",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Biological Bases of Behavior",
+      "description": "Nervous system structure, brain regions and functions, neurotransmitters, genetics, and evolutionary psychology.",
+      "note": "# Unit 1: Biological Bases of Behavior\n\n## Overview\nThis unit examines how **biological structures and processes** shape behavior, thought, and emotion. For the AP exam, you need to connect **neurons, neurotransmitters, the nervous system, brain regions, genetics, and evolution** to specific psychological functions and behaviors.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Neuron structure and function** | The basic unit of the nervous system, including **dendrites**, **cell body**, **axon**, **myelin sheath**, and **terminal buttons** | AP questions often ask how neural signals travel and how damage to parts of a neuron affects communication |\n| **Action potential** | The electrochemical impulse that travels down the axon when a neuron fires | You must distinguish **all-or-none firing** from graded input and understand how signals move within a neuron |\n| **Synaptic transmission** | Communication between neurons via **neurotransmitters** crossing the **synapse** | Frequently tested through scenarios involving excitation, inhibition, drugs, and behavior changes |\n| **Neurotransmitters** | Chemical messengers such as **acetylcholine**, **dopamine**, **serotonin**, **norepinephrine**, **GABA**, and **endorphins** | AP items often link neurotransmitter imbalances to disorders, movement, mood, or arousal |\n| **Nervous system divisions** | The **central nervous system** and **peripheral nervous system**, including **somatic** and **autonomic** branches | You need to identify which system controls voluntary action, glands, internal organs, and stress responses |\n| **Brain structures and functions** | Major regions including the **brainstem**, **thalamus**, **cerebellum**, **limbic system**, and **cerebral cortex** | Students must match structures with functions and predict effects of injury or stimulation |\n| **Endocrine system** | A slower communication system using hormones released by glands such as the **pituitary**, **adrenal glands**, and **thyroid** | AP questions often contrast neural vs. hormonal communication and connect hormones to stress or growth |\n| **Genetics and evolutionary psychology** | How **heredity**, **genes**, **environment**, and **adaptation** influence behavior | The exam may ask about **nature vs. nurture**, **heritability**, and why traits may have evolved |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart LR\nA[Stimulus received] --> B[Dendrites receive input]\nB --> C[Cell body integrates signals]\nC --> D[Action potential triggered]\nD --> E[Impulse travels down axon]\nE --> F[Terminal buttons release neurotransmitters]\nF --> G[Neurotransmitters cross synapse]\nG --> H[Receptors on next neuron bind transmitter]\nH --> I[Excitatory or inhibitory response]\nI --> J[Neurotransmitter reuptake or breakdown]\n```\n\n### Nervous system organization\n```mermaid\nflowchart TD\nA[Nervous System] --> B[CNS]\nA --> C[PNS]\nB --> D[Brain]\nB --> E[Spinal cord]\nC --> F[Somatic nervous system]\nC --> G[Autonomic nervous system]\nG --> H[Sympathetic division]\nG --> I[Parasympathetic division]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **All-or-none principle** | Once a neuron reaches threshold, it fires completely; it does not fire “partly.” |\n| **Threshold** | The level of stimulation required to trigger an **action potential**. |\n| **Excitatory vs. inhibitory signals** | **Excitatory** inputs increase the likelihood of firing; **inhibitory** inputs decrease it. |\n| **Reuptake** | The process by which neurotransmitters are reabsorbed by the sending neuron. |\n| **Agonist** | A substance that **mimics** a neurotransmitter or increases its action. |\n| **Antagonist** | A substance that **blocks** a neurotransmitter or reduces its action. |\n| **Sympathetic nervous system** | Arouses the body for **fight-or-flight** responses. |\n| **Parasympathetic nervous system** | Calms the body and restores energy after arousal. |\n| **Plasticity** | The brain’s capacity to reorganize or adapt, especially after damage or through experience. |\n| **Heritability** | The proportion of variation in a trait within a population attributable to genetic differences; it does **not** mean the degree to which a trait is genetically fixed in one person. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Similarity / Connection** | **Key Difference** |\n|---|---|---|\n| **Nervous system vs. endocrine system** | Both coordinate communication in the body and influence behavior | The **nervous system** is fast and uses electrochemical signals; the **endocrine system** is slower and uses hormones in the bloodstream |\n| **Sympathetic vs. parasympathetic** | Both are divisions of the **autonomic nervous system** | **Sympathetic** arouses; **parasympathetic** calms |\n| **Hindbrain vs. forebrain** | Both contain structures essential for behavior and survival | **Hindbrain** supports basic life functions and coordination; **forebrain** supports emotion, memory, reasoning, and complex thought |\n| **Broca’s area vs. Wernicke’s area** | Both are language-related cortical areas, usually in the **left hemisphere** | **Broca’s area** is tied to speech production; **Wernicke’s area** is tied to language comprehension |\n| **Genes vs. environment** | Both shape psychological traits and behavior | **Genes** provide inherited predispositions; **environment** influences how those predispositions develop and are expressed |\n\n### Major brain region connections\n```mermaid\nflowchart TD\nA[Brain] --> B[Brainstem]\nA --> C[Cerebellum]\nA --> D[Limbic system]\nA --> E[Cerebral cortex]\n\nB --> B1[Breathing, heartbeat, arousal]\nC --> C1[Balance, coordination, procedural learning]\nD --> D1[Emotion, motivation, memory]\nE --> E1[Perception, language, decision making, voluntary movement]\n```\n\n## Common AP Exam Traps\n- Confusing **neurons firing within a neuron** with **neurotransmitters communicating between neurons**. Electrical transmission occurs within the neuron; chemical transmission occurs across the synapse.\n- Mixing up **sympathetic** and **parasympathetic** functions. Think: sympathetic = arousal, parasympathetic = calming.\n- Treating **heritability** as applying to an individual. It refers to **variation within a population**, not one person.\n- Assuming brain structures work in isolation. AP questions often reward understanding that behavior usually reflects **interacting systems**.\n- Confusing **agonists** with **antagonists**. An agonist increases or imitates neurotransmitter action; an antagonist blocks or reduces it.\n\n## Quick Review Checklist\n- [ ] Explain how a **neural impulse** travels from dendrites to terminal buttons.\n- [ ] Distinguish between **action potential**, **synapse**, **reuptake**, and **threshold**.\n- [ ] Identify the functions of major neurotransmitters, especially **dopamine**, **serotonin**, **acetylcholine**, **GABA**, and **endorphins**.\n- [ ] Describe the divisions of the **nervous system**, including **CNS**, **PNS**, **somatic**, **autonomic**, **sympathetic**, and **parasympathetic**.\n- [ ] Match major brain regions to functions, including the **brainstem**, **thalamus**, **hypothalamus**, **amygdala**, **hippocampus**, **cerebellum**, and **cerebral cortex**.\n- [ ] Compare the **nervous system** and **endocrine system** as communication systems.\n- [ ] Explain the roles of **genes**, **environment**, and **evolutionary processes** in shaping behavior.\n- [ ] Predict how damage, stimulation, or chemical changes in a biological system could affect behavior or cognition.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Central nervous system",
+              "definition": "The division made up of the brain and spinal cord, responsible for integrating information and directing many of the body's responses."
+            },
+            {
+              "term": "Peripheral nervous system",
+              "definition": "The network of sensory and motor neurons that connects the brain and spinal cord to the rest of the body."
+            },
+            {
+              "term": "Sympathetic nervous system",
+              "definition": "The branch of the autonomic division that mobilizes the body for action by increasing arousal, heart rate, and energy use during stress."
+            },
+            {
+              "term": "Action potential",
+              "definition": "A brief electrical impulse that travels down an axon when a neuron fires after reaching threshold."
+            },
+            {
+              "term": "Refractory period",
+              "definition": "The brief time after a neural impulse during which another impulse cannot be initiated or is less likely to occur."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A researcher stimulates one division of the autonomic nervous system and observes increased heart rate, dilated pupils, and reduced digestive activity. Which division was most likely activated?",
+              "options": [
+                "Parasympathetic nervous system",
+                "Somatic nervous system",
+                "Sympathetic nervous system",
+                "Central nervous system"
+              ],
+              "correctAnswer": "Sympathetic nervous system",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains why neural communication typically proceeds in one direction across a synapse?",
+              "options": [
+                "Neurotransmitters are stored in vesicles in the postsynaptic neuron only",
+                "Reuptake occurs before neurotransmitters cross the synaptic gap",
+                "Terminal buttons release chemical messengers while receptor sites are concentrated on the receiving cell",
+                "Myelin sheaths prevent reverse transmission across the axon"
+              ],
+              "correctAnswer": "Terminal buttons release chemical messengers while receptor sites are concentrated on the receiving cell",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The body's automatic maintenance activities, such as digestion and slowing heart rate after a threat has passed, are primarily regulated by the ______ branch of the autonomic nervous system.",
+              "options": [
+                "sympathetic",
+                "parasympathetic",
+                "somatic",
+                "endocrine"
+              ],
+              "correctAnswer": "parasympathetic",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When the membrane potential reaches threshold, the neuron generates an ______ that travels down the axon.",
+              "options": [
+                "action potential",
+                "resting potential",
+                "reuptake",
+                "endocrine signal"
+              ],
+              "correctAnswer": "action potential",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Broca's area",
+              "definition": "A region of the left frontal lobe that is heavily involved in the production of speech; damage often impairs fluent verbal expression."
+            },
+            {
+              "term": "Cerebellum",
+              "definition": "A hindbrain structure important for balance, coordination, and the fine-tuning of voluntary movement."
+            },
+            {
+              "term": "Acetylcholine",
+              "definition": "A chemical messenger involved in muscle action, learning, and memory; deterioration of neurons that release it is associated with Alzheimer's disease."
+            },
+            {
+              "term": "Heritability",
+              "definition": "A statistical estimate of the proportion of variation in a trait within a population that can be attributed to genetic differences."
+            },
+            {
+              "term": "Natural selection",
+              "definition": "The process by which inherited characteristics that improve survival or reproductive success become more common across generations."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Damage to which brain region would most likely impair a person's ability to produce fluent speech while leaving comprehension relatively intact?",
+              "options": [
+                "Wernicke's area",
+                "Broca's area",
+                "Occipital lobe",
+                "Hypothalamus"
+              ],
+              "correctAnswer": "Broca's area",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best reflects the meaning of a heritability estimate of $$0.60$$ for a psychological trait in a particular population?",
+              "options": [
+                "Sixty percent of an individual's trait is determined by genes",
+                "Genes cause the trait while environment has no effect",
+                "About sixty percent of the variation in that trait among people in the population is associated with genetic differences",
+                "The trait will remain unchanged if the environment changes"
+              ],
+              "correctAnswer": "About sixty percent of the variation in that trait among people in the population is associated with genetic differences",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The neurotransmitter most directly associated with enabling muscle contraction and also involved in learning and memory is ______.",
+              "options": [
+                "dopamine",
+                "serotonin",
+                "acetylcholine",
+                "GABA"
+              ],
+              "correctAnswer": "acetylcholine",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Evolutionary psychologists explain many universal behavioral tendencies as the result of ______, the process through which advantageous inherited traits become more common over time.",
+              "options": [
+                "mutation",
+                "natural selection",
+                "neuroplasticity",
+                "reuptake"
+              ],
+              "correctAnswer": "natural selection",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Cognition",
+      "description": "Perception, attention, memory models (encoding/storage/retrieval), forgetting, thinking, language, and problem-solving.",
+      "note": "# Unit 2: Cognition\n\n## Overview\nThis unit examines how people **take in information**, **focus on it**, **store it**, **retrieve it**, and use it to **think**, **solve problems**, and **understand language**. For the AP exam, cognition is a high-value topic because questions often ask you to **distinguish models**, **apply memory concepts to scenarios**, and **compare competing explanations** of thinking and perception.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Perception** | The process of organizing and interpreting sensory input into meaningful experiences. | AP questions often test how perception differs from **sensation** and how **context**, **expectations**, and **perceptual set** shape interpretation. |\n| **Attention** | The selective focus on certain stimuli while ignoring others. | Important for understanding limits of cognition, including **selective attention**, **divided attention**, and how attention affects **encoding**. |\n| **Encoding / Storage / Retrieval** | The three major stages of memory: getting information in, keeping it, and accessing it later. | This is a core AP framework; students must apply each stage to examples and identify where memory failure occurs. |\n| **Working Memory** | The active system that temporarily holds and manipulates information for current tasks. | Often contrasted with **short-term memory**; AP items may ask how rehearsal, chunking, or cognitive load affects processing. |\n| **Long-Term Memory** | Relatively permanent memory system, including **explicit** and **implicit** memory. | Students must distinguish **episodic**, **semantic**, and **procedural** memory and connect them to brain systems and retrieval cues. |\n| **Forgetting** | The inability to retrieve or retain information over time. | AP questions commonly test **encoding failure**, **storage decay**, **retrieval failure**, and **interference**. |\n| **Thinking and Problem-Solving** | Mental manipulation of information to form concepts, reason, judge, and solve problems. | Key AP distinctions include **algorithms** vs. **heuristics**, and biases such as **mental set** and **functional fixedness**. |\n| **Language** | A rule-governed system of symbols used for communication. | The AP exam may ask about **phonemes**, **morphemes**, **syntax**, and the relationship between **language** and **thought**. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Sensory Input\"] --> B[\"Attention\"]\n    B --> C[\"Encoding\"]\n    C --> D[\"Working / Short-Term Memory\"]\n    D --> E[\"Storage in Long-Term Memory\"]\n    E --> F[\"Retrieval\"]\n    F --> G[\"Use in Thinking, Language, and Problem Solving\"]\n\n    B --> H[\"Inattention or Distraction\"]\n    H --> I[\"Weak Encoding\"]\n\n    E --> J[\"Forgetting\"]\n    J --> K[\"Retrieval Failure / Interference / Decay\"]\n\n    F --> L[\"Successful Recall or Recognition\"]\n```\n\n### Memory pathway in words\n1. **Attention** determines what information is processed deeply enough to enter memory.\n2. **Encoding** transforms input into a form the brain can process, often through **visual**, **acoustic**, or **semantic** coding.\n3. **Working memory** briefly holds and manipulates information.\n4. Some information is transferred into **long-term memory** through rehearsal, meaning, and organization.\n5. **Retrieval** brings stored information back into conscious awareness.\n6. Failure can occur at **encoding**, **storage**, or **retrieval**, producing **forgetting**.\n\n## Essential Formulas / Laws / Rules\n\n| **Term / Rule** | **Must-Know Definition or Principle** |\n|---|---|\n| **Selective Attention** | Focusing conscious awareness on one stimulus while filtering out others. |\n| **Inattentional Blindness** | Failure to notice a visible stimulus because attention is directed elsewhere. |\n| **Encoding** | The process of getting information into memory. **Semantic encoding** is typically deepest and best for long-term retention. |\n| **Storage** | The retention of encoded information over time. |\n| **Retrieval** | The process of getting information out of memory storage. |\n| **Working Memory Model** | A limited-capacity system for temporarily holding and manipulating information needed for complex tasks. |\n| **Chunking** | Organizing information into meaningful units to increase short-term memory capacity. |\n| **Explicit Memory** | Conscious memory of facts and experiences; includes **semantic** and **episodic** memory. |\n| **Implicit Memory** | Unconscious retention of skills, conditioned associations, and priming effects; includes **procedural** memory. |\n| **Serial Position Effect** | Tendency to recall best the first items (**primacy effect**) and last items (**recency effect**) in a list. |\n| **Interference** | **Proactive interference** occurs when old information disrupts new learning; **retroactive interference** occurs when new information disrupts old memories. |\n| **Algorithm** | A step-by-step problem-solving method that guarantees a solution if followed correctly. |\n| **Heuristic** | A mental shortcut that is efficient but more error-prone than an algorithm. |\n| **Mental Set** | A tendency to approach problems using methods that worked before. |\n| **Functional Fixedness** | Inability to see a new use for an object beyond its usual function. |\n| **Phoneme** | Smallest distinctive sound unit in language. |\n| **Morpheme** | Smallest meaningful unit in language. |\n| **Syntax** | Rules for combining words into grammatically correct sentences. |\n| **Linguistic Relativity** | The idea that language influences thought and perception. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Related** | **Key Difference** |\n|---|---|---|\n| **Sensation vs. Perception** | Both are part of processing environmental input. | **Sensation** detects stimuli; **perception** organizes and interprets them. |\n| **Working Memory vs. Long-Term Memory** | Working memory can feed information into long-term storage. | **Working memory** is temporary and limited; **long-term memory** is more durable and expansive. |\n| **Recall vs. Recognition** | Both are retrieval processes. | **Recall** requires generating information with fewer cues; **recognition** identifies previously learned information from options or prompts. |\n| **Algorithm vs. Heuristic** | Both are strategies for solving problems. | **Algorithms** are systematic and reliable; **heuristics** are faster but can lead to bias and error. |\n\n```mermaid\nflowchart LR\n    A[\"Shallow Processing\"] --> B[\"Weak Memory Trace\"]\n    C[\"Deep Semantic Processing\"] --> D[\"Stronger Long-Term Retention\"]\n\n    E[\"Heuristic Use\"] --> F[\"Fast Decisions\"]\n    E --> G[\"Possible Biases\"]\n\n    H[\"Algorithm Use\"] --> I[\"Slower Process\"]\n    H --> J[\"More Reliable Solution\"]\n```\n\n## Common AP Exam Traps\n- Confusing **short-term memory** with **working memory**. On many AP questions, working memory is not just storage; it also involves **active manipulation** of information.\n- Mixing up **proactive** and **retroactive interference**. Remember: **proactive** = old disrupts new; **retroactive** = new disrupts old.\n- Assuming all forgetting is caused by **decay**. AP Psychology also emphasizes **retrieval failure**, **interference**, and **encoding failure**.\n- Treating **recognition** and **recall** as identical. Recognition is usually easier because retrieval cues are provided.\n- Confusing **language structure** terms: **phonemes** are sound units, while **morphemes** are meaning units.\n\n## Quick Review Checklist\n- [ ] Explain the difference between **sensation** and **perception**.\n- [ ] Describe how **attention** affects **encoding** and later memory performance.\n- [ ] Identify and apply the stages of **encoding**, **storage**, and **retrieval**.\n- [ ] Distinguish **working memory**, **explicit memory**, and **implicit memory** with examples.\n- [ ] Compare **recall** and **recognition**, and explain why one is usually easier.\n- [ ] Explain major causes of **forgetting**, including **interference** and **retrieval failure**.\n- [ ] Compare **algorithms** and **heuristics** in problem-solving.\n- [ ] Define **phoneme**, **morpheme**, and **syntax**, and connect language to cognition.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Bottom-up processing",
+              "definition": "Analysis that begins with sensory receptors registering features of a stimulus and builds toward a complete perceptual experience."
+            },
+            {
+              "term": "Selective attention",
+              "definition": "The focusing of conscious awareness on a limited aspect of available sensory information while filtering out competing input."
+            },
+            {
+              "term": "Working memory",
+              "definition": "A limited-capacity system for temporarily holding and manipulating information needed for reasoning, comprehension, and learning."
+            },
+            {
+              "term": "Encoding",
+              "definition": "The process of transforming incoming information into a form that can be entered into memory."
+            },
+            {
+              "term": "Iconic memory",
+              "definition": "A very brief visual sensory register that holds an image for a fraction of a second after the stimulus disappears."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student listening to a lecture suddenly notices her name mentioned in a nearby conversation even though she had not been consciously attending to it. This best illustrates which phenomenon?",
+              "options": [
+                "The cocktail party effect",
+                "Change blindness",
+                "Parallel processing",
+                "State-dependent memory"
+              ],
+              "correctAnswer": "The cocktail party effect",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which scenario best demonstrates effortful processing rather than automatic processing?",
+              "options": [
+                "Remembering the route you take to school every day",
+                "Encoding the meaning of a chapter by relating it to prior knowledge",
+                "Instantly detecting the pitch of a loud alarm",
+                "Reading a familiar stop sign while driving"
+              ],
+              "correctAnswer": "Encoding the meaning of a chapter by relating it to prior knowledge",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to the Atkinson-Shiffrin model, information first enters ______ before it is attended to and transferred into short-term processes.",
+              "options": [
+                "sensory memory",
+                "implicit memory",
+                "semantic network",
+                "procedural memory"
+              ],
+              "correctAnswer": "sensory memory",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When prior expectations shape the interpretation of sensory input, perception is being influenced by ______ processing.",
+              "options": [
+                "top-down",
+                "parallel",
+                "automatic",
+                "serial"
+              ],
+              "correctAnswer": "top-down",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Proactive interference",
+              "definition": "Disruption in learning or recalling new information caused by the influence of previously learned material."
+            },
+            {
+              "term": "Retrieval cue",
+              "definition": "A stimulus or association that helps bring stored information into conscious awareness."
+            },
+            {
+              "term": "Algorithm",
+              "definition": "A methodical, step-by-step procedure that guarantees a solution when applied correctly."
+            },
+            {
+              "term": "Linguistic relativity",
+              "definition": "The idea that the structure and vocabulary of a language influence how its speakers think and interpret experience."
+            },
+            {
+              "term": "Confirmation bias",
+              "definition": "The tendency to seek, interpret, and remember information in ways that support preexisting beliefs."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "After memorizing a new locker combination, Maya keeps entering last year's combination instead. Which explanation best accounts for her error?",
+              "options": [
+                "Retroactive interference",
+                "Proactive interference",
+                "Encoding specificity",
+                "The misinformation effect"
+              ],
+              "correctAnswer": "Proactive interference",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best distinguishes an algorithm from a heuristic in problem-solving?",
+              "options": [
+                "An algorithm guarantees a solution, whereas a heuristic is a quicker strategy that may not.",
+                "An algorithm relies on intuition, whereas a heuristic relies on formal logic.",
+                "An algorithm is used only in insight problems, whereas a heuristic is used only in mathematical problems.",
+                "An algorithm requires long-term memory, whereas a heuristic requires only sensory memory."
+              ],
+              "correctAnswer": "An algorithm guarantees a solution, whereas a heuristic is a quicker strategy that may not.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When a person suddenly arrives at a solution without consciously working through each step, the experience is called ______.",
+              "options": [
+                "insight",
+                "fixation",
+                "rehearsal",
+                "chunking"
+              ],
+              "correctAnswer": "insight",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The tendency to overestimate the importance of information that comes readily to mind is known as the ______ heuristic.",
+              "options": [
+                "availability",
+                "representativeness",
+                "means-end",
+                "framing"
+              ],
+              "correctAnswer": "availability",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Development and Learning",
+      "description": "Lifespan development, classical and operant conditioning, observational learning, and cognitive development.",
+      "note": "# Unit 3: Development and Learning\n\n## Overview\nThis unit covers how humans **develop across the lifespan** and how behavior changes through **learning**. For the AP exam, you need to connect major developmental theories, conditioning processes, and **observational learning** to real-world scenarios and distinguish between similar-sounding concepts.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Lifespan Development** | Patterns of physical, cognitive, and social change from infancy through old age. | AP questions often ask you to identify age-linked changes or apply developmental terms to examples. |\n| **Piaget’s Cognitive Development** | A stage theory explaining how children’s thinking changes qualitatively over time. | You must recognize stages like **sensorimotor**, **preoperational**, **concrete operational**, and **formal operational** in scenarios. |\n| **Attachment** | The emotional bond between an infant and caregiver. | AP items often test **secure vs. insecure attachment**, **Harlow**, and **Ainsworth’s Strange Situation**. |\n| **Temperament and Parenting Styles** | **Temperament** is inborn emotional reactivity; parenting styles shape social development. | Useful for distinguishing **nature vs. nurture** and for applying **authoritative**, **authoritarian**, and **permissive** parenting. |\n| **Classical Conditioning** | Learning through association between two stimuli. | Frequently tested vocabulary includes **unconditioned stimulus**, **conditioned response**, **acquisition**, **extinction**, **generalization**, and **discrimination**. |\n| **Operant Conditioning** | Learning through consequences such as reinforcement and punishment. | AP questions often hinge on correctly identifying **positive/negative reinforcement** versus **positive/negative punishment**. |\n| **Observational Learning** | Learning by watching others, as emphasized by **Bandura**. | Important for social behavior, aggression, and the role of **models**, **imitation**, and **vicarious reinforcement**. |\n| **Cognitive and Latent Learning** | Learning that involves mental processes, including learning without immediate reinforcement. | Helps contrast strict behaviorism with **Tolman’s latent learning** and **cognitive maps**. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Development and Learning] --> B[Physical and Cognitive Development]\n    A --> C[Behavioral Learning]\n    A --> D[Social Learning]\n\n    B --> E[Piaget's Stages]\n    B --> F[Attachment and Parenting]\n    B --> G[Adolescence to Adulthood]\n\n    C --> H[Classical Conditioning]\n    C --> I[Operant Conditioning]\n\n    H --> J[Neutral Stimulus]\n    J --> K[Paired with Unconditioned Stimulus]\n    K --> L[Conditioned Response Forms]\n    L --> M[Generalization / Discrimination / Extinction]\n\n    I --> N[Behavior]\n    N --> O[Consequence]\n    O --> P[Reinforcement increases behavior]\n    O --> Q[Punishment decreases behavior]\n    P --> R[Positive or Negative Reinforcement]\n    Q --> S[Positive or Negative Punishment]\n\n    D --> T[Observation of Model]\n    T --> U[Imitation]\n    U --> V[Vicarious Reinforcement or Consequences]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Maturation** | Biological growth processes that unfold in an orderly way, relatively independent of experience. |\n| **Schema** | A mental framework used to organize and interpret information. |\n| **Assimilation** | Interpreting new experiences using existing schemas. |\n| **Accommodation** | Adapting schemas when new information does not fit old ones. |\n| **Object Permanence** | Understanding that objects continue to exist even when out of sight; develops in the **sensorimotor stage**. |\n| **Conservation** | Understanding that quantity remains the same despite changes in shape or appearance; develops in the **concrete operational stage**. |\n| **Classical Conditioning Rule** | A **neutral stimulus** becomes a **conditioned stimulus** after repeated pairing with an **unconditioned stimulus**. |\n| **Operant Conditioning Rule** | **Reinforcement** increases behavior; **punishment** decreases behavior. |\n| **Positive vs. Negative** | **Positive** means adding a stimulus; **negative** means removing a stimulus. These terms do **not** mean good or bad. |\n| **Shaping** | Reinforcing successive approximations of a target behavior. |\n| **Latent Learning** | Learning that becomes evident only when there is an incentive to demonstrate it. |\n| **Observational Learning Conditions** | Effective modeling depends on **attention**, **retention**, **reproduction**, and **motivation**. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Differ** | **Key AP Distinction** |\n|---|---|---|\n| **Classical Conditioning vs. Operant Conditioning** | Classical conditioning associates **two stimuli**; operant conditioning associates **behavior and consequence**. | Ask: is the subject responding automatically or acting to produce an outcome? |\n| **Assimilation vs. Accommodation** | **Assimilation** fits new info into existing schemas; **accommodation** changes the schema itself. | AP scenarios often test whether thinking stayed the same or had to be revised. |\n| **Secure Attachment vs. Insecure Attachment** | **Securely attached** infants use caregivers as a base of safety; insecure patterns show less confidence or inconsistent responses. | Often linked to caregiver responsiveness and later social outcomes. |\n| **Reinforcement vs. Punishment** | Reinforcement strengthens behavior; punishment weakens behavior. | Do not confuse **negative reinforcement** with punishment. |\n| **Piaget vs. Vygotsky** | **Piaget** emphasized self-directed stage development; **Vygotsky** emphasized social and cultural influence on cognition. | If social guidance and language scaffolding are central, think **Vygotsky**. |\n\n### Reinforcement and Punishment Map\n\n```mermaid\nflowchart LR\n    A[Consequence after behavior] --> B[Increase behavior]\n    A --> C[Decrease behavior]\n\n    B --> D[Positive Reinforcement: add pleasant stimulus]\n    B --> E[Negative Reinforcement: remove unpleasant stimulus]\n\n    C --> F[Positive Punishment: add unpleasant stimulus]\n    C --> G[Negative Punishment: remove pleasant stimulus]\n```\n\n## Common AP Exam Traps\n\n- **Negative reinforcement** is not punishment; it **increases** a behavior by removing something aversive.\n- **Piaget’s stages** are tied to specific thinking abilities; for example, **object permanence** is not part of the **formal operational stage**.\n- In **classical conditioning**, the learner is typically responding **automatically**, not choosing a behavior to earn a consequence.\n- **Correlation between age and behavior** does not automatically prove that development is caused only by maturation; experience matters too.\n- **Parenting style** questions can be tricky: **authoritative** parenting is high in both expectations and responsiveness, and is generally linked to the most positive outcomes.\n\n## Quick Review Checklist\n\n- [ ] Explain the major changes that occur across **infancy, childhood, adolescence, and adulthood**.\n- [ ] Identify and apply **Piaget’s four stages of cognitive development** to examples.\n- [ ] Distinguish **assimilation** from **accommodation**.\n- [ ] Describe **attachment** and interpret findings from **Harlow** and **Ainsworth**.\n- [ ] Identify all major parts of **classical conditioning**, including **acquisition**, **extinction**, **generalization**, and **discrimination**.\n- [ ] Correctly classify examples of **positive reinforcement**, **negative reinforcement**, **positive punishment**, and **negative punishment**.\n- [ ] Explain **observational learning** using **Bandura’s** research and the role of models.\n- [ ] Compare **behaviorist** explanations of learning with **cognitive** approaches such as **latent learning** and **cognitive maps**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Schema",
+              "definition": "A mental framework used to organize and interpret information, helping individuals make sense of experiences and guide future understanding."
+            },
+            {
+              "term": "Assimilation",
+              "definition": "The process of interpreting new experiences in terms of existing mental frameworks rather than changing those frameworks."
+            },
+            {
+              "term": "Accommodation",
+              "definition": "The process of modifying existing mental frameworks or creating new ones in response to information that does not fit prior understanding."
+            },
+            {
+              "term": "Secure attachment",
+              "definition": "A pattern in which an infant uses a caregiver as a safe base for exploration and is comforted by the caregiver after separation or distress."
+            },
+            {
+              "term": "Object permanence",
+              "definition": "The understanding that things continue to exist even when they are out of sight, a major milestone in early cognitive development."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A child who has learned that all four-legged household animals are \"dogs\" begins calling a neighbor's cat a \"dog\" as well. According to Piaget, this response best illustrates which process?",
+              "options": [
+                "Conservation",
+                "Accommodation",
+                "Assimilation",
+                "Egocentrism"
+              ],
+              "correctAnswer": "Assimilation",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In Harlow's studies with infant rhesus monkeys, the infants consistently preferred which surrogate mother?",
+              "options": [
+                "The wire mother that provided food",
+                "The cloth mother that provided comfort",
+                "The more visually complex surrogate",
+                "The surrogate introduced first"
+              ],
+              "correctAnswer": "The cloth mother that provided comfort",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to Piaget, the ability to understand that an object still exists even when it is hidden is called ______.",
+              "options": [
+                "egocentrism",
+                "object permanence",
+                "conservation",
+                "animism"
+              ],
+              "correctAnswer": "object permanence",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a child changes an existing mental framework after learning that not all four-legged animals are dogs, Piaget called this ______.",
+              "options": [
+                "assimilation",
+                "accommodation",
+                "reversibility",
+                "centration"
+              ],
+              "correctAnswer": "accommodation",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Classical conditioning",
+              "definition": "A type of learning in which a neutral stimulus comes to elicit a response after being paired with a stimulus that naturally produces that response."
+            },
+            {
+              "term": "Operant conditioning",
+              "definition": "A type of learning in which behavior is shaped by its consequences, including reinforcement and punishment."
+            },
+            {
+              "term": "Negative reinforcement",
+              "definition": "An increase in behavior that occurs because an aversive stimulus is removed after the behavior."
+            },
+            {
+              "term": "Observational learning",
+              "definition": "Learning that occurs by watching others' actions and the outcomes of those actions, without direct reinforcement of the learner."
+            },
+            {
+              "term": "Latent learning",
+              "definition": "Learning that is not immediately demonstrated in behavior but becomes evident when there is a reason to show it."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student begins buckling her seat belt consistently because the car's irritating warning sound stops as soon as she does so. This increase in behavior is best explained by",
+              "options": [
+                "positive reinforcement",
+                "negative reinforcement",
+                "positive punishment",
+                "spontaneous recovery"
+              ],
+              "correctAnswer": "negative reinforcement",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Bandura's Bobo doll findings provided the strongest evidence that children can",
+              "options": [
+                "acquire responses through observational learning",
+                "form conditioned emotional responses without awareness",
+                "develop object permanence through modeling",
+                "learn only when directly reinforced"
+              ],
+              "correctAnswer": "acquire responses through observational learning",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In classical conditioning, the learned reaction to a previously neutral stimulus is the ______.",
+              "options": [
+                "unconditioned response",
+                "conditioned response",
+                "unconditioned stimulus",
+                "discriminative stimulus"
+              ],
+              "correctAnswer": "conditioned response",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Learning that becomes apparent only when there is an incentive to demonstrate it is called ______.",
+              "options": [
+                "shaping",
+                "latent learning",
+                "generalization",
+                "extinction"
+              ],
+              "correctAnswer": "latent learning",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Social Psychology and Personality",
+      "description": "Social influence, conformity, obedience, attitudes, trait and psychodynamic personality theories.",
+      "note": "# Unit 4: Social Psychology and Personality\n\n## Overview\nThis unit covers how **social situations** shape behavior and how psychologists explain enduring patterns of **personality**. For the AP exam, students must distinguish among major social influence findings, understand how **attitudes** relate to behavior, and compare leading **trait** and **psychodynamic** theories of personality.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Conformity** | Adjusting behavior or thinking to align with a group standard. | AP questions often test why people conform and how **normative** vs. **informational social influence** differ. |\n| **Obedience** | Following direct commands from an authority figure. | Frequently linked to **Milgram’s** research and the power of situational pressure. |\n| **Social Facilitation** | Improved performance on simple or well-learned tasks in the presence of others; worse performance on difficult tasks. | Students must apply this concept to examples rather than just define it. |\n| **Attitudes and Actions** | The relationship between beliefs, feelings, and behavior. | AP items often focus on **cognitive dissonance** and why behavior can shape attitudes. |\n| **Attribution Theory** | Explains how people infer causes of behavior. | Important for distinguishing **dispositional** vs. **situational** causes and spotting the **fundamental attribution error**. |\n| **Trait Theories** | Personality explained through stable characteristics, often summarized by the **Big Five**. | Students should compare trait theories with psychodynamic explanations and know trait dimensions. |\n| **Psychodynamic Theory** | Personality shaped by unconscious conflicts, early experience, and internal structures. | AP Psychology commonly tests **Freud’s** ideas: **id**, **ego**, **superego**, and **defense mechanisms**. |\n| **Defense Mechanisms** | Unconscious strategies that reduce anxiety by distorting reality. | Often appears in scenario-based questions requiring identification of **repression**, **projection**, **regression**, and others. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Social Situation] --> B[Perception of Group or Authority]\n    B --> C{Type of Social Pressure?}\n    C --> D[Conformity]\n    C --> E[Obedience]\n    C --> F[Compliance]\n    D --> G[\"Normative influence: fit in\"]\n    D --> H[\"Informational influence: be correct\"]\n    E --> I[Authority legitimacy]\n    E --> J[Proximity and setting]\n    F --> K[Foot-in-the-door or other persuasion]\n    G --> L[Behavior changes]\n    H --> L\n    I --> L\n    J --> L\n    K --> L\n    L --> M[Possible attitude shift]\n    M --> N[Cognitive dissonance reduction]\n```\n\n### Personality theory structure\n1. **Trait approach**\n   - Emphasizes **measurable, relatively stable characteristics**\n   - Often uses **self-report inventories** or factor analysis\n   - Best-known model: **Big Five**\n\n2. **Psychodynamic approach**\n   - Emphasizes **unconscious motives**, **conflict**, and **childhood experience**\n   - Personality reflects tension among **id**, **ego**, and **superego**\n   - Anxiety may be managed through **defense mechanisms**\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Normative Social Influence** | Conforming to gain approval or avoid disapproval from the group. |\n| **Informational Social Influence** | Conforming because the group is seen as a source of accurate information. |\n| **Fundamental Attribution Error** | Tendency to overestimate **personal traits** and underestimate **situational factors** when explaining others’ behavior. |\n| **Cognitive Dissonance** | Psychological discomfort caused by inconsistency between attitudes and actions; people often reduce it by changing attitudes, justifying behavior, or minimizing conflict. |\n| **Foot-in-the-Door Phenomenon** | A person who agrees to a small request is more likely to agree later to a larger request. |\n| **Social Facilitation Rule** | Presence of others tends to improve performance on **simple/well-learned tasks** and impair performance on **complex/new tasks**. |\n| **Big Five Traits** | **Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism**. |\n| **Freud’s Personality Structure** | **Id** seeks immediate gratification, **ego** mediates realistically, **superego** represents internalized moral standards. |\n| **Defense Mechanisms** | Unconscious ego defenses such as **repression**, **projection**, **displacement**, **regression**, **reaction formation**, **rationalization**, and **denial**. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Key Difference** | **Connection** | **Typical AP Use** |\n|---|---|---|---|\n| **Conformity vs. Obedience** | **Conformity** involves group pressure; **obedience** involves direct orders from authority. | Both show the power of the situation over behavior. | Scenario asks whether a person is following peers or an authority figure. |\n| **Normative vs. Informational Influence** | **Normative** = fit in; **informational** = be correct. | Both can produce conformity. | Students must identify the motive behind matching the group. |\n| **Trait vs. Psychodynamic Theories** | **Trait** theories describe stable characteristics; **psychodynamic** theories explain personality through unconscious conflict. | Both seek to explain consistency in behavior. | Compare modern evidence-based approaches with Freud’s theory. |\n| **Attitude Change vs. Behavior Change** | Sometimes attitudes guide actions; other times actions reshape attitudes. | **Cognitive dissonance** links the two. | AP questions often ask why someone changes beliefs after acting inconsistently. |\n\n```mermaid\nflowchart LR\n    A[Trait Theories] --> B[Stable dimensions]\n    A --> C[Big Five]\n    D[Psychodynamic Theories] --> E[Unconscious conflict]\n    D --> F[Id Ego Superego]\n    C --> G[Personality explanation]\n    F --> G\n```\n\n## Common AP Exam Traps\n- Confusing **conformity** with **obedience**: conformity involves peers or group norms, while obedience involves an **authority**.\n- Assuming social presence always improves performance. **Social facilitation** helps with easy or practiced tasks but can hurt performance on difficult ones.\n- Treating **fundamental attribution error** as applying equally to oneself and others. It primarily refers to explanations of **others’** behavior.\n- Misidentifying **defense mechanisms** as conscious lying. They are considered **unconscious** processes in psychodynamic theory.\n- Believing **Freud’s** theory and **trait theories** answer the same question in the same way. Trait theories describe patterns; psychodynamic theory explains personality through internal conflict and development.\n\n## Quick Review Checklist\n- [ ] I can explain **conformity**, **compliance**, and **obedience** and tell them apart.\n- [ ] I can distinguish **normative social influence** from **informational social influence**.\n- [ ] I can apply **Milgram’s** findings to examples of situational pressure and authority.\n- [ ] I can explain how **cognitive dissonance** may lead someone to change an attitude.\n- [ ] I can identify **dispositional** and **situational** attributions and explain the **fundamental attribution error**.\n- [ ] I can describe the **Big Five** traits and recognize trait-based explanations of personality.\n- [ ] I can explain **Freud’s** **id**, **ego**, and **superego**.\n- [ ] I can identify common **defense mechanisms** from short scenarios.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Conformity",
+              "definition": "Adjusting behavior or thinking to align with a real or imagined group standard, often because of social pressure or a desire for acceptance."
+            },
+            {
+              "term": "Normative social influence",
+              "definition": "A form of social pressure in which a person goes along with others to gain approval or avoid rejection, even when privately disagreeing."
+            },
+            {
+              "term": "Informational social influence",
+              "definition": "A form of social pressure in which a person accepts others' views as a source of evidence about reality, especially in ambiguous situations."
+            },
+            {
+              "term": "Foot-in-the-door phenomenon",
+              "definition": "A compliance strategy in which agreement to a small initial request increases the likelihood of agreement to a larger related request later."
+            },
+            {
+              "term": "Cognitive dissonance",
+              "definition": "Psychological discomfort produced by inconsistency among attitudes, beliefs, and behaviors, often leading a person to change one of them to reduce tension."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a replication of Solomon Asch's line-judgment task, participants are placed with several confederates who unanimously give an obviously incorrect answer. When participants publicly agree with the group despite knowing the answer is wrong, their behavior is best explained by",
+              "options": [
+                "normative social influence",
+                "informational social influence",
+                "the central route to persuasion",
+                "social facilitation"
+              ],
+              "correctAnswer": "normative social influence",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A campaign first asks residents to place a small sticker supporting recycling in a window. Two weeks later, many of the same residents agree to install a large yard sign promoting environmental action. This outcome best illustrates",
+              "options": [
+                "the mere-exposure effect",
+                "the foot-in-the-door phenomenon",
+                "group polarization",
+                "the just-world phenomenon"
+              ],
+              "correctAnswer": "the foot-in-the-door phenomenon",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When people experience tension after acting in ways that conflict with their attitudes, psychologists describe this state as ______.",
+              "options": [
+                "social loafing",
+                "cognitive dissonance",
+                "deindividuation",
+                "confirmation bias"
+              ],
+              "correctAnswer": "cognitive dissonance",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In uncertain situations, people are especially likely to accept the judgments of others as accurate, a process known as ______.",
+              "options": [
+                "informational social influence",
+                "normative social influence",
+                "the fundamental attribution error",
+                "the self-serving bias"
+              ],
+              "correctAnswer": "informational social influence",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Fundamental attribution error",
+              "definition": "The tendency to overestimate dispositional causes of another person's behavior while underestimating situational influences."
+            },
+            {
+              "term": "Self-serving bias",
+              "definition": "The tendency to attribute successes to internal factors and failures to external circumstances, thereby protecting self-esteem."
+            },
+            {
+              "term": "Big Five personality traits",
+              "definition": "A widely used trait framework describing personality along five broad dimensions: openness, conscientiousness, extraversion, agreeableness, and neuroticism."
+            },
+            {
+              "term": "Psychodynamic theory",
+              "definition": "An approach emphasizing the influence of unconscious motives, internal conflicts, and early childhood experiences on behavior and personality."
+            },
+            {
+              "term": "Defense mechanisms",
+              "definition": "Unconscious strategies that reduce anxiety by distorting or denying reality or by redirecting emotional impulses."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "After observing a classmate arrive late, Maya concludes that he is irresponsible and ignores the fact that a major traffic accident blocked the highway. Maya's judgment best illustrates",
+              "options": [
+                "the self-reference effect",
+                "the actor-observer bias",
+                "the fundamental attribution error",
+                "groupthink"
+              ],
+              "correctAnswer": "the fundamental attribution error",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "According to trait theorists, which set of dimensions is most associated with a contemporary broad model of personality used in AP Psychology?",
+              "options": [
+                "id, ego, superego",
+                "openness, conscientiousness, extraversion, agreeableness, neuroticism",
+                "autonomy, initiative, industry, identity, intimacy",
+                "reciprocal determinism, self-efficacy, locus of control, optimism"
+              ],
+              "correctAnswer": "openness, conscientiousness, extraversion, agreeableness, neuroticism",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A student who credits a high exam score to intelligence but blames a low score on an unfair test is demonstrating the ______.",
+              "options": [
+                "fundamental attribution error",
+                "self-serving bias",
+                "just-world phenomenon",
+                "mere-exposure effect"
+              ],
+              "correctAnswer": "self-serving bias",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In Freud's model, unconscious methods such as repression and projection that reduce anxiety are called ______.",
+              "options": [
+                "personality traits",
+                "defense mechanisms",
+                "projective tests",
+                "self-fulfilling prophecies"
+              ],
+              "correctAnswer": "defense mechanisms",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Mental and Physical Health",
+      "description": "Psychological disorders (classification, symptoms), treatment approaches, stress, coping, and health psychology.",
+      "note": "# Unit 5: Mental and Physical Health\n\n## Overview\nThis unit examines how psychologists define, classify, and treat **psychological disorders**, while also exploring how **stress**, **coping**, and behavior influence physical health. For the AP exam, students must connect symptoms to disorder categories, compare treatment approaches, and explain how biological, psychological, and social factors interact in mental and physical well-being.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Psychological disorder** | A pattern of thoughts, feelings, or behaviors that is **deviant**, **distressing**, and **dysfunctional**. | AP questions often test the distinction between unusual behavior and clinically significant disorder. |\n| **DSM-5-TR classification** | The diagnostic manual used to identify and classify mental disorders based on symptoms. | You may need to recognize how disorders are grouped and why diagnosis improves reliability but has limits. |\n| **Anxiety and trauma-related disorders** | Disorders involving excessive fear, worry, arousal, or responses to traumatic events, such as **generalized anxiety disorder**, **phobias**, **panic disorder**, and **PTSD**. | Frequently tested through symptom scenarios and comparison questions. |\n| **Mood disorders** | Disorders involving persistent emotional extremes, especially **major depressive disorder** and **bipolar disorders**. | Students must distinguish depressive vs. bipolar patterns and identify hallmark symptoms. |\n| **Schizophrenia spectrum disorders** | Severe disorders involving disturbed thought, perception, emotion, and behavior, including **delusions**, **hallucinations**, and disorganized thinking. | AP items often ask about **positive** vs. **negative symptoms** and the role of dopamine or genetics. |\n| **Psychotherapy approaches** | Treatment methods such as **psychodynamic**, **humanistic**, **behavioral**, **cognitive**, and **cognitive-behavioral therapy**. | You must match therapies to their goals, techniques, and underlying assumptions. |\n| **Biomedical therapy** | Treatments that act directly on the nervous system, including **psychotropic medication**, **ECT**, and other medical interventions. | AP questions commonly ask when medication is used and how it differs from psychotherapy. |\n| **Stress and health psychology** | The study of how stress responses, coping, and behavior affect health and illness. | This links psychological processes to physical outcomes, including **immune function**, **heart disease**, and lifestyle factors. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Stressful Event or Appraisal\"] --> B[\"Perceived as Threat or Challenge\"]\n    B --> C[\"Physiological Stress Response\"]\n    C --> D[\"Sympathetic Nervous System Activation\"]\n    C --> E[\"Endocrine Response\"]\n    D --> F[\"Fight-or-Flight Reactions\"]\n    E --> G[\"Stress Hormones Released\"]\n    F --> H[\"Short-Term Adaptation\"]\n    G --> H\n    H --> I[\"Coping Response\"]\n    I --> J[\"Problem-Focused Coping\"]\n    I --> K[\"Emotion-Focused Coping\"]\n    J --> L[\"Reduced Stressor or Better Control\"]\n    K --> M[\"Reduced Emotional Distress\"]\n    L --> N[\"Better Mental and Physical Health\"]\n    M --> N\n    G --> O[\"Chronic Activation\"]\n    O --> P[\"Weakened Immunity, Fatigue, Illness Risk\"]\n```\n\n### Disorder Identification and Treatment Logic\n1. **Observe symptoms**: thoughts, emotions, behaviors, duration, and severity.\n2. **Classify the disorder** using diagnostic criteria in the **DSM-5-TR**.\n3. **Consider causes** through the **biopsychosocial approach**:\n   - **Biological**: genetics, neurotransmitters, brain structure\n   - **Psychological**: learning, cognition, trauma, coping style\n   - **Social-cultural**: family, culture, stressors, social support\n4. **Select treatment**:\n   - **Psychotherapy** for thought/behavior/emotion patterns\n   - **Biomedical therapy** for direct biological intervention\n   - Often **combined treatment** is most effective\n5. **Evaluate outcomes** using symptom reduction, functioning, and relapse prevention.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **The 4 D's of disorder** | Behavior is often judged disordered when it involves **deviance**, **distress**, **dysfunction**, and sometimes **danger**. |\n| **Biopsychosocial model** | Psychological disorders and health outcomes result from interacting **biological**, **psychological**, and **social-cultural** influences. |\n| **Medical model** | Assumes psychological disorders are illnesses that can be diagnosed, treated, and often influenced by biological factors. |\n| **Positive vs. negative symptoms of schizophrenia** | **Positive symptoms** add abnormal behaviors, such as **hallucinations** and **delusions**; **negative symptoms** remove normal functions, such as flat affect, reduced speech, or social withdrawal. |\n| **Classical conditioning in phobias** | A neutral stimulus can become associated with fear through learning; this helps explain how some **phobias** develop. |\n| **Operant conditioning in treatment** | **Token economies** and reinforcement can increase adaptive behaviors, especially in institutional settings. |\n| **Cognitive model of depression** | Maladaptive thought patterns, such as **learned helplessness** and negative explanatory style, contribute to depression. |\n| **General Adaptation Syndrome** | **Alarm**, **resistance**, and **exhaustion** describe the body’s response to prolonged stress. |\n\n## Connections & Comparisons\n\n| **Concepts Compared** | **Key Similarities** | **Key Differences** | **AP Tip** |\n|---|---|---|---|\n| **Generalized anxiety disorder** vs. **phobia** | Both involve anxiety and can disrupt daily functioning. | **GAD** is persistent, free-floating worry; a **phobia** is intense fear tied to a specific object or situation. | If the fear is highly specific, think **phobia**, not **GAD**. |\n| **Major depressive disorder** vs. **bipolar disorder** | Both are **mood disorders** and may involve depressive episodes. | **Bipolar disorder** includes shifts to **mania** or **hypomania**; major depression does not. | Do not label every severe depression as bipolar unless mania is present. |\n| **Psychotherapy** vs. **biomedical therapy** | Both aim to reduce symptoms and improve functioning. | **Psychotherapy** uses psychological techniques; **biomedical therapy** uses medication or medical procedures. | Many AP scenarios point to **combined treatment** as most effective. |\n| **Problem-focused coping** vs. **emotion-focused coping** | Both are coping strategies for stress. | **Problem-focused** coping targets the stressor itself; **emotion-focused** coping manages emotional response. | Ask whether the person is changing the situation or managing feelings. |\n\n## Common AP Exam Traps\n- Confusing **hallucinations** with **delusions**: hallucinations are false **sensory experiences**; delusions are false **beliefs**.\n- Assuming all unusual behavior is a disorder. AP questions often require **distress** and **dysfunction**, not just oddity.\n- Mixing up **obsessions** and **compulsions** in **OCD**: obsessions are intrusive thoughts; compulsions are repetitive behaviors or mental acts.\n- Treating **PTSD** as just anxiety after stress. It specifically involves exposure to trauma and symptoms such as intrusion, avoidance, and heightened arousal.\n- Believing **electroconvulsive therapy** is obsolete or used casually. On the AP exam, it is typically presented as a serious biomedical treatment for severe depression when other treatments fail.\n\n## Quick Review Checklist\n- [ ] Define a **psychological disorder** and explain the role of **deviance**, **distress**, and **dysfunction**.\n- [ ] Identify major categories of disorders, including **anxiety**, **mood**, **schizophrenia spectrum**, and **trauma-related disorders**.\n- [ ] Distinguish **hallucinations** from **delusions**, and **positive** from **negative symptoms** of schizophrenia.\n- [ ] Compare **major depressive disorder** and **bipolar disorder** using symptoms and course.\n- [ ] Explain how the **biopsychosocial approach** accounts for disorder development and treatment.\n- [ ] Match major therapy types to their methods, including **behavior therapy**, **cognitive therapy**, **CBT**, and **biomedical therapy**.\n- [ ] Describe the **stress response**, including **fight-or-flight** and **General Adaptation Syndrome**.\n- [ ] Differentiate **problem-focused coping** from **emotion-focused coping** and connect stress to physical health outcomes.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "DSM-5",
+              "definition": "The standard manual used by clinicians in the United States to diagnose mental disorders by listing specific criteria and symptom patterns."
+            },
+            {
+              "term": "Generalized Anxiety Disorder",
+              "definition": "A condition marked by excessive, persistent worry about multiple life circumstances, often accompanied by muscle tension, restlessness, and difficulty concentrating."
+            },
+            {
+              "term": "Major Depressive Disorder",
+              "definition": "A mood condition involving at least two weeks of persistently low mood or loss of interest, along with symptoms such as sleep disruption, feelings of worthlessness, and changes in appetite or energy."
+            },
+            {
+              "term": "Schizophrenia",
+              "definition": "A severe disorder characterized by disturbed perceptions, disorganized thinking, inappropriate emotions, and possible delusions or hallucinations."
+            },
+            {
+              "term": "Obsessive-Compulsive Disorder",
+              "definition": "A condition involving unwanted, intrusive thoughts and repetitive behaviors performed to reduce distress or prevent a feared outcome."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A clinician is using a system that emphasizes specific symptom clusters and diagnostic criteria rather than explanations of causes. Which approach is the clinician most clearly using?",
+              "options": [
+                "Psychoanalytic interpretation",
+                "DSM-5 diagnostic classification",
+                "Projective personality assessment",
+                "Humanistic case conceptualization"
+              ],
+              "correctAnswer": "DSM-5 diagnostic classification",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A patient reports hearing voices that are not present and showing disorganized speech. Which diagnosis is most strongly suggested by these symptoms?",
+              "options": [
+                "Obsessive-compulsive disorder",
+                "Generalized anxiety disorder",
+                "Schizophrenia",
+                "Specific phobia"
+              ],
+              "correctAnswer": "Schizophrenia",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Persistent, excessive worry across many areas of life is the defining feature of ______.",
+              "options": [
+                "generalized anxiety disorder",
+                "schizophrenia",
+                "bipolar disorder",
+                "dissociative amnesia"
+              ],
+              "correctAnswer": "generalized anxiety disorder",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Repetitive checking rituals performed to reduce anxiety caused by intrusive thoughts are most characteristic of ______.",
+              "options": [
+                "obsessive-compulsive disorder",
+                "major depressive disorder",
+                "panic disorder",
+                "antisocial personality disorder"
+              ],
+              "correctAnswer": "obsessive-compulsive disorder",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Cognitive Behavioral Therapy",
+              "definition": "A treatment approach that seeks to change maladaptive thoughts and behaviors by identifying distorted thinking and practicing more effective responses."
+            },
+            {
+              "term": "Selective Serotonin Reuptake Inhibitors",
+              "definition": "A class of medications that increase the availability of serotonin in synapses and is commonly prescribed for depressive and anxiety-related conditions."
+            },
+            {
+              "term": "Stress Response",
+              "definition": "The set of physiological and psychological reactions triggered when a person perceives demands as threatening or challenging."
+            },
+            {
+              "term": "General Adaptation Syndrome",
+              "definition": "A three-stage pattern of alarm, resistance, and exhaustion that describes the body's prolonged response to sustained demands."
+            },
+            {
+              "term": "Problem-Focused Coping",
+              "definition": "Efforts aimed at directly changing a stressor or one's interaction with it rather than merely managing emotional reactions."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A therapist helps a client identify catastrophizing thoughts, test their accuracy, and replace them with more adaptive interpretations while also practicing new behaviors. Which treatment is being used?",
+              "options": [
+                "Electroconvulsive therapy",
+                "Client-centered therapy",
+                "Cognitive behavioral therapy",
+                "Psychoanalysis"
+              ],
+              "correctAnswer": "Cognitive behavioral therapy",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "According to Selye's model, which stage occurs when the body's resources become depleted after prolonged exposure to stress?",
+              "options": [
+                "Alarm",
+                "Resistance",
+                "Exhaustion",
+                "Recovery"
+              ],
+              "correctAnswer": "Exhaustion",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A coping strategy that involves making a study schedule to reduce academic stress is best classified as ______.",
+              "options": [
+                "problem-focused coping",
+                "emotion-focused coping",
+                "learned helplessness",
+                "free association"
+              ],
+              "correctAnswer": "problem-focused coping",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Medications commonly used to treat depression by increasing serotonin availability in the synapse are called ______.",
+              "options": [
+                "benzodiazepines",
+                "selective serotonin reuptake inhibitors",
+                "beta blockers",
+                "mood stabilizers"
+              ],
+              "correctAnswer": "selective serotonin reuptake inhibitors",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

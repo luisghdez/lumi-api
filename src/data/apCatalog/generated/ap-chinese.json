@@ -1,0 +1,917 @@
+{
+  "apSubject": "AP Chinese Language and Culture",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Families and Communities",
+      "description": "Language and culture related to family structures, community life, social roles, and interpersonal relationships.",
+      "note": "# Unit 1: Families and Communities\n\n## Overview\nThis unit introduces the language and cultural knowledge needed to discuss **family structures**, **community life**, **social roles**, and **interpersonal relationships** in Chinese-speaking contexts. For the AP exam, this unit matters because students must interpret and present ideas about **daily life**, **values**, and **human relationships** using accurate vocabulary, appropriate register, and culturally informed comparisons.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **家庭结构** | Types of family organization, such as **核心家庭** and **大家庭** | Frequently appears in cultural comparisons, readings, and interpersonal speaking tasks |\n| **家庭角色** | Responsibilities and expectations of parents, children, grandparents, and siblings | Helps students explain **social roles** and discuss changing traditions |\n| **孝顺 / 孝道** | The value of respecting and caring for elders | A core cultural idea that often supports interpretive and presentational responses |\n| **社区生活** | Daily life in neighborhoods, schools, local organizations, and public spaces | Useful for describing how people interact and support one another in society |\n| **人际关系** | Relationships among family members, friends, classmates, and neighbors | Central to AP tasks involving conversations, emails, and social situations |\n| **礼貌与称呼** | Proper forms of address and respectful communication | Essential for choosing appropriate language in formal vs. informal contexts |\n| **传统与现代变化** | How family and community life are changing over time | Important for comparison essays and cultural analysis |\n| **责任与义务** | Duties individuals have toward family and community | Supports arguments about values, expectations, and social harmony |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[个人身份] --> B[家庭角色]\n    B --> C[家庭责任]\n    C --> D[人际互动]\n    D --> E[社区参与]\n    E --> F[社会归属感]\n    F --> G[文化价值延续]\n    G --> B\n```\n\n### How this relationship works\n1. A person develops an identity within a **family** and **community**.\n2. That identity shapes their **role**: child, parent, student, elder, friend, or neighbor.\n3. Each role carries certain **responsibilities** and expectations.\n4. These expectations influence **interpersonal communication** and behavior.\n5. Repeated interactions build stronger **community ties** and a sense of belonging.\n6. Through these ties, key **cultural values** such as respect, duty, and harmony are passed on.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the key “rules” are **cultural and communicative principles**, not mathematical formulas.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Use appropriate kinship terms** | Chinese uses highly specific family vocabulary; speakers often distinguish **older** vs. **younger** relatives and maternal vs. paternal relations. |\n| **Match register to relationship** | Speak more formally with teachers, elders, and unfamiliar adults; use more casual language with close friends and family members. |\n| **Respect hierarchy in language** | Age, role, and status often influence word choice, tone, and forms of address. |\n| **Understand the cultural weight of 孝顺** | Respect for parents and elders is not just personal; it is tied to broader social expectations and moral values. |\n| **Recognize indirect communication** | In many social situations, Chinese speakers may imply meaning rather than state it bluntly, especially to preserve **harmony**. |\n| **Community reflects collective values** | Family and community life often emphasize the group over the individual, especially in discussions of duty and cooperation. |\n| **Tradition and modernity coexist** | Students should avoid assuming that all Chinese families are either fully traditional or fully modern. Both patterns may appear together. |\n\n### High-value vocabulary patterns\n- **谈论家庭成员**: **父母、祖父母、亲戚、独生子女、兄弟姐妹**\n- **谈论关系**: **相处、沟通、支持、尊重、依靠、关心**\n- **谈论社区**: **邻居、志愿活动、公共服务、归属感、环境**\n- **谈论变化**: **以前、现在、越来越、多元化、压力、平衡**\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **AP-Relevant Insight** |\n|---|---|---|---|\n| **Family structure** | **核心家庭**: parents and children only | **大家庭**: includes grandparents or extended relatives | Students should compare how living arrangements affect support, privacy, and responsibility |\n| **Value orientation** | **个人选择**: independence, self-expression | **集体责任**: duty to family and group | Useful in cultural comparison responses; avoid presenting either as absolutely dominant |\n| **Communication style** | **直接表达**: clear and explicit | **委婉表达**: polite and indirect | Important for interpreting tone in emails, dialogues, and audio sources |\n| **Social roles over time** | **传统角色**: more fixed expectations by age and gender | **现代角色**: more flexible and negotiated | Helpful when discussing generational differences and social change |\n\n### A simple comparison map\n\n```mermaid\nflowchart LR\n    A[传统家庭观念] --> B[尊重长辈]\n    A --> C[角色分工较明确]\n    D[现代社会变化] --> E[家庭形式更多样]\n    D --> F[个人选择增加]\n    B --> G[文化延续]\n    E --> H[价值观调整]\n    F --> H\n    C --> H\n```\n\n## Common AP Exam Traps\n\n- Confusing **language knowledge** with **cultural generalization**. Do not assume every Chinese-speaking family follows the same traditions.\n- Using kinship terms too broadly. Chinese family vocabulary is often more **specific** than English, so precision matters.\n- Ignoring **register**. A response may be grammatically correct but still inappropriate if the tone is too casual or too direct.\n- Describing **孝顺** as simple obedience only. On the AP exam, it is better understood as a broader value of **respect, care, and responsibility**.\n- Making one-sided comparisons between Chinese and one’s own culture. Strong AP responses explain **similarities and differences** with nuance.\n\n## Quick Review Checklist\n\n- [ ] I can describe different **family structures** such as **核心家庭** and **大家庭**.\n- [ ] I can explain major **family roles** and responsibilities in Chinese-speaking communities.\n- [ ] I can discuss the meaning and significance of **孝顺** in cultural context.\n- [ ] I can compare **traditional** and **modern** views of family and community life.\n- [ ] I can use appropriate **forms of address** and choose the right **register** for different relationships.\n- [ ] I can describe how **community life** shapes identity, support systems, and belonging.\n- [ ] I can interpret how **interpersonal relationships** are influenced by age, status, and social expectations.\n- [ ] I can write or speak about families and communities using clear vocabulary and culturally appropriate examples.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "核心家庭",
+              "definition": "由父母与未婚子女组成的家庭形态，人数通常较少，居住与决策更强调独立性。"
+            },
+            {
+              "term": "大家庭",
+              "definition": "包含祖辈、父母辈与子女等多代成员共同生活或保持紧密互动的家庭形态，常体现代际支持。"
+            },
+            {
+              "term": "孝顺",
+              "definition": "对子女应当尊敬、照顾并体谅父母长辈的价值观，在华语社会中常与家庭责任联系密切。"
+            },
+            {
+              "term": "独生子女",
+              "definition": "家庭中唯一的孩子，相关成长经历常与家庭资源集中、代际期待较高等现象相关。"
+            },
+            {
+              "term": "亲戚",
+              "definition": "通过血缘、婚姻或收养关系与个人建立联系的家庭成员网络，常在节庆与礼仪场合中发挥重要作用。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "在讨论华语社会中的家庭观念时，哪一项最能体现代际责任的持续性？",
+              "options": [
+                "成年子女在重要决定上常主动考虑父母意见",
+                "年轻人搬到外地后完全切断与家庭的联系",
+                "家庭成员之间通常避免在节日团聚",
+                "朋友关系在所有场合都比亲属关系更重要"
+              ],
+              "correctAnswer": "成年子女在重要决定上常主动考虑父母意见",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "如果一篇短文比较“核心家庭”和“大家庭”，最可能指出的差异是什么？",
+              "options": [
+                "前者通常强调较高的居住独立性，后者更常见代际互助",
+                "前者只存在于城市，后者只存在于农村",
+                "前者成员之间没有责任，后者成员之间只有经济关系",
+                "前者完全不重视教育，后者完全不重视隐私"
+              ],
+              "correctAnswer": "前者通常强调较高的居住独立性，后者更常见代际互助",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "在很多华语文化语境中，子女逢年过节回家看望父母，被视为体现______的重要做法。",
+              "options": [
+                "孝顺",
+                "竞争",
+                "个人主义",
+                "疏远"
+              ],
+              "correctAnswer": "孝顺",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "由父母和未婚子女组成、规模相对较小的家庭，一般称为______。",
+              "options": [
+                "核心家庭",
+                "社区组织",
+                "朋友圈",
+                "校友网络"
+              ],
+              "correctAnswer": "核心家庭",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "邻里关系",
+              "definition": "居住在同一社区的人们之间形成的日常互动网络，常涉及互相帮助、礼貌往来与共享公共空间。"
+            },
+            {
+              "term": "社区服务",
+              "definition": "个人或团体为改善公共生活而参与的志愿或组织化活动，例如环保、敬老或公益辅导。"
+            },
+            {
+              "term": "社会角色",
+              "definition": "个人在家庭、学校或社区中因身份不同而承担的行为期待与责任，如子女、学生或志愿者。"
+            },
+            {
+              "term": "人际关系",
+              "definition": "人与人之间建立并维持的联系，受到礼貌、沟通方式、信任和互惠等因素影响。"
+            },
+            {
+              "term": "尊老爱幼",
+              "definition": "强调敬重年长者并关爱年幼者的社会伦理观念，常体现在语言礼节与日常行为中。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "在社区生活中，哪一种行为最能体现积极的公民参与意识？",
+              "options": [
+                "定期参加社区清洁和志愿服务活动",
+                "只在需要帮助时才与邻居联系",
+                "为了避免麻烦而拒绝一切公共事务",
+                "认为社区规则与个人生活毫无关系"
+              ],
+              "correctAnswer": "定期参加社区清洁和志愿服务活动",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "在分析华语文化中的人际交往时，哪一项最符合“尊老爱幼”的表现？",
+              "options": [
+                "与长辈交谈时注意称呼和礼貌用语",
+                "在公共场合故意忽视年长者的需要",
+                "认为年龄差异不影响任何交流方式",
+                "只重视同龄人之间的意见"
+              ],
+              "correctAnswer": "与长辈交谈时注意称呼和礼貌用语",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "在同一居住区域内，人们通过互相照应、礼貌往来而形成的联系，通常称为______。",
+              "options": [
+                "邻里关系",
+                "考试成绩",
+                "商业竞争",
+                "旅游经验"
+              ],
+              "correctAnswer": "邻里关系",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "学生周末到社区帮助老人学习使用手机，这类活动属于______。",
+              "options": [
+                "社区服务",
+                "家庭冲突",
+                "消费习惯",
+                "私人娱乐"
+              ],
+              "correctAnswer": "社区服务",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Personal and Public Identities",
+      "description": "Exploration of self-identity, cultural identity, national identity, and how they intersect in personal and public life.",
+      "note": "# Unit 2: Personal and Public Identities\n\n## Overview\nThis unit explores how **personal identity**, **cultural identity**, and **public identity** are formed, expressed, and negotiated in Chinese-speaking communities. For the AP exam, it matters because students must interpret authentic texts, compare cultural perspectives, and communicate clearly about how identity shapes behavior, values, and social roles.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Personal identity** | A person’s sense of self, including personality, interests, beliefs, and life goals. | Frequently appears in **interpersonal speaking** and **presentational writing** tasks about self-description, choices, and aspirations. |\n| **Cultural identity** | Identity shaped by language, traditions, customs, and shared values within a community. | Helps students explain how Chinese cultural practices influence attitudes and behaviors. |\n| **Public identity** | How individuals present themselves in society through roles such as student, child, citizen, or friend. | Important for comparing private beliefs with public expectations in Chinese-speaking contexts. |\n| **Family and social roles** | Expectations tied to age, gender, generation, and relationships within family and society. | Common AP topic in readings and audio selections about **filial piety**, responsibility, and intergenerational dynamics. |\n| **Collectivism vs. individual expression** | The balance between group harmony and personal freedom or self-expression. | Useful for cultural comparison essays and spoken comparisons between Chinese and students’ own cultures. |\n| **National identity** | A sense of belonging connected to one’s nation, history, symbols, and civic values. | Often appears in discussions of patriotism, education, public behavior, and pride in cultural heritage. |\n| **Language and identity** | The way language use reflects region, generation, education, and social belonging. | Essential for interpreting authentic materials and discussing dialects, Mandarin, code-switching, and cultural affiliation. |\n| **Tradition and modernity** | The interaction between inherited values and contemporary lifestyles. | A major lens for analyzing change in Chinese societies and supporting arguments with nuance. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Individual experiences] --> B[Personal values and beliefs]\n    B --> C[Self-expression through language, choices, and behavior]\n    D[Family expectations] --> E[Social roles]\n    F[Cultural traditions] --> E\n    G[School, media, and peers] --> C\n    E --> H[Public identity]\n    C --> H\n    H --> I[How others perceive the individual]\n    I --> J[Identity negotiation and adjustment]\n    J --> B\n```\n\n### How to read this process\n1. **Identity begins with personal experience** and develops into values and beliefs.\n2. **Family, culture, school, peers, and media** shape what roles a person is expected to play.\n3. Individuals express identity through **language, behavior, appearance, and choices**.\n4. Society responds to that expression, creating a **public image**.\n5. People then **adjust or renegotiate** identity based on acceptance, pressure, or changing goals.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “must know” material consists of **core principles, thematic vocabulary patterns, and interpretive rules** rather than equations.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Identity is contextual** | A person may express different parts of identity depending on audience, setting, and purpose. |\n| **AP cultural comparison requires evidence** | Do not make vague claims; support ideas with **specific cultural examples** from Chinese-speaking communities. |\n| **Avoid overgeneralization** | Not all Chinese-speaking people think or act the same way; show awareness of **regional, generational, and social differences**. |\n| **Relationship language matters** | Word choice in Chinese often reflects hierarchy, closeness, and respect, which are linked to identity. |\n| **Public and private identities may differ** | A student may personally value independence but publicly emphasize duty, harmony, or modesty. |\n| **Tradition and change coexist** | Modern Chinese identities are not simply “traditional” or “Westernized”; they often combine both. |\n| **Compare perspectives, not stereotypes** | On the AP exam, strong answers explain **how** and **why** perspectives differ across cultures. |\n\n### High-value vocabulary fields\nStudents should be able to discuss identity using vocabulary related to:\n- **家庭** and family roles\n- **责任** and obligations\n- **个性** and personality\n- **社会** and social expectations\n- **文化传统** and traditions\n- **国家认同** and national belonging\n- **教育** and achievement\n- **独立** vs. **集体**\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key AP Insight** |\n|---|---|---|---|\n| **Self vs. society** | **Personal identity** emphasizes individual preferences and self-definition. | **Public identity** emphasizes social roles and how one is seen by others. | Strong responses explain the tension between internal beliefs and external expectations. |\n| **Home vs. nation** | **Cultural identity** grows from family practices, language, and local tradition. | **National identity** connects the person to the broader state, history, and civic belonging. | Useful when comparing everyday customs with patriotic or national themes. |\n| **Tradition vs. change** | **Traditional values** may stress respect for elders, duty, and harmony. | **Modern influences** may stress choice, mobility, and self-expression. | AP questions often reward nuanced discussion showing that both can coexist. |\n| **Collective vs. individual** | **Collectivist tendencies** prioritize group welfare and social stability. | **Individual expression** prioritizes personal goals and uniqueness. | Avoid presenting these as absolute opposites; many people balance both. |\n\n```mermaid\nflowchart LR\n    A[Personal identity] --> B[Public identity]\n    C[Cultural identity] --> B\n    D[National identity] --> B\n    C --> E[Traditions and values]\n    D --> F[Civic belonging and national pride]\n    A --> G[Preferences, goals, personality]\n```\n\n## Common AP Exam Traps\n\n- Confusing **cultural identity** with **national identity**. A person may share language and traditions with a culture without expressing the same level of national identification.\n- Treating Chinese-speaking communities as culturally uniform. The AP exam rewards awareness of **variation across region, age, class, and community**.\n- Giving personal opinion without cultural support. In comparisons and essays, always include **specific evidence**.\n- Assuming **collectivism** means people have no individuality. Strong answers show how personal goals and group expectations interact.\n- Ignoring the role of **language choice**. Formality, kinship terms, and respectful expression often reveal identity and relationship dynamics.\n\n## Quick Review Checklist\n\n- [ ] I can explain the difference between **personal**, **cultural**, **public**, and **national** identity.\n- [ ] I can describe how **family expectations** shape identity in Chinese-speaking communities.\n- [ ] I can discuss the tension between **individual expression** and **group harmony**.\n- [ ] I can give specific examples of how **tradition and modernity** interact in daily life.\n- [ ] I can compare identity formation in Chinese-speaking communities with my own culture using **clear evidence**.\n- [ ] I can identify how **language use** reflects age, status, closeness, or social role.\n- [ ] I can analyze how media, school, and peers influence **public identity**.\n- [ ] I can support an AP-style response with **nuanced, non-stereotypical cultural observations**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "自我认同",
+              "definition": "个体对自身性格、价值观、经历与社会角色的综合理解，并据此形成相对稳定的自我认识。"
+            },
+            {
+              "term": "文化认同",
+              "definition": "个人对某一语言、传统、习俗与价值体系所产生的归属感，以及由此形成的行为和情感联系。"
+            },
+            {
+              "term": "家庭角色",
+              "definition": "人在亲属关系网络中承担的责任、义务与期待，常影响其表达方式、决策方式和社会行为。"
+            },
+            {
+              "term": "面子观念",
+              "definition": "在社会互动中对声誉、体面与他人评价的重视，常影响说话策略、人际距离和冲突处理。"
+            },
+            {
+              "term": "代沟",
+              "definition": "不同年龄群体因成长环境、教育背景和社会经验不同而产生的观念差异与交流障碍。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "在讨论个人身份形成时，哪一项最能说明家庭环境对青少年价值观的长期影响？",
+              "options": [
+                "父母的教育方式和家庭沟通模式会逐渐塑造子女对责任与成功的理解",
+                "青少年只受学校课程影响，很少受家庭观念左右",
+                "同龄人的看法总是决定个人身份，家庭因素并不重要",
+                "个人身份完全由先天性格决定，后天环境没有作用"
+              ],
+              "correctAnswer": "父母的教育方式和家庭沟通模式会逐渐塑造子女对责任与成功的理解",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "在中国文化语境中，某学生为了避免让同学难堪，没有当众指出对方的错误。这种做法最能体现哪一种社会心理？",
+              "options": [
+                "个人英雄主义",
+                "面子观念",
+                "绝对平等意识",
+                "法律优先原则"
+              ],
+              "correctAnswer": "面子观念",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "当一个人同时认同自己的家乡传统、民族文化和现代城市生活方式时，这反映出身份具有______的特点。",
+              "options": [
+                "单一固定",
+                "多层次",
+                "完全冲突",
+                "无法改变"
+              ],
+              "correctAnswer": "多层次",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "父母和子女因为职业选择、消费观念和生活方式不同而经常发生争论，这种现象通常可概括为______。",
+              "options": [
+                "社会流动",
+                "文化输出",
+                "代沟",
+                "地域融合"
+              ],
+              "correctAnswer": "代沟",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "国家认同",
+              "definition": "个人对国家历史、制度、象征与共同体的情感联系，以及愿意承担公民责任的意识。"
+            },
+            {
+              "term": "民族自豪感",
+              "definition": "人们因本群体的历史成就、文化传统或国际影响而产生的积极情感与荣誉意识。"
+            },
+            {
+              "term": "社会责任",
+              "definition": "个人在公共生活中对他人、社区和整体社会应承担的义务，包括参与、关怀与守规则。"
+            },
+            {
+              "term": "跨文化交际",
+              "definition": "不同文化背景的人通过语言和行为进行沟通，并在理解差异的基础上实现有效交流的过程。"
+            },
+            {
+              "term": "全球化",
+              "definition": "世界各地区在经济、信息、文化与人口流动方面联系日益加强的趋势，会影响个人与集体身份的表达。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "随着出国留学和国际交流机会增加，一些年轻人更加主动地学习传统节日和历史文化。这一现象最能说明什么？",
+              "options": [
+                "接触外部世界可能促使人重新思考并强化自身文化归属",
+                "全球交流一定会削弱本国文化意识",
+                "现代青年普遍拒绝传统文化",
+                "文化认同与国际经验之间没有关联"
+              ],
+              "correctAnswer": "接触外部世界可能促使人重新思考并强化自身文化归属",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "在公共生活中，哪一种行为最能体现社会责任意识？",
+              "options": [
+                "只关注个人成绩，不参加任何集体活动",
+                "遵守公共秩序，并主动参与社区志愿服务",
+                "认为公共事务完全与个人无关",
+                "在网络上随意传播未经证实的信息"
+              ],
+              "correctAnswer": "遵守公共秩序，并主动参与社区志愿服务",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "一个人在国际场合积极介绍本国文化、历史和现代发展，这种情感与意识通常体现了较强的______。",
+              "options": [
+                "消费能力",
+                "国家认同",
+                "代际冲突",
+                "地域偏见"
+              ],
+              "correctAnswer": "国家认同",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "在与不同文化背景的人交流时，既尊重差异又调整表达方式以避免误解，这种能力可称为______。",
+              "options": [
+                "跨文化交际",
+                "机械记忆",
+                "单向传播",
+                "等级意识"
+              ],
+              "correctAnswer": "跨文化交际",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Contemporary Life",
+      "description": "Everyday modern life including education, work, leisure, and social media across cultures.",
+      "note": "# Unit 3: Contemporary Life\n\n## Overview\nThis unit explores **everyday modern life** in Chinese-speaking communities, especially **education**, **work**, **leisure**, and **social media**, and asks students to compare these topics across cultures. For the AP exam, this matters because students must **interpret authentic sources**, **make cultural comparisons**, and **communicate clearly in Chinese** about familiar but culturally nuanced aspects of contemporary life.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Education systems** | School structure, academic pressure, exams, and student life in Chinese-speaking societies | Frequently appears in **reading, listening, and cultural comparison** tasks; students must discuss similarities and differences with their own experience |\n| **Work and career expectations** | Ideas about jobs, professional success, overtime, stability, and family expectations | Useful for **presentational speaking/writing** and for interpreting attitudes in interviews, articles, or conversations |\n| **Leisure and lifestyle** | How people spend free time, including travel, hobbies, exercise, gaming, and entertainment | Helps students describe **daily routines**, preferences, and social values in interpersonal tasks |\n| **Social media and digital communication** | Use of platforms for messaging, news, self-expression, and community building | Common AP theme for discussing **technology’s benefits and drawbacks** across cultures |\n| **Family and social expectations** | The influence of parents, elders, peers, and social norms on life choices | Important for understanding **perspective**, tone, and implied cultural values in sources |\n| **Urban vs. rural life** | Differences in lifestyle, educational access, work opportunities, and technology use | Supports stronger **comparisons** and more precise cultural analysis |\n| **Balance between tradition and modernity** | How modern life changes while older values remain influential | A key lens for explaining cultural complexity rather than making simplistic generalizations |\n| **Consumer culture and convenience** | Online shopping, food delivery, mobile payment, and fast-paced daily life | Often appears in authentic materials and helps students discuss how modern systems shape behavior |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Contemporary life in Chinese-speaking communities\"] --> B[\"Education\"]\n    A --> C[\"Work\"]\n    A --> D[\"Leisure\"]\n    A --> E[\"Social media\"]\n\n    B --> F[\"Academic pressure\"]\n    B --> G[\"Exams and competition\"]\n\n    C --> H[\"Career goals\"]\n    C --> I[\"Work-life balance\"]\n\n    D --> J[\"Hobbies and entertainment\"]\n    D --> K[\"Travel, fitness, and socializing\"]\n\n    E --> L[\"Communication\"]\n    E --> M[\"Information sharing\"]\n    E --> N[\"Self-expression\"]\n\n    F --> O[\"Family expectations\"]\n    G --> O\n    H --> O\n\n    L --> P[\"Faster connections\"]\n    M --> Q[\"Broader awareness\"]\n    N --> R[\"Identity and trends\"]\n\n    E --> S[\"Risks\"]\n    S --> T[\"Distraction\"]\n    S --> U[\"Privacy concerns\"]\n    S --> V[\"Misinformation\"]\n\n    A --> W[\"Cross-cultural comparison\"]\n    O --> W\n    I --> W\n    R --> W\n    V --> W\n```\n\n### How to think about this unit\n1. Start with a domain of **contemporary life**: school, work, leisure, or technology.\n2. Identify the **individual experience**: routines, goals, preferences, pressures.\n3. Connect it to **social influences**: family, peers, institutions, and cultural values.\n4. Evaluate **benefits and challenges**.\n5. Compare how these patterns appear in **Chinese-speaking communities** and in your own culture.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Use culturally specific evidence** | On AP tasks, strong responses include **concrete examples** from Chinese-speaking communities rather than vague statements about “China” or “Asia.” |\n| **Compare, don’t just describe** | In the **Cultural Comparison** task, explain both **similarities** and **differences**, and connect them to broader cultural values. |\n| **Audience and register matter** | Match tone to context: a message to a friend differs from a formal presentation or email. |\n| **Interpret perspective** | In audio and print sources, pay attention to **speaker attitude**, **word choice**, and **implied opinion**, not just literal meaning. |\n| **Avoid overgeneralization** | Contemporary life varies by **region**, **generation**, **class**, and **urban/rural setting**. AP responses should show nuance. |\n| **Support opinions with reasons** | Whether discussing school stress or social media, give a clear claim plus **specific justification**. |\n| **Link practices to values** | Move beyond what people do to explain **why**: efficiency, family duty, competition, convenience, collectivism, or personal expression. |\n\n### High-value vocabulary categories\n- **Education**: school schedule, homework, exams, tutoring, majors, study abroad\n- **Work**: career, salary, overtime, internship, entrepreneurship, stability\n- **Leisure**: hobbies, travel, sports, streaming media, gaming, social activities\n- **Technology**: apps, mobile payment, online shopping, influencers, privacy\n- **Comparison language**: similarly, in contrast, compared with, on the one hand, as a result\n\n## Connections & Comparisons\n\n| **Comparison** | **Shared Features** | **Important Differences** | **AP Significance** |\n|---|---|---|---|\n| **Education vs. work** | Both involve **competition**, **expectations**, and long-term goals | Education emphasizes exams and preparation; work emphasizes productivity, income, and advancement | Helps students discuss life stages and social pressure |\n| **Leisure vs. social media** | Both are part of daily free time and identity formation | Leisure may be offline and restorative; social media can be social, performative, or distracting | Useful for evaluating benefits versus drawbacks |\n| **Urban vs. rural contemporary life** | Both experience modernization and technology influence | Urban areas often have greater access to elite schools, jobs, and digital services; rural areas may differ in pace and opportunity | Strengthens cultural comparison with nuance |\n| **Tradition vs. modernity** | Both shape behavior and values at the same time | Tradition may stress family duty and stability; modernity may stress individuality, mobility, and convenience | A core analytical lens for AP responses |\n\n```mermaid\nflowchart LR\n    A[\"Tradition\"] --> C[\"Contemporary life\"]\n    B[\"Modernity\"] --> C\n    C --> D[\"Education choices\"]\n    C --> E[\"Career goals\"]\n    C --> F[\"Leisure habits\"]\n    C --> G[\"Online behavior\"]\n```\n\n## Common AP Exam Traps\n- Confusing **personal experience** with **cultural analysis**: AP responses need broader cultural context, not just “what I do.”\n- Making sweeping claims such as “all Chinese students are under extreme pressure” without acknowledging variation.\n- Discussing **technology** only positively or only negatively; stronger answers address **both advantages and drawbacks**.\n- Comparing surface details without explaining the **underlying values** or social reasons behind them.\n- Ignoring **register** and using language that is too casual in formal speaking or writing tasks.\n\n## Quick Review Checklist\n- [ ] I can explain how **education**, **work**, **leisure**, and **social media** shape **contemporary life** in Chinese-speaking communities.\n- [ ] I can compare a feature of modern life in a Chinese-speaking context with my own culture using **specific examples**.\n- [ ] I can describe both the **benefits** and **challenges** of **social media** and digital communication.\n- [ ] I can discuss how **family expectations** influence school and career decisions.\n- [ ] I can distinguish between **urban** and **rural** experiences without overgeneralizing.\n- [ ] I can explain how **tradition** and **modernity** coexist in everyday life.\n- [ ] I can identify **speaker perspective**, **tone**, and **implied attitude** in authentic sources about modern life.\n- [ ] I can support my ideas in spoken or written Chinese with clear reasons and culturally appropriate detail.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "课外活动",
+              "definition": "Organized pursuits outside formal class time, such as clubs, sports, arts, or service, that help students develop interests, skills, and social connections."
+            },
+            {
+              "term": "高考",
+              "definition": "The national college entrance examination in mainland China that plays a major role in university admission and strongly influences secondary education."
+            },
+            {
+              "term": "补习班",
+              "definition": "Fee-based instruction outside regular school hours, often used to strengthen academic performance or prepare for major examinations."
+            },
+            {
+              "term": "作息时间",
+              "definition": "A person’s regular daily schedule of sleeping, studying, working, eating, and resting, often discussed when comparing lifestyles across cultures."
+            },
+            {
+              "term": "住宿舍",
+              "definition": "To reside in a shared student living space provided by a school, commonly associated with collective routines and campus life."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student from Beijing explains that many classmates stay at school until evening for supervised study and then attend weekend enrichment courses. Which factor most directly helps explain this pattern in contemporary Chinese student life?",
+              "options": [
+                "Competition related to major entrance examinations",
+                "A legal ban on extracurricular learning",
+                "A national requirement that all students hold part-time jobs",
+                "Preference for studying only through independent online modules"
+              ],
+              "correctAnswer": "Competition related to major entrance examinations",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In a cultural comparison of school life, which observation best reflects a common difference between many Chinese high schools and many U.S. high schools?",
+              "options": [
+                "Chinese students are more likely to have a highly structured daily schedule centered on exam preparation",
+                "U.S. students are required to live on campus during secondary school",
+                "Chinese schools generally do not offer any student organizations",
+                "U.S. schools usually replace homework with oral exams only"
+              ],
+              "correctAnswer": "Chinese students are more likely to have a highly structured daily schedule centered on exam preparation",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In discussions of contemporary education in China, the national university entrance exam is called ______.",
+              "options": [
+                "高考",
+                "春运",
+                "户口",
+                "中秋节"
+              ],
+              "correctAnswer": "高考",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When comparing student lifestyles, a regular pattern for sleep, meals, study, and rest is referred to as ______.",
+              "options": [
+                "作息时间",
+                "消费观念",
+                "人际关系",
+                "传统节日"
+              ],
+              "correctAnswer": "作息时间",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "加班",
+              "definition": "Working beyond standard hours, often associated with pressure, productivity expectations, and discussion of work-life balance in urban society."
+            },
+            {
+              "term": "直播",
+              "definition": "Real-time online video broadcasting that allows presenters to interact instantly with viewers, commonly used for entertainment, commerce, and personal branding."
+            },
+            {
+              "term": "刷手机",
+              "definition": "To spend extended time repeatedly checking or browsing content on a mobile device, often linked to habit, distraction, or social connection."
+            },
+            {
+              "term": "网购",
+              "definition": "The practice of purchasing goods through internet platforms, valued for convenience, broad selection, and delivery services in modern consumer life."
+            },
+            {
+              "term": "广场舞",
+              "definition": "Group dancing in public open spaces, especially popular among middle-aged and older adults as a form of exercise and community participation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A speaker says that after work she orders dinner through an app, buys household items online, and watches product demonstrations in real time before purchasing. Which development is most clearly illustrated?",
+              "options": [
+                "The integration of digital platforms into everyday consumption",
+                "The decline of mobile payment systems in urban China",
+                "The replacement of all physical stores by state-owned markets",
+                "The disappearance of social interaction from leisure activities"
+              ],
+              "correctAnswer": "The integration of digital platforms into everyday consumption",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best captures a common AP-level cultural interpretation of 广场舞 in contemporary Chinese society?",
+              "options": [
+                "It can function as both physical exercise and a form of neighborhood social life",
+                "It is primarily a formal ceremony performed only during national holidays",
+                "It is limited to university students preparing for performance exams",
+                "It is an online-only activity with no public gathering involved"
+              ],
+              "correctAnswer": "It can function as both physical exercise and a form of neighborhood social life",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Working past normal office hours is commonly described as ______.",
+              "options": [
+                "加班",
+                "请假",
+                "退休",
+                "搬家"
+              ],
+              "correctAnswer": "加班",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Buying products through internet marketplaces and delivery platforms is known as ______.",
+              "options": [
+                "网购",
+                "义工",
+                "储蓄",
+                "签证"
+              ],
+              "correctAnswer": "网购",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Global Challenges",
+      "description": "Major global issues such as climate change, poverty, migration, public health, and human rights.",
+      "note": "# Unit 4: Global Challenges\n\n## Overview\nIn **Unit 4: Global Challenges**, you explore how Chinese-speaking communities discuss and respond to major worldwide issues such as **climate change**, **poverty**, **migration**, **public health**, and **human rights**. For the AP exam, this unit matters because it builds the vocabulary, cultural comparisons, and argumentative language needed to interpret authentic sources and communicate clearly about complex global problems in **Mandarin Chinese**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Climate Change** | Long-term changes in global weather patterns caused largely by human activity, especially greenhouse gas emissions. | Often appears in readings, audio sources, and cultural comparisons about sustainability, policy, and daily life. |\n| **Environmental Protection** | Efforts to reduce pollution, conserve resources, and promote sustainable development. | Useful for discussing solutions, expressing opinions, and comparing how China and other societies address environmental issues. |\n| **Poverty and Inequality** | Unequal access to income, education, healthcare, and opportunity. | Helps students analyze social challenges and explain cause-and-effect relationships in essays and spoken responses. |\n| **Migration and Urbanization** | Movement of people across regions or borders, often linked to jobs, education, or safety. | Frequently connected to family structure, labor, housing, and identity—strong topics for presentational speaking and writing. |\n| **Public Health** | Health issues affecting populations, including disease prevention, healthcare access, and emergency response. | Important for interpreting contemporary materials and discussing government and community responsibilities. |\n| **Human Rights** | Basic rights and freedoms relating to dignity, equality, and justice. | Supports persuasive and comparative responses about law, ethics, and social change. |\n| **International Cooperation** | Countries and organizations working together to solve shared problems. | Central for discussing global solutions and showing nuanced understanding beyond one-country perspectives. |\n| **Civic Responsibility** | The role of individuals, communities, and governments in addressing global issues. | AP tasks often reward students who can explain multiple perspectives and propose practical actions. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Global challenge emerges] --> B[Causes identified]\n    B --> C[Local impact on daily life]\n    C --> D[Public discussion in media and society]\n    D --> E[Government and community responses]\n    E --> F[Short-term outcomes]\n    F --> G[Long-term global effects]\n    G --> H[Need for international cooperation]\n    H --> I[Policy change, education, and innovation]\n```\n\n### How to think about this process\n1. A **global challenge** begins with interconnected causes such as industrialization, inequality, conflict, or weak healthcare systems.\n2. It creates **local effects** on families, schools, jobs, and communities.\n3. Society responds through **media discussion**, **public opinion**, and **policy debate**.\n4. Governments, NGOs, and individuals propose **solutions**.\n5. Because these issues cross borders, lasting progress usually requires **international cooperation**.\n\n## Essential Formulas / Laws / Rules\n\nSince AP Chinese is not a formula-based course, the “rules” for this unit are key **communication principles**, **cultural frameworks**, and **high-frequency language functions**.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Describe both problem and response** | On AP tasks, do not only name a global issue; explain its **causes**, **effects**, and possible **solutions**. |\n| **Use multiple perspectives** | Strong responses often include views of **individuals**, **communities**, **governments**, and the **international community**. |\n| **Make cultural comparisons** | Be prepared to compare how **Chinese-speaking societies** and your own community address the same issue. |\n| **Support opinions with evidence** | In speaking and writing, use examples from **daily life**, **news**, **social trends**, or **cultural practices**. |\n| **Show cause and effect clearly** | Use logical links such as **because**, **therefore**, **as a result**, and **in order to** to organize arguments. |\n| **Distinguish challenge from solution** | For example, **pollution** is the problem; **recycling policies**, **clean energy**, and **public awareness** are responses. |\n| **Avoid overgeneralization** | Do not assume one policy or experience represents all of China or all Chinese-speaking communities. |\n\n### Useful language functions for this unit\n- **Explaining causes**\n- **Describing consequences**\n- **Comparing policies**\n- **Expressing concern**\n- **Proposing solutions**\n- **Persuading an audience**\n- **Evaluating effectiveness**\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection** | **Important Distinction** |\n|---|---|---|\n| **Climate Change** vs. **Pollution** | Both concern environmental harm and are often discussed together. | **Climate change** is global and long-term; **pollution** can be local and immediate, such as air or water contamination. |\n| **Poverty** vs. **Inequality** | Both involve unfair social conditions and limited opportunity. | **Poverty** refers to insufficient resources; **inequality** emphasizes the uneven distribution of wealth and opportunity. |\n| **Migration** vs. **Urbanization** | Migration often leads to urbanization as people move to cities for work or education. | **Migration** is the movement itself; **urbanization** is the growth and transformation of cities. |\n| **Public Health** vs. **Human Rights** | Health access can be discussed as both a medical and social justice issue. | **Public health** focuses on population well-being; **human rights** focuses on fairness, dignity, and legal or moral protections. |\n\n```mermaid\nflowchart LR\n    A[Poverty] --> B[Limited education]\n    B --> C[Fewer job opportunities]\n    C --> D[Migration to cities]\n    D --> E[Urban pressure]\n    E --> F[Public health challenges]\n    F --> G[Government policy response]\n```\n\n## Common AP Exam Traps\n\n- Confusing **topic knowledge** with **language performance**: knowing the issue is not enough; you must explain it clearly in organized Mandarin.\n- Giving only a **one-sided argument**: stronger AP responses often acknowledge both benefits and drawbacks of a policy or trend.\n- Overusing vague words like “good,” “bad,” or “important” without specific examples or reasons.\n- Treating **China** as culturally or politically uniform; AP tasks reward more precise and nuanced comparisons.\n- Describing a global issue without connecting it to **people’s daily lives**, which is often necessary in interpersonal and presentational tasks.\n\n## Quick Review Checklist\n\n- [ ] I can explain the difference between **climate change**, **pollution**, and **environmental protection**.\n- [ ] I can describe how **poverty**, **inequality**, and **migration** are connected.\n- [ ] I can discuss a **public health** issue and propose at least one realistic solution.\n- [ ] I can compare how a **Chinese-speaking community** and my own community respond to a global challenge.\n- [ ] I can present both **causes** and **effects** of a major issue, not just define it.\n- [ ] I can use clear **cause-and-effect reasoning** when speaking or writing.\n- [ ] I can explain why **international cooperation** is necessary for some global problems.\n- [ ] I can support my opinion with specific examples appropriate for the AP Chinese exam.\n\n--- \n\n### Final Exam Tip\nFor this unit, success on the AP exam comes from combining **relevant vocabulary**, **cultural awareness**, and **clear organization**. If you can explain a problem, compare perspectives, and suggest solutions in precise Mandarin, you will be well prepared for Unit 4 tasks.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "气候变化",
+              "definition": "长期的温度、降水、风暴频率等气候模式发生显著改变，常与化石燃料使用、森林砍伐和工业排放增加有关，并对生态系统、农业和沿海地区造成深远影响。"
+            },
+            {
+              "term": "温室气体",
+              "definition": "能够吸收并重新释放地球表面向外辐射热量的大气成分；其浓度上升会加强增温效应，主要来源包括能源生产、交通运输和部分农业活动。"
+            },
+            {
+              "term": "可持续发展",
+              "definition": "一种发展方式，在满足当代需求的同时不损害后代满足其需求的能力，强调经济增长、社会公平与环境保护之间的平衡。"
+            },
+            {
+              "term": "贫困",
+              "definition": "个人或家庭缺乏足够收入与资源，难以获得基本生活条件，如食物、住房、教育和医疗；这一状况常与社会不平等和发展机会不足相互关联。"
+            },
+            {
+              "term": "能源转型",
+              "definition": "社会从高度依赖煤炭、石油和天然气，逐步转向风能、太阳能、水电等较低排放来源的结构性变化，通常涉及政策支持、技术创新和基础设施调整。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "在讨论全球环境政策时，哪一项最能说明为什么许多国家强调发展可再生能源？",
+              "options": [
+                "因为可再生能源通常有助于减少导致全球变暖的排放",
+                "因为可再生能源一定比化石燃料更便宜且更稳定",
+                "因为使用可再生能源会立刻消除所有空气污染问题",
+                "因为所有国家都拥有完全相同的自然资源条件"
+              ],
+              "correctAnswer": "因为可再生能源通常有助于减少导致全球变暖的排放",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "如果一个地区在追求经济增长的同时，大量投资公共交通、限制高污染工业并保护水资源，这最符合哪一种发展理念？",
+              "options": [
+                "可持续发展",
+                "消费主义扩张",
+                "短期利润最大化",
+                "资源无限论"
+              ],
+              "correctAnswer": "可持续发展",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "许多科学家认为，化石燃料的大量燃烧会增加大气中的______，从而加剧全球变暖。",
+              "options": [
+                "温室气体",
+                "海洋酸度",
+                "人口密度",
+                "文化差异"
+              ],
+              "correctAnswer": "温室气体",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "当政府努力在经济、社会和环境之间保持长期平衡时，这种目标通常被称为______。",
+              "options": [
+                "可持续发展",
+                "贸易保护主义",
+                "单边主义",
+                "城市化过度"
+              ],
+              "correctAnswer": "可持续发展",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "移民",
+              "definition": "个人或群体因就业、教育、安全、家庭团聚或环境压力等原因，从一个国家或地区迁移到另一个国家或地区的社会现象，常引发身份认同、政策和资源分配等议题。"
+            },
+            {
+              "term": "公共卫生",
+              "definition": "通过预防、教育、政策和医疗体系管理来保护群体健康的领域，重点在于减少疾病传播、改善卫生条件并提高整体健康水平。"
+            },
+            {
+              "term": "人权",
+              "definition": "人人因其人格与尊严而应享有的基本权利，包括生命、安全、表达、受教育和免受歧视等，不应因国籍、性别或社会地位而被剥夺。"
+            },
+            {
+              "term": "难民",
+              "definition": "因战争、迫害或严重暴力而被迫离开原居地，并寻求跨境保护的人群；其法律地位通常受到国际公约与接收国政策影响。"
+            },
+            {
+              "term": "全球合作",
+              "definition": "不同国家、国际组织和社会机构围绕跨国问题进行协调行动的过程，常见于防疫、减贫、环境治理和灾害应对等领域。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "在全球公共卫生危机中，为什么国际信息共享往往被视为关键措施？",
+              "options": [
+                "因为及时交换数据有助于监测传播趋势并协调防控策略",
+                "因为信息共享可以保证所有国家采用完全相同的医疗制度",
+                "因为国际组织能够直接取代各国政府作出全部公共决策",
+                "因为疾病传播只会影响参与合作的国家"
+              ],
+              "correctAnswer": "因为及时交换数据有助于监测传播趋势并协调防控策略",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "如果一名记者因公开批评政府而遭受打压，相关讨论最直接涉及下列哪一项全球议题？",
+              "options": [
+                "人权",
+                "能源转型",
+                "旅游发展",
+                "农业机械化"
+              ],
+              "correctAnswer": "人权",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "战争、迫害或严重暴力常常迫使人们离开家园，这类跨境寻求保护的人通常被称为______。",
+              "options": [
+                "难民",
+                "游客",
+                "投资者",
+                "留学生"
+              ],
+              "correctAnswer": "难民",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "为了控制传染病传播、改善卫生条件并保护群体健康，政府和社会通常需要加强______体系。",
+              "options": [
+                "公共卫生",
+                "娱乐消费",
+                "奢侈品贸易",
+                "边境旅游"
+              ],
+              "correctAnswer": "公共卫生",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Science and Technology",
+      "description": "Impact of scientific advances and technology on society, communication, medicine, and the environment.",
+      "note": "# Unit 5: Science and Technology\n\n## Overview\nThis unit explores how **science and technology** shape daily life, social relationships, health care, communication, and the environment in Chinese-speaking communities and beyond. For the AP exam, you need to discuss these issues using precise **cultural comparisons**, relevant **vocabulary**, and clear explanations of both the **benefits** and **drawbacks** of technological change.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Digital communication** | The use of smartphones, social media, messaging apps, and online platforms to connect people quickly. | Frequently appears in **interpersonal speaking/writing** and **presentational tasks** about changing communication habits and social interaction. |\n| **Social media and online culture** | Online spaces where people share information, opinions, entertainment, and personal life. | Useful for discussing how technology affects **identity**, **relationships**, **public opinion**, and **information spread**. |\n| **Technological innovation** | New tools, systems, and inventions that improve efficiency or solve problems. | Helps you explain how societies value **progress**, **education**, and **economic development**. |\n| **Medicine and biotechnology** | Scientific advances in treatment, diagnosis, vaccines, medical equipment, and health monitoring. | Important for comparing access to **health care**, public health priorities, and the social impact of medical progress. |\n| **Environmental impact of technology** | The positive and negative effects of industry and technology on air, water, energy use, and sustainability. | Often tested through debates about whether development should prioritize **convenience**, **growth**, or **environmental protection**. |\n| **Access and inequality** | Differences in who can use advanced technology based on region, age, income, or education. | Strong topic for **cultural comparison**, especially urban-rural gaps and generational differences. |\n| **Artificial intelligence and automation** | Systems that perform tasks once done mainly by humans, such as translation, recognition, or manufacturing. | Supports discussion of future trends, job changes, ethics, and the balance between **human judgment** and **machine efficiency**. |\n| **Privacy and information security** | Concerns about personal data, surveillance, online scams, and digital safety. | Commonly linked to modern life and allows nuanced AP responses that weigh **convenience** against **risk**. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Scientific research] --> B[Technological innovation]\n    B --> C[Wider public adoption]\n    C --> D[Changes in communication, medicine, work, and daily life]\n    D --> E[Social benefits]\n    D --> F[New problems]\n    E --> G[Greater efficiency, convenience, connectivity, health outcomes]\n    F --> H[Privacy concerns, inequality, environmental pressure, dependence]\n    H --> I[Public debate and policy response]\n    G --> I\n    I --> J[Further research and improved technology]\n```\n\nThis flow shows a central AP theme: **technology is not simply good or bad**. Instead, innovation leads to social change, which creates both **advantages** and **challenges**, prompting further adjustment by individuals and society.\n\n## Essential Formulas / Laws / Rules\n\nBecause AP Chinese is a language-and-culture course rather than a quantitative science course, the “must know” items are key **principles**, **discussion frames**, and **cultural analysis rules**.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Discuss both advantages and disadvantages** | AP responses are stronger when you explain both **positive effects** and **negative consequences** of technology. |\n| **Connect technology to daily life** | Be able to explain how technology affects **education**, **family communication**, **shopping**, **transportation**, and **health**. |\n| **Use cultural comparison, not vague generalization** | When comparing Chinese-speaking communities with your own, mention **specific practices**, **attitudes**, or **social patterns** rather than stereotypes. |\n| **Show cause and effect clearly** | Use reasoning such as: new technology changes behavior; changed behavior affects society, economy, or environment. |\n| **Balance progress with responsibility** | Many AP prompts reward nuanced discussion of **innovation** together with **ethics**, **privacy**, and **sustainability**. |\n| **Recognize multiple stakeholders** | A technological issue may affect **students**, **elderly people**, **doctors**, **workers**, **businesses**, and **government** differently. |\n| **Support opinions with examples** | In speaking and writing, give concrete examples such as **online classes**, **mobile payment**, **telemedicine**, or **shared bikes**. |\n\n### Useful AP Discussion Frames\n- **Benefit**: technology increases efficiency, convenience, access, and speed.\n- **Cost**: technology may reduce face-to-face interaction, threaten privacy, or widen inequality.\n- **Cultural lens**: attitudes toward technology often reflect values such as **modernization**, **collective welfare**, **education**, and **social responsibility**.\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key AP Insight** |\n|---|---|---|---|\n| **Communication styles** | **Digital communication** is fast, convenient, and wide-reaching. | **Face-to-face communication** is often deeper, more personal, and emotionally clear. | AP questions often ask whether technology improves relationships or weakens real human connection. |\n| **Medical progress vs. ethical concerns** | **New medical technology** improves diagnosis, treatment, and lifespan. | **Ethical issues** include cost, unequal access, and data privacy. | Strong responses show that scientific progress can create moral and social dilemmas. |\n| **Economic growth vs. environmental protection** | **Technological development** can boost productivity and living standards. | **Environmental damage** may result from overproduction, energy consumption, and e-waste. | Be ready to explain the tension between modernization and sustainability. |\n| **Convenience vs. security** | **Online platforms** make payment, shopping, and communication easier. | **Privacy/security risks** include fraud, hacking, and surveillance. | AP prompts often reward balanced analysis instead of one-sided praise of innovation. |\n\n## Common AP Exam Traps\n\n- Confusing **technology itself** with its **social impact**. The exam often cares more about how people and communities are affected than about the device alone.\n- Giving overly simple answers like “technology is always helpful.” Strong AP responses usually include **trade-offs**.\n- Making unsupported cultural claims about China or Chinese-speaking communities without **specific examples**.\n- Ignoring **environmental consequences** when discussing industrial or technological progress.\n- Focusing only on young people; many good responses also mention **older generations**, rural communities, or people with limited access.\n\n## Quick Review Checklist\n\n- [ ] I can explain how **science and technology** affect **communication**, **education**, **medicine**, and **daily life**.\n- [ ] I can describe both the **advantages** and **disadvantages** of digital technology.\n- [ ] I can compare **technology use** in Chinese-speaking communities with my own community using specific examples.\n- [ ] I can discuss how technological development influences the **environment**.\n- [ ] I can explain issues of **privacy**, **security**, and **information reliability** online.\n- [ ] I can analyze how technology creates or reduces **social inequality**.\n- [ ] I can give examples of **medical or scientific advances** and their effects on society.\n- [ ] I can present a balanced AP-level argument about whether a new technology does more **good** than **harm**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "人工智能",
+              "definition": "利用算法和大量数据模拟人类在识别、判断、预测与决策方面能力的技术体系，广泛应用于语音处理、图像识别和自动化服务。"
+            },
+            {
+              "term": "社交媒体",
+              "definition": "以网络平台为基础、支持用户即时发布、分享与互动的信息传播方式，显著改变了公共舆论形成和人际沟通模式。"
+            },
+            {
+              "term": "远程办公",
+              "definition": "借助互联网、云平台和视频会议工具，在传统办公地点之外完成协作、管理和生产任务的工作方式。"
+            },
+            {
+              "term": "数字鸿沟",
+              "definition": "不同地区、阶层或年龄群体在获取设备、网络连接与信息技能方面存在的发展差距，这种差距会影响教育与经济机会。"
+            },
+            {
+              "term": "网络隐私",
+              "definition": "个人在网络环境中对自身身份、位置、消费和通信等信息进行控制与保护的权利与状态。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "随着智能手机和移动支付的普及，中国城市居民的消费方式发生了明显变化。下列说法最能体现这一技术发展对社会生活影响的是哪一项？",
+              "options": [
+                "现金交易完全消失，传统银行不再发挥作用",
+                "数字平台提高了交易效率，并改变了消费者与商家的互动方式",
+                "科技发展只对年轻人有影响，对老年群体没有任何作用",
+                "网络购物的发展使实体经济在中国已经不再重要"
+              ],
+              "correctAnswer": "数字平台提高了交易效率，并改变了消费者与商家的互动方式",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "关于社交媒体对公共交流的影响，下列哪一项分析最符合AP中文文化比较与现实话题讨论的要求？",
+              "options": [
+                "它只提高了信息传播速度，不会影响信息真实性",
+                "它扩大了普通人的表达空间，但也可能加剧谣言传播和信息过载",
+                "它使传统媒体完全失去社会功能",
+                "它能够自动消除不同地区之间的观念差异"
+              ],
+              "correctAnswer": "它扩大了普通人的表达空间，但也可能加剧谣言传播和信息过载",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "由于不同地区网络基础设施和教育资源分配不均，部分学生难以平等获得在线学习机会，这种现象通常被称为______。",
+              "options": [
+                "数字鸿沟",
+                "人工智能",
+                "绿色出行",
+                "文化输出"
+              ],
+              "correctAnswer": "数字鸿沟",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "个人担心自己的浏览记录、位置信息和消费习惯被平台过度收集，这一问题主要涉及______。",
+              "options": [
+                "网络隐私",
+                "工业自动化",
+                "太空探索",
+                "传统医学"
+              ],
+              "correctAnswer": "网络隐私",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "远程医疗",
+              "definition": "借助通信技术进行在线问诊、健康监测和医疗咨询的服务模式，能够缓解地域限制并提高医疗资源覆盖面。"
+            },
+            {
+              "term": "基因编辑",
+              "definition": "对生物遗传物质进行定点修改、删除或插入的技术，可用于疾病研究、农业改良和生物医学开发，同时伴随伦理争议。"
+            },
+            {
+              "term": "可再生能源",
+              "definition": "来源于自然循环、能够持续补充的资源形式，如太阳能、风能和水能，常被用于减少对化石燃料的依赖。"
+            },
+            {
+              "term": "电子垃圾",
+              "definition": "被丢弃的手机、电脑和家电等废旧设备，若处理不当，可能释放有害物质并造成土壤、水体和空气污染。"
+            },
+            {
+              "term": "智能家居",
+              "definition": "通过传感器、网络连接和自动控制系统提升居住便利性、安全性与能源管理效率的家庭生活模式。"
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "在讨论科技与医疗的关系时，哪一项最准确地概括了远程医疗的社会意义？",
+              "options": [
+                "它能够完全取代所有面对面诊疗",
+                "它有助于偏远地区居民获得基本医疗咨询，但仍受设备和专业条件限制",
+                "它只适用于经济发达地区，对基层医疗没有帮助",
+                "它主要作用是降低医生的专业责任"
+              ],
+              "correctAnswer": "它有助于偏远地区居民获得基本医疗咨询，但仍受设备和专业条件限制",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "关于科技发展与环境保护的关系，下列哪一项表述最合理？",
+              "options": [
+                "只要使用电子产品，就一定能减少环境污染",
+                "发展新能源有助于降低部分传统能源带来的环境压力，但生产与回收环节仍需科学管理",
+                "科技进步与环境问题没有任何关系",
+                "环保的关键仅在于停止一切工业生产"
+              ],
+              "correctAnswer": "发展新能源有助于降低部分传统能源带来的环境压力，但生产与回收环节仍需科学管理",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "医院通过网络平台为外地患者提供在线问诊和复诊服务，这种做法属于______。",
+              "options": [
+                "远程医疗",
+                "电子商务",
+                "环境监测",
+                "现场直播"
+              ],
+              "correctAnswer": "远程医疗",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "废旧手机、电脑和电池如果随意丢弃，可能造成重金属污染，这类废弃物通常被称为______。",
+              "options": [
+                "电子垃圾",
+                "可再生能源",
+                "智能家居",
+                "基因编辑"
+              ],
+              "correctAnswer": "电子垃圾",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Beauty and Aesthetics",
+      "description": "Art, music, literature, architecture, and the cultural definition of beauty across different societies.",
+      "note": "# Unit 6: Beauty and Aesthetics\n\n## Overview\nThis unit explores how **beauty** is expressed and understood through **art, music, literature, architecture, and everyday cultural values** in Chinese-speaking communities and beyond. For the AP exam, this matters because students must interpret cultural products and practices, compare perspectives across societies, and discuss how aesthetic ideals reflect broader **historical, social, and cultural values**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Aesthetic values** | Shared ideas about what is considered beautiful, elegant, harmonious, or meaningful | Helps you explain how beauty is culturally defined rather than universal |\n| **Traditional Chinese art** | Forms such as **ink painting**, **calligraphy**, **ceramics**, and **opera** | Frequently appears in readings or audio prompts as cultural evidence |\n| **Calligraphy** | The artistic writing of Chinese characters, valued for both meaning and form | Shows the connection between **language**, **art**, and **personal cultivation** |\n| **Architecture and space** | Buildings and design shaped by ideas such as **harmony**, **symmetry**, and relation to nature | Useful for cultural comparison and for discussing how values appear in physical environments |\n| **Literature as beauty** | Poetry, prose, and classical texts that express emotional depth, imagery, and moral reflection | Important for interpreting how language itself can be an art form |\n| **Music and performance** | Traditional and modern music, opera, dance, and staged performance | Tests your ability to connect artistic expression with identity, emotion, and social change |\n| **Tradition vs. modernity** | The tension between preserving heritage and embracing global or contemporary aesthetics | A common AP comparison theme in speaking and writing tasks |\n| **Beauty and cultural perspective** | The idea that standards of beauty differ across regions, generations, and societies | Central to the AP task of comparing **Chinese culture** with the student’s own culture |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Historical traditions] --> B[Artistic forms]\n    B --> C[Expression of beauty]\n    C --> D[Personal response]\n    C --> E[Social values]\n    E --> F[Ideas about identity]\n    F --> G[Preservation or change]\n    G --> H[Modern interpretations]\n    H --> C\n```\n\n### How to read this relationship\n1. **Historical traditions** shape artistic forms such as painting, poetry, architecture, and music.\n2. These forms communicate a society’s idea of **beauty**.\n3. People respond to beauty both **personally** and **socially**.\n4. Aesthetic preferences help reinforce ideas about **identity**, status, morality, and cultural pride.\n5. New generations reinterpret traditional beauty, creating a cycle of **continuity and change**.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a non-quantitative unit, focus on the key **principles, definitions, and interpretive rules** most useful for the AP exam.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Beauty is culturally constructed** | Standards of beauty are shaped by **history, values, environment, and social norms**, not just individual taste. |\n| **Art reflects society** | Artistic products often reveal a culture’s beliefs about **nature, harmony, morality, class, and identity**. |\n| **Form and meaning are connected** | In Chinese aesthetics, the style, structure, and presentation of a work often carry as much meaning as its content. |\n| **Tradition and innovation coexist** | Modern Chinese art and culture often combine **classical elements** with global influences. |\n| **Comparison requires perspective** | On the AP exam, compare practices and products by explaining **why** they are valued, not just **what** they are. |\n| **Audience matters** | In interpersonal and presentational tasks, explain beauty differently depending on whether the audience is a peer, teacher, tourist, or community member. |\n| **Use specific cultural evidence** | Strong AP responses refer to concrete examples such as **京剧**, **书法**, **山水画**, **园林**, or modern design trends. |\n\n### High-value vocabulary categories\n- **Visual arts**: **绘画**, **书法**, **雕塑**, **陶瓷**\n- **Performance**: **音乐**, **舞蹈**, **京剧**, **表演**\n- **Literature**: **诗歌**, **小说**, **散文**\n- **Architecture**: **园林**, **古建筑**, **现代设计**\n- **Judgment words**: **优美**, **和谐**, **精致**, **自然**, **独特**, **传统**, **现代**\n\n## Connections & Comparisons\n\n| **Comparison** | **Traditional View** | **Modern / Comparative View** | **AP Significance** |\n|---|---|---|---|\n| **Beauty in nature vs. beauty in technology** | Traditional aesthetics often emphasize **harmony with nature** | Modern aesthetics may value **innovation**, minimalism, or urban design | Helps compare older Chinese ideals with contemporary global tastes |\n| **Calligraphy vs. alphabetic writing** | Chinese calligraphy is both communication and visual art | In many other cultures, handwriting is usually less central as a fine art | Useful for explaining a uniquely Chinese aesthetic tradition |\n| **Classical architecture vs. modern architecture** | Classical buildings often stress **balance**, symbolism, and integration with surroundings | Modern buildings may prioritize efficiency, height, or new materials | Good topic for cultural comparison in presentational speaking |\n| **Inherited standards vs. individual taste** | Communities often pass down beauty ideals through education and tradition | Younger generations may challenge them through fashion, media, and global culture | Helps explain social change and generational differences |\n\n```mermaid\nflowchart LR\n    A[Traditional aesthetics] --> B[Harmony]\n    A --> C[Nature]\n    A --> D[Symbolism]\n    E[Modern aesthetics] --> F[Innovation]\n    E --> G[Global influence]\n    E --> H[Individual expression]\n```\n\n## Common AP Exam Traps\n\n- Confusing **description** with **analysis**: listing art forms is not enough; you must explain what they reveal about cultural values.\n- Treating beauty as **universal** instead of culturally specific; AP questions often reward awareness of differing perspectives.\n- Overgeneralizing “Chinese culture” as a single, fixed idea; remember differences across **time periods, regions, and generations**.\n- Ignoring the link between **product, practice, and perspective**; AP cultural analysis expects all three.\n- Comparing cultures in a simplistic way, such as saying one is “better” or “more beautiful,” instead of explaining different standards and contexts.\n\n## Quick Review Checklist\n\n- [ ] I can explain how **beauty** is defined differently across cultures and historical periods.\n- [ ] I can discuss at least **3 examples** of Chinese artistic or aesthetic traditions, such as **calligraphy**, **opera**, or **classical gardens**.\n- [ ] I can describe how **artistic products** reflect deeper **cultural perspectives**.\n- [ ] I can compare **traditional** and **modern** ideas of beauty in Chinese-speaking communities.\n- [ ] I can connect **architecture**, **music**, **literature**, or **visual art** to values like **harmony**, **balance**, or **identity**.\n- [ ] I can use specific cultural vocabulary to discuss aesthetics in spoken or written Chinese.\n- [ ] I can make a clear AP-style cultural comparison between Chinese aesthetics and those of another society.\n- [ ] I can avoid overgeneralizations and support my ideas with **specific examples**.\n\n--- \n\n### Final AP Strategy\nFor this unit, focus on using **specific cultural examples** and connecting them to broader **perspectives**. On the AP exam, the strongest responses show that beauty is not just about appearance—it is a window into how a society understands **nature, self-expression, tradition, and cultural meaning**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "书法",
+              "definition": "An art form that uses brush, ink, structure, and motion of strokes to express both language and personal cultivation; often valued for rhythm, balance, and spirit."
+            },
+            {
+              "term": "山水画",
+              "definition": "A major visual tradition centered on landscapes such as mountains and water, often emphasizing mood, philosophy, and harmony with nature rather than strict realism."
+            },
+            {
+              "term": "京剧",
+              "definition": "A traditional theatrical form combining singing, stylized speech, movement, costume, and symbolic gesture, with role types such as male, female, painted-face, and comic characters."
+            },
+            {
+              "term": "对联",
+              "definition": "A paired literary form in which two lines correspond in length, structure, and meaning, commonly displayed during festivals and valued for symmetry and elegance."
+            },
+            {
+              "term": "对称美",
+              "definition": "An aesthetic principle that values balanced arrangement and proportion, frequently seen in traditional buildings, gardens, and decorative design."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In traditional Chinese aesthetics, which statement best explains why brushwork is central to the appreciation of calligraphy?",
+              "options": [
+                "It reveals the writer’s discipline, emotion, and artistic cultivation through line quality and structure.",
+                "It is mainly judged by whether every character matches a printed standard exactly.",
+                "It is valued chiefly because it allows large amounts of text to be copied quickly.",
+                "It is considered successful only when it includes bright colors and realistic shading."
+              ],
+              "correctAnswer": "It reveals the writer’s discipline, emotion, and artistic cultivation through line quality and structure.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student compares a classical Chinese landscape scroll with a Western realist oil painting. Which observation most accurately reflects a common distinction in aesthetic goals?",
+              "options": [
+                "The Chinese work may emphasize atmosphere and the relationship between humans and nature over single-point perspective.",
+                "The Chinese work usually avoids any symbolic meaning in order to focus entirely on anatomical accuracy.",
+                "The Western work generally rejects depth and spatial illusion in favor of flat decorative pattern only.",
+                "The Western work is primarily intended to imitate calligraphic brushstroke order rather than visual appearance."
+              ],
+              "correctAnswer": "The Chinese work may emphasize atmosphere and the relationship between humans and nature over single-point perspective.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In traditional Chinese visual culture, ______ is often regarded as a reflection of moral character as well as artistic skill.",
+              "options": [
+                "书法",
+                "青铜器",
+                "年画",
+                "剪纸"
+              ],
+              "correctAnswer": "书法",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In many examples of traditional Chinese architecture, the preference for ______ helps communicate order, balance, and formality.",
+              "options": [
+                "对称美",
+                "即兴性",
+                "无序感",
+                "夸张变形"
+              ],
+              "correctAnswer": "对称美",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "园林",
+              "definition": "A designed landscape tradition that integrates rocks, water, plants, pavilions, and winding paths to create layered views and an idealized natural environment."
+            },
+            {
+              "term": "诗情画意",
+              "definition": "An aesthetic quality in which a scene or artwork evokes the mood of poetry and the suggestiveness of painting, often emphasizing refinement and imagination."
+            },
+            {
+              "term": "留白",
+              "definition": "A compositional technique that intentionally leaves unfilled space so viewers can infer distance, silence, movement, or emotional resonance."
+            },
+            {
+              "term": "含蓄",
+              "definition": "A style that values restraint, suggestion, and indirect expression, allowing meaning and feeling to emerge through implication rather than explicit statement."
+            },
+            {
+              "term": "审美标准",
+              "definition": "Shared criteria within a society for judging attractiveness or artistic value, shaped by history, media, philosophy, and social norms."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which feature best reflects a key aesthetic goal of the classical Chinese garden?",
+              "options": [
+                "Creating shifting perspectives that make a limited space feel natural, layered, and expansive",
+                "Displaying a rigid grid in which every element is visible from one central viewpoint",
+                "Using only imported materials to demonstrate wealth rather than artistic meaning",
+                "Eliminating rocks and water so that architecture remains the sole focus"
+              ],
+              "correctAnswer": "Creating shifting perspectives that make a limited space feel natural, layered, and expansive",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A discussion of beauty standards in contemporary Chinese-speaking societies would most appropriately note that such standards are",
+              "options": [
+                "fixed and unaffected by media, commerce, or global exchange",
+                "shaped by both longstanding cultural values and modern influences such as film, advertising, and social media",
+                "identical across all regions, generations, and social groups",
+                "based exclusively on traditional literature rather than everyday life"
+              ],
+              "correctAnswer": "shaped by both longstanding cultural values and modern influences such as film, advertising, and social media",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In ink painting and other arts, the use of ______ can encourage the viewer to imagine space, mood, or what is left unsaid.",
+              "options": [
+                "留白",
+                "工笔",
+                "透视法",
+                "浮雕"
+              ],
+              "correctAnswer": "留白",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A poem praised for indirectness and restraint would most likely be described as ______ in style.",
+              "options": [
+                "含蓄",
+                "喧闹",
+                "直白",
+                "机械"
+              ],
+              "correctAnswer": "含蓄",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,8 @@ export interface Flashcard {
   definition: string;
 }
 
+export type CourseType = "standard" | "ap_catalog";
+
 export interface CourseMeta {
   title: string;
   description: string;
@@ -16,6 +18,9 @@ export interface CourseMeta {
   createdByName?: string;
   hasEmbeddings?: boolean;
   visibility?: string;
+  // AP catalog fields — only present when courseType === "ap_catalog"
+  courseType?: CourseType;
+  apSubject?: string;
 }
 
 export interface CourseContent {
@@ -63,30 +68,39 @@ export interface PaginatedAllCoursesResponse {
  */
 export async function createCourseMeta(meta: CourseMeta): Promise<string> {
   try {
-    // Fetch the creator's name from the users collection
-    let createdByName = "Unknown User";
-    try {
-      const userDoc = await db.collection("users").doc(meta.createdBy).get();
-      if (userDoc.exists) {
-        const userData = userDoc.data();
-        createdByName = userData?.name || userData?.displayName || "Unknown User";
+    // System-created courses (e.g. AP catalog) skip the user lookup
+    let createdByName = meta.createdByName || "Unknown User";
+    if (meta.createdBy !== "system") {
+      try {
+        const userDoc = await db.collection("users").doc(meta.createdBy).get();
+        if (userDoc.exists) {
+          const userData = userDoc.data();
+          createdByName = userData?.name || userData?.displayName || "Unknown User";
+        }
+      } catch (userError) {
+        console.warn(`⚠️ Could not fetch user name for ${meta.createdBy}:`, userError);
       }
-    } catch (userError) {
-      console.warn(`⚠️ Could not fetch user name for ${meta.createdBy}:`, userError);
-      // Continue with default value
     }
 
     const courseRef = db.collection("courses").doc();
-    await courseRef.set({
-      title:        meta.title,
-      description:  meta.description,
-      createdBy:    meta.createdBy,
+
+    const courseDoc: Record<string, unknown> = {
+      title:         meta.title,
+      description:   meta.description,
+      createdBy:     meta.createdBy,
       createdByName: createdByName,
       hasEmbeddings: meta.hasEmbeddings || false,
-      visibility:   meta.visibility || "Private",
-      createdAt:    admin.firestore.FieldValue.serverTimestamp(),
-      // leave lessons & mergedFlashcards empty for now
-    });
+      visibility:    meta.visibility || "Private",
+      courseType:    meta.courseType || "standard",
+      createdAt:     admin.firestore.FieldValue.serverTimestamp(),
+    };
+
+    // Write AP-specific fields only when present
+    if (meta.courseType === "ap_catalog") {
+      if (meta.apSubject !== undefined) courseDoc.apSubject = meta.apSubject;
+    }
+
+    await courseRef.set(courseDoc);
     console.log(`📖 Reserved Course ID: ${courseRef.id} (created by: ${createdByName})`);
     return courseRef.id;
   } catch (error) {
@@ -242,6 +256,7 @@ export async function updateCourseContent(
           let savedCount = 0;
           let createdBy = undefined;
           let createdByName = undefined;
+          let tags: string[] | undefined = undefined;
           try {
             const courseRef = db.collection("courses").doc(data.courseId || doc.id);
             const courseSnapshot = await courseRef.get();
@@ -250,6 +265,11 @@ export async function updateCourseContent(
               savedCount = courseData?.savedCount || 0;
               createdBy = courseData?.createdBy;
               createdByName = courseData?.createdByName;
+              // Always use tags from the live course document so existing saved
+              // course docs (written before tags were added) show the right tag.
+              if (Array.isArray(courseData?.tags)) {
+                tags = courseData!.tags as string[];
+              }
             }
           } catch (error) {
             console.error(`Error fetching course data for ${data.courseId || doc.id}:`, error);
@@ -264,6 +284,8 @@ export async function updateCourseContent(
             savedCount,
             createdBy,
             createdByName,
+            // Override with live course doc tags (covers pre-existing saved docs)
+            ...(tags !== undefined && { tags }),
           };
         })
       );
@@ -559,7 +581,84 @@ export async function updateCourseContent(
     }
   };
 
+// ─── AP Unit Notes ─────────────────────────────────────────────────────────────
 
-  
-  
-  
+export interface APUnitNote {
+  unitNumber: number;
+  unitName: string;
+  content: string;
+}
+
+/**
+ * Fetches a single unit note from courses/{courseId}/notes/unit-{unitNumber}.
+ * Returns null if the note doesn't exist yet.
+ */
+export const getAPUnitNote = async (
+  courseId: string,
+  unitNumber: number
+): Promise<APUnitNote | null> => {
+  try {
+    const doc = await db
+      .collection("courses")
+      .doc(courseId)
+      .collection("notes")
+      .doc(`unit-${unitNumber}`)
+      .get();
+
+    if (!doc.exists) return null;
+
+    const d = doc.data()!;
+    return {
+      unitNumber: d.unitNumber ?? unitNumber,
+      unitName:   d.unitName   ?? "",
+      content:    d.content    ?? d.note ?? "",
+    };
+  } catch (error) {
+    console.error(`Error fetching unit note ${unitNumber} for course ${courseId}:`, error);
+    throw new Error("Failed to fetch unit note.");
+  }
+};
+
+// ─── AP Catalog ────────────────────────────────────────────────────────────────
+
+export interface APCatalogCourse {
+  id: string;
+  title: string;
+  description: string;
+  apSubject: string;
+  courseType: "ap_catalog";
+  unitCount: number;
+  lessonCount: number;
+  savedCount: number;
+}
+
+/**
+ * Returns all AP catalog courses ordered alphabetically by apSubject.
+ * Uses the composite Firestore index on (courseType ASC, apSubject ASC).
+ */
+export const getAPCatalogCourses = async (): Promise<APCatalogCourse[]> => {
+  try {
+    const snapshot = await db
+      .collection("courses")
+      .where("courseType", "==", "ap_catalog")
+      .orderBy("apSubject", "asc")
+      .get();
+
+    return snapshot.docs.map((doc) => {
+      const d = doc.data();
+      return {
+        id:          doc.id,
+        title:       d.title        ?? d.apSubject ?? "",
+        description: d.description  ?? "",
+        apSubject:   d.apSubject    ?? "",
+        courseType:  "ap_catalog"   as const,
+        unitCount:   d.unitCount    ?? 0,
+        lessonCount: d.lessonCount  ?? 0,
+        savedCount:  d.savedCount   ?? 0,
+      };
+    });
+  } catch (error) {
+    console.error("Error fetching AP catalog courses:", error);
+    throw new Error("Failed to fetch AP catalog courses.");
+  }
+};

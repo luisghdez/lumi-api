@@ -1,0 +1,1525 @@
+{
+  "apSubject": "AP Calculus BC",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Limits and Continuity",
+      "description": "Limit definition, L'Hôpital's rule, continuity, and limits involving indeterminate forms.",
+      "note": "# Unit 1: Limits and Continuity\n\n## Overview\nThis unit introduces the foundational ideas of **limits** and **continuity**, which underlie nearly every major topic in AP Calculus BC, including **derivatives**, **integrals**, and **series**. On the AP exam, students must evaluate limits algebraically, graphically, numerically, and analytically, including limits involving **indeterminate forms** and the use of **L'Hôpital's Rule**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Limit** | The value that $$f(x)$$ approaches as $$x$$ approaches a given number or infinity. | Limits are the gateway to derivatives and integrals and are tested in multiple representations. |\n| **One-Sided Limits** | Limits from the left or right only: $$\\lim_{x \\to a^-} f(x)$$ and $$\\lim_{x \\to a^+} f(x)$$. | AP questions often ask whether a two-sided limit exists by comparing one-sided limits. |\n| **Infinite Limits** | Limits where $$f(x)$$ grows without bound as $$x \\to a$$. | Used to identify **vertical asymptotes** and behavior near discontinuities. |\n| **Limits at Infinity** | Behavior of $$f(x)$$ as $$x \\to \\infty$$ or $$x \\to -\\infty$$. | Important for identifying **horizontal asymptotes** and end behavior. |\n| **Continuity** | A function is continuous at $$x=a$$ if the limit exists, the function value exists, and they are equal. | AP problems frequently ask students to justify continuity or identify discontinuities. |\n| **Types of Discontinuities** | Removable, jump, and infinite discontinuities. | Students must recognize and classify discontinuities from graphs, equations, or tables. |\n| **Indeterminate Forms** | Expressions such as $$\\frac{0}{0}$$ or $$\\frac{\\infty}{\\infty}$$ that require further analysis. | Common on FRQs and MCQs; students must know when simplification or L'Hôpital's Rule applies. |\n| **L'Hôpital's Rule** | A method for evaluating certain indeterminate limits by differentiating numerator and denominator. | Frequently tested in BC for more advanced limit evaluation, especially with transcendental functions. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify the limit expression] --> B{Direct substitution works?}\n    B -->|Yes| C[Evaluate the limit directly]\n    B -->|No| D{Indeterminate form?}\n    D -->|No| E[Analyze graphically or by known behavior]\n    D -->|Yes| F[Rewrite algebraically]\n    F --> G[Factor, rationalize, combine, or use identities]\n    G --> H{Indeterminate form remains?}\n    H -->|No| I[Evaluate simplified limit]\n    H -->|Yes| J{Form is \"$$\\frac{0}{0}$$\" or \"$$\\frac{\\infty}{\\infty}$$\"?}\n    J -->|Yes| K[Apply L'Hôpital's Rule]\n    K --> L[Differentiate top and bottom]\n    L --> M{Limit now evaluable?}\n    M -->|Yes| N[State final limit]\n    M -->|No| O[Repeat if still indeterminate]\n    J -->|No| P[Rewrite into a usable form first]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **Expression** | **Meaning / Use** |\n|---|---|---|\n| **Limit Definition** | $$\\lim_{x \\to a} f(x) = L$$ | As $$x$$ gets arbitrarily close to $$a$$, $$f(x)$$ gets arbitrarily close to $$L$$. |\n| **Two-Sided Limit Exists** | $$\\lim_{x \\to a} f(x) = L \\iff \\lim_{x \\to a^-} f(x)=L \\text{ and } \\lim_{x \\to a^+} f(x)=L$$ | Both one-sided limits must exist and be equal. |\n| **Continuity at a Point** | $$f \\text{ is continuous at } a \\iff \\lim_{x \\to a} f(x)=f(a)$$ | Equivalent to: function exists, limit exists, and they are equal. |\n| **Limit Laws** | $$\\lim_{x \\to a}[f(x)\\pm g(x)] = \\lim_{x \\to a}f(x)\\pm \\lim_{x \\to a}g(x)$$ | Limits distribute across sums and differences when both limits exist. |\n|  | $$\\lim_{x \\to a}[f(x)g(x)] = \\left(\\lim_{x \\to a}f(x)\\right)\\left(\\lim_{x \\to a}g(x)\\right)$$ | Product law. |\n|  | $$\\lim_{x \\to a}\\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to a}f(x)}{\\lim_{x \\to a}g(x)} \\quad \\text{if } \\lim_{x \\to a}g(x)\\ne 0$$ | Quotient law. |\n| **Squeeze Theorem** | If $$g(x)\\le f(x)\\le h(x)$$ and $$\\lim_{x\\to a}g(x)=\\lim_{x\\to a}h(x)=L$$, then $$\\lim_{x\\to a}f(x)=L$$ | Useful when direct evaluation is difficult. |\n| **L'Hôpital's Rule** | If $$\\lim_{x \\to a}\\frac{f(x)}{g(x)}$$ gives $$\\frac{0}{0}$$ or $$\\frac{\\infty}{\\infty}$$, then $$\\lim_{x \\to a}\\frac{f(x)}{g(x)}=\\lim_{x \\to a}\\frac{f'(x)}{g'(x)}$$, if the latter limit exists. | Only applies to specific indeterminate quotient forms. |\n| **Common Indeterminate Forms** | $$\\frac{0}{0}, \\frac{\\infty}{\\infty}, 0\\cdot\\infty, \\infty-\\infty, 1^\\infty, 0^0, \\infty^0$$ | These forms do **not** determine the limit by themselves. |\n| **Continuity of Common Functions** | Polynomials, exponentials, trig functions, and rational functions are continuous on their domains. | Helps justify continuity quickly on AP free-response questions. |\n\n### Especially Important Standard Limits\n- $$\\lim_{x \\to 0}\\frac{\\sin x}{x}=1$$\n- $$\\lim_{x \\to 0}\\frac{1-\\cos x}{x}=0$$\n- $$\\lim_{x \\to \\infty}\\frac{1}{x}=0$$\n\n## Connections & Comparisons\n\n| **Concept** | **Definition / Behavior** | **How to Recognize** | **AP-Relevant Difference** |\n|---|---|---|---|\n| **Removable Discontinuity** | Limit exists, but $$f(a)$$ is missing or not equal to the limit. | A “hole” in the graph; often caused by a factor that cancels. | Can often be fixed by redefining the function at one point. |\n| **Jump Discontinuity** | Left- and right-hand limits exist but are not equal. | A sudden step in the graph. | Two-sided limit does **not** exist. |\n| **Infinite Discontinuity** | Function grows without bound near a point. | Vertical asymptote. | Often described using infinite limits. |\n| **Continuous Function** | No break at the point; limit equals function value. | Graph can be drawn through the point without interruption. | Supports use of direct substitution and many later theorems. |\n\n## Common AP Exam Traps\n- Confusing **undefined** with **does not exist**: a function value may be undefined at $$x=a$$ while the limit still exists.\n- Using **L'Hôpital's Rule** on expressions that are not first rewritten into $$\\frac{0}{0}$$ or $$\\frac{\\infty}{\\infty}$$ form.\n- Forgetting that a two-sided limit exists **only if** the left- and right-hand limits are equal.\n- Canceling factors without noting the original function may still be undefined at the canceled value, creating a **removable discontinuity**.\n- Assuming continuity everywhere for rational functions; they are only continuous where the denominator is nonzero.\n\n## Quick Review Checklist\n- [ ] I can explain what a **limit** represents numerically, graphically, and algebraically.\n- [ ] I can determine whether a two-sided limit exists by comparing **one-sided limits**.\n- [ ] I can evaluate limits using **direct substitution**, factoring, rationalizing, or identities.\n- [ ] I can identify and classify **removable**, **jump**, and **infinite discontinuities**.\n- [ ] I can state the three conditions required for **continuity at a point**.\n- [ ] I can analyze **limits at infinity** and identify horizontal or vertical asymptotic behavior.\n- [ ] I can recognize **indeterminate forms** and decide whether algebraic rewriting or **L'Hôpital's Rule** is appropriate.\n- [ ] I can justify answers using proper AP Calculus language, including notation such as $$\\lim_{x \\to a} f(x)$$ and continuity statements.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Limit of a function at a point",
+              "definition": "A number $$L$$ such that the values of $$f(x)$$ can be made arbitrarily close to $$L$$ by taking $$x$$ sufficiently close to $$a$$, with $$x \\ne a$$."
+            },
+            {
+              "term": "One-sided limits",
+              "definition": "Values approached by $$f(x)$$ as $$x$$ approaches a point from only the left or only the right; a two-sided result exists only when these approach the same number."
+            },
+            {
+              "term": "Infinite limit",
+              "definition": "A situation in which the values of $$f(x)$$ increase or decrease without bound as $$x$$ approaches a finite input value."
+            },
+            {
+              "term": "Vertical asymptote",
+              "definition": "A line of the form $$x=a$$ that a graph approaches when function values become arbitrarily large in magnitude near $$x=a$$."
+            },
+            {
+              "term": "Limit laws",
+              "definition": "Rules that allow limits of sums, differences, products, quotients, and powers to be computed from simpler limits, provided the relevant individual limits exist and any denominator limit is nonzero."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Evaluate $$\\lim_{x \\to 2} \\frac{x^2-4}{x-2}$$.",
+              "options": [
+                "$$2$$",
+                "$$4$$",
+                "$$0$$",
+                "Does not exist"
+              ],
+              "correctAnswer": "$$4$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Suppose $$\\lim_{x\\to 3^-} f(x)=5$$ and $$\\lim_{x\\to 3^+} f(x)=7$$. Which statement must be true?",
+              "options": [
+                "$$\\lim_{x\\to 3} f(x)=6$$",
+                "$$\\lim_{x\\to 3} f(x)$$ does not exist",
+                "$$f(3)=5$$",
+                "$$f(3)=7$$"
+              ],
+              "correctAnswer": "$$\\lim_{x\\to 3} f(x)$$ does not exist",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$\\lim_{x\\to a} f(x)=3$$ and $$\\lim_{x\\to a} g(x)=-2$$, then $$\\lim_{x\\to a} \\left(2f(x)-g(x)\\right)=\\underline{\\hspace{1cm}}$$. Choose the value that fills the blank: ______",
+              "options": [
+                "$$8$$",
+                "$$4$$",
+                "$$-8$$",
+                "Does not exist"
+              ],
+              "correctAnswer": "$$8$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The limit $$\\lim_{x\\to 0^-} \\frac{1}{x}$$ is ______.",
+              "options": [
+                "$$+\\infty$$",
+                "$$-\\infty$$",
+                "$$0$$",
+                "Does not exist"
+              ],
+              "correctAnswer": "$$-\\infty$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Continuity at a point",
+              "definition": "A condition satisfied at $$x=a$$ when the function value is defined, the limit as $$x$$ approaches $$a$$ exists, and those two quantities are equal."
+            },
+            {
+              "term": "Removable discontinuity",
+              "definition": "A break in a graph caused by a missing or incorrectly defined point where the two-sided limiting value exists."
+            },
+            {
+              "term": "Intermediate Value Theorem",
+              "definition": "A result stating that if a function is continuous on $$[a,b]$$ and $$N$$ lies between $$f(a)$$ and $$f(b)$$, then some $$c$$ in $$[a,b]$$ satisfies $$f(c)=N$$."
+            },
+            {
+              "term": "Indeterminate form",
+              "definition": "An expression arising in limit evaluation, such as $$\\frac{0}{0}$$ or $$\\frac{\\infty}{\\infty}$$, that does not by itself determine the limiting value."
+            },
+            {
+              "term": "L'Hôpital's rule",
+              "definition": "A method for evaluating certain limits of quotients by differentiating numerator and denominator separately when the original quotient approaches $$\\frac{0}{0}$$ or $$\\frac{\\infty}{\\infty}$$ and the necessary differentiability conditions hold."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "For what value of $$k$$ is the function $$f(x)=\\begin{cases} \\frac{x^2-1}{x-1}, & x\\ne 1 \\\\ k, & x=1 \\end{cases}$$ continuous at $$x=1$$?",
+              "options": [
+                "$$0$$",
+                "$$1$$",
+                "$$2$$",
+                "$$-2$$"
+              ],
+              "correctAnswer": "$$2$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Evaluate $$\\lim_{x\\to 0} \\frac{\\sin x - x}{x^3}$$.",
+              "options": [
+                "$$\\frac{1}{6}$$",
+                "$$-\\frac{1}{6}$$",
+                "$$0$$",
+                "Does not exist"
+              ],
+              "correctAnswer": "$$-\\frac{1}{6}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Because $$f(x)=x^3-4x+1$$ is continuous on $$[-2,2]$$, and $$f(-2)=1$$ while $$f(2)=1$$, the Intermediate Value Theorem guarantees that for any value between the minimum and maximum of $$f$$ on that interval, there exists at least one input in $$[-2,2]$$. In particular, there is some $$c$$ such that $$f(c)=______$$.",
+              "options": [
+                "$$0$$",
+                "$$10$$",
+                "$$-20$$",
+                "No such value is guaranteed"
+              ],
+              "correctAnswer": "$$0$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Using L'Hôpital's rule, $$\\lim_{x\\to \\infty} \\frac{\\ln x}{x}=______$$.",
+              "options": [
+                "$$1$$",
+                "$$\\infty$$",
+                "$$0$$",
+                "Does not exist"
+              ],
+              "correctAnswer": "$$0$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Differentiation: Definition and Fundamental Properties",
+      "description": "Derivative definition, differentiation rules, and applications to linear approximation.",
+      "note": "# Unit 2: Differentiation: Definition and Fundamental Properties\n\n## Overview\nThis unit introduces the **derivative** as a limit that measures **instantaneous rate of change** and the **slope of a tangent line**. You will learn how to compute derivatives using the definition and the main differentiation rules, then apply them to **linear approximation**—all of which are foundational skills that appear frequently in both multiple-choice and free-response AP Calculus BC questions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Derivative as a limit** | The derivative of $$f$$ at $$x=a$$ is defined by a limit of a difference quotient. | AP questions often test whether you can interpret or evaluate a derivative directly from its definition. |\n| **Difference quotient** | The expression $$\\dfrac{f(x+h)-f(x)}{h}$$ or $$\\dfrac{f(x)-f(a)}{x-a}$$ before taking the limit. | You must recognize it in algebraic form and simplify it correctly. |\n| **Tangent line slope** | $$f'(a)$$ gives the slope of the tangent line to $$y=f(x)$$ at $$x=a$$. | AP problems connect derivatives to graph interpretation and tangent line equations. |\n| **Instantaneous rate of change** | The derivative describes how fast a quantity changes at a specific input value. | Frequently used in context-based word problems involving motion, growth, or related quantities. |\n| **Basic differentiation rules** | Constant, power, constant multiple, sum, and difference rules. | These are the computational backbone of nearly every derivative problem on the exam. |\n| **Product, quotient, and chain rules** | Rules for differentiating products, quotients, and compositions of functions. | AP BC expects fluent rule selection and accurate execution, especially in multi-step expressions. |\n| **Higher-order derivatives** | Derivatives of derivatives, such as $$f''(x)$$. | Important for interpreting velocity/acceleration and graph behavior later in the course. |\n| **Linear approximation** | Using the tangent line near $$x=a$$ to estimate $$f(x)$$. | A classic AP application that connects local linearity, tangent lines, and estimation. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Start with a function $$f(x)$$\"] --> B[\"Form the difference quotient $$\\dfrac{f(x+h)-f(x)}{h}$$\"]\n    B --> C[\"Take the limit as $$h \\to 0$$\"]\n    C --> D[\"Obtain the derivative $$f'(x)$$\"]\n    D --> E[\"Interpret as slope of tangent line\"]\n    D --> F[\"Interpret as instantaneous rate of change\"]\n    D --> G[\"Use differentiation rules to compute efficiently\"]\n    G --> H[\"Evaluate at a point $$x=a$$ if needed\"]\n    H --> I[\"Build tangent line or linear approximation\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Idea** | **Formula** |\n|---|---|\n| **Derivative definition** | $$f'(x)=\\lim_{h\\to 0}\\dfrac{f(x+h)-f(x)}{h}$$ |\n| **Equivalent point-based definition** | $$f'(a)=\\lim_{x\\to a}\\dfrac{f(x)-f(a)}{x-a}$$ |\n| **Derivative as tangent slope** | $$m_{\\text{tan}}=f'(a)$$ |\n| **Tangent line equation** | $$y-f(a)=f'(a)(x-a)$$ |\n| **Constant rule** | $$\\dfrac{d}{dx}[c]=0$$ |\n| **Power rule** | $$\\dfrac{d}{dx}[x^n]=nx^{n-1}$$ |\n| **Constant multiple rule** | $$\\dfrac{d}{dx}[cf(x)]=c f'(x)$$ |\n| **Sum rule** | $$\\dfrac{d}{dx}[f(x)+g(x)]=f'(x)+g'(x)$$ |\n| **Difference rule** | $$\\dfrac{d}{dx}[f(x)-g(x)]=f'(x)-g'(x)$$ |\n| **Product rule** | $$\\dfrac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)$$ |\n| **Quotient rule** | $$\\dfrac{d}{dx}\\left[\\dfrac{f(x)}{g(x)}\\right]=\\dfrac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}$$ |\n| **Chain rule** | $$\\dfrac{d}{dx}[f(g(x))]=f'(g(x))g'(x)$$ |\n| **Higher-order derivative** | $$f''(x)=\\dfrac{d}{dx}[f'(x)]$$ |\n| **Linearization at $$x=a$$** | $$L(x)=f(a)+f'(a)(x-a)$$ |\n| **Approximation near $$x=a$$** | $$f(x)\\approx L(x)=f(a)+f'(a)(x-a)$$ |\n\n### Must-know interpretations\n- **If** $$f'(a)>0$$, then $$f$$ is increasing at that point.\n- **If** $$f'(a)<0$$, then $$f$$ is decreasing at that point.\n- **If** $$f'(a)=0$$, the tangent line is horizontal, but that does **not** automatically mean a maximum or minimum.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection / Difference** | **AP Significance** |\n|---|---|---|\n| **Average rate of change** vs. **instantaneous rate of change** | Average rate uses a secant slope over an interval: $$\\dfrac{f(b)-f(a)}{b-a}$$. Instantaneous rate uses a tangent slope at one point: $$f'(a)$$. | AP often asks you to move from secant slope to tangent slope through a limit. |\n| **Derivative from definition** vs. **derivative from rules** | The definition explains what the derivative means; rules make computation fast. | You may be required to justify a derivative from first principles or compute efficiently using rules. |\n| **Tangent line** vs. **linear approximation** | The tangent line is the exact line touching the curve at $$x=a$$; linear approximation uses that line to estimate nearby values. | AP questions often ask for both the tangent line equation and an estimate of a function value near $$a$$. |\n| **First derivative** vs. **second derivative** | $$f'(x)$$ measures rate of change of $$f$$; $$f''(x)$$ measures rate of change of the rate of change. | Essential for interpreting motion and later graph analysis. |\n\n## Common AP Exam Traps\n- Forgetting that the **derivative definition** requires a **limit**; the difference quotient alone is **not** the derivative.\n- Using the **power rule** incorrectly on composite functions, such as differentiating $$[g(x)]^n$$ without also multiplying by $$g'(x)$$.\n- Mixing up the **product rule** and **quotient rule**, especially forgetting that the denominator in the quotient rule is $$[g(x)]^2$$.\n- Assuming that if $$f'(a)=0$$, then $$f$$ must have a local extremum at $$x=a$$. A horizontal tangent does not guarantee a max or min.\n- Using **linear approximation** too far from the base point $$x=a$$; it is only reliable **near** the point of tangency.\n\n## Quick Review Checklist\n- [ ] I can state the **definition of the derivative** using a limit.\n- [ ] I can interpret $$f'(a)$$ as both a **tangent line slope** and an **instantaneous rate of change**.\n- [ ] I can compute a derivative from the **difference quotient** by simplifying and taking a limit.\n- [ ] I can apply the **power, sum, difference, and constant multiple rules** correctly.\n- [ ] I can use the **product rule, quotient rule, and chain rule** on more complicated expressions.\n- [ ] I can find the equation of a **tangent line** at a given point.\n- [ ] I can write and use a **linearization** $$L(x)=f(a)+f'(a)(x-a)$$ to estimate nearby values.\n- [ ] I can distinguish **average rate of change** from **instantaneous rate of change** and explain how limits connect them.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Derivative at a point",
+              "definition": "The limit of the difference quotient $$\\lim_{h\\to 0}\\frac{f(a+h)-f(a)}{h}$$, when it exists, representing the instantaneous rate of change and the slope of the tangent line at $$x=a$$."
+            },
+            {
+              "term": "Differentiability",
+              "definition": "A property of a function at a point where the limit defining its instantaneous rate of change exists; this guarantees continuity at that point."
+            },
+            {
+              "term": "Average rate of change",
+              "definition": "The slope of the secant line through $$\\big(a,f(a)\\big)$$ and $$\\big(b,f(b)\\big)$$, computed by $$\\frac{f(b)-f(a)}{b-a}$$."
+            },
+            {
+              "term": "Power rule",
+              "definition": "A rule stating that for real $$n$$, the derivative of $$x^n$$ is $$nx^{n-1}$$, wherever the expression is defined."
+            },
+            {
+              "term": "Derivative notation",
+              "definition": "Common symbolic forms for the rate of change of $$y=f(x)$$, including $$f'(x)$$, $$\\frac{dy}{dx}$$, and $$\\frac{d}{dx}[f(x)]$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "If $$f(x)=\\sqrt{x}$$, which expression correctly gives $$f'(4)$$ using the limit definition?",
+              "options": [
+                "$$\\lim_{h\\to 0}\\frac{\\sqrt{4+h}-2}{h}$$",
+                "$$\\lim_{h\\to 0}\\frac{\\sqrt{4+h}-\\sqrt{h}}{4}$$",
+                "$$\\lim_{h\\to 0}\\frac{\\sqrt{4+h}-2}{4+h}$$",
+                "$$\\lim_{h\\to 0}\\frac{\\sqrt{h}-2}{h}$$"
+              ],
+              "correctAnswer": "$$\\lim_{h\\to 0}\\frac{\\sqrt{4+h}-2}{h}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A function is defined by $$f(x)=\\begin{cases}x^2,&x\\le 1\\\\2x-1,&x>1\\end{cases}$$. Which statement is true about $$f$$ at $$x=1$$?",
+              "options": [
+                "It is differentiable because both one-sided derivatives equal $$2$$.",
+                "It is continuous but not differentiable because the one-sided derivatives are unequal.",
+                "It is not continuous because the one-sided limits are different.",
+                "It is neither continuous nor differentiable because $$f(1)$$ is undefined."
+              ],
+              "correctAnswer": "It is continuous but not differentiable because the one-sided derivatives are unequal.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For $$f(x)=x^5-3x^2+1$$, the derivative is ______.",
+              "options": [
+                "$$5x^4-6x$$",
+                "$$5x^4-3x$$",
+                "$$x^4-6x$$",
+                "$$5x^4-6$$"
+              ],
+              "correctAnswer": "$$5x^4-6x$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If the limit $$\\lim_{h\\to 0}\\frac{f(a+h)-f(a)}{h}$$ exists, then $$f$$ must be ______ at $$x=a$$.",
+              "options": [
+                "continuous",
+                "periodic",
+                "concave up",
+                "unbounded"
+              ],
+              "correctAnswer": "continuous",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Constant multiple rule",
+              "definition": "A differentiation rule stating that multiplying a function by a constant multiplies its derivative by the same constant: $$\\frac{d}{dx}[cf(x)]=cf'(x)$$."
+            },
+            {
+              "term": "Sum and difference rules",
+              "definition": "Rules stating that the rate of change of a sum or difference is found by adding or subtracting the individual rates of change: $$\\frac{d}{dx}[f(x)\\pm g(x)]=f'(x)\\pm g'(x)$$."
+            },
+            {
+              "term": "Product rule",
+              "definition": "A rule for differentiating a product of two functions: $$\\frac{d}{dx}[f(x)g(x)]=f'(x)g(x)+f(x)g'(x)$$."
+            },
+            {
+              "term": "Quotient rule",
+              "definition": "A rule for differentiating a ratio of two functions: $$\\frac{d}{dx}\\left[\\frac{f(x)}{g(x)}\\right]=\\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}$$, where $$g(x)\\ne 0$$."
+            },
+            {
+              "term": "Linearization",
+              "definition": "The tangent-line approximation near $$x=a$$ given by $$L(x)=f(a)+f'(a)(x-a)$$, used to estimate nearby function values."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "If $$h(x)=(x^2+1)e^x$$, what is $$h'(x)$$?",
+              "options": [
+                "$$2xe^x+(x^2+1)e^x$$",
+                "$$(2x+1)e^x$$",
+                "$$x^2e^x+e^x$$",
+                "$$\\frac{2x}{e^x}+(x^2+1)e^x$$"
+              ],
+              "correctAnswer": "$$2xe^x+(x^2+1)e^x$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Use linearization of $$f(x)=\\ln x$$ at $$x=1$$ to approximate $$\\ln(1.04)$$.",
+              "options": [
+                "$$0.04$$",
+                "$$1.04$$",
+                "$$-0.04$$",
+                "$$0.0392$$"
+              ],
+              "correctAnswer": "$$0.04$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$f(x)=\\frac{x^2+3}{x-1}$$, then $$f'(x)=\\______$$.",
+              "options": [
+                "$$\\frac{x^2-2x-3}{(x-1)^2}$$",
+                "$$\\frac{2x+3}{x-1}$$",
+                "$$\\frac{x^2+2x-3}{(x-1)^2}$$",
+                "$$\\frac{x^2-2x+3}{(x-1)^2}$$"
+              ],
+              "correctAnswer": "$$\\frac{x^2-2x-3}{(x-1)^2}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The linearization of $$f(x)=\\sqrt{x}$$ at $$x=9$$ is $$L(x)=______$$.",
+              "options": [
+                "$$3+\\frac{1}{6}(x-9)$$",
+                "$$9+\\frac{1}{3}(x-9)$$",
+                "$$3+\\frac{1}{3}(x-9)$$",
+                "$$\\sqrt{x}+\\frac{1}{6}(x-9)$$"
+              ],
+              "correctAnswer": "$$3+\\frac{1}{6}(x-9)$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Differentiation: Composite, Implicit, and Inverse Functions",
+      "description": "Chain rule, implicit differentiation, and inverse function derivatives.",
+      "note": "# Unit 3: Differentiation: Composite, Implicit, and Inverse Functions\n\n## Overview\nThis unit develops three major differentiation tools: the **chain rule** for composite functions, **implicit differentiation** for equations that do not explicitly solve for $$y$$, and derivatives of **inverse functions**. These ideas are heavily tested on the AP Calculus BC exam because they connect algebraic structure to derivative reasoning and appear in both procedural and conceptual free-response and multiple-choice questions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Composite functions** | A function built from one function inside another, such as $$f(g(x))$$ | AP questions often require identifying nested structure before differentiating |\n| **Chain rule** | The derivative rule for compositions: differentiate the outside, then multiply by the derivative of the inside | One of the most frequently used differentiation rules on the exam |\n| **Repeated chain rule** | Applying the chain rule more than once when a function has multiple layers | Common in BC problems with powers, trig, exponentials, and radicals combined |\n| **Implicit differentiation** | Differentiating both sides of an equation involving $$x$$ and $$y$$, treating $$y$$ as a function of $$x$$ | Essential for finding $$\\frac{dy}{dx}$$ when equations are not solved for $$y$$ |\n| **Related use of $$\\frac{dy}{dx}$$ in implicit forms** | Solving for slope, tangent lines, or second derivatives from implicit equations | AP free-response often asks for slope at a point or where tangent lines are horizontal/vertical |\n| **Inverse functions** | Functions that reverse each other, so that $$f^{-1}(f(x))=x$$ | Understanding inverses supports derivative formulas and graph interpretation |\n| **Derivative of an inverse function** | A rule connecting the derivative of $$f^{-1}$$ to the derivative of $$f$$ | Frequently tested conceptually, especially with tables and function values |\n| **Inverse trig derivatives** | Derivatives of functions like $$\\sin^{-1}(x)$$ and $$\\tan^{-1}(x)$$ | BC students must know these formulas and use them accurately in context |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify function structure] --> B{Explicit or implicit?}\n    B -->|Explicit composite| C[Locate outer and inner functions]\n    C --> D[Differentiate outer function]\n    D --> E[Multiply by derivative of inner function]\n    E --> F[Simplify carefully]\n\n    B -->|Implicit relation| G[Differentiatie both sides with respect to x]\n    G --> H[\"Apply chain rule to terms with y (include dy/dx)\"]\n    H --> I[Solve algebraically for dy/dx]\n    I --> J[Evaluate at given point if needed]\n\n    B -->|Inverse function question| K[Use inverse relationship]\n    K --> L[\"Apply formula for derivative of inverse\"]\n    L --> M[Substitute known function value and derivative]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Idea** | **Formula** |\n|---|---|\n| **Chain rule** | $$\\frac{d}{dx}\\left[f(g(x))\\right]=f'(g(x))\\cdot g'(x)$$ |\n| **Power form of chain rule** | $$\\frac{d}{dx}\\left[(u(x))^n\\right]=n(u(x))^{n-1}u'(x)$$ |\n| **General implicit differentiation idea** | If $$F(x,y)=0$$, then differentiate both sides with respect to $$x$$, treating $$y$$ as $$y(x)$$ |\n| **Derivative of $$y^n$$ in implicit form** | $$\\frac{d}{dx}\\left[y^n\\right]=ny^{n-1}\\frac{dy}{dx}$$ |\n| **Product with implicit variable** | $$\\frac{d}{dx}\\left[x\\,y\\right]=x\\frac{dy}{dx}+y$$ |\n| **Derivative of an inverse function** | $$\\left(f^{-1}\\right)'(x)=\\frac{1}{f'\\left(f^{-1}(x)\\right)}$$ |\n| **Equivalent inverse derivative form** | If $$y=f^{-1}(x)$$, then $$\\frac{dy}{dx}=\\frac{1}{f'(y)}$$ |\n| **Inverse relationship identity** | $$f\\left(f^{-1}(x)\\right)=x \\quad \\text{and} \\quad f^{-1}(f(x))=x$$ |\n| **Derivative of $$\\sin^{-1}(x)$$** | $$\\frac{d}{dx}\\left[\\sin^{-1}(x)\\right]=\\frac{1}{\\sqrt{1-x^2}} \\quad \\text{for } |x|<1$$ |\n| **Derivative of $$\\cos^{-1}(x)$$** | $$\\frac{d}{dx}\\left[\\cos^{-1}(x)\\right]=-\\frac{1}{\\sqrt{1-x^2}} \\quad \\text{for } |x|<1$$ |\n| **Derivative of $$\\tan^{-1}(x)$$** | $$\\frac{d}{dx}\\left[\\tan^{-1}(x)\\right]=\\frac{1}{1+x^2}$$ |\n\n### High-value reminders\n- For **implicit differentiation**, every time you differentiate a term containing $$y$$, multiply by $$\\frac{dy}{dx}$$ when required by the chain rule.\n- For **inverse derivatives**, you usually need:\n  $$f(a)=b \\Rightarrow f^{-1}(b)=a$$\n  so table questions often require finding the matching input-output pair first.\n- A function must be **one-to-one** on the relevant interval to have an inverse function.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** | **Typical AP Use** |\n|---|---|---|---|\n| **Ordinary differentiation vs. chain rule** | Both find derivatives | The chain rule is needed when one function is inside another | Recognizing when simple rules are not enough |\n| **Explicit vs. implicit differentiation** | Both produce $$\\frac{dy}{dx}$$ | Explicit functions are solved for $$y$$; implicit relations are not | Finding slopes from equations like $$x^2+y^2=25$$ |\n| **Chain rule vs. inverse derivative formula** | Both rely on composition | The inverse formula comes from differentiating $$f(f^{-1}(x))=x$$ | Conceptual problems connecting function and inverse |\n| **Inverse trig functions vs. reciprocal trig functions** | Names look similar | $$\\sin^{-1}(x)$$ means inverse sine, not $$\\frac{1}{\\sin(x)}$$ | A classic notation trap on AP questions |\n\n## Common AP Exam Traps\n- Forgetting the extra factor of $$\\frac{dy}{dx}$$ when differentiating terms involving $$y$$ implicitly, such as writing $$\\frac{d}{dx}[y^3]=3y^2$$ instead of $$3y^2\\frac{dy}{dx}$$.\n- Using the **chain rule** incompletely by differentiating the outside function but not multiplying by the derivative of the inside.\n- Confusing **inverse trig notation** with reciprocal trig notation: $$\\sin^{-1}(x)\\neq \\csc(x)$$.\n- Using the inverse derivative formula without first finding the correct corresponding input, such as failing to convert from $$f(a)=b$$ to $$f^{-1}(b)=a$$.\n- Solving an implicit derivative correctly but not substituting the given point to find the numerical slope or tangent line.\n\n## Quick Review Checklist\n- [ ] I can identify when a function is a **composite function** and choose the **chain rule**.\n- [ ] I can differentiate multistep compositions such as powers of trig, exponential, or radical expressions.\n- [ ] I can perform **implicit differentiation** on equations involving both $$x$$ and $$y$$.\n- [ ] I can solve algebraically for $$\\frac{dy}{dx}$$ after differentiating implicitly.\n- [ ] I can find the slope of a tangent line to a curve defined implicitly at a specific point.\n- [ ] I can use $$\\left(f^{-1}\\right)'(x)=\\frac{1}{f'(f^{-1}(x))}$$ correctly.\n- [ ] I can interpret inverse-function questions from equations, graphs, or tables.\n- [ ] I can distinguish **inverse trig functions** from **reciprocal trig functions** and use the correct derivative formulas.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Chain Rule",
+              "definition": "A rule for finding the derivative of a composition by multiplying the rate of change of the outer expression evaluated at the inner expression by the rate of change of the inner expression: $$\\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x)$$."
+            },
+            {
+              "term": "Composite Function Differentiation",
+              "definition": "The process of differentiating an expression formed by substituting one function into another, often requiring identification of inner and outer parts before applying $$\\frac{d}{dx}[f(g(x))]$$ appropriately."
+            },
+            {
+              "term": "General Power Rule with a Function Input",
+              "definition": "For a differentiable inner expression $$u(x)$$ and real number $$n$$, the derivative of $$[u(x)]^n$$ is $$n[u(x)]^{n-1}u'(x)$$."
+            },
+            {
+              "term": "Derivative of Exponential Compositions",
+              "definition": "If an exponent or input is a differentiable expression, the derivative is found by multiplying the usual derivative pattern by the derivative of that input; for example, $$\\frac{d}{dx}[e^{u(x)}]=e^{u(x)}u'(x)$$ and $$\\frac{d}{dx}[a^{u(x)}]=a^{u(x)}\\ln(a)\\,u'(x)$$ for $$a>0$$ and $$a\\ne1$$."
+            },
+            {
+              "term": "Derivative of Logarithmic Compositions",
+              "definition": "When the input is a differentiable expression, the derivative of a natural logarithm is the derivative of the input divided by the input: $$\\frac{d}{dx}[\\ln(u(x))]=\\frac{u'(x)}{u(x)}$$, where $$u(x)>0$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "If $$f(x)=\\sqrt{1+x^4}$$, what is $$f'(x)$$?",
+              "options": [
+                "$$\\frac{2x^3}{\\sqrt{1+x^4}}$$",
+                "$$\\frac{4x^3}{\\sqrt{1+x^4}}$$",
+                "$$2x^3\\sqrt{1+x^4}$$",
+                "$$\\frac{x^3}{2\\sqrt{1+x^4}}$$"
+              ],
+              "correctAnswer": "$$\\frac{2x^3}{\\sqrt{1+x^4}}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Let $$g(x)=e^{\\sin(x^2)}$$. Which expression gives $$g'(x)$$?",
+              "options": [
+                "$$e^{\\sin(x^2)}\\cos(x^2)$$",
+                "$$2xe^{\\sin(x^2)}\\cos(x^2)$$",
+                "$$2x\\cos(\\sin(x^2))e^{\\sin(x^2)}$$",
+                "$$e^{\\sin(x^2)}\\sin(2x)$$"
+              ],
+              "correctAnswer": "$$2xe^{\\sin(x^2)}\\cos(x^2)$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$y=(3x^2-5)^7$$, then $$\\frac{dy}{dx}=\\text{______}$$.",
+              "options": [
+                "$$42x(3x^2-5)^6$$",
+                "$$7(3x^2-5)^6$$",
+                "$$42x(3x^2-5)^7$$",
+                "$$6x(3x^2-5)^6$$"
+              ],
+              "correctAnswer": "$$42x(3x^2-5)^6$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$h(x)=\\ln(1+x^3)$$, then $$h'(x)=\\text{______}$$.",
+              "options": [
+                "$$\\frac{3x^2}{1+x^3}$$",
+                "$$\\frac{1}{1+x^3}$$",
+                "$$\\frac{3x^2}{(1+x^3)^2}$$",
+                "$$\\ln(1+x^3)\\cdot 3x^2$$"
+              ],
+              "correctAnswer": "$$\\frac{3x^2}{1+x^3}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Implicit Differentiation",
+              "definition": "A technique for finding $$\\frac{dy}{dx}$$ when $$y$$ is defined by an equation involving both variables, accomplished by differentiating both sides with respect to $$x$$ and treating $$y$$ as a differentiable function of $$x$$."
+            },
+            {
+              "term": "Derivative of an Inverse Function",
+              "definition": "If a function is differentiable and one-to-one near a point with nonzero derivative, then the slope of its inverse at the corresponding point is the reciprocal of the original slope: $$\\left(f^{-1}\\right)'(a)=\\frac{1}{f'(f^{-1}(a))}$$."
+            },
+            {
+              "term": "Related Rates Setup",
+              "definition": "A method in which variables connected by an equation are differentiated with respect to time, using the chain rule to relate given rates to an unknown rate."
+            },
+            {
+              "term": "Second Derivative from an Implicit Relation",
+              "definition": "After obtaining $$\\frac{dy}{dx}$$ from an equation involving both variables, differentiate that result with respect to $$x$$ again, substituting as needed to express curvature information in terms of $$x$$ and $$y$$."
+            },
+            {
+              "term": "Tangent Line to an Inverse Function",
+              "definition": "A linear approximation to the inverse graph at a point, found by using the reciprocal slope from the original function and the point with coordinates reversed."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Given $$x^2+xy+y^2=7$$, what is $$\\frac{dy}{dx}$$?",
+              "options": [
+                "$$-\\frac{2x+y}{x+2y}$$",
+                "$$\\frac{2x+y}{x+2y}$$",
+                "$$-\\frac{x+2y}{2x+y}$$",
+                "$$\\frac{x-2y}{2x-y}$$"
+              ],
+              "correctAnswer": "$$-\\frac{2x+y}{x+2y}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Suppose $$f(2)=5$$ and $$f'(2)=\\frac{1}{3}$$, where $$f$$ is one-to-one and differentiable. What is $$\\left(f^{-1}\\right)'(5)$$?",
+              "options": [
+                "$$\\frac{1}{3}$$",
+                "$$3$$",
+                "$$-3$$",
+                "$$\\frac{1}{5}$$"
+              ],
+              "correctAnswer": "$$3$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$x^3+y^3=6xy$$, then differentiating implicitly gives $$\\frac{dy}{dx}=\\text{______}$$.",
+              "options": [
+                "$$\\frac{2y-x^2}{y^2-2x}$$",
+                "$$\\frac{6y-3x^2}{3y^2-6x}$$",
+                "$$\\frac{x^2-2y}{2x-y^2}$$",
+                "$$\\frac{2x-y^2}{2y-x^2}$$"
+              ],
+              "correctAnswer": "$$\\frac{2y-x^2}{y^2-2x}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$f(1)=4$$ and $$f'(1)=6$$, then $$\\left(f^{-1}\\right)'(4)=\\text{______}$$.",
+              "options": [
+                "$$6$$",
+                "$$\\frac{1}{6}$$",
+                "$$4$$",
+                "$$-\\frac{1}{6}$$"
+              ],
+              "correctAnswer": "$$\\frac{1}{6}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Contextual Applications of Differentiation",
+      "description": "Rates of change, related rates, and motion analysis.",
+      "note": "# Unit 4: Contextual Applications of Differentiation\n\n## Overview\nThis unit applies **derivatives** to real-world situations: interpreting **rates of change**, solving **related rates** problems, and analyzing **motion** using position, velocity, and acceleration. These ideas matter on the AP Exam because students must move beyond computing derivatives and use them to **model, interpret, and justify** behavior in context, often with units and sign analysis.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Rate of change in context** | Interpreting a derivative as how one quantity changes with respect to another | AP questions often ask for the meaning of $$f'(x)$$, including **units** and what positive/negative values imply |\n| **Units of a derivative** | The units of $$\\dfrac{dy}{dx}$$ are “units of $$y$$ per unit of $$x$$” | Students must explain derivative values in context, not just compute them |\n| **Related rates** | Problems where multiple changing quantities are connected by an equation and differentiated with respect to time | A classic FRQ topic requiring setup, implicit differentiation, and substitution at the correct instant |\n| **Implicit differentiation in applications** | Differentiating equations that define relationships indirectly | Essential in related rates when variables like $$r$$, $$h$$, $$x$$, and $$y$$ all depend on time |\n| **Position, velocity, and acceleration** | Motion relationships where velocity is the derivative of position and acceleration is the derivative of velocity | Central to interpreting motion graphs, finding speed, and determining when an object moves left/right or speeds up/slows down |\n| **Average vs. instantaneous rate of change** | Average rate uses a secant slope; instantaneous rate uses a tangent slope | AP problems may ask students to compare numerical average change with derivative-based instantaneous change |\n| **Speed vs. velocity** | Velocity includes direction; speed is the magnitude of velocity | A frequent source of mistakes, especially when velocity is negative |\n| **Particle motion analysis** | Using signs of $$v(t)$$ and $$a(t)$$ to describe movement and changes in motion | Appears often in FRQs and MCQs involving tables, graphs, or formulas |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify the quantities that change] --> B[Define variables with units]\n    B --> C[Write an equation relating the variables]\n    C --> D[Differentiatie with respect to time]\n    D --> E[Substitute the given values at the instant]\n    E --> F[Solve for the unknown rate]\n    F --> G[Interpret the sign and include units]\n```\n\n### Motion-analysis workflow\n\n```mermaid\nflowchart LR\n    A[Position function $$s(t)$$] --> B[Differentiate to get velocity $$v(t)=s'(t)$$]\n    B --> C[Differentiate to get acceleration $$a(t)=v'(t)=s''(t)$$]\n    B --> D[Use sign of $$v(t)$$ to determine direction of motion]\n    C --> E[Combine signs of $$v(t)$$ and $$a(t)$$ to determine speeding up or slowing down]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Idea** | **Formula / Rule** |\n|---|---|\n| **Average rate of change** | $$\\dfrac{f(b)-f(a)}{b-a}$$ |\n| **Instantaneous rate of change** | $$f'(a)=\\lim_{h\\to 0}\\dfrac{f(a+h)-f(a)}{h}$$ |\n| **Derivative as a rate** | If $$y=f(x)$$, then $$\\dfrac{dy}{dx}$$ measures the rate at which $$y$$ changes with respect to $$x$$ |\n| **Units of a derivative** | $$\\dfrac{\\text{units of output}}{\\text{units of input}}$$ |\n| **Related rates principle** | If variables depend on time, differentiate both sides of the relationship with respect to $$t$$ |\n| **Chain rule in related rates** | $$\\dfrac{d}{dt}[x^n]=nx^{n-1}\\dfrac{dx}{dt}$$ |\n| **Velocity** | $$v(t)=s'(t)$$ |\n| **Acceleration** | $$a(t)=v'(t)=s''(t)$$ |\n| **Speed** | $$\\text{speed}=|v(t)|$$ |\n| **Total distance traveled** | Over an interval, total distance is found by accumulating the magnitude of velocity; if using integrals later, this becomes $$\\int_a^b |v(t)|\\,dt$$ |\n| **Moving right / left** | Moving right when $$v(t)>0$$; moving left when $$v(t)<0$$ |\n| **Speeding up / slowing down** | An object is **speeding up** when $$v(t)$$ and $$a(t)$$ have the same sign, and **slowing down** when they have opposite signs |\n\n### Common related-rates equations\nStudents should recognize common geometric models:\n\n- **Circle area**: $$A=\\pi r^2$$\n- **Sphere volume**: $$V=\\dfrac{4}{3}\\pi r^3$$\n- **Cone volume**: $$V=\\dfrac{1}{3}\\pi r^2h$$\n- **Pythagorean relationship**: $$x^2+y^2=z^2$$\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** | **Typical AP Use** |\n|---|---|---|---|\n| **Average rate of change** vs. **instantaneous rate of change** | Both describe how a quantity changes | Average uses two points; instantaneous uses the derivative at one point | Comparing secant slope to tangent slope |\n| **Velocity** vs. **speed** | Both describe motion | Velocity can be negative; speed is always nonnegative: $$|v(t)|$$ | Interpreting direction versus magnitude |\n| **Position** vs. **displacement** vs. **distance traveled** | All involve motion over time | Displacement is net change in position; distance traveled accounts for all movement | AP often asks for verbal interpretation from graphs or tables |\n| **Related rates setup** vs. **solving the rate** | Both are part of one problem | Setup requires the correct equation before substitution; solving comes after differentiation | Many students lose points by substituting too early |\n\n## Common AP Exam Traps\n\n- Confusing **velocity** with **speed**. If $$v(t)=-3$$, the velocity is negative, but the speed is $$3$$.\n- Substituting numerical values into a **related rates** equation **before differentiating**. Differentiate the general relationship first.\n- Forgetting that all changing quantities in related rates are functions of time, so terms like $$r^2$$ become $$2r\\dfrac{dr}{dt}$$ when differentiated.\n- Ignoring **units** in contextual questions. A derivative answer without units or interpretation is often incomplete.\n- Misidentifying **speeding up** and **slowing down**. The sign of $$a(t)$$ alone is not enough; compare the signs of $$v(t)$$ and $$a(t)$$ together.\n\n## Quick Review Checklist\n\n- [ ] I can interpret **$$f'(x)$$** as an instantaneous rate of change in words and with correct units.\n- [ ] I can distinguish between **average rate of change** and **instantaneous rate of change**.\n- [ ] I can set up a **related rates** problem by defining variables and writing an equation relating them.\n- [ ] I can use **implicit differentiation** with respect to time to find an unknown rate.\n- [ ] I can identify when to use geometric formulas such as $$A=\\pi r^2$$ or $$V=\\dfrac{1}{3}\\pi r^2h$$ in a related-rates context.\n- [ ] I can find **velocity** and **acceleration** from a position function $$s(t)$$.\n- [ ] I can determine when an object is moving left/right and speeding up/slowing down using the signs of $$v(t)$$ and $$a(t)$$.\n- [ ] I can explain the difference among **position**, **displacement**, **velocity**, **speed**, and **distance traveled** in context.\n\n--- \n\n### Final tip\nIn this unit, AP success depends on more than calculation: always **name the quantity**, **state the units**, and **interpret the sign** of your answer in context.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Average rate of change",
+              "definition": "For a quantity modeled by $$f$$ on the interval $$[a,b]$$, this is $$\\frac{f(b)-f(a)}{b-a}$$ and represents the slope of the secant line over that interval."
+            },
+            {
+              "term": "Instantaneous rate of change",
+              "definition": "The value of $$f'(a)$$, representing the slope of the tangent line to $$y=f(x)$$ at $$x=a$$ and the limiting rate at a single moment."
+            },
+            {
+              "term": "Linearization",
+              "definition": "An approximation of a differentiable function near $$x=a$$ given by $$L(x)=f(a)+f'(a)(x-a)$$, using the tangent line as a local model."
+            },
+            {
+              "term": "Related rates",
+              "definition": "A process for connecting time derivatives of variables linked by an equation, found by differentiating implicitly with respect to time and substituting a specific instant."
+            },
+            {
+              "term": "Implicit differentiation with time",
+              "definition": "When variables depend on $$t$$, differentiate both sides of an equation with respect to $$t$$ using the chain rule, so terms like $$\\frac{dx}{dt}$$ and $$\\frac{dy}{dt}$$ appear."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A particle moves along a line with position $$s(t)=t^3-6t^2+9t$$ for $$t\\ge 0$$. At what time is the particle momentarily at rest?",
+              "options": [
+                "$$t=1$$ only",
+                "$$t=3$$ only",
+                "$$t=1$$ and $$t=3$$",
+                "The particle is never at rest"
+              ],
+              "correctAnswer": "$$t=1$$ and $$t=3$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Water is poured into a conical tank of fixed shape. When the water depth is $$h$$, the radius of the water surface is proportional to $$h$$. After relating $$r$$ and $$h$$, the volume can be written as $$V=kh^3$$ for a constant $$k>0$$. If water enters at a constant rate, which statement must be true?",
+              "options": [
+                "$$\\frac{dh}{dt}$$ is constant",
+                "$$\\frac{dh}{dt}$$ decreases as $$h$$ increases",
+                "$$\\frac{dh}{dt}$$ increases as $$h$$ increases",
+                "$$\\frac{d^2h}{dt^2}=0$$ for all $$h$$"
+              ],
+              "correctAnswer": "$$\\frac{dh}{dt}$$ decreases as $$h$$ increases",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$f'(x)>0$$ on an interval, then $$f$$ is ______ on that interval.",
+              "options": [
+                "decreasing",
+                "concave up",
+                "increasing",
+                "constant"
+              ],
+              "correctAnswer": "increasing",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A ladder of fixed length slides down a wall. If $$x^2+y^2=L^2$$, then differentiating with respect to time gives $$x\\frac{dx}{dt}+y\\frac{dy}{dt}=\\,$$ ______.",
+              "options": [
+                "$$0$$",
+                "$$L$$",
+                "$$2L\\frac{dL}{dt}$$",
+                "$$x+y$$"
+              ],
+              "correctAnswer": "$$0$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Velocity",
+              "definition": "The derivative of position with respect to time, $$v(t)=s'(t)$$, which gives signed motion along a line."
+            },
+            {
+              "term": "Speed",
+              "definition": "The magnitude of velocity, given in one dimension by $$|v(t)|$$, describing how fast an object moves without direction."
+            },
+            {
+              "term": "Acceleration",
+              "definition": "The derivative of velocity with respect to time, $$a(t)=v'(t)=s''(t)$$, measuring how velocity changes."
+            },
+            {
+              "term": "Local linearity in motion",
+              "definition": "Over a very short time interval, position changes approximately by $$\\Delta s\\approx v(t)\\Delta t$$ because the tangent line gives the best nearby linear model."
+            },
+            {
+              "term": "Critical point in motion analysis",
+              "definition": "A time in the domain where $$v(t)=0$$ or $$v'(t)$$ is undefined, often used when determining extrema of position or changes in direction."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A particle has velocity $$v(t)=t^3-6t^2+9t$$ for $$0\\le t\\le 4$$. On which interval is the particle moving to the left?",
+              "options": [
+                "$$0<t<1$$ only",
+                "$$1<t<3$$ only",
+                "$$3<t<4$$ only",
+                "$$0<t<1$$ and $$3<t<4$$"
+              ],
+              "correctAnswer": "$$1<t<3$$ only",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The position of a particle is $$s(t)=t^4-4t^3+2$$. At $$t=2$$, which statement is true?",
+              "options": [
+                "The particle is moving right and speeding up",
+                "The particle is moving left and slowing down",
+                "The particle is moving left and speeding up",
+                "The particle is moving right and slowing down"
+              ],
+              "correctAnswer": "The particle is moving left and slowing down",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$v(t)$$ and $$a(t)$$ have opposite signs at a time $$t$$, then the particle is ______ at that time.",
+              "options": [
+                "speeding up",
+                "slowing down",
+                "changing direction",
+                "at rest"
+              ],
+              "correctAnswer": "slowing down",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The total distance traveled by a particle on $$[a,b]$$ is found by integrating ______.",
+              "options": [
+                "$$v(t)$$",
+                "$$a(t)$$",
+                "$$|v(t)|$$",
+                "$$s(t)$$"
+              ],
+              "correctAnswer": "$$|v(t)|$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Analytical Applications of Differentiation",
+      "description": "Mean Value Theorem, curve analysis, extreme values, concavity, and optimization.",
+      "note": "# Unit 5: Analytical Applications of Differentiation\n\n## Overview\nThis unit uses the **derivative** to analyze how functions behave: where they increase or decrease, where they have **extreme values**, how they curve, and how to solve **optimization** problems. These ideas are heavily tested on the AP Calculus BC exam in both multiple-choice and free-response settings, especially when you must justify conclusions using the **Mean Value Theorem**, sign analysis, and derivative-based reasoning.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Critical points** | Values of $$x$$ where $$f'(x)=0$$ or $$f'(x)$$ does not exist | Used to locate candidates for local and absolute extrema |\n| **Mean Value Theorem (MVT)** | If $$f$$ is continuous on $$[a,b]$$ and differentiable on $$(a,b)$$, then some $$c \\in (a,b)$$ satisfies $$f'(c)=\\dfrac{f(b)-f(a)}{b-a}$$ | Frequently tested as a theorem statement, condition check, or interpretation of average vs. instantaneous rate of change |\n| **Increasing / decreasing behavior** | Determined by the sign of $$f'(x)$$ | Central to graph analysis and justification of local extrema |\n| **First Derivative Test** | Uses sign changes in $$f'(x)$$ around critical points | Helps classify **local maxima** and **local minima** |\n| **Concavity** | Determined by the sign of $$f''(x)$$ | Used to describe graph shape and support sketching |\n| **Inflection points** | Points where concavity changes | AP questions often require distinguishing between $$f''(x)=0$$ and an actual change in concavity |\n| **Second Derivative Test** | Uses $$f''(c)$$ to classify a critical point when $$f'(c)=0$$ | Efficient tool, but only valid under the right conditions |\n| **Optimization** | Finding maximum or minimum values in applied contexts | A classic AP FRQ topic requiring modeling, domain restrictions, calculus work, and interpretation |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start with function or context] --> B[Find domain and any constraints]\n    B --> C[Compute first derivative]\n    C --> D[Find critical points where $$f'(x)=0$$ or undefined]\n    D --> E[Make sign chart for $$f'(x)$$]\n    E --> F[Determine increasing/decreasing intervals]\n    F --> G[Classify local extrema with First Derivative Test]\n    G --> H[Compute second derivative]\n    H --> I[Analyze concavity using sign of $$f''(x)$$]\n    I --> J[Identify possible inflection points]\n    J --> K[\"If absolute extrema are needed, evaluate endpoints and critical points\"]\n    K --> L[\"If applied problem, interpret result in context with units\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Idea** | **Must Know Statement** |\n|---|---|\n| **Mean Value Theorem** | If $$f$$ is continuous on $$[a,b]$$ and differentiable on $$(a,b)$$, then there exists at least one $$c \\in (a,b)$$ such that $$f'(c)=\\dfrac{f(b)-f(a)}{b-a}$$ |\n| **Critical point definition** | A **critical point** occurs at $$x=c$$ if $$f'(c)=0$$ or $$f'(c)$$ does not exist, provided $$f(c)$$ exists |\n| **Increasing / decreasing test** | If $$f'(x)>0$$ on an interval, then $$f$$ is increasing there; if $$f'(x)<0$$, then $$f$$ is decreasing there |\n| **First Derivative Test** | If $$f'(x)$$ changes from positive to negative at $$c$$, then $$f(c)$$ is a local maximum; if negative to positive, then $$f(c)$$ is a local minimum |\n| **Concavity test** | If $$f''(x)>0$$ on an interval, then $$f$$ is concave up; if $$f''(x)<0$$, then $$f$$ is concave down |\n| **Inflection point condition** | A point is an inflection point only if the concavity changes there; having $$f''(x)=0$$ is not enough by itself |\n| **Second Derivative Test** | If $$f'(c)=0$$ and $$f''(c)>0$$, then $$f(c)$$ is a local minimum; if $$f''(c)<0$$, then $$f(c)$$ is a local maximum; if $$f''(c)=0$$, the test is inconclusive |\n| **Absolute Extreme Value strategy** | On a closed interval $$[a,b]$$, evaluate $$f(x)$$ at all critical points in $$(a,b)$$ and at endpoints $$a$$ and $$b$$; compare values |\n| **Optimization setup** | Write an objective function $$Q(x)$$, use constraints to express it in one variable, find critical points in the feasible domain, then test candidates and interpret |\n\n### Common derivative-based conclusions\n- **Horizontal tangent:** $$f'(x)=0$$\n- **Possible local extremum:** critical point of $$f$$\n- **Possible inflection point:** where $$f''(x)=0$$ or undefined, followed by a concavity check\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** |\n|---|---|---|\n| **Average rate of change** vs. **instantaneous rate of change** | Both describe how a quantity changes | Average rate uses $$\\dfrac{f(b)-f(a)}{b-a}$$ over an interval; instantaneous rate uses $$f'(x)$$ at one point |\n| **Critical point** vs. **extremum** | Extrema often occur at critical points | Not every critical point is a max or min |\n| **Concavity change** vs. **$$f''(x)=0$$** | Many inflection points occur where $$f''(x)=0$$ | But $$f''(x)=0$$ alone does not prove an inflection point |\n| **Local extrema** vs. **absolute extrema** | Both describe highest/lowest behavior | Local compares nearby points; absolute compares all points in the domain or interval |\n\n```mermaid\nflowchart LR\n    A[Derivative $$f'(x)$$] --> B[Sign of $$f'(x)$$]\n    B --> C[Increasing or decreasing]\n    C --> D[Local extrema]\n\n    A2[Second derivative $$f''(x)$$] --> E[Sign of $$f''(x)$$]\n    E --> F[Concavity]\n    F --> G[Inflection behavior]\n```\n\n## Common AP Exam Traps\n- Forgetting to verify the **hypotheses** of the **Mean Value Theorem**: **continuity** on $$[a,b]$$ and **differentiability** on $$(a,b)$$ must be stated.\n- Assuming that if $$f'(c)=0$$, then $$f(c)$$ must be a local max or min. A critical point may be neither.\n- Claiming an **inflection point** just because $$f''(x)=0$$. You must show that concavity actually changes.\n- Using the **Second Derivative Test** when $$f'(c)\\neq 0$$ or treating $$f''(c)=0$$ as proof of anything definite.\n- In optimization, finding a critical point but ignoring the **domain**, **endpoints**, or real-world constraints.\n\n## Quick Review Checklist\n- [ ] I can correctly state the **Mean Value Theorem** and check whether its conditions are satisfied.\n- [ ] I can find **critical points** by solving $$f'(x)=0$$ and identifying where $$f'(x)$$ is undefined.\n- [ ] I can use a **sign chart** for $$f'(x)$$ to determine where a function is increasing or decreasing.\n- [ ] I can classify **local maxima** and **local minima** using the **First Derivative Test**.\n- [ ] I can use $$f''(x)$$ to determine **concavity** and identify actual **inflection points**.\n- [ ] I can use the **Second Derivative Test** when appropriate and recognize when it is inconclusive.\n- [ ] I can find **absolute extrema** on a closed interval by checking critical points and endpoints.\n- [ ] I can set up and solve an **optimization** problem, then interpret the answer with correct context and units.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Closed Interval Method",
+              "definition": "A procedure for finding an absolute maximum and absolute minimum of a continuous function on a bounded domain by evaluating the function at all critical numbers in the interior and at both endpoints, then comparing the resulting values."
+            },
+            {
+              "term": "Critical Number",
+              "definition": "A value in the domain of a function where the first derivative is either $$0$$ or does not exist; such values are candidates for local extrema."
+            },
+            {
+              "term": "Mean Value Theorem",
+              "definition": "If a function is continuous on $$[a,b]$$ and differentiable on $$(a,b)$$, then there exists at least one value $$c$$ in $$(a,b)$$ such that $$f'(c)=\\dfrac{f(b)-f(a)}{b-a}$$."
+            },
+            {
+              "term": "Rolle's Theorem",
+              "definition": "If a function is continuous on $$[a,b]$$, differentiable on $$(a,b)$$, and has equal endpoint values, then there exists at least one interior point where the derivative is $$0$$."
+            },
+            {
+              "term": "First Derivative Test",
+              "definition": "A method for classifying a critical number by examining the sign of the derivative on either side of it; a change from positive to negative indicates a local maximum, and a change from negative to positive indicates a local minimum."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A function $$f$$ is continuous on $$[-1,5]$$ and differentiable on $$(-1,5)$$ with $$f(-1)=3$$ and $$f(5)=15$$. Which statement must be true?",
+              "options": [
+                "There exists $$c\\in(-1,5)$$ such that $$f'(c)=2$$.",
+                "There exists $$c\\in[-1,5]$$ such that $$f'(c)=3$$.",
+                "The function must have a critical number in $$(-1,5)$$.",
+                "The function must be increasing on all of $$[-1,5]$$."
+              ],
+              "correctAnswer": "There exists $$c\\in(-1,5)$$ such that $$f'(c)=2$$.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Let $$f(x)=x^3-3x^2+2$$. Which statement correctly describes the local behavior of $$f$$?",
+              "options": [
+                "$$f$$ has a local maximum at $$x=0$$ and a local minimum at $$x=2$$.",
+                "$$f$$ has a local minimum at $$x=0$$ and a local maximum at $$x=2$$.",
+                "$$f$$ has local maxima at both $$x=0$$ and $$x=2$$.",
+                "$$f$$ has no local extrema because $$f'(x)=0$$ at two points."
+              ],
+              "correctAnswer": "$$f$$ has a local maximum at $$x=0$$ and a local minimum at $$x=2$$.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$f$$ is continuous on $$[a,b]$$, differentiable on $$(a,b)$$, and $$f(a)=f(b)$$, then Rolle's Theorem guarantees at least one value $$c$$ such that $$f'(c)=\\underline{\\ \\ \\ \\ \\ }$$. Choose the value that fills the blank: ______",
+              "options": [
+                "$$0$$",
+                "$$1$$",
+                "$$\\dfrac{f(b)-f(a)}{2}$$",
+                "$$f(a)$$"
+              ],
+              "correctAnswer": "$$0$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "To determine absolute extrema of a continuous function on a closed interval, evaluate the function at endpoints and at every ______ in the interval.",
+              "options": [
+                "critical number",
+                "inflection point",
+                "zero of the function",
+                "point where $$f''(x)>0$$"
+              ],
+              "correctAnswer": "critical number",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Second Derivative Test",
+              "definition": "A method for classifying a critical number $$c$$ when $$f'(c)=0$$ by checking the sign of $$f''(c)$$: positive indicates a local minimum, negative indicates a local maximum, and zero gives no conclusion."
+            },
+            {
+              "term": "Concavity",
+              "definition": "The directional bending of a graph, determined by the sign of the second derivative: positive indicates bending upward and negative indicates bending downward."
+            },
+            {
+              "term": "Point of Inflection",
+              "definition": "A point on a graph where the directional bending changes from upward to downward or from downward to upward."
+            },
+            {
+              "term": "Optimization",
+              "definition": "The process of finding the largest or smallest value of a quantity subject to constraints by expressing the quantity as a function of one variable and analyzing its extrema."
+            },
+            {
+              "term": "Linear Approximation Behavior from Concavity",
+              "definition": "When the graph bends upward, tangent lines tend to lie below the curve; when it bends downward, tangent lines tend to lie above the curve, affecting whether local linearization underestimates or overestimates."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "For $$f(x)=x^4-4x^3$$, which statement is correct?",
+              "options": [
+                "$$f$$ has a local minimum at $$x=3$$ and no local maximum.",
+                "$$f$$ has a local maximum at $$x=3$$ and no local minimum.",
+                "$$f$$ has local minima at $$x=0$$ and $$x=3$$.",
+                "$$f$$ has a local maximum at $$x=0$$ and a local minimum at $$x=3$$."
+              ],
+              "correctAnswer": "$$f$$ has a local minimum at $$x=3$$ and no local maximum.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A rectangle is built with one side along the $$x$$-axis and its upper two vertices on the parabola $$y=12-x^2$$. What is the maximum possible area?",
+              "options": [
+                "$$24$$",
+                "$$16\\sqrt{3}$$",
+                "$$32$$",
+                "$$12\\sqrt{2}$$"
+              ],
+              "correctAnswer": "$$32$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$f''(x)$$ changes sign from positive to negative at $$x=c$$, then the graph has a(n) ______ at $$x=c$$.",
+              "options": [
+                "point of inflection",
+                "absolute minimum",
+                "endpoint extremum",
+                "horizontal asymptote"
+              ],
+              "correctAnswer": "point of inflection",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$f'(c)=0$$ and $$f''(c)<0$$, then by the second derivative test, $$f$$ has a ______ at $$x=c$$.",
+              "options": [
+                "local maximum",
+                "local minimum",
+                "point of inflection",
+                "vertical tangent"
+              ],
+              "correctAnswer": "local maximum",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Integration and Accumulation of Change",
+      "description": "Riemann sums, FTC, antiderivatives, integration by parts, partial fractions, and improper integrals.",
+      "note": "# Unit 6: Integration and Accumulation of Change\n\n## Overview\nThis unit develops **integration** as the reverse of differentiation and as a tool for measuring **accumulated change**. You will connect **Riemann sums**, **definite integrals**, the **Fundamental Theorem of Calculus**, and advanced techniques like **integration by parts**, **partial fractions**, and **improper integrals**.\n\nOn the AP Calculus BC exam, this unit is central because it blends **conceptual understanding**, **graphical interpretation**, and **symbolic computation**. Many free-response and multiple-choice questions test both how to evaluate integrals and how to interpret them in context.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Riemann Sum** | A finite sum that approximates the area under a curve using rectangles. | AP questions often ask for interpretation, setup, and comparison of left, right, and midpoint sums. |\n| **Definite Integral** | The limit of Riemann sums, representing **net signed area** or accumulated change. | You must interpret integrals in context and connect them to motion, area, and accumulation. |\n| **Antiderivative** | A function $$F(x)$$ such that $$F'(x)=f(x)$$. | Essential for evaluating integrals and solving differential equations. |\n| **Fundamental Theorem of Calculus** | Connects differentiation and integration in two major ways. | One of the most tested ideas in BC: evaluate integrals and differentiate accumulation functions. |\n| **Accumulation Function** | A function defined by an integral with variable upper limit, such as $$A(x)=\\int_a^x f(t)\\,dt$$. | AP problems often ask for $$A'(x)$$, monotonicity, concavity, and interpretation. |\n| **Integration by Parts** | A technique derived from the product rule for integrating products. | Frequently tested when substitution does not work directly. |\n| **Partial Fraction Decomposition** | Rewriting a rational function into simpler fractions before integrating. | Important for BC symbolic integration, especially with rational expressions. |\n| **Improper Integral** | An integral with infinite bounds or an integrand with an infinite discontinuity. | AP exam may ask whether an integral converges or diverges and to justify with limits. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\nA[Start with function or rate] --> B{What is being asked?}\nB -->|Approximate accumulation| C[Use Riemann sum]\nB -->|Exact accumulated change or area| D[Set up definite integral]\nB -->|Find family of original functions| E[Find antiderivative]\nB -->|Differentiate accumulation function| F[Apply FTC Part 1]\n\nC --> G[Interpret left, right, midpoint, or trapezoidal behavior]\nD --> H{Can it be evaluated directly?}\nH -->|Yes| I[Use antiderivative and FTC Part 2]\nH -->|No| J{Choose technique}\nJ -->|Substitution works| K[Use substitution]\nJ -->|Product form| L[Use integration by parts]\nJ -->|Rational function| M[Use partial fractions]\n\nD --> N{Improper?}\nN -->|Yes| O[Rewrite as limit]\nO --> P[Test convergence or divergence]\nN -->|No| I\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Statement** |\n|---|---|\n| **Definite Integral as Limit** | $$\\int_a^b f(x)\\,dx=\\lim_{n\\to\\infty}\\sum_{i=1}^n f(x_i^*)\\Delta x$$ |\n| **Left / Right Riemann Sum Setup** | $$\\Delta x=\\frac{b-a}{n}$$, with left endpoints $$x_{i-1}=a+(i-1)\\Delta x$$ and right endpoints $$x_i=a+i\\Delta x$$ |\n| **Antiderivative Definition** | If $$F'(x)=f(x)$$, then $$\\int f(x)\\,dx=F(x)+C$$ |\n| **FTC Part 1** | If $$g(x)=\\int_a^x f(t)\\,dt$$, then $$g'(x)=f(x)$$, assuming $$f$$ is continuous |\n| **FTC Part 2** | $$\\int_a^b f(x)\\,dx=F(b)-F(a)$$ where $$F'(x)=f(x)$$ |\n| **Net Change Theorem** | $$\\int_a^b F'(x)\\,dx=F(b)-F(a)$$ |\n| **Change of Variable** | If $$u=g(x)$$, then $$\\int f(g(x))g'(x)\\,dx=\\int f(u)\\,du$$ |\n| **Integration by Parts** | $$\\int u\\,dv=uv-\\int v\\,du$$ |\n| **Partial Fractions, Distinct Linear Factors** | $$\\frac{P(x)}{(x-a)(x-b)}=\\frac{A}{x-a}+\\frac{B}{x-b}$$ |\n| **Improper Integral with Infinite Limit** | $$\\int_a^\\infty f(x)\\,dx=\\lim_{b\\to\\infty}\\int_a^b f(x)\\,dx$$ |\n| **Improper Integral with Discontinuity** | $$\\int_a^b f(x)\\,dx=\\lim_{c\\to a^+}\\int_c^b f(x)\\,dx$$ or split at the discontinuity |\n| **Basic Log Integral** | $$\\int \\frac{1}{x}\\,dx=\\ln|x|+C$$ |\n| **Exponential / Trig Antiderivatives** | $$\\int e^x\\,dx=e^x+C,\\quad \\int \\sin x\\,dx=-\\cos x+C,\\quad \\int \\cos x\\,dx=\\sin x+C$$ |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection / Difference** | **AP Significance** |\n|---|---|---|\n| **Riemann Sum vs. Definite Integral** | A Riemann sum is a finite approximation; the definite integral is the exact limit. | Students must distinguish **approximation** from **exact value**. |\n| **Antiderivative vs. Definite Integral** | An antiderivative gives a family of functions; a definite integral gives a number representing net accumulation. | AP often asks you to move between indefinite and definite integration correctly. |\n| **FTC Part 1 vs. FTC Part 2** | Part 1 differentiates an accumulation function; Part 2 evaluates a definite integral using antiderivatives. | A major exam trap is using the wrong part of the theorem. |\n| **Convergent vs. Divergent Improper Integral** | A convergent improper integral approaches a finite value; a divergent one does not. | You must justify with a **limit**, not just intuition from the graph. |\n\n```mermaid\nflowchart LR\nA[Riemann Sum] --> B[Definite Integral]\nB --> C[Accumulation / Net Change]\nC --> D[FTC Part 1]\nB --> E[FTC Part 2]\nE --> F[Antiderivative Evaluation]\n```\n\n## Common AP Exam Traps\n- Confusing **net signed area** with **total area**. If a graph crosses the axis, $$\\int_a^b f(x)\\,dx$$ may be smaller than the actual geometric area.\n- Forgetting that **FTC Part 1** gives the integrand evaluated at the variable bound, and requiring the **chain rule** if the upper limit is not just $$x$$, such as $$\\frac{d}{dx}\\int_1^{x^2} f(t)\\,dt=f(x^2)\\cdot 2x$$.\n- Omitting the constant of integration in **indefinite integrals**.\n- Using **partial fractions** before checking whether the rational expression is **proper**. If the degree of the numerator is at least the degree of the denominator, do polynomial division first.\n- Declaring an **improper integral** convergent or divergent without rewriting it as a **limit**.\n\n## Quick Review Checklist\n- [ ] I can explain how a **Riemann sum** approximates a definite integral and set one up from a formula or context.\n- [ ] I can interpret $$\\int_a^b f(x)\\,dx$$ as **net change** or **net signed area**.\n- [ ] I can find and use **antiderivatives** for common functions.\n- [ ] I can apply **FTC Part 1** to differentiate accumulation functions, including variable bounds.\n- [ ] I can apply **FTC Part 2** to evaluate definite integrals exactly.\n- [ ] I can decide when to use **substitution**, **integration by parts**, or **partial fractions**.\n- [ ] I can decompose a rational function into **partial fractions** and integrate the result.\n- [ ] I can evaluate or test the convergence of an **improper integral** using limits.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Riemann Sum",
+              "definition": "A finite sum of the form $$\\sum_{i=1}^{n} f(x_i^*)\\Delta x$$ used to approximate the accumulated quantity represented by area under a curve over an interval."
+            },
+            {
+              "term": "Definite Integral",
+              "definition": "The limit of accumulating products of function values and subinterval widths as the partition norm approaches zero, written as $$\\int_a^b f(x)\\,dx$$ and representing net signed area or total accumulation."
+            },
+            {
+              "term": "Left, Right, and Midpoint Approximations",
+              "definition": "Methods that estimate accumulated change on each subinterval by evaluating the function at the left endpoint, right endpoint, or midpoint, respectively."
+            },
+            {
+              "term": "Fundamental Theorem of Calculus, Part 1",
+              "definition": "If a function is continuous on an interval, then the accumulation function $$g(x)=\\int_a^x f(t)\\,dt$$ is differentiable and satisfies $$g'(x)=f(x)$$."
+            },
+            {
+              "term": "Fundamental Theorem of Calculus, Part 2",
+              "definition": "If $$F'(x)=f(x)$$ on $$[a,b]$$, then $$\\int_a^b f(x)\\,dx=F(b)-F(a)$$, allowing exact evaluation through an antiderivative."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "For a continuous function $$f$$ on $$[0,4]$$, the interval is partitioned into four subintervals of equal width. Which expression represents the midpoint Riemann sum for $$\\int_0^4 f(x)\\,dx$$?",
+              "options": [
+                "$$f(0)+f(1)+f(2)+f(3)$$",
+                "$$f\\left(\\frac{1}{2}\\right)+f\\left(\\frac{3}{2}\\right)+f\\left(\\frac{5}{2}\\right)+f\\left(\\frac{7}{2}\\right)$$",
+                "$$\\left[f\\left(\\frac{1}{2}\\right)+f\\left(\\frac{3}{2}\\right)+f\\left(\\frac{5}{2}\\right)+f\\left(\\frac{7}{2}\\right)\\right](1)$$",
+                "$$\\left[f(1)+f(2)+f(3)+f(4)\\right](4)$$"
+              ],
+              "correctAnswer": "$$\\left[f\\left(\\frac{1}{2}\\right)+f\\left(\\frac{3}{2}\\right)+f\\left(\\frac{5}{2}\\right)+f\\left(\\frac{7}{2}\\right)\\right](1)$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Let $$F(x)=\\int_2^{x^3} \\ln(1+t^2)\\,dt$$. What is $$F'(x)$$?",
+              "options": [
+                "$$\\ln(1+x^6)$$",
+                "$$3x^2\\ln(1+x^6)$$",
+                "$$\\dfrac{3x^2}{1+x^6}$$",
+                "$$x^3\\ln(1+x^6)$$"
+              ],
+              "correctAnswer": "$$3x^2\\ln(1+x^6)$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$f$$ is continuous and $$G(x)=\\int_5^x f(t)\\,dt$$, then $$G'(x)=\\,\\underline{\\quad}\\,=\\,______$$.",
+              "options": [
+                "$$f(5)$$",
+                "$$f(x)$$",
+                "$$\\int_5^x f(t)\\,dt$$",
+                "$$f'(x)$$"
+              ],
+              "correctAnswer": "$$f(x)$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Using the Fundamental Theorem of Calculus, $$\\int_1^3 2x e^{x^2}\\,dx=______$$.",
+              "options": [
+                "$$e^9-e$$",
+                "$$2e^9-2e$$",
+                "$$e^3-e$$",
+                "$$x^2e^{x^2}\\big|_1^3$$"
+              ],
+              "correctAnswer": "$$e^9-e$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Antiderivative",
+              "definition": "A function $$F$$ whose derivative is a given function $$f$$, so that $$F'(x)=f(x)$$."
+            },
+            {
+              "term": "Integration by Parts",
+              "definition": "A technique based on the product rule that rewrites an integral as $$\\int u\\,dv=uv-\\int v\\,du$$."
+            },
+            {
+              "term": "Partial Fraction Decomposition",
+              "definition": "A method for rewriting a rational expression with a factorable denominator into a sum of simpler rational expressions that can be integrated term by term."
+            },
+            {
+              "term": "Improper Integral",
+              "definition": "An integral in which at least one limit of integration is infinite or the integrand becomes unbounded on the interval; it is evaluated using limits."
+            },
+            {
+              "term": "Convergence of an Improper Integral",
+              "definition": "The property that the relevant limit used to define an unbounded or infinite-interval integral exists and is finite."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Evaluate $$\\int x e^x\\,dx$$.",
+              "options": [
+                "$$xe^x+C$$",
+                "$$e^x(x-1)+C$$",
+                "$$e^x(x+1)+C$$",
+                "$$\\frac{1}{2}x^2e^x+C$$"
+              ],
+              "correctAnswer": "$$e^x(x-1)+C$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which expression is equivalent to $$\\dfrac{3x+5}{x^2-x-2}$$ for use in integration?",
+              "options": [
+                "$$\\dfrac{1}{x-2}+\\dfrac{2}{x+1}$$",
+                "$$\\dfrac{2}{x-2}+\\dfrac{1}{x+1}$$",
+                "$$\\dfrac{11}{3(x-2)}-\\dfrac{2}{3(x+1)}$$",
+                "$$\\dfrac{11}{3(x-2)}-\\dfrac{2}{3(x+1)}$$"
+              ],
+              "correctAnswer": "$$\\dfrac{11}{3(x-2)}-\\dfrac{2}{3(x+1)}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The improper integral $$\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$$ ______.",
+              "options": [
+                "$$\\text{diverges}$$",
+                "$$\\text{converges to }1$$",
+                "$$\\text{converges to }0$$",
+                "$$\\text{is undefined because }x=0\\text{ is not in the interval}$$"
+              ],
+              "correctAnswer": "$$\\text{converges to }1$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Using partial fractions, $$\\int \\frac{1}{x^2-1}\\,dx=______$$.",
+              "options": [
+                "$$\\ln|x^2-1|+C$$",
+                "$$\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|+C$$",
+                "$$\\frac{1}{2}\\ln|x-1|+\\frac{1}{2}\\ln|x+1|+C$$",
+                "$$\\arctan(x)+C$$"
+              ],
+              "correctAnswer": "$$\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|+C$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "unitName": "Differential Equations",
+      "description": "Separation of variables, slope fields, Euler's method, and logistic growth models.",
+      "note": "# Unit 7: Differential Equations\n\n## Overview\nIn this unit, you learn how to **model change** when a rate depends on the current state of a system. The AP Calculus BC exam often tests your ability to interpret and solve **differential equations** using **separation of variables**, **slope fields**, **Euler’s method**, and **logistic growth models**.\n\nThese topics connect graphical, numerical, and analytical perspectives, so you must be able to move among equations, tables, and visual representations of solutions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Differential equation** | An equation involving a function and its derivative, such as $$\\frac{dy}{dx}=f(x,y)$$ | AP questions ask you to interpret what the derivative says about behavior and sometimes solve or approximate solutions |\n| **Initial condition** | A given value like $$y(x_0)=y_0$$ that selects one specific solution | Used to find the particular solution rather than a whole family of solutions |\n| **Separation of variables** | A method for solving equations that can be rewritten in the form $$\\frac{1}{g(y)}\\,dy=f(x)\\,dx$$ | A core symbolic skill for solving differential equations exactly |\n| **Slope field** | A graph showing small line segments with slope determined by $$\\frac{dy}{dx}=f(x,y)$$ | AP often asks you to sketch solution curves or identify where solutions increase, decrease, or level off |\n| **Euler’s method** | A numerical method that uses tangent line steps to approximate a solution | Frequently tested in free-response and multiple-choice as a table-based approximation method |\n| **Logistic differential equation** | A growth model of the form $$\\frac{dP}{dt}=kP\\left(1-\\frac{P}{L}\\right)$$ | Important because it models limited growth and includes equilibrium behavior |\n| **Equilibrium solution** | A constant solution where $$\\frac{dy}{dx}=0$$ | Useful for analyzing long-term behavior and logistic models |\n| **General vs. particular solution** | General solutions contain constants; particular solutions satisfy initial conditions | AP expects both symbolic solving and using conditions to determine constants |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Given differential equation\"] --> B[\"Identify type of task\"]\n    B --> C[\"Solve analytically if separable\"]\n    B --> D[\"Approximate numerically with Euler's method\"]\n    B --> E[\"Analyze graphically with slope field\"]\n\n    C --> F[\"Separate variables\"]\n    F --> G[\"Integrate both sides\"]\n    G --> H[\"Solve for constant using initial condition\"]\n    H --> I[\"Write particular solution\"]\n\n    D --> J[\"Use $$y_{n+1}=y_n+f(x_n,y_n)\\Delta x$$\"]\n    J --> K[\"Step forward from initial point\"]\n    K --> L[\"Estimate solution value\"]\n\n    E --> M[\"Read slopes from $$\\\\frac{dy}{dx}=f(x,y)$$\"]\n    M --> N[\"Determine increasing/decreasing behavior\"]\n    N --> O[\"Sketch solution curve through initial point\"]\n\n    I --> P[\"Interpret solution behavior\"]\n    L --> P\n    O --> P\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Meaning / Use** |\n|---|---|\n| $$\\frac{dy}{dx}=f(x,y)$$ | General form of a first-order differential equation |\n| $$y(x_0)=y_0$$ | **Initial condition** used to find a particular solution |\n| $$\\frac{dy}{dx}=g(x)h(y)$$ | A differential equation that may be **separable** |\n| $$\\frac{1}{h(y)}\\,dy=g(x)\\,dx$$ | Separated form before integrating |\n| $$\\int \\frac{1}{h(y)}\\,dy=\\int g(x)\\,dx + C$$ | Main integration step for separation of variables |\n| $$y_{n+1}=y_n+\\frac{dy}{dx}\\Delta x=y_n+f(x_n,y_n)\\Delta x$$ | **Euler’s method** update formula |\n| $$\\frac{dP}{dt}=kP$$ | **Exponential growth/decay** model with unrestricted growth |\n| $$\\frac{dP}{dt}=kP\\left(1-\\frac{P}{L}\\right)$$ | **Logistic growth** model with carrying capacity $$L$$ |\n| $$\\frac{dP}{dt}=0$$ | Condition for **equilibrium solutions** |\n| For logistic growth, equilibria occur at $$P=0$$ and $$P=L$$ | These values make the growth rate zero |\n\n### Important interpretations\n- If $$\\frac{dy}{dx}>0$$, the solution is **increasing**.\n- If $$\\frac{dy}{dx}<0$$, the solution is **decreasing**.\n- If $$\\frac{dy}{dx}=0$$, the solution has a **horizontal tangent** or may be an **equilibrium**.\n- In a logistic model:\n  - if $$0<P<L$$, then typically $$\\frac{dP}{dt}>0$$, so population grows.\n  - if $$P>L$$, then typically $$\\frac{dP}{dt}<0$$, so population decreases toward $$L$$.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They’re Related** | **Key Difference** |\n|---|---|---|\n| **Slope field** vs. **Euler’s method** | Both use the derivative $$\\frac{dy}{dx}$$ to describe local behavior | A **slope field** is graphical; **Euler’s method** gives numerical approximations |\n| **General solution** vs. **Particular solution** | Both satisfy the differential equation | A **general solution** contains an arbitrary constant; a **particular solution** uses an initial condition |\n| **Exponential model** vs. **Logistic model** | Both model growth with differential equations | Exponential growth uses $$\\frac{dP}{dt}=kP$$ and has no limiting capacity; logistic growth includes carrying capacity $$L$$ |\n| **Exact solution** vs. **Numerical approximation** | Both estimate the behavior of a function solving the differential equation | An **exact solution** is found algebraically; a **numerical approximation** is used when exact solving is difficult or not required |\n\n```mermaid\nflowchart LR\n    A[\"Exponential model: $$\\\\frac{dP}{dt}=kP$$\"] --> B[\"Growth rate proportional to population\"]\n    C[\"Logistic model: $$\\\\frac{dP}{dt}=kP(1-\\\\frac{P}{L})$$\"] --> B\n    A --> D[\"No carrying capacity\"]\n    C --> E[\"Carrying capacity $$L$$ limits growth\"]\n    E --> F[\"Equilibria at $$P=0$$ and $$P=L$$\"]\n```\n\n## Common AP Exam Traps\n- Confusing **$$\\frac{dy}{dx}$$** with **$$y$$** itself. A positive derivative means the function is increasing, not necessarily that the function value is positive.\n- Forgetting to use the **initial condition** after integrating a separable equation.\n- Making arithmetic errors in **Euler’s method**, especially by using the wrong slope or wrong step size $$\\Delta x$$.\n- Misreading a **slope field**: the solution curve must follow the short slope segments and pass through the given initial point.\n- Treating the logistic model like exponential growth and ignoring the role of **carrying capacity** $$L$$ and equilibrium values.\n\n## Quick Review Checklist\n- [ ] I can identify whether a differential equation is **separable**.\n- [ ] I can solve a separable differential equation by separating variables and integrating both sides.\n- [ ] I can use an **initial condition** to find a particular solution.\n- [ ] I can interpret a **slope field** to determine where solutions increase, decrease, or flatten out.\n- [ ] I can sketch or identify a solution curve that matches a given slope field and initial condition.\n- [ ] I can apply **Euler’s method** using $$y_{n+1}=y_n+f(x_n,y_n)\\Delta x$$.\n- [ ] I can distinguish between **exponential** and **logistic** growth models.\n- [ ] I can identify and interpret **equilibrium solutions** and long-term behavior in a logistic model.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Separable differential equation",
+              "definition": "A first-order equation that can be rewritten so all factors involving $$y$$ and $$dy$$ are on one side and all factors involving $$x$$ and $$dx$$ are on the other, allowing integration of both sides."
+            },
+            {
+              "term": "General solution to a differential equation",
+              "definition": "A family of functions containing an arbitrary constant that satisfies the given rate equation on an interval."
+            },
+            {
+              "term": "Particular solution",
+              "definition": "A specific member of a solution family determined by applying an initial condition such as $$y(x_0)=y_0$$."
+            },
+            {
+              "term": "Slope field",
+              "definition": "A graph of short line segments in the plane where each segment has slope determined by the value of $$\\frac{dy}{dx}$$ at that point, used to visualize solution curves."
+            },
+            {
+              "term": "Equilibrium solution",
+              "definition": "A constant function obtained when the derivative is zero for all inputs in the differential equation, often representing a steady state."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the differential equation $$\\frac{dy}{dx}=\\frac{x^2}{1+y^2}$$ with initial condition $$y(0)=0$$. Which implicit equation represents the particular solution?",
+              "options": [
+                "$$y+\\frac{y^3}{3}=\\frac{x^3}{3}$$",
+                "$$\\arctan(y)=\\frac{x^3}{3}$$",
+                "$$y^2+1=\\frac{x^3}{3}$$",
+                "$$\\frac{y^3}{3}=x^2$$"
+              ],
+              "correctAnswer": "$$y+\\frac{y^3}{3}=\\frac{x^3}{3}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "For the differential equation $$\\frac{dy}{dx}=y(2-y)$$, which statement is correct?",
+              "options": [
+                "$$y=0$$ and $$y=2$$ are equilibrium solutions.",
+                "Every solution is increasing for all $$y$$.",
+                "$$y=1$$ is the only equilibrium solution.",
+                "All nonconstant solutions are decreasing when $$0<y<2$$."
+              ],
+              "correctAnswer": "$$y=0$$ and $$y=2$$ are equilibrium solutions.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$\\frac{dy}{dx}=3xy^2$$ and $$y(0)=1$$, then separating variables gives $$\\int y^{-2}\\,dy=\\int \\text{______}\\,dx$$.",
+              "options": [
+                "$$3x$$",
+                "$$3y$$",
+                "$$x^2$$",
+                "$$\\frac{1}{3x}$$"
+              ],
+              "correctAnswer": "$$3x$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For $$\\frac{dy}{dx}=x-y$$, the slope of the segment in the slope field at the point $$\\left(2,5\\right)$$ is $$\\text{______}$$.",
+              "options": [
+                "$$-3$$",
+                "$$3$$",
+                "$$7$$",
+                "$$-7$$"
+              ],
+              "correctAnswer": "$$-3$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Euler's method",
+              "definition": "A numerical procedure that approximates values of a solution by repeatedly using $$y_{n+1}=y_n+f(x_n,y_n)\\Delta x$$ starting from an initial point."
+            },
+            {
+              "term": "Step size",
+              "definition": "The increment in the independent variable used in a numerical approximation, often written as $$\\Delta x$$ or $$h$$."
+            },
+            {
+              "term": "Logistic differential equation",
+              "definition": "A model for population growth in which the rate is proportional both to the current population and to the difference between a limiting value and the population, commonly written in the form $$\\frac{dP}{dt}=kP\\left(M-P\\right)$$ or an equivalent scaled form."
+            },
+            {
+              "term": "Carrying capacity",
+              "definition": "The limiting population value approached over time in a logistic model; it is the stable equilibrium of the growth equation."
+            },
+            {
+              "term": "Point of maximum growth in a logistic model",
+              "definition": "The population level at which the growth rate is greatest, occurring halfway to the limiting value, at $$\\frac{M}{2}$$ when the carrying capacity is $$M$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Use Euler's method with step size $$h=0.5$$ to approximate $$y(1)$$ for the solution to $$\\frac{dy}{dx}=x+y$$ with $$y(0)=1$$.",
+              "options": [
+                "$$2.25$$",
+                "$$2.5$$",
+                "$$2.75$$",
+                "$$3.0$$"
+              ],
+              "correctAnswer": "$$2.75$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A population $$P$$ satisfies $$\\frac{dP}{dt}=0.4P\\left(1-\\frac{P}{500}\\right)$$. Which statement is true?",
+              "options": [
+                "The carrying capacity is $$500$$.",
+                "The maximum growth rate occurs at $$P=500$$.",
+                "The population decreases for all $$0<P<500$$.",
+                "The only equilibrium solution is $$P=0$$."
+              ],
+              "correctAnswer": "The carrying capacity is $$500$$.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a logistic model $$\\frac{dP}{dt}=kP\\left(1-\\frac{P}{800}\\right)$$, the population grows fastest when $$P=\\text{______}$$.",
+              "options": [
+                "$$400$$",
+                "$$800$$",
+                "$$200$$",
+                "$$0$$"
+              ],
+              "correctAnswer": "$$400$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Using Euler's method for $$\\frac{dy}{dx}=y-x^2$$ with $$y(1)=2$$ and step size $$h=0.2$$, the next approximation is $$y(1.2)=\\text{______}$$.",
+              "options": [
+                "$$2.2$$",
+                "$$2.4$$",
+                "$$2.6$$",
+                "$$1.8$$"
+              ],
+              "correctAnswer": "$$2.2$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 8,
+      "unitName": "Applications of Integration",
+      "description": "Area between curves, volume, arc length, and motion problems.",
+      "note": "# Unit 8: Applications of Integration\n\n## Overview\nThis unit focuses on how definite integrals model accumulated quantities in geometry and motion. In **AP Calculus BC**, you must be able to set up and evaluate integrals for **area between curves**, **volumes of solids**, **arc length**, and **position/velocity/acceleration relationships**, often choosing the correct method from context.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Area between curves** | Using definite integrals to find the region enclosed by two graphs. | AP questions often test whether you choose **top minus bottom** or **right minus left** correctly and split at intersection points when needed. |\n| **Integrating with respect to $$x$$ or $$y$$** | Choosing the variable of integration based on the shapes and boundaries of the region. | A major AP skill is recognizing when horizontal slices are easier than vertical slices. |\n| **Volume by cross sections** | Finding volume when the cross-sectional area is known as a function of position. | Tests your ability to write $$V = \\int A(x)\\,dx$$ or $$V = \\int A(y)\\,dy$$ from geometry. |\n| **Disk and washer method** | Volumes of revolution found from circular cross sections perpendicular to the axis of rotation. | AP problems frequently require identifying **outer radius** and **inner radius** correctly. |\n| **Shell method** | Volumes of revolution found from cylindrical shells parallel to the axis of rotation. | Important when disk/washer setup is difficult or impossible with the chosen variable. |\n| **Arc length** | Measuring the length of a smooth curve using an integral. | Often appears as a setup question; students must know the correct formula and variable. |\n| **Motion along a line** | Connecting position, velocity, acceleration, displacement, and total distance. | AP exam questions often distinguish **displacement** from **total distance traveled**. |\n| **Accumulation models** | Using integrals to represent total change from a rate. | This is a unifying idea behind all applications and appears throughout FRQs and MCQs. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify the quantity asked for] --> B[Sketch region or motion situation]\n    B --> C[Choose variable of integration]\n    C --> D[Determine bounds of integration]\n    D --> E[Select appropriate model]\n    E --> E1[\"Area: top-bottom or right-left\"]\n    E --> E2[\"Volume: cross sections, washer, disk, or shell\"]\n    E --> E3[\"Arc length: derivative-based formula\"]\n    E --> E4[\"Motion: integrate rate functions\"]\n    E1 --> F[Write the integral carefully]\n    E2 --> F\n    E3 --> F\n    E4 --> F\n    F --> G[Evaluate and interpret units/context]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Topic** | **Essential Formula / Rule** |\n|---|---|\n| **Area between curves, vertical slices** | $$A = \\int_a^b \\left[f(x) - g(x)\\right]\\,dx$$ where $$f(x) \\ge g(x)$$ |\n| **Area between curves, horizontal slices** | $$A = \\int_c^d \\left[f(y) - g(y)\\right]\\,dy$$ where the integrand is **right minus left** |\n| **Volume from known cross-sectional area** | $$V = \\int_a^b A(x)\\,dx$$ |\n| **Disk method** | $$V = \\pi \\int_a^b \\left[R(x)\\right]^2\\,dx$$ |\n| **Washer method** | $$V = \\pi \\int_a^b \\left(\\left[R(x)\\right]^2 - \\left[r(x)\\right]^2\\right)\\,dx$$ |\n| **Shell method** | $$V = 2\\pi \\int_a^b \\left[\\text{radius}\\right]\\left[\\text{height}\\right]\\,dx$$ or $$V = 2\\pi \\int_c^d \\left[\\text{radius}\\right]\\left[\\text{height}\\right]\\,dy$$ |\n| **Arc length with respect to $$x$$** | $$L = \\int_a^b \\sqrt{1 + \\left(f'(x)\\right)^2}\\,dx$$ |\n| **Arc length with respect to $$y$$** | $$L = \\int_c^d \\sqrt{1 + \\left(\\frac{dx}{dy}\\right)^2}\\,dy$$ |\n| **Velocity and position** | If $$v(t) = s'(t)$$, then $$s(b) - s(a) = \\int_a^b v(t)\\,dt$$ |\n| **Acceleration and velocity** | If $$a(t) = v'(t)$$, then $$v(b) - v(a) = \\int_a^b a(t)\\,dt$$ |\n| **Displacement** | $$\\text{displacement} = \\int_a^b v(t)\\,dt$$ |\n| **Total distance traveled** | $$\\text{total distance} = \\int_a^b \\left|v(t)\\right|\\,dt$$ |\n| **Average value of a function** | $$f_{\\text{avg}} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$$ |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** | **AP Tip** |\n|---|---|---|---|\n| **Area vs. Volume** | Both use definite integrals to accumulate slices. | **Area** accumulates lengths; **volume** accumulates areas. | Check units: square units for area, cubic units for volume. |\n| **Washer/Disk vs. Shell** | Both find volumes of revolution. | **Washer/disk** uses slices perpendicular to axis; **shell** uses slices parallel to axis. | If one setup becomes messy, try the other method. |\n| **Displacement vs. Total Distance** | Both come from velocity. | **Displacement** includes sign; **distance** adds absolute movement. | Find where $$v(t) = 0$$ before computing total distance. |\n| **Integrating in $$x$$ vs. Integrating in $$y$$** | Both describe the same region or solid. | The expressions and bounds change depending on slice orientation. | Choose the variable that avoids splitting the region when possible. |\n\n```mermaid\nflowchart LR\n    A[Region or solid] --> B[\"Vertical slices (dx)\"]\n    A --> C[\"Horizontal slices (dy)\"]\n    B --> D[Top-bottom expressions]\n    B --> E[\"Disk/washer if revolving around horizontal axis\"]\n    B --> F[\"Shell if revolving around vertical axis\"]\n    C --> G[Right-left expressions]\n    C --> H[\"Disk/washer if revolving around vertical axis\"]\n    C --> I[\"Shell if revolving around horizontal axis\"]\n```\n\n## Common AP Exam Traps\n\n- Confusing **area between curves** with **net signed area**. If one curve crosses another, you may need to **split the integral**.\n- Using **top minus bottom** when integrating with respect to $$y$$. For horizontal slices, use **right minus left**.\n- Forgetting to square both radii in the **washer method**:  \n  $$V = \\pi \\int \\left(R^2 - r^2\\right)\\,d(\\text{variable})$$\n- Mixing up **displacement** and **total distance traveled**. Total distance requires  \n  $$\\int \\left|v(t)\\right|\\,dt$$ or splitting where $$v(t)$$ changes sign.\n- Using the wrong radius in revolution problems because the axis of rotation is not the coordinate axis. Distances must be measured **from the axis of rotation**, not automatically from the origin.\n\n## Quick Review Checklist\n\n- [ ] I can set up and evaluate an integral for the **area between two curves**.\n- [ ] I can decide whether to integrate with respect to $$x$$ or $$y$$ based on the region.\n- [ ] I can write a **cross-sectional area** function and integrate it to find volume.\n- [ ] I can distinguish and correctly apply the **disk**, **washer**, and **shell** methods.\n- [ ] I can identify **radius**, **height**, and bounds correctly for solids of revolution.\n- [ ] I can write and evaluate an **arc length** integral from a function or derivative.\n- [ ] I can use integrals to relate **position**, **velocity**, and **acceleration**.\n- [ ] I can explain the difference between **displacement** and **total distance traveled** and compute both.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Area Between Curves with Respect to $$x$$",
+              "definition": "For functions on an interval where one graph lies above the other, the region’s measure is found by integrating upper minus lower over the given $$x$$-bounds: $$\\int_a^b \\big(f(x)-g(x)\\big)\\,dx$$."
+            },
+            {
+              "term": "Area Between Curves with Respect to $$y$$",
+              "definition": "When horizontal slices are more convenient, the region’s measure is found by integrating right minus left over the given $$y$$-bounds: $$\\int_c^d \\big(f(y)-g(y)\\big)\\,dy$$."
+            },
+            {
+              "term": "Intersection Points as Bounds",
+              "definition": "To determine limits for a region enclosed by two graphs, set the defining expressions equal and solve for the variable values where the graphs meet."
+            },
+            {
+              "term": "Accumulation Function for Area",
+              "definition": "A quantity defined by an integral with variable upper limit, such as $$A(x)=\\int_a^x f(t)\\,dt$$, represents the net amount built up from the starting value to $$x$$ and satisfies $$A'(x)=f(x)$$ by the Fundamental Theorem of Calculus."
+            },
+            {
+              "term": "Net Change from a Rate",
+              "definition": "If a derivative or rate of change is known, the overall change on an interval is obtained by integrating that rate: $$\\int_a^b F'(x)\\,dx=F(b)-F(a)$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "The region $$R$$ is enclosed by $$y=x$$ and $$y=x^2$$. What is the area of $$R$$?",
+              "options": [
+                "$$\\frac{1}{6}$$",
+                "$$\\frac{1}{3}$$",
+                "$$\\frac{1}{2}$$",
+                "$$\\frac{2}{3}$$"
+              ],
+              "correctAnswer": "$$\\frac{1}{6}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The area of the region enclosed by $$x=y^2+1$$ and $$x=5$$ is",
+              "options": [
+                "$$\\frac{16}{3}$$",
+                "$$\\frac{8}{3}$$",
+                "$$\\frac{32}{3}$$",
+                "$$4$$"
+              ],
+              "correctAnswer": "$$\\frac{16}{3}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For the region enclosed by $$y=2x+3$$ and $$y=x^2$$, the left intersection value of $$x$$ is ______.",
+              "options": [
+                "$$-1$$",
+                "$$1$$",
+                "$$3$$",
+                "$$-3$$"
+              ],
+              "correctAnswer": "$$-1$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$A(x)=\\int_1^x \\big(t^2+4\\big)\\,dt$$, then $$A'(3)=______$$.",
+              "options": [
+                "$$13$$",
+                "$$7$$",
+                "$$9$$",
+                "$$12$$"
+              ],
+              "correctAnswer": "$$13$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Volume by Cross Sections",
+              "definition": "A solid whose cross-sectional area perpendicular to an axis is known has volume given by integrating that area along the axis: $$V=\\int_a^b A(x)\\,dx$$ or $$V=\\int_c^d A(y)\\,dy$$."
+            },
+            {
+              "term": "Disk and Washer Method",
+              "definition": "When cross sections perpendicular to the axis of revolution are circular, volume is found using $$\\pi\\int_a^b \\big(R(x)\\big)^2\\,dx$$ for no hole or $$\\pi\\int_a^b \\left(\\big(R(x)\\big)^2-\\big(r(x)\\big)^2\\right)dx$$ when there is an inner radius."
+            },
+            {
+              "term": "Shell Method",
+              "definition": "When slices parallel to the axis of revolution are used, volume is found by integrating circumference times height times thickness: $$V=2\\pi\\int_a^b \\big(\\text{radius}\\big)\\big(\\text{height}\\big)\\,dx$$ or with respect to $$y$$ as appropriate."
+            },
+            {
+              "term": "Arc Length",
+              "definition": "For a differentiable function on $$[a,b]$$, the distance along the curve is $$\\int_a^b \\sqrt{1+\\big(f'(x)\\big)^2}\\,dx$$."
+            },
+            {
+              "term": "Motion Along a Line",
+              "definition": "If position is $$s(t)$$, then velocity is $$v(t)=s'(t)$$ and acceleration is $$a(t)=v'(t)$$. Total distance traveled on an interval is $$\\int_a^b |v(t)|\\,dt$$, while displacement is $$\\int_a^b v(t)\\,dt$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "The region bounded by $$y=\\sqrt{x}$$, $$y=0$$, and $$x=4$$ is revolved about the $$x$$-axis. What is the volume of the resulting solid?",
+              "options": [
+                "$$8\\pi$$",
+                "$$4\\pi$$",
+                "$$\\frac{16\\pi}{3}$$",
+                "$$2\\pi$$"
+              ],
+              "correctAnswer": "$$8\\pi$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The arc length of $$y=\\frac{x^2}{2}$$ on $$0\\le x\\le 1$$ is given by which expression?",
+              "options": [
+                "$$\\int_0^1 \\sqrt{1+x^2}\\,dx$$",
+                "$$\\int_0^1 \\sqrt{1+x}\\,dx$$",
+                "$$\\int_0^1 \\left(1+x^2\\right)dx$$",
+                "$$\\int_0^1 \\sqrt{1+\\frac{x^2}{4}}\\,dx$$"
+              ],
+              "correctAnswer": "$$\\int_0^1 \\sqrt{1+x^2}\\,dx$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$v(t)=t^2-4t+3$$ for $$0\\le t\\le 4$$, then the displacement on $$[0,4]$$ is ______.",
+              "options": [
+                "$$-\\frac{4}{3}$$",
+                "$$\\frac{4}{3}$$",
+                "$$0$$",
+                "$$\\frac{16}{3}$$"
+              ],
+              "correctAnswer": "$$-\\frac{4}{3}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The volume generated when the region under $$y=x$$ on $$0\\le x\\le 2$$ is revolved about the $$y$$-axis, using shells, is ______.",
+              "options": [
+                "$$\\frac{16\\pi}{3}$$",
+                "$$4\\pi$$",
+                "$$8\\pi$$",
+                "$$\\frac{8\\pi}{3}$$"
+              ],
+              "correctAnswer": "$$\\frac{16\\pi}{3}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 9,
+      "unitName": "Parametric Equations, Polar Coordinates, and Vector-Valued Functions",
+      "description": "Derivatives and integrals of parametric and vector functions; polar area and arc length.",
+      "note": "# Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions\n\n## Overview\nIn this unit, you study curves described in **non-Cartesian ways**: by **parametric equations**, **polar equations**, and **vector-valued functions**. You learn how to differentiate and integrate these representations to find **slope**, **speed**, **arc length**, and **area**, all of which are common AP Calculus BC exam targets in both multiple-choice and free-response questions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Parametric equations** | A curve described by $$x=f(t), \\; y=g(t)$$ using a parameter $$t$$ | AP questions often ask for slope, concavity, motion interpretation, or area using parameter-based formulas |\n| **Derivative of a parametric curve** | The slope $$\\frac{dy}{dx}$$ found by dividing derivatives with respect to $$t$$ | Essential for tangent lines, horizontal/vertical tangents, and critical point analysis |\n| **Second derivative for parametrics** | The concavity of a parametric curve found from differentiating $$\\frac{dy}{dx}$$ with respect to $$t$$ and dividing by $$\\frac{dx}{dt}$$ | Frequently tested when analyzing curve shape |\n| **Vector-valued functions** | Position given by $$\\mathbf{r}(t)=\\langle x(t),y(t)\\rangle$$ or $$\\langle x(t),y(t),z(t)\\rangle$$ | Connects calculus to motion: position, velocity, acceleration, and speed |\n| **Motion along a curve** | Using $$\\mathbf{v}(t)=\\mathbf{r}'(t)$$ and $$\\mathbf{a}(t)=\\mathbf{r}''(t)$$ | AP often frames vector problems as particles moving in the plane |\n| **Polar coordinates** | A point given by $$\\left(r,\\theta\\right)$$ where $$x=r\\cos\\theta,\\; y=r\\sin\\theta$$ | Students must connect polar and rectangular forms and interpret graph behavior |\n| **Area in polar form** | Region area found using an integral in terms of $$r$$ and $$\\theta$$ | A standard BC application problem, especially with roses, limacons, and loops |\n| **Arc length** | Length of a curve in parametric or polar form | Often appears in FRQs requiring setup and sometimes evaluation |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Given a curve: parametric, polar, or vector form\"] --> B[\"Identify the representation\"]\n    B --> C[\"Find needed derivatives with respect to the parameter or angle\"]\n    C --> D[\"Convert to the requested quantity\"]\n    D --> E[\"Slope: use dy/dx\"]\n    D --> F[\"Motion: use velocity, acceleration, speed\"]\n    D --> G[\"Area: set up definite integral\"]\n    D --> H[\"Arc length: apply length formula\"]\n    E --> I[\"Analyze tangent lines or concavity\"]\n    F --> J[\"Interpret particle motion\"]\n    G --> K[\"Evaluate enclosed region\"]\n    H --> L[\"Measure curve length\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Topic** | **Formula / Rule** |\n|---|---|\n| **Parametric derivative** | $$\\frac{dy}{dx}=\\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}, \\quad \\frac{dx}{dt}\\ne 0$$ |\n| **Second derivative for parametrics** | $$\\frac{d^2y}{dx^2}=\\frac{\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)}{\\frac{dx}{dt}}$$ |\n| **Horizontal tangent** | $$\\frac{dy}{dt}=0 \\quad \\text{and} \\quad \\frac{dx}{dt}\\ne 0$$ |\n| **Vertical tangent** | $$\\frac{dx}{dt}=0 \\quad \\text{and} \\quad \\frac{dy}{dt}\\ne 0$$ |\n| **Area under a parametric curve** | $$A=\\int y\\,dx=\\int_a^b y(t)\\,x'(t)\\,dt$$ |\n| **Vector-valued position** | $$\\mathbf{r}(t)=\\langle x(t),y(t)\\rangle \\quad \\text{or} \\quad \\langle x(t),y(t),z(t)\\rangle$$ |\n| **Velocity** | $$\\mathbf{v}(t)=\\mathbf{r}'(t)$$ |\n| **Acceleration** | $$\\mathbf{a}(t)=\\mathbf{r}''(t)$$ |\n| **Speed** | $$\\|\\mathbf{v}(t)\\|=\\sqrt{\\left(x'(t)\\right)^2+\\left(y'(t)\\right)^2}$$ |\n| **Arc length of a parametric curve** | $$L=\\int_a^b \\sqrt{\\left(x'(t)\\right)^2+\\left(y'(t)\\right)^2}\\,dt$$ |\n| **Polar to rectangular** | $$x=r\\cos\\theta,\\quad y=r\\sin\\theta$$ |\n| **Rectangular to polar** | $$r^2=x^2+y^2,\\quad \\tan\\theta=\\frac{y}{x}$$ |\n| **Slope for a polar curve** | $$\\frac{dy}{dx}=\\frac{\\frac{dr}{d\\theta}\\sin\\theta+r\\cos\\theta}{\\frac{dr}{d\\theta}\\cos\\theta-r\\sin\\theta}$$ |\n| **Area of a polar region** | $$A=\\frac{1}{2}\\int_\\alpha^\\beta \\left(r(\\theta)\\right)^2\\,d\\theta$$ |\n| **Arc length of a polar curve** | $$L=\\int_\\alpha^\\beta \\sqrt{\\left(r(\\theta)\\right)^2+\\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta$$ |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** | **AP Use** |\n|---|---|---|---|\n| **Parametric equations** vs. **vector-valued functions** | Both describe motion or curves using a parameter | Parametric form emphasizes coordinates separately; vector form packages them into $$\\mathbf{r}(t)$$ | AP may switch notation but expects the same derivative ideas |\n| **Velocity** vs. **speed** | Both come from position over time | **Velocity** is a vector; **speed** is its magnitude | Students often compute velocity when the question asks for speed |\n| **Polar area** vs. **parametric area** | Both use definite integrals to measure regions | Polar area uses $$\\frac{1}{2}\\int r^2\\,d\\theta$$; parametric area uses $$\\int y\\,dx$$ | Choosing the correct formula is a common exam skill |\n| **First derivative** vs. **second derivative** in parametrics | Both require chain rule ideas | First derivative gives slope; second derivative gives concavity | AP often asks for both on the same curve-analysis problem |\n\n```mermaid\nflowchart LR\n    A[\"Parametric: x(t), y(t)\"] --> B[\"dy/dx from derivatives in t\"]\n    C[\"Polar: r(theta)\"] --> D[\"Convert using x=r cos theta, y=r sin theta or use polar slope formula\"]\n    E[\"Vector: r(t)\"] --> F[\"Differentiate to get velocity and acceleration\"]\n    B --> G[\"Curve analysis\"]\n    D --> G\n    F --> H[\"Motion analysis\"]\n```\n\n## Common AP Exam Traps\n\n- Confusing **$$\\frac{dy}{dt}$$** with **$$\\frac{dy}{dx}$$**. For parametric curves, slope requires dividing by **$$\\frac{dx}{dt}$$**.\n- Forgetting the conditions for **horizontal** and **vertical tangents**. A zero numerator or denominator alone is not enough; check the other derivative is nonzero.\n- Using the wrong interval for **polar area**, especially when the graph traces the same region more than once.\n- Forgetting that **speed** is the magnitude of velocity, so it must be nonnegative:\n  $$\\|\\mathbf{v}(t)\\| \\neq \\mathbf{v}(t).$$\n- Missing the extra chain-rule step in the **second derivative** for parametric equations:\n  $$\\frac{d^2y}{dx^2} \\neq \\frac{d}{dt}\\left(\\frac{dy}{dx}\\right).$$\n\n## Quick Review Checklist\n\n- [ ] I can compute **$$\\frac{dy}{dx}$$** for a curve given by $$x(t)$$ and $$y(t)$$.\n- [ ] I can determine where a parametric curve has **horizontal** or **vertical tangents**.\n- [ ] I can find **$$\\frac{d^2y}{dx^2}$$** for a parametric curve and use it to analyze **concavity**.\n- [ ] I can interpret **position**, **velocity**, **acceleration**, and **speed** for a **vector-valued function**.\n- [ ] I can convert between **polar** and **rectangular** coordinates using $$x=r\\cos\\theta$$ and $$y=r\\sin\\theta$$.\n- [ ] I can set up and evaluate **polar area** using $$A=\\frac{1}{2}\\int r^2\\,d\\theta$$.\n- [ ] I can set up **arc length** integrals for both **parametric** and **polar** curves.\n- [ ] I can decide which formula fits a problem based on whether the curve is given in **parametric**, **polar**, or **vector** form.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Parametric derivative $$\\frac{dy}{dx}$$",
+              "definition": "For a curve defined by $$x=f(t)$$ and $$y=g(t)$$ with $$\\frac{dx}{dt}\\ne 0$$, the slope with respect to $$x$$ is found by dividing $$\\frac{dy}{dt}$$ by $$\\frac{dx}{dt}$$."
+            },
+            {
+              "term": "Second derivative for a parametric curve",
+              "definition": "The concavity of a curve given by a parameter is found by differentiating $$\\frac{dy}{dx}$$ with respect to the parameter and then dividing by $$\\frac{dx}{dt}$$."
+            },
+            {
+              "term": "Arc length of a parametric curve",
+              "definition": "For $$x=f(t)$$ and $$y=g(t)$$ on $$a\\le t\\le b$$, the total distance traveled along the curve is $$\\int_a^b \\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}\\,dt$$."
+            },
+            {
+              "term": "Area under a parametric curve",
+              "definition": "When a curve is traced once from $$t=a$$ to $$t=b$$ and $$x$$ is differentiable, the signed area with the horizontal axis is $$\\int_a^b y\\frac{dx}{dt}\\,dt$$."
+            },
+            {
+              "term": "Horizontal and vertical tangents in parametric form",
+              "definition": "A tangent is horizontal when $$\\frac{dy}{dt}=0$$ and $$\\frac{dx}{dt}\\ne 0$$, and vertical when $$\\frac{dx}{dt}=0$$ and $$\\frac{dy}{dt}\\ne 0$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A curve is given by $$x=t^2+1$$ and $$y=t^3-3t$$. At $$t=1$$, what is the value of $$\\frac{d^2y}{dx^2}$$?",
+              "options": [
+                "$$-\\frac{3}{4}$$",
+                "$$0$$",
+                "$$\\frac{3}{4}$$",
+                "$$\\frac{3}{2}$$"
+              ],
+              "correctAnswer": "$$0$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "For the parametric curve $$x=2\\cos t$$ and $$y=\\sin t$$ on $$0\\le t\\le \\pi$$, what is the area enclosed with the $$x$$-axis?",
+              "options": [
+                "$$\\frac{\\pi}{2}$$",
+                "$$2$$",
+                "$$4$$",
+                "$$\\pi$$"
+              ],
+              "correctAnswer": "$$4$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$x=t^2-1$$ and $$y=\\ln t$$ for $$t>0$$, then $$\\frac{dy}{dx}=\\,\\underline{\\hspace{1cm}}$$. Choose the correct expression for the blank: ______",
+              "options": [
+                "$$\\frac{1}{2t^2}$$",
+                "$$\\frac{1}{2t}$$",
+                "$$\\frac{1}{t^2-1}$$",
+                "$$\\frac{2}{t}$$"
+              ],
+              "correctAnswer": "$$\\frac{1}{2t^2}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For $$x=3t-\\sin t$$ and $$y=1-\\cos t$$, the expression for arc length on $$0\\le t\\le 2\\pi$$ uses integrand ______",
+              "options": [
+                "$$\\sqrt{(3-\\cos t)^2+\\sin^2 t}$$",
+                "$$\\sqrt{(3-\\sin t)^2+\\cos^2 t}$$",
+                "$$\\sqrt{(3+\\cos t)^2+\\sin^2 t}$$",
+                "$$\\sqrt{(3-\\cos t)^2+(1-\\cos t)^2}$$"
+              ],
+              "correctAnswer": "$$\\sqrt{(3-\\cos t)^2+\\sin^2 t}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Polar area",
+              "definition": "The area of a region swept out by a graph in polar form from $$\\theta=a$$ to $$\\theta=b$$ is $$\\frac{1}{2}\\int_a^b r^2\\,d\\theta$$."
+            },
+            {
+              "term": "Slope for a polar curve",
+              "definition": "When $$x=r\\cos\\theta$$ and $$y=r\\sin\\theta$$ with $$r=f(\\theta)$$, the slope is $$\\frac{\\frac{dy}{d\\theta}}{\\frac{dx}{d\\theta}}=\\frac{f'(\\theta)\\sin\\theta+f(\\theta)\\cos\\theta}{f'(\\theta)\\cos\\theta-f(\\theta)\\sin\\theta}$$, provided the denominator is nonzero."
+            },
+            {
+              "term": "Polar arc length",
+              "definition": "For $$r=f(\\theta)$$ on $$a\\le \\theta\\le b$$, the length of the traced curve is $$\\int_a^b \\sqrt{r^2+\\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta$$."
+            },
+            {
+              "term": "Velocity vector for a vector-valued function",
+              "definition": "For a position function $$\\mathbf{r}(t)=\\langle x(t),y(t)\\rangle$$ or $$\\langle x(t),y(t),z(t)\\rangle$$, differentiating each component gives the rate-of-change vector that is tangent to the path."
+            },
+            {
+              "term": "Speed from a vector-valued function",
+              "definition": "The scalar rate at which an object moves along a path is the magnitude of the derivative of its position function, such as $$\\left\\|\\mathbf{r}'(t)\\right\\|$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "For the polar curve $$r=2\\sin\\theta$$, what is the area enclosed by one complete loop?",
+              "options": [
+                "$$\\pi$$",
+                "$$2\\pi$$",
+                "$$\\frac{\\pi}{2}$$",
+                "$$4\\pi$$"
+              ],
+              "correctAnswer": "$$\\pi$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A particle has position $$\\mathbf{r}(t)=\\langle t^2, e^t, \\cos t\\rangle$$. What is its speed at $$t=0$$?",
+              "options": [
+                "$$\\sqrt{2}$$",
+                "$$1$$",
+                "$$2$$",
+                "$$\\sqrt{3}$$"
+              ],
+              "correctAnswer": "$$\\sqrt{2}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For the polar curve $$r=1+\\cos\\theta$$, the expression for $$\\frac{dx}{d\\theta}$$ is ______",
+              "options": [
+                "$$-\\sin\\theta\\cos\\theta-(1+\\cos\\theta)\\sin\\theta$$",
+                "$$-\\sin\\theta\\cos\\theta+(1+\\cos\\theta)\\sin\\theta$$",
+                "$$-\\sin\\theta\\sin\\theta+(1+\\cos\\theta)\\cos\\theta$$",
+                "$$\\cos\\theta-(1+\\cos\\theta)\\sin\\theta$$"
+              ],
+              "correctAnswer": "$$-\\sin\\theta\\cos\\theta-(1+\\cos\\theta)\\sin\\theta$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$\\mathbf{r}(t)=\\langle \\ln t, t^2\\rangle$$ for $$t>0$$, then the velocity vector is ______",
+              "options": [
+                "$$\\left\\langle \\frac{1}{t}, 2t\\right\\rangle$$",
+                "$$\\left\\langle \\ln t, 2t\\right\\rangle$$",
+                "$$\\left\\langle \\frac{1}{t}, t\\right\\rangle$$",
+                "$$\\left\\langle t, 2\\right\\rangle$$"
+              ],
+              "correctAnswer": "$$\\left\\langle \\frac{1}{t}, 2t\\right\\rangle$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 10,
+      "unitName": "Infinite Sequences and Series",
+      "description": "Convergence tests, Taylor and Maclaurin series, power series, radius of convergence, and error bounds.",
+      "note": "# Unit 10: Infinite Sequences and Series\n\n## Overview\nThis unit develops the tools for deciding whether **infinite sequences** and **infinite series** converge, and for representing functions with **power series**, **Taylor series**, and **Maclaurin series**. On the AP Calculus BC exam, these topics appear in both conceptual and computational forms, especially when choosing the correct **convergence test**, finding **intervals of convergence**, and estimating error.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Sequence convergence** | Determines whether the terms $$a_n$$ approach a finite limit as $$n \\to \\infty$$ | Often the first step in understanding whether a related series can converge |\n| **Series and partial sums** | A series $$\\sum a_n$$ is the sum of infinitely many terms, analyzed through partial sums $$S_n$$ | AP questions often ask whether a series converges, diverges, or converges conditionally/absolutely |\n| **Geometric series** | A series of the form $$\\sum ar^n$$ or $$\\sum ar^{n-1}$$ with convergence based on $$|r|<1$$ | One of the fastest recognition-based topics on the exam |\n| **Convergence tests** | Methods such as the **nth-term test**, **integral test**, **comparison tests**, **ratio test**, and **alternating series test** | A major AP skill is selecting and justifying the correct test |\n| **Absolute vs. conditional convergence** | **Absolute convergence** means $$\\sum |a_n|$$ converges; **conditional convergence** means $$\\sum a_n$$ converges but $$\\sum |a_n|$$ diverges | Frequently tested in free-response explanations |\n| **Power series** | A series of the form $$\\sum c_n(x-a)^n$$ centered at $$x=a$$ | Used to find **radius** and **interval of convergence** |\n| **Taylor and Maclaurin series** | Polynomial-like infinite expansions that represent functions near a center | AP BC regularly asks students to build, recognize, or use these series |\n| **Error bounds** | Estimates for how close a partial sum is to the true value | Important when approximating functions and justifying accuracy |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify the expression] --> B{Sequence or series?}\n    B -->|Sequence $$a_n$$| C[Find $$\\lim_{n\\to\\infty} a_n$$]\n    C --> D[Decide whether the sequence converges]\n    B -->|Series $$\\sum a_n$$| E[Check the nth-term test]\n    E --> F{Does $$\\lim_{n\\to\\infty} a_n \\neq 0$$ or fail to exist?}\n    F -->|Yes| G[Series diverges]\n    F -->|No| H[Choose a convergence test]\n    H --> I[\"Geometric / p-series / telescoping?\"]\n    H --> J[Comparison or limit comparison]\n    H --> K[Integral test]\n    H --> L[Ratio or root test]\n    H --> M[Alternating series test]\n    I --> N[Determine convergence or divergence]\n    J --> N\n    K --> N\n    L --> N\n    M --> N\n    N --> O{If it converges, absolutely or conditionally?}\n    O --> P[Check $$\\sum |a_n|$$]\n    P --> Q[State conclusion with justification]\n    Q --> R[\"If power series: find radius and interval of convergence\"]\n    R --> S[\"If approximation: apply error bound\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Statement** |\n|---|---|\n| **Sequence convergence** | A sequence converges if $$\\lim_{n\\to\\infty} a_n = L$$ for some finite $$L$$ |\n| **nth-term test for divergence** | If $$\\lim_{n\\to\\infty} a_n \\neq 0$$ or does not exist, then $$\\sum a_n$$ **diverges** |\n| **Geometric series** | $$\\sum_{n=0}^{\\infty} ar^n$$ converges if $$|r|<1$$ and then $$\\sum_{n=0}^{\\infty} ar^n=\\frac{a}{1-r}$$ |\n| **p-series** | $$\\sum_{n=1}^{\\infty}\\frac{1}{n^p}$$ converges if $$p>1$$ and diverges if $$p\\le 1$$ |\n| **Integral test** | If $$a_n=f(n)$$ where $$f$$ is positive, continuous, and decreasing, then $$\\sum a_n$$ and $$\\int_1^\\infty f(x)\\,dx$$ either both converge or both diverge |\n| **Direct comparison test** | Compare $$0\\le a_n\\le b_n$$ with a known series to conclude convergence or divergence |\n| **Limit comparison test** | If $$\\lim_{n\\to\\infty}\\frac{a_n}{b_n}=c$$ where $$0<c<\\infty$$, then $$\\sum a_n$$ and $$\\sum b_n$$ behave the same |\n| **Alternating series test** | $$\\sum (-1)^n b_n$$ or $$\\sum (-1)^{n-1} b_n$$ converges if $$b_n>0$$, $$b_{n+1}\\le b_n$$, and $$\\lim_{n\\to\\infty} b_n=0$$ |\n| **Alternating series error bound** | For an alternating series satisfying the test, $$|S-S_n|\\le b_{n+1}$$ |\n| **Absolute convergence** | If $$\\sum |a_n|$$ converges, then $$\\sum a_n$$ converges absolutely |\n| **Ratio test** | Let $$L=\\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|$$. If $$L<1$$, the series converges absolutely; if $$L>1$$ or $$L=\\infty$$, it diverges; if $$L=1$$, the test is inconclusive |\n| **Power series** | $$\\sum_{n=0}^{\\infty} c_n(x-a)^n$$ has a **radius of convergence** $$R$$ and converges for $$|x-a|<R$$ |\n| **Taylor series** | $$f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^n$$ |\n| **Maclaurin series** | A Taylor series centered at $$a=0$$: $$f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(0)}{n!}x^n$$ |\n| **Lagrange remainder** | $$|R_n(x)|\\le \\frac{M|x-a|^{n+1}}{(n+1)!}$$, where $$M$$ bounds $$|f^{(n+1)}(t)|$$ on the interval |\n\n### Must-know common Maclaurin series\n- $$\\displaystyle \\frac{1}{1-x}=\\sum_{n=0}^{\\infty} x^n,\\quad |x|<1$$\n- $$\\displaystyle e^x=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}$$\n- $$\\displaystyle \\sin x=\\sum_{n=0}^{\\infty}(-1)^n\\frac{x^{2n+1}}{(2n+1)!}$$\n- $$\\displaystyle \\cos x=\\sum_{n=0}^{\\infty}(-1)^n\\frac{x^{2n}}{(2n)!}$$\n- $$\\displaystyle \\ln(1+x)=\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^n}{n},\\quad -1<x\\le 1$$\n- $$\\displaystyle \\arctan x=\\sum_{n=0}^{\\infty}(-1)^n\\frac{x^{2n+1}}{2n+1},\\quad -1\\le x\\le 1$$\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Related** | **Key Difference** |\n|---|---|---|\n| **Sequence vs. Series** | A series $$\\sum a_n$$ is built from the terms of a sequence $$a_n$$ | A sequence studies terms; a series studies sums of terms |\n| **Absolute vs. Conditional Convergence** | Both describe convergent series | Absolute convergence requires $$\\sum |a_n|$$ to converge; conditional does not |\n| **Taylor polynomial vs. Taylor series** | Both approximate a function near $$x=a$$ using derivatives | A polynomial has finitely many terms; a series has infinitely many |\n| **Radius vs. Interval of Convergence** | Both describe where a power series converges | Radius is a distance $$R$$ from the center; interval includes endpoint testing |\n\n## Common AP Exam Traps\n- Confusing the **nth-term test**: if $$\\lim a_n=0$$, that does **not** prove the series converges.\n- Forgetting to test the **endpoints** after finding the radius of convergence for a power series.\n- Using the **alternating series test** to claim **absolute convergence**; it only proves convergence, not absolute convergence.\n- Applying the **ratio test** and stopping when $$L=1$$; this result is **inconclusive**.\n- Mixing up a **Taylor polynomial approximation** with the full **Taylor series**, or forgetting the center $$a$$.\n\n## Quick Review Checklist\n- [ ] I can determine whether a **sequence** $$a_n$$ converges and find its limit.\n- [ ] I can identify and evaluate a **geometric series** and recognize a **p-series**.\n- [ ] I can choose an appropriate **convergence test** and justify my reasoning.\n- [ ] I can distinguish between **divergence**, **absolute convergence**, and **conditional convergence**.\n- [ ] I can find the **radius** and **interval of convergence** of a **power series**, including endpoint testing.\n- [ ] I can write or use **Taylor** and **Maclaurin series** for common functions.\n- [ ] I can form a **Taylor polynomial** of a given degree centered at $$a$$.\n- [ ] I can estimate approximation error using the **alternating series error bound** or **Lagrange remainder**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Convergent sequence",
+              "definition": "A list of numbers $$\\{a_n\\}$$ approaches a finite value $$L$$ as $$n \\to \\infty$$, meaning that for every positive tolerance, the terms eventually stay within that distance of $$L$$."
+            },
+            {
+              "term": "Geometric series",
+              "definition": "An infinite sum of the form $$\\sum_{n=0}^{\\infty} ar^n$$ that has a finite sum when $$|r|<1$$, in which case the sum is $$\\frac{a}{1-r}$$."
+            },
+            {
+              "term": "$$n$$th-term test for divergence",
+              "definition": "If $$\\lim_{n\\to\\infty} a_n \\neq 0$$ or the limit does not exist, then the infinite sum $$\\sum a_n$$ cannot have a finite value."
+            },
+            {
+              "term": "Integral test",
+              "definition": "A method stating that if $$f(x)$$ is positive, continuous, and decreasing for sufficiently large $$x$$ and $$a_n=f(n)$$, then $$\\sum a_n$$ and $$\\int f(x)\\,dx$$ either both have finite values or both fail to do so."
+            },
+            {
+              "term": "Alternating series test",
+              "definition": "A criterion showing that a sum with terms of alternating sign has a finite value when the term magnitudes eventually decrease and approach $$0$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which series converges by the integral test?",
+              "options": [
+                "$$\\sum_{n=2}^{\\infty} \\frac{1}{n\\ln n}$$",
+                "$$\\sum_{n=1}^{\\infty} \\frac{1}{n^2+1}$$",
+                "$$\\sum_{n=1}^{\\infty} \\frac{n}{n+1}$$",
+                "$$\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n}}$$"
+              ],
+              "correctAnswer": "$$\\sum_{n=1}^{\\infty} \\frac{1}{n^2+1}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider $$\\sum_{n=1}^{\\infty} (-1)^{n+1}\\frac{1}{\\sqrt{n}}$$. Which statement is true?",
+              "options": [
+                "It converges absolutely.",
+                "It converges conditionally.",
+                "It diverges by the $$n$$th-term test.",
+                "It is a geometric series."
+              ],
+              "correctAnswer": "It converges conditionally.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$\\lim_{n\\to\\infty} a_n = 5$$, then the series $$\\sum_{n=1}^{\\infty} a_n$$ ______.",
+              "options": [
+                "converges by the comparison test",
+                "diverges by the $$n$$th-term test",
+                "converges absolutely",
+                "converges conditionally"
+              ],
+              "correctAnswer": "diverges by the $$n$$th-term test",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The series $$\\sum_{n=1}^{\\infty} \\frac{1}{n^p}$$ converges precisely when ______.",
+              "options": [
+                "$$p>1$$",
+                "$$p\\ge 1$$",
+                "$$p<1$$",
+                "$$p\\le 1$$"
+              ],
+              "correctAnswer": "$$p>1$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Power series",
+              "definition": "An infinite sum written in the form $$\\sum_{n=0}^{\\infty} c_n(x-a)^n$$, centered at $$a$$, whose behavior depends on the values of $$x$$."
+            },
+            {
+              "term": "Radius of convergence",
+              "definition": "The nonnegative number $$R$$ such that a power series converges for all $$|x-a|<R$$ and diverges for all $$|x-a|>R$$, with endpoints requiring separate testing."
+            },
+            {
+              "term": "Taylor series",
+              "definition": "An infinite polynomial expansion about $$x=a$$ given by $$\\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n$$ when the function matches that expansion on an interval."
+            },
+            {
+              "term": "Maclaurin series",
+              "definition": "A special case of a polynomial expansion about the point $$a=0$$."
+            },
+            {
+              "term": "Lagrange error bound",
+              "definition": "An estimate for the magnitude of the remainder after truncating a polynomial expansion, using an upper bound on a higher derivative over an interval containing the center and the input value."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "What is the radius of convergence of $$\\sum_{n=1}^{\\infty} \\frac{(x-2)^n}{n\\,3^n}$$?",
+              "options": [
+                "$$1$$",
+                "$$2$$",
+                "$$3$$",
+                "$$\\infty$$"
+              ],
+              "correctAnswer": "$$3$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which Maclaurin series is correct?",
+              "options": [
+                "$$e^x=\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$$",
+                "$$\\ln(1+x)=\\sum_{n=0}^{\\infty} (-1)^n x^n$$",
+                "$$\\frac{1}{1-x}=\\sum_{n=1}^{\\infty} x^n$$",
+                "$$\\sin x=\\sum_{n=0}^{\\infty} (-1)^n \\frac{x^{2n}}{(2n)!}$$"
+              ],
+              "correctAnswer": "$$e^x=\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If $$\\sum_{n=0}^{\\infty} c_n(x-a)^n$$ has radius of convergence $$R$$, then the series is guaranteed to converge whenever ______.",
+              "options": [
+                "$$|x-a|<R$$",
+                "$$|x-a|\\le R$$",
+                "$$|x-a|>R$$",
+                "$$x=a+R$$"
+              ],
+              "correctAnswer": "$$|x-a|<R$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The alternating series error bound states that for a convergent alternating series with decreasing term magnitudes, the absolute error after $$N$$ terms is less than or equal to ______.",
+              "options": [
+                "the magnitude of the first omitted term",
+                "the sum of all omitted terms",
+                "$$\\frac{1}{N!}$$",
+                "the common ratio"
+              ],
+              "correctAnswer": "the magnitude of the first omitted term",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
