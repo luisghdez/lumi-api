@@ -1,0 +1,917 @@
+{
+  "apSubject": "AP Spanish Language and Culture",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Families and Communities",
+      "description": "Language and culture related to family structures, community life, social roles, and interpersonal relationships.",
+      "note": "# Unit 1: Families and Communities\n\n## Overview\nIn this unit, you explore how **family structures**, **community life**, **social roles**, and **interpersonal relationships** shape identities in the Spanish-speaking world. This matters for the AP exam because you must understand and discuss **cultural perspectives**, compare communities across contexts, and use strong **interpersonal**, **interpretive**, and **presentational** language skills.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Family structure** | The composition of a family, such as **nuclear**, **extended**, **single-parent**, or **multigenerational** households. | You may need to compare how different family models reflect cultural values and social expectations. |\n| **Roles and responsibilities** | The expectations placed on family and community members, including caregiving, work, and authority. | AP tasks often ask you to explain how **social roles** influence behavior and relationships. |\n| **Traditions and celebrations** | Shared customs that bring families and communities together, such as holidays, rites of passage, and religious events. | These are common themes in readings, audio sources, and cultural comparisons. |\n| **Interpersonal relationships** | How people interact with relatives, friends, neighbors, and community members. | You must describe and evaluate relationships using appropriate tone, register, and vocabulary. |\n| **Community identity** | The sense of belonging created by shared values, geography, language, and institutions. | This helps in analyzing how communities support individuals and preserve culture. |\n| **Social norms and expectations** | Informal rules about behavior, respect, gender roles, and participation in family or community life. | AP questions may require you to interpret attitudes and perspectives embedded in texts or conversations. |\n| **Changing family dynamics** | Shifts caused by migration, technology, economic pressures, and globalization. | This is a strong topic for argumentation and comparison because it links tradition with modern challenges. |\n| **Support networks** | Systems of emotional, financial, or practical help provided by family and community. | Useful for discussing benefits and challenges of close-knit communities across cultures. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Individual identity\"] --> B[\"Family relationships\"]\n    B --> C[\"Roles and responsibilities\"]\n    C --> D[\"Daily interactions\"]\n    D --> E[\"Community participation\"]\n    E --> F[\"Shared values and traditions\"]\n    F --> G[\"Sense of belonging\"]\n    G --> H[\"Identity reinforced or changed\"]\n    H --> A\n```\n\n### How this cycle works\n1. An **individual** develops within a **family context**.\n2. The family teaches **roles**, expectations, and values.\n3. These shape a person’s **interactions** with others.\n4. Through participation in school, neighborhood, religion, and civic life, the person becomes part of a **community**.\n5. The community reinforces or challenges beliefs, helping form a stronger or changing **identity**.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “rules” are key **cultural and linguistic principles** rather than equations.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Use formal vs. informal register appropriately** | Distinguish **tú** from **usted** and adjust tone based on relationship, age, and social context. |\n| **Support cultural comparisons with evidence** | On the AP exam, avoid vague generalizations; refer to specific **traditions**, **behaviors**, or **social patterns**. |\n| **Identify perspectives, not just products and practices** | Go beyond naming a celebration or custom; explain the underlying **values** it reflects, such as respect, solidarity, or family unity. |\n| **Recognize variation in the Spanish-speaking world** | Do not assume all families or communities function the same way across countries or regions. |\n| **Connect language to context** | Vocabulary about **relationships**, **obligations**, **celebrations**, and **community spaces** should match the situation. |\n| **Compare rather than simply describe** | Strong AP responses explain **similarities and differences** between the student’s own context and a Spanish-speaking context. |\n| **Interpret tone and point of view** | In audio and reading tasks, notice whether a speaker values tradition, criticizes change, or emphasizes independence. |\n\n### High-value language functions for this unit\n- **Describe** family members, relationships, and traditions.\n- **Compare** communities and household structures.\n- **Explain** causes and effects of social change.\n- **Justify** opinions about community support, obligations, and identity.\n- **Interpret** perspectives in authentic sources.\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection** | **Important Contrast / Insight** |\n|---|---|---|\n| **Family vs. community** | Families are often the first source of identity; communities expand that identity through shared spaces and institutions. | A person may feel strong family loyalty but weaker connection to the broader community, or vice versa. |\n| **Tradition vs. change** | Traditions preserve cultural continuity, while change reflects modern realities like migration or technology. | AP prompts often ask whether change strengthens or weakens family/community bonds. |\n| **Individualism vs. collectivism** | Some contexts emphasize personal independence; others emphasize group responsibility and interdependence. | This contrast is useful in cultural comparison essays and speaking tasks. |\n| **Support vs. pressure** | Families and communities can provide belonging, guidance, and protection. | The same structures can also create pressure through expectations about behavior, career, or gender roles. |\n\n```mermaid\nflowchart LR\n    A[\"Tradition\"] --> C[\"Family and community identity\"]\n    B[\"Modern change\"] --> C\n    C --> D[\"Benefits: belonging, support, continuity\"]\n    C --> E[\"Challenges: conflict, pressure, adaptation\"]\n```\n\n## Common AP Exam Traps\n- Confusing **description** with **analysis**: listing family traditions is not enough; explain what they reveal about **cultural values**.\n- Overgeneralizing about the Spanish-speaking world: avoid implying that one family model or social norm applies everywhere.\n- Ignoring **register**: using language that is too informal in a formal email or too rigid in a personal conversation can lower scores.\n- Comparing only surface details: stronger responses compare **perspectives**, not just whether two places celebrate the same event.\n- Missing nuance in authentic sources: a speaker may both appreciate **family closeness** and criticize certain expectations.\n\n## Quick Review Checklist\n- [ ] I can identify and describe major **family structures** and explain how they influence identity.\n- [ ] I can discuss **social roles** and responsibilities within families and communities.\n- [ ] I can explain how **traditions** and celebrations reflect deeper cultural values.\n- [ ] I can compare **my own community** with a community in the Spanish-speaking world using specific evidence.\n- [ ] I can analyze how **migration**, **technology**, or economics change family and community life.\n- [ ] I can use appropriate **formal** and **informal** language depending on the relationship and context.\n- [ ] I can interpret a source’s **tone**, **perspective**, and attitude toward family or community issues.\n- [ ] I can argue whether families and communities are mainly a source of **support**, **obligation**, or both.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "la familia extensa",
+              "definition": "Grupo de parientes que incluye, además de padres e hijos, a abuelos, tíos, primos y otros familiares con vínculos cercanos."
+            },
+            {
+              "term": "los papeles de género",
+              "definition": "Expectativas sociales y culturales que influyen en el comportamiento, las responsabilidades y las oportunidades de las personas según su sexo o identidad."
+            },
+            {
+              "term": "la cortesía formal",
+              "definition": "Registro lingüístico usado para mostrar respeto, distancia social o consideración, especialmente en contextos profesionales o con desconocidos."
+            },
+            {
+              "term": "la convivencia intergeneracional",
+              "definition": "Situación en la que personas de distintas edades comparten hogar o vida cotidiana, lo que puede fortalecer el apoyo mutuo y también generar tensiones."
+            },
+            {
+              "term": "el sentido de pertenencia",
+              "definition": "Vínculo emocional y social que hace que una persona se sienta integrada, valorada e identificada con un grupo o una comunidad."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En muchas comunidades hispanohablantes, ¿qué factor suele fortalecer más la cohesión familiar y comunitaria?",
+              "options": [
+                "La priorización exclusiva de la independencia individual",
+                "La participación en celebraciones, tradiciones y apoyo mutuo",
+                "La reducción de todo contacto entre generaciones",
+                "La preferencia por relaciones únicamente virtuales"
+              ],
+              "correctAnswer": "La participación en celebraciones, tradiciones y apoyo mutuo",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Cuál de las siguientes situaciones ilustra mejor el uso adecuado del registro formal en un contexto comunitario?",
+              "options": [
+                "Un estudiante tutea al director en una entrevista oficial",
+                "Una persona usa expresiones coloquiales en una solicitud de beca",
+                "Un joven trata de usted a una líder comunitaria durante una reunión",
+                "Un amigo le escribe abreviaturas informales a su abuelo en una tarjeta ceremonial"
+              ],
+              "correctAnswer": "Un joven trata de usted a una líder comunitaria durante una reunión",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando varias generaciones viven en la misma casa y comparten responsabilidades diarias, se habla de ______.",
+              "options": [
+                "la familia nuclear",
+                "la convivencia intergeneracional",
+                "el individualismo social",
+                "la movilidad académica"
+              ],
+              "correctAnswer": "la convivencia intergeneracional",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "En un correo dirigido a una profesora universitaria a quien no se conoce bien, el uso de ______ suele ser más apropiado que el tuteo.",
+              "options": [
+                "vosotros",
+                "usted",
+                "jerga juvenil",
+                "mandatos informales"
+              ],
+              "correctAnswer": "usted",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "la red de apoyo",
+              "definition": "Conjunto de personas e instituciones que ofrecen ayuda emocional, económica o práctica en momentos de necesidad."
+            },
+            {
+              "term": "el voluntariado",
+              "definition": "Participación libre y no remunerada en actividades destinadas a beneficiar a otras personas o mejorar la comunidad."
+            },
+            {
+              "term": "la solidaridad",
+              "definition": "Compromiso con el bienestar ajeno que se manifiesta mediante cooperación, empatía y acciones de ayuda colectiva."
+            },
+            {
+              "term": "la identidad cultural",
+              "definition": "Conjunto de valores, tradiciones, prácticas y referencias compartidas que contribuyen a la manera en que una persona o grupo se define."
+            },
+            {
+              "term": "la presión social",
+              "definition": "Influencia ejercida por un grupo para que sus miembros adopten conductas, opiniones o normas determinadas."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Qué situación representa mejor una red comunitaria eficaz para apoyar a una familia recién llegada a un barrio?",
+              "options": [
+                "Los vecinos evitan todo contacto para respetar la privacidad",
+                "La escuela, los vecinos y organizaciones locales colaboran para orientar y ayudar",
+                "La familia depende únicamente de medios digitales anónimos",
+                "Las instituciones exigen adaptación inmediata sin ofrecer recursos"
+              ],
+              "correctAnswer": "La escuela, los vecinos y organizaciones locales colaboran para orientar y ayudar",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Desde la perspectiva de AP Spanish Language and Culture, ¿qué efecto puede tener el voluntariado en la vida comunitaria?",
+              "options": [
+                "Debilita los vínculos sociales al sustituir relaciones personales",
+                "Fomenta la participación cívica y refuerza el compromiso colectivo",
+                "Elimina por completo las desigualdades estructurales",
+                "Reduce la importancia de la identidad cultural local"
+              ],
+              "correctAnswer": "Fomenta la participación cívica y refuerza el compromiso colectivo",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando un grupo influye en las decisiones de un adolescente para que actúe de cierta manera, esa influencia puede describirse como ______.",
+              "options": [
+                "la presión social",
+                "la autosuficiencia",
+                "la movilidad laboral",
+                "la introspección académica"
+              ],
+              "correctAnswer": "la presión social",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Las tradiciones, los valores compartidos y las costumbres que ayudan a definir a una comunidad forman parte de ______.",
+              "options": [
+                "la identidad cultural",
+                "la productividad económica",
+                "el aislamiento generacional",
+                "la neutralidad afectiva"
+              ],
+              "correctAnswer": "la identidad cultural",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Personal and Public Identities",
+      "description": "Exploration of self-identity, cultural identity, national identity, and how they intersect in personal and public life.",
+      "note": "# Unit 2: Personal and Public Identities\n\n## Overview\nIn this unit, you explore how **personal identity** and **public identity** are formed through factors such as **language**, **nationality**, **gender**, **ethnicity**, **social class**, and **community expectations**. This matters for the AP exam because these themes appear across the **Interpersonal**, **Interpretive**, and **Presentational** tasks, where you must analyze how identity shapes perspectives in the Spanish-speaking world.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Personal identity** | A person’s sense of self, including beliefs, values, personality, and life experiences | Frequently appears in essays and speaking prompts about self-expression, family roles, and individual choices |\n| **Public identity** | How a person is seen by society or presents themselves in public spaces | Important for comparing private beliefs with social expectations in audio, readings, and cultural comparisons |\n| **Cultural identity** | Identity shaped by traditions, language, customs, and shared heritage | Helps you interpret texts about belonging, heritage, and cultural preservation |\n| **National identity** | A sense of belonging tied to a nation, citizenship, or patriotism | Often connected to immigration, history, and regional pride in AP sources |\n| **Gender and social roles** | Expectations society places on individuals based on gender or status | Common in prompts about inequality, tradition, and changing values |\n| **Bilingualism and language identity** | The relationship between language use and self-expression or belonging | Essential for analyzing how language reflects identity and cultural connection |\n| **Assimilation vs. preservation** | The tension between adapting to a dominant culture and maintaining original traditions | A major issue in immigrant experiences and multicultural societies |\n| **Stereotypes and representation** | Simplified or distorted views of groups in media or society | Useful for identifying bias, tone, and perspective in AP interpretive tasks |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Individual experiences] --> B[Development of personal identity]\n    B --> C[Interaction with family and community]\n    C --> D[Social expectations and cultural norms]\n    D --> E[Public identity]\n    E --> F[Acceptance, conflict, or negotiation]\n    F --> G[Identity evolves over time]\n\n    H[Language, heritage, nationality] --> B\n    H --> D\n    I[Media, institutions, migration] --> D\n    I --> E\n```\n\n### Identity Development Pattern\n1. **Individuals** form a sense of self through experiences, beliefs, and relationships.\n2. **Families and communities** transmit values, traditions, and expectations.\n3. **Society** shapes identity through institutions such as school, media, religion, and government.\n4. People may **accept**, **challenge**, or **negotiate** these expectations.\n5. Identity continues to **change over time**, especially through migration, education, and social change.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a non-quantitative unit, the “must-know” material consists of key **principles**, **question types**, and **analytical moves**:\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Identity is multifaceted** | A person can hold multiple identities at once: **personal**, **cultural**, **linguistic**, **national**, and **social** |\n| **Identity is shaped by context** | The way someone presents themselves may change depending on **family**, **school**, **work**, or **public life** |\n| **Language reflects identity** | Word choice, accent, bilingualism, and code-switching can signal **belonging**, **status**, or **cultural affiliation** |\n| **Public and private identities may conflict** | AP sources often show tension between what people believe privately and what society expects publicly |\n| **Cultural comparison requires specificity** | On the exam, avoid vague statements like “they are different”; instead explain **how**, **why**, and **with what effect** |\n| **Perspective matters** | Always identify who is speaking and how their background shapes their view of identity |\n| **Support with evidence** | In writing and speaking, connect claims about identity to **examples**, **details**, or **cultural practices** from the source or your knowledge |\n| **Avoid overgeneralization** | Do not treat the Spanish-speaking world as one single culture; note **regional**, **historical**, and **social** differences |\n\n### Useful analytical questions\n- **¿Cómo influye la familia en la identidad individual?**\n- **¿De qué manera el idioma forma parte de la identidad cultural?**\n- **¿Qué tensión existe entre la tradición y la expresión personal?**\n- **¿Cómo cambia la identidad en contextos de migración o globalización?**\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key Connection / Difference** |\n|---|---|---|---|\n| **Private vs. social self** | **Personal identity** | **Public identity** | Personal identity is internal and individual; public identity is shaped by how others see you and by social roles |\n| **Belonging through heritage vs. state** | **Cultural identity** | **National identity** | Cultural identity may come from traditions or ethnicity, while national identity is tied more directly to country and citizenship |\n| **Change vs. continuity** | **Assimilation** | **Cultural preservation** | Assimilation emphasizes adaptation to a dominant culture; preservation emphasizes maintaining language, customs, and memory |\n| **Freedom vs. expectation** | **Individual expression** | **Social norms** | Individuals may want autonomy, but communities often enforce expectations about behavior, language, or gender roles |\n\n```mermaid\nflowchart LR\n    A[Personal identity] --> B[Self-expression]\n    C[Public identity] --> D[Social perception]\n    B <--> D\n    E[Cultural identity] --> F[Traditions and heritage]\n    G[National identity] --> H[Citizenship and belonging]\n    F <--> H\n```\n\n## Common AP Exam Traps\n- Confusing **cultural identity** with **national identity**. A person may identify strongly with a culture that does not fully match their nationality or citizenship.\n- Making broad claims about “**Hispanic culture**” without recognizing diversity across **Spain**, **Latin America**, and U.S. Hispanic communities.\n- Describing identity only at the personal level and ignoring **social institutions** such as family, school, religion, media, or government.\n- Summarizing a source without analyzing the **author’s perspective**, **tone**, or **purpose** regarding identity.\n- Treating **bilingualism** as only a communication issue rather than also a marker of **belonging**, **power**, or **self-expression**.\n\n## Quick Review Checklist\n- [ ] I can explain the difference between **personal identity** and **public identity**.\n- [ ] I can describe how **family**, **community**, and **society** influence identity formation.\n- [ ] I can compare **cultural identity** and **national identity** with clear examples.\n- [ ] I can discuss how **language** and **bilingualism** shape belonging and self-expression.\n- [ ] I can analyze tensions between **individual choices** and **social expectations**.\n- [ ] I can explain the difference between **assimilation** and **cultural preservation**.\n- [ ] I can avoid overgeneralizing about the **Spanish-speaking world** and use specific cultural examples.\n- [ ] I can support spoken or written claims about identity with relevant **evidence**, **details**, and **cultural context**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "identidad personal",
+              "definition": "La comprensión que una persona tiene de sí misma, formada por experiencias, valores, creencias y relaciones sociales."
+            },
+            {
+              "term": "identidad cultural",
+              "definition": "El sentido de pertenencia a un grupo que comparte tradiciones, lengua, costumbres y referencias históricas."
+            },
+            {
+              "term": "bilingüismo",
+              "definition": "La capacidad de comunicarse en dos lenguas, a menudo con distintos niveles de dominio según el contexto."
+            },
+            {
+              "term": "estereotipo",
+              "definition": "Imagen simplificada y generalizada que se atribuye a un grupo y que puede distorsionar la realidad de sus integrantes."
+            },
+            {
+              "term": "asimilación cultural",
+              "definition": "Proceso por el cual una persona o comunidad adopta prácticas y valores de otra sociedad, a veces reduciendo rasgos propios de origen."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Cuál de las siguientes situaciones representa mejor la tensión entre la identidad individual y las expectativas sociales?",
+              "options": [
+                "Una estudiante modifica su manera de hablar en casa y en la escuela para responder a normas distintas en cada espacio.",
+                "Un artista practica una técnica tradicional aprendida de su familia sin cambios.",
+                "Un turista visita varios museos durante unas vacaciones en Madrid.",
+                "Un grupo de amigos organiza una comida para celebrar un cumpleaños."
+              ],
+              "correctAnswer": "Una estudiante modifica su manera de hablar en casa y en la escuela para responder a normas distintas en cada espacio.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "En una comunidad hispanohablante, ¿qué factor influye más directamente en la formación de la identidad cultural?",
+              "options": [
+                "La participación en prácticas compartidas como fiestas, costumbres y uso de la lengua",
+                "La distancia geográfica entre las viviendas del barrio",
+                "La preferencia individual por la comida rápida internacional",
+                "El acceso exclusivo a productos tecnológicos importados"
+              ],
+              "correctAnswer": "La participación en prácticas compartidas como fiestas, costumbres y uso de la lengua",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando una persona mantiene elementos de su herencia mientras participa activamente en otra sociedad, se observa un proceso de ______.",
+              "options": [
+                "asimilación cultural",
+                "aislamiento social",
+                "integración cultural",
+                "homogeneización lingüística"
+              ],
+              "correctAnswer": "integración cultural",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Una idea generalizada y reduccionista sobre un grupo social se denomina ______.",
+              "options": [
+                "patrimonio",
+                "estereotipo",
+                "mestizaje",
+                "solidaridad"
+              ],
+              "correctAnswer": "estereotipo",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "identidad nacional",
+              "definition": "Sentido de pertenencia a una colectividad vinculada a símbolos, historia, instituciones y memoria compartida de un país."
+            },
+            {
+              "term": "ciudadanía",
+              "definition": "Condición jurídica y social que vincula a una persona con un Estado y le otorga derechos y responsabilidades públicas."
+            },
+            {
+              "term": "diversidad",
+              "definition": "Presencia e interacción de diferencias lingüísticas, étnicas, culturales, sociales o ideológicas dentro de una comunidad."
+            },
+            {
+              "term": "migración",
+              "definition": "Desplazamiento de personas de un lugar a otro por motivos económicos, políticos, familiares, educativos o de seguridad."
+            },
+            {
+              "term": "discriminación",
+              "definition": "Trato desigual o excluyente hacia personas o grupos por características como origen, lengua, género, religión o apariencia."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Cuál afirmación explica mejor cómo la migración puede influir en la identidad pública de una sociedad?",
+              "options": [
+                "Puede transformar la vida pública al incorporar nuevas perspectivas, prácticas culturales y debates sobre pertenencia.",
+                "Elimina automáticamente las tradiciones existentes en el país receptor.",
+                "Impide toda forma de cohesión social entre generaciones distintas.",
+                "Reduce la necesidad de discutir derechos civiles y representación."
+              ],
+              "correctAnswer": "Puede transformar la vida pública al incorporar nuevas perspectivas, prácticas culturales y debates sobre pertenencia.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Qué situación ilustra mejor la relación entre ciudadanía e identidad pública?",
+              "options": [
+                "Una persona participa en elecciones y debates comunitarios porque se reconoce como parte activa de la sociedad.",
+                "Un adolescente cambia de música favorita cada mes según la moda.",
+                "Una familia prepara una receta tradicional durante un feriado.",
+                "Un estudiante compra libros usados para ahorrar dinero."
+              ],
+              "correctAnswer": "Una persona participa en elecciones y debates comunitarios porque se reconoce como parte activa de la sociedad.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "El sentido de pertenencia a un país basado en símbolos, historia y memoria compartida corresponde a la ______.",
+              "options": [
+                "identidad nacional",
+                "movilidad social",
+                "diversidad lingüística",
+                "opinión pública"
+              ],
+              "correctAnswer": "identidad nacional",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Cuando un grupo recibe trato injusto por su origen o su lengua, ese fenómeno se llama ______.",
+              "options": [
+                "negociación",
+                "discriminación",
+                "participación",
+                "adaptación"
+              ],
+              "correctAnswer": "discriminación",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Contemporary Life",
+      "description": "Everyday modern life including education, work, leisure, and social media across cultures.",
+      "note": "# Unit 3: Contemporary Life\n\n## Overview\nThis unit explores **contemporary life** in the Spanish-speaking world through themes such as **education**, **work**, **leisure**, **technology**, and **social media**. For the AP exam, it matters because students must be able to **interpret authentic sources**, **compare cultural perspectives**, and discuss how daily life reflects broader social values across communities.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Education systems** | School structures, access to education, public vs. private schooling, and higher education opportunities in Spanish-speaking cultures. | Frequently appears in **interpersonal speaking**, **presentational writing**, and cultural comparisons about opportunity and inequality. |\n| **Work and professional life** | Employment expectations, job markets, labor conditions, and work-life balance. | Helps students discuss **economic realities** and compare attitudes toward work across cultures. |\n| **Leisure and free time** | Sports, hobbies, family activities, entertainment, and travel. | Common in AP prompts because it reveals **cultural priorities** and daily routines. |\n| **Social media and technology** | Digital communication, online identity, information sharing, and technology use. | Important for analyzing **benefits and drawbacks** and for discussing how communication has changed modern life. |\n| **Consumer habits** | Shopping patterns, brand influence, local markets, and online commerce. | Useful for comparing **traditional vs. modern lifestyles** and discussing globalization. |\n| **Urban vs. rural life** | Differences in access, pace of life, transportation, and community structure. | Supports comparisons about **quality of life**, opportunity, and cultural identity. |\n| **Family and social relationships** | How family expectations and friendships shape everyday routines and decisions. | Central to understanding **social values** and responding to AP cultural comparison tasks. |\n| **Balance between tradition and modernity** | The tension between maintaining customs and adapting to contemporary changes. | A major AP theme that helps explain **cultural continuity and change** in modern Spanish-speaking societies. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Daily Life Context] --> B[Education]\n    A --> C[Work]\n    A --> D[Leisure]\n    A --> E[Technology and Social Media]\n\n    B --> F[Opportunities and Skills]\n    C --> F\n    D --> G[Identity and Social Connection]\n    E --> G\n\n    F --> H[Cultural Values]\n    G --> H\n\n    H --> I[AP Tasks: Compare Perspectives]\n    H --> J[Interpret Sources]\n    H --> K[Present Cultural Analysis]\n```\n\n### How to think about this unit\n1. **Identify the setting of daily life**: school, workplace, home, community, or online space.  \n2. **Analyze the cultural practice**: what people do regularly and why.  \n3. **Connect the practice to a perspective**: what value, belief, or priority does it reveal?  \n4. **Compare across cultures**: how is this similar to or different from your own community?  \n5. **Support with evidence**: use examples from readings, audio, visuals, or cultural knowledge.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “rules” are key **communication principles**, **cultural analysis habits**, and **language functions** rather than mathematical formulas.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Practice + Perspective + Product** | Connect a cultural **practice** to the **perspective** behind it, often through a cultural **product** such as media, institutions, or customs. |\n| **Compare, don’t just describe** | On the AP exam, strong responses go beyond listing facts; they explain **similarities, differences, and significance**. |\n| **Context matters** | The meaning of school, work, or technology use depends on **social class, region, generation, and national context**. |\n| **Register matters** | Use appropriate **formal or informal language** depending on whether you are addressing a friend, teacher, employer, or public audience. |\n| **Support claims with examples** | General statements about culture must be backed by **specific details** from Spanish-speaking communities. |\n| **Technology is culturally shaped** | Social media use is not identical everywhere; access, purpose, and attitudes vary across societies. |\n| **Modern life includes tension** | Be ready to discuss both **advantages and disadvantages** of modernization, globalization, and digital life. |\n\n### High-value language functions for this unit\n- **Describir** rutinas, horarios y costumbres\n- **Comparar** estilos de vida y sistemas sociales\n- **Explicar** causas y consecuencias\n- **Opinar** sobre ventajas y desventajas\n- **Justificar** una postura con evidencia cultural\n\n## Connections & Comparisons\n\n| **Comparison** | **Key Differences / Connections** | **AP Relevance** |\n|---|---|---|\n| **Education vs. Work** | Education prepares individuals for future employment, but access to quality schooling often affects career options. | Helps explain **social mobility**, inequality, and opportunity. |\n| **Leisure vs. Productivity** | Some cultures emphasize efficiency and career advancement, while others place stronger value on family time and recreation. | Useful for discussing **cultural values** and work-life balance. |\n| **Social media vs. In-person community** | Social media expands communication but may weaken face-to-face interaction or change relationship dynamics. | Common source of **argument prompts** and comparison questions. |\n| **Urban life vs. Rural life** | Cities often offer more jobs, transport, and technology, while rural areas may preserve stronger local traditions and community ties. | Important for cultural comparison and understanding diversity within a country. |\n\n```mermaid\nflowchart LR\n    A[Tradition] --> C[Contemporary Life]\n    B[Modernization] --> C\n    C --> D[New Opportunities]\n    C --> E[New Challenges]\n    D --> F[Education access]\n    D --> G[Digital connection]\n    E --> H[Stress and pace of life]\n    E --> I[Loss of face-to-face interaction]\n```\n\n## Common AP Exam Traps\n\n- Confusing **description** with **analysis**: the AP exam rewards explaining **why** a practice exists and what it reflects culturally.\n- Making broad claims about “Spanish culture” as if all Spanish-speaking countries share the same realities; always recognize **regional diversity**.\n- Treating **technology** as universally positive or negative instead of addressing **both benefits and drawbacks**.\n- Forgetting to connect examples of school, work, or leisure to a larger **cultural perspective** such as family values, economic pressure, or social identity.\n- Using personal opinion without enough **specific supporting evidence** from the Spanish-speaking world.\n\n## Quick Review Checklist\n\n- [ ] I can explain how **education** shapes opportunity in Spanish-speaking communities.\n- [ ] I can compare attitudes toward **work** and **work-life balance** across cultures.\n- [ ] I can discuss the role of **leisure activities** in reflecting cultural values.\n- [ ] I can analyze the effects of **social media and technology** on communication and identity.\n- [ ] I can distinguish between **urban** and **rural** contemporary life and explain their cultural implications.\n- [ ] I can connect a **cultural practice** to the **perspective** behind it.\n- [ ] I can make a strong **cultural comparison** using specific, relevant examples.\n- [ ] I can discuss both the **advantages and challenges** of modern life in the Spanish-speaking world.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "la brecha digital",
+              "definition": "Desigualdad en el acceso, la conectividad y las destrezas necesarias para usar tecnologías de información de manera eficaz."
+            },
+            {
+              "term": "el teletrabajo",
+              "definition": "Modalidad laboral en la que una persona realiza sus tareas profesionales a distancia mediante herramientas digitales y comunicación en línea."
+            },
+            {
+              "term": "la jornada laboral",
+              "definition": "Conjunto de horas y organización del tiempo que una persona dedica a sus responsabilidades profesionales en un día o semana."
+            },
+            {
+              "term": "las redes sociales",
+              "definition": "Plataformas digitales que permiten crear contenido, interactuar con otros usuarios y formar comunidades virtuales."
+            },
+            {
+              "term": "la educación a distancia",
+              "definition": "Modelo de aprendizaje en el que la instrucción, la participación y la evaluación ocurren sin coincidencia física constante entre profesorado y alumnado."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En muchos países hispanohablantes, ¿qué factor contribuye más directamente a la desigualdad en el rendimiento académico cuando se implementa la educación en línea?",
+              "options": [
+                "El acceso desigual a internet y dispositivos",
+                "La preferencia de los estudiantes por los libros impresos",
+                "La reducción del número de asignaturas obligatorias",
+                "El aumento del turismo educativo"
+              ],
+              "correctAnswer": "El acceso desigual a internet y dispositivos",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Cuál de las siguientes situaciones ilustra mejor una ventaja del teletrabajo en la vida contemporánea?",
+              "options": [
+                "La necesidad de imprimir todos los documentos oficiales",
+                "La eliminación total de la supervisión profesional",
+                "La posibilidad de mayor flexibilidad horaria y menos tiempo de traslado",
+                "La prohibición de colaborar con colegas en otras ciudades"
+              ],
+              "correctAnswer": "La posibilidad de mayor flexibilidad horaria y menos tiempo de traslado",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando una comunidad no tiene acceso equitativo a dispositivos, conectividad y capacitación tecnológica, se habla de la ______.",
+              "options": [
+                "brecha digital",
+                "jornada laboral",
+                "educación bilingüe",
+                "movilidad social"
+              ],
+              "correctAnswer": "brecha digital",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Un empleo que se realiza desde casa con apoyo de videollamadas, plataformas compartidas y mensajería profesional corresponde al ______.",
+              "options": [
+                "teletrabajo",
+                "voluntariado",
+                "comercio justo",
+                "intercambio cultural"
+              ],
+              "correctAnswer": "teletrabajo",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "el ocio",
+              "definition": "Tiempo disponible fuera de las obligaciones académicas o profesionales que se dedica al descanso, al entretenimiento o al desarrollo personal."
+            },
+            {
+              "term": "la vida laboral",
+              "definition": "Experiencia y trayectoria relacionadas con el empleo, las responsabilidades profesionales y el equilibrio entre trabajo y vida personal."
+            },
+            {
+              "term": "el consumismo",
+              "definition": "Tendencia social que impulsa la adquisición frecuente de bienes y servicios más allá de necesidades esenciales, a menudo influida por la publicidad."
+            },
+            {
+              "term": "la privacidad digital",
+              "definition": "Protección de datos personales, hábitos de uso e información compartida en entornos tecnológicos y plataformas en línea."
+            },
+            {
+              "term": "la conciliación",
+              "definition": "Equilibrio entre responsabilidades profesionales, familiares, académicas y personales para mantener bienestar y productividad."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Qué preocupación está más directamente asociada con el uso cotidiano de las redes sociales en la vida contemporánea?",
+              "options": [
+                "La pérdida de privacidad por la recopilación de datos personales",
+                "La desaparición inmediata de toda comunicación escrita",
+                "La reducción automática del tiempo frente a pantallas",
+                "La eliminación de diferencias generacionales"
+              ],
+              "correctAnswer": "La pérdida de privacidad por la recopilación de datos personales",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Desde una perspectiva cultural, ¿qué describe mejor la conciliación entre trabajo y vida personal?",
+              "options": [
+                "La obligación de priorizar siempre el empleo sobre la familia",
+                "El esfuerzo por equilibrar responsabilidades profesionales y bienestar personal",
+                "La eliminación de horarios en todos los sectores económicos",
+                "El rechazo total de la tecnología en el lugar de trabajo"
+              ],
+              "correctAnswer": "El esfuerzo por equilibrar responsabilidades profesionales y bienestar personal",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "La protección de información personal compartida en aplicaciones, sitios web y plataformas corresponde a la ______.",
+              "options": [
+                "privacidad digital",
+                "vida laboral",
+                "jornada escolar",
+                "movilidad urbana"
+              ],
+              "correctAnswer": "privacidad digital",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Cuando una persona organiza su empleo, su familia y su tiempo personal de manera equilibrada, logra una mejor ______.",
+              "options": [
+                "conciliación",
+                "migración",
+                "alfabetización",
+                "globalización"
+              ],
+              "correctAnswer": "conciliación",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Global Challenges",
+      "description": "Major global issues such as climate change, poverty, migration, public health, and human rights.",
+      "note": "# Unit 4: Global Challenges\n\n## Overview\nThis unit explores how **global challenges** such as **climate change**, **poverty**, **migration**, **public health**, and **human rights** shape societies in the Spanish-speaking world. For the AP exam, this theme matters because students must **interpret authentic sources**, **compare cultural perspectives**, and **present well-supported arguments in Spanish** about complex transnational issues.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Climate Change** | Long-term environmental changes driven largely by human activity, including rising temperatures, extreme weather, and ecosystem disruption. | Frequently appears in readings and audio sources; students must explain **causes, consequences, and possible solutions** in clear academic Spanish. |\n| **Poverty and Inequality** | Lack of access to sufficient income, education, healthcare, housing, or opportunity; often linked to unequal social structures. | Important for comparing **social conditions** across countries and discussing how inequality affects communities. |\n| **Migration** | Movement of people within or across borders for economic, political, environmental, or personal reasons. | A major AP theme because it connects to **identity, policy, human rights, and globalization**. |\n| **Public Health** | The well-being of populations, including disease prevention, healthcare systems, nutrition, sanitation, and access to medical care. | Students may need to analyze how governments and communities respond to **health crises** and unequal access. |\n| **Human Rights** | Basic rights and freedoms that all people should have, including safety, dignity, freedom of expression, and equal treatment. | Central for persuasive writing and cultural comparison, especially when discussing **justice, discrimination, and activism**. |\n| **Sustainability** | Meeting present needs without damaging the ability of future generations to meet theirs. | Useful for arguing about **environmental policy**, resource use, and long-term development. |\n| **Globalization** | Increased connection among countries through trade, technology, culture, and movement of people. | Helps students explain why global problems are **interdependent** and why local events can have international effects. |\n| **Government and Civic Action** | Policies, laws, international agreements, and grassroots movements designed to address social and global problems. | AP tasks often require evaluating **effectiveness of solutions** and discussing the role of institutions and citizens. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Global challenge emerges\"] --> B[\"Causes identified\"]\n    B --> C[\"Effects on communities\"]\n    C --> D[\"Government and social responses\"]\n    D --> E[\"Short-term outcomes\"]\n    E --> F[\"Long-term consequences\"]\n    F --> G[\"Need for adaptation or reform\"]\n\n    B --> B1[\"Economic factors\"]\n    B --> B2[\"Political factors\"]\n    B --> B3[\"Environmental factors\"]\n    B --> B4[\"Social factors\"]\n\n    C --> C1[\"Health impacts\"]\n    C --> C2[\"Migration pressures\"]\n    C --> C3[\"Resource scarcity\"]\n    C --> C4[\"Inequality and conflict\"]\n\n    D --> D1[\"Public policy\"]\n    D --> D2[\"International cooperation\"]\n    D --> D3[\"NGO and community action\"]\n```\n\n### How to think about this unit\n1. Identify the **problem**.\n2. Explain its **causes**.\n3. Describe the **human and societal effects**.\n4. Evaluate the **responses** by governments, organizations, or citizens.\n5. Judge whether those responses are **effective, equitable, and sustainable**.\n\nThis pattern is especially useful for the **presentational writing** and **speaking** tasks on the AP exam.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “must know” material is a set of **analytical and communicative rules**, not mathematical formulas.\n\n| **Rule / Principle** | **What You Need to Know** |\n|---|---|\n| **Connect issue + cause + consequence** | Do not just name a problem; explain **why it happens** and **what results from it**. |\n| **Support claims with evidence** | In AP writing and speaking, include examples from **sources, current events, or cultural knowledge** from the Spanish-speaking world. |\n| **Compare perspectives** | Be ready to contrast how different countries, communities, or generations respond to the same global challenge. |\n| **Use formal academic register** | For essays and presentations, prefer precise terms such as **la desigualdad**, **el acceso**, **las políticas públicas**, **los derechos fundamentales**. |\n| **Distinguish problem from solution** | Students often describe a challenge but forget to assess **proposed responses** and their limitations. |\n| **Recognize transnational impact** | Many issues are not isolated; climate, migration, and health often cross borders and require **international cooperation**. |\n| **Include cultural specificity** | Strong AP responses mention examples from the **Spanish-speaking world**, not only general global statements. |\n\n### Useful language frames\n- **Una de las causas principales de este problema es...**\n- **Este desafío afecta sobre todo a...**\n- **Como consecuencia, se observa que...**\n- **Aunque existe esta solución, todavía hay obstáculos como...**\n- **En comparación con..., en ... se ve una perspectiva diferente.**\n- **Para abordar este desafío, haría falta...**\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection** | **Important Distinction** |\n|---|---|---|\n| **Poverty** vs. **Inequality** | Both affect quality of life and access to opportunity. | **Poverty** refers to deprivation; **inequality** refers to uneven distribution of wealth or resources. A society can reduce poverty without eliminating inequality. |\n| **Migration** vs. **Refugee/Forced Displacement** | Both involve movement of people. | **Migration** can be voluntary or economic; **forced displacement** is driven by war, persecution, disaster, or survival needs. |\n| **Public Health** vs. **Healthcare Access** | Both relate to well-being. | **Public health** focuses on population-wide prevention and conditions; **healthcare access** concerns whether individuals can obtain treatment and services. |\n| **Climate Change** vs. **Sustainability** | Sustainability is often a response to climate and environmental damage. | **Climate change** is a problem; **sustainability** is a framework for reducing harm and planning responsibly. |\n\n```mermaid\nflowchart LR\n    A[\"Climate change\"] --> B[\"Resource scarcity\"]\n    B --> C[\"Economic pressure\"]\n    C --> D[\"Migration\"]\n    D --> E[\"Urban challenges\"]\n    E --> F[\"Public health concerns\"]\n    F --> G[\"Human rights debates\"]\n```\n\nThis chain helps explain why AP prompts often combine multiple themes rather than treating each one separately.\n\n## Common AP Exam Traps\n\n- Confusing a **global challenge** with a purely personal problem; AP responses should show **broader social relevance**.\n- Giving **generic opinions** without reference to the **Spanish-speaking world**, authentic cultural examples, or source-based evidence.\n- Discussing only the **negative effects** of migration or globalization without acknowledging complexity, benefits, or multiple perspectives.\n- Treating **human rights** as abstract ideals without connecting them to **specific policies, groups, or historical contexts**.\n- Naming a solution without evaluating whether it is **realistic, equitable, or sustainable**.\n\n## Quick Review Checklist\n\n- [ ] I can explain at least **five major global challenges** in clear, formal Spanish.\n- [ ] I can identify **causes and effects** of issues such as **climate change**, **poverty**, and **migration**.\n- [ ] I can compare how **different Spanish-speaking countries or communities** experience the same challenge.\n- [ ] I can discuss the role of **government, NGOs, and citizens** in addressing global issues.\n- [ ] I can distinguish between related ideas such as **poverty vs. inequality** and **public health vs. healthcare access**.\n- [ ] I can support an argument with **cultural examples** and not just personal opinion.\n- [ ] I can evaluate whether a proposed solution is **effective, fair, and sustainable**.\n- [ ] I can use **topic-specific vocabulary** to write or speak persuasively about global challenges.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "el cambio climático",
+              "definition": "Alteración a largo plazo de los patrones del tiempo y de las temperaturas promedio del planeta, impulsada en gran medida por actividades humanas como la quema de combustibles fósiles."
+            },
+            {
+              "term": "la huella de carbono",
+              "definition": "Medida de la cantidad total de gases de efecto invernadero emitidos directa e indirectamente por una persona, producto, actividad o institución."
+            },
+            {
+              "term": "la energía renovable",
+              "definition": "Fuente energética que se repone de manera natural en escalas de tiempo humanas, como la solar, la eólica o la hidráulica."
+            },
+            {
+              "term": "la pobreza extrema",
+              "definition": "Situación en la que una población carece de ingresos y recursos suficientes para satisfacer necesidades básicas como alimentación, vivienda, salud y educación."
+            },
+            {
+              "term": "el desarrollo sostenible",
+              "definition": "Modelo de progreso económico y social que busca satisfacer las necesidades actuales sin comprometer la capacidad de las generaciones futuras para satisfacer las suyas."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Cuál de las siguientes medidas probablemente reduciría más las emisiones de gases de efecto invernadero a nivel nacional a largo plazo?",
+              "options": [
+                "Expandir el uso del transporte público y de energías limpias",
+                "Aumentar la dependencia del carbón para abaratar costos inmediatos",
+                "Eliminar regulaciones ambientales para acelerar la industrialización",
+                "Sustituir bosques por zonas urbanas de alta densidad"
+              ],
+              "correctAnswer": "Expandir el uso del transporte público y de energías limpias",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "En un debate sobre pobreza global, ¿qué factor estructural suele dificultar más la movilidad social de manera persistente?",
+              "options": [
+                "El acceso desigual a educación y salud de calidad",
+                "La preferencia individual por trabajos informales",
+                "El aumento temporal del turismo internacional",
+                "La reducción del consumo de productos importados"
+              ],
+              "correctAnswer": "El acceso desigual a educación y salud de calidad",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Una política pública orientada al uso de paneles solares y molinos de viento promueve principalmente la ______.",
+              "options": [
+                "energía renovable",
+                "desigualdad económica",
+                "deforestación",
+                "migración forzada"
+              ],
+              "correctAnswer": "energía renovable",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Cuando una sociedad busca crecer económicamente sin agotar recursos para el futuro, sigue el principio de ______.",
+              "options": [
+                "desarrollo sostenible",
+                "sobrepoblación urbana",
+                "asimilación cultural",
+                "analfabetismo funcional"
+              ],
+              "correctAnswer": "desarrollo sostenible",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "la migración forzada",
+              "definition": "Desplazamiento de personas que abandonan su lugar de origen debido a conflictos, persecución, desastres ambientales o crisis económicas severas."
+            },
+            {
+              "term": "los derechos humanos",
+              "definition": "Garantías fundamentales inherentes a todas las personas, independientemente de su nacionalidad, género, religión o condición social."
+            },
+            {
+              "term": "la salud pública",
+              "definition": "Campo dedicado a la prevención de enfermedades, la promoción del bienestar y la protección sanitaria de las poblaciones mediante políticas e intervenciones colectivas."
+            },
+            {
+              "term": "la discriminación",
+              "definition": "Trato desigual o injusto hacia personas o grupos basado en características como origen étnico, género, orientación sexual, religión o estatus social."
+            },
+            {
+              "term": "los refugiados",
+              "definition": "Personas que cruzan fronteras internacionales porque no pueden regresar a su país de origen debido a un temor fundado de persecución o violencia."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Cuál situación corresponde mejor a una violación de derechos fundamentales en el contexto de los desafíos globales?",
+              "options": [
+                "Negar acceso a servicios básicos a un grupo por su origen étnico",
+                "Promover campañas de vacunación en zonas rurales",
+                "Ampliar programas de alfabetización comunitaria",
+                "Firmar acuerdos internacionales sobre reducción de emisiones"
+              ],
+              "correctAnswer": "Negar acceso a servicios básicos a un grupo por su origen étnico",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Desde la perspectiva de la salud pública, ¿cuál estrategia suele ser más eficaz para contener la propagación de una enfermedad infecciosa?",
+              "options": [
+                "Implementar campañas de prevención, vacunación y educación sanitaria",
+                "Reducir la difusión de información médica para evitar pánico",
+                "Depender exclusivamente de tratamientos individuales en hospitales privados",
+                "Posponer la intervención gubernamental hasta que aumenten las muertes"
+              ],
+              "correctAnswer": "Implementar campañas de prevención, vacunación y educación sanitaria",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Las personas que abandonan su país por persecución y buscan protección legal en otro Estado se consideran ______.",
+              "options": [
+                "refugiados",
+                "turistas",
+                "empresarios",
+                "votantes"
+              ],
+              "correctAnswer": "refugiados",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Cuando una crisis obliga a comunidades enteras a desplazarse por violencia o desastres, se produce la ______.",
+              "options": [
+                "migración forzada",
+                "movilidad académica",
+                "urbanización planificada",
+                "integración regional"
+              ],
+              "correctAnswer": "migración forzada",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Science and Technology",
+      "description": "Impact of scientific advances and technology on society, communication, medicine, and the environment.",
+      "note": "# Unit 5: Science and Technology\n\n## Overview\nThis unit explores how **scientific advances** and **technology** shape daily life, public health, communication, education, work, and the environment across the Spanish-speaking world. For the AP exam, it matters because students must discuss **benefits, challenges, ethical questions, and cultural perspectives** in clear, persuasive Spanish across speaking, reading, listening, and writing tasks.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **La innovación tecnológica** | The development of new digital tools, devices, and systems. | Frequently appears in readings and audio sources about social change, progress, and inequality. |\n| **La brecha digital** | Unequal access to internet, devices, and technological literacy. | Useful for comparing rural vs. urban life, generations, or socioeconomic groups in argumentative and cultural tasks. |\n| **Las redes sociales y la comunicación** | Digital platforms that transform how people interact, share information, and build identity. | Central for discussing both **advantages** and **risks** such as misinformation, privacy, and isolation. |\n| **La medicina y la biotecnología** | Scientific advances in diagnosis, treatment, vaccines, genetics, and telemedicine. | Helps students explain how science improves quality of life while raising **ethical concerns**. |\n| **El medioambiente y la tecnología** | The interaction between innovation and environmental sustainability. | Important for discussing whether technology solves or worsens ecological problems. |\n| **La privacidad y la seguridad digital** | Protection of personal data, online identity, and digital systems. | Common AP theme in persuasive writing and conversation about rights, responsibility, and regulation. |\n| **La automatización y el trabajo** | The use of machines, algorithms, and artificial intelligence in the workplace. | Useful for examining economic change, productivity, unemployment, and future careers. |\n| **La ética científica** | Moral questions surrounding experimentation, surveillance, AI, and genetic engineering. | Strong topic for presenting balanced arguments and nuanced cultural comparisons. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Avance científico] --> B[Desarrollo tecnológico]\n    B --> C[Aplicación social]\n    C --> D[\"Cambio en la comunicación, medicina, educación o trabajo\"]\n    D --> E[Beneficios]\n    D --> F[Problemas o riesgos]\n    E --> G[Mayor eficiencia y acceso]\n    E --> H[Mejor calidad de vida]\n    F --> I[Brecha digital]\n    F --> J[Problemas de privacidad]\n    F --> K[Impacto ambiental]\n    G --> L[Debate público]\n    H --> L\n    I --> L\n    J --> L\n    K --> L\n    L --> M[Regulación, adaptación y nuevas innovaciones]\n```\n\n### How to think about this process\n1. **Science** produces new knowledge.\n2. That knowledge becomes **technology** through practical application.\n3. Society adopts the technology unevenly.\n4. Adoption creates both **opportunities** and **consequences**.\n5. Governments, communities, and individuals respond through **policy, ethics, and adaptation**.\n\n## Essential Formulas / Laws / Rules\n\nSince AP Spanish is not a quantitative course, the “rules” you must know are **conceptual, linguistic, and cultural**.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Technology is rarely presented as purely positive or negative** | Be prepared to analyze **both sides**: access vs. exclusion, efficiency vs. dependence, innovation vs. ethical risk. |\n| **Support claims with evidence** | In AP tasks, opinions about science and technology must be backed by **examples, source evidence, or cultural observations**. |\n| **Compare perspectives across communities** | Show how technology affects **young people, older adults, rural populations, students, workers, and governments** differently. |\n| **Distinguish invention from impact** | Do not just name an innovation; explain **how** it changes behavior, institutions, or values. |\n| **Use topic-specific vocabulary precisely** | Terms such as **la privacidad**, **el acceso**, **los avances médicos**, **la dependencia tecnológica**, and **la sostenibilidad** strengthen AP responses. |\n| **Recognize ethical dimensions** | Many exam prompts expect discussion of **responsibility**, **fairness**, **human well-being**, and **social consequences**. |\n| **Connect technology to culture** | In AP Spanish, technology is always tied to **cultural practices**, not just devices or scientific facts. |\n\n### High-value vocabulary frames\n- **Los avances científicos han transformado...**\n- **Aunque la tecnología ofrece beneficios, también plantea desafíos como...**\n- **La brecha digital afecta especialmente a...**\n- **Desde una perspectiva ética, es importante considerar...**\n- **En comparación con..., esta innovación permite/provoca...**\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key AP Insight** |\n|---|---|---|---|\n| **Access** | **La conectividad global** | **La brecha digital** | Technology can unite people, but not everyone benefits equally. |\n| **Health** | **Los avances médicos** | **Los dilemas bioéticos** | Better treatments may raise questions about cost, fairness, and human limits. |\n| **Communication** | **Las redes sociales** | **La desinformación** | Faster communication increases participation, but also spreads false information rapidly. |\n| **Environment** | **La tecnología verde** | **La contaminación tecnológica** | Innovation can reduce emissions, yet production and waste may damage ecosystems. |\n\n```mermaid\nflowchart LR\n    A[Redes sociales] --> B[Comunicación instantánea]\n    A --> C[Construcción de identidad]\n    A --> D[Desinformación]\n    A --> E[Pérdida de privacidad]\n\n    F[Avances médicos] --> G[Prevención y tratamiento]\n    F --> H[Mayor esperanza de vida]\n    F --> I[Debates éticos]\n    F --> J[Desigualdad en el acceso]\n```\n\n## Common AP Exam Traps\n\n- Confusing **technology itself** with its **social impact**. The exam often rewards analysis of consequences more than simple description.\n- Presenting technology as **universally beneficial** without mentioning issues like **addiction, misinformation, inequality, or privacy**.\n- Using vague terms like **“es bueno”** or **“es malo”** instead of precise language such as **“mejora el acceso”**, **“aumenta la dependencia”**, or **“reduce la interacción cara a cara”**.\n- Ignoring the **cultural context** of the Spanish-speaking world. AP responses should connect science and technology to communities, values, and social realities.\n- Discussing scientific progress without addressing **ethical responsibility**, especially in topics like surveillance, artificial intelligence, or biotechnology.\n\n## Quick Review Checklist\n\n- [ ] I can explain how **scientific advances** lead to technological change in society.\n- [ ] I can discuss **advantages and disadvantages** of social media, smartphones, and digital communication.\n- [ ] I can define and give examples of the **digital divide**.\n- [ ] I can describe how technology affects **medicine**, including both improvements and ethical concerns.\n- [ ] I can compare how technology helps and harms the **environment**.\n- [ ] I can discuss **privacy**, **data security**, and online responsibility using precise vocabulary.\n- [ ] I can explain how **automation** and **artificial intelligence** may change work and education.\n- [ ] I can support an argument about science or technology with **clear evidence, examples, and cultural perspective**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "la brecha digital",
+              "definition": "Desigualdad en el acceso, uso y aprovechamiento de dispositivos, conectividad y competencias tecnológicas entre distintos grupos sociales o regiones."
+            },
+            {
+              "term": "la telemedicina",
+              "definition": "Prestación de servicios de salud a distancia mediante plataformas digitales para consultas, seguimiento y orientación clínica."
+            },
+            {
+              "term": "la privacidad de los datos",
+              "definition": "Protección de la información personal frente a la recolección, el uso o la difusión no autorizados por parte de instituciones o plataformas."
+            },
+            {
+              "term": "las redes sociales",
+              "definition": "Plataformas digitales que permiten crear, compartir e intercambiar contenido e interactuar con comunidades en línea de manera inmediata."
+            },
+            {
+              "term": "la ciberseguridad",
+              "definition": "Conjunto de prácticas y sistemas destinados a prevenir accesos no autorizados, fraudes, ataques informáticos y pérdida de información."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Cuál es una consecuencia social más probable de la expansión desigual del acceso a internet de alta velocidad en países hispanohablantes?",
+              "options": [
+                "La reducción de diferencias educativas entre zonas rurales y urbanas",
+                "La ampliación de desigualdades en educación, empleo y participación cívica",
+                "La eliminación de la necesidad de alfabetización digital",
+                "La sustitución completa de los medios tradicionales de comunicación"
+              ],
+              "correctAnswer": "La ampliación de desigualdades en educación, empleo y participación cívica",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "En el contexto de la comunicación digital, ¿qué preocupación ética surge con mayor frecuencia cuando las plataformas recopilan información de sus usuarios?",
+              "options": [
+                "La disminución de la innovación médica",
+                "La pérdida de privacidad y el uso indebido de datos personales",
+                "La reducción del acceso a la educación superior",
+                "La desaparición de los avances en energías renovables"
+              ],
+              "correctAnswer": "La pérdida de privacidad y el uso indebido de datos personales",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando una consulta médica se realiza por videollamada para atender a pacientes que viven lejos de un hospital, se trata de ______.",
+              "options": [
+                "la telemedicina",
+                "la deforestación",
+                "la manufactura tradicional",
+                "la migración laboral"
+              ],
+              "correctAnswer": "la telemedicina",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "La necesidad de proteger contraseñas, redes y archivos frente a ataques digitales corresponde al ámbito de ______.",
+              "options": [
+                "la ciberseguridad",
+                "la urbanización",
+                "la globalización cultural",
+                "la agricultura intensiva"
+              ],
+              "correctAnswer": "la ciberseguridad",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "las energías renovables",
+              "definition": "Fuentes de energía que se regeneran de manera natural y suelen producir menor impacto ambiental que los combustibles fósiles."
+            },
+            {
+              "term": "la inteligencia artificial",
+              "definition": "Capacidad de sistemas informáticos para realizar tareas asociadas con el aprendizaje, el reconocimiento de patrones y la toma automatizada de decisiones."
+            },
+            {
+              "term": "la ingeniería genética",
+              "definition": "Manipulación deliberada del material hereditario de un organismo para modificar características específicas o tratar enfermedades."
+            },
+            {
+              "term": "la automatización",
+              "definition": "Uso de máquinas, programas o sistemas para ejecutar procesos con poca intervención humana, especialmente en la industria y los servicios."
+            },
+            {
+              "term": "la huella de carbono",
+              "definition": "Cantidad total de emisiones de gases de efecto invernadero asociadas a una actividad, producto, organización o estilo de vida."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Cuál es un beneficio ambiental ampliamente asociado con la adopción de fuentes eólicas y solares?",
+              "options": [
+                "El aumento directo del consumo de combustibles fósiles",
+                "La reducción de emisiones que contribuyen al calentamiento global",
+                "La eliminación inmediata de todos los residuos industriales",
+                "La expansión automática de la biodiversidad en zonas urbanas"
+              ],
+              "correctAnswer": "La reducción de emisiones que contribuyen al calentamiento global",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Qué preocupación social se relaciona más directamente con la automatización en el mundo laboral?",
+              "options": [
+                "La desaparición de toda forma de trabajo humano",
+                "La posible sustitución de ciertos empleos y la necesidad de recapacitación",
+                "La reducción obligatoria de la educación científica",
+                "La imposibilidad de desarrollar nuevas profesiones tecnológicas"
+              ],
+              "correctAnswer": "La posible sustitución de ciertos empleos y la necesidad de recapacitación",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Los sistemas capaces de analizar grandes cantidades de datos y reconocer patrones para tomar decisiones usan ______.",
+              "options": [
+                "la inteligencia artificial",
+                "la artesanía local",
+                "la deforestación",
+                "la ganadería extensiva"
+              ],
+              "correctAnswer": "la inteligencia artificial",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "La transición hacia ______ suele presentarse como una estrategia para disminuir la dependencia del petróleo y del carbón.",
+              "options": [
+                "las energías renovables",
+                "las redes clientelares",
+                "las barreras arancelarias",
+                "las lenguas indígenas"
+              ],
+              "correctAnswer": "las energías renovables",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Beauty and Aesthetics",
+      "description": "Art, music, literature, architecture, and the cultural definition of beauty across different societies.",
+      "note": "# Unit 6: Beauty and Aesthetics\n\n## Overview\nIn this unit, you explore how **beauty** is defined, expressed, and debated through **art, music, literature, architecture**, and everyday cultural practices across the Spanish-speaking world. For the AP exam, this theme matters because it frequently appears in **interpretive reading/listening**, **presentational writing/speaking**, and **interpersonal communication**, where you must connect cultural products with broader perspectives and social values.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **La belleza** | The idea of what is considered beautiful in a culture or society. | Helps you analyze how values differ across communities and time periods. |\n| **La estética** | The style, principles, or artistic choices that shape how something looks or feels. | Useful for describing and comparing artistic expression in essays and oral responses. |\n| **La identidad cultural** | The way art and beauty reflect a group’s history, beliefs, and traditions. | Important when linking cultural products to cultural perspectives. |\n| **Las bellas artes** | Traditional forms such as **pintura**, **escultura**, **música**, **danza**, and **literatura**. | Common source material in AP prompts and cultural comparisons. |\n| **La arquitectura** | Design of buildings and spaces, often reflecting historical and social values. | Lets you discuss visible cultural influence, heritage, and modernization. |\n| **La diversidad de perspectivas** | Different ideas about beauty based on class, region, generation, gender, or ethnicity. | Key for avoiding oversimplification and showing nuanced analysis. |\n| **La función social del arte** | The role of art in protest, identity, memory, religion, or community life. | Strengthens arguments about why artistic expression matters beyond decoration. |\n| **La influencia de los medios** | The impact of film, television, advertising, and social media on standards of beauty. | Frequently relevant in argumentative or persuasive AP themes. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Producto cultural] --> B[Observación de rasgos estéticos]\n    B --> C[Interpretación del mensaje o significado]\n    C --> D[Conexión con valores culturales]\n    D --> E[Comparación entre sociedades o épocas]\n    E --> F[Análisis personal y respuesta AP]\n\n    G[Arte, música, literatura, arquitectura] --> A\n    H[Contexto histórico y social] --> C\n    H --> D\n    I[Experiencia individual] --> D\n```\n\n### How to think through this unit\n1. Identify the **cultural product**: a song, mural, poem, building, dance, film, or fashion trend.\n2. Describe its **aesthetic features**: style, tone, symbolism, imagery, rhythm, design, or materials.\n3. Interpret its **message**: what idea of beauty, identity, or society does it express?\n4. Connect it to **cultural perspectives**: religion, history, social class, politics, gender roles, regional identity.\n5. Compare it with another **culture, period, or medium**.\n6. Formulate a clear AP-style response using **specific evidence** and **cultural comparison**.\n\n## Essential Formulas / Laws / Rules\n\n### Key principles you must know\n| **Rule / Principle** | **What to Know** |\n|---|---|\n| **Culture = products, practices, perspectives** | On the AP exam, you should connect **products** such as paintings or buildings to **practices** and deeper **perspectives**. |\n| **Beauty is culturally constructed** | Ideas of beauty are not universal; they change across societies and historical periods. |\n| **Art reflects and shapes society** | Artistic expression can both mirror social values and challenge them. |\n| **Interpretation requires context** | You should analyze beauty through **historical, social, and geographic context**, not just personal opinion. |\n| **Aesthetic value and social value can overlap** | A work can be admired for style while also serving political, religious, or communal purposes. |\n| **Comparisons need specificity** | Strong AP responses compare concrete examples, not vague statements like “both cultures value art.” |\n| **Use academic vocabulary** | Terms like **simbolismo**, **patrimonio**, **identidad**, **expresión artística**, **canon de belleza**, and **influencia cultural** improve precision. |\n\n### High-value vocabulary categories\n- **Artes visuales**: **el mural**, **el retrato**, **la escultura**, **la exposición**\n- **Literatura**: **la metáfora**, **el tema**, **la voz poética**, **la narrativa**\n- **Música**: **el ritmo**, **la letra**, **la melodía**, **la tradición**\n- **Arquitectura**: **la fachada**, **el diseño**, **el espacio urbano**, **el patrimonio histórico**\n- **Beauty standards**: **el canon de belleza**, **la apariencia**, **la moda**, **la autoestima**\n\n## Connections & Comparisons\n\n| **Comparison** | **Traditional View** | **Contemporary View** | **AP-Relevant Insight** |\n|---|---|---|---|\n| **Beauty standards** | Often shaped by religion, community norms, and local customs. | Strongly influenced by global media and social networks. | You may need to discuss tension between **local identity** and **global influence**. |\n| **Art for beauty vs. art for social message** | Focus on harmony, form, craftsmanship, or artistic tradition. | Often emphasizes critique, protest, inclusion, or identity. | Strong analysis explains that art can be both **beautiful** and **politically meaningful**. |\n| **Architecture of the past vs. modern architecture** | Preserves historical memory, religion, or colonial legacy. | Reflects innovation, urban growth, sustainability, or globalization. | Useful for cultural comparison between **heritage** and **modernization**. |\n| **Elite art vs. popular art** | Museums, classical music, canonical literature. | Street art, popular music, digital media, community festivals. | The AP exam rewards recognition that culture includes both formal and everyday expression. |\n\n```mermaid\nflowchart LR\n    A[Definición de belleza] --> B[Factores históricos]\n    A --> C[Factores sociales]\n    A --> D[Factores mediáticos]\n    A --> E[Factores personales]\n\n    B --> F[Normas culturales]\n    C --> F\n    D --> F\n    E --> F\n\n    F --> G[Expresión artística]\n    F --> H[Identidad individual]\n    F --> I[Debate social]\n```\n\n## Common AP Exam Traps\n- Confusing **personal taste** with **cultural analysis**. The exam wants more than “me gusta” or “no me gusta.”\n- Treating the Spanish-speaking world as culturally identical. **Beauty** and **aesthetics** vary by country, region, and community.\n- Describing an artwork without explaining its **cultural significance** or broader message.\n- Using overly general comparisons, such as saying one culture is “more artistic” than another, without evidence.\n- Ignoring the role of **historical context**, especially when discussing architecture, literature, or artistic movements.\n\n## Quick Review Checklist\n- [ ] I can explain how **beauty** is defined differently across cultures and time periods.\n- [ ] I can connect a **cultural product** to the **perspectives** of the society that produced it.\n- [ ] I can describe key features of **art, music, literature, and architecture** using precise vocabulary.\n- [ ] I can compare **traditional** and **modern** ideas of beauty in the Spanish-speaking world.\n- [ ] I can discuss how **media** influences beauty standards and self-image.\n- [ ] I can analyze how art serves a **social, political, or cultural function**.\n- [ ] I can support a cultural comparison with **specific examples** rather than broad generalizations.\n- [ ] I can respond in Spanish with clear references to **identity, aesthetics, and cultural context**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "mestizaje cultural",
+              "definition": "Proceso de mezcla e interacción de tradiciones indígenas, europeas y africanas que influye en las expresiones artísticas y en los criterios estéticos de muchas sociedades hispanohablantes."
+            },
+            {
+              "term": "muralismo mexicano",
+              "definition": "Movimiento artístico del siglo XX que llevó la pintura a espacios públicos para educar, construir identidad nacional y representar temas sociales e históricos."
+            },
+            {
+              "term": "vanguardismo",
+              "definition": "Conjunto de corrientes innovadoras de comienzos del siglo XX que rompieron con formas tradicionales mediante experimentación formal, imágenes sorprendentes y nuevas perspectivas sobre la realidad."
+            },
+            {
+              "term": "realismo mágico",
+              "definition": "Modo narrativo en el que sucesos extraordinarios aparecen integrados en un mundo cotidiano y son presentados como parte normal de la experiencia."
+            },
+            {
+              "term": "patrimonio cultural",
+              "definition": "Bienes materiales e inmateriales valorados por una comunidad por su importancia histórica, artística o identitaria y que se consideran dignos de preservación."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "En muchas sociedades hispanohablantes, una función central del arte público ha sido la de",
+              "options": [
+                "servir únicamente como decoración urbana sin mensaje social",
+                "promover la alfabetización visual y la memoria histórica colectiva",
+                "reemplazar por completo la literatura como medio de crítica",
+                "limitar el acceso al arte a las élites educadas"
+              ],
+              "correctAnswer": "promover la alfabetización visual y la memoria histórica colectiva",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "¿Qué rasgo distingue mejor una obra asociada con el realismo mágico?",
+              "options": [
+                "La presentación objetiva de datos históricos sin elementos imaginativos",
+                "La incorporación de lo extraordinario en un entorno cotidiano tratado como normal",
+                "La defensa estricta de la unidad de tiempo, lugar y acción clásica",
+                "La representación exclusiva de sueños sin contexto social reconocible"
+              ],
+              "correctAnswer": "La incorporación de lo extraordinario en un entorno cotidiano tratado como normal",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "El movimiento artístico que buscó llevar mensajes históricos y sociales a edificios públicos después de la Revolución mexicana fue el ______.",
+              "options": [
+                "surrealismo",
+                "modernismo",
+                "muralismo mexicano",
+                "neoclasicismo"
+              ],
+              "correctAnswer": "muralismo mexicano",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Cuando una comunidad protege monumentos, tradiciones y obras por su valor histórico e identitario, está defendiendo su ______.",
+              "options": [
+                "patrimonio cultural",
+                "consumismo visual",
+                "improvisación estética",
+                "homogeneidad lingüística"
+              ],
+              "correctAnswer": "patrimonio cultural",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "arte efímero",
+              "definition": "Manifestación creativa concebida para durar poco tiempo, a menudo vinculada al espacio, al momento y a la experiencia del público más que a la permanencia material."
+            },
+            {
+              "term": "arquitectura colonial",
+              "definition": "Estilo constructivo desarrollado durante el dominio español que combinó modelos europeos con materiales, técnicas y aportes locales, visible en iglesias, plazas y edificios civiles."
+            },
+            {
+              "term": "canon de belleza",
+              "definition": "Conjunto de rasgos físicos o ideales estéticos que una sociedad valora en un momento histórico determinado y que puede cambiar según contexto cultural y social."
+            },
+            {
+              "term": "identidad cultural",
+              "definition": "Sentido de pertenencia compartido que se forma a través de lengua, costumbres, memoria, valores y expresiones simbólicas de una comunidad."
+            },
+            {
+              "term": "intertextualidad",
+              "definition": "Relación por la cual una obra remite a otra mediante alusiones, citas, ecos temáticos o reinterpretaciones que enriquecen su significado."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "¿Cuál afirmación refleja mejor cómo cambian los cánones de belleza?",
+              "options": [
+                "Son universales y permanecen idénticos en todas las épocas",
+                "Dependen de factores históricos, sociales y mediáticos que varían entre culturas",
+                "Se determinan exclusivamente por características biológicas invariables",
+                "Solo se forman en sociedades con acceso a la educación superior"
+              ],
+              "correctAnswer": "Dependen de factores históricos, sociales y mediáticos que varían entre culturas",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "En el análisis de una ciudad hispánica, la arquitectura colonial suele interpretarse como",
+              "options": [
+                "una ruptura total con cualquier influencia local",
+                "una síntesis de modelos europeos y adaptaciones regionales",
+                "un estilo exclusivamente industrial del siglo XX",
+                "un fenómeno limitado a espacios rurales sin función política"
+              ],
+              "correctAnswer": "una síntesis de modelos europeos y adaptaciones regionales",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Cuando una obra literaria o visual hace referencia significativa a otra obra previa, se puede analizar mediante el concepto de ______.",
+              "options": [
+                "intertextualidad",
+                "aislamiento estético",
+                "simetría axial",
+                "costumbrismo oral"
+              ],
+              "correctAnswer": "intertextualidad",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Las normas sociales que definen qué rasgos físicos o estilos se consideran atractivos en una época forman un ______.",
+              "options": [
+                "canon de belleza",
+                "registro dialectal",
+                "patrimonio arqueológico",
+                "proceso migratorio"
+              ],
+              "correctAnswer": "canon de belleza",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

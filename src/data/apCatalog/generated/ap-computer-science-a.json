@@ -1,0 +1,1525 @@
+{
+  "apSubject": "AP Computer Science A",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Primitive Types",
+      "description": "Data types (int, double, boolean), variables, arithmetic operators, and basic Java syntax.",
+      "note": "# Unit 1: Primitive Types\n\n## Overview\nThis unit introduces the **primitive data types** in Java—**int**, **double**, and **boolean**—along with **variables**, **assignment**, **arithmetic operators**, and the basic syntax needed to write simple programs. These ideas matter on the AP exam because nearly every later topic, from **conditionals** to **loops** to **methods**, depends on correctly using types, expressions, and variable updates.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Primitive data types** | Built-in Java types that store simple values, especially **int**, **double**, and **boolean** | AP questions often test whether you can choose the correct type and predict resulting values |\n| **Variables** | Named storage locations declared with a type | You must track variable values through code segments and understand scope of declarations within a method |\n| **Assignment** | Using **=** to store a value or expression result into a variable | A major AP skill is tracing how assignment changes program state step by step |\n| **Arithmetic expressions** | Calculations using operators like **+**, **-**, **\\***, **/**, and **%** | Many multiple-choice questions ask you to evaluate Java expressions exactly |\n| **Integer division** | Division between two **int** values produces an **int**, dropping the fractional part | This is one of the most common AP exam traps |\n| **Casting** | Explicitly converting one type to another, such as from **double** to **int** | AP problems may ask how casting changes a result or truncates a value |\n| **Operator precedence** | The order in which Java evaluates parts of an expression | Students must know when multiplication/division happen before addition/subtraction |\n| **Incremental variable update** | Reassigning based on the old value, like **x = x + 1;** | This is foundational for counters, accumulators, and loop logic later in the course |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Declare variable with type] --> B[Initialize with a value]\n    B --> C[Use variable in expression]\n    C --> D[Evaluate expression by type rules]\n    D --> E[Assign result to variable]\n    E --> F[Program state changes]\n    F --> G[Use updated value in later statements]\n```\n\n### How expression evaluation typically works\n1. **Declare** a variable using a primitive type.\n2. **Assign** an initial value.\n3. Build an **expression** using literals, variables, and operators.\n4. Java applies **precedence rules** to evaluate the expression.\n5. The resulting value must match the variable’s type, or be made compatible through **casting**.\n6. The new value is **stored**, replacing the old one if the variable already had a value.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule** | **What You Must Know** |\n|---|---|\n| **Variable declaration** | **type name = value;** such as **int score = 5;** |\n| **Assignment meaning** | In **x = x + 2;**, evaluate the right side first, then store it in **x** |\n| **Integer division** | If both operands are **int**, the result is an **int**: $$7 / 2 = 3$$ |\n| **Floating-point division** | If at least one operand is **double**, the result is a **double**: $$7.0 / 2 = 3.5$$ |\n| **Remainder operator** | $$a \\% b$$ gives the remainder after integer division |\n| **Truncation by cast** | Casting from **double** to **int** drops the decimal part, not rounds: $$(int)\\ 3.9 = 3$$ |\n| **Operator precedence** | Parentheses first, then multiplication/division/modulus, then addition/subtraction |\n| **Boolean values** | A **boolean** stores only **true** or **false** |\n\n### Operator reminder\n- **Addition**: $$a + b$$\n- **Subtraction**: $$a - b$$\n- **Multiplication**: $$a * b$$\n- **Division**: $$a / b$$\n- **Remainder**: $$a \\% b$$\n\n### Type rules to remember\n- **int** stores whole numbers.\n- **double** stores decimal numbers.\n- **boolean** stores truth values.\n- You cannot store a **double** directly in an **int** without an explicit **cast**.\n- Mixed arithmetic involving **int** and **double** usually produces a **double**.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Similar** | **Key Difference** | **AP Importance** |\n|---|---|---|---|\n| **int** vs **double** | Both store numeric values and can be used in arithmetic | **int** stores whole numbers; **double** stores decimals | Determines whether division truncates or keeps a fractional part |\n| **Assignment** vs **Equality idea from math** | Both involve values and variables | In Java, **=** means “store this value,” not “is equal to” | Prevents misreading statements like **x = x + 1;** |\n| **Integer division** vs **Remainder** | Both come from dividing integers | Division gives the quotient; **\\%** gives the leftover part | Common in AP problems involving digit extraction or parity |\n| **Casting** vs **Automatic promotion** | Both affect type conversion | Casting is explicit; promotion often happens automatically in mixed numeric expressions | Helps predict result types and avoid invalid assignments |\n\n```mermaid\nflowchart LR\n    A[int] --> B[\"Used with /\"]\n    C[double] --> B\n    B --> D{Operand types?}\n    D -->|both int| E[Fraction removed]\n    D -->|one or more double| F[Decimal kept]\n```\n\n## Common AP Exam Traps\n- Assuming $$7 / 2 = 3.5$$ in Java. If both numbers are **int**, the result is $$3$$.\n- Forgetting that **casting to int** truncates rather than rounds. For example, $$(int)\\ 4.99$$ becomes $$4$$.\n- Misreading **=** as a statement of equality instead of **assignment**.\n- Ignoring **operator precedence**, especially in expressions without parentheses.\n- Assuming a **boolean** can store values other than **true** or **false**.\n\n## Quick Review Checklist\n- [ ] I can identify when to use **int**, **double**, or **boolean**.\n- [ ] I can declare and initialize primitive variables using correct Java syntax.\n- [ ] I can trace how **assignment** updates a variable’s value over multiple lines of code.\n- [ ] I can evaluate arithmetic expressions using Java’s **precedence rules**.\n- [ ] I can explain why $$7 / 2$$ and $$7.0 / 2$$ produce different results.\n- [ ] I can use and interpret the **remainder operator** $$\\%$$.\n- [ ] I can predict what happens when a **double** is cast to an **int**.\n- [ ] I can read a short Java code segment and determine the final value of each variable.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Primitive type",
+              "definition": "A built-in category in Java that stores a single simple value rather than an object reference; in this unit, common examples include whole numbers, decimal values, and truth values."
+            },
+            {
+              "term": "int",
+              "definition": "A Java data category used for storing whole-number values within a fixed range and commonly used in counting, indexing, and integer arithmetic."
+            },
+            {
+              "term": "double",
+              "definition": "A Java data category used for storing real-number approximations with fractional parts; calculations may include rounding due to binary representation."
+            },
+            {
+              "term": "boolean",
+              "definition": "A Java data category that can hold only one of two truth values and is commonly used in conditional expressions and control flow."
+            },
+            {
+              "term": "Variable declaration and initialization",
+              "definition": "The process of creating a named storage location with a specified data category and optionally assigning its first value in the same statement."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the Java statement: `double result = 7 / 2;` What value is stored in `result`?",
+              "options": [
+                "3.5",
+                "3.0",
+                "4.0",
+                "7.0"
+              ],
+              "correctAnswer": "3.0",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement correctly declares a variable and initializes it to a decimal value appropriate for its data category?",
+              "options": [
+                "int x = 4.2;",
+                "double x = 4.2;",
+                "boolean x = 4.2;",
+                "x double = 4.2;"
+              ],
+              "correctAnswer": "double x = 4.2;",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Java, the data category most appropriate for storing a value such as $$12.75$$ is ______.",
+              "options": [
+                "int",
+                "double",
+                "boolean",
+                "String"
+              ],
+              "correctAnswer": "double",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A variable that stores only `true` or `false` should be declared as ______.",
+              "options": [
+                "int",
+                "double",
+                "boolean",
+                "char"
+              ],
+              "correctAnswer": "boolean",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Integer division",
+              "definition": "An operation involving two whole-number operands in which any fractional part of the quotient is discarded rather than rounded."
+            },
+            {
+              "term": "Type casting",
+              "definition": "An explicit conversion written by the programmer to change a value from one data category to another, often used when narrowing from a real-number approximation to a whole number."
+            },
+            {
+              "term": "Operator precedence",
+              "definition": "The rules that determine the order in which parts of an expression are evaluated when parentheses are not used."
+            },
+            {
+              "term": "Compound assignment",
+              "definition": "A shorthand form that updates a variable by applying an operation and storing the result back into the same variable, such as addition or multiplication with reassignment."
+            },
+            {
+              "term": "Modulus operator",
+              "definition": "An arithmetic operation that produces the remainder when one whole number is divided by another."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "What is the value of `x` after the following code executes? `int x = 5; x += 3 * 2;`",
+              "options": [
+                "11",
+                "16",
+                "13",
+                "10"
+              ],
+              "correctAnswer": "11",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "What value is assigned to `n` after the statement `int n = (int) 6.9;` executes?",
+              "options": [
+                "7",
+                "6",
+                "6.9",
+                "0"
+              ],
+              "correctAnswer": "6",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The expression `17 % 5` evaluates to ______.",
+              "options": [
+                "2",
+                "3",
+                "5",
+                "12"
+              ],
+              "correctAnswer": "2",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the expression `3 + 4 * 2`, the operation performed first is ______.",
+              "options": [
+                "3 + 4",
+                "4 * 2",
+                "3 + 2",
+                "left to right regardless of operator"
+              ],
+              "correctAnswer": "4 * 2",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Using Objects",
+      "description": "Objects and classes, method calls, String methods, Math class, and the wrapper classes Integer and Double.",
+      "note": "# Unit 2: Using Objects\n\n## Overview\nIn this unit, you learn how to **create and use objects**, call **methods**, and work with important built-in Java classes such as **String**, **Math**, **Integer**, and **Double**. This matters for the AP CSA exam because many multiple-choice and free-response questions test your ability to trace **object behavior**, distinguish between **object references** and **primitive values**, and correctly use **library methods**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Object** | An **instance** of a class that stores data and can perform behaviors through methods | AP questions often test whether you understand how objects are created and used |\n| **Class** | A blueprint that defines the structure and behavior of objects | You must distinguish between a **class name** and an **object variable** |\n| **Constructor** | Special code used to initialize a new object with `new` | The exam may ask how an object is created or what values it starts with |\n| **Method call** | Using dot notation to ask an object or class to perform an action | A core AP skill is tracing expressions like `str.substring(...)` or `Math.pow(...)` |\n| **String methods** | Built-in methods that manipulate text, such as `length`, `substring`, `indexOf`, and `compareTo` | String questions are extremely common on AP CSA, especially involving return values and indexing |\n| **Math class** | A built-in Java class with **static methods** such as `abs`, `pow`, `sqrt`, and `random` | Students must know that `Math` methods are called with the class name, not an object |\n| **Wrapper classes** | Classes like **Integer** and **Double** that represent primitive values as objects | The AP exam may test conversion, parsing, and differences from primitive types |\n| **Reference vs. primitive** | Object variables store **references**, while primitive variables store actual values | This distinction is a classic source of AP multiple-choice errors |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Need text, number, or behavior] --> B{Primitive or object?}\n    B -->|Primitive value only| C[Use int or double]\n    B -->|Need object behavior| D[Choose a class]\n    D --> E[Create object with new and constructor]\n    E --> F[Store reference in a variable]\n    F --> G[Call instance methods with dot notation]\n    D --> H[Or use a class with static methods]\n    H --> I[Call method with class name]\n    G --> J[Method returns a value or causes an effect]\n    I --> J\n```\n\n### How method use typically works\n1. Identify whether you are working with a **primitive** or an **object**.\n2. If using an object, create it with **`new`** and a **constructor** if needed.\n3. Store the object in a variable of the appropriate **class type**.\n4. Call **instance methods** using **dot notation** on the object.\n5. For classes like **Math**, call **static methods** using the **class name**.\n6. Use or trace the **returned value** carefully.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Object creation** | Use the general form: `ClassName variableName = new ClassName(arguments);` |\n| **Method call syntax** | Instance method: `objectName.methodName(arguments)` |\n| **Static method syntax** | Class method: `ClassName.methodName(arguments)` |\n| **String indexing** | Strings use **zero-based indexing**, so the first character is at index $$0$$ |\n| **`substring` rule** | `str.substring(a, b)` returns characters from index $$a$$ up to but **not including** index $$b$$ |\n| **`length` for String** | `str.length()` returns the number of characters in the string |\n| **`compareTo` rule** | `str1.compareTo(str2)` returns $$0$$ if equal, a value less than $$0$$ if `str1` comes before `str2`, and a value greater than $$0$$ if after |\n| **`equals` vs `==`** | Use **`equals`** to compare String contents; **`==`** checks whether references are the same |\n| **`Math.random()` range** | `Math.random()` returns a `double` such that $$0 \\le x < 1$$ |\n| **Random integer pattern** | To generate integers from $$a$$ to $$b$$ inclusive: `(int)(Math.random() * (b - a + 1)) + a` |\n| **Wrapper parsing** | `Integer.parseInt(str)` converts a numeric string to `int`; `Double.parseDouble(str)` converts a numeric string to `double` |\n| **Autoboxing / unboxing** | Java can convert between primitives and wrapper objects automatically in many contexts, but the AP exam may still test type awareness |\n\n## Connections & Comparisons\n\n| **Concept 1** | **Concept 2** | **Connection / Key Difference** |\n|---|---|---|\n| **Primitive types** | **Objects** | Primitives store actual values; object variables store **references** to objects |\n| **Instance methods** | **Static methods** | Instance methods are called on objects like `str.length()`; static methods are called on classes like `Math.abs(...)` |\n| **`==`** | **`equals`** | `==` compares references for objects; `equals` compares meaningful content for Strings |\n| **String** | **Integer / Double** | `String` represents text, while `Integer` and `Double` wrap numeric primitive values as objects |\n\n```mermaid\nflowchart LR\n    A[Primitive variable] --> B[Stores actual value]\n    C[Object variable] --> D[Stores reference]\n    D --> E[Reference points to object in memory]\n    F[String methods] --> G[Called on String object]\n    H[Math methods] --> I[Called on class name]\n```\n\n## Common AP Exam Traps\n- Confusing **`==`** with **`equals`** when comparing **String** values.\n- Forgetting that **`substring(a, b)`** does **not** include the character at index $$b$$.\n- Treating **`Math`** methods like instance methods instead of **static** methods.\n- Assuming object variables contain the object itself rather than a **reference** to the object.\n- Forgetting that **`Math.random()`** never returns $$1$$, so endpoint reasoning must be precise.\n\n## Quick Review Checklist\n- [ ] I can explain the difference between a **class** and an **object**.\n- [ ] I can write code to create an object using **`new`** and a **constructor**.\n- [ ] I can identify whether a method call is **instance** or **static**.\n- [ ] I can correctly use major **String methods** such as `length`, `substring`, `indexOf`, `compareTo`, and `equals`.\n- [ ] I can trace String expressions using **zero-based indexing**.\n- [ ] I can use **Math** methods such as `abs`, `pow`, `sqrt`, and `random`.\n- [ ] I can generate a random integer in a specified inclusive range.\n- [ ] I can explain how **Integer** and **Double** wrapper classes relate to primitive `int` and `double`.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Object reference",
+              "definition": "A variable that stores the location of an instance in memory rather than the instance's data directly; it is used to access behavior and state through dot notation."
+            },
+            {
+              "term": "Class",
+              "definition": "A blueprint that defines the fields and behaviors that its instances will have."
+            },
+            {
+              "term": "Method call",
+              "definition": "An expression or statement that executes behavior associated with an instance or a class, possibly returning a value."
+            },
+            {
+              "term": "Constructor",
+              "definition": "Special code used to initialize a newly created instance when the keyword new is used."
+            },
+            {
+              "term": "String immutability",
+              "definition": "The property that character-sequence instances cannot be changed after creation, so operations produce new values instead of altering the original one."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the code:\n\nString s = \"APCSA\";\nString t = s.substring(2, 5);\n\nWhat is the value of t after execution?",
+              "options": [
+                "\"CSA\"",
+                "\"PCS\"",
+                "\"SCA\"",
+                "\"APC\""
+              ],
+              "correctAnswer": "\"CSA\"",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Given the declaration below, which statement best explains the effect of the code?\n\nString word = \"code\";\nword.toUpperCase();",
+              "options": [
+                "word is changed to \"CODE\" because the method modifies the existing object.",
+                "word remains \"code\" because the returned value is not stored.",
+                "A compile-time error occurs because String methods must be called with new.",
+                "word becomes null because the method does not return a value."
+              ],
+              "correctAnswer": "word remains \"code\" because the returned value is not stored.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Java, when a programmer writes MyClass obj = new MyClass();, the variable obj stores a(n) ______ to the created instance.",
+              "options": [
+                "reference",
+                "parameter",
+                "primitive",
+                "literal"
+              ],
+              "correctAnswer": "reference",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If str is a String, the expression str.______ returns the number of characters in the sequence.",
+              "options": [
+                "length()",
+                "size()",
+                "charAt()",
+                "substring()"
+              ],
+              "correctAnswer": "length()",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Math class",
+              "definition": "A built-in utility type that provides static numerical operations such as absolute value, powers, square roots, and random number generation."
+            },
+            {
+              "term": "Static method",
+              "definition": "A behavior associated with a type itself rather than with any particular instance, so it is called using the type name."
+            },
+            {
+              "term": "Wrapper class",
+              "definition": "A reference type that encapsulates a primitive value so it can be treated as an object when needed."
+            },
+            {
+              "term": "Autoboxing",
+              "definition": "The automatic conversion by the compiler from a primitive value to the corresponding reference-type object."
+            },
+            {
+              "term": "Unboxing",
+              "definition": "The automatic conversion by the compiler from a reference-type numeric object to the corresponding primitive value."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which expression produces a random integer from $$0$$ through $$5$$ inclusive?",
+              "options": [
+                "(int)(Math.random() * 6)",
+                "(int)(Math.random() * 5)",
+                "Math.random(6)",
+                "(int)Math.random() * 6"
+              ],
+              "correctAnswer": "(int)(Math.random() * 6)",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the code:\n\nDouble a = 3.5;\nDouble b = 2.0;\ndouble c = a + b;\n\nWhich statement is correct?",
+              "options": [
+                "The code does not compile because wrapper objects cannot be used with +.",
+                "The code compiles, and c is assigned 5.5 after automatic unboxing.",
+                "The code compiles, and c stores a reference to a Double object.",
+                "The code does not compile because double cannot store decimal values."
+              ],
+              "correctAnswer": "The code compiles, and c is assigned 5.5 after automatic unboxing.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "To call the square-root operation provided by Java's utility class, a programmer writes Math.______.",
+              "options": [
+                "sqrt(x)",
+                "root(x)",
+                "squareRoot(x)",
+                "pow(x, 0.5, 0)"
+              ],
+              "correctAnswer": "sqrt(x)",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The reference type paired with the primitive type double is ______.",
+              "options": [
+                "Double",
+                "Decimal",
+                "Float",
+                "Integer"
+              ],
+              "correctAnswer": "Double",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Boolean Expressions and if Statements",
+      "description": "Boolean expressions, relational and logical operators, if/else-if/else chains, and nested conditionals.",
+      "note": "# Unit 3: Boolean Expressions and if Statements\n\n## Overview\nThis unit introduces **Boolean expressions** and how programs make decisions using **if**, **if-else**, **else-if chains**, and **nested conditionals**. These ideas are essential for the AP Computer Science A exam because students must trace program flow, predict output, and write correct conditional logic using Java syntax and operator rules.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Boolean value** | A value that is either **`true`** or **`false`** | Many AP questions require evaluating conditions and determining which branch of code executes |\n| **Relational operators** | Operators that compare two values: **`<`**, **`>`**, **`<=`**, **`>=`**, **`==`**, **`!=`** | You must know how comparisons produce Boolean results in conditionals |\n| **Logical operators** | Operators that combine or reverse Boolean expressions: **`&&`**, **`||`**, **`!`** | AP questions often test multi-part conditions and how they affect control flow |\n| **if statement** | Executes a block only when a condition is **`true`** | This is the foundation of decision-making in Java |\n| **if-else structure** | Chooses between two alternatives based on one condition | Frequently used in tracing and code-writing free-response questions |\n| **else-if chain** | Tests multiple conditions in order until one is true | AP students must understand that only the **first true branch** runs |\n| **Nested conditionals** | A conditional placed inside another conditional | Used to represent more complex decisions and often appears in code tracing |\n| **Short-circuit evaluation** | Java may stop evaluating a logical expression early when the result is already known | This matters when tracing expressions and avoiding errors such as invalid method calls or unsafe index access |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start] --> B[Evaluate condition]\n    B --> C{\"Condition true?\"}\n    C -->|Yes| D[Execute if block]\n    C -->|No| E[Check else-if or else]\n    E --> F{\"Another condition?\"}\n    F -->|Yes and true| G[Execute first matching else-if block]\n    F -->|Yes and false| E\n    F -->|No| H[Execute else block if present]\n    D --> I[Continue program]\n    G --> I\n    H --> I\n```\n\n### How conditional logic works\n1. A program evaluates a **Boolean expression**.\n2. If the expression is **`true`**, the associated block executes.\n3. If it is **`false`**, Java skips that block.\n4. In an **else-if chain**, Java checks conditions **top to bottom**.\n5. Once one branch is true, that block executes and the rest of the chain is skipped.\n6. In **nested conditionals**, an inner decision is checked only if control reaches it.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule** | **What You Must Know** |\n|---|---|\n| **Boolean expressions evaluate to one of two values** | Every condition becomes either **`true`** or **`false`** |\n| **Relational comparison rule** | Expressions like **`a < b`** or **`x == y`** produce a Boolean result |\n| **Equality vs assignment** | **`==`** tests equality; **`=`** assigns a value |\n| **Logical AND** | **`A && B`** is true only if **both** conditions are true |\n| **Logical OR** | **`A || B`** is true if **at least one** condition is true |\n| **Logical NOT** | **`!A`** reverses the Boolean value of **`A`** |\n| **Short-circuit with AND** | In **`A && B`**, if **`A`** is false, Java does **not** evaluate **`B`** |\n| **Short-circuit with OR** | In **`A || B`**, if **`A`** is true, Java does **not** evaluate **`B`** |\n| **else-if order matters** | Java executes only the **first** condition in the chain that evaluates to true |\n| **Braces define blocks** | Statements inside **`{ }`** belong to that branch of the conditional |\n\n### Truth patterns to know\n- **`A && B`** is true only when both are true.\n- **`A || B`** is false only when both are false.\n- **`!true`** becomes **`false`**\n- **`!false`** becomes **`true`**\n\n### Common Java conditional syntax\n```java\nif (condition) {\n    statement;\n}\n```\n\n```java\nif (condition) {\n    statement1;\n} else {\n    statement2;\n}\n```\n\n```java\nif (condition1) {\n    statement1;\n} else if (condition2) {\n    statement2;\n} else {\n    statement3;\n}\n```\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Similarity** | **Key Difference** | **AP Significance** |\n|---|---|---|---|\n| **`if` vs `if-else`** | Both evaluate a Boolean condition | **`if`** may do nothing if false; **`if-else`** always chooses one of two paths | Helps with tracing whether code is skipped or guaranteed to run |\n| **`else-if chain` vs `nested if`** | Both allow multiple decisions | **else-if** checks alternatives at one level; **nested if** makes a second decision inside a branch | AP may ask which structure better matches a given logic pattern |\n| **`&&` vs `||`** | Both combine Boolean expressions | **`&&`** requires all needed conditions; **`||`** requires only one true condition | Common source of logic errors in multiple-choice questions |\n| **`==` vs `=`** | Both use similar symbols | **`==`** compares; **`=`** assigns | One of the most common syntax and logic traps |\n\n```mermaid\nflowchart LR\n    A[Single decision] --> B[if]\n    A --> C[if-else]\n    D[Multiple alternatives] --> E[else-if chain]\n    D --> F[Nested if]\n    G[Combine conditions] --> H[\"&& (all needed)\"]\n    G --> I[\"|| (one needed)\"]\n```\n\n## Common AP Exam Traps\n- Confusing **`==`** with **`=`**. On the AP exam, **`==`** compares values, while **`=`** changes a variable.\n- Forgetting that **else-if chains stop at the first true condition**. Even if later conditions are also true, they are not checked.\n- Misreading **short-circuit evaluation**. In **`A && B`**, **`B`** may never run if **`A`** is false; in **`A || B`**, **`B`** may never run if **`A`** is true.\n- Writing overlapping conditions in the wrong order. A broad condition first can prevent a more specific branch from ever executing.\n- Assuming nested conditionals are the same as separate **if** statements. Separate **if** statements can allow multiple blocks to run; an **if-else-if** chain allows only one branch.\n\n## Quick Review Checklist\n- [ ] I can explain what a **Boolean expression** is and identify whether it evaluates to **`true`** or **`false`**.\n- [ ] I can use **relational operators** such as **`<`**, **`>=`**, **`==`**, and **`!=`** correctly.\n- [ ] I can evaluate compound conditions using **`&&`**, **`||`**, and **`!`**.\n- [ ] I can trace an **if**, **if-else**, or **else-if chain** and determine which block executes.\n- [ ] I can explain why **order matters** in an **else-if chain**.\n- [ ] I can distinguish between **nested conditionals** and separate conditional statements.\n- [ ] I can recognize and apply **short-circuit evaluation** in Java.\n- [ ] I can avoid common syntax mistakes, especially confusing **`=`** and **`==`**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Boolean expression",
+              "definition": "A statement in Java that evaluates to one of two possible truth values and is commonly used to control program flow."
+            },
+            {
+              "term": "Relational operator",
+              "definition": "A symbol used to compare two values and produce a truth value based on their relationship."
+            },
+            {
+              "term": "Logical AND",
+              "definition": "An operation that produces true only when both component conditions are true."
+            },
+            {
+              "term": "Logical OR",
+              "definition": "An operation that produces true when at least one component condition is true."
+            },
+            {
+              "term": "Logical NOT",
+              "definition": "A unary operation that reverses a truth value, changing true to false and false to true."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Assume $$int x = 7;$$ and $$int y = 10;$$. Which expression evaluates to true?",
+              "options": [
+                "x > y && y < 5",
+                "x <= 7 && !(y == 8)",
+                "x == 8 || y < 10",
+                "!(x < 7) && y == 9"
+              ],
+              "correctAnswer": "x <= 7 && !(y == 8)",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Given $$int a = 4;$$, $$int b = 9;$$, and $$int c = 4;$$, which expression evaluates to false?",
+              "options": [
+                "a == c && b > a",
+                "a != b || c < b",
+                "!(a < b) || c == a",
+                "a >= c && b <= 9"
+              ],
+              "correctAnswer": "!(a < b) || c == a",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Java, the operator used to test whether two primitive values are equal is ______.",
+              "options": [
+                "=",
+                "==",
+                "!=",
+                "&&"
+              ],
+              "correctAnswer": "==",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If a Boolean variable $$done$$ currently stores true, then the value of ______ is false.",
+              "options": [
+                "done",
+                "!done",
+                "done || false",
+                "done && true"
+              ],
+              "correctAnswer": "!done",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "if statement",
+              "definition": "A selection structure that executes a block of code only when a specified condition evaluates to true."
+            },
+            {
+              "term": "if-else statement",
+              "definition": "A two-branch control structure in which one block runs when a condition is true and a different block runs otherwise."
+            },
+            {
+              "term": "else-if chain",
+              "definition": "A sequence of conditional tests checked in order until the first true condition is found, after which its associated block executes."
+            },
+            {
+              "term": "Nested conditional",
+              "definition": "A selection structure placed inside another selection structure to allow additional decision-making within a branch."
+            },
+            {
+              "term": "Short-circuit evaluation",
+              "definition": "A rule for certain logical operations in which the second condition may not be evaluated if the first condition already determines the overall result."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the code:\n```java\nint score = 82;\nString result = \"\";\nif (score >= 90)\n{\n    result = \"A\";\n}\nelse if (score >= 80)\n{\n    result = \"B\";\n}\nelse if (score >= 70)\n{\n    result = \"C\";\n}\nelse\n{\n    result = \"D or F\";\n}\n```\nWhat is the value of $$result$$ after execution?",
+              "options": [
+                "A",
+                "B",
+                "C",
+                "D or F"
+              ],
+              "correctAnswer": "B",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the code:\n```java\nint n = 12;\nif (n > 0)\n{\n    if (n % 2 == 0)\n    {\n        System.out.print(\"even\");\n    }\n    else\n    {\n        System.out.print(\"odd\");\n    }\n}\nelse\n{\n    System.out.print(\"nonpositive\");\n}\n```\nWhat is printed?",
+              "options": [
+                "even",
+                "odd",
+                "nonpositive",
+                "Nothing is printed"
+              ],
+              "correctAnswer": "even",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In an $$if$$-$$else if$$-$$else$$ structure, once a condition evaluates to true, ______ conditional branches in that same chain are skipped.",
+              "options": [
+                "all remaining",
+                "no",
+                "only the first",
+                "exactly two"
+              ],
+              "correctAnswer": "all remaining",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Given $$boolean a = false;$$ and $$boolean b = true;$$, the expression $$a && ______$$ is guaranteed to evaluate to false regardless of the second operand's value.",
+              "options": [
+                "b",
+                "!b",
+                "true",
+                "false"
+              ],
+              "correctAnswer": "b",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Iteration",
+      "description": "While loops, for loops, do-while loops, nested loops, and the String traversal pattern.",
+      "note": "# Unit 4: Iteration\n\n## Overview\n**Iteration** is the repeated execution of code using loops. In AP Computer Science A, this unit focuses on **while loops**, **for loops**, **do-while loops**, **nested loops**, and the **String traversal pattern**, all of which are essential for writing efficient programs and for tracing code on the AP exam.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Iteration** | Repeating a block of code until a condition changes or a sequence ends. | The AP exam often asks you to trace repeated execution and predict final variable values. |\n| **while loop** | A loop that repeats **while** a Boolean condition is `true`. The condition is checked before each iteration. | You must know when the loop executes $$0$$ times, many times, or forever. |\n| **for loop** | A compact loop structure with **initialization**, **condition**, and **update** in one header. | Frequently tested for counting patterns, array/string traversal, and code tracing. |\n| **do-while loop** | A loop that executes the body once before checking the condition. | AP questions may test the fact that this loop runs **at least once**. |\n| **loop control variable** | A variable that changes during iteration to help the loop progress toward termination. | Errors involving incorrect updates often cause **infinite loops** or **off-by-one** mistakes. |\n| **nested loops** | A loop inside another loop. | Important for counting total repetitions and analyzing output patterns. |\n| **String traversal** | Visiting each character in a `String`, usually using an index from $$0$$ to `str.length() - 1`. | Common AP skill for counting, searching, building substrings, and checking conditions. |\n| **off-by-one error** | A mistake where a loop runs one time too many or one time too few. | One of the most common AP exam traps, especially with bounds like `<` versus `<=`. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start loop setup] --> B[Initialize control variable]\n    B --> C[Check loop condition]\n    C -->|true| D[Execute loop body]\n    D --> E[Update control variable]\n    E --> C\n    C -->|false| F[Loop ends]\n```\n\n### How iteration usually works\n1. **Initialize** a variable or starting state.\n2. **Check** whether the loop condition is `true`.\n3. If `true`, **execute** the loop body.\n4. **Update** the control variable or state.\n5. Repeat until the condition becomes `false`.\n\n### String traversal workflow\n1. Start with an index, usually `int i = 0`.\n2. Continue while $$i < \\text{str.length()}$$.\n3. Access the current character with `str.charAt(i)`.\n4. Process that character.\n5. Increase the index by $$1$$.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **Must Know** |\n|---|---|\n| **while loop structure** | Repeats while the condition remains `true`: `while (condition) { ... }` |\n| **for loop structure** | `for (initialization; condition; update) { ... }` |\n| **do-while loop structure** | Executes first, then checks condition: `do { ... } while (condition);` |\n| **Loop execution condition** | A **while** or **for** loop may execute $$0$$ times if the condition starts as `false`. |\n| **do-while guarantee** | A **do-while** loop executes **at least once**. |\n| **String index range** | Valid indices for a string of length $$n$$ are $$0$$ through $$n - 1$$. |\n| **String traversal condition** | A standard traversal uses $$0 \\le i < \\text{str.length()}$$. |\n| **Nested loop repetitions** | If one loop runs $$m$$ times and the inner loop runs $$n$$ times per outer iteration, total inner executions are $$m \\cdot n$$. |\n| **Termination rule** | A loop must make progress toward a `false` condition, usually by changing a control variable. |\n\n### Standard patterns to recognize\n- **Counting loop**: increment a variable each time.\n- **Accumulation loop**: update a running total, count, or result.\n- **Search loop**: continue until a target is found or the sequence ends.\n- **Traversal loop**: visit each element or character in order.\n\n## Connections & Comparisons\n\n| **Concept** | **while loop** | **for loop** | **do-while loop** |\n|---|---|---|---|\n| **Condition checked** | Before execution | Before execution | After execution |\n| **May run $$0$$ times?** | Yes | Yes | No |\n| **Best use case** | Repetition when the number of iterations is not known in advance | Counting or indexed traversal | When the body must run at least once |\n| **Common AP pitfall** | Forgetting to update the control variable | Misreading header parts or bounds | Forgetting that one iteration is guaranteed |\n\n### Nested loops vs. single loops\n\n| **Feature** | **Single loop** | **Nested loops** |\n|---|---|---|\n| **Purpose** | Repeats one process | Repeats a process inside another repeated process |\n| **Complexity of tracing** | Moderate | Higher |\n| **Typical AP uses** | Counting, searching, string traversal | Pattern printing, repeated comparisons, grid-style logic |\n| **Key skill** | Track one control variable | Track both outer and inner control variables |\n\n## Common AP Exam Traps\n- **Off-by-one errors**: using `<=` instead of `<`, especially in **String traversal**, can cause an out-of-bounds access.\n- Forgetting that a **do-while loop** runs once even if the condition is initially `false`.\n- Missing the **update step**, which can create an **infinite loop**.\n- Confusing the roles of the three parts of a **for loop**: initialization, condition, and update.\n- In **nested loops**, counting only one loop and forgetting that the inner loop repeats for **every** outer iteration.\n\n## Quick Review Checklist\n- [ ] I can explain the difference between **while**, **for**, and **do-while** loops.\n- [ ] I can trace a loop and determine how many times it executes.\n- [ ] I can identify whether a loop executes $$0$$ times, at least once, or indefinitely.\n- [ ] I can write and analyze a **for loop** with correct initialization, condition, and update.\n- [ ] I can recognize and avoid **off-by-one errors**.\n- [ ] I can traverse a `String` correctly using `charAt(i)` and `length()`.\n- [ ] I can trace **nested loops** and compute total repetitions such as $$m \\cdot n$$.\n- [ ] I can determine whether a loop will terminate and explain why.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Iteration",
+              "definition": "The repeated execution of a statement or block of statements, usually controlled by a Boolean condition or a counting process."
+            },
+            {
+              "term": "while loop",
+              "definition": "A control structure that checks a Boolean expression before each repetition and continues only as long as that expression remains true."
+            },
+            {
+              "term": "Loop control variable",
+              "definition": "A variable used to determine whether repetition continues, often initialized before the loop and updated during each pass."
+            },
+            {
+              "term": "Infinite loop",
+              "definition": "A repetition structure that never stops because its ending condition is never reached or never becomes false."
+            },
+            {
+              "term": "for loop",
+              "definition": "A repetition structure that combines initialization, continuation test, and update in a single header, commonly used when the number of repetitions is known or can be expressed by a pattern."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the code segment:\n```java\nint x = 1;\nint sum = 0;\nwhile (x <= 7) {\n    if (x % 2 == 1) {\n        sum += x;\n    }\n    x += 2;\n}\nSystem.out.print(sum);\n```\nWhat is printed as a result of executing the code?",
+              "options": [
+                "12",
+                "16",
+                "9",
+                "7"
+              ],
+              "correctAnswer": "16",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student writes the following code segment to count how many times a value can be divided by $$2$$ before becoming less than $$1$$.\n```java\ndouble n = 20.0;\nint count = 0;\nwhile (n >= 1) {\n    n /= 2;\n    count++;\n}\n```\nWhich statement best describes why this loop terminates?",
+              "options": [
+                "The value of n decreases each iteration, so eventually the condition becomes false.",
+                "The variable count automatically stops the loop when it equals n.",
+                "The loop header guarantees a fixed number of repetitions.",
+                "The division operator causes the loop to stop after one iteration."
+              ],
+              "correctAnswer": "The value of n decreases each iteration, so eventually the condition becomes false.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a well-designed counting loop, the variable that determines whether the loop continues should be initialized before the loop and ______ during each iteration.",
+              "options": [
+                "updated",
+                "printed",
+                "declared as final",
+                "reset to its original value"
+              ],
+              "correctAnswer": "updated",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A loop that checks its continuation condition before executing the body is a ______ loop.",
+              "options": [
+                "while",
+                "do-while",
+                "nested",
+                "recursive"
+              ],
+              "correctAnswer": "while",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "do-while loop",
+              "definition": "A repetition structure in which the body executes once before the Boolean condition is tested, guaranteeing at least one execution."
+            },
+            {
+              "term": "Nested loop",
+              "definition": "A repetition structure placed inside another repetition structure, where each complete pass of the outer structure triggers all repetitions of the inner structure."
+            },
+            {
+              "term": "String traversal",
+              "definition": "A common process of visiting characters one at a time, typically by using an index from $$0$$ up to one less than the length."
+            },
+            {
+              "term": "charAt",
+              "definition": "A String method that returns the character located at a specified valid index."
+            },
+            {
+              "term": "length",
+              "definition": "A String method that returns the number of characters contained in a sequence of text."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the code segment:\n```java\nint count = 0;\nfor (int r = 1; r <= 3; r++) {\n    for (int c = 1; c <= r; c++) {\n        count++;\n    }\n}\nSystem.out.print(count);\n```\nWhat is printed as a result of executing the code?",
+              "options": [
+                "3",
+                "6",
+                "9",
+                "10"
+              ],
+              "correctAnswer": "6",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the method.\n```java\npublic static int countVowels(String str) {\n    int count = 0;\n    for (int i = 0; i < str.length(); i++) {\n        String ch = str.substring(i, i + 1);\n        if (ch.equals(\"a\") || ch.equals(\"e\") || ch.equals(\"i\") || ch.equals(\"o\") || ch.equals(\"u\")) {\n            count++;\n        }\n    }\n    return count;\n}\n```\nWhat value is returned by `countVowels(\"iteration\")` ?",
+              "options": [
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "correctAnswer": "5",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When traversing a String with valid indices, the last character is located at index `str.length() ______`.",
+              "options": [
+                "- 1",
+                "+ 1",
+                "/ 2",
+                "* 2"
+              ],
+              "correctAnswer": "- 1",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A ______ loop is guaranteed to execute its body at least once because the condition is checked after the body runs.",
+              "options": [
+                "do-while",
+                "while",
+                "for",
+                "nested"
+              ],
+              "correctAnswer": "do-while",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Writing Classes",
+      "description": "Class structure, instance variables, constructors, accessor and mutator methods, and static vs. instance.",
+      "note": "# Unit 5: Writing Classes\n\n## Overview\nIn this unit, you learn how to **define classes** in Java by combining **instance variables**, **constructors**, and **methods** into a coherent object blueprint. This matters on the AP exam because students are often asked to **write class definitions**, trace how objects change over time, and distinguish between **instance** and **static** behavior.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Class** | A blueprint for creating objects, including data and behavior. | AP questions frequently ask you to write or analyze a complete **class definition**. |\n| **Object / Instance** | A specific thing created from a class using `new`. | You must trace how different objects can have different state even when they come from the same class. |\n| **Instance Variable** | A variable declared in a class outside methods/constructors; each object gets its own copy. | AP often tests whether students understand that changing one object’s instance variable does **not** change another’s. |\n| **Constructor** | A special method used to initialize a new object. It has no return type and usually sets instance variables. | A common FRQ task is to write a constructor that properly initializes object state. |\n| **Accessor Method** | A method that returns information about an object’s state without changing it. | AP may ask you to write simple **getter-style** methods or determine returned values. |\n| **Mutator Method** | A method that changes an object’s state. | Students must trace updates to instance variables and write methods that modify fields correctly. |\n| **`this` keyword** | Refers to the current object; often used to distinguish instance variables from parameters. | Useful when constructor parameters have the same names as instance variables. |\n| **Static vs. Instance** | **Static** members belong to the class; **instance** members belong to each object. | This distinction is a classic AP topic, especially when determining what can be accessed where. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Write class header] --> B[Declare instance variables]\n    B --> C[Write constructor]\n    C --> D[Initialize object state]\n    D --> E[Write accessor methods]\n    D --> F[Write mutator methods]\n    E --> G[Create objects with new]\n    F --> G\n    G --> H[Call methods on objects]\n    H --> I[State may change over time]\n    I --> J[Trace returned values and object state]\n```\n\n### Typical class-writing workflow\n1. **Identify the object’s state**\n   - What data should each object store?\n   - These become **instance variables**.\n\n2. **Write the constructor**\n   - Decide what values are needed when an object is created.\n   - Assign parameter values to instance variables.\n\n3. **Add accessor methods**\n   - Return information about the object.\n   - These typically do **not** change instance variables.\n\n4. **Add mutator methods**\n   - Update instance variables as needed.\n   - These often have `void` return type, though not always.\n\n5. **Decide whether anything should be static**\n   - Ask: does this belong to **each object** or to the **class as a whole**?\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Class syntax** | A class groups **instance variables**, **constructors**, and **methods**. |\n| **Instance variable location** | Declared inside the class but outside all methods and constructors. |\n| **Constructor rule** | A constructor has the **same name as the class** and has **no return type**, not even `void`. |\n| **Object creation** | Objects are typically created with `new`, which calls a constructor. Example: `Student s = new Student(\"Ana\", 11);` |\n| **Accessor rule** | An accessor method returns data about the object and usually does **not** modify instance variables. |\n| **Mutator rule** | A mutator method changes one or more instance variables. |\n| **`this` rule** | `this.x = x;` means the object’s instance variable `x` gets the value of the parameter `x`. |\n| **Static rule** | A **static** variable or method belongs to the class, not to any one object. All objects share one static variable. |\n| **Instance rule** | An **instance** variable or method is tied to a specific object, so each object may have different values. |\n| **Method call distinction** | Instance methods are usually called on objects, while static methods are called using the class name. |\n\n### Example pattern\n```java\npublic class Book {\n    private String title;\n    private int pages;\n    private static int bookCount = 0;\n\n    public Book(String t, int p) {\n        title = t;\n        pages = p;\n        bookCount++;\n    }\n\n    public String getTitle() {\n        return title;\n    }\n\n    public void setPages(int p) {\n        pages = p;\n    }\n\n    public static int getBookCount() {\n        return bookCount;\n    }\n}\n```\n\n## Connections & Comparisons\n\n| **Concept 1** | **Concept 2** | **Key Difference / Connection** |\n|---|---|---|\n| **Constructor** | **Method** | A constructor initializes a new object and has no return type; a method performs actions after the object exists. |\n| **Accessor** | **Mutator** | An accessor reads object state; a mutator changes object state. |\n| **Instance variable** | **Static variable** | Each object has its own instance variable values; one static variable is shared by the whole class. |\n| **Parameter** | **Instance variable** | A parameter is local to a constructor or method call; an instance variable persists as part of the object’s state. |\n\n```mermaid\nflowchart LR\n    A[Instance members] --> B[Belong to one object]\n    C[Static members] --> D[Belong to the class]\n    B --> E[Access with object reference]\n    D --> F[Access with class name]\n```\n\n## Common AP Exam Traps\n\n- Confusing a **constructor** with a regular method by giving it a return type such as `void`.\n- Forgetting that **instance variables** keep their values between method calls, while **parameters** and local variables do not.\n- Assuming a **static variable** is different for each object; it is actually **shared** across all objects.\n- Mixing up **accessors** and **mutators**, especially when a method both computes and changes state.\n- Forgetting to use `this` when a constructor parameter has the same name as an instance variable, causing assignment errors like `x = x;`.\n\n## Quick Review Checklist\n\n- [ ] I can explain what a **class** is and how it differs from an **object**.\n- [ ] I can identify and declare **instance variables** in the correct place in a class.\n- [ ] I can write a **constructor** with the correct name and no return type.\n- [ ] I can distinguish between **accessor** and **mutator** methods.\n- [ ] I can trace how method calls change an object’s **state** over time.\n- [ ] I can explain and use the **`this`** keyword correctly.\n- [ ] I can distinguish between **static** and **instance** variables and methods.\n- [ ] I can read or write a simple AP-style class with fields, a constructor, and methods.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "class",
+              "definition": "A blueprint that defines the data and behavior for objects created from it, including fields, constructors, and methods."
+            },
+            {
+              "term": "instance variable",
+              "definition": "A field declared in a class outside any method or constructor that stores data separately for each object created from that class."
+            },
+            {
+              "term": "constructor",
+              "definition": "A special routine used to initialize a newly created object; it has the same name as the class and no return type."
+            },
+            {
+              "term": "parameter",
+              "definition": "A variable listed in a method or constructor header that receives a value when the call is made."
+            },
+            {
+              "term": "object state",
+              "definition": "The collection of values currently stored in an object's fields at a given moment during program execution."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the class below.\n\n```java\npublic class Book {\n    private String title;\n    private int pages;\n\n    public Book(String t, int p) {\n        title = t;\n        pages = p;\n    }\n}\n```\nWhich statement best describes the effect of the constructor?",
+              "options": [
+                "It creates local variables that disappear after the constructor finishes and does not affect the object.",
+                "It initializes the fields of a newly created object using the arguments passed to the constructor.",
+                "It returns a new object explicitly using a return statement.",
+                "It can be called only once in the entire program regardless of how many objects are created."
+              ],
+              "correctAnswer": "It initializes the fields of a newly created object using the arguments passed to the constructor.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student writes the following class.\n\n```java\npublic class Counter {\n    private int count;\n\n    public Counter() {\n        count = 0;\n    }\n\n    public void increment() {\n        count++;\n    }\n}\n```\nWhich statement is true about the variable `count`?",
+              "options": [
+                "It is shared by all Counter objects because it is declared in the class.",
+                "It stores a separate value for each Counter object because it is an instance field.",
+                "It exists only while the `increment` method is executing.",
+                "It must be passed as a parameter each time `increment` is called."
+              ],
+              "correctAnswer": "It stores a separate value for each Counter object because it is an instance field.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Java, the routine that initializes a new object and has the same name as the class is called a ______.",
+              "options": [
+                "constructor",
+                "accessor",
+                "return type",
+                "parameter"
+              ],
+              "correctAnswer": "constructor",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A field that belongs to each individual object, rather than being shared by the class, is an ______.",
+              "options": [
+                "instance variable",
+                "argument list",
+                "local variable",
+                "class header"
+              ],
+              "correctAnswer": "instance variable",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "accessor method",
+              "definition": "A method that retrieves information about an object's data without changing that object's state."
+            },
+            {
+              "term": "mutator method",
+              "definition": "A method that changes one or more fields of an object, typically to update its state."
+            },
+            {
+              "term": "static method",
+              "definition": "A method associated with the class itself rather than any particular object, so it is called using the class name."
+            },
+            {
+              "term": "this keyword",
+              "definition": "A reference used within an object's methods or constructors to refer to the current object, often to distinguish fields from parameters with the same names."
+            },
+            {
+              "term": "encapsulation",
+              "definition": "The practice of bundling data and the operations on that data in one unit while restricting direct external access to internal representation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the class below.\n\n```java\npublic class ScoreKeeper {\n    private int score;\n\n    public ScoreKeeper() {\n        score = 0;\n    }\n\n    public int getScore() {\n        return score;\n    }\n\n    public void addPoints(int pts) {\n        score += pts;\n    }\n}\n```\nWhich statement correctly classifies the methods `getScore` and `addPoints`?",
+              "options": [
+                "Both are accessor methods because each uses the field `score`.",
+                "`getScore` is an accessor method and `addPoints` is a mutator method.",
+                "`getScore` is a mutator method and `addPoints` is an accessor method.",
+                "Both are mutator methods because each is part of the public interface."
+              ],
+              "correctAnswer": "`getScore` is an accessor method and `addPoints` is a mutator method.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the class below.\n\n```java\npublic class Tracker {\n    private int value;\n    private static int totalObjects = 0;\n\n    public Tracker() {\n        value = 0;\n        totalObjects++;\n    }\n}\n```\nWhich statement about `totalObjects` is correct?",
+              "options": [
+                "Each object has its own separate copy of `totalObjects`.",
+                "`totalObjects` is shared by all objects of the class.",
+                "`totalObjects` can be accessed only inside the constructor because it is incremented there.",
+                "`totalObjects` is re-created every time a method is called."
+              ],
+              "correctAnswer": "`totalObjects` is shared by all objects of the class.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A method that returns information about an object's fields without changing them is commonly called an ______ method.",
+              "options": [
+                "accessor",
+                "mutator",
+                "static",
+                "void"
+              ],
+              "correctAnswer": "accessor",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a field and a constructor parameter have the same name, Java programmers often use ______ to refer to the current object's field.",
+              "options": [
+                "this",
+                "static",
+                "private",
+                "return"
+              ],
+              "correctAnswer": "this",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Array",
+      "description": "1D arrays, array traversal, algorithms (search, sort, min/max), and off-by-one errors.",
+      "note": "# Unit 6: Array\n\n## Overview\nIn this unit, you learn how to use **one-dimensional arrays** to store and process multiple values of the same type in Java. This matters on the AP exam because array questions often test **traversal**, **index boundaries**, and common algorithms like **searching**, **finding extrema**, and **sorting**, especially through code tracing and error analysis.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **1D Array** | An indexed collection of elements of the same type stored in a single variable. | AP questions often require reading, writing, and tracing array-based code. |\n| **Indexing** | Accessing elements by position, starting at $$0$$ and ending at $$\\text{length} - 1$$. | Many multiple-choice errors involve invalid indices and boundary mistakes. |\n| **Array Length** | The built-in field **`array.length`** gives the number of elements. | Students must distinguish **`length`** for arrays from **`length()`** for strings. |\n| **Traversal** | Visiting array elements one at a time, usually with a loop. | Traversal is the foundation for counting, summing, replacing, searching, and printing. |\n| **Sequential Search** | Checking elements one by one until a target is found or the array ends. | A common AP pattern for code tracing and algorithm analysis. |\n| **Min/Max Algorithms** | Comparing elements to track the smallest or largest value seen so far. | Frequently tested as accumulator-style traversal logic. |\n| **Array Mutation** | Changing array contents by assigning new values to elements. | The AP exam often asks whether methods modify the original array or just local variables. |\n| **Off-by-One Errors** | Mistakes caused by using the wrong loop bounds or index values. | One of the most common array bugs on the AP exam. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Create or receive array] --> B[Set initial variables]\n    B --> C[\"Loop from index $$0$$ to $$\\text{length} - 1$$\"]\n    C --> D[Access current element]\n    D --> E{What is the goal?}\n    E --> F[Accumulate total or count]\n    E --> G[Compare for min or max]\n    E --> H[Check for target value]\n    E --> I[Modify element]\n    F --> J[Advance to next index]\n    G --> J\n    H --> J\n    I --> J\n    J --> K{More indices left?}\n    K -->|Yes| C\n    K -->|No| L[Return or use result]\n```\n\nThis diagram captures the main **array traversal pattern**: initialize, loop through valid indices, process each element, and stop after the final index.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Valid indices** | For an array of length $$n$$, valid indices are $$0$$ through $$n - 1$$. |\n| **Length field** | Use **`arr.length`**, not **`arr.length()`**. |\n| **Array creation** | Example: **`int[] nums = new int[5];`** creates an array with length $$5$$. |\n| **Default values** | Numeric arrays default to $$0$$, **`boolean`** arrays default to **`false`**, and reference-type arrays default to **`null`**. |\n| **Typical traversal loop** | **`for (int i = 0; i < arr.length; i++)`** accesses every valid index exactly once. |\n| **Last element** | The last element is at index **`arr.length - 1`**. |\n| **Sequential search rule** | Continue checking until the target is found or all elements have been examined. |\n| **Min/Max initialization** | A common pattern is to start with the first element, then compare the rest. |\n| **Enhanced for loop** | **`for (int value : arr)`** visits each element value, but does not directly provide the index. |\n| **Mutation rule** | Assigning **`arr[i] = newValue`** changes the actual array element. Changing only a loop variable does not. |\n\n### Common algorithm patterns\n\n- **Sum / count pattern**: initialize an accumulator, then update it during traversal.\n- **Search pattern**: use a **boolean** flag or return early when the target is found.\n- **Min/max pattern**: compare each element against the current best value.\n- **Replace pattern**: check a condition, then assign a new value to **`arr[i]`**.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Connect** | **Key Difference** |\n|---|---|---|\n| **Traditional for loop** vs. **enhanced for loop** | Both traverse arrays. | A **traditional for loop** gives access to the index; an **enhanced for loop** gives only the element value. |\n| **Sequential search** vs. **min/max traversal** | Both examine elements one at a time. | **Sequential search** looks for a target match; **min/max** compares all elements to find an extreme. |\n| **Reading an element** vs. **modifying an element** | Both use indexed access. | Reading uses **`arr[i]`** in an expression; modifying uses **`arr[i] = ...`** in an assignment. |\n| **Valid boundary** vs. **off-by-one error** | Both involve loop conditions and index limits. | A valid loop stops before index $$\\text{length}$$; an off-by-one loop may go too far or miss an element. |\n\n```mermaid\nflowchart LR\n    A[Traditional for loop] --> B[Has index]\n    A --> C[Can modify by position]\n    D[Enhanced for loop] --> E[Gets each value]\n    D --> F[Good for read-only traversal]\n```\n\n## Common AP Exam Traps\n\n- Confusing **`arr.length`** with **`String.length()`**. Arrays use a **field**, not a method.\n- Writing loop bounds incorrectly, such as **`i <= arr.length`**, which causes access past the last valid index.\n- Forgetting that arrays start at index $$0$$, not $$1$$.\n- Assuming an **enhanced for loop** can directly change array elements by assigning to the loop variable.\n- Initializing **min** or **max** incorrectly, especially when arrays may contain negative numbers or nonzero starting values.\n\n## Quick Review Checklist\n\n- [ ] I can explain what a **one-dimensional array** is and how it differs from a single variable.\n- [ ] I can identify the valid index range as $$0$$ through $$\\text{length} - 1$$.\n- [ ] I can write and trace a **for loop** that traverses every element in an array.\n- [ ] I can use **`arr.length`** correctly in loop conditions and expressions.\n- [ ] I can write or trace code that computes a **sum**, **count**, **minimum**, or **maximum** from an array.\n- [ ] I can explain how **sequential search** works and when it stops.\n- [ ] I can distinguish between **reading** an array element and **modifying** an array element.\n- [ ] I can spot and correct **off-by-one errors** in array code.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Array",
+              "definition": "An object that stores a fixed number of elements of the same type, with each element accessed by an integer index beginning at $$0$$."
+            },
+            {
+              "term": "Index",
+              "definition": "The integer position used to access an element in a sequence, where the first valid position is $$0$$ and the last valid position is one less than the total number of elements."
+            },
+            {
+              "term": "Traversal",
+              "definition": "The process of visiting each element in a sequence, usually with a loop, in order to inspect or update values."
+            },
+            {
+              "term": "array.length",
+              "definition": "A public attribute that gives the total number of elements stored in a sequence object and is commonly used as the loop bound."
+            },
+            {
+              "term": "Off-by-one error",
+              "definition": "A logic mistake in which a loop or index calculation goes one position too far or stops one position too early, often causing missed elements or an out-of-bounds access."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the following code segment:\n\n```java\nint[] values = {4, 7, 1, 9, 2};\nint sum = 0;\nfor (int i = 0; i < values.length - 1; i++) {\n    sum += values[i];\n}\n```\n\nWhat value is stored in `sum` after the code executes?",
+              "options": [
+                "$$23$$",
+                "$$21$$",
+                "$$16$$",
+                "$$19$$"
+              ],
+              "correctAnswer": "$$21$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the following method.\n\n```java\npublic static int countEven(int[] nums) {\n    int count = 0;\n    for (int k = 0; k < nums.length; k++) {\n        if (nums[k] % 2 == 0) {\n            count++;\n        }\n    }\n    return count;\n}\n```\n\nWhich statement best describes the method?",
+              "options": [
+                "It returns the number of elements whose index is even.",
+                "It returns the number of elements whose value is even.",
+                "It returns the sum of the even elements.",
+                "It returns the last even element in the array."
+              ],
+              "correctAnswer": "It returns the number of elements whose value is even.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Java, the last valid index of an array named `data` is `data.length ______`.",
+              "options": [
+                "- 1",
+                "+ 1",
+                "/ 2",
+                "* 2"
+              ],
+              "correctAnswer": "- 1",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "To visit every element of an array from the first position to the last without causing an out-of-bounds error, a standard loop condition is `i ______ arr.length`.",
+              "options": [
+                "<",
+                "<=",
+                ">",
+                ">="
+              ],
+              "correctAnswer": "<",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Linear search",
+              "definition": "A step-by-step algorithm that checks elements one at a time until a target is found or all positions have been examined."
+            },
+            {
+              "term": "Minimum value algorithm",
+              "definition": "A process that begins with an initial candidate and compares later elements against it, replacing the candidate whenever a smaller value is encountered."
+            },
+            {
+              "term": "Maximum value algorithm",
+              "definition": "A process that begins with an initial candidate and compares later elements against it, replacing the candidate whenever a larger value is encountered."
+            },
+            {
+              "term": "Selection sort",
+              "definition": "A sorting process that repeatedly identifies the smallest value in the unsorted portion and exchanges it with the element at the current position."
+            },
+            {
+              "term": "Swap",
+              "definition": "An operation that exchanges the values stored in two positions, typically using a temporary variable to avoid losing one of the values."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the following method.\n\n```java\npublic static int mystery(int[] arr, int target) {\n    for (int i = 0; i < arr.length; i++) {\n        if (arr[i] == target) {\n            return i;\n        }\n    }\n    return -1;\n}\n```\n\nAssume `arr` contains no duplicate values. What does the method return?",
+              "options": [
+                "The number of times `target` appears in `arr`",
+                "The index of `target` if it is present; otherwise `-1`",
+                "The value in `arr` closest to `target`",
+                "The largest index in `arr`"
+              ],
+              "correctAnswer": "The index of `target` if it is present; otherwise `-1`",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the following code segment.\n\n```java\nint[] data = {5, 3, 8, 1, 6};\nint minIndex = 0;\nfor (int j = 1; j < data.length; j++) {\n    if (data[j] < data[minIndex]) {\n        minIndex = j;\n    }\n}\n```\n\nWhat is the value of `minIndex` after the loop finishes?",
+              "options": [
+                "$$0$$",
+                "$$1$$",
+                "$$3$$",
+                "$$4$$"
+              ],
+              "correctAnswer": "$$3$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a correct algorithm for finding the largest element in a nonempty integer array `nums`, a common initialization is `int max = nums[______];`.",
+              "options": [
+                "0",
+                "1",
+                "nums.length - 1",
+                "nums.length"
+              ],
+              "correctAnswer": "0",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "During selection sort in ascending order, after each pass, the element placed at position `k` is the ______ element from the remaining unsorted portion.",
+              "options": [
+                "smallest",
+                "largest",
+                "middle",
+                "duplicate"
+              ],
+              "correctAnswer": "smallest",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "unitName": "ArrayList",
+      "description": "ArrayList class, add/remove/get/set methods, traversal with iterators and enhanced for loops.",
+      "note": "# Unit 7: ArrayList\n\n## Overview\nThis unit introduces the **`ArrayList`** class in Java, a resizable list structure that stores object references and supports dynamic insertion, deletion, and access. For the AP Computer Science A exam, you must understand how to **create**, **modify**, and **traverse** an **`ArrayList`**, while also predicting how method calls affect indices, size, and program behavior.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **`ArrayList`** | A class in **`java.util`** that stores a sequence of object references and can grow or shrink in size | Frequently tested as a contrast with arrays; you must know syntax and behavior |\n| **Generic type parameter** | The type inside angle brackets, such as **`ArrayList<String>`** or **`ArrayList<Integer>`** | AP questions often check whether you know an **`ArrayList`** stores a specific object type |\n| **Zero-based indexing** | Elements are numbered starting at index $$0$$ | Essential for predicting outputs and avoiding **`IndexOutOfBoundsException`** |\n| **`add` methods** | **`add(element)`** appends; **`add(index, element)`** inserts at a position | Insertion changes later indices, which is a common exam trap |\n| **`get` and `set`** | **`get(index)`** retrieves an element; **`set(index, element)`** replaces one | AP problems often ask you to trace changes without confusing replacement and insertion |\n| **`remove` methods** | **`remove(index)`** deletes an element at a position; for object types, removal shifts later elements left | Students must track changes to **size** and index positions after removal |\n| **Traversal** | Visiting each element using a **for loop**, **enhanced for loop**, or sometimes an **iterator-style pattern** | You must choose the correct traversal style, especially when modifying the list |\n| **Wrapper classes** | Object versions of primitive types, such as **`Integer`** for **`int`** | **`ArrayList`** stores objects, not primitives, so this appears often in syntax questions |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Create an ArrayList] --> B[Add elements]\n    B --> C[Access elements with get]\n    C --> D[Update elements with set]\n    D --> E[Remove or insert elements]\n    E --> F[Traverse list to process data]\n    F --> G[Track size and shifting indices]\n```\n\n### Typical workflow for working with an `ArrayList`\n1. **Declare and instantiate** the list.\n   - Example: **`ArrayList<String> names = new ArrayList<String>();`**\n2. **Add elements** using **`add`**.\n   - Append to the end or insert at a specific index.\n3. **Access elements** using **`get(index)`**.\n4. **Modify elements** using **`set(index, newValue)`**.\n5. **Remove elements** using **`remove(index)`** when needed.\n6. **Traverse** the list to inspect, count, update, or compare elements.\n7. Always keep track of:\n   - the current **size**\n   - valid index range: $$0$$ through **`size() - 1`**\n   - how insertion/removal causes **index shifting**\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Valid index range** | For a list of size $$n$$, valid indices are $$0$$ through $$n - 1$$ |\n| **Size of an `ArrayList`** | Use **`list.size()`**, not a field like array **`length`** |\n| **Append with `add`** | **`list.add(x)`** places **`x`** at the end and increases size by $$1$$ |\n| **Insert with indexed `add`** | **`list.add(i, x)`** inserts at index $$i$$; elements at $$i$$ and later shift right |\n| **Access with `get`** | **`list.get(i)`** returns the element at index $$i$$ without changing the list |\n| **Replace with `set`** | **`list.set(i, x)`** changes the element at index $$i$$ but does **not** change size |\n| **Remove by index** | **`list.remove(i)`** deletes the element at index $$i$$; later elements shift left and size decreases by $$1$$ |\n| **Object types only** | **`ArrayList`** stores objects, so use **`Integer`**, **`Double`**, **`Boolean`**, etc. instead of primitive types |\n| **Enhanced for loop rule** | Use it for reading or processing elements; do **not** rely on it when you need index control or structural modification |\n\n### Must-know syntax\n- **Declaration and construction**\n  - **`ArrayList<Type> list = new ArrayList<Type>();`**\n- **Examples**\n  - **`ArrayList<Integer> nums = new ArrayList<Integer>();`**\n  - **`nums.add(5);`**\n  - **`nums.get(0);`**\n  - **`nums.set(0, 9);`**\n  - **`nums.remove(0);`**\n\n## Connections & Comparisons\n\n| **Concept 1** | **Concept 2** | **Key Difference / Connection** |\n|---|---|---|\n| **Array** | **`ArrayList`** | Arrays have fixed size; **`ArrayList`** can grow and shrink |\n| **`add(index, element)`** | **`set(index, element)`** | **`add`** inserts and shifts elements; **`set`** replaces without shifting |\n| **Regular `for` loop** | **Enhanced `for` loop** | Regular **for** gives index control; enhanced **for** is simpler for reading each element |\n| **`remove(index)`** | **`get(index)`** | **`remove`** changes size and shifts elements; **`get`** only accesses data |\n\n```mermaid\nflowchart LR\n    A[Array] --> B[Fixed size]\n    C[ArrayList] --> D[Dynamic size]\n    E[for loop] --> F[Index available]\n    G[enhanced for loop] --> H[Element-focused traversal]\n```\n\n## Common AP Exam Traps\n- Confusing **`list.size()`** with array **`length`**. An **`ArrayList`** uses a **method**, not a field.\n- Forgetting that indices begin at $$0$$, so the last valid index is **`size() - 1`**.\n- Mixing up **`add(index, element)`** and **`set(index, element)`**:\n  - **`add`** inserts and shifts\n  - **`set`** replaces only\n- Removing elements during forward traversal without adjusting the index, which can skip elements after shifting.\n- Trying to store a primitive type directly, such as **`ArrayList<int>`**, instead of using a wrapper class like **`ArrayList<Integer>`**.\n\n## Quick Review Checklist\n- [ ] I can declare and instantiate an **`ArrayList`** with the correct generic type.\n- [ ] I can explain the difference between **arrays** and **`ArrayList`**.\n- [ ] I can use **`add`**, **`get`**, **`set`**, and **`remove`** correctly.\n- [ ] I can predict how insertion or deletion changes indices and list size.\n- [ ] I can identify the valid index range for any **`ArrayList`** of size $$n$$.\n- [ ] I can traverse an **`ArrayList`** using both a regular **for loop** and an **enhanced for loop**.\n- [ ] I can decide when index-based traversal is better than an enhanced **for** loop.\n- [ ] I can recognize common errors such as out-of-bounds access and wrapper-class misuse.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "ArrayList",
+              "definition": "A resizable ordered collection in Java that stores object references, supports indexed access, and is part of the java.util library."
+            },
+            {
+              "term": "add(E obj)",
+              "definition": "A method that appends an element to the end of a list, increasing its size by 1."
+            },
+            {
+              "term": "add(int index, E obj)",
+              "definition": "A method that inserts an element at a specified position, shifts subsequent elements one position to the right, and increases the size by 1."
+            },
+            {
+              "term": "get(int index)",
+              "definition": "A method that returns the element stored at a specified valid position without changing the collection."
+            },
+            {
+              "term": "set(int index, E obj)",
+              "definition": "A method that replaces the element at a specified valid position and returns the element that was previously stored there."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the code: ArrayList<Integer> nums = new ArrayList<Integer>(); nums.add(4); nums.add(7); nums.add(1, 5); What is stored in nums after execution?",
+              "options": [
+                "[4, 7, 5]",
+                "[5, 4, 7]",
+                "[4, 5, 7]",
+                "[7, 5, 4]"
+              ],
+              "correctAnswer": "[4, 5, 7]",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Assume ArrayList<String> words contains [\"cat\", \"dog\", \"owl\"]. Which statement best describes the effect of words.set(1, \"ant\")?",
+              "options": [
+                "The list becomes [\"cat\", \"ant\", \"owl\"] and the method returns \"dog\".",
+                "The list becomes [\"cat\", \"dog\", \"ant\", \"owl\"] and the method returns \"dog\".",
+                "The list becomes [\"cat\", \"ant\", \"owl\"] and the method returns \"ant\".",
+                "The list becomes [\"ant\", \"cat\", \"dog\", \"owl\"] and the method returns \"cat\"."
+              ],
+              "correctAnswer": "The list becomes [\"cat\", \"ant\", \"owl\"] and the method returns \"dog\".",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In an indexed collection with valid positions from $$0$$ through $$size() - 1$$, the call to access the element at position $$k$$ is ______.",
+              "options": [
+                "get(k)",
+                "set(k)",
+                "add(k)",
+                "remove(k)"
+              ],
+              "correctAnswer": "get(k)",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When an element is inserted at a specific valid position in an ArrayList, elements at and after that position are shifted ______.",
+              "options": [
+                "one position to the left",
+                "one position to the right",
+                "to index $$0$$",
+                "out of the list permanently"
+              ],
+              "correctAnswer": "one position to the right",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "remove(int index)",
+              "definition": "A method that deletes the element at a specified valid position, shifts later elements one position to the left, decreases the size by 1, and returns the removed element."
+            },
+            {
+              "term": "size()",
+              "definition": "A method that returns the current number of elements stored in the collection."
+            },
+            {
+              "term": "Enhanced for loop",
+              "definition": "A traversal structure that processes each element in sequence without using an explicit index variable; it is useful when elements are read but not structurally modified during traversal."
+            },
+            {
+              "term": "Iterator",
+              "definition": "An object used to traverse a collection sequentially, typically through method calls that check for remaining elements and access the next element."
+            },
+            {
+              "term": "Index shifting during removal",
+              "definition": "The change in positions that occurs after deletion, causing each later element to move to a smaller index by 1."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the code: ArrayList<Integer> vals = new ArrayList<Integer>(); vals.add(2); vals.add(4); vals.add(6); vals.add(8); vals.remove(1); What are the contents of vals after execution?",
+              "options": [
+                "[2, 4, 6]",
+                "[2, 6, 8]",
+                "[4, 6, 8]",
+                "[2, 8, 6]"
+              ],
+              "correctAnswer": "[2, 6, 8]",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A programmer wants to examine every element of an ArrayList<String> names and print each value without changing the list structure. Which approach is most appropriate?",
+              "options": [
+                "Use an enhanced for loop to visit each element in order.",
+                "Use set inside a loop to reduce the size of the list.",
+                "Use add with index $$0$$ repeatedly to traverse the list.",
+                "Use remove in a forward loop so that all elements stay at the same index."
+              ],
+              "correctAnswer": "Use an enhanced for loop to visit each element in order.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When traversing an ArrayList with a standard for loop, the expression commonly used as the upper bound is ______.",
+              "options": [
+                "list.length",
+                "list.size()",
+                "list.capacity()",
+                "list.lastIndex()"
+              ],
+              "correctAnswer": "list.size()",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "After remove(i) is called on an ArrayList, the element that had been at index $$i + 1$$ will move to ______.",
+              "options": [
+                "index $$i$$",
+                "index $$i + 1$$",
+                "index $$i - 1$$",
+                "the end of the list"
+              ],
+              "correctAnswer": "index $$i$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 8,
+      "unitName": "2D Array",
+      "description": "2D arrays, row-major traversal, column traversal, and algorithms on 2D array data.",
+      "note": "# Unit 8: 2D Array\n\n## Overview\nIn this unit, you learn how **2D arrays** store data in a grid of **rows** and **columns**, and how to write algorithms that traverse, access, and modify that data. This matters on the AP Exam because questions often test your ability to read nested loops, predict output, and write correct code for **row-major** and **column-based** processing.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **2D Array Structure** | An array whose elements are themselves arrays, forming a table-like structure. | You must understand how data is organized and accessed in Java using **row** and **column** indices. |\n| **Row and Column Indices** | Each element is identified by **array[row][col]**. | AP questions often test whether you can correctly interpret index positions and avoid off-by-one errors. |\n| **Row-Major Order** | Traversing the array one row at a time, left to right within each row. | This is the most common traversal pattern used in FRQs and MCQs. |\n| **Column Traversal** | Traversing one column at a time, top to bottom across rows. | Students often confuse this with row-major order; the AP exam uses this as a common twist. |\n| **Nested Loops** | A loop inside another loop, usually used to process all elements in a 2D array. | You must know which loop controls rows and which controls columns. |\n| **Array Dimensions** | The number of rows and the number of columns in each row. | You need to use **array.length** and **array[r].length** correctly when writing loops. |\n| **Element Updates** | Changing values based on a condition, neighbor, row, or column. | FRQs frequently ask you to modify array contents using a specific rule. |\n| **2D Array Algorithms** | Operations like sum, search, count, replace, or finding max/min across the grid. | This is the core of Unit 8 free-response coding tasks. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start with 2D array] --> B{Choose traversal pattern}\n    B --> C[Row-major traversal]\n    B --> D[Column traversal]\n    C --> E[Outer loop over rows]\n    E --> F[Inner loop over columns]\n    F --> G[Process array[row][col]]\n    D --> H[Outer loop over columns]\n    H --> I[Inner loop over rows]\n    I --> J[Process array[row][col]]\n    G --> K[Update sum count max min or value]\n    J --> K\n    K --> L[Repeat until all valid indices visited]\n```\n\n### Typical row-major pattern\n1. Loop through each **row**.\n2. For each row, loop through each **column**.\n3. Access the current element with **array[r][c]**.\n4. Perform the required task: **sum**, **count**, **replace**, **search**, or **compare**.\n\n### Typical column traversal pattern\n1. Loop through each **column** first.\n2. For each column, loop through each **row**.\n3. Access the current element with **array[r][c]**.\n4. Be careful that the index order in access is still **row, then column**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Element access** | Use $$\\texttt{array[row][col]}$$ to access a value. The first index is the **row**, the second is the **column**. |\n| **Number of rows** | $$\\texttt{array.length}$$ gives the total number of rows. |\n| **Number of columns in a row** | $$\\texttt{array[r].length}$$ gives the number of columns in row $$r$$. |\n| **Valid row indices** | If there are $$n$$ rows, valid row indices are $$0$$ through $$n - 1$$. |\n| **Valid column indices** | If row $$r$$ has $$m$$ columns, valid column indices are $$0$$ through $$m - 1$$. |\n| **Row-major traversal pattern** | Outer loop over rows, inner loop over columns. |\n| **Column traversal pattern** | Outer loop over columns, inner loop over rows. |\n| **Jagged array caution** | In Java, a 2D array can have rows of different lengths, so use $$\\texttt{array[r].length}$$ instead of assuming all rows match. |\n| **Common accumulator pattern** | Initialize a variable such as $$\\texttt{sum = 0}$$ or $$\\texttt{count = 0}$$ before traversal, then update it inside the nested loop. |\n\n### Generic row-major loop\n$$\n\\texttt{for (int r = 0; r < array.length; r++)}\n$$\n$$\n\\texttt{\\ \\ \\ for (int c = 0; c < array[r].length; c++)}\n$$\n$$\n\\texttt{\\ \\ \\ \\ \\ process(array[r][c]);}\n$$\n\n### Generic column traversal loop\n$$\n\\texttt{for (int c = 0; c < array[0].length; c++)}\n$$\n$$\n\\texttt{\\ \\ \\ for (int r = 0; r < array.length; r++)}\n$$\n$$\n\\texttt{\\ \\ \\ \\ \\ process(array[r][c]);}\n$$\n\n## Connections & Comparisons\n\n| **Concept** | **Compared With** | **Key Difference / Connection** |\n|---|---|---|\n| **1D Array** | **2D Array** | A **1D array** uses one index, while a **2D array** uses two indices: $$\\texttt{array[i]}$$ vs. $$\\texttt{array[r][c]}$$. |\n| **Row-Major Traversal** | **Column Traversal** | Row-major processes all columns in one row before moving to the next row; column traversal processes all rows in one column before moving to the next column. |\n| **Outer Loop** | **Inner Loop** | The **outer loop** chooses the larger grouping being traversed first; the **inner loop** completes the smaller grouping inside it. |\n| **Reading Elements** | **Modifying Elements** | Reading only inspects values; modifying changes array contents, so assignment statements must target a valid element like $$\\texttt{array[r][c] = ...}$$. |\n\n```mermaid\nflowchart LR\n    A[1D array] --> B[Single index]\n    C[2D array] --> D[Row index plus column index]\n    E[Row-major] --> F[Rows first then columns]\n    G[Column traversal] --> H[Columns first then rows]\n```\n\n## Common AP Exam Traps\n\n- Confusing **row** and **column** order. In Java, **array[r][c]** always means **row first, column second**.\n- Using **array.length** for both dimensions. Remember: $$\\texttt{array.length}$$ is rows, but columns are usually $$\\texttt{array[r].length}$$.\n- Reversing traversal logic: a loop can traverse by columns even though access still uses $$\\texttt{array[r][c]}$$.\n- Making **off-by-one** mistakes by looping to **$$\\le$$ length** instead of **$$<$$ length**.\n- Assuming every row has the same number of columns. Java allows **jagged arrays**, so row lengths may differ.\n\n## Quick Review Checklist\n\n- [ ] I can explain what a **2D array** is and how it differs from a **1D array**.\n- [ ] I can correctly access an element using $$\\texttt{array[row][col]}$$.\n- [ ] I can identify the number of rows using $$\\texttt{array.length}$$.\n- [ ] I can identify the number of columns in a row using $$\\texttt{array[r].length}$$.\n- [ ] I can write a **row-major traversal** using nested loops.\n- [ ] I can write a **column traversal** using nested loops.\n- [ ] I can trace or write algorithms that **sum**, **count**, **search**, or **replace** values in a 2D array.\n- [ ] I can avoid common indexing errors, especially **off-by-one** mistakes and row/column confusion.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "2D array declaration",
+              "definition": "A structure that stores references to one-dimensional arrays, forming rows and columns under a single variable name."
+            },
+            {
+              "term": "Row-major traversal",
+              "definition": "A nested-loop pattern that processes every element by completing one row before moving to the next, typically using the outer loop for row indices and the inner loop for column indices."
+            },
+            {
+              "term": "Element access with indices",
+              "definition": "The process of retrieving or modifying a value using two integer positions, where the first selects a row and the second selects a column."
+            },
+            {
+              "term": "Rectangular array",
+              "definition": "A grid-like arrangement in which each row has the same number of columns, allowing a consistent column bound across all rows."
+            },
+            {
+              "term": "ArrayIndexOutOfBoundsException in 2D arrays",
+              "definition": "A runtime error that occurs when a program uses a row or column index outside the valid range for the referenced row."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the code segment:\n```java\nint[][] values = {\n  {1, 2, 3},\n  {4, 5, 6}\n};\nint sum = 0;\nfor (int r = 0; r < values.length; r++) {\n  for (int c = 0; c < values[0].length; c++) {\n    sum += values[r][c];\n  }\n}\n```\nWhat is the value of `sum` after execution?",
+              "options": [
+                "$$21$$",
+                "$$18$$",
+                "$$15$$",
+                "$$12$$"
+              ],
+              "correctAnswer": "$$21$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Given the declaration `int[][] data = new int[4][3];`, which expression evaluates to the number of columns in row `2`?",
+              "options": [
+                "`data.length`",
+                "`data[2].length`",
+                "`data[0][2]`",
+                "`data[2][0]`"
+              ],
+              "correctAnswer": "`data[2].length`",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a standard row-major traversal of a rectangular `int[][] grid`, the loop variable that should usually control the inner loop is the ______ index.",
+              "options": [
+                "row",
+                "column",
+                "array",
+                "length"
+              ],
+              "correctAnswer": "column",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For `String[][] names = new String[5][7];`, the valid row indices are `0` through ______.",
+              "options": [
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "correctAnswer": "4",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Column traversal",
+              "definition": "A nested-loop pattern that processes all entries in one vertical set before moving to the next, usually with the outer loop controlling columns."
+            },
+            {
+              "term": "Jagged array",
+              "definition": "A two-dimensional structure in which different rows may have different lengths, so the column bound may vary by row."
+            },
+            {
+              "term": "Enhanced for loop on 2D arrays",
+              "definition": "A traversal style that iterates through each row reference and then each element within that row, useful when indices are not needed."
+            },
+            {
+              "term": "2D array search algorithm",
+              "definition": "A process that examines elements systematically in nested loops to determine whether a target value exists or to locate matching positions."
+            },
+            {
+              "term": "2D array accumulation algorithm",
+              "definition": "A procedure that combines element values across rows or columns to compute a result such as a total, count, maximum, or average."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the code segment:\n```java\nint[][] mat = {\n  {3, 1, 4},\n  {1, 5, 9},\n  {2, 6, 5}\n};\nint total = 0;\nfor (int c = 0; c < mat[0].length; c++) {\n  total += mat[1][c];\n}\n```\nWhat value is stored in `total` after execution?",
+              "options": [
+                "$$6$$",
+                "$$10$$",
+                "$$15$$",
+                "$$18$$"
+              ],
+              "correctAnswer": "$$15$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A programmer writes the following code for a possibly jagged array `int[][] arr`:\n```java\nfor (int r = 0; r < arr.length; r++) {\n  for (int c = 0; c < arr[0].length; c++) {\n    System.out.println(arr[r][c]);\n  }\n}\n```\nWhy can this code fail for some valid `arr` values?",
+              "options": [
+                "Because `arr.length` should always be replaced with `arr[0].length`",
+                "Because some rows may have fewer columns than row `0`",
+                "Because nested loops cannot be used with two-dimensional arrays",
+                "Because `System.out.println` cannot display integer values from arrays"
+              ],
+              "correctAnswer": "Because some rows may have fewer columns than row `0`",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When traversing a possibly jagged `int[][] arr`, the safest upper bound for the inner loop is ______.",
+              "options": [
+                "`arr.length`",
+                "`arr[r].length`",
+                "`arr[0].length`",
+                "`arr.length - 1`"
+              ],
+              "correctAnswer": "`arr[r].length`",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If an algorithm visits every element in one column before moving to the next column, it is using ______ traversal.",
+              "options": [
+                "row-major",
+                "column",
+                "diagonal",
+                "random"
+              ],
+              "correctAnswer": "column",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 9,
+      "unitName": "Inheritance",
+      "description": "Superclasses and subclasses, the extends keyword, method overriding, polymorphism, and abstract classes.",
+      "note": "# Unit 9: Inheritance\n\n## Overview\n**Inheritance** lets one class reuse and extend the behavior of another, creating a relationship between a **superclass** and a **subclass**. In AP Computer Science A, this unit matters because many exam questions test your ability to reason about **method overriding**, **polymorphism**, **constructor behavior**, and which methods or variables are accessible through different reference types.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Superclass** | A more general class whose fields and methods can be inherited by other classes. | You must identify what behavior is inherited and how shared code is organized. |\n| **Subclass** | A more specific class that **extends** a superclass and may add or modify behavior. | AP questions often ask what additional behavior a subclass has or how it differs from its superclass. |\n| **`extends` keyword** | Java keyword used to declare that one class inherits from another. | You need to read class headers correctly and understand the inheritance hierarchy. |\n| **Inherited members** | **Fields** and **methods** from the superclass that become part of the subclass, subject to access rules. | The exam tests whether a subclass can use methods from its superclass and when access is allowed. |\n| **Method overriding** | A subclass provides its own version of a superclass method with the same signature. | Very common on the AP exam; you must determine which version of a method is executed. |\n| **`super`** | Refers to the superclass; often used to call a superclass constructor or method. | Important for constructor chaining and for extending rather than fully replacing superclass behavior. |\n| **Polymorphism** | A superclass reference can refer to a subclass object. | AP questions frequently test what methods can be called and which implementation runs at runtime. |\n| **Abstract class** | A class that cannot be instantiated and may contain **abstract methods** that subclasses must implement. | You need to understand when a class is incomplete and how subclasses provide required behavior. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Define superclass] --> B[Create subclass using extends]\n    B --> C[Subclass inherits accessible fields and methods]\n    C --> D[Subclass may add new fields or methods]\n    C --> E[Subclass may override inherited methods]\n    B --> F[Constructor runs]\n    F --> G[Call to super constructor first]\n    G --> H[Superclass part of object is initialized]\n    H --> I[Subclass constructor finishes initialization]\n    E --> J[Polymorphic call through superclass reference]\n    J --> K[Runtime chooses overridden method in actual object]\n```\n\n### Typical relationship pattern\n1. Write a **general superclass** for shared state and behavior.\n2. Use **`extends`** to create a **more specific subclass**.\n3. Inherit accessible methods and fields from the superclass.\n4. **Override** methods when subclass behavior should differ.\n5. Use **`super(...)`** in constructors to initialize the inherited part of the object.\n6. Apply **polymorphism** when storing subclass objects in superclass references.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Inheritance declaration** | A subclass is declared with **`class Subclass extends Superclass`**. |\n| **\"Is-a\" relationship** | If **`Dog extends Animal`**, then a **Dog** object **is an** **Animal**. |\n| **Constructor chaining** | A subclass constructor calls the superclass constructor, explicitly with **`super(...)`** or implicitly with a no-argument superclass constructor. |\n| **Order of initialization** | The **superclass constructor executes before** the subclass constructor finishes. |\n| **Overriding rule** | To override, the subclass method must have the **same name and parameter list** as the superclass method. |\n| **Polymorphic reference rule** | A variable of superclass type can reference an object of a subclass type. |\n| **Method call rule** | The **reference type** determines what methods are callable at compile time; the **object type** determines which overridden method runs at runtime. |\n| **Field access rule** | Fields are **not polymorphic** in the same way methods are; AP emphasis is primarily on methods, not hidden fields. |\n| **Abstract class rule** | An **abstract class** cannot be instantiated directly. A subclass must implement inherited abstract methods unless it is also abstract. |\n\n### Key vocabulary definitions\n- **Inheritance**: A mechanism for code reuse and specialization between classes.\n- **Override**: Replace inherited method behavior with a subclass-specific version.\n- **Polymorphism**: One reference type representing objects of multiple related actual types.\n- **Abstract method**: A method declared without implementation in an abstract class.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Relate** | **Critical Difference** |\n|---|---|---|\n| **Superclass vs. Subclass** | The subclass inherits from the superclass. | The superclass is more general; the subclass is more specialized. |\n| **Overloading vs. Overriding** | Both involve methods with the same name. | **Overloading** changes parameter lists; **overriding** keeps the same signature and changes behavior in a subclass. |\n| **Reference type vs. Object type** | Both affect how code behaves with polymorphism. | The **reference type** limits visible methods; the **object type** determines the overridden method actually executed. |\n| **Concrete class vs. Abstract class** | Both can define fields and methods. | A **concrete class** can be instantiated; an **abstract class** cannot. |\n\n```mermaid\nflowchart LR\n    A[Superclass reference] --> B[Can point to subclass object]\n    B --> C[Compile time: methods checked by reference type]\n    C --> D[Runtime: overridden method chosen by object type]\n```\n\n## Common AP Exam Traps\n- Confusing the **reference type** with the **object type**. A variable declared as the superclass type may refer to a subclass object, but you can only call methods available in the superclass reference type.\n- Forgetting that **overridden methods use runtime binding**. If a subclass overrides a method, the subclass version runs when the actual object is that subclass.\n- Assuming a subclass constructor runs first. In Java, the **superclass constructor is invoked before** the subclass constructor completes.\n- Mixing up **overriding** and **overloading**. A changed parameter list means overloading, not overriding.\n- Thinking an **abstract class** can be instantiated. It cannot; only concrete subclasses can create objects.\n\n## Quick Review Checklist\n- [ ] I can explain the difference between a **superclass** and a **subclass**.\n- [ ] I can identify what the **`extends`** keyword means in a class declaration.\n- [ ] I can determine which methods and fields a subclass **inherits**.\n- [ ] I can explain when a method is **overridden** and what effect that has.\n- [ ] I can describe how **`super(...)`** is used in a constructor.\n- [ ] I can trace the **order of constructor calls** in an inheritance hierarchy.\n- [ ] I can predict method behavior using **polymorphism**, including the difference between **reference type** and **object type**.\n- [ ] I can explain what an **abstract class** is and why it cannot be instantiated.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Superclass",
+              "definition": "A class that provides fields and behaviors that other classes can inherit and build on."
+            },
+            {
+              "term": "Subclass",
+              "definition": "A class derived from another class that acquires accessible instance variables and methods while also being able to add new features."
+            },
+            {
+              "term": "extends keyword",
+              "definition": "The Java syntax used in a class header to indicate that one class is derived from another."
+            },
+            {
+              "term": "Inheritance hierarchy",
+              "definition": "An organizational structure showing parent-child class relationships from more general categories to more specific ones."
+            },
+            {
+              "term": "IS-A relationship",
+              "definition": "A classification relationship in which one type is a more specific version of a more general type and can be used where that general type is expected."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A programmer defines class Vehicle with methods start() and stop(). Class Car is declared to derive from Vehicle and adds a method openTrunk(). Which statement best describes the relationship between the two classes?",
+              "options": [
+                "Car inherits accessible behavior from Vehicle and may add its own methods.",
+                "Vehicle inherits all behavior from Car because Car is more specific.",
+                "Car can only use methods it declares itself, not inherited ones.",
+                "Vehicle and Car are unrelated unless they have identical method names."
+              ],
+              "correctAnswer": "Car inherits accessible behavior from Vehicle and may add its own methods.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the declarations below: class Person { ... } and class Student extends Person { ... }. Which statement is correct in AP CSA Java?",
+              "options": [
+                "A Student object can be referenced by a Person variable because a Student is a more specific kind of Person.",
+                "A Person object can always be referenced by a Student variable without a cast because Person is more general.",
+                "Student does not inherit any methods from Person unless they are rewritten.",
+                "The extends keyword makes Person a subclass of Student."
+              ],
+              "correctAnswer": "A Student object can be referenced by a Person variable because a Student is a more specific kind of Person.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Java, when class B is declared as class B extends A, class A is the ______ of class B.",
+              "options": [
+                "superclass",
+                "subclass",
+                "parameter",
+                "interface"
+              ],
+              "correctAnswer": "superclass",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A relationship in which a Dog can be treated as an Animal because Dog is a specialized form of Animal is called an ______ relationship.",
+              "options": [
+                "HAS-A",
+                "IS-A",
+                "loop-control",
+                "constructor-only"
+              ],
+              "correctAnswer": "IS-A",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Method overriding",
+              "definition": "A process in which a derived class provides its own implementation of an inherited method using the same method signature."
+            },
+            {
+              "term": "Polymorphism",
+              "definition": "The ability for a reference of a general type to refer to objects of different specific types, with method calls resolved by the actual object type at runtime."
+            },
+            {
+              "term": "super",
+              "definition": "A Java reference used in a derived class to access inherited constructors or members from the parent class."
+            },
+            {
+              "term": "Abstract class",
+              "definition": "A class that cannot be instantiated and is used to define common structure and incomplete behavior for derived classes."
+            },
+            {
+              "term": "Abstract method",
+              "definition": "A method declared without a body that must be implemented by any concrete derived class."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Assume class Employee has a method getRole() and class Manager extends Employee overrides getRole(). If an Employee variable e refers to a Manager object, what happens when e.getRole() is called?",
+              "options": [
+                "The version defined in Manager executes because runtime method dispatch uses the actual object type.",
+                "The version defined in Employee always executes because the reference type controls all method calls.",
+                "The call is illegal unless e is explicitly cast to Manager first.",
+                "Both versions execute automatically, starting with Employee and then Manager."
+              ],
+              "correctAnswer": "The version defined in Manager executes because runtime method dispatch uses the actual object type.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement about abstract classes in AP CSA Java is correct?",
+              "options": [
+                "An abstract class may contain both implemented methods and methods without bodies.",
+                "An abstract class can be instantiated as long as all its fields are initialized.",
+                "Every method in an abstract class must be abstract.",
+                "A subclass of an abstract class may ignore all inherited abstract methods and still be concrete."
+              ],
+              "correctAnswer": "An abstract class may contain both implemented methods and methods without bodies.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When a subclass provides a new version of an inherited method with the same signature, it is performing method ______.",
+              "options": [
+                "overriding",
+                "overloading",
+                "casting",
+                "instantiation"
+              ],
+              "correctAnswer": "overriding",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In a subclass constructor, the keyword used to invoke the parent class constructor is ______.",
+              "options": [
+                "this",
+                "super",
+                "extends",
+                "static"
+              ],
+              "correctAnswer": "super",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 10,
+      "unitName": "Recursion",
+      "description": "Recursive methods, base cases, recursive calls, and tracing recursive algorithms.",
+      "note": "# Unit 10: Recursion\n\n## Overview\n**Recursion** is a problem-solving technique in which a method calls itself to solve smaller versions of the same problem. In AP Computer Science A, you must understand how **base cases**, **recursive calls**, and **return values** work together, and you must be able to **trace recursive execution** accurately on the exam.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Recursion** | A method solving a problem by calling itself on a smaller or simpler input. | The AP exam may ask you to read, trace, or write recursive methods. |\n| **Base case** | A stopping condition that returns a value without making another recursive call. | Without a correct **base case**, recursion may never stop; AP questions often test whether the base case is correct. |\n| **Recursive case** | The part of the method that reduces the problem and calls itself again. | You must identify whether the recursive call moves toward the base case. |\n| **Call stack** | The runtime structure that keeps track of active method calls and their local variables. | Tracing nested calls and returns is essential for multiple-choice and FRQ reasoning. |\n| **Parameter reduction** | Changing the argument so each recursive call is “closer” to the stopping condition. | AP questions often test whether recursion actually progresses toward termination. |\n| **Return value propagation** | The way returned results move back up through previous method calls. | Students must trace how answers are built as calls finish. |\n| **Recursive tracing** | Following each call, base case, and return step in order. | This is one of the most common recursion skills tested on the AP exam. |\n| **Iterative vs. recursive solutions** | Comparing loops with self-calling methods. | AP may ask which approach a method uses, or how recursion mirrors repetition. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start recursive method call] --> B{Base case reached?}\n    B -->|Yes| C[Return base case value]\n    B -->|No| D[Make recursive call with reduced input]\n    D --> E[Wait for smaller subproblem result]\n    E --> F[Combine result with current step]\n    F --> G[Return value to previous call]\n    C --> G\n```\n\n### How recursive execution unfolds\n1. A method is called with some input.\n2. The method checks the **base case**.\n3. If the base case is true, it returns immediately.\n4. Otherwise, it makes a **recursive call** on a smaller subproblem.\n5. That process repeats until a base case is finally reached.\n6. Then each paused method call resumes and uses the returned value.\n7. Final results are passed back up the **call stack** to the original caller.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Base case rule** | Every recursive method must have at least one **base case** that stops further calls. |\n| **Progress rule** | Each recursive call must move closer to the base case by reducing the problem size or changing the state appropriately. |\n| **Recursive structure** | A recursive method typically has the form: check base case $$\\rightarrow$$ recursive call $$\\rightarrow$$ combine/return result. |\n| **Termination principle** | If no base case is reached, the recursion continues indefinitely and causes a runtime failure such as **stack overflow**. |\n| **Call stack rule** | Each recursive call gets its own local variables and execution state; calls finish in **last-in, first-out** order. |\n| **Tracing rule** | To trace recursion, follow calls downward until the base case, then follow return values upward. |\n| **Equivalence idea** | Many recursive methods could also be written iteratively, but recursion expresses repeated self-similar structure directly. |\n\n### Common recursive pattern\n- **Base case:** return a simple answer.\n- **Recursive case:** solve a smaller version of the problem.\n- **Combine step:** use the smaller answer to build the larger one.\n\n### Example pattern\nFor a factorial-style method:\n\n$$\nf(n) =\n\\begin{cases}\n1 & \\text{if } n = 0 \\\\\nn \\cdot f(n-1) & \\text{if } n > 0\n\\end{cases}\n$$\n\nThis shows the two essential parts:\n- the **base case**: $$f(0) = 1$$\n- the **recursive case**: $$f(n) = n \\cdot f(n-1)$$\n\n## Connections & Comparisons\n\n| **Concept 1** | **Concept 2** | **Connection / Difference** |\n|---|---|---|\n| **Base case** | **Recursive case** | The base case stops recursion; the recursive case continues recursion by reducing the problem. |\n| **Recursive call** | **Return value** | A recursive call pushes execution deeper; a return value brings information back up the call stack. |\n| **Recursion** | **Iteration** | Both repeat work, but recursion uses self-calls while iteration uses loops like **for** or **while**. |\n| **Correct recursion** | **Faulty recursion** | Correct recursion always reaches a base case; faulty recursion may repeat forever or skip needed cases. |\n\n```mermaid\nflowchart LR\n    A[Recursion] --> B[Self-call]\n    A --> C[Base case]\n    A --> D[Smaller subproblem]\n    E[Iteration] --> F[Loop condition]\n    E --> G[Loop variable update]\n    H[Both] --> I[Repetition]\n    H --> J[Algorithm design]\n```\n\n## Common AP Exam Traps\n- Confusing the **base case** with the first method call. The base case is the condition that stops recursion, not simply the starting input.\n- Forgetting that each recursive call has its **own local variables**. Values are not automatically shared across all calls unless passed or returned.\n- Tracing only the downward calls and ignoring how **return values** are combined on the way back up.\n- Assuming a recursive method works just because it has a base case. The recursive call must also make progress toward that base case.\n- Misreading off-by-one conditions, such as using $$n = 1$$ versus $$n = 0$$, which can completely change correctness.\n\n## Quick Review Checklist\n- [ ] I can define **recursion** and explain how a method can call itself.\n- [ ] I can identify the **base case** in a recursive method.\n- [ ] I can explain how the **recursive case** reduces the problem.\n- [ ] I can trace a recursive method call-by-call until the base case is reached.\n- [ ] I can trace how **return values** move back up the **call stack**.\n- [ ] I can determine whether a recursive method will terminate correctly.\n- [ ] I can compare **recursive** and **iterative** approaches to repetition.\n- [ ] I can spot common recursion errors, including missing base cases and non-reducing recursive calls.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Recursive method",
+              "definition": "A method that solves a problem by calling itself on a smaller or simpler input until a stopping condition is reached."
+            },
+            {
+              "term": "Base case",
+              "definition": "A stopping condition that returns a value directly and prevents further self-calls."
+            },
+            {
+              "term": "Recursive call",
+              "definition": "A self-invocation made with an argument that moves the computation toward the stopping condition."
+            },
+            {
+              "term": "Stack frame",
+              "definition": "The runtime record for one method call, storing parameters, local variables, and the return location until that call finishes."
+            },
+            {
+              "term": "Tracing recursion",
+              "definition": "The process of following each method call and return in order to determine intermediate states and the final result."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the method below. What value is returned by $$f(4)$$?\n\n```java\npublic static int f(int n) {\n    if (n <= 1) {\n        return 2;\n    }\n    return f(n - 1) + n;\n}\n```",
+              "options": [
+                "8",
+                "9",
+                "10",
+                "11"
+              ],
+              "correctAnswer": "11",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student writes a recursive method intended to process an integer parameter $$n$$ by repeatedly reducing it until a stopping condition is reached. Which statement best describes a necessary property for the method to work correctly on all intended inputs?",
+              "options": [
+                "Each call must make progress toward a stopping condition that can be reached.",
+                "Each call must create at least two additional self-calls so all cases are covered.",
+                "The method must use a loop inside the recursive case to avoid stack growth.",
+                "The stopping condition should appear after the recursive call so that the smallest case is handled last."
+              ],
+              "correctAnswer": "Each call must make progress toward a stopping condition that can be reached.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a correct recursive algorithm, the ______ is the case that returns a result immediately without making another self-call.",
+              "options": [
+                "base case",
+                "parameter",
+                "stack frame",
+                "traversal"
+              ],
+              "correctAnswer": "base case",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a recursive method is called, a new ______ is pushed onto the call stack to hold that invocation's data.",
+              "options": [
+                "instance variable",
+                "array element",
+                "stack frame",
+                "loop invariant"
+              ],
+              "correctAnswer": "stack frame",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Call stack",
+              "definition": "The ordered collection of active method calls maintained by the runtime, where the most recent invocation completes first."
+            },
+            {
+              "term": "Infinite recursion",
+              "definition": "A pattern of self-calls that never reaches a stopping condition, eventually causing runtime failure from too many active calls."
+            },
+            {
+              "term": "Recursive traversal",
+              "definition": "A strategy for processing a structure by handling one part and then applying the same logic to smaller linked or nested parts."
+            },
+            {
+              "term": "Return value propagation",
+              "definition": "The way computed results move back through suspended method calls as each invocation finishes."
+            },
+            {
+              "term": "Precondition for recursive correctness",
+              "definition": "A required assumption about inputs that ensures the stopping condition can be reached and the algorithm behaves as intended."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the method below. What is returned by $$mystery(1234)$$?\n\n```java\npublic static int mystery(int n) {\n    if (n < 10) {\n        return n;\n    }\n    return mystery(n / 10);\n}\n```",
+              "options": [
+                "1",
+                "4",
+                "10",
+                "123"
+              ],
+              "correctAnswer": "1",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the method below. What is printed when $$show(3)$$ is called?\n\n```java\npublic static void show(int n) {\n    if (n == 0) {\n        return;\n    }\n    System.out.print(n + \" \");\n    show(n - 1);\n    System.out.print(n + \" \");\n}\n```",
+              "options": [
+                "3 2 1",
+                "1 2 3 3 2 1",
+                "3 2 1 1 2 3",
+                "3 3 2 2 1 1"
+              ],
+              "correctAnswer": "3 2 1 1 2 3",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If a recursive method never reaches a stopping condition, the program may terminate with a ______ due to too many active method calls.",
+              "options": [
+                "NullPointerException",
+                "ArrayIndexOutOfBoundsException",
+                "StackOverflowError",
+                "ArithmeticException"
+              ],
+              "correctAnswer": "StackOverflowError",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the method below, the recursive call removes the last digit, so the value returned by $$sumDigits(508)$$ is ______.\n\n```java\npublic static int sumDigits(int n) {\n    if (n < 10) {\n        return n;\n    }\n    return n % 10 + sumDigits(n / 10);\n}\n```",
+              "options": [
+                "8",
+                "13",
+                "50",
+                "508"
+              ],
+              "correctAnswer": "13",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

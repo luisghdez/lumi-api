@@ -1,0 +1,1221 @@
+{
+  "apSubject": "AP Music Theory",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Music Fundamentals: Pitch and Rhythm",
+      "description": "Clefs, note reading, accidentals, rhythm, meter, beat, and time signatures.",
+      "note": "# Unit 1: Music Fundamentals: Pitch and Rhythm\n\n## Overview\nThis unit introduces the basic language of written music: **staff notation**, **clefs**, **pitch names**, **accidentals**, **rhythm values**, **meter**, **beat**, and **time signatures**. These skills are foundational for the AP Music Theory exam because nearly every later task—sight-singing, dictation, analysis, part writing, and score reading—depends on fast, accurate interpretation of pitch and rhythm.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Staff and Note Placement** | The **staff** is the set of five lines and four spaces used to show pitch height; notes are placed on lines/spaces or added with ledger lines. | AP questions assume you can instantly identify written pitches across a range, including notes above and below the staff. |\n| **Clefs** | **Treble**, **bass**, **alto**, and **tenor clefs** assign specific pitches to lines and spaces. | The exam often shifts between clefs; quick clef reading is essential for score analysis and part writing. |\n| **Pitch Names** | Musical pitches use the letter names **A–G**, repeating cyclically in higher or lower octaves. | Accurate pitch naming is required for notation, interval work, melodic dictation, and harmonic analysis later in the course. |\n| **Accidentals** | **Sharps**, **flats**, **naturals**, and sometimes double accidentals raise, lower, or restore a pitch. | AP items often test whether an accidental applies only within a measure and only to the same pitch letter in the same octave. |\n| **Rhythm Values** | Notes and rests have proportional durations such as **whole**, **half**, **quarter**, **eighth**, and **sixteenth**. | Rhythm counting and duration comparison appear in dictation, sight-singing, and notation questions. |\n| **Beat and Pulse** | The **beat** is the regular underlying pulse; rhythms divide or combine beats. | Students must distinguish beat from note value, especially when reading in simple versus compound meter. |\n| **Meter and Time Signatures** | A **time signature** tells how beats are organized into measures. The top number shows beat groupings; the bottom number shows the note value used as the beat unit or subdivision reference. | AP questions frequently test whether you can infer strong/weak beats, bar placement, and simple vs. compound meter. |\n| **Measures and Bar Lines** | **Bar lines** divide music into **measures**, organizing rhythmic patterns according to meter. | Correctly grouping rhythms into measures is essential for notation tasks and rhythmic error checking. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[See the notation] --> B[Identify the clef]\n    B --> C[Read line/space or ledger-line position]\n    C --> D[Assign letter name]\n    D --> E[Apply accidental if present]\n    E --> F[Confirm exact written pitch]\n    A --> G[Read note or rest shape]\n    G --> H[Determine duration value]\n    H --> I[Check dots, beams, or ties]\n    I --> J[Use time signature to locate beat]\n    J --> K[Place rhythm within the measure]\n    F --> L[Combine pitch and rhythm into complete musical event]\n    K --> L\n```\n\nThis reflects the core reading workflow for the unit: determine **what pitch** a symbol represents and **how long** it lasts, then place it correctly in **meter**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Musical Alphabet** | Pitch names move in repeating order: **A, B, C, D, E, F, G**, then back to **A**. |\n| **Staff Reading Rule** | Higher placement on the staff = higher pitch; lower placement = lower pitch. |\n| **Clef Function** | A clef fixes one reference pitch, allowing all other staff positions to be identified relative to it. |\n| **Accidental Rule** | An accidental applies from its appearance to the end of the **measure**, affecting only the **same letter name in the same octave**, unless canceled earlier. |\n| **Natural Sign Rule** | A **natural** cancels a previous sharp or flat on that pitch within the measure. |\n| **Basic Duration Proportions** | Each larger note value usually equals two of the next smaller value in simple division: **1 whole = 2 halves = 4 quarters = 8 eighths = 16 sixteenths**. |\n| **Rest Equivalence** | Rests last the same durations as their corresponding note values. |\n| **Time Signature Meaning** | In a time signature, the **top number** shows how many beats or beat groupings are in a measure; the **bottom number** indicates the note value associated with the beat unit or subdivision framework. |\n| **Simple Meter** | In **simple meter**, the beat divides into **2** equal parts. Examples: **$$\\frac{2}{4}$$**, **$$\\frac{3}{4}$$**, **$$\\frac{4}{4}$$**. |\n| **Compound Meter** | In **compound meter**, the beat divides into **3** equal parts. Examples: **$$\\frac{6}{8}$$**, **$$\\frac{9}{8}$$**, **$$\\frac{12}{8}$$**. |\n| **Measure Completion Rule** | The total duration of notes and rests in a measure must equal the value required by the time signature. |\n| **Tie vs. Slur** | A **tie** connects two notes of the same pitch to combine duration; a **slur** indicates phrasing and does **not** change duration. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection / Difference** | **Why Students Mix Them Up** |\n|---|---|---|\n| **Beat vs. Rhythm** | **Beat** is the steady pulse; **rhythm** is the pattern of durations that happens against that pulse. | Students often assume every written note equals one beat, which is not always true. |\n| **Simple Meter vs. Compound Meter** | **Simple** meters divide the beat by **2**; **compound** meters divide the beat by **3**. | Many students misread **$$\\frac{6}{8}$$** as six separate beats instead of two dotted-quarter beats. |\n| **Accidental vs. Key Signature** | An **accidental** changes a pitch temporarily within a measure; a **key signature** applies throughout the piece unless altered. | Beginners may treat every sharp or flat they see as permanent. |\n| **Tie vs. Slur** | A **tie** affects duration between same pitches; a **slur** marks articulation/phrasing over same or different pitches. | They look visually similar, so students overlook whether pitch is repeated or changed. |\n\n## Common AP Exam Traps\n\n- Confusing the **bottom number** of a time signature with “how many beats there are.” In **$$\\frac{3}{4}$$**, the **3** gives the count of beats; the **4** indicates the **quarter note** as the beat unit.\n- Treating an **accidental** as if it carries into the next measure. It normally does **not**.\n- Forgetting that an accidental affects only the **same pitch letter in the same octave**, not all notes with that name across octaves.\n- Misidentifying **compound meter** by counting written subdivisions instead of felt beats; for example, **$$\\frac{6}{8}$$** usually has **2** beats, not **6**.\n- Mistaking a **tie** for a **slur**, leading to incorrect rhythmic totals.\n\n## Quick Review Checklist\n\n- [ ] I can identify notes on the staff in **treble**, **bass**, **alto**, and **tenor** clefs.\n- [ ] I can determine a note’s **letter name** from its staff position, including ledger lines.\n- [ ] I can explain how **sharps**, **flats**, and **naturals** affect written pitches.\n- [ ] I can apply the rule that an **accidental** lasts for the rest of the **measure** only.\n- [ ] I can name and compare basic **note values** and **rest values**.\n- [ ] I can determine whether a meter is **simple** or **compound** from its time signature.\n- [ ] I can calculate whether the rhythms in a measure add up correctly to the time signature.\n- [ ] I can distinguish **beat** from **rhythm** and **tie** from **slur**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Treble Clef",
+              "definition": "A staff sign that centers on the second line from the bottom, assigning that line the pitch name G above middle C and establishing the reading of higher vocal and instrumental ranges."
+            },
+            {
+              "term": "Bass Clef",
+              "definition": "A staff sign marked by two dots around the fourth line from the bottom, assigning that line the pitch name F below middle C and establishing the reading of lower ranges."
+            },
+            {
+              "term": "Grand Staff",
+              "definition": "A two-staff system joined by a brace, typically combining upper and lower registers so that pitches around middle C can be coordinated across both staves."
+            },
+            {
+              "term": "Accidental",
+              "definition": "A notational symbol that raises or lowers a written pitch within the measure unless canceled or superseded by another symbol of the same function."
+            },
+            {
+              "term": "Enharmonic Equivalence",
+              "definition": "The relationship between differently spelled pitches that sound the same in equal temperament but may serve different theoretical functions in context."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A note is written on the first ledger line above the bass staff. Which pitch is notated there in standard staff notation?",
+              "options": [
+                "Middle C",
+                "D above middle C",
+                "B below middle C",
+                "F above middle C"
+              ],
+              "correctAnswer": "Middle C",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In a measure, a written F is preceded by a sharp. Later in the same measure, another F appears in the same octave with no accidental. Assuming no intervening natural sign, how should the second F be performed?",
+              "options": [
+                "As F-natural because accidentals apply only once",
+                "As F-sharp because the accidental carries through the measure",
+                "As F-double-sharp because repetition intensifies the alteration",
+                "As F-natural unless tied from the previous note"
+              ],
+              "correctAnswer": "As F-sharp because the accidental carries through the measure",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The clef that designates the fourth line of the staff as F below middle C is the ______.",
+              "options": [
+                "treble clef",
+                "alto clef",
+                "bass clef",
+                "tenor clef"
+              ],
+              "correctAnswer": "bass clef",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Two pitches that sound the same in equal temperament but are spelled differently are said to be ______.",
+              "options": [
+                "conjunct",
+                "enharmonic",
+                "diatonic",
+                "parallel"
+              ],
+              "correctAnswer": "enharmonic",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Simple Meter",
+              "definition": "A metrical organization in which each beat divides naturally into two equal parts, as in $$2/4$$, $$3/4$$, or $$4/4$$."
+            },
+            {
+              "term": "Compound Meter",
+              "definition": "A metrical organization in which each beat divides naturally into three equal parts, commonly notated with top numbers such as $$6$$, $$9$$, or $$12$$."
+            },
+            {
+              "term": "Syncopation",
+              "definition": "Rhythmic emphasis that shifts expected accentuation away from strong beats or strong parts of beats to weaker positions or sustained weak positions."
+            },
+            {
+              "term": "Tie",
+              "definition": "A curved marking connecting two notes of the same pitch so their durations are added and performed as one continuous sound."
+            },
+            {
+              "term": "Pickup Measure",
+              "definition": "An incomplete opening measure that precedes the first full bar and is balanced by missing duration at the end of the piece or section."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best describes the beat structure of $$6/8$$ in standard AP Music Theory practice?",
+              "options": [
+                "Six beats per measure, each a quarter note",
+                "Two beats per measure, each a dotted quarter note",
+                "Three beats per measure, each an eighth note",
+                "One beat per measure, equal to a dotted half note"
+              ],
+              "correctAnswer": "Two beats per measure, each a dotted quarter note",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A rhythm in $$4/4$$ places a note attack on the second half of beat 2 and sustains it across beat 3, creating emphasis away from the usual metric accent. This is best identified as",
+              "options": [
+                "augmentation",
+                "syncopation",
+                "hemiola",
+                "sequence"
+              ],
+              "correctAnswer": "syncopation",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a compound meter, each beat normally divides into ______ equal parts.",
+              "options": [
+                "two",
+                "three",
+                "four",
+                "five"
+              ],
+              "correctAnswer": "three",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A curved marking that combines the durations of two adjacent notes of the same pitch is called a ______.",
+              "options": [
+                "slur",
+                "tie",
+                "beam",
+                "tuplet"
+              ],
+              "correctAnswer": "tie",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Scales, Keys, and Modes",
+      "description": "Major and minor scales, key signatures, modes (Dorian, Phrygian, etc.), and scale degree names.",
+      "note": "# Unit 2: Scales, Keys, and Modes\n\n## Overview\nThis unit introduces the pitch collections that organize most Western tonal music: **major scales**, **minor scales**, **key signatures**, and **modes**. For the AP Music Theory exam, you must quickly identify scale patterns, determine tonal center, label **scale degrees**, and distinguish between closely related collections such as **major**, **minor**, and **modal** scales.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Half step and whole step** | The smallest common interval in tonal music is the **half step**; two half steps make a **whole step**. | Scale construction questions depend on accurate interval patterns. |\n| **Major scale** | A seven-note diatonic scale built with the pattern $$W-W-H-W-W-W-H$$. | You may need to construct, identify, sing, or analyze major collections quickly. |\n| **Minor scales** | Three common forms: **natural minor**, **harmonic minor**, and **melodic minor**. | AP questions often test which form is present and why altered scale degrees appear. |\n| **Key signature** | A set of sharps or flats placed at the beginning of the staff to show the usual pitch collection. | You must identify major/minor keys from signatures and avoid misreading accidentals. |\n| **Relative major/minor** | Two keys that share the same key signature but have different tonics. | Frequently tested in key identification and harmonic context questions. |\n| **Parallel major/minor** | Major and minor keys that share the same tonic but have different key signatures. | Useful for comparison and for understanding modal mixture and altered pitches. |\n| **Modes** | Diatonic pitch collections derived by starting on different scale degrees of a parent major scale, such as **Dorian** or **Phrygian**. | AP may ask you to identify mode by its characteristic altered scale degrees. |\n| **Scale degree names** | Functional labels such as **tonic**, **supertonic**, **mediant**, **subdominant**, **dominant**, **submediant**, and **leading tone/subtonic**. | Scale-degree function is foundational for melody, harmony, dictation, and analysis. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start with tonic] --> B[Choose scale type]\n    B --> C[Apply interval pattern]\n    C --> D[Spell pitches correctly with letter names in order]\n    D --> E[Determine accidentals]\n    E --> F[Infer or confirm key signature]\n    F --> G[Label scale degrees]\n    G --> H[Identify quality: major, minor, or mode]\n```\n\n### Common interval patterns to build scales\n1. **Major scale**:  \n   $$W-W-H-W-W-W-H$$\n\n2. **Natural minor scale**:  \n   $$W-H-W-W-H-W-W$$\n\n3. **Harmonic minor scale**:  \n   Natural minor with **raised scale degree 7**\n\n4. **Melodic minor scale**:  \n   Ascending: natural minor with **raised 6 and 7**  \n   Descending: usually returns to **natural minor**\n\n5. **Modes**:  \n   Think of each mode as a rotation of the major scale pattern, or compare each mode to **major** or **minor** by altered scale degrees.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **Must Know** |\n|---|---|\n| **Major scale pattern** | $$W-W-H-W-W-W-H$$ |\n| **Natural minor pattern** | $$W-H-W-W-H-W-W$$ |\n| **Harmonic minor** | Natural minor + raised **7** |\n| **Melodic minor** | Ascending: natural minor + raised **6** and **7**; descending: natural minor |\n| **Relative minor** | Found a **minor third down** from a major tonic, or from major scale degree **6** |\n| **Relative major** | Found a **minor third up** from a minor tonic, or from minor scale degree **3** |\n| **Order of sharps** | $$F-C-G-D-A-E-B$$ |\n| **Order of flats** | $$B-E-A-D-G-C-F$$ |\n| **Major key from sharps** | The major tonic is **one half step above** the last sharp |\n| **Major key from flats** | The major tonic is the **second-to-last flat** |\n| **Scale degree names** | $$1=\\text{tonic},\\ 2=\\text{supertonic},\\ 3=\\text{mediant},\\ 4=\\text{subdominant},\\ 5=\\text{dominant},\\ 6=\\text{submediant},\\ 7=\\text{leading tone or subtonic}$$ |\n\n### The seven diatonic modes\n- **Ionian**: major scale  \n- **Dorian**: minor with raised $$6$$  \n- **Phrygian**: minor with lowered $$2$$  \n- **Lydian**: major with raised $$4$$  \n- **Mixolydian**: major with lowered $$7$$  \n- **Aeolian**: natural minor  \n- **Locrian**: minor with lowered $$2$$ and lowered $$5$$\n\n## Connections & Comparisons\n\n| **Collection** | **Compared to Major/Minor** | **Characteristic Scale Degrees** | **Sound / AP clue** |\n|---|---|---|---|\n| **Major / Ionian** | Reference form | $$1\\ 2\\ 3\\ 4\\ 5\\ 6\\ 7$$ | Stable major collection |\n| **Natural minor / Aeolian** | Minor reference form | $$1\\ 2\\ \\flat3\\ 4\\ 5\\ \\flat6\\ \\flat7$$ | No raised leading tone |\n| **Harmonic minor** | Natural minor with alteration | $$1\\ 2\\ \\flat3\\ 4\\ 5\\ \\flat6\\ 7$$ | Strong pull to tonic because of raised $$7$$ |\n| **Melodic minor ascending** | Minor with two alterations | $$1\\ 2\\ \\flat3\\ 4\\ 5\\ 6\\ 7$$ | Smooth ascent; common in melodic writing |\n| **Dorian** | Minor mode | $$1\\ 2\\ \\flat3\\ 4\\ 5\\ 6\\ \\flat7$$ | Sounds minor, but raised $$6$$ distinguishes it |\n| **Phrygian** | Minor mode | $$1\\ \\flat2\\ \\flat3\\ 4\\ 5\\ \\flat6\\ \\flat7$$ | Half step above tonic is the strongest clue |\n| **Lydian** | Major mode | $$1\\ 2\\ 3\\ \\sharp4\\ 5\\ 6\\ 7$$ | Raised $$4$$ is the signature sound |\n| **Mixolydian** | Major mode | $$1\\ 2\\ 3\\ 4\\ 5\\ 6\\ \\flat7$$ | Major with lowered $$7$$ |\n\n### Relative vs. Parallel Keys\n\n| **Type** | **What Stays the Same** | **What Changes** | **Example** |\n|---|---|---|---|\n| **Relative** | Key signature | Tonic | **C major** and **A minor** |\n| **Parallel** | Tonic | Key signature and pitch collection | **C major** and **C minor** |\n\n## Common AP Exam Traps\n- Confusing **relative minor** with **parallel minor**. Relative keys share a **key signature**; parallel keys share a **tonic**.\n- Forgetting that **harmonic minor** raises only scale degree $$7$$, while **melodic minor ascending** raises both $$6$$ and $$7$$.\n- Misidentifying **Mixolydian** as major or **Dorian** as natural minor without noticing the altered scale degree.\n- Calling scale degree $$7$$ a **leading tone** when it is actually a **subtonic**. A leading tone is only a **half step below tonic**.\n- Spelling scales incorrectly by repeating or skipping letter names. Every diatonic scale must use each letter name exactly once in order.\n\n## Quick Review Checklist\n- [ ] I can build any **major scale** using the pattern $$W-W-H-W-W-W-H$$.\n- [ ] I can build **natural**, **harmonic**, and **melodic minor** scales from a given tonic.\n- [ ] I can identify a **major** or **minor key** from its **key signature**.\n- [ ] I can find the **relative major** or **relative minor** of a key.\n- [ ] I can explain the difference between **relative** and **parallel** keys.\n- [ ] I can identify the seven **scale degree names** and their numbers.\n- [ ] I can recognize common **modes** by their characteristic altered scale degrees.\n- [ ] I can distinguish **leading tone** from **subtonic** in context.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Major scale",
+              "definition": "A seven-note diatonic collection arranged by the interval pattern $$W-W-H-W-W-W-H$$, producing a tonic-centered collection used as a primary reference for key and function."
+            },
+            {
+              "term": "Natural minor scale",
+              "definition": "A seven-note diatonic collection arranged by the interval pattern $$W-H-W-W-H-W-W$$, sharing a key signature with its relative major and centered on scale degree $$1$$ of the minor collection."
+            },
+            {
+              "term": "Key signature",
+              "definition": "A notational system placed at the beginning of a staff that indicates which pitch classes are consistently altered throughout a passage unless canceled by accidentals."
+            },
+            {
+              "term": "Relative major and relative minor",
+              "definition": "Two tonalities that use the same pattern of sharps or flats in notation but have different tonal centers; the minor tonic is located a minor third below the major tonic."
+            },
+            {
+              "term": "Scale-degree names",
+              "definition": "Functional labels for positions within a diatonic collection, including tonic, supertonic, mediant, subdominant, dominant, submediant, and leading tone or subtonic depending on the seventh degree."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement correctly explains the relationship between E minor and G major?",
+              "options": [
+                "They are parallel keys because they share the same tonic.",
+                "They are relative keys because they share the same key signature.",
+                "They are enharmonic keys because they sound the same but are spelled differently.",
+                "They are closely related only if both use raised scale degree $$7$$."
+              ],
+              "correctAnswer": "They are relative keys because they share the same key signature.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A melody is built from the pitches A, B, C, D, E, F, and G with A as tonic and no raised seventh degree. Which collection does this most directly represent?",
+              "options": [
+                "A harmonic minor",
+                "A melodic minor ascending",
+                "A natural minor",
+                "A major"
+              ],
+              "correctAnswer": "A natural minor",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In major, scale degree $$5$$ is called the ______.",
+              "options": [
+                "mediant",
+                "subdominant",
+                "dominant",
+                "submediant"
+              ],
+              "correctAnswer": "dominant",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The relative minor of B-flat major is ______ minor.",
+              "options": [
+                "G",
+                "C",
+                "D",
+                "E"
+              ],
+              "correctAnswer": "G",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Harmonic minor scale",
+              "definition": "A minor collection formed by raising scale degree $$7$$ of the natural minor form, creating an augmented second between degrees $$6$$ and $$7$$ and strengthening tonic-directed motion."
+            },
+            {
+              "term": "Melodic minor scale",
+              "definition": "A minor collection that raises scale degrees $$6$$ and $$7$$ in ascending form and typically returns to the natural minor form when descending in common-practice usage."
+            },
+            {
+              "term": "Mode",
+              "definition": "A diatonic collection derived from a parent collection by treating a different scale degree as the tonal center, producing a distinct interval pattern and characteristic final."
+            },
+            {
+              "term": "Dorian mode",
+              "definition": "A diatonic collection with the interval pattern $$W-H-W-W-W-H-W$$, comparable to minor with a raised sixth scale degree."
+            },
+            {
+              "term": "Phrygian mode",
+              "definition": "A diatonic collection with the interval pattern $$H-W-W-W-H-W-W$$, recognizable by its lowered second scale degree above the final."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which scale degree is altered when forming a harmonic minor collection from a natural minor collection?",
+              "options": [
+                "Only scale degree $$3$$ is raised.",
+                "Only scale degree $$6$$ is raised.",
+                "Only scale degree $$7$$ is raised.",
+                "Scale degrees $$6$$ and $$7$$ are both raised in all forms."
+              ],
+              "correctAnswer": "Only scale degree $$7$$ is raised.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A melody uses D as its final and consists of the pitch classes of C major without alteration. Which mode is represented?",
+              "options": [
+                "D Dorian",
+                "D Phrygian",
+                "D Mixolydian",
+                "D Aeolian"
+              ],
+              "correctAnswer": "D Dorian",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Compared with natural minor, the Dorian collection has a raised ______ scale degree.",
+              "options": [
+                "second",
+                "fourth",
+                "sixth",
+                "seventh"
+              ],
+              "correctAnswer": "sixth",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The mode built on the third degree of a major scale is ______.",
+              "options": [
+                "Lydian",
+                "Phrygian",
+                "Mixolydian",
+                "Locrian"
+              ],
+              "correctAnswer": "Phrygian",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Intervals and Chords",
+      "description": "Interval identification and inversion, triads (major, minor, diminished, augmented), and seventh chords.",
+      "note": "# Unit 3: Intervals and Chords\n\n## Overview\nThis unit focuses on **identifying, building, and inverting intervals and chords**, especially **triads** and **seventh chords**. These skills matter on the AP Music Theory exam because they appear in **aural dictation, part writing, harmonic analysis, Roman numeral work, and multiple-choice identification questions**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Interval size** | The numerical distance between two pitches, counted inclusively by letter name | AP questions often require fast identification of **2nds through octaves** in notation and by ear |\n| **Interval quality** | The specific type of interval: **perfect, major, minor, augmented, diminished** | You must identify exact intervals, not just size, in written and aural tasks |\n| **Interval inversion** | Flipping an interval so the lower note becomes the upper note, or vice versa | Inversion rules are frequently tested and help simplify interval recognition |\n| **Consonance vs. dissonance** | Whether an interval sounds stable or unstable in tonal music | Important for analysis, voice leading, and understanding harmonic function |\n| **Triads** | Three-note chords built in stacked thirds: **major, minor, diminished, augmented** | Triad quality is foundational for Roman numeral analysis and chord spelling |\n| **Chord root, third, fifth** | The structural members of a triad, regardless of spacing | You must identify inversions and distinguish chord quality accurately |\n| **Seventh chords** | Four-note chords built in stacked thirds, including a seventh above the root | AP exam tasks often ask students to identify and analyze common seventh chord types |\n| **Chord inversion** | Rearrangement placing a chord tone other than the root in the bass | Essential for figured bass, harmonic analysis, and part-writing interpretation |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start with two notes or a chord] --> B[Determine letter names]\n    B --> C[Count inclusive distance for interval or stacked thirds for chord]\n    C --> D{Is it an interval?}\n    D -->|Yes| E[Find interval size]\n    E --> F[Compare semitones to assign quality]\n    F --> G[Check for inversion if needed]\n    D -->|No, chord| H[Stack notes in thirds]\n    H --> I[Identify root, third, fifth, and seventh if present]\n    I --> J[Determine chord quality]\n    J --> K[Check bass note for inversion]\n    G --> L[Write final label]\n    K --> L[Write final label]\n```\n\n### Fast interval-identification workflow\n1. **Find the size** by counting letter names **inclusively**.\n   - Example: **C up to G** = $$5$$ letter names, so it is some kind of **fifth**.\n2. **Find the quality** by comparing the actual semitone distance to the expected one.\n3. Decide whether the interval belongs to the **perfect family** or **major/minor family**.\n4. If inverted, apply the inversion rules:\n   - sizes add to $$9$$\n   - **major** $$\\leftrightarrow$$ **minor**\n   - **augmented** $$\\leftrightarrow$$ **diminished**\n   - **perfect** $$\\leftrightarrow$$ **perfect**\n\n### Fast chord-identification workflow\n1. Arrange the notes into **stacked thirds** if possible.\n2. Identify the **root**.\n3. Measure the intervals from root to third and root to fifth.\n4. Assign triad quality:\n   - **major triad** = **M3 + P5**\n   - **minor triad** = **m3 + P5**\n   - **diminished triad** = **m3 + d5**\n   - **augmented triad** = **M3 + A5**\n5. If there is a seventh, identify the interval from root to seventh and label the **seventh chord type**.\n6. Check which chord member is in the **bass** to determine inversion.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule** | **Must Know** |\n|---|---|\n| **Interval size counting** | Count **letter names inclusively**: C to E = $$3$$, B to C = $$2$$ |\n| **Perfect-family intervals** | **Unison, fourth, fifth, octave** can be **perfect, augmented, or diminished** |\n| **Major/minor-family intervals** | **Second, third, sixth, seventh** can be **major, minor, augmented, or diminished** |\n| **Interval inversion rule: size** | $$\\text{original size} + \\text{inverted size} = 9$$ |\n| **Interval inversion rule: quality** | **Major** $$\\leftrightarrow$$ **minor**, **augmented** $$\\leftrightarrow$$ **diminished**, **perfect** $$\\leftrightarrow$$ **perfect** |\n| **Major triad** | Root to third = **M3**; root to fifth = **P5** |\n| **Minor triad** | Root to third = **m3**; root to fifth = **P5** |\n| **Diminished triad** | Root to third = **m3**; root to fifth = **d5** |\n| **Augmented triad** | Root to third = **M3**; root to fifth = **A5** |\n| **Common seventh chord qualities** | **Major seventh** = **M3 + P5 + M7**; **dominant seventh** = **M3 + P5 + m7**; **minor seventh** = **m3 + P5 + m7**; **half-diminished seventh** = **m3 + d5 + m7**; **fully diminished seventh** = **m3 + d5 + d7** |\n| **Triad inversions** | **Root position**: root in bass; **1st inversion**: third in bass; **2nd inversion**: fifth in bass |\n| **Seventh chord inversions** | **Root position**, **1st inversion** = third in bass, **2nd inversion** = fifth in bass, **3rd inversion** = seventh in bass |\n\n### Useful shorthand labels\n- **M2, M3, M6, M7** = **major intervals**\n- **m2, m3, m6, m7** = **minor intervals**\n- **P1, P4, P5, P8** = **perfect intervals**\n- **A** = **augmented**\n- **d** = **diminished**\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Relate** | **Key Difference** |\n|---|---|---|\n| **Major vs. minor intervals** | Both belong to the **major/minor family** | A **minor** interval is one semitone smaller than a **major** interval |\n| **Perfect vs. diminished/augmented intervals** | **Perfect-family** intervals can be altered chromatically | **Perfect** is the default form; **diminished** is smaller, **augmented** is larger |\n| **Major triad vs. minor triad** | Both contain a **perfect fifth** above the root | The third changes: **M3** for major, **m3** for minor |\n| **Diminished triad vs. augmented triad** | Both are altered forms of basic triads | **Diminished** has a lowered fifth; **augmented** has a raised fifth |\n| **Triads vs. seventh chords** | Both are stacks of thirds used in tonal harmony | Seventh chords add one more chord member, increasing harmonic tension |\n| **Root position vs. inversion** | Same chord tones, different bass note | Inversion affects **figured bass, spacing, and function in context** |\n\n```mermaid\nflowchart LR\n    A[Triad] --> B[Add 7th above root]\n    B --> C[Seventh Chord]\n\n    D[Root position] --> E[1st inversion]\n    E --> F[2nd inversion]\n    F --> G[3rd inversion \"7th chords only\"]\n```\n\n## Common AP Exam Traps\n- Confusing **interval size** with **semitone count**. Always count **letter names first**, then determine quality.\n- Forgetting that interval counting is **inclusive**. **C to C** is a **unison** or **octave**, not zero.\n- Mislabeling **inversions** by the top note instead of the **bass note**. Inversion depends on what is in the bass.\n- Identifying a chord by its visual spacing without first rearranging it into **stacked thirds**.\n- Mixing up **half-diminished seventh** and **fully diminished seventh**. The difference is the **seventh**: **m7** vs. **d7**.\n\n## Quick Review Checklist\n- [ ] I can identify the **size** and **quality** of any written interval.\n- [ ] I can invert an interval and state the new **size** and **quality**.\n- [ ] I can explain the difference between **perfect-family** and **major/minor-family** intervals.\n- [ ] I can build and identify **major, minor, diminished, and augmented triads**.\n- [ ] I can find the **root** of a chord, even when the notes are not in stacked-thirds order.\n- [ ] I can determine whether a chord is in **root position**, **first inversion**, **second inversion**, or **third inversion**.\n- [ ] I can identify common **seventh chord qualities**, including **dominant**, **major**, **minor**, **half-diminished**, and **fully diminished**.\n- [ ] I can avoid common AP errors involving **inclusive counting**, **bass-note inversion labels**, and **quality misidentification**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Generic interval size",
+              "definition": "The number obtained by counting the starting letter name as 1 and the ending letter name inclusively to determine numerical distance without regard to quality."
+            },
+            {
+              "term": "Interval quality",
+              "definition": "The label that specifies whether a numerical distance is perfect, major, minor, augmented, or diminished based on its semitone content."
+            },
+            {
+              "term": "Simple interval",
+              "definition": "A distance spanning no more than one octave and reduced to a value from unison through octave."
+            },
+            {
+              "term": "Compound interval",
+              "definition": "A distance larger than an octave that can be understood as an octave plus a simple distance."
+            },
+            {
+              "term": "Interval inversion",
+              "definition": "The process of moving one pitch by an octave so that the two notes exchange positions, producing a complementary size and quality relationship."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A melodic interval from $$B$$ up to $$G$$ spans six letter names. If the upper pitch is lowered by one semitone to $$G\\flat$$, what is the resulting interval?",
+              "options": [
+                "minor sixth",
+                "major sixth",
+                "diminished sixth",
+                "perfect fifth"
+              ],
+              "correctAnswer": "minor sixth",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "When an interval is inverted, which statement is correct?",
+              "options": [
+                "Major becomes minor, minor becomes major, augmented becomes diminished, and perfect remains perfect",
+                "Major becomes perfect, minor becomes diminished, augmented becomes major, and perfect becomes minor",
+                "Major becomes augmented, minor becomes perfect, diminished becomes minor, and perfect becomes augmented",
+                "All interval qualities remain the same after inversion"
+              ],
+              "correctAnswer": "Major becomes minor, minor becomes major, augmented becomes diminished, and perfect remains perfect",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The interval from $$E$$ up to $$C$$ is a minor sixth. When inverted, it becomes a ______.",
+              "options": [
+                "major third",
+                "minor third",
+                "perfect fourth",
+                "augmented third"
+              ],
+              "correctAnswer": "major third",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "An interval that spans more than one octave is classified as a ______ interval.",
+              "options": [
+                "simple",
+                "compound",
+                "perfect",
+                "consonant"
+              ],
+              "correctAnswer": "compound",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Major triad",
+              "definition": "A three-note chord built from a root with a lower interval of a major third and an upper interval of a minor third, producing a perfect fifth from bottom to top."
+            },
+            {
+              "term": "Diminished triad",
+              "definition": "A three-note chord built from a root with a lower interval of a minor third and an upper interval of a minor third, producing a diminished fifth from bottom to top."
+            },
+            {
+              "term": "Augmented triad",
+              "definition": "A three-note chord built from a root with a lower interval of a major third and an upper interval of a major third, producing an augmented fifth from bottom to top."
+            },
+            {
+              "term": "Dominant seventh chord",
+              "definition": "A four-note tertian sonority consisting of a major triad plus a minor seventh above the root and typically built on scale degree $$5$$ in tonal harmony."
+            },
+            {
+              "term": "Half-diminished seventh chord",
+              "definition": "A four-note tertian sonority consisting of a diminished triad plus a minor seventh above the root."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which pitch collection forms a diminished triad when arranged in root position?",
+              "options": [
+                "$$B-D-F$$",
+                "$$B-D-F\\sharp$$",
+                "$$B-D\\sharp-F\\sharp$$",
+                "$$B-D\\sharp-F$$"
+              ],
+              "correctAnswer": "$$B-D-F$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which chord quality is represented by a root, a major third, a perfect fifth, and a minor seventh above the root?",
+              "options": [
+                "major seventh chord",
+                "dominant seventh chord",
+                "minor seventh chord",
+                "half-diminished seventh chord"
+              ],
+              "correctAnswer": "dominant seventh chord",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A triad built from a root, a minor third, and a diminished fifth is a ______ triad.",
+              "options": [
+                "major",
+                "minor",
+                "diminished",
+                "augmented"
+              ],
+              "correctAnswer": "diminished",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A seventh chord consisting of a diminished triad plus a minor seventh is called a ______ seventh chord.",
+              "options": [
+                "major",
+                "dominant",
+                "half-diminished",
+                "fully diminished"
+              ],
+              "correctAnswer": "half-diminished",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Harmony and Voice Leading I",
+      "description": "Figured bass, part writing rules, soprano-bass counterpoint, and diatonic chord progressions.",
+      "note": "# Unit 4: Harmony and Voice Leading I\n\n## Overview\nThis unit introduces the fundamentals of **tonal harmony** through **figured bass**, **part writing**, **soprano-bass counterpoint**, and common **diatonic chord progressions**. It matters on the AP exam because students must both **analyze** harmonic structures and **compose/complete** four-part textures using correct **voice-leading** conventions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Figured bass** | A shorthand system showing the intervals above a bass note, used to indicate harmony and inversion. | AP questions may ask you to **realize** a progression from figures or identify the implied chord and inversion. |\n| **Roman numeral analysis** | A labeling system for chords by scale-degree function and quality within a key. | Essential for identifying **harmonic function**, inversion, and progression patterns in multiple-choice and free response. |\n| **Chord inversion** | The arrangement of a chord with a chord member other than the root in the bass. | You must recognize and write **root position**, **first inversion**, and **second inversion** triads correctly. |\n| **Part writing rules** | Conventions for spacing, doubling, and melodic motion in **SATB** texture. | AP free response often scores accuracy in **doubling**, **spacing**, and proper treatment of each voice. |\n| **Voice leading** | The smooth connection of one chord to the next by efficient motion between voices. | Good voice leading avoids **parallel fifths**, **parallel octaves**, and awkward leaps—common scoring issues. |\n| **Soprano-bass counterpoint** | Writing the outer voices so they form a strong harmonic framework and smooth contrapuntal line. | The outer voices are the easiest place to detect hidden errors; AP tasks often begin from soprano and bass lines. |\n| **Diatonic chord function** | The tendency of chords to act as **tonic**, **predominant**, or **dominant** within a key. | Helps you predict likely progressions and choose harmonizations that sound stylistically correct. |\n| **Cadential motion** | Standard closing progressions such as **authentic**, **half**, and **plagal** cadences. | AP items often test whether a progression supports a convincing phrase ending and correct harmonic syntax. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify key and scale degrees] --> B[Read bass note and figures]\n    B --> C[Determine chord root, quality, and inversion]\n    C --> D[Assign Roman numeral and harmonic function]\n    D --> E[Write soprano and bass framework]\n    E --> F[Fill inner voices using proper doubling]\n    F --> G[Check voice-leading rules]\n    G --> H[Revise for smoother melodic motion and correct parallels]\n```\n\n### Typical harmonic workflow\n1. **Establish the key** and identify the available **diatonic triads**.\n2. **Interpret the figured bass**:\n   - No figure usually implies a **root-position triad**: $$5/3$$\n   - **6** implies **first inversion**: $$6/3$$\n   - **6/4** implies **second inversion**\n3. **Determine function**:\n   - **Tonic**: $$I, vi$$\n   - **Predominant**: $$ii, IV$$\n   - **Dominant**: $$V, vii^\\circ$$\n4. **Write outer voices** first when possible.\n5. **Add alto and tenor** with correct **doubling** and close spacing.\n6. **Audit the result** for forbidden parallels, voice crossing, unresolved tendency tones, and awkward leaps.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Triad figures** | Root position: $$5/3$$, first inversion: $$6/3$$ or just $$6$$, second inversion: $$6/4$$ |\n| **SATB spacing** | **Soprano–alto** and **alto–tenor** should generally remain within an octave. **Tenor–bass** may exceed an octave. |\n| **Voice crossing** | Avoid placing a lower voice above a higher voice or moving one voice into another’s range in a way that obscures texture. |\n| **Doubling in root-position triads** | Usually double the **root**. This is the standard default in common-practice part writing. |\n| **Doubling in first inversion triads** | Often double any stable chord tone, but avoid poor doubling choices that create weak voice leading. |\n| **Second inversion triads** | Treat $$6/4$$ chords carefully; they are less stable and usually appear in specific contexts rather than as freely interchangeable triads. |\n| **Leading tone tendency** | In major and minor, the **leading tone** $$\\hat{7}$$ typically resolves upward to $$\\hat{1}$$ when in an outer voice and especially in a dominant-function context. |\n| **Avoid parallel perfect intervals** | Do not move two voices in similar motion from one **perfect fifth** to another or one **perfect octave** to another. |\n| **Avoid hidden (direct) fifths/octaves in outer voices** | Especially when **soprano** and **bass** move in similar motion into a perfect interval and the soprano leaps. |\n| **Melodic writing** | Prefer **stepwise motion**; use leaps carefully and compensate with smooth continuation. Avoid awkward augmented intervals in diatonic writing. |\n\n### Common diatonic functions\n- **Tonic function**: $$I, vi$$\n- **Predominant function**: $$ii, IV$$\n- **Dominant function**: $$V, vii^\\circ$$\n\n### Common progression pattern\n$$\\text{Tonic} \\rightarrow \\text{Predominant} \\rightarrow \\text{Dominant} \\rightarrow \\text{Tonic}$$\n\nExamples:\n- $$I \\rightarrow IV \\rightarrow V \\rightarrow I$$\n- $$I \\rightarrow ii^6 \\rightarrow V \\rightarrow I$$\n- $$I \\rightarrow vi \\rightarrow ii \\rightarrow V \\rightarrow I$$\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection / Contrast** | **Why It Matters** |\n|---|---|---|\n| **Figured bass vs. Roman numerals** | **Figured bass** shows intervals above the bass; **Roman numerals** show chord identity and function within a key. | Students often confuse **inversion labels** with **functional labels**. You need both systems. |\n| **Root position vs. first inversion triads** | Root position sounds more stable and often takes **root doubling**; first inversion is smoother and often used to improve bass motion. | AP free response often rewards choosing inversion for **better voice leading**, not just correct harmony. |\n| **Predominant vs. dominant function** | **Predominant** chords prepare the dominant; **dominant** chords create strongest tension toward tonic. | Helps you eliminate unlikely progressions in multiple-choice analysis. |\n| **Outer-voice motion vs. inner-voice filling** | The **soprano and bass** define the harmonic skeleton; **alto and tenor** complete the texture. | Many errors can be prevented by securing the outer voices first. |\n\n```mermaid\nflowchart LR\n    T[Tonic] --> P[Predominant]\n    P --> D[Dominant]\n    D --> T2[Tonic]\n    T --> D\n    T --> T2\n```\n\n## Common AP Exam Traps\n- Confusing a **figured-bass symbol** with a **Roman numeral**: **6** does not tell you the chord’s root, only its inversion above the given bass.\n- Writing correct chords but ignoring **voice leading**, especially **parallel fifths** and **parallel octaves**.\n- Forgetting that **doubling rules** depend on inversion and context; do not automatically double the bass in every chord.\n- Treating all $$6/4$$ chords as ordinary consonant triads; second inversion sonorities are usually **context-dependent** and less stable.\n- Ignoring **tendency tones**, especially the **leading tone**, which often requires careful resolution.\n\n## Quick Review Checklist\n- [ ] I can interpret **figured bass** symbols such as $$5/3$$, $$6$$, and $$6/4$$.\n- [ ] I can identify and label **diatonic triads** with **Roman numerals** in major and minor keys.\n- [ ] I can distinguish **tonic**, **predominant**, and **dominant** harmonic functions.\n- [ ] I can write four-part **SATB** texture with correct **spacing** and no **voice crossing**.\n- [ ] I can choose appropriate **doublings**, especially in **root-position** and **first-inversion** triads.\n- [ ] I can detect and avoid **parallel fifths**, **parallel octaves**, and problematic **hidden perfect intervals**.\n- [ ] I can complete a basic harmonization from **soprano and bass** lines using smooth **voice leading**.\n- [ ] I can recognize and use common **diatonic progressions** that support convincing cadences.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Figured bass",
+              "definition": "A system of numerical symbols placed below a bass note to indicate the intervals and chord structure to be realized above that note."
+            },
+            {
+              "term": "Root position triad",
+              "definition": "A three-note chord arranged so that the bass contains the root; in thoroughbass, it is commonly represented by no symbol or by $$5/3$$."
+            },
+            {
+              "term": "First inversion triad",
+              "definition": "A triad arranged so that the bass contains the third of the chord; in thoroughbass, it is typically indicated by $$6$$ or $$6/3$$."
+            },
+            {
+              "term": "Second inversion triad",
+              "definition": "A triad arranged so that the bass contains the fifth of the chord; in thoroughbass, it is typically indicated by $$6/4$$ and often requires special treatment in tonal syntax."
+            },
+            {
+              "term": "Doubling",
+              "definition": "The practice of assigning one chord member to two different voices in four-part texture, chosen according to inversion and voice-leading priorities."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In common-practice four-part writing, which realization is most appropriate for a tonic triad in first inversion in a major key?",
+              "options": [
+                "Double the bass, which is the third of the chord, in all contexts",
+                "Double the leading tone whenever it appears in the chord",
+                "Usually double a stable chord member, often avoiding doubling the leading tone",
+                "Omit the fifth and triple the root in every first-inversion triad"
+              ],
+              "correctAnswer": "Usually double a stable chord member, often avoiding doubling the leading tone",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A bass note C is labeled with the figures $$6$$ and occurs in a diatonic context where the upper voices form E and A above it. Which chord is being represented above the bass?",
+              "options": [
+                "A root-position triad built on C",
+                "A first-inversion triad whose bass is the third of the chord",
+                "A second-inversion triad whose bass is the fifth of the chord",
+                "A dominant seventh chord in third inversion"
+              ],
+              "correctAnswer": "A first-inversion triad whose bass is the third of the chord",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In figured bass, the symbol most commonly associated with a second-inversion triad is ______.",
+              "options": [
+                "$$6/4$$",
+                "$$5/3$$",
+                "$$6$$",
+                "$$4/2$$"
+              ],
+              "correctAnswer": "$$6/4$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When writing four voices, the spacing rule states that the distance between soprano and alto and between alto and tenor should not exceed ______.",
+              "options": [
+                "an octave",
+                "a third",
+                "a twelfth",
+                "a unison"
+              ],
+              "correctAnswer": "an octave",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Parallel fifths",
+              "definition": "A voice-leading error in which two voices move in the same direction from one perfect fifth to another perfect fifth, weakening independence."
+            },
+            {
+              "term": "Hidden octave",
+              "definition": "A situation in which outer voices move in similar motion into a perfect octave, especially problematic when the upper voice leaps."
+            },
+            {
+              "term": "Tendency tone",
+              "definition": "A scale degree with a strong directional pull in tonal music, especially one that usually resolves by step to a specific pitch."
+            },
+            {
+              "term": "Cadential $$6/4$$",
+              "definition": "A sonority above scale degree $$5$$ in the bass that embellishes dominant harmony and normally resolves to $$V$$ before tonic closure."
+            },
+            {
+              "term": "Predominant function",
+              "definition": "A harmonic role that prepares dominant arrival, commonly associated with chords such as $$ii$$ and $$IV$$ in tonal progressions."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which progression best reflects a standard diatonic functional pattern in common-practice harmony?",
+              "options": [
+                "$$I \\to V \\to ii \\to I$$",
+                "$$ii^6 \\to V \\to I$$",
+                "$$vii^\\circ6 \\to IV \\to iii$$",
+                "$$I \\to iii \\to IV \\to ii$$"
+              ],
+              "correctAnswer": "$$ii^6 \\to V \\to I$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement about the leading tone in a tonal part-writing context is most accurate?",
+              "options": [
+                "It may be doubled freely in root-position dominant harmony",
+                "It normally resolves upward by step when functioning as a tendency tone",
+                "It should always leap downward to the fifth of the tonic triad",
+                "It is treated identically in all inner and outer voices without regard to context"
+              ],
+              "correctAnswer": "It normally resolves upward by step when functioning as a tendency tone",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a standard cadential pattern, the cadential $$6/4$$ typically resolves first to ______ before the final tonic.",
+              "options": [
+                "$$V$$",
+                "$$ii$$",
+                "$$vi$$",
+                "$$iii$$"
+              ],
+              "correctAnswer": "$$V$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When two voices move in the same direction from one perfect fifth to another perfect fifth, the result is called ______.",
+              "options": [
+                "parallel fifths",
+                "voice exchange",
+                "oblique motion",
+                "unequal fifths"
+              ],
+              "correctAnswer": "parallel fifths",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Harmony and Voice Leading II: Diatonic and Tonicization",
+      "description": "Secondary dominants, tonicization, and more complex diatonic harmony.",
+      "note": "# Unit 5: Harmony and Voice Leading II: Diatonic and Tonicization\n\n## Overview\nThis unit focuses on **secondary dominants**, **tonicization**, and the use of more sophisticated **diatonic harmonic patterns** with effective **voice leading**. These topics matter on the AP Music Theory exam because students must identify, analyze, and often realize harmonic progressions that temporarily emphasize new scale degrees without fully modulating.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Secondary Dominant** | A dominant-function chord that tonicizes a chord other than the global tonic, usually labeled as **V/x** or **V7/x** | Frequently tested in harmonic analysis, part-writing, and error detection |\n| **Tonicization** | A brief emphasis of a diatonic chord by preceding it with its dominant | Students must distinguish tonicization from full **modulation** |\n| **Applied Chord** | Any chord borrowed from the tonicized key to intensify a target chord; most commonly a secondary dominant | AP questions often ask for Roman numeral identification of applied harmony |\n| **Target Chord** | The chord being tonicized, such as **ii**, **iii**, **IV**, **V**, or **vi** | Correctly identifying the target determines the proper label, such as **V/ii** |\n| **Leading Tone to the Tonicized Chord** | The raised scale degree inside a secondary dominant that functions as a leading tone to the temporary tonic | Essential for spelling and for proper voice leading in four-part writing |\n| **Diatonic Predominant–Dominant–Tonic Motion** | Functional harmonic motion using chords such as **ii**, **IV**, **V**, and **I** | Secondary dominants often intensify normal functional progressions rather than replace them |\n| **Voice Leading in Applied Harmony** | Smooth spacing and resolution of tendency tones when writing tonicized progressions | AP free-response scoring heavily depends on correct resolution of chordal sevenths and leading tones |\n| **Tonicization vs. Modulation** | Tonicization is brief; modulation establishes a new key more fully and durably | A common multiple-choice and analysis distinction |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart LR\n    A[Identify the current key] --> B[Find the non-tonic diatonic target chord]\n    B --> C[Determine that target's dominant]\n    C --> D[Spell the applied chord with accidentals as needed]\n    D --> E[Label it as V/x or V7/x]\n    E --> F[Resolve to the target chord]\n    F --> G[Continue functional harmony in the original key unless a modulation is established]\n```\n\n### Typical tonicization pattern\n1. Start in the **original key**.\n2. Choose a **diatonic chord** to emphasize, often **ii**, **IV**, **V**, or **vi**.\n3. Precede it with its **dominant** or **dominant seventh**.\n4. Use correct **accidentals** to create the temporary leading tone.\n5. Resolve the applied chord to the **target chord**.\n6. Decide whether the music returns to the original key quickly (**tonicization**) or establishes a new key area (**modulation**).\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Secondary dominant labeling** | Label as **V/x** or **V7/x**, where **x** is the chord being tonicized |\n| **Target must usually be diatonic** | In AP-level common-practice analysis, the chord after the slash is generally a **diatonic chord** in the home key |\n| **No applied chord to diminished vii° in basic usage** | **V/vii°** is generally avoided because **vii°** is itself unstable |\n| **Most common targets** | **V/V**, **V/ii**, **V/vi**, and **V/IV** are especially common |\n| **Accidentals are required by function** | The applied chord often contains notes outside the key signature to create the proper **leading tone** to the target |\n| **Resolve tendency tones correctly** | The **chordal seventh** of **V7/x** resolves down by step; the **applied leading tone** typically resolves up to the tonicized chord |\n| **Tonicization is brief** | A short dominant-to-target event does **not** by itself mean the piece has modulated |\n| **Roman numerals are based on function, not just spelling** | A chord with accidentals is not automatically chromatic in origin; it may be functioning as an **applied dominant** |\n\n### Common applied dominants in major\nIf the home key is **C major**:\n\n- **V/V** = **D major** or **D7**, resolving to **G**\n- **V/ii** = **A major** or **A7**, resolving to **D minor**\n- **V/vi** = **E major** or **E7**, resolving to **A minor**\n- **V/IV** = **C major**? No — this is a trap. The dominant of **F** is **C**, which is already diatonic in **C major**, so it may not sound strongly chromatic\n\n### Quick spelling method\nTo find **V/x**:\n1. Identify chord **x**\n2. Treat **x** as a temporary tonic\n3. Build a **major triad** or **dominant seventh** on its fifth scale degree\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Relate** | **Key Difference** |\n|---|---|---|\n| **Secondary dominant** vs. **diatonic dominant** | Both have **dominant function** and tend to resolve by fifth | A secondary dominant points to a chord other than **I** |\n| **Tonicization** vs. **modulation** | Both create the sense of a new tonic | Tonicization is brief and local; modulation establishes a new key |\n| **Applied dominant** vs. **borrowed chord** | Both may introduce accidentals not in the key signature | Applied dominants intensify functional resolution; borrowed chords come from the parallel mode |\n| **V/x** vs. **vii°/x** | Both can tonicize a target chord | **V/x** is more common and more heavily emphasized in AP part writing |\n\n```mermaid\nflowchart TD\n    A[Chromatic chord appears] --> B{Does it resolve like a dominant?}\n    B -->|Yes| C[Likely an applied chord]\n    B -->|No| D[Consider mixture, embellishment, or another chromatic source]\n    C --> E{Is a new key established for more than a moment?}\n    E -->|No| F[Tonicization]\n    E -->|Yes| G[Modulation]\n```\n\n## Common AP Exam Traps\n\n- **Confusing tonicization with modulation**: one applied dominant does not automatically establish a new key.\n- **Labeling by root only** instead of by function: a chord may look major or chromatic, but the Roman numeral must show what it tonicizes.\n- **Forgetting accidentals** needed to create the **leading tone** of the target chord.\n- **Mishandling tendency tones**: the chordal seventh of **V7/x** should resolve down, and the temporary leading tone should usually resolve up.\n- **Misidentifying the target chord** after the applied dominant, especially when inversions or non-chord tones obscure the resolution.\n\n## Quick Review Checklist\n\n- [ ] I can define **secondary dominant**, **applied chord**, and **tonicization**.\n- [ ] I can label a chord as **V/x** or **V7/x** based on its **target chord**.\n- [ ] I can spell common applied dominants in both **major** and **minor** keys.\n- [ ] I can identify the **temporary leading tone** within a secondary dominant.\n- [ ] I can explain the difference between **tonicization** and **modulation**.\n- [ ] I can resolve **chordal sevenths** and **leading tones** correctly in four-part writing.\n- [ ] I can distinguish an **applied dominant** from a **borrowed chord** or other chromatic sonority.\n- [ ] I can analyze a progression that combines **diatonic harmony** with **secondary dominants**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Secondary dominant",
+              "definition": "A major or dominant-seventh chord that temporarily emphasizes a diatonic chord other than the tonic by functioning as that chord's dominant."
+            },
+            {
+              "term": "Tonicization",
+              "definition": "A brief emphasis of a chord by preceding it with its own dominant-function harmony, without establishing a full modulation."
+            },
+            {
+              "term": "Applied leading-tone chord",
+              "definition": "A diminished triad or diminished-seventh chord that temporarily intensifies a diatonic goal chord by functioning as its leading-tone harmony."
+            },
+            {
+              "term": "Accidental in an applied chord",
+              "definition": "A chromatic alteration that creates the leading tone to a temporary goal harmony, often raising a pitch outside the prevailing key signature."
+            },
+            {
+              "term": "Resolution of $$V/V$$",
+              "definition": "The expected progression in which the dominant of the dominant moves to the diatonic dominant, with tendency tones resolving in a way consistent with dominant function."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In the key of C major, which chord is best identified as $$V/ii$$?",
+              "options": [
+                "A major",
+                "A7",
+                "D major",
+                "E7"
+              ],
+              "correctAnswer": "A major",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best distinguishes a brief applied dominant from a true modulation?",
+              "options": [
+                "A brief applied dominant tonicizes a chord without establishing a new key through a cadence and sustained harmonic support.",
+                "A brief applied dominant always uses only diatonic pitches from the original key.",
+                "A brief applied dominant must resolve directly to $$I$$ in the original key.",
+                "A brief applied dominant changes the key signature immediately."
+              ],
+              "correctAnswer": "A brief applied dominant tonicizes a chord without establishing a new key through a cadence and sustained harmonic support.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a major key, the chord labeled $$V/V$$ contains ______ as the chromatically altered scale degree when compared with the primary key.",
+              "options": [
+                "raised 4",
+                "lowered 6",
+                "raised 2",
+                "lowered 2"
+              ],
+              "correctAnswer": "raised 4",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In part writing, an applied dominant usually resolves to ______ rather than moving deceptively if it is functioning normally.",
+              "options": [
+                "its temporary tonicized chord",
+                "the submediant",
+                "the tonic of the global key",
+                "a common-tone diminished chord"
+              ],
+              "correctAnswer": "its temporary tonicized chord",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Secondary leading-tone seventh chord",
+              "definition": "A fully diminished or half-diminished seventh chord built on the leading tone of a temporary goal harmony and resolving to that goal with strong tendency motion."
+            },
+            {
+              "term": "Pivot between diatonic harmony and tonicization",
+              "definition": "The moment when a chord still belongs to the prevailing key but becomes the target of temporary dominant-function emphasis."
+            },
+            {
+              "term": "Voice leading in applied diminished chords",
+              "definition": "The treatment in which chord members, especially tendency tones, move by step into the temporarily emphasized harmony while avoiding unresolved dissonance."
+            },
+            {
+              "term": "Distinction between tonicization and modulation",
+              "definition": "The difference between a short-lived emphasis of a chord and a longer change of tonal center confirmed by cadence and continuation in the new key."
+            },
+            {
+              "term": "Secondary function notation",
+              "definition": "A labeling system that identifies a chord by its relation to the harmony it temporarily intensifies rather than only by its role in the global key."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In G major, which chord is correctly labeled $$vii^\\circ7/V$$?",
+              "options": [
+                "$$F^\\sharp-A-C-E^\\flat$$",
+                "$$C^\\sharp-E-G-B^\\flat$$",
+                "$$A-C-E^\\flat-G$$",
+                "$$D-F-A-C$$"
+              ],
+              "correctAnswer": "$$C^\\sharp-E-G-B^\\flat$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which progression most clearly demonstrates tonicization rather than modulation in a passage in D major?",
+              "options": [
+                "$$E7 \\rightarrow A \\rightarrow D$$ with no cadence or continuation in A major",
+                "$$E7 \\rightarrow A$$ followed by an authentic cadence in A major and an extended phrase in A major",
+                "$$A7 \\rightarrow D$$ followed by a half cadence in D major",
+                "$$G \\rightarrow A \\rightarrow D$$ using only diatonic triads"
+              ],
+              "correctAnswer": "$$E7 \\rightarrow A \\rightarrow D$$ with no cadence or continuation in A major",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In minor keys, an applied dominant commonly includes ______ so that the temporary goal chord receives a stronger dominant pull.",
+              "options": [
+                "a raised leading tone to the temporary goal",
+                "the lowered second scale degree of the global key",
+                "only pitches from the natural minor collection",
+                "a suspension that never resolves"
+              ],
+              "correctAnswer": "a raised leading tone to the temporary goal",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When an applied leading-tone chord resolves normally, its root typically moves ______ into the temporarily emphasized harmony.",
+              "options": [
+                "up by half step",
+                "down by whole step",
+                "up by perfect fourth",
+                "down by minor third"
+              ],
+              "correctAnswer": "up by half step",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Harmony and Voice Leading III: Chromaticism",
+      "description": "Borrowed chords, Neapolitan sixth, augmented sixth chords (Italian, French, German), and chromatic voice leading.",
+      "note": "# Unit 6: Harmony and Voice Leading III: Chromaticism\n\n## Overview\nThis unit focuses on **chromatic harmony** beyond diatonic function, especially **borrowed chords**, the **Neapolitan sixth**, and the three standard **augmented sixth chords**: **Italian**, **French**, and **German**. On the AP exam, these sonorities matter because students must **identify**, **spell**, **analyze in Roman numerals**, and **resolve** them correctly using strong **voice leading**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Chromaticism** | Use of pitches outside the diatonic collection of the prevailing key | Appears in harmonic analysis, part-writing, and error detection |\n| **Mode Mixture / Borrowed Chords** | Chords borrowed from the parallel major or minor mode | Students must identify mixture and distinguish it from modulation |\n| **Parallel Keys** | Major and minor keys sharing the same tonic, such as C major / C minor | Essential for determining which altered tones belong to borrowed chords |\n| **Neapolitan Sixth** | A **major triad** built on lowered scale degree $$\\hat{2}$$, usually in **first inversion** | Frequently tested in Roman numeral analysis as **N6** and in resolution patterns |\n| **Augmented Sixth Interval** | Interval formed by lowered scale degree $$\\hat{6}$$ and raised scale degree $$\\hat{4}$$ | Core defining feature of **It+6**, **Fr+6**, and **Ger+6** chords |\n| **Italian / French / German Augmented Sixth Chords** | Standard chromatic predominant sonorities that expand toward dominant | AP students must spell them correctly and resolve them to **V** or related dominant function |\n| **Predominant Function** | Harmonic function that prepares dominant harmony | Both **N6** and **+6 chords** are typically analyzed as predominant, not tonic or dominant |\n| **Chromatic Voice Leading** | Smooth motion involving altered tones, especially half-step resolution tendencies | Crucial in free-response part writing and in avoiding parallels during resolution |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify the key] --> B[Determine whether the chord is diatonic or chromatic]\n    B --> C[\"If borrowed: compare with parallel mode\"]\n    B --> D[\"If N6: look for lowered scale degree 2 in first inversion\"]\n    B --> E[\"If +6 chord: find lowered scale degree 6 and raised scale degree 4\"]\n    C --> F[Assign Roman numeral and function]\n    D --> F\n    E --> G[\"Classify as Italian, French, or German\"]\n    G --> F\n    F --> H[Check voice leading tendencies]\n    H --> I[\"Resolve predominant to V or cadential 6/4 to V\"]\n    I --> J[Check for spacing, doubling, and parallels]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Borrowed chord definition** | A **borrowed chord** uses pitches from the **parallel key**, not from a new tonicized key |\n| **Common borrowed chords in major** | Typical examples include **iv**, **ii°**, **\\u266dVI**, and **\\u266dVII** borrowed from the parallel minor |\n| **Neapolitan construction** | The **Neapolitan** is a **major triad** built on $$\\flat\\hat{2}$$ and is usually labeled **N6** because it normally appears in **first inversion** |\n| **Neapolitan function** | **N6** is a **predominant** chord and usually resolves to **V** or **cadential $$6/4$$** |\n| **Augmented sixth definition** | The defining interval is between $$\\flat\\hat{6}$$ and $$\\sharp\\hat{4}$$, which expands outward by half step to $$\\hat{5}$$ |\n| **Italian +6 spelling** | **It+6** contains $$\\flat\\hat{6}$$, $$\\hat{1}$$, and $$\\sharp\\hat{4}$$ |\n| **French +6 spelling** | **Fr+6** contains $$\\flat\\hat{6}$$, $$\\hat{1}$$, $$\\hat{2}$$, and $$\\sharp\\hat{4}$$ |\n| **German +6 spelling** | **Ger+6** contains $$\\flat\\hat{6}$$, $$\\hat{1}$$, $$\\flat\\hat{3}$$, and $$\\sharp\\hat{4}$$ |\n| **Resolution of +6 chords** | $$\\flat\\hat{6} \\rightarrow \\hat{5}$$ and $$\\sharp\\hat{4} \\rightarrow \\hat{5}$$; inner voices usually move smoothly to complete **V** |\n| **Ger+6 caution** | Direct resolution from **Ger+6** to root-position **V** can create **parallel fifths**; composers often use **cadential $$6/4$$** first |\n| **Doubling guideline** | In **N6**, the bass note, which is $$\\hat{4}$$ in the scale, is often doubled; in **It+6**, double the tonic when needed, not the augmented sixth tones |\n| **Mixture vs. modulation** | A single altered chord does **not** necessarily mean a new key; AP questions often test whether the harmony is **borrowed** rather than **modulatory** |\n\n## Connections & Comparisons\n\n| **Chord Type** | **Typical Spelling by Scale Degree** | **Usual Function** | **Typical Resolution** |\n|---|---|---|---|\n| **Borrowed chord** | From **parallel mode**; varies by chord | Usually **predominant** or coloristic tonic expansion | Depends on context; often to predominant or dominant |\n| **Neapolitan Sixth** | $$\\flat\\hat{2}$$–$$\\hat{4}$$–$$\\flat\\hat{6}$$ | **Predominant** | Usually to **V** or **cadential $$6/4$$** |\n| **Italian +6** | $$\\flat\\hat{6}$$–$$\\hat{1}$$–$$\\sharp\\hat{4}$$ | **Predominant** | To **V** |\n| **French +6** | $$\\flat\\hat{6}$$–$$\\hat{1}$$–$$\\hat{2}$$–$$\\sharp\\hat{4}$$ | **Predominant** | To **V** |\n| **German +6** | $$\\flat\\hat{6}$$–$$\\hat{1}$$–$$\\flat\\hat{3}$$–$$\\sharp\\hat{4}$$ | **Predominant** | Often to **cadential $$6/4$$** then **V** |\n\n### Quick comparison: **N6** vs. **Augmented Sixth Chords**\n\n```mermaid\nflowchart LR\n    A[N6] --> B[\"Built on lowered scale degree 2\"]\n    A --> C[Major triad in first inversion]\n    A --> D[Predominant]\n\n    E[\"+6 Chords\"] --> F[\"Contain lowered scale degree 6 and raised scale degree 4\"]\n    E --> G[Named by added inner pitch or pitches]\n    E --> D\n```\n\n## Common AP Exam Traps\n- Confusing **borrowed chords** with **modulation**. If there is no convincing tonicization or cadence in a new key, the chord is often just **mixture**.\n- Labeling the **Neapolitan** as root position. On AP-style analysis, it is usually expected as **N6**, not simply a **\\u266dII** triad.\n- Forgetting that **augmented sixth chords** are identified by **scale-degree content and resolution**, not just by enharmonic spelling.\n- Resolving **Ger+6** directly to **V** without checking for **parallel fifths** between outer or inner voices.\n- Misidentifying function: **N6** and **+6 chords** are typically **predominant**, not dominant, even though they lead strongly to **V**.\n\n## Quick Review Checklist\n- [ ] I can explain what **chromaticism** is and why it differs from ordinary diatonic harmony.\n- [ ] I can identify a **borrowed chord** by comparing it to the **parallel major or minor** key.\n- [ ] I can spell and label a **Neapolitan sixth** in any key using **$$\\flat\\hat{2}$$**.\n- [ ] I can distinguish **It+6**, **Fr+6**, and **Ger+6** by their scale-degree content.\n- [ ] I can describe the essential resolution of the augmented sixth interval: $$\\flat\\hat{6} \\rightarrow \\hat{5}$$ and $$\\sharp\\hat{4} \\rightarrow \\hat{5}$$.\n- [ ] I can explain why **N6** and **augmented sixth chords** function as **predominants**.\n- [ ] I can resolve **Ger+6** carefully, often through **cadential $$6/4$$**, to avoid parallels.\n- [ ] I can analyze chromatic chords in Roman numerals and check the **voice leading** for doubling and tendency-tone resolution.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Mode mixture",
+              "definition": "The use of sonorities from the parallel major or parallel minor within a passage that remains centered in the original tonic."
+            },
+            {
+              "term": "Borrowed chord",
+              "definition": "A harmony imported from the parallel mode, often used to add color while preserving the prevailing tonic area."
+            },
+            {
+              "term": "Neapolitan sixth",
+              "definition": "A major triad built on lowered scale degree $$\u00162$$ that most often appears in first inversion and typically progresses to dominant harmony."
+            },
+            {
+              "term": "Chromatic voice leading",
+              "definition": "Part writing in which one or more voices move by half step outside the diatonic collection to intensify harmonic motion or smooth connections between chords."
+            },
+            {
+              "term": "Lowered scale degree $$\u00166$$",
+              "definition": "In major keys, this altered pitch frequently signals mixture from the parallel minor and often appears in pre-dominant sonorities."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a major key, which chord is most clearly identified as borrowed from the parallel minor and commonly serves a predominant function before $$V$$?",
+              "options": [
+                "$$iv$$",
+                "$$ii$$",
+                "$$viio6$$",
+                "$$I6$$"
+              ],
+              "correctAnswer": "$$iv$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In common-practice syntax, the Neapolitan sixth is most likely to appear in which context?",
+              "options": [
+                "As a first-inversion major triad on lowered scale degree $$\u00162$$ moving to dominant",
+                "As a root-position diminished triad on leading tone resolving to tonic",
+                "As a tonic substitute built on scale degree $$3$$ in second inversion",
+                "As a cadential six-four embellishing the dominant bass"
+              ],
+              "correctAnswer": "As a first-inversion major triad on lowered scale degree $$\u00162$$ moving to dominant",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In minor, a common borrowed sonority from the parallel major is the ______ chord.",
+              "options": [
+                "$$I$$",
+                "$$V$$",
+                "$$IV$$",
+                "$$vi$$"
+              ],
+              "correctAnswer": "$$IV$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Because the bass of the Neapolitan sixth is scale degree ______, the chord is labeled with a $$6$$ rather than appearing most often in root position.",
+              "options": [
+                "$$\u00164$$",
+                "$$\u00166$$",
+                "$$\u00161$$",
+                "$$\u00165$$"
+              ],
+              "correctAnswer": "$$\u00164$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Italian augmented sixth chord",
+              "definition": "A pre-dominant sonority containing lowered scale degree $$\u00166$$ and raised scale degree $$\u00164$$ with one additional pitch, typically doubling the tonic pitch class and expanding outward to the dominant."
+            },
+            {
+              "term": "French augmented sixth chord",
+              "definition": "A pre-dominant sonority containing lowered scale degree $$\u00166$$, tonic, supertonic, and raised scale degree $$\u00164$$, usually resolving to dominant."
+            },
+            {
+              "term": "German augmented sixth chord",
+              "definition": "A pre-dominant sonority containing lowered scale degree $$\u00166$$, tonic, lowered mediant, and raised scale degree $$\u00164$$, often requiring careful voice leading to avoid parallel fifths on the way to dominant."
+            },
+            {
+              "term": "Augmented sixth interval resolution",
+              "definition": "The characteristic outer voices expand by half step to an octave on the dominant scale degree."
+            },
+            {
+              "term": "Enharmonic reinterpretation",
+              "definition": "A respelling process in which pitches retain their sounding height but are renamed to suggest a new harmonic function, often useful in chromatic modulation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which collection of scale degrees in a major key identifies a French augmented sixth chord?",
+              "options": [
+                "$$\u00166,\u00161,\u00162,\u00164$$",
+                "$$\u00166,\u00161,\u00163,\u00164$$",
+                "$$\u00166,\u00161,\u00164$$",
+                "$$\u00162,\u00164,\u00166,\u00161$$"
+              ],
+              "correctAnswer": "$$\u00166,\u00161,\u00162,\u00164$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Why is the German augmented sixth chord often handled carefully in four-part writing when moving directly to $$V$$?",
+              "options": [
+                "It can create parallel fifths between outer voices and inner parts",
+                "It lacks any tendency tones that direct it toward the dominant",
+                "It resolves by contrary motion to a tonic six-four chord only",
+                "It must always appear in third inversion before a cadence"
+              ],
+              "correctAnswer": "It can create parallel fifths between outer voices and inner parts",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In the standard resolution of an augmented sixth chord, lowered scale degree $$\u00166$$ and raised scale degree $$\u00164$$ move outward by half step to ______.",
+              "options": [
+                "scale degree $$\u00165$$",
+                "scale degree $$\u00161$$",
+                "scale degree $$\u00163$$",
+                "scale degree $$\u00162$$"
+              ],
+              "correctAnswer": "scale degree $$\u00165$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The augmented sixth chord containing lowered scale degree $$\u00166$$, tonic, lowered mediant, and raised scale degree $$\u00164$$ is the ______ augmented sixth chord.",
+              "options": [
+                "Italian",
+                "French",
+                "German",
+                "Swiss"
+              ],
+              "correctAnswer": "German",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "unitName": "Musical Form",
+      "description": "Binary, ternary, rounded binary, rondo, sonata form, and motivic development.",
+      "note": "# Unit 7: Musical Form\n\n## Overview\nThis unit introduces the major **formal designs** you are expected to recognize and describe in AP Music Theory: **binary**, **ternary**, **rounded binary**, **rondo**, **sonata form**, and **motivic development**. On the AP exam, form questions often require you to connect **phrase structure, repetition, contrast, key areas, cadences, and thematic return** into a clear explanation of how a passage is organized.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Binary form** | A two-part form, usually labeled **A B**, often with each section repeated. | You may need to identify whether a piece divides into two large sections and whether the second section contrasts, modulates, or returns to opening material. |\n| **Ternary form** | A three-part form, usually **A B A**, with a contrasting middle and return of the opening section. | AP questions may ask you to distinguish simple return from more developmental forms. |\n| **Rounded binary** | A binary design in which the second section brings back material from the opening of **A**, often creating an abbreviated **A B A'** effect. | This is a common exam distinction: it looks partly like ternary, but its internal structure and cadence pattern are binary-based. |\n| **Rondo form** | A recurring main theme alternates with contrasting episodes, such as **A B A C A** or **A B A C A B A**. | Students must track thematic return and contrast over a larger span. |\n| **Sonata form** | A large-scale form typically involving **exposition**, **development**, and **recapitulation**, often with contrasting key areas and themes. | This is one of the most tested large forms because it combines thematic contrast, modulation, and return. |\n| **Motivic development** | The process of transforming a small musical idea through sequence, fragmentation, inversion, rhythmic change, and other techniques. | AP analysis often asks how composers create unity and variety from limited material. |\n| **Cadential articulation** | The use of cadences to mark boundaries between phrases and sections. | Formal analysis depends on hearing where sections end and whether a return feels complete or partial. |\n| **Key relationships in form** | Many forms are clarified by tonic departure and return, especially in tonal music. | On the AP exam, identifying modulation and recapitulation often helps confirm the form. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Hear opening theme or section\"] --> B[\"Ask: does it return later?\"]\n    B --> C[\"No clear return\"]\n    B --> D[\"Yes, return is clear\"]\n\n    C --> E[\"Two large sections?\"]\n    E --> F[\"Likely binary\"]\n    \n    D --> G[\"Return after contrasting middle?\"]\n    G --> H[\"A B A: ternary or rounded binary\"]\n    G --> I[\"Repeated alternation of main theme and episodes\"]\n    I --> J[\"Rondo\"]\n\n    H --> K[\"Does second section begin with contrasting material but later bring back opening of A?\"]\n    K --> L[\"Yes: rounded binary\"]\n    K --> M[\"No, full sectional return of A: ternary\"]\n\n    D --> N[\"Large-scale exposition, development, recapitulation?\"]\n    N --> O[\"Yes: sonata form\"]\n\n    A --> P[\"Track cadences, phrase endings, and key changes\"]\n    P --> Q[\"Use thematic return + tonal plan to confirm form\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Term / Rule** | **What You Must Know** |\n|---|---|\n| **Binary form** | Usually **A B**. Each section may be repeated. In tonal music, **A** often moves away from tonic, and **B** often returns to tonic. |\n| **Simple binary vs. sectional binary** | In **simple binary**, the first section ends with an **inconclusive cadence**; in **sectional binary**, the first section ends with a **conclusive cadence**, often in the tonic. |\n| **Ternary form** | **A B A**. The **B** section contrasts in melody, texture, register, mode, or key; the final **A** returns recognizably. |\n| **Rounded binary** | Still fundamentally binary, but the **B** section includes a return of opening **A** material before the end. This is often shorter and less fully separated than true ternary. |\n| **Rondo form** | Main refrain **A** returns multiple times between contrasting episodes: common patterns include **A B A C A** and **A B A C A B A**. |\n| **Sonata exposition** | Presents primary thematic material, then moves to a **contrasting key area** and secondary material. In major keys, this often means tonic to dominant; in minor, tonic to relative major or sometimes dominant minor. |\n| **Sonata development** | Explores and transforms motives through **modulation**, **fragmentation**, **sequence**, and instability. |\n| **Sonata recapitulation** | Returns primary material in tonic and restates contrasting material so that the tonal conflict is resolved in tonic. |\n| **Motivic development techniques** | Common techniques: **sequence**, **fragmentation**, **inversion**, **retrograde**, **augmentation**, **diminution**, **rhythmic transformation**, and **change of interval content**. |\n| **Cadences as formal markers** | **PAC**, **IAC**, **HC**, and **DC** help define phrase and section boundaries; strong cadences often confirm the end of formal units. |\n\n## Connections & Comparisons\n\n| **Form** | **Typical Pattern** | **Main Feature** | **How to Distinguish It** |\n|---|---|---|---|\n| **Binary** | **A B** | Two-part division | No full independent third section; focus on two large halves. |\n| **Rounded binary** | **A B \\+ return of A material** | Binary structure with partial return | Opening material returns near the end of **B**, not as a fully separate final section. |\n| **Ternary** | **A B A** | Clear three-part design | Final **A** functions as its own section after a contrasting middle. |\n| **Rondo** | **A B A C A** or longer | Recurrent refrain | The same main theme keeps coming back after episodes. |\n| **Sonata form** | **Exposition–Development–Recapitulation** | Contrast, modulation, and resolution | Development is central; recapitulation resolves key-area tension. |\n\n```mermaid\nflowchart LR\n    A[\"Binary\"] --> B[\"Rounded Binary\"]\n    B --> C[\"Ternary\"]\n    C --> D[\"Rondo\"]\n    C --> E[\"Sonata Form\"]\n\n    B --- F[\"Shares return of opening material\"]\n    C --- G[\"Clear contrasting middle section\"]\n    E --- H[\"Adds large-scale tonal drama and development\"]\n```\n\n## Common AP Exam Traps\n\n- **Confusing rounded binary with ternary**: if the return of opening material happens as part of the second section rather than as a fully separate final section, it is more likely **rounded binary**.\n- **Identifying form only by theme, not cadence or key**: AP questions often reward noticing **cadential closure** and **tonal return**, not just surface melody.\n- **Assuming every return means rondo**: a single return after contrast suggests **ternary** or **rounded binary**; **rondo** requires repeated refrain alternation.\n- **Forgetting the tonal plan of sonata form**: the **recapitulation** is not just repeated material; it resolves earlier key contrast by returning important material in **tonic**.\n- **Treating motivic development as only melodic repetition**: true development involves transformation, not merely restatement.\n\n## Quick Review Checklist\n\n- [ ] I can define **binary**, **ternary**, **rounded binary**, **rondo**, and **sonata form**.\n- [ ] I can explain how **cadences** help identify phrase endings and formal sections.\n- [ ] I can distinguish **rounded binary** from **ternary** using section structure, not just thematic return.\n- [ ] I can recognize a **rondo refrain** and differentiate it from a simple return of material.\n- [ ] I can describe the three main parts of **sonata form**: **exposition**, **development**, and **recapitulation**.\n- [ ] I can explain how **key relationships** help confirm tonal form, especially in **sonata form**.\n- [ ] I can identify at least four techniques of **motivic development**.\n- [ ] I can analyze how a composer creates both **unity** and **contrast** within a form.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Binary form",
+              "definition": "A two-part structure in which the music is organized into an opening section and a contrasting or complementary second section, often each repeated and commonly outlined as $$A B$$."
+            },
+            {
+              "term": "Simple ternary form",
+              "definition": "A three-part structure in which an opening section returns after a contrasting middle, creating an overall design of $$A B A$$."
+            },
+            {
+              "term": "Rounded binary form",
+              "definition": "A two-part design in which the second large section brings back material from the opening near its close, so the return is embedded within the latter part rather than presented as a full separate section."
+            },
+            {
+              "term": "Sectional form",
+              "definition": "A formal design in which the first large part ends with a cadence in the tonic, creating a closed and self-contained opening unit."
+            },
+            {
+              "term": "Continuous form",
+              "definition": "A formal design in which the first large part avoids a full cadence in the tonic, leading directly onward and often closing instead in a contrasting key area."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A movement opens with an eight-measure phrase in the tonic, modulates to the dominant by the end of the first repeated section, and in the second repeated section eventually returns to tonic before recalling the opening idea near the end. Which formal classification is most precise?",
+              "options": [
+                "Simple ternary",
+                "Rounded binary",
+                "Theme and variations",
+                "Strophic form"
+              ],
+              "correctAnswer": "Rounded binary",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In many Baroque dance movements in binary form, the most typical tonal plan is that the first section closes in a new key and the second section ends by reestablishing the home key. Which key relationship best matches this pattern in a major-mode movement?",
+              "options": [
+                "Tonic to subdominant, then subdominant to dominant",
+                "Tonic to dominant, then dominant back to tonic",
+                "Relative minor to mediant, then mediant to relative minor",
+                "Dominant to tonic, then tonic to dominant"
+              ],
+              "correctAnswer": "Tonic to dominant, then dominant back to tonic",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A form best described as $$A B A$$, with the opening section returning after a contrasting middle, is called ______.",
+              "options": [
+                "binary form",
+                "simple ternary form",
+                "through-composed form",
+                "rondo form"
+              ],
+              "correctAnswer": "simple ternary form",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If the first section of a binary design ends with a strong cadence in the tonic, the form is classified as ______.",
+              "options": [
+                "continuous",
+                "sectional",
+                "developmental",
+                "strophic"
+              ],
+              "correctAnswer": "sectional",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Rondo form",
+              "definition": "A design built around a principal theme that returns multiple times and alternates with contrasting episodes, often following patterns such as $$A B A C A$$ or $$A B A C A B A$$."
+            },
+            {
+              "term": "Sonata form",
+              "definition": "A large-scale design typically featuring an exposition with contrasting key areas and themes, a middle span of tonal and thematic instability, and a recapitulation that restates major material in the tonic."
+            },
+            {
+              "term": "Exposition",
+              "definition": "The opening major division of a sonata-form movement in which the principal thematic material is presented, usually moving from the tonic to a contrasting key area before a closing section."
+            },
+            {
+              "term": "Development",
+              "definition": "The central major division of a sonata-form movement in which earlier ideas are fragmented, sequenced, recombined, and moved through unstable harmonies and multiple key areas."
+            },
+            {
+              "term": "Motivic development",
+              "definition": "A compositional process in which a small musical idea is transformed through techniques such as fragmentation, inversion, rhythmic alteration, sequence, or intervallic change to generate larger passages."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which description best distinguishes sonata form from a five-part rondo at the level expected in AP Music Theory?",
+              "options": [
+                "Sonata form requires a recurring refrain in the tonic after every episode",
+                "Sonata form typically includes exposition, development, and recapitulation with tonal reinterpretation of themes",
+                "Sonata form always uses a minuet and trio as its middle section",
+                "Sonata form is defined primarily by a repeated bass pattern"
+              ],
+              "correctAnswer": "Sonata form typically includes exposition, development, and recapitulation with tonal reinterpretation of themes",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A composer takes a four-note idea from the opening theme, breaks it into two-note fragments, sequences it through several keys, and changes its rhythm during a harmonically unstable passage. This procedure is most accurately identified as what?",
+              "options": [
+                "Motivic development",
+                "Text painting",
+                "Isorhythm",
+                "Cadential extension"
+              ],
+              "correctAnswer": "Motivic development",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In sonata form, the section in which previously heard material is worked out through fragmentation, sequence, and tonal instability is the ______.",
+              "options": [
+                "exposition",
+                "recapitulation",
+                "development",
+                "coda"
+              ],
+              "correctAnswer": "development",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A formal design in which a principal theme alternates with contrasting episodes and returns multiple times is called ______.",
+              "options": [
+                "rondo form",
+                "rounded binary form",
+                "simple ternary form",
+                "modified strophic form"
+              ],
+              "correctAnswer": "rondo form",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 8,
+      "unitName": "Post-Tonal Music and Composition",
+      "description": "20th-century techniques: modes, whole-tone scales, serialism, and writing original melodies and harmonizations.",
+      "note": "# Unit 8: Post-Tonal Music and Composition\n\n## Overview\nThis unit introduces major **20th-century post-tonal techniques**, including **modes**, **whole-tone collections**, **serialism**, and strategies for **original melodic and harmonic composition**. For the AP exam, you must be able not only to recognize these sounds and systems, but also to **analyze** and **apply** them in short compositional contexts.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Mode** | A scale pattern derived from the major scale but starting on a different scale degree, such as **Dorian**, **Phrygian**, or **Mixolydian**. | You may be asked to identify modal melodies, harmonize modal lines, or distinguish modal writing from major/minor tonality. |\n| **Modal Harmony** | Harmony built from the pitches of a mode rather than from traditional functional major/minor practice. | AP questions may test whether you can preserve the **characteristic tones** of a mode while writing or analyzing chords. |\n| **Whole-Tone Scale** | A six-note scale built entirely of whole steps. | Important for recognizing music with **ambiguous tonality**, symmetrical structure, and a floating, non-functional harmonic sound. |\n| **Pitch Collection** | A selected group of pitches used as the basis of a passage or composition. | Post-tonal analysis often begins by identifying the pitch collection rather than assigning Roman numerals. |\n| **Serialism / Twelve-Tone Technique** | A compositional method that organizes all twelve chromatic pitches into a fixed **tone row**. | You may need to identify row forms or explain how serial music avoids traditional tonal hierarchy. |\n| **Prime, Inversion, Retrograde, Retrograde Inversion** | The four basic transformations of a tone row. | These are the core tools for analyzing or generating serial material on the exam. |\n| **Nonfunctional Harmony** | Harmony that does not follow traditional tonic-dominant relationships. | AP tasks may require you to compose sonorities that sound coherent without using common-practice cadences. |\n| **Original Composition Techniques** | Methods for writing melodies and harmonizations using modal, whole-tone, or serial materials. | Free-response work may assess your ability to apply new systems accurately and musically. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Choose post-tonal pitch source] --> B[\"Mode (Dorian, Lydian, etc.)\"]\n    A --> C[Whole-tone collection]\n    A --> D[12-tone row]\n\n    B --> E[Write melody using characteristic tones]\n    C --> F[Write melody emphasizing whole-step symmetry]\n    D --> G[Generate row forms]\n\n    E --> H[Harmonize without strong tonal function]\n    F --> H\n    G --> I[Compose using ordered pitch forms]\n\n    H --> J[Check consistency of pitch collection]\n    I --> J\n    J --> K[Refine for contour, balance, and style]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Mode construction** | A **mode** is created by using the pitch content of a major scale but treating a different degree as the tonic. Example: **D Dorian** uses the pitches of **C major** but centers on **D**. |\n| **Characteristic modal tones** | Each mode has tones that distinguish it from major/minor. Example: **Dorian** has a **minor third** and **major sixth** above the final; **Mixolydian** has a **major third** and **minor seventh**. |\n| **Whole-tone scale pattern** | The whole-tone scale divides the octave into six equal whole steps: $$W-W-W-W-W-W$$. There are only **two distinct whole-tone collections** in the chromatic system. |\n| **Whole-tone harmonic effect** | Because there is no leading tone and no half-step tendency, whole-tone music often sounds **tonally ambiguous** and **nonfunctional**. |\n| **Twelve-tone row rule** | A **tone row** presents all $$12$$ chromatic pitch classes before any is repeated, unless the compositional context clearly allows overlap across voices. |\n| **Prime form** | **Prime** is the original ordering of the row, often labeled $$P_n$$, where $$n$$ indicates the transposition level. |\n| **Retrograde** | **Retrograde** is the prime row in reverse order, labeled $$R_n$$. |\n| **Inversion** | **Inversion** preserves the first pitch but reverses each interval direction from the prime row, labeled $$I_n$$. |\n| **Retrograde inversion** | **Retrograde inversion** is the inversion in reverse order, labeled $$RI_n$$. |\n| **Serial consistency** | In serial writing, pitches should follow the chosen row form in order; emphasis is placed on **ordered pitch succession**, not tonal chord function. |\n| **Post-tonal composition principle** | Coherence comes from **consistent use of a pitch system**, motivic control, contour, rhythm, and repetition—not from traditional cadence patterns alone. |\n\n## Connections & Comparisons\n\n| **Concept 1** | **Concept 2** | **Key Connection / Difference** | **AP Use** |\n|---|---|---|---|\n| **Modal writing** | **Major/minor tonal writing** | Modal music may have a tonal center, but it avoids or weakens traditional functional harmony. | Be able to tell whether a passage is truly tonal or simply centered on a mode. |\n| **Whole-tone scale** | **Chromatic scale** | Both expand beyond diatonic practice, but the whole-tone scale is a fixed six-note symmetrical collection, not the full $$12$$-pitch aggregate. | Students often confuse “non-diatonic” with “fully chromatic.” |\n| **Whole-tone writing** | **Modal writing** | Modal writing usually preserves a recognizable final and characteristic scale degrees; whole-tone writing tends to obscure tonic and dominant function. | Useful in style recognition and short analysis prompts. |\n| **Serialism** | **Free post-tonality** | Serialism is highly ordered through a row; free post-tonality may use pitch collections without strict ordering. | Important when identifying whether a passage is truly twelve-tone. |\n\n```mermaid\nflowchart LR\n    A[Modal] --> B[Centered on a final]\n    A --> C[Characteristic scale degrees]\n\n    D[Whole-tone] --> E[Symmetrical whole-step collection]\n    D --> F[Weak tonal gravity]\n\n    G[Serial] --> H[Ordered 12-pitch row]\n    G --> I[Transformations: P, I, R, RI]\n```\n\n## Common AP Exam Traps\n- Confusing **modal** music with ordinary **major/minor** tonality. A melody centered on **D** using the pitches of **C major** is not necessarily in **D minor**; it may be **D Dorian**.\n- Forgetting the **characteristic note** of a mode when harmonizing. If you “correct” modal pitches into major/minor norms, you may destroy the mode.\n- Assuming that any unusual or dissonant passage is **serial**. True twelve-tone writing depends on an **ordered row**, not just chromaticism.\n- Misidentifying **whole-tone** passages as generic chromatic writing. Check whether the music is built from consistent whole steps and a six-note collection.\n- Writing post-tonal harmonies with overly strong **V–I** implications when the task calls for **nonfunctional** or modal treatment.\n\n## Quick Review Checklist\n- [ ] I can identify common **modes** by their interval patterns and characteristic tones.\n- [ ] I can distinguish **modal**, **whole-tone**, and **serial** passages by listening or score analysis.\n- [ ] I can explain why a **whole-tone scale** produces weak tonal function.\n- [ ] I can construct or recognize a **twelve-tone row** containing all $$12$$ pitch classes.\n- [ ] I can identify or generate **prime**, **retrograde**, **inversion**, and **retrograde inversion** forms.\n- [ ] I can write a short **modal melody** that preserves its characteristic scale degrees.\n- [ ] I can harmonize a post-tonal melody without relying entirely on common-practice **tonic-dominant** patterns.\n- [ ] I can describe how **pitch collection**, **contour**, and **motivic consistency** create unity in post-tonal composition.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Mode",
+              "definition": "A scalar collection defined by a specific pattern of whole and half steps and organized around a final or tonic-like pitch, often producing a characteristic melodic and harmonic color different from major and minor."
+            },
+            {
+              "term": "Whole-tone scale",
+              "definition": "A six-note collection built entirely from consecutive whole steps, lacking semitones and therefore weakening traditional leading-tone function and tonal center."
+            },
+            {
+              "term": "Pentatonic scale",
+              "definition": "A five-note collection commonly formed by omitting two pitches from a seven-note diatonic set, often avoiding semitone motion and creating an open sonority."
+            },
+            {
+              "term": "Octatonic scale",
+              "definition": "An eight-note collection constructed by alternating whole and half steps or half and whole steps, frequently used for symmetrical pitch organization in twentieth-century music."
+            },
+            {
+              "term": "Planing",
+              "definition": "The parallel motion of chord shapes at a fixed intervallic structure, often used to emphasize sonority or color rather than traditional functional progression."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A composer writes a melody using $$D\\text{-}E\\text{-}F\\text{-}G\\text{-}A\\text{-}B\\text{-}C\\text{-}D$$ and cadences consistently on $$D$$. Which description best identifies the collection?",
+              "options": [
+                "D Dorian",
+                "D major",
+                "D Mixolydian",
+                "D harmonic minor"
+              ],
+              "correctAnswer": "D Dorian",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which property of the whole-tone collection most directly contributes to the absence of traditional dominant-to-tonic resolution?",
+              "options": [
+                "It contains no perfect fourths",
+                "It contains no semitones or leading tone",
+                "It contains all twelve pitch classes",
+                "It alternates whole and half steps"
+              ],
+              "correctAnswer": "It contains no semitones or leading tone",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A passage built from alternating whole and half steps throughout the octave is most likely based on the ______ collection.",
+              "options": [
+                "octatonic",
+                "pentatonic",
+                "whole-tone",
+                "diatonic major"
+              ],
+              "correctAnswer": "octatonic",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a composer moves a dominant seventh chord shape upward in exact parallel motion, preserving interval content rather than functional voice leading, the technique is called ______.",
+              "options": [
+                "retrograde",
+                "planing",
+                "inversion",
+                "sequence"
+              ],
+              "correctAnswer": "planing",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Twelve-tone row",
+              "definition": "An ordered presentation of all twelve pitch classes in which each appears once before any is repeated, serving as the source for a composition’s pitch organization."
+            },
+            {
+              "term": "Prime form",
+              "definition": "The original ordering of a pitch-class series before transformational operations such as reversal or intervallic mirroring are applied."
+            },
+            {
+              "term": "Retrograde",
+              "definition": "A version of a pitch-class series in which the order is reversed so that the last element appears first and the first appears last."
+            },
+            {
+              "term": "Inversion",
+              "definition": "A transformation in which each ordered interval of a pitch series is mirrored directionally around an initial reference, so ascending motions become corresponding descending ones and vice versa."
+            },
+            {
+              "term": "Row matrix",
+              "definition": "A grid used to display all transpositions of the original ordering and its related transformations, allowing a composer or analyst to locate available forms systematically."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best describes a fundamental rule of twelve-tone composition in its strictest form?",
+              "options": [
+                "One pitch class may recur freely if it is metrically accented",
+                "All twelve pitch classes are stated before any pitch class is repeated",
+                "Only consonant intervals may begin a row",
+                "The row must outline a major or minor triad"
+              ],
+              "correctAnswer": "All twelve pitch classes are stated before any pitch class is repeated",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "If a row form presents the same interval sizes as the original series but in reverse order, which transformation is being used?",
+              "options": [
+                "Inversion",
+                "Retrograde",
+                "Retrograde inversion",
+                "Transposition"
+              ],
+              "correctAnswer": "Retrograde",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In serial technique, the original ordering of the pitch classes is called the ______ form.",
+              "options": [
+                "prime",
+                "retrograde",
+                "inversion",
+                "aggregate"
+              ],
+              "correctAnswer": "prime",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A chart that lists all transpositions of a row along with its inversional and reversed forms is a row ______.",
+              "options": [
+                "matrix",
+                "tetrachord",
+                "cluster",
+                "cadence"
+              ],
+              "correctAnswer": "matrix",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

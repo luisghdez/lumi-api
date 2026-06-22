@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { createCourseController, getCoursesController, getFeaturedCoursesController, getAllCoursesController, getLessonsController, getCourseFilesController, getCourseByIdController } from "../controllers/courseController";
+import { createCourseController, getCoursesController, getFeaturedCoursesController, getAllCoursesController, getLessonsController, getCourseFilesController, getCourseByIdController, getAPCatalogCoursesController, getAPUnitNoteController } from "../controllers/courseController";
 import { authenticateUser } from '../middleware/authUser';
 
 
@@ -33,6 +33,14 @@ async function courseRoutes(fastify: FastifyInstance) {
     handler: getAllCoursesController,
   });
 
+  // Must be registered before /:courseId to avoid the dynamic segment capturing "ap-catalog"
+  fastify.route({
+    method: "GET",
+    url: "/courses/ap-catalog",
+    preHandler: authenticateUser,
+    handler: getAPCatalogCoursesController,
+  });
+
   fastify.route({
     method: "GET",
     url: "/courses/:courseId",
@@ -45,6 +53,14 @@ async function courseRoutes(fastify: FastifyInstance) {
     url: "/courses/:courseId/lessons",
     preHandler: authenticateUser,
     handler: getLessonsController,
+  });
+
+  // Must be registered before /:courseId/files to avoid param capture issues
+  fastify.route({
+    method: "GET",
+    url: "/courses/:courseId/notes/:unitNumber",
+    preHandler: authenticateUser,
+    handler: getAPUnitNoteController,
   });
 
   fastify.route({

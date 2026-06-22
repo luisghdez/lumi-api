@@ -1,0 +1,765 @@
+{
+  "apSubject": "AP Computer Science Principles",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Digital Information",
+      "description": "Binary representation, data compression, images, sound, and the limits of digital representation.",
+      "note": "# Unit 1: Digital Information\n\n## Overview\nThis unit introduces how computers represent **all kinds of information**—text, numbers, images, and sound—using **binary**. You’ll also study **data compression** and the **limits of digital representation**, both of which appear frequently in AP CSP questions about abstraction, tradeoffs, and how computing systems manage information.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Bit** | A **binary digit** with value $$0$$ or $$1$$ | The AP exam often asks how all digital data is built from bits. |\n| **Byte** | A group of $$8$$ bits | Useful for reasoning about **file size**, storage, and data representation. |\n| **Binary Number System** | A **base-2** number system using only $$0$$ and $$1$$ | You may need to convert or interpret how computers encode values. |\n| **Abstraction of Data** | The idea that complex information can be represented in a simpler encoded form | Central to CSP: different media types are all represented as patterns of bits. |\n| **Sampling** | Measuring an analog signal at regular intervals to create digital data | Important for understanding digital **sound** and representation limits. |\n| **Resolution** | The amount of detail in an image, often based on number of pixels | Higher resolution improves quality but increases file size. |\n| **Lossless Compression** | Compression that allows original data to be reconstructed exactly | AP questions often contrast **lossless** vs. **lossy** and when each is appropriate. |\n| **Lossy Compression** | Compression that removes some data to reduce file size | Tests tradeoffs: smaller files versus reduced quality. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Real-world information] --> B[Choose a representation]\n    B --> C[Encode as bits]\n    C --> D[Store or transmit data]\n    D --> E[Decode bits]\n    E --> F[Reconstruct information]\n\n    C --> G[\"Compression (lossless or lossy)\"]\n    G --> D\n\n    A --> H[\"Analog source (sound, light)\"]\n    H --> I[Sample and quantize]\n    I --> C\n```\n\n### What this diagram shows\n- **Information** from the real world must be **represented digitally**.\n- Computers **encode** that information into **bits**.\n- Data may be **compressed** before storage or transmission.\n- For **analog** sources like sound or light, systems must **sample** and **quantize** the input first.\n- When decoded, the result may be **exact** or only an **approximation**, depending on the method used.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Need to Know** |\n|---|---|\n| **Bit values** | A **bit** can be $$0$$ or $$1$$. |\n| **Byte** | $$1 \\text{ byte} = 8 \\text{ bits}$$ |\n| **Number of values represented by bits** | With $$n$$ bits, you can represent $$2^n$$ different values. |\n| **Binary place value** | Each position in a binary number represents a power of $$2$$: $$\\dots, 2^3, 2^2, 2^1, 2^0$$ |\n| **Image file size idea** | More **pixels** and/or more **bits per pixel** generally mean a larger file size. |\n| **Sound file size idea** | Higher **sampling rate** and/or more **bits per sample** generally mean a larger file size. |\n| **Lossless compression rule** | Original data can be perfectly restored after decompression. |\n| **Lossy compression rule** | Some information is discarded permanently to reduce size. |\n| **Digital representation limit** | Digital data is a **finite approximation** of real-world information; increasing detail improves quality but uses more bits. |\n\n### Binary example\nThe binary number $$1011_2$$ equals:\n\n$$\n1(2^3) + 0(2^2) + 1(2^1) + 1(2^0) = 8 + 0 + 2 + 1 = 11_{10}\n$$\n\n### Key AP CSP principle\nIncreasing the number of bits available for a representation generally increases:\n- **precision**\n- **range of values**\n- **file size / storage needs**\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Related** | **Important Difference** |\n|---|---|---|\n| **Analog vs. Digital** | Both represent information | **Analog** varies continuously; **digital** uses discrete values encoded as bits. |\n| **Image Resolution vs. Color Depth** | Both affect image quality and file size | **Resolution** is how many pixels; **color depth** is how many bits describe each pixel. |\n| **Sampling Rate vs. Bits per Sample** | Both affect sound quality and file size | **Sampling rate** is how often sound is measured; **bits per sample** affect precision of each measurement. |\n| **Lossless vs. Lossy Compression** | Both reduce file size | **Lossless** preserves all original data; **lossy** removes some data permanently. |\n\n```mermaid\nflowchart LR\n    A[More bits] --> B[More possible values]\n    B --> C[Greater precision or detail]\n    C --> D[Larger file size]\n\n    E[Compression] --> F[Smaller file size]\n    F --> G[Tradeoff depends on method]\n    G --> H[Lossless: exact recovery]\n    G --> I[Lossy: reduced quality possible]\n```\n\n## Common AP Exam Traps\n\n- **More bits always means better in every way**: More bits usually improve **detail or precision**, but they also increase **storage** and **transmission** requirements.\n- **Lossy and lossless are interchangeable**: They are not. **Lossless** restores the original exactly; **lossy** does not.\n- **Sampling rate and bits per sample are the same thing**: They affect sound differently. One controls **how often** samples are taken; the other controls **how precisely** each sample is stored.\n- **Binary is only for numbers**: On the AP exam, remember that **text, images, audio, and instructions** are all represented with bits.\n- **Digital representations are perfect copies of reality**: They are usually **approximations**, especially for analog inputs like sound and images.\n\n## Quick Review Checklist\n\n- [ ] Explain how **bits** and **bytes** are used to represent digital information.\n- [ ] Convert a small **binary number** to decimal using powers of $$2$$.\n- [ ] State that with $$n$$ bits, a system can represent $$2^n$$ different values.\n- [ ] Describe how **images** are represented using **pixels** and bits.\n- [ ] Explain how **sound** is digitized through **sampling** and quantified values.\n- [ ] Compare **analog** and **digital** representation.\n- [ ] Distinguish clearly between **lossless** and **lossy compression**.\n- [ ] Describe the tradeoff between **higher quality/detail** and **larger file size**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Bit",
+              "definition": "A single unit of data that can have one of two possible values, commonly used as the foundation of all digital encoding."
+            },
+            {
+              "term": "Byte",
+              "definition": "A group of 8 bits, often used as a standard unit for measuring data size and representing a single character or small amount of information."
+            },
+            {
+              "term": "Overflow Error",
+              "definition": "A problem that occurs when a value is too large to be represented with the available number of digits or bits in a system."
+            },
+            {
+              "term": "Abstraction",
+              "definition": "A simplified representation that hides unnecessary detail so people can focus on the most important features of a system or data set."
+            },
+            {
+              "term": "Metadata",
+              "definition": "Information that describes other data, such as details about a file's creation, format, author, or structure."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A system uses 5 bits to represent unsigned integers. Which statement best describes a limitation of this representation?",
+              "options": [
+                "It can represent exactly $$2^5$$ distinct values, so values greater than 31 cannot be stored exactly.",
+                "It can represent exactly 5 distinct values, so values greater than 5 cannot be stored exactly.",
+                "It can represent all positive integers, but not zero.",
+                "It can represent negative integers automatically without any additional convention."
+              ],
+              "correctAnswer": "It can represent exactly $$2^5$$ distinct values, so values greater than 31 cannot be stored exactly.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which situation best illustrates the role of abstraction in computing?",
+              "options": [
+                "A programmer uses a list of pixel values without needing to know how each value is physically stored in memory.",
+                "A computer converts every decimal number directly into a unique analog waveform.",
+                "A network guarantees that all transmitted bits arrive with no errors.",
+                "An image file always stores every possible color used in nature with perfect accuracy."
+              ],
+              "correctAnswer": "A programmer uses a list of pixel values without needing to know how each value is physically stored in memory.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If a device stores each character using 1 byte, then the word \"CODE\" requires ______ bytes of storage.",
+              "options": [
+                "2",
+                "4",
+                "8",
+                "16"
+              ],
+              "correctAnswer": "4",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When the number of available bit patterns is insufficient to represent a computed result, an ______ may occur.",
+              "options": [
+                "overflow error",
+                "compression artifact",
+                "metadata field",
+                "sampling interval"
+              ],
+              "correctAnswer": "overflow error",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Lossless Compression",
+              "definition": "A technique for reducing file size that allows the original data to be reconstructed exactly after decompression."
+            },
+            {
+              "term": "Lossy Compression",
+              "definition": "A technique for reducing file size by permanently removing some information, usually in ways intended to minimize noticeable quality loss."
+            },
+            {
+              "term": "Sampling",
+              "definition": "The process of measuring an analog signal at regular intervals in order to create a digital representation."
+            },
+            {
+              "term": "Bit Depth",
+              "definition": "The number of bits used to represent each sample or each pixel value, which affects the number of possible levels that can be stored."
+            },
+            {
+              "term": "Pixel",
+              "definition": "The smallest individual element in a digital image, with each element storing a value such as brightness or color."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A grayscale image has a fixed width and height. Which change will necessarily increase the number of bits required to store the image?",
+              "options": [
+                "Increasing the number of pixels used to represent the image",
+                "Reducing the bit depth for each pixel",
+                "Using a lossy compression method after the image is stored",
+                "Displaying the image on a smaller screen"
+              ],
+              "correctAnswer": "Increasing the number of pixels used to represent the image",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains a trade-off involved in digitizing sound?",
+              "options": [
+                "Increasing the sampling rate can improve fidelity but also increases the amount of data needed.",
+                "Increasing the sampling rate always decreases file size while improving quality.",
+                "Reducing the number of samples per second increases accuracy because fewer measurements introduce less error.",
+                "Using more bits per sample eliminates the need to sample at regular intervals."
+              ],
+              "correctAnswer": "Increasing the sampling rate can improve fidelity but also increases the amount of data needed.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "A compression method that allows the exact original data to be reconstructed is called ______ compression.",
+              "options": [
+                "lossless",
+                "lossy",
+                "analog",
+                "overflow"
+              ],
+              "correctAnswer": "lossless",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In a digital image, each ______ stores one small part of the overall picture.",
+              "options": [
+                "pixel",
+                "sample rate",
+                "algorithm",
+                "frequency"
+              ],
+              "correctAnswer": "pixel",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "The Internet",
+      "description": "How the Internet works: protocols, IP addresses, DNS, packet routing, HTTP, and cybersecurity.",
+      "note": "# Unit 2: The Internet\n\n## Overview\nThis unit explains how the **Internet** moves information across the world using agreed-upon **protocols**, **addresses**, and **routing systems**. For the AP exam, you need to understand not just vocabulary, but also how technologies like **IP**, **DNS**, **packets**, **HTTP**, and **encryption** work together to make communication reliable, scalable, and secure.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Internet** | A global network of interconnected networks that communicate using standard protocols. | AP CSP often tests the Internet as a **system of systems**, not as one single machine or company. |\n| **Protocol** | A set of rules for formatting and transmitting data between devices. | You must know that the Internet works because devices agree on shared rules like **TCP/IP** and **HTTP**. |\n| **IP Address** | A numerical label that identifies a device on a network so data can be sent to it. | AP questions may ask how devices are located and how data reaches the correct destination. |\n| **Packet** | A small chunk of data sent independently across a network. | Packet switching is central to understanding Internet reliability, efficiency, and fault tolerance. |\n| **Router** | A device that forwards packets between networks based on destination addresses. | The exam may test how packets can take different paths and still be reassembled correctly. |\n| **DNS** | The **Domain Name System**, which translates human-readable names like **example.com** into IP addresses. | AP CSP often emphasizes abstraction: humans use names, computers use numeric addresses. |\n| **HTTP/HTTPS** | Protocols used to request and transfer web resources; **HTTPS** adds security through encryption. | Students must distinguish between the **Internet** and the **World Wide Web**, and understand secure communication. |\n| **Cybersecurity** | Practices and technologies used to protect data, devices, and networks. | The AP exam frequently asks about **encryption**, vulnerabilities, authentication, and tradeoffs between security and usability. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart LR\n    A[User enters a web address] --> B[DNS translates domain name to IP address]\n    B --> C[Browser sends request using HTTP or HTTPS]\n    C --> D[Data is broken into packets]\n    D --> E[Routers forward packets across networks]\n    E --> F[Server receives request]\n    F --> G[Server sends response packets]\n    G --> H[Packets may take different paths back]\n    H --> I[Receiving device reassembles packets]\n    I --> J[Browser displays webpage]\n```\n\n### What this process shows\n1. A user usually starts with a **domain name**, not an IP address.\n2. **DNS** maps that name to an **IP address**.\n3. The browser uses **HTTP** or **HTTPS** to request a resource.\n4. The message is split into **packets**.\n5. **Routers** move packets through the network, often along different paths.\n6. The receiving computer reassembles the packets in the correct order.\n7. This design makes the Internet **scalable** and **fault tolerant**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Protocol** | A **protocol** is an agreed-upon set of rules that determines how data is transmitted and received. |\n| **Packet Switching** | The Internet uses **packet switching**, meaning data is divided into smaller packets that can travel independently. |\n| **Routing Principle** | **Routers** determine paths for packets based on network information and destination IP addresses. |\n| **Redundancy** | The Internet is more reliable because multiple paths often exist between sender and receiver. If one path fails, packets can be rerouted. |\n| **DNS Rule** | **DNS** translates domain names into IP addresses so humans do not need to memorize numeric addresses. |\n| **IP Addressing** | Every device connected to the Internet needs an **IP address** to send and receive data. |\n| **HTTP vs. HTTPS** | **HTTP** transfers web data; **HTTPS** uses encryption to secure communication between client and server. |\n| **Encryption** | **Encryption** transforms readable data into coded data so unauthorized users cannot easily interpret it. |\n| **Symmetric Encryption** | Uses the **same key** for encryption and decryption; generally faster but requires secure key sharing. |\n| **Public Key Encryption** | Uses a **public key** to encrypt and a **private key** to decrypt; supports secure communication without sharing a secret key first. |\n| **Fault Tolerance** | A system is **fault tolerant** if it continues functioning even when some components fail. The Internet is designed for this. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Related** | **Key Difference** |\n|---|---|---|\n| **Internet vs. World Wide Web** | The Web runs on top of the Internet. | The **Internet** is the infrastructure; the **Web** is a service that uses it. |\n| **IP Address vs. Domain Name** | Both help locate resources on networks. | An **IP address** is numeric and used by machines; a **domain name** is human-readable and translated by DNS. |\n| **HTTP vs. HTTPS** | Both are used to transfer web content between browser and server. | **HTTPS** adds encryption and authentication, making communication more secure. |\n| **Packet Switching vs. Dedicated Circuit** | Both are ways to move data from one place to another. | **Packet switching** sends chunks along dynamic routes; a **dedicated circuit** reserves a fixed path. The Internet uses packet switching. |\n\n```mermaid\nflowchart TD\n    A[Human-friendly communication] --> B[Domain Name]\n    B --> C[DNS]\n    C --> D[IP Address]\n    D --> E[Routers forward packets]\n    E --> F[Server or destination device]\n```\n\n## Common AP Exam Traps\n\n- **Confusing the Internet with the Web**: the **Internet** is the global network; the **Web** is one service that runs on it.\n- **Assuming packets always travel the same path**: they can take different routes and still arrive at the same destination.\n- **Thinking DNS stores webpages**: **DNS** only translates names to IP addresses; it does not host content.\n- **Believing HTTPS makes a site completely safe**: **HTTPS** encrypts communication, but it does not guarantee the site itself is trustworthy or malware-free.\n- **Assuming one protocol does everything**: different protocols serve different purposes, such as addressing, routing, web requests, and secure transmission.\n\n## Quick Review Checklist\n\n- [ ] I can explain what the **Internet** is and how it differs from the **World Wide Web**.\n- [ ] I can define a **protocol** and give examples such as **IP**, **TCP**, **HTTP**, or **HTTPS**.\n- [ ] I can describe how **DNS** translates a domain name into an **IP address**.\n- [ ] I can explain why the Internet uses **packets** instead of sending data as one large block.\n- [ ] I can describe how **routers** help packets reach their destination.\n- [ ] I can explain why packets may take different paths and how that improves **fault tolerance**.\n- [ ] I can compare **HTTP** and **HTTPS** in terms of function and security.\n- [ ] I can describe basic **cybersecurity** ideas such as **encryption**, **authentication**, and network vulnerabilities.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Protocol",
+              "definition": "An agreed-upon set of rules that determines how devices format, transmit, and interpret data during communication."
+            },
+            {
+              "term": "IP address",
+              "definition": "A numeric identifier assigned to a device on a network so data can be sent to and from that device."
+            },
+            {
+              "term": "Packet",
+              "definition": "A small unit of transmitted data that includes both part of the message and information used to direct it to the correct destination."
+            },
+            {
+              "term": "DNS",
+              "definition": "A distributed system that translates human-readable domain names into numerical network locations."
+            },
+            {
+              "term": "Router",
+              "definition": "A networking device that forwards data units between networks by using addressing information to choose a path."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student types a web address into a browser, and the request is successfully sent to the correct server even though the student does not know the server's numeric network location. Which process makes this possible?",
+              "options": [
+                "Converting the domain name to an IP address using DNS",
+                "Encrypting the request with public-key cryptography",
+                "Breaking the request into packets of identical size",
+                "Assigning a new MAC address to the browser session"
+              ],
+              "correctAnswer": "Converting the domain name to an IP address using DNS",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains why packet switching improves the reliability of Internet communication?",
+              "options": [
+                "Each packet can travel independently and be rerouted if part of the network fails",
+                "A dedicated physical circuit is reserved for the entire communication session",
+                "All packets must follow the same path to preserve message integrity",
+                "Routers store complete files before forwarding any data"
+              ],
+              "correctAnswer": "Each packet can travel independently and be rerouted if part of the network fails",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "On the Internet, a device typically needs a(n) ______ so that other devices know where to send its data.",
+              "options": [
+                "IP address",
+                "HTML tag",
+                "search index",
+                "bitmap image"
+              ],
+              "correctAnswer": "IP address",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a message is divided into smaller pieces that can travel separately across a network, each piece is called a ______.",
+              "options": [
+                "packet",
+                "pixel",
+                "domain",
+                "cipher"
+              ],
+              "correctAnswer": "packet",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "HTTP",
+              "definition": "An application-layer system of rules used by web browsers and servers to request and deliver web resources."
+            },
+            {
+              "term": "Redundancy",
+              "definition": "The inclusion of extra pathways or components so a system can continue operating when part of it fails."
+            },
+            {
+              "term": "Fault tolerance",
+              "definition": "The ability of a computing system to keep functioning despite errors, failures, or the loss of some components."
+            },
+            {
+              "term": "Encryption",
+              "definition": "The process of transforming readable data into an encoded form so unauthorized parties cannot easily understand it."
+            },
+            {
+              "term": "Public key cryptography",
+              "definition": "A security method that uses one key to encode data and a different but mathematically related key to decode it."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which scenario best illustrates fault tolerance in Internet design?",
+              "options": [
+                "A network continues to deliver data because packets are rerouted after one router fails",
+                "A browser saves a password so the user does not need to reenter it",
+                "A server stores web pages in alphabetical order for faster editing",
+                "A website uses larger images to improve visual quality"
+              ],
+              "correctAnswer": "A network continues to deliver data because packets are rerouted after one router fails",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A web developer wants to reduce the chance that intercepted login information can be read by an attacker while it travels across the Internet. Which approach best addresses this goal?",
+              "options": [
+                "Encrypt the transmitted data",
+                "Increase the screen resolution of the client device",
+                "Store the data in more packets",
+                "Replace the domain name with a shorter one"
+              ],
+              "correctAnswer": "Encrypt the transmitted data",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The protocol commonly used for transferring web pages between a browser and a web server is ______.",
+              "options": [
+                "HTTP",
+                "DNS",
+                "IP address",
+                "binary search"
+              ],
+              "correctAnswer": "HTTP",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In a system that uses two related keys, one public and one private, the security technique is called ______.",
+              "options": [
+                "public key cryptography",
+                "packet switching",
+                "lossy compression",
+                "iteration"
+              ],
+              "correctAnswer": "public key cryptography",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Programming",
+      "description": "Variables, data types, conditionals, loops, functions, lists, and algorithm design in pseudocode.",
+      "note": "# Unit 3: Programming\n\n## Overview\nThis unit introduces the core building blocks of programming: **variables**, **data types**, **conditionals**, **loops**, **functions/procedures**, **lists**, and **algorithms** expressed in **pseudocode**. These ideas matter on the AP exam because students must read, trace, compare, and design algorithms while demonstrating an understanding of how programs store data, make decisions, and repeat actions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Variables** | Named storage locations that hold values used by a program. | AP questions often test whether you can trace how a variable’s value changes over time. |\n| **Data Types** | Categories of values such as **integer**, **string**, **Boolean**, and **list**. | You must recognize what kinds of operations make sense for different data and what output a program will produce. |\n| **Assignment** | Setting or updating a variable’s value. | A common AP skill is following step-by-step reassignment in pseudocode. |\n| **Conditionals** | **If/else** logic that chooses among actions based on a **Boolean** condition. | The exam frequently asks which branch runs and under what condition. |\n| **Iteration** | Repetition using **loops**, including repeating a fixed number of times or until a condition is met. | You need to determine how many times a loop runs and how repetition affects variables or output. |\n| **Functions / Procedures** | Reusable blocks of code, sometimes with **parameters** and return values. | AP questions test abstraction, code reuse, and how inputs affect outputs. |\n| **Lists** | Ordered collections of elements stored under one variable name. | Lists appear often in algorithm questions involving traversal, search, insertion, removal, or aggregation. |\n| **Algorithm Design** | Creating a precise, step-by-step solution to a problem. | The AP exam emphasizes sequencing, selection, iteration, and procedural abstraction in algorithm development. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Start with a problem] --> B[Identify inputs]\n    B --> C[Store data in variables or lists]\n    C --> D[Process with sequence of steps]\n    D --> E{\"Decision needed?\"}\n    E -->|Yes| F[Use conditional]\n    E -->|No| G{\"Repeat needed?\"}\n    F --> G\n    G -->|Yes| H[Use loop]\n    G -->|No| I{\"Reusable task?\"}\n    H --> I\n    I -->|Yes| J[Create function or procedure]\n    I -->|No| K[Produce output]\n    J --> K\n    K --> L[Test and trace algorithm]\n```\n\nThis workflow reflects how AP CSP typically frames programming problems: define data, apply **sequence**, add **selection** and **iteration**, organize logic into **procedures**, and verify correctness through tracing.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Assignment updates value** | An assignment statement replaces the old value of a variable with a new one. Trace carefully in order. |\n| **Sequence** | Program statements run in the order written unless a conditional or loop changes the flow. |\n| **Selection** | A **conditional** executes one path when a condition is **true** and another when it is **false**. |\n| **Iteration** | A **loop** repeats a block of code either a certain number of times or until a condition changes. |\n| **Boolean expressions** | Conditions evaluate to **true** or **false** and may use comparison and logical operators. |\n| **Function / procedure call** | A procedure can take **parameters** as input and may return a result; it helps reduce repetition and improve readability. |\n| **List indexing** | AP pseudocode often accesses elements by position. Always check whether the problem’s indexing convention is explicitly given. |\n| **Traversal of a list** | Many algorithms process each item in a list one at a time to count, sum, search, filter, or transform data. |\n| **Algorithm correctness** | A correct algorithm produces the intended output for all valid inputs, not just one example. |\n| **Reasonable time** | On AP CSP, students compare algorithms partly by whether they are efficient enough to solve a problem in a practical amount of time. |\n\n### Common pseudocode patterns to recognize\n- **Counter pattern**: increase a variable each time a condition is met.\n- **Accumulator pattern**: combine values over time, such as building a total.\n- **Search pattern**: check whether at least one element matches a condition.\n- **Filter pattern**: create a new list containing only elements that satisfy a rule.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Connect** | **Key Distinction** |\n|---|---|---|\n| **Variables vs. Lists** | Both store data for later use in an algorithm. | A **variable** usually stores one value; a **list** stores multiple ordered values. |\n| **Conditionals vs. Loops** | Both control program flow beyond simple sequence. | A **conditional** chooses among paths once per evaluation; a **loop** repeats a block. |\n| **Functions vs. Repeated Code** | Both can accomplish the same task. | A **function/procedure** improves **abstraction**, reuse, readability, and maintenance. |\n| **Algorithm vs. Program** | A program implements an algorithm in code or pseudocode. | An **algorithm** is the step-by-step solution idea; a **program** is a concrete implementation. |\n\n```mermaid\nflowchart LR\n    A[Sequence] --> B[Selection]\n    A --> C[Iteration]\n    B --> D[Algorithm Design]\n    C --> D\n    E[Variables and Lists] --> D\n    F[Functions or Procedures] --> D\n```\n\n## Common AP Exam Traps\n- Confusing **assignment** with mathematical equality. In programming, updating `x` means the old value is replaced; it does not mean both sides stay permanently equal.\n- Forgetting to trace a **loop** the correct number of times, especially when variables change inside the loop.\n- Mixing up a **condition that stops a loop** with a **condition checked during each repetition**.\n- Assuming a **procedure** must return a value. Some procedures perform an action without returning anything.\n- Misreading **list operations** or indexing details. Small differences in position or order can change the final output.\n\n## Quick Review Checklist\n- [ ] I can explain how **variables** store values and how **assignment** changes those values over time.\n- [ ] I can identify common **data types** such as **integer**, **string**, **Boolean**, and **list**.\n- [ ] I can trace an **if/else conditional** and predict which branch executes.\n- [ ] I can determine how a **loop** changes variables and how many times it repeats.\n- [ ] I can explain the difference between **parameters**, **arguments**, and a **return value** in a **function/procedure**.\n- [ ] I can describe how to traverse a **list** to count, search, or accumulate information.\n- [ ] I can distinguish **sequence**, **selection**, and **iteration** as the three major control structures.\n- [ ] I can read and design simple **algorithms in pseudocode** that solve a stated problem correctly.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Variable",
+              "definition": "A named storage location in a program that holds a value which can be updated as the program runs."
+            },
+            {
+              "term": "Data abstraction",
+              "definition": "The practice of using a meaningful representation to manage complexity by hiding unnecessary details about how information is stored or processed."
+            },
+            {
+              "term": "Assignment",
+              "definition": "An operation that stores the result of an expression in a named storage location for later use."
+            },
+            {
+              "term": "Boolean expression",
+              "definition": "A statement that evaluates to one of two possible truth values and is often used to control program flow."
+            },
+            {
+              "term": "Conditional",
+              "definition": "A control structure that runs different sets of instructions depending on whether a stated condition is true or false."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Consider the following pseudocode:\\n\\nscore ← 8\\nbonus ← 3\\nscore ← score + bonus * 2\\n\\nWhat is the value of score after the code executes?",
+              "options": [
+                "11",
+                "14",
+                "22",
+                "19"
+              ],
+              "correctAnswer": "14",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A programmer writes a selection statement to determine whether a student qualifies for an award. Which situation most clearly requires the use of a compound Boolean condition?",
+              "options": [
+                "The award is given only if a student has a grade above 90 and fewer than 3 absences.",
+                "The award is given to every student in the class.",
+                "The award amount is stored in a variable for later display.",
+                "The award name is printed exactly once at the end of the program."
+              ],
+              "correctAnswer": "The award is given only if a student has a grade above 90 and fewer than 3 absences.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In AP CSP pseudocode, the expression in an IF statement must evaluate to ______.",
+              "options": [
+                "a Boolean value",
+                "a list",
+                "a procedure call with no parameters",
+                "a text string"
+              ],
+              "correctAnswer": "a Boolean value",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a program executes the statement total ← total + 1, the variable total is being ______.",
+              "options": [
+                "incremented",
+                "compared",
+                "initialized to zero",
+                "displayed"
+              ],
+              "correctAnswer": "incremented",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Iteration",
+              "definition": "The repeated execution of a block of instructions, either a fixed number of times or until a condition is met."
+            },
+            {
+              "term": "Procedure",
+              "definition": "A named set of program instructions that can be called to perform a task, sometimes using inputs and returning an output."
+            },
+            {
+              "term": "Parameter",
+              "definition": "An input listed in a procedure definition that receives a value when the procedure is called."
+            },
+            {
+              "term": "List",
+              "definition": "An ordered collection of elements that can be accessed or modified using positions, allowing programs to manage related data efficiently."
+            },
+            {
+              "term": "Algorithm",
+              "definition": "A finite, well-defined sequence of steps designed to accomplish a task or solve a problem."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A procedure is intended to return the largest value in a nonempty list of numbers. Which algorithm correctly accomplishes this task?",
+              "options": [
+                "Set max to the first item in the list. For each item in the list, if the item is greater than max, set max to that item. Return max.",
+                "Set max to 0. For each item in the list, add the item to max. Return max.",
+                "Compare only the first two items in the list and return the larger of the two.",
+                "Set max to the last item in the list and return it without any comparisons."
+              ],
+              "correctAnswer": "Set max to the first item in the list. For each item in the list, if the item is greater than max, set max to that item. Return max.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which revision to a program most directly demonstrates the use of procedural abstraction to manage complexity?",
+              "options": [
+                "Replacing repeated code segments with a single procedure that is called whenever that task is needed.",
+                "Changing all variable names to shorter names to reduce typing.",
+                "Storing every value in a separate variable instead of using a list.",
+                "Adding more comments without changing the program structure."
+              ],
+              "correctAnswer": "Replacing repeated code segments with a single procedure that is called whenever that task is needed.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Using a list instead of many separate variables can reduce complexity because a single name can represent ______.",
+              "options": [
+                "multiple related values",
+                "only one Boolean result",
+                "a loop condition",
+                "a randomly generated number"
+              ],
+              "correctAnswer": "multiple related values",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A loop that continues until a condition becomes true is best described as ______ iteration.",
+              "options": [
+                "condition-controlled",
+                "parallel",
+                "sequential-only",
+                "constant-time"
+              ],
+              "correctAnswer": "condition-controlled",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Data Analysis",
+      "description": "Collecting, cleaning, and visualizing data; identifying patterns; limitations of data and metadata.",
+      "note": "# Unit 4: Data Analysis\n\n## Overview\nIn this unit, you learn how **data** is collected, cleaned, organized, and visualized so people can discover patterns and make decisions. For the AP exam, you need to understand not just how data can be useful, but also its **limitations**, including issues with **bias**, **metadata**, and the fact that patterns in data do not always prove cause and effect.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Data collection** | Gathering information from observations, surveys, sensors, transactions, simulations, or user activity | AP questions often ask how data is generated and whether the collection method affects reliability |\n| **Data cleaning** | Correcting, removing, or handling incomplete, duplicate, or inconsistent data | Clean data leads to more accurate analysis; the exam may test why “raw” data can be misleading |\n| **Data visualization** | Representing data with charts, graphs, maps, or tables | You may need to identify which visualization best reveals trends, comparisons, or outliers |\n| **Pattern identification** | Looking for trends, clusters, correlations, or anomalies in data | AP CSP emphasizes using data to discover information and support conclusions |\n| **Metadata** | Data about data, such as time collected, source, format, or location | Metadata adds context and can improve interpretation, but it can also create privacy concerns |\n| **Bias** | A systematic distortion in data collection, sampling, or interpretation | The AP exam frequently tests whether conclusions are limited by biased or incomplete data |\n| **Correlation vs. causation** | **Correlation** means two variables change together; **causation** means one directly causes the other | A classic AP trap: patterns in data do not automatically prove why they happen |\n| **Data abstraction** | Simplifying or summarizing data to make it easier to process and analyze | AP CSP often connects abstraction to managing large datasets and highlighting useful features |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Define question or goal] --> B[Collect data]\n    B --> C[Clean and organize data]\n    C --> D[Store and label data]\n    D --> E[Analyze for patterns]\n    E --> F[Visualize results]\n    F --> G[Interpret conclusions]\n    G --> H[\"Evaluate limits, bias, and privacy concerns\"]\n    H --> I[Revise question or collect more data]\n```\n\n### Typical Data Analysis Workflow\n1. **Define a question**\n   - What do you want to learn or predict?\n2. **Collect data**\n   - Use surveys, devices, experiments, logs, or databases.\n3. **Clean data**\n   - Remove duplicates, fix errors, and address missing values.\n4. **Organize and store**\n   - Structure the data so it can be searched and analyzed.\n5. **Analyze**\n   - Look for **patterns**, **trends**, **outliers**, or **relationships**.\n6. **Visualize**\n   - Use the best graph or display for the type of conclusion needed.\n7. **Interpret carefully**\n   - Ask whether the results are valid, limited, or biased.\n8. **Reflect on impact**\n   - Consider privacy, ethical use, and whether more data is needed.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Data** | **Data** is information collected for reference, analysis, or computation. |\n| **Metadata** | **Metadata** describes other data, such as source, date, location, file type, or author. |\n| **Visualization rule** | A good **visualization** makes patterns easier to see without distorting the data. |\n| **Cleaning rule** | **Incomplete**, **duplicate**, or **incorrect** data can reduce the accuracy of conclusions. |\n| **Bias rule** | If data is collected from a non-representative sample, conclusions may not apply broadly. |\n| **Correlation rule** | If two variables are associated, they are **correlated**. |\n| **Causation rule** | **Causation** requires evidence that one factor directly affects another; correlation alone is not enough. |\n| **Abstraction rule** | **Abstraction** reduces detail to focus on the most relevant parts of a dataset. |\n| **Privacy rule** | Even when personal data is removed, **metadata** or combined datasets can sometimes reveal sensitive information. |\n\n### Simple Quantitative Ideas You May See\nWhile AP CSP does not focus heavily on formulas in this unit, you may still interpret basic summaries such as counts or averages:\n\n- **Average (mean)** of values:\n$$\n\\text{mean} = \\frac{\\text{sum of values}}{\\text{number of values}}\n$$\n\n- **Range** of a dataset:\n$$\n\\text{range} = \\text{maximum value} - \\text{minimum value}\n$$\n\nThese help summarize data, but they do not tell the whole story if the data is biased or contains outliers.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Connected** | **Key Difference** |\n|---|---|---|\n| **Data** vs. **Metadata** | Metadata provides context for understanding raw data | **Data** is the content itself; **metadata** describes the content |\n| **Cleaning** vs. **Visualization** | Cleaning often happens before visualization so the display is accurate | **Cleaning** improves data quality; **visualization** improves human understanding |\n| **Correlation** vs. **Causation** | Both describe relationships between variables | **Correlation** shows association; **causation** shows direct effect |\n| **Large datasets** vs. **Useful information** | Big datasets can reveal patterns not visible in small samples | More data is not automatically better if it is biased, noisy, or poorly collected |\n\n```mermaid\nflowchart LR\n    A[Raw data] --> B[Cleaned data]\n    B --> C[Visualization]\n    C --> D[Pattern identified]\n    D --> E[Possible conclusion]\n    E --> F[\"Check for bias, missing context, and false causation\"]\n```\n\n## Common AP Exam Traps\n\n- Assuming that a **larger dataset** is always more accurate. Large datasets can still be **biased** or incomplete.\n- Confusing **correlation** with **causation**. If two trends move together, that does not prove one caused the other.\n- Ignoring **metadata**. AP questions may expect you to recognize that context like time, location, or source changes how data should be interpreted.\n- Believing visualizations are always neutral. A graph can mislead if it leaves out data, uses a bad scale, or oversimplifies.\n- Forgetting that **cleaning data** can affect results. Removing “bad” data without a valid reason can itself introduce bias.\n\n## Quick Review Checklist\n\n- [ ] I can explain how **data collection** methods affect the quality of results.\n- [ ] I can describe why **data cleaning** is necessary before analysis.\n- [ ] I can identify useful **patterns** such as trends, clusters, and outliers.\n- [ ] I can explain the difference between **data** and **metadata**.\n- [ ] I can compare **correlation** and **causation** without confusing them.\n- [ ] I can describe how **bias** can enter a dataset or an analysis.\n- [ ] I can choose or evaluate an appropriate **data visualization** for a given purpose.\n- [ ] I can explain why conclusions from data may be limited by privacy concerns, missing context, or poor sampling.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Data collection",
+              "definition": "The process of gathering information from observations, surveys, sensors, experiments, transactions, or other sources for later use in computation and analysis."
+            },
+            {
+              "term": "Data cleaning",
+              "definition": "The process of detecting and correcting or removing incomplete, inconsistent, duplicated, or incorrectly formatted information before analysis."
+            },
+            {
+              "term": "Data visualization",
+              "definition": "The presentation of information in graphical form, such as charts or plots, to help reveal relationships, trends, and outliers."
+            },
+            {
+              "term": "Categorical data",
+              "definition": "Information organized into labels or groups rather than measured numerical quantities."
+            },
+            {
+              "term": "Numerical data",
+              "definition": "Information represented by counts or measurements that can be used in arithmetic comparisons and calculations."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student team combines survey results from several classes into one spreadsheet. Some rows list grade levels as \"9,\" others as \"ninth,\" and a few rows are duplicated. Before creating graphs, which action would most directly improve the reliability of later analysis?",
+              "options": [
+                "Replace every response with a random value to make the data uniform",
+                "Standardize category labels and remove duplicate records",
+                "Convert all numerical values into text strings",
+                "Add additional columns containing unrelated information"
+              ],
+              "correctAnswer": "Standardize category labels and remove duplicate records",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A public health researcher wants to compare how many individuals fall into each vaccination-status group in a dataset. Which representation is most appropriate for communicating this comparison to a general audience?",
+              "options": [
+                "A bar chart showing the count in each group",
+                "A paragraph listing every record in the dataset",
+                "A scatter plot with each person assigned an arbitrary $$x$$-value",
+                "A binary search tree storing the records alphabetically"
+              ],
+              "correctAnswer": "A bar chart showing the count in each group",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Before analyzing a dataset, removing repeated entries is part of data ______.",
+              "options": [
+                "compression",
+                "cleaning",
+                "encryption",
+                "routing"
+              ],
+              "correctAnswer": "cleaning",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When information consists of labels such as browser type, eye color, or region, it is best described as ______ data.",
+              "options": [
+                "categorical",
+                "lossy",
+                "iterative",
+                "simulated"
+              ],
+              "correctAnswer": "categorical",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Pattern",
+              "definition": "A recurring relationship, trend, or structure in information that can support explanations, predictions, or decisions."
+            },
+            {
+              "term": "Outlier",
+              "definition": "A value or record that differs substantially from most other values and may indicate error, special circumstances, or meaningful variation."
+            },
+            {
+              "term": "Metadata",
+              "definition": "Information that describes characteristics of other information, such as source, author, format, date created, or collection method."
+            },
+            {
+              "term": "Data bias",
+              "definition": "A systematic distortion caused by the way information is collected, selected, labeled, or interpreted, which can lead to unfair or misleading conclusions."
+            },
+            {
+              "term": "Sampling",
+              "definition": "The process of selecting a subset of a larger population to estimate characteristics of the whole group."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A city releases a dataset of traffic speeds collected only during daylight hours on weekdays. A resident uses the dataset to claim that traffic conditions are always moderate and predictable. Which limitation most weakens that claim?",
+              "options": [
+                "The dataset may omit important patterns from nights and weekends",
+                "The dataset is too large to be stored in a table",
+                "Traffic speed cannot be represented numerically",
+                "Using data always guarantees an unbiased conclusion"
+              ],
+              "correctAnswer": "The dataset may omit important patterns from nights and weekends",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A scientist receives a file containing air-quality measurements along with the date collected, sensor location, units used, and device model. The additional descriptive information is best classified as",
+              "options": [
+                "metadata",
+                "pixel data",
+                "machine code",
+                "parallel output"
+              ],
+              "correctAnswer": "metadata",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If a dataset overrepresents one group because responses were collected only from volunteers, the results may reflect sampling ______.",
+              "options": [
+                "bias",
+                "bandwidth",
+                "redundancy",
+                "recursion"
+              ],
+              "correctAnswer": "bias",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Information such as file format, date created, and source of a dataset is called ______.",
+              "options": [
+                "metadata",
+                "simulation",
+                "iteration",
+                "heuristic"
+              ],
+              "correctAnswer": "metadata",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Impacts of Computing",
+      "description": "Digital divide, intellectual property, privacy, algorithmic bias, and beneficial/harmful effects of computing.",
+      "note": "# Unit 5: Impacts of Computing\n\n## Overview\nThis unit explores how **computing innovations** affect people, communities, and societies in both positive and negative ways. For the AP exam, you need to explain real-world impacts of computing, evaluate trade-offs, and reason about issues like **privacy**, **bias**, **intellectual property**, and the **digital divide** using precise evidence-based language.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Computing Innovation** | A product, system, or process enabled by computing, such as social media, AI tools, GPS, or cloud storage. | AP questions often ask you to identify how an innovation affects society, economics, or culture. |\n| **Beneficial and Harmful Effects** | The positive and negative consequences of computing on individuals and society. | You must evaluate **trade-offs**, not just list benefits. Many prompts ask for one beneficial and one harmful effect. |\n| **Digital Divide** | Unequal access to computing devices, internet connectivity, or digital literacy. | The AP exam may ask how access differences shape opportunity, participation, and equity. |\n| **Privacy** | A person’s ability to control how personal data is collected, stored, shared, and used. | You need to explain risks of data collection and how computing can threaten or protect privacy. |\n| **Data Security** | Protecting data from unauthorized access, damage, or misuse. | AP questions often distinguish **privacy** from **security**; they are related but not identical. |\n| **Intellectual Property** | Legal and ethical rights over creations such as software, music, writing, and images. | You should know concepts like **copyright**, **licensing**, and why creators’ rights matter in digital environments. |\n| **Algorithmic Bias** | Systematic unfairness in an algorithm’s outputs, often caused by biased data or design choices. | The AP exam may ask how algorithms can unintentionally discriminate or reinforce existing inequalities. |\n| **Crowdsourcing / Collaboration** | Using large groups of people to contribute data, ideas, or work through networked computing. | This shows how computing can expand participation and problem-solving, but also introduces quality and ethical concerns. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Computing innovation created] --> B[Adopted by users and institutions]\n    B --> C[Data is generated, shared, and stored]\n    C --> D[Societal impacts emerge]\n    D --> E[Benefits]\n    D --> F[Harms]\n    E --> G[Greater access, efficiency, communication, creativity]\n    F --> H[Privacy risks, bias, exclusion, misuse]\n    H --> I[Responses: policy, design changes, education, regulation]\n    G --> I\n    I --> J[Innovation evolves]\n```\n\n### How to think about this process\n1. A **computing innovation** is developed and adopted.\n2. Its use changes how people communicate, work, learn, or make decisions.\n3. Those changes create both **beneficial** and **harmful** effects.\n4. Society responds through **laws**, **ethical norms**, **technical safeguards**, and redesign.\n5. The innovation continues to evolve, sometimes reducing harms and sometimes creating new ones.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Computing innovations have impacts beyond their intended purpose** | A tool designed for one task may affect communication, employment, politics, health, or culture in unexpected ways. |\n| **A beneficial effect is not universal** | An innovation can help one group while disadvantaging another. AP responses should acknowledge **different stakeholders**. |\n| **Privacy and security are different** | **Privacy** is about control over personal information; **security** is about protecting data and systems from unauthorized access. Good security can support privacy, but they are not the same concept. |\n| **Digital divide includes more than devices** | It involves access to **hardware**, **internet**, **bandwidth**, and **digital literacy**. Having a device alone does not guarantee meaningful access. |\n| **Intellectual property protects creators** | Digital content can be copied easily, so rules like **copyright** and **licenses** help define legal and ethical use. |\n| **Open access and Creative Commons are not the same as “free to do anything”** | Some materials are shared with conditions, such as attribution or noncommercial use. |\n| **Algorithmic bias can come from data or design** | Bias may result from unrepresentative training data, flawed assumptions, or evaluation standards that work better for some groups than others. |\n| **The Internet enables collaboration at scale** | Large networks support **crowdsourcing**, open-source development, and rapid sharing of information, but can also spread misinformation or low-quality contributions. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** | **AP Tip** |\n|---|---|---|---|\n| **Privacy vs. Security** | Both concern protection of information in digital systems. | **Privacy** focuses on who should have access; **security** focuses on preventing unauthorized access. | If asked about data leaks, explain whether the issue is privacy, security, or both. |\n| **Digital Divide vs. Algorithmic Bias** | Both can increase inequality through computing. | **Digital divide** is unequal access; **algorithmic bias** is unequal treatment in outputs or decisions. | Do not confuse lack of access with unfair algorithmic processing. |\n| **Copyright vs. Open Source / Open Access** | Both relate to ownership and use of digital creations. | **Copyright** restricts use by default; **open** models allow wider use under stated terms. | Read carefully: “available online” does not mean “public domain.” |\n| **Beneficial Effects vs. Harmful Effects** | Most computing innovations produce both. | Benefits may include efficiency or connection; harms may include surveillance, addiction, or exclusion. | Strong AP answers often show a balanced evaluation rather than a one-sided claim. |\n\n## Common AP Exam Traps\n- Confusing **privacy** with **security**. A system can be secure from hackers and still violate privacy if it collects too much personal data.\n- Assuming that if technology exists, everyone can use it equally. The **digital divide** includes cost, infrastructure, geography, disability access, and user skills.\n- Treating **algorithmic bias** as always intentional. On the AP exam, bias is often **unintentional** and emerges from data or design.\n- Assuming online content is free to copy because it is easy to access. **Intellectual property** rights still apply unless permissions say otherwise.\n- Listing only positive or only negative impacts. AP questions often reward recognizing **trade-offs** and multiple stakeholder perspectives.\n\n## Quick Review Checklist\n- [ ] I can define a **computing innovation** and describe how it affects society, culture, or economics.\n- [ ] I can explain one **beneficial** and one **harmful** effect of a computing technology.\n- [ ] I can distinguish **privacy** from **security** using a clear example.\n- [ ] I can explain the **digital divide** and identify more than one cause of unequal access.\n- [ ] I can describe **intellectual property** and explain why copying digital work raises legal and ethical issues.\n- [ ] I can explain how **algorithmic bias** can result from biased data or design choices.\n- [ ] I can compare related concepts such as **copyright** and **open access**, or **digital divide** and **algorithmic bias**.\n- [ ] I can evaluate a computing innovation by discussing **trade-offs**, stakeholders, and unintended consequences.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Digital divide",
+              "definition": "A gap in access to reliable internet, computing devices, or digital skills that can limit participation in education, employment, and civic life."
+            },
+            {
+              "term": "Crowdsourcing",
+              "definition": "The practice of using contributions from a large group of people, often through the internet, to solve problems, gather information, or create content."
+            },
+            {
+              "term": "Creative Commons",
+              "definition": "A set of public licenses that allows creators to specify how others may use, share, or adapt their work."
+            },
+            {
+              "term": "Copyright",
+              "definition": "Legal protection that gives creators control over reproduction, distribution, and certain uses of original works for a limited time."
+            },
+            {
+              "term": "Public domain",
+              "definition": "Works that are free for anyone to use because legal protection has expired, been waived, or never applied."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A school district provides every student with a laptop, but many students still cannot consistently complete online homework because home internet service is unavailable or unaffordable. Which issue is best illustrated by this scenario?",
+              "options": [
+                "Open-source licensing",
+                "The digital divide",
+                "Lossless compression",
+                "Fault tolerance"
+              ],
+              "correctAnswer": "The digital divide",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A programmer wants to incorporate an image into an app without requesting individual permission from the creator, as long as the image's license terms are followed. Which concept most directly enables this use?",
+              "options": [
+                "Binary search",
+                "Creative Commons licensing",
+                "Phishing detection",
+                "Packet switching"
+              ],
+              "correctAnswer": "Creative Commons licensing",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When many volunteers classify images online to help researchers train a model, the process is called ______.",
+              "options": [
+                "simulation",
+                "crowdsourcing",
+                "encryption",
+                "redundancy"
+              ],
+              "correctAnswer": "crowdsourcing",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A song whose legal protection has expired and can be used by anyone without permission is in the ______.",
+              "options": [
+                "bandwidth",
+                "public domain",
+                "cache",
+                "protocol"
+              ],
+              "correctAnswer": "public domain",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Personally identifiable information (PII)",
+              "definition": "Data that can be used to identify a specific individual, either alone or when combined with other information."
+            },
+            {
+              "term": "Encryption",
+              "definition": "The transformation of readable data into an encoded form so that only authorized parties can recover the original information."
+            },
+            {
+              "term": "Algorithmic bias",
+              "definition": "Systematic unfairness in a computational process that leads to different outcomes for groups, often due to biased data, design choices, or assumptions."
+            },
+            {
+              "term": "Beneficial effect of computing",
+              "definition": "A positive societal outcome of digital technologies, such as expanded access to information, improved communication, or advances in medicine and science."
+            },
+            {
+              "term": "Harmful effect of computing",
+              "definition": "A negative societal outcome of digital technologies, such as misinformation, privacy loss, job disruption, or unequal access."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "An automated résumé-screening system consistently ranks applicants from one demographic group lower because historical hiring data reflected past discrimination. Which explanation best accounts for the problem?",
+              "options": [
+                "Algorithmic bias caused by biased training data",
+                "A failure of packet routing between servers",
+                "Lossless compression reducing file quality",
+                "Parallel computing increasing throughput"
+              ],
+              "correctAnswer": "Algorithmic bias caused by biased training data",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which action most directly helps protect sensitive personal data when it is transmitted over a network?",
+              "options": [
+                "Using encryption during transmission",
+                "Increasing screen resolution",
+                "Storing files in plain text",
+                "Reducing the number of variables in a program"
+              ],
+              "correctAnswer": "Using encryption during transmission",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Information such as a full name, government ID number, or combination of data that can identify a specific person is called ______.",
+              "options": [
+                "metadata",
+                "personally identifiable information",
+                "crowdsourcing",
+                "simulation"
+              ],
+              "correctAnswer": "personally identifiable information",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A facial-recognition system that performs less accurately on some demographic groups demonstrates possible ______.",
+              "options": [
+                "lossy compression",
+                "algorithmic bias",
+                "fault tolerance",
+                "IP addressing"
+              ],
+              "correctAnswer": "algorithmic bias",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

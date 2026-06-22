@@ -1,0 +1,917 @@
+{
+  "apSubject": "AP French Language and Culture",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Families and Communities",
+      "description": "Language and culture related to family structures, community life, social roles, and interpersonal relationships.",
+      "note": "# Unit 1: Families and Communities\n\n## Overview\nIn **Unit 1: Families and Communities**, you explore how French speakers describe **family structures**, **community life**, **social values**, and **interpersonal relationships**. This unit matters for the AP exam because it builds the vocabulary, cultural knowledge, and communication skills needed to **interpret texts**, **compare cultures**, and **express opinions** about identity, belonging, and social roles.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Family structures** | Different forms of family life: **nuclear**, **extended**, **single-parent**, **blended**, and **multigenerational** families | Often appears in **cultural comparisons** and **interpersonal speaking** tasks about daily life and values |\n| **Community life** | How people interact in neighborhoods, towns, schools, and local organizations | Helps you discuss **social support**, **belonging**, and **civic engagement** in French-speaking contexts |\n| **Roles and responsibilities** | Expectations tied to age, gender, status, or family position | Useful for analyzing how **tradition** and **change** shape relationships and social behavior |\n| **Interpersonal relationships** | Friendships, family ties, authority relationships, and social networks | Central to **conversation**, **email reply**, and **speaking prompts** requiring advice, reactions, or explanations |\n| **Cultural values** | Shared beliefs about **solidarity**, **independence**, **respect**, **privacy**, or **collective identity** | Key for the **Comparez votre culture…** task and for interpreting perspectives behind practices |\n| **Tradition vs. modernity** | Tension between inherited customs and contemporary lifestyles | A common AP theme: students must explain how societies adapt while preserving cultural identity |\n| **Identity and belonging** | How language, heritage, region, and family shape who someone is | Supports deeper responses in **presentational writing** and **spoken comparisons** |\n| **Register and tone** | Formal vs. informal language, including **tu/vous** and polite expressions | Crucial for scoring well in **interpersonal writing and speaking**, where audience awareness matters |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Individual identity] --> B[Family relationships]\n    B --> C[Shared values and traditions]\n    C --> D[Community participation]\n    D --> E[Sense of belonging]\n    E --> F[Social expectations and roles]\n    F --> G[Change over time]\n    G --> C\n```\n\n### How this relationship works\n1. **Individuals** develop their identities first through **family relationships**.\n2. Families transmit **values**, **customs**, and ways of communicating.\n3. These values influence how people participate in the **community**.\n4. Community involvement strengthens or challenges a person’s **sense of belonging**.\n5. Social belonging shapes expectations about **roles**, responsibilities, and behavior.\n6. Over time, changing social realities can reshape traditions and family norms.\n\n## Essential Formulas / Laws / Rules\n\n### Key language and cultural rules to know\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Use of** **tu** **vs.** **vous** | **Tu** is generally informal and used with friends, peers, children, or close family; **vous** shows respect, distance, or formality and may be used with elders, authority figures, or unfamiliar adults |\n| **Culture = practices + products + perspectives** | On the AP exam, don’t just name a custom (**practice**) or object/institution (**product**); explain the underlying **perspective** or value behind it |\n| **Interpersonal vs. presentational communication** | **Interpersonal** tasks require interaction, reactions, and adaptation to another person; **presentational** tasks require organized, audience-aware explanation without back-and-forth exchange |\n| **Register matters** | Match tone to context: a message to a friend differs from an email to a teacher, principal, or community leader |\n| **Support opinions with examples** | AP responses score better when claims about family or community are supported by **specific cultural examples**, not general statements |\n| **Avoid overgeneralization** | French-speaking communities are diverse across **France**, **Québec**, **West Africa**, **the Caribbean**, and other regions |\n| **Compare, don’t just describe** | In cultural comparison tasks, explain both **similarities** and **differences**, and connect them to cultural values |\n| **Use transition language** | Phrases like **d’une part**, **cependant**, **en revanche**, **grâce à**, and **par conséquent** help show relationships clearly |\n\n### High-frequency functional language\n- **Describing family**: **les proches**, **les parents**, **les grands-parents**, **les frères et sœurs**, **une famille recomposée**\n- **Describing relationships**: **s’entendre bien avec**, **avoir confiance en**, **se disputer**, **soutenir**\n- **Talking about community**: **le quartier**, **la solidarité**, **le bénévolat**, **les associations**, **les liens sociaux**\n- **Expressing opinion**: **à mon avis**, **selon moi**, **il me semble que**, **je dirais que**\n- **Explaining change**: **autrefois**, **de nos jours**, **au fil du temps**, **cela a évolué**\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection / Contrast** | **AP Significance** |\n|---|---|---|\n| **Family** vs. **Community** | Family is often the first social unit; community extends identity beyond the home | Helps students explain how private and public life interact |\n| **Tradition** vs. **Modernity** | Traditions preserve continuity, while modern life may change family roles or expectations | Frequently appears in cultural comparison and argumentative responses |\n| **Individualism** vs. **Collective responsibility** | Some contexts emphasize personal independence; others stress interdependence and mutual support | Important when discussing values in French-speaking societies |\n| **Formal relationships** vs. **Informal relationships** | Language, behavior, and expectations change depending on status and familiarity | Directly relevant to **register**, **pronouns**, and tone on the exam |\n\n```mermaid\nflowchart LR\n    A[Family] --> B[Identity]\n    C[Community] --> B\n    B --> D[Belonging]\n    D --> E[Social roles]\n    E --> F[Communication style]\n```\n\n## Common AP Exam Traps\n- Confusing **description** with **analysis**: listing family traditions is not enough; explain what they reveal about **cultural values**.\n- Using **tu** when the situation calls for **vous**, especially in formal emails or respectful interactions.\n- Treating all French-speaking societies as identical instead of acknowledging **regional and cultural diversity**.\n- Giving vague comparisons such as “it is the same” or “it is different” without **specific examples**.\n- Focusing only on vocabulary and forgetting to address the broader theme of **identity, belonging, and social relationships**.\n\n## Quick Review Checklist\n- [ ] I can describe multiple **family structures** in French and explain how they function socially.\n- [ ] I can discuss how **community life** influences identity and belonging.\n- [ ] I can explain the difference between **family roles** and **community responsibilities**.\n- [ ] I can compare **tradition** and **modernity** in a French-speaking cultural context.\n- [ ] I can use **tu** and **vous** appropriately based on audience and situation.\n- [ ] I can support an opinion about family or community with **specific cultural examples**.\n- [ ] I can identify **practices**, **products**, and **perspectives** in a cultural example.\n- [ ] I can make a clear **cultural comparison** between my own community and a French-speaking one.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "la famille nucléaire",
+              "definition": "Un foyer composé généralement de deux parents et de leurs enfants, souvent opposé aux formes de cohabitation plus élargies."
+            },
+            {
+              "term": "la famille élargie",
+              "definition": "Un réseau domestique ou affectif qui inclut, en plus des parents et des enfants, d'autres membres comme les grands-parents, les tantes, les oncles ou les cousins."
+            },
+            {
+              "term": "les valeurs familiales",
+              "definition": "Ensemble de principes transmis au sein du foyer, tels que la solidarité, le respect, l'entraide et la responsabilité."
+            },
+            {
+              "term": "la solidarité intergénérationnelle",
+              "definition": "Soutien moral, affectif ou matériel entre personnes d'âges différents au sein d'un même groupe familial ou social."
+            },
+            {
+              "term": "le rôle parental",
+              "definition": "Ensemble des responsabilités liées à l'éducation, à la protection et à l'accompagnement du développement d'un enfant."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Dans le contexte des sociétés francophones, quelle affirmation décrit le mieux une évolution contemporaine des structures familiales ?",
+              "options": [
+                "Les ménages composés d'une seule personne ont complètement remplacé les foyers avec enfants.",
+                "Les modèles familiaux sont devenus plus variés, incluant des configurations monoparentales, recomposées et homoparentales.",
+                "La cohabitation entre générations a disparu dans toutes les régions francophones.",
+                "Les normes sociales exigent partout le mariage avant toute vie commune."
+              ],
+              "correctAnswer": "Les modèles familiaux sont devenus plus variés, incluant des configurations monoparentales, recomposées et homoparentales.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Quel facteur renforce le plus directement la transmission des traditions au sein d'une famille ?",
+              "options": [
+                "La diminution systématique des échanges entre générations",
+                "Le partage régulier de récits, de repas et de célébrations",
+                "L'abandon complet des pratiques culturelles locales",
+                "La séparation stricte entre vie privée et héritage culturel"
+              ],
+              "correctAnswer": "Le partage régulier de récits, de repas et de célébrations",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Dans de nombreuses familles francophones, les grands-parents jouent un rôle important dans la ______ des coutumes et des souvenirs familiaux.",
+              "options": [
+                "transmission",
+                "suppression",
+                "contestation",
+                "fragmentation"
+              ],
+              "correctAnswer": "transmission",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Lorsqu'un parent élève seul ses enfants, on parle d'une famille ______.",
+              "options": [
+                "monoparentale",
+                "patriarcale",
+                "communautaire",
+                "symbolique"
+              ],
+              "correctAnswer": "monoparentale",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "le bénévolat",
+              "definition": "Participation volontaire à une activité d'intérêt collectif sans rémunération, souvent au service d'une association ou d'un quartier."
+            },
+            {
+              "term": "la cohésion sociale",
+              "definition": "Capacité d'un groupe à maintenir des liens de confiance, de coopération et d'appartenance entre ses membres."
+            },
+            {
+              "term": "l'engagement citoyen",
+              "definition": "Participation active à la vie publique ou communautaire par des actions, des initiatives ou des prises de position responsables."
+            },
+            {
+              "term": "les rapports de voisinage",
+              "definition": "Relations quotidiennes entre personnes vivant à proximité, influençant l'entraide, la communication et le sentiment de sécurité."
+            },
+            {
+              "term": "l'inclusion sociale",
+              "definition": "Processus visant à permettre à chacun de participer pleinement à la vie collective, indépendamment de son origine, de son âge ou de sa situation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quelle situation illustre le mieux l'engagement citoyen dans une communauté locale ?",
+              "options": [
+                "Refuser toute interaction avec les institutions municipales",
+                "Participer à une réunion de quartier pour proposer des solutions à un problème collectif",
+                "Limiter ses activités aux échanges privés avec sa famille proche",
+                "Éviter les débats publics pour préserver l'harmonie sociale"
+              ],
+              "correctAnswer": "Participer à une réunion de quartier pour proposer des solutions à un problème collectif",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Pourquoi les associations jouent-elles souvent un rôle central dans la vie communautaire ?",
+              "options": [
+                "Elles remplacent entièrement les services publics dans tous les domaines.",
+                "Elles favorisent les liens sociaux et organisent des actions répondant à des besoins locaux.",
+                "Elles imposent une identité unique à tous les habitants.",
+                "Elles découragent la participation des jeunes et des nouveaux arrivants."
+              ],
+              "correctAnswer": "Elles favorisent les liens sociaux et organisent des actions répondant à des besoins locaux.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Le sentiment d'appartenance à un quartier peut être renforcé par des relations de ______ positives entre habitants.",
+              "options": [
+                "voisinage",
+                "concurrence",
+                "méfiance",
+                "distance"
+              ],
+              "correctAnswer": "voisinage",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Une politique qui cherche à intégrer des personnes d'origines diverses dans la vie collective favorise l'______ sociale.",
+              "options": [
+                "inclusion",
+                "isolement",
+                "exclusion",
+                "opposition"
+              ],
+              "correctAnswer": "inclusion",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Personal and Public Identities",
+      "description": "Exploration of self-identity, cultural identity, national identity, and how they intersect in personal and public life.",
+      "note": "# Unit 2: Personal and Public Identities\n\n## Overview\nIn this unit, you explore how **identity** is formed and expressed at both the **personal** and **public** levels in Francophone contexts. You will analyze how factors like **language**, **family**, **nationality**, **gender**, **social roles**, and **cultural traditions** shape the way people see themselves and are seen by others.\n\nFor the AP Exam, this unit matters because it appears in all modes of communication: **interpretive**, **interpersonal**, and **presentational**. You must be able to discuss identity with nuance, compare perspectives across cultures, and support your ideas with relevant examples from the Francophone world.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Personal identity** | A person’s sense of self, including values, beliefs, personality, and life experiences. | Frequently appears in speaking and writing tasks that ask students to describe how individuals define themselves. |\n| **Cultural identity** | Identity shaped by traditions, language, customs, religion, and shared history. | Helps students compare their own culture with **Francophone** communities in cultural comparison tasks. |\n| **National identity** | A sense of belonging tied to a nation, citizenship, history, or civic ideals. | Important for interpreting texts about patriotism, immigration, secularism, or social unity in France and beyond. |\n| **Language and identity** | The way language expresses belonging, status, heritage, and community membership. | Central in AP themes because French can represent both personal expression and social integration. |\n| **Gender and social roles** | Expectations tied to gender, family roles, and societal norms. | Often tested through articles, interviews, or debates on equality, representation, and changing norms. |\n| **Assimilation vs. multiculturalism** | Two ways societies respond to diversity: blending into a dominant culture or preserving multiple identities. | Useful for comparing French republican ideals with other cultural models in essays and discussions. |\n| **Public image and self-presentation** | How people present themselves in social, academic, professional, or digital spaces. | Supports analysis of social media, public discourse, and how identity is performed in modern society. |\n| **Belonging and exclusion** | The experience of being included in or marginalized from a group or society. | Key for understanding immigration, discrimination, regional identity, and tensions within Francophone communities. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Individual experiences] --> B[Formation of personal identity]\n    B --> C[Interaction with family and community]\n    C --> D[Influence of culture and language]\n    D --> E[Public expression of identity]\n    E --> F[Social recognition or contestation]\n    F --> G[Identity evolves over time]\n    G --> B\n```\n\n### How this process works\n1. **Individual experiences** shape a person’s early understanding of self.\n2. **Family**, peers, and community reinforce or challenge that self-image.\n3. **Culture** and **language** provide symbols, values, and norms for belonging.\n4. Identity is then expressed in **public life** through speech, clothing, behavior, civic participation, or media presence.\n5. Society may **validate**, **question**, or **exclude** that identity.\n6. As a result, identity remains **dynamic**, not fixed.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a non-quantitative course unit, the most important “rules” are **cultural and analytical principles** you should know and apply:\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Identity is multifaceted** | A person can hold several identities at once: **personal**, **cultural**, **linguistic**, **regional**, **national**, and **global**. |\n| **Identity is constructed and evolving** | Identity changes over time through education, migration, relationships, and social experience. |\n| **Language is a marker of belonging** | Speaking French, a regional language, or another heritage language can signal inclusion, distinction, or resistance. |\n| **Public identity may differ from private identity** | People may adapt how they present themselves depending on context, audience, or social pressure. |\n| **Francophone identity is not limited to France** | The **Francophone world** includes diverse cultures in Europe, Africa, the Caribbean, North America, and elsewhere. |\n| **Cultural comparison must be specific** | On the AP exam, avoid vague statements; compare concrete practices, perspectives, or products. |\n| **Support claims with evidence** | In writing and speaking, use examples from texts, audio, or cultural knowledge to justify interpretations. |\n\n### Useful analytical language\nStudents should be comfortable using structures such as:\n- **se définir comme**\n- **avoir le sentiment d’appartenir à**\n- **être partagé(e) entre**\n- **revendiquer son identité**\n- **s’intégrer dans la société**\n- **préserver ses traditions**\n- **subir l’exclusion**\n- **remettre en question les normes**\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key Insight** |\n|---|---|---|---|\n| **Private vs. public self** | **Personal identity** | **Public image** | A person’s inner sense of self may not fully match how they present themselves socially. |\n| **Belonging models** | **Assimilation** | **Multiculturalism** | Some societies emphasize unity through shared norms, while others value visible cultural plurality. |\n| **Shared vs. individual identity** | **Cultural identity** | **Personal identity** | Cultural identity connects people to a group, while personal identity highlights individual experience. |\n| **Civic vs. heritage ties** | **National identity** | **Ethnic / cultural identity** | Someone may feel loyalty to a nation while also maintaining a distinct cultural heritage. |\n\n```mermaid\nflowchart LR\n    A[Personal identity] --> D[Self-expression]\n    B[Cultural identity] --> D\n    C[National identity] --> D\n    D --> E[Public life]\n    E --> F[Belonging]\n    E --> G[Tension or exclusion]\n```\n\n## Common AP Exam Traps\n\n- Confusing **France** with the entire **Francophone world**. AP questions often require awareness of multiple French-speaking societies.\n- Treating identity as **static** instead of showing how it changes over time and across situations.\n- Making overly broad comparisons such as “In France, people are more traditional.” You need **specific, supportable cultural observations**.\n- Discussing **stereotypes** instead of analyzing real cultural perspectives, institutions, or social debates.\n- Ignoring the distinction between **individual experience** and **societal expectations** when interpreting sources.\n\n## Quick Review Checklist\n\n- [ ] I can explain the difference between **personal**, **cultural**, and **national identity**.\n- [ ] I can describe how **language** influences belonging and self-expression.\n- [ ] I can discuss how **family**, **community**, and **social norms** shape identity.\n- [ ] I can compare **assimilation** and **multiculturalism** using Francophone examples.\n- [ ] I can identify ways identity is expressed in **public life** and **media**.\n- [ ] I can explain how people may experience both **belonging** and **exclusion**.\n- [ ] I can make a specific **cultural comparison** between my own context and a Francophone one.\n- [ ] I can support my spoken and written responses with relevant **evidence** and precise vocabulary.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "l'identité personnelle",
+              "definition": "La construction de soi à travers les expériences, les valeurs, la langue, la mémoire et les choix individuels dans différents contextes sociaux."
+            },
+            {
+              "term": "l'identité culturelle",
+              "definition": "Le sentiment d'appartenance à un groupe fondé sur des pratiques, des références, des traditions et des codes partagés."
+            },
+            {
+              "term": "la francophonie",
+              "definition": "Ensemble des peuples, des espaces et des institutions liés par l'usage de la langue française dans des réalités historiques et culturelles diverses."
+            },
+            {
+              "term": "l'assimilation",
+              "definition": "Processus par lequel une personne ou un groupe adopte les normes dominantes au point d'effacer partiellement ou largement ses pratiques d'origine."
+            },
+            {
+              "term": "la diversité linguistique",
+              "definition": "La coexistence de plusieurs langues ou variétés de langue au sein d'une même société, région ou communauté."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Dans une société francophone plurielle, quel énoncé décrit le mieux l'effet de la langue sur la construction de l'identité ?",
+              "options": [
+                "La langue n'influence que la communication formelle et non le sentiment d'appartenance.",
+                "La langue peut transmettre des valeurs, une mémoire collective et des repères sociaux.",
+                "La langue détermine entièrement la personnalité d'un individu, sans influence d'autres facteurs.",
+                "La langue empêche nécessairement l'intégration dans une culture nationale commune."
+              ],
+              "correctAnswer": "La langue peut transmettre des valeurs, une mémoire collective et des repères sociaux.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Un élève issu d'une famille immigrée parle une langue à la maison et une autre à l'école. Quelle interprétation est la plus pertinente dans le cadre du thème des identités ?",
+              "options": [
+                "Cette situation montre qu'une seule appartenance identitaire est possible à long terme.",
+                "Cette situation illustre la coexistence de repères multiples dans la formation de soi.",
+                "Cette situation prouve que l'identité nationale remplace toujours l'identité familiale.",
+                "Cette situation signifie que le locuteur rejette automatiquement la culture scolaire."
+              ],
+              "correctAnswer": "Cette situation illustre la coexistence de repères multiples dans la formation de soi.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Dans l'étude des identités, le terme ______ désigne l'ensemble des espaces du monde où le français joue un rôle culturel, social ou institutionnel.",
+              "options": [
+                "la laïcité",
+                "la francophonie",
+                "la mondialisation",
+                "la citoyenneté"
+              ],
+              "correctAnswer": "la francophonie",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quand un groupe minoritaire adopte progressivement les pratiques du groupe dominant au détriment de ses références d'origine, on parle de ______.",
+              "options": [
+                "assimilation",
+                "revendication",
+                "patrimoine",
+                "solidarité"
+              ],
+              "correctAnswer": "assimilation",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "la citoyenneté",
+              "definition": "Le statut et la pratique de participation à la vie civique d'une communauté politique, avec des droits et des responsabilités."
+            },
+            {
+              "term": "la laïcité",
+              "definition": "Principe d'organisation publique qui affirme la neutralité de l'État à l'égard des religions tout en garantissant la liberté de conscience."
+            },
+            {
+              "term": "le stéréotype",
+              "definition": "Représentation simplifiée et généralisée d'un groupe, souvent réductrice, qui influence les perceptions sociales."
+            },
+            {
+              "term": "l'intégration",
+              "definition": "Processus par lequel une personne ou un groupe prend part à la vie collective tout en pouvant conserver certains éléments propres à son héritage culturel."
+            },
+            {
+              "term": "le patrimoine",
+              "definition": "Ensemble des biens, pratiques, savoirs et références transmis d'une génération à l'autre et reconnus comme importants pour une communauté."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Dans les débats publics en France, quel énoncé rend le mieux compte de la laïcité ?",
+              "options": [
+                "C'est l'obligation pour tous les citoyens d'abandonner toute pratique religieuse dans la sphère privée.",
+                "C'est un principe selon lequel l'État ne favorise aucune religion et protège la liberté de conscience.",
+                "C'est un système dans lequel les autorités religieuses dirigent les institutions publiques.",
+                "C'est une politique qui donne plus de droits civiques aux groupes majoritaires qu'aux minorités."
+              ],
+              "correctAnswer": "C'est un principe selon lequel l'État ne favorise aucune religion et protège la liberté de conscience.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Pourquoi les stéréotypes sont-ils souvent étudiés dans le cadre des identités personnelles et publiques ?",
+              "options": [
+                "Parce qu'ils permettent toujours de décrire les groupes sociaux avec précision.",
+                "Parce qu'ils n'ont aucun effet sur les relations entre individus et institutions.",
+                "Parce qu'ils peuvent façonner la perception sociale et renforcer des préjugés.",
+                "Parce qu'ils remplacent les expériences vécues dans la construction de l'identité."
+              ],
+              "correctAnswer": "Parce qu'ils peuvent façonner la perception sociale et renforcer des préjugés.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Lorsqu'une personne participe pleinement à la société d'accueil sans renoncer entièrement à ses références d'origine, ce processus peut être qualifié d'______.",
+              "options": [
+                "isolement",
+                "intégration",
+                "exclusion",
+                "uniformisation"
+              ],
+              "correctAnswer": "intégration",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Les monuments, les traditions et les savoir-faire transmis au fil du temps font partie du ______ d'une société.",
+              "options": [
+                "patrimoine",
+                "stéréotype",
+                "conflit",
+                "préjugé"
+              ],
+              "correctAnswer": "patrimoine",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Contemporary Life",
+      "description": "Everyday modern life including education, work, leisure, and social media across cultures.",
+      "note": "# Unit 3: Contemporary Life\n\n## Overview\nThis unit explores **contemporary daily life** in Francophone cultures, especially **education**, **work**, **leisure**, and **digital communication**. For the AP exam, it matters because students must interpret cultural practices, compare perspectives across societies, and communicate clearly about how modern life shapes identity, opportunity, and social relationships.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Education systems** | School structures, expectations, exams, and access to higher education in Francophone regions | Frequently appears in **cultural comparison** and helps students discuss **values**, **social mobility**, and **youth experience** |\n| **World of work** | Jobs, workplace norms, unemployment, internships, and work-life balance | Useful for comparing **economic realities** and discussing how societies define **success** and **stability** |\n| **Leisure and lifestyle** | Free-time activities, sports, travel, arts, and daily routines | Often supports speaking and writing prompts about **quality of life** and **cultural priorities** |\n| **Technology and social media** | Digital communication, online identity, screen use, and information sharing | Central for discussing **modern communication**, **benefits and risks**, and changing social habits |\n| **Consumer habits** | Shopping, brands, public transportation, food choices, and services | Helps explain how daily life reflects **economic class**, **urban life**, and **cultural norms** |\n| **Urban vs. rural life** | Differences in transportation, pace of life, services, and opportunities | Important for comparing **access**, **community ties**, and **lifestyle choices** across cultures |\n| **Generational perspectives** | Differences between youth and adults on education, technology, and values | Useful in argumentative tasks about **change**, **tradition**, and **social expectations** |\n| **Personal and social identity** | How school, work, and media shape self-image and belonging | Connects directly to AP themes and helps students analyze how **daily life influences identity** |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Daily life in society] --> B[Education]\n    A --> C[Work]\n    A --> D[Leisure]\n    A --> E[Technology and social media]\n\n    B --> F[Skills and qualifications]\n    F --> C\n\n    C --> G[Income and independence]\n    G --> D\n    G --> E\n\n    E --> H[Communication habits]\n    E --> I[Public image and identity]\n\n    D --> J[Well-being and social connection]\n    C --> J\n    E --> J\n\n    J --> K[Individual choices and cultural values]\n```\n\nThis relationship map shows a key AP idea: **contemporary life is interconnected**. **Education** affects **work opportunities**, work influences **lifestyle**, and **technology** shapes communication, identity, and even leisure.\n\n## Essential Formulas / Laws / Rules\n\nFor AP French, there are no mathematical formulas, but there are essential **cultural and linguistic rules** students should know for this unit:\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Compare practices and perspectives** | On the AP exam, do not just describe what people do; explain **what those practices reveal about cultural values**. |\n| **Use specific cultural evidence** | Strong responses include concrete examples from **Francophone communities**, not vague generalizations. |\n| **Distinguish practice, product, and perspective** | A **practice** is what people do, a **product** is what they create or use, and a **perspective** is the underlying belief or value. |\n| **Avoid overgeneralizing** | Do not imply that all French-speaking societies function the same way; note **regional**, **national**, and **social differences**. |\n| **Support comparisons with structure** | Use clear comparative language such as **tandis que**, **en revanche**, **alors que**, **par contre**, and **cependant**. |\n| **Discuss both advantages and disadvantages** | Topics like social media, modern work, and education often require a **balanced analysis** rather than a one-sided opinion. |\n| **Connect personal life to broader society** | AP tasks often reward students who can link **individual experience** to **social trends**, such as stress, mobility, or digital dependence. |\n\n### High-Value Vocabulary Categories\nStudents should be ready to use vocabulary related to:\n\n- **School life**: **les études**, **l’emploi du temps**, **les examens**, **l’orientation**, **l’enseignement supérieur**\n- **Work**: **le stage**, **le salaire**, **le chômage**, **l’entretien d’embauche**, **l’équilibre entre vie professionnelle et vie privée**\n- **Leisure**: **les loisirs**, **les sorties**, **les réseaux sociaux**, **les vacances**, **les activités culturelles**\n- **Technology**: **un écran**, **une application**, **le télétravail**, **la vie privée**, **le cyberharcèlement**\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **AP-Relevant Insight** |\n|---|---|---|---|\n| **Education goals** | Academic achievement and exams | Personal development and flexibility | Different systems may value **rigor**, **specialization**, or **student autonomy** differently |\n| **Work culture** | Professional success and stability | Work-life balance and personal well-being | Students should compare how societies prioritize **career advancement** versus **quality of life** |\n| **Social media effects** | Connection and self-expression | Distraction, pressure, and privacy concerns | AP prompts often ask for a nuanced view of **technology as both useful and risky** |\n| **Living environments** | Urban life | Rural or small-town life | This comparison reveals differences in **transportation**, **access**, **community**, and **pace of life** |\n\n```mermaid\nflowchart LR\n    A[Education] --> B[Career opportunities]\n    B --> C[Lifestyle choices]\n    C --> D[Use of leisure time]\n    D --> E[Identity and social relationships]\n    E --> A\n```\n\nThis cycle highlights how **contemporary life is not static**: one area of life influences another, and these patterns often reinforce broader **cultural expectations**.\n\n## Common AP Exam Traps\n\n- Confusing **description** with **analysis**: listing facts about school or work is not enough; explain the **cultural meaning** behind them.\n- Treating **the Francophone world** as culturally uniform instead of recognizing differences among **France**, **Canada**, **Africa**, **the Caribbean**, and other regions.\n- Discussing **social media** only negatively or only positively instead of presenting a **balanced argument**.\n- Relying on English-style cultural assumptions about **school**, **employment**, or **independence** without comparing them carefully to Francophone contexts.\n- Forgetting to connect examples to the broader AP themes of **identity**, **families and communities**, and **contemporary life**.\n\n## Quick Review Checklist\n\n- [ ] I can explain how **education** reflects cultural values in at least one Francophone context.\n- [ ] I can compare attitudes toward **work**, **success**, and **work-life balance** across cultures.\n- [ ] I can discuss the role of **leisure** in everyday life and what it suggests about social priorities.\n- [ ] I can analyze both the **advantages** and **drawbacks** of **social media** and technology.\n- [ ] I can distinguish among **practices**, **products**, and **perspectives** in cultural examples.\n- [ ] I can compare **urban** and **rural** experiences using specific details.\n- [ ] I can use precise vocabulary to talk about **school**, **employment**, **daily routines**, and **digital life**.\n- [ ] I can support a spoken or written AP response with **specific Francophone examples** rather than general statements.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "la rentrée",
+              "definition": "Période du début de l’année scolaire ou professionnelle en France, marquée par la reprise des cours, du travail et des activités culturelles après l’été."
+            },
+            {
+              "term": "le système éducatif français",
+              "definition": "Organisation de la scolarité qui comprend notamment l’école primaire, le collège, le lycée et, après le baccalauréat, des études supérieures à l’université ou dans des écoles spécialisées."
+            },
+            {
+              "term": "le baccalauréat",
+              "definition": "Diplôme national généralement passé à la fin du lycée et souvent utilisé comme condition d’accès aux études supérieures."
+            },
+            {
+              "term": "l’orientation scolaire",
+              "definition": "Processus par lequel un élève choisit, avec accompagnement institutionnel, une voie d’études ou une filière en fonction de ses résultats, de ses intérêts et de ses projets."
+            },
+            {
+              "term": "les loisirs",
+              "definition": "Ensemble des activités pratiquées pendant le temps libre pour se détendre, se cultiver, faire du sport ou entretenir des relations sociales."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Dans une comparaison interculturelle entre la France et les États-Unis, quel élément illustre le mieux une différence structurelle importante dans l’enseignement secondaire français ?",
+              "options": [
+                "L’existence d’un examen national de fin d’études influençant l’accès aux études supérieures",
+                "L’absence totale d’évaluation écrite au lycée",
+                "Le fait que tous les élèves choisissent librement toutes leurs matières sans cadre national",
+                "L’interdiction des établissements publics dans les grandes villes"
+              ],
+              "correctAnswer": "L’existence d’un examen national de fin d’études influençant l’accès aux études supérieures",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Pourquoi l’orientation scolaire joue-t-elle un rôle particulièrement important dans la vie quotidienne des élèves en contexte francophone ?",
+              "options": [
+                "Parce qu’elle aide à déterminer des parcours académiques et professionnels dès le secondaire",
+                "Parce qu’elle remplace complètement les examens nationaux",
+                "Parce qu’elle supprime toute différence entre filières générales et technologiques",
+                "Parce qu’elle empêche les élèves de poursuivre des études supérieures"
+              ],
+              "correctAnswer": "Parce qu’elle aide à déterminer des parcours académiques et professionnels dès le secondaire",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "En France, l’examen souvent associé à la fin du lycée s’appelle le ______.",
+              "options": [
+                "baccalauréat",
+                "brevet",
+                "concours",
+                "stage"
+              ],
+              "correctAnswer": "baccalauréat",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Les activités pratiquées pendant le temps libre pour le plaisir ou la détente sont appelées les ______.",
+              "options": [
+                "loisirs",
+                "devoirs",
+                "horaires",
+                "transports"
+              ],
+              "correctAnswer": "loisirs",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "le télétravail",
+              "definition": "Mode d’organisation professionnelle dans lequel une personne exerce son activité à distance, souvent depuis son domicile, grâce aux outils numériques."
+            },
+            {
+              "term": "le stage",
+              "definition": "Période de formation pratique en milieu professionnel permettant d’acquérir de l’expérience et d’appliquer des connaissances académiques."
+            },
+            {
+              "term": "les réseaux sociaux",
+              "definition": "Plateformes numériques qui permettent de publier du contenu, de communiquer rapidement et de construire des interactions entre individus ou groupes."
+            },
+            {
+              "term": "l’équilibre entre vie professionnelle et vie privée",
+              "definition": "Répartition harmonieuse entre les exigences du travail et les besoins personnels, familiaux et sociaux."
+            },
+            {
+              "term": "la fracture numérique",
+              "definition": "Inégalité d’accès ou de maîtrise des technologies et d’Internet selon des facteurs économiques, géographiques, générationnels ou sociaux."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quel enjeu lié aux réseaux sociaux est particulièrement pertinent dans l’étude de la vie contemporaine en contexte francophone ?",
+              "options": [
+                "Leur influence sur l’identité, la communication et la participation sociale",
+                "Le fait qu’ils aient remplacé entièrement l’école et le travail",
+                "Leur usage limité exclusivement aux administrations publiques",
+                "L’impossibilité d’y diffuser des opinions personnelles"
+              ],
+              "correctAnswer": "Leur influence sur l’identité, la communication et la participation sociale",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Dans une discussion sur le monde du travail aujourd’hui, quel constat explique le mieux l’importance croissante du télétravail ?",
+              "options": [
+                "Le développement des outils numériques permet d’effectuer certaines tâches à distance",
+                "Toutes les professions peuvent désormais être exercées sans présence physique",
+                "Le travail à distance a éliminé les inégalités d’accès à l’emploi",
+                "Les entreprises francophones ont abandonné les bureaux traditionnels"
+              ],
+              "correctAnswer": "Le développement des outils numériques permet d’effectuer certaines tâches à distance",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Une période de formation pratique en entreprise suivie par un élève ou un étudiant est un ______.",
+              "options": [
+                "stage",
+                "réseau",
+                "concours",
+                "emploi du temps"
+              ],
+              "correctAnswer": "stage",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quand certaines populations ont moins accès à Internet ou aux compétences technologiques, on parle de ______.",
+              "options": [
+                "fracture numérique",
+                "vie associative",
+                "orientation scolaire",
+                "mobilité urbaine"
+              ],
+              "correctAnswer": "fracture numérique",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Global Challenges",
+      "description": "Major global issues such as climate change, poverty, migration, public health, and human rights.",
+      "note": "# Unit 4: Global Challenges\n\n## Overview\nIn this unit, you explore how **global issues** such as **climate change**, **poverty**, **migration**, **public health**, and **human rights** affect societies across the **Francophone world** and beyond. For the AP exam, this matters because you must be able to **interpret authentic sources**, **compare cultural perspectives**, and **express well-supported opinions in French** about complex contemporary problems.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Le changement climatique** | Long-term shifts in temperature, weather patterns, and environmental conditions caused largely by human activity. | Frequently appears in readings and audio sources; useful for making **cause-and-effect** arguments and discussing solutions. |\n| **La pauvreté et les inégalités** | Economic hardship and unequal access to resources, education, healthcare, and opportunity. | Helps you analyze **social justice**, compare countries, and discuss structural problems in persuasive writing. |\n| **La migration** | Movement of people within or across borders for economic, political, environmental, or personal reasons. | Central for **cultural comparison** and for discussing identity, integration, and policy debates. |\n| **La santé publique** | Collective efforts to prevent disease and promote health at the population level. | Common in AP themes because it connects government, science, ethics, and everyday life. |\n| **Les droits de l’homme** | Basic rights and freedoms that belong to all people. | Essential for discussing discrimination, freedom, equality, and civic responsibility in formal French. |\n| **Le développement durable** | Development that meets present needs without harming future generations. | A key framework for proposing balanced solutions in speaking and writing tasks. |\n| **La mondialisation** | Increased interconnectedness of economies, cultures, and communication systems. | Important for explaining how local issues become global and how nations influence one another. |\n| **L’engagement citoyen** | Individual and collective action to address social or political problems. | Useful for presenting examples of activism, policy change, and community response in Francophone contexts. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Problème mondial identifié] --> B[Causes multiples]\n    B --> C[Conséquences sociales]\n    B --> D[Conséquences économiques]\n    B --> E[Conséquences environnementales]\n    C --> F[Réactions des citoyens]\n    D --> G[Réponses gouvernementales]\n    E --> H[Actions internationales]\n    F --> I[Débats publics]\n    G --> I\n    H --> I\n    I --> J[Solutions possibles]\n    J --> K[Résultats mitigés]\n    K --> L[Réévaluation et nouvelles politiques]\n```\n\n### How to think about this process\n1. A **global challenge** usually begins with a complex issue, not a single cause.\n2. The issue creates **multiple consequences**: social, economic, political, and environmental.\n3. Different actors respond: **citizens**, **governments**, **NGOs**, and **international organizations**.\n4. Proposed solutions often involve **trade-offs**.\n5. On the AP exam, you should be able to explain both **the problem** and **the effectiveness or limits of responses**.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language-and-culture unit, the “rules” you need are **conceptual, argumentative, and linguistic** rather than mathematical.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Cause and effect** | Be able to explain **why** a problem exists and **what consequences** it produces using transitions like **à cause de**, **en raison de**, **cela entraîne**, **par conséquent**. |\n| **Comparative perspective** | Compare your own community with a **Francophone** region using precise structures such as **tandis que**, **alors que**, **contrairement à**, **de la même manière**. |\n| **Argumentation** | Support claims with **evidence**, examples, and explanation rather than general opinions. This is crucial in the **essay** and **speaking** tasks. |\n| **Formal register** | Use an appropriate tone for global issues: avoid overly casual wording; prefer **il est essentiel de**, **on constate que**, **il faudrait**, **cela soulève la question de**. |\n| **Multiple perspectives** | Distinguish among viewpoints of **governments**, **citizens**, **immigrants**, **activists**, **scientists**, and **international organizations**. |\n| **Cultural specificity** | Use examples from the **Francophone world** rather than speaking only in broad universal terms. |\n| **Solution-oriented analysis** | AP responses are stronger when you move from diagnosis of a problem to **possible solutions**, limits, and consequences. |\n\n### High-value language functions for this unit\n- **Décrire un problème**: **Il s’agit de…**, **Ce phénomène touche…**\n- **Expliquer les causes**: **Cela s’explique par…**, **L’une des causes principales est…**\n- **Présenter les conséquences**: **Cela a un impact sur…**, **Cette situation entraîne…**\n- **Proposer une solution**: **Il faudrait…**, **On pourrait…**, **Une mesure efficace serait de…**\n- **Nuancer**: **Cependant**, **pourtant**, **en revanche**, **bien que**\n\n## Connections & Comparisons\n\n| **Related Concepts** | **Connection** | **Important Distinction** | **AP Use** |\n|---|---|---|---|\n| **Changement climatique** vs **développement durable** | Climate change is a **problem**; sustainable development is a **framework for solutions**. | One describes environmental crisis; the other proposes long-term balanced action. | Useful for essays that ask for both causes and solutions. |\n| **Pauvreté** vs **inégalités** | Poverty concerns lack of resources; inequality concerns uneven distribution of wealth and opportunity. | A society may reduce extreme poverty without eliminating inequality. | Helps you make more precise arguments. |\n| **Migration volontaire** vs **migration forcée** | Both involve movement of people across or within borders. | Voluntary migration may be economic or educational; forced migration may result from war, persecution, or disaster. | Important for avoiding oversimplification in comparisons. |\n| **Santé publique** vs **droits de l’homme** | Public health policies often connect to basic rights such as access to care and protection. | Public health can involve collective restrictions; human rights discussions focus on liberty, dignity, and equality. | Useful in debates about vaccination, healthcare access, or state responsibility. |\n\n```mermaid\nflowchart LR\n    A[La mondialisation] --> B[Diffusion rapide des crises]\n    A --> C[Circulation des idées]\n    A --> D[Coopération internationale]\n    B --> E[Défis mondiaux plus visibles]\n    C --> F[Mobilisation citoyenne]\n    D --> G[Politiques communes]\n```\n\n## Common AP Exam Traps\n\n- Confusing **a global problem** with **its solution**: for example, **le changement climatique** is not the same thing as **le développement durable**.\n- Giving **generic opinions** without reference to a **Francophone context**, such as a country, region, policy, or social debate.\n- Treating **migration** as entirely negative or entirely positive instead of recognizing its **complex causes and mixed effects**.\n- Focusing only on **individual choices** and ignoring **structural factors** like government policy, economic systems, colonial history, or access to education.\n- Using overly simple vocabulary repeatedly (**c’est mauvais**, **c’est bien**) instead of precise terms like **injuste**, **précaire**, **durable**, **efficace**, **controversé**.\n\n## Quick Review Checklist\n\n- [ ] I can explain the main **global challenges** in clear French using specific vocabulary.\n- [ ] I can identify **causes**, **consequences**, and **possible solutions** for issues like climate change, poverty, and migration.\n- [ ] I can compare a **Francophone society** with my own community using relevant cultural detail.\n- [ ] I can discuss **public health** and **human rights** from more than one perspective.\n- [ ] I can distinguish between related concepts such as **pauvreté** and **inégalités**, or **migration volontaire** and **migration forcée**.\n- [ ] I can support an argument with **examples** rather than only personal opinion.\n- [ ] I can use a **formal, persuasive register** appropriate for AP writing and speaking.\n- [ ] I can propose a realistic solution and explain its **advantages** and **limits**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "le changement climatique",
+              "definition": "Modification durable des températures et des régimes météorologiques, largement aggravée par les émissions humaines de gaz à effet de serre."
+            },
+            {
+              "term": "les énergies renouvelables",
+              "definition": "Sources de production énergétique qui se reconstituent naturellement, comme le soleil, le vent ou l’eau, et qui réduisent la dépendance aux combustibles fossiles."
+            },
+            {
+              "term": "la biodiversité",
+              "definition": "Variété des êtres vivants, des écosystèmes et des interactions biologiques, essentielle à l’équilibre écologique."
+            },
+            {
+              "term": "la pauvreté",
+              "definition": "Situation de privation durable dans laquelle une personne ou une population manque de ressources suffisantes pour satisfaire ses besoins fondamentaux."
+            },
+            {
+              "term": "le développement durable",
+              "definition": "Modèle de croissance qui cherche à concilier les besoins économiques, sociaux et environnementaux des générations présentes et futures."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Dans un débat sur les défis mondiaux, quel facteur explique le mieux pourquoi les pays en développement sont souvent plus vulnérables aux catastrophes environnementales ?",
+              "options": [
+                "Ils disposent généralement de systèmes d’infrastructure et de santé moins résilients.",
+                "Ils produisent toujours plus d’émissions que les pays industrialisés.",
+                "Ils refusent systématiquement la coopération internationale.",
+                "Ils ne sont jamais touchés par les effets de l’urbanisation rapide."
+              ],
+              "correctAnswer": "Ils disposent généralement de systèmes d’infrastructure et de santé moins résilients.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Quel énoncé reflète le mieux l’objectif principal du développement durable ?",
+              "options": [
+                "Favoriser exclusivement la croissance industrielle à court terme.",
+                "Concilier la protection de l’environnement, l’équité sociale et la viabilité économique.",
+                "Réduire la population mondiale afin de limiter la consommation.",
+                "Donner la priorité absolue aux intérêts nationaux sur les accords internationaux."
+              ],
+              "correctAnswer": "Concilier la protection de l’environnement, l’équité sociale et la viabilité économique.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Pour limiter le réchauffement de la planète, de nombreux gouvernements investissent dans ______ afin de diminuer l’usage du charbon et du pétrole.",
+              "options": [
+                "les énergies renouvelables",
+                "les frontières fermées",
+                "la déforestation",
+                "les combustibles fossiles"
+              ],
+              "correctAnswer": "les énergies renouvelables",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quand une société cherche à répondre aux besoins actuels sans compromettre ceux des générations futures, elle met en pratique ______.",
+              "options": [
+                "le protectionnisme",
+                "le développement durable",
+                "la surconsommation",
+                "l’exode rural"
+              ],
+              "correctAnswer": "le développement durable",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "la migration",
+              "definition": "Déplacement de personnes d’une région ou d’un pays à un autre pour des raisons économiques, politiques, environnementales ou familiales."
+            },
+            {
+              "term": "les réfugiés",
+              "definition": "Personnes contraintes de quitter leur pays en raison de persécutions, de conflits ou de violences, et bénéficiant d’une protection internationale spécifique."
+            },
+            {
+              "term": "la santé publique",
+              "definition": "Ensemble des politiques, des institutions et des actions destinées à prévenir les maladies et à améliorer le bien-être collectif."
+            },
+            {
+              "term": "les droits de l’homme",
+              "definition": "Libertés et protections fondamentales reconnues à toute personne, indépendamment de sa nationalité, de son origine ou de sa condition sociale."
+            },
+            {
+              "term": "l’accès aux soins",
+              "definition": "Possibilité réelle pour une population d’obtenir des services médicaux disponibles, abordables et de qualité."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quelle situation illustre le mieux un enjeu de santé publique plutôt qu’un problème strictement individuel ?",
+              "options": [
+                "Un adolescent choisit de changer de régime alimentaire.",
+                "Une campagne nationale de vaccination vise à limiter la propagation d’une maladie contagieuse.",
+                "Un patient décide de consulter un spécialiste en clinique privée.",
+                "Un sportif suit un programme personnel de remise en forme."
+              ],
+              "correctAnswer": "Une campagne nationale de vaccination vise à limiter la propagation d’une maladie contagieuse.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Dans le contexte des défis mondiaux, pourquoi la protection des droits de l’homme est-elle souvent liée à la question des migrations ?",
+              "options": [
+                "Parce que toutes les migrations sont illégales selon le droit international.",
+                "Parce que les déplacements de population peuvent résulter de persécutions, de conflits ou de discriminations.",
+                "Parce que les migrants perdent automatiquement toute protection juridique en quittant leur pays.",
+                "Parce que les droits fondamentaux s’appliquent seulement aux citoyens des démocraties libérales."
+              ],
+              "correctAnswer": "Parce que les déplacements de population peuvent résulter de persécutions, de conflits ou de discriminations.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Lorsqu’une population fuit la guerre ou les persécutions et cherche une protection juridique à l’étranger, on parle souvent de ______.",
+              "options": [
+                "touristes",
+                "réfugiés",
+                "investisseurs",
+                "fonctionnaires"
+              ],
+              "correctAnswer": "réfugiés",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Les campagnes de prévention, l’assainissement et la vaccination relèvent principalement de ______.",
+              "options": [
+                "la santé publique",
+                "la consommation de luxe",
+                "la diplomatie culturelle",
+                "la production industrielle"
+              ],
+              "correctAnswer": "la santé publique",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Science and Technology",
+      "description": "Impact of scientific advances and technology on society, communication, medicine, and the environment.",
+      "note": "# Unit 5: Science and Technology\n\n## Overview\nThis unit explores how **science** and **technology** shape modern life in the **French-speaking world**, especially in the areas of **communication**, **medicine**, **society**, and the **environment**. For the AP exam, you must be able to discuss these themes in **clear, culturally informed French**, compare perspectives, and support your ideas with relevant examples.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Le progrès technologique** | Advances in digital tools, artificial intelligence, robotics, and connected devices. | Frequently appears in prompts about whether innovation improves or complicates daily life. |\n| **La communication numérique** | Communication through social media, messaging, video calls, and online platforms. | Useful for interpersonal and presentational tasks about relationships, identity, and public discourse. |\n| **La fracture numérique** | Unequal access to technology based on income, geography, age, or education. | Helps you add nuance when discussing whether technology benefits everyone equally. |\n| **La médecine moderne** | Scientific advances in treatment, diagnosis, telemedicine, and biotechnology. | Appears in debates about ethics, accessibility, and the role of innovation in public health. |\n| **La protection de la vie privée** | Concerns about data collection, surveillance, and personal information online. | Important for argumentative writing and cultural comparison about rights and regulation. |\n| **L’environnement et la technologie verte** | The use of science and innovation to address pollution, energy use, and climate issues. | Connects this unit to broader AP themes like global challenges and civic responsibility. |\n| **L’éthique scientifique** | Moral questions linked to genetic engineering, AI, experimentation, and automation. | Strong topic for persuasive essays requiring balanced arguments and evidence. |\n| **L’impact social de la technologie** | Effects of technology on work, education, human interaction, and daily habits. | Central to speaking and writing tasks that ask you to evaluate benefits versus consequences. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Découverte scientifique] --> B[Innovation technologique]\n    B --> C[Adoption par la société]\n    C --> D[Transformation de la communication]\n    C --> E[Transformation de la médecine]\n    C --> F[Effets sur l'environnement]\n    D --> G[Avantages: rapidité, accès, connexion]\n    D --> H[Défis: désinformation, dépendance, vie privée]\n    E --> I[Avantages: diagnostic, traitement, télémédecine]\n    E --> J[Défis: coût, éthique, accès inégal]\n    F --> K[Solutions: énergie propre, innovation verte]\n    F --> L[Risques: déchets électroniques, surconsommation]\n    H --> M[Débat public et régulation]\n    J --> M\n    L --> M\n```\n\nThis workflow shows a key AP idea: **scientific discovery** leads to **technological innovation**, but each innovation creates both **benefits** and **problems**, which then lead to **social debate** and possible **regulation**.\n\n## Essential Formulas / Laws / Rules\n\nSince this is a language and culture unit, the “rules” you need are mainly **thematic principles**, **argument structures**, and **high-value vocabulary patterns** rather than mathematical formulas.\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Technology is rarely presented as purely positive or purely negative** | On the AP exam, strong responses usually show **complexity**: innovation can improve life while also creating ethical or social concerns. |\n| **Support claims with concrete examples** | Use examples from **daily life**, **current events**, or the **French-speaking world** to strengthen essays and oral responses. |\n| **Compare cultures explicitly** | When relevant, explain similarities and differences between your own context and a **Francophone** context. |\n| **Use precise thematic vocabulary** | Words like **les réseaux sociaux**, **les données personnelles**, **la cybersécurité**, **la télémédecine**, **le développement durable**, and **l’intelligence artificielle** can raise the quality of your response. |\n| **Connect innovation to broader consequences** | Don’t stop at describing a device or discovery; explain its effects on **society**, **relationships**, **access**, or **the environment**. |\n| **Acknowledge ethical dimensions** | For topics such as AI, surveillance, or biotechnology, mention issues of **freedom**, **equity**, **responsibility**, and **human impact**. |\n| **Use cause-and-effect language** | Be ready to structure arguments with expressions such as **grâce à**, **à cause de**, **cela entraîne**, **par conséquent**, and **tandis que**. |\n\n### High-Value AP Vocabulary by Theme\n- **La technologie**: **un appareil**, **une application**, **un réseau**, **un écran**, **une innovation**\n- **La communication**: **envoyer un message**, **partager**, **se connecter**, **être accro à**, **communiquer à distance**\n- **La médecine**: **un traitement**, **un diagnostic**, **la recherche scientifique**, **la télémédecine**\n- **L’environnement**: **les énergies renouvelables**, **la pollution**, **les déchets électroniques**, **réduire l’empreinte écologique**\n- **L’éthique**: **la vie privée**, **la surveillance**, **l’accès équitable**, **les risques**, **les avantages**\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key AP Insight** |\n|---|---|---|---|\n| **Access** | **Le progrès technologique** increases possibilities | **La fracture numérique** limits who benefits | A strong response explains that innovation does not help everyone equally. |\n| **Communication** | **Les réseaux sociaux** connect people instantly | **La désinformation** and screen dependence can weaken communication quality | AP prompts often reward balanced discussion of connection versus isolation. |\n| **Medicine** | **La médecine moderne** improves diagnosis and treatment | **Les questions éthiques** raise concerns about cost, privacy, and fairness | Discuss both scientific promise and social responsibility. |\n| **Environment** | **La technologie verte** can reduce pollution | **La production technologique** can create waste and overconsumption | Students should show that technology can both solve and worsen environmental problems. |\n\n## Common AP Exam Traps\n- Confusing **technology in general** with only **social media**. The unit is broader and includes **medicine**, **science**, **ethics**, and **environmental innovation**.\n- Giving one-sided answers such as “technology is good” without discussing **drawbacks**, **limits**, or **inequality**.\n- Forgetting the **Francophone context**. Even when the question seems general, AP responses improve when they connect to **French-speaking societies**.\n- Using vague vocabulary like **c’est bien** or **c’est mauvais** instead of precise terms such as **efficace**, **nocif**, **accessible**, **controversé**, or **indispensable**.\n- Describing a technological tool without explaining its **impact on society**, which is usually the real focus of the unit.\n\n## Quick Review Checklist\n- [ ] I can explain how **scientific advances** influence **society** in both positive and negative ways.\n- [ ] I can discuss how **digital communication** changes relationships, education, and public discourse.\n- [ ] I can define **la fracture numérique** and explain why access to technology is unequal.\n- [ ] I can describe how **modern medicine** benefits from technology while raising ethical concerns.\n- [ ] I can discuss issues of **privacy**, **surveillance**, and **personal data** online.\n- [ ] I can connect **technology** to **environmental challenges** and **green innovation**.\n- [ ] I can compare viewpoints and support my opinion with examples from the **French-speaking world**.\n- [ ] I can use precise **AP-level French vocabulary** to argue, compare, and analyze this theme.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "la fracture numérique",
+              "definition": "Inégalité d’accès aux outils, aux réseaux et aux compétences nécessaires pour participer pleinement à la vie moderne en ligne, souvent liée au revenu, à l’âge ou au lieu de résidence."
+            },
+            {
+              "term": "les réseaux sociaux",
+              "definition": "Plateformes numériques qui permettent de créer, partager et diffuser rapidement du contenu, tout en transformant les relations personnelles, l’accès à l’information et la participation civique."
+            },
+            {
+              "term": "la cybersurveillance",
+              "definition": "Ensemble de pratiques de collecte, d’analyse et de suivi des activités en ligne afin de renforcer la sécurité, contrôler les comportements ou exploiter des données personnelles."
+            },
+            {
+              "term": "le télétravail",
+              "definition": "Organisation professionnelle dans laquelle les tâches sont effectuées à distance grâce aux outils numériques, ce qui modifie les horaires, la collaboration et l’équilibre entre vie privée et vie professionnelle."
+            },
+            {
+              "term": "l’intelligence artificielle",
+              "definition": "Ensemble de systèmes informatiques capables d’exécuter certaines tâches associées au raisonnement humain, comme l’analyse de données, la reconnaissance de formes ou la prise de décision automatisée."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Dans un débat sur l’influence du numérique, quel enjeu illustre le mieux une conséquence sociale de la fracture numérique ?",
+              "options": [
+                "L’accès inégal aux services administratifs et éducatifs en ligne",
+                "La diminution du coût de production des smartphones",
+                "L’amélioration automatique de la sécurité des données",
+                "L’augmentation des exportations de produits électroniques"
+              ],
+              "correctAnswer": "L’accès inégal aux services administratifs et éducatifs en ligne",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Quel énoncé décrit le mieux une critique fréquente de l’usage des réseaux sociaux dans la société contemporaine ?",
+              "options": [
+                "Ils garantissent toujours la fiabilité des informations partagées",
+                "Ils réduisent nécessairement la polarisation politique",
+                "Ils peuvent accélérer la diffusion de la désinformation",
+                "Ils éliminent les différences générationnelles face aux médias"
+              ],
+              "correctAnswer": "Ils peuvent accélérer la diffusion de la désinformation",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Pour de nombreux observateurs, la collecte massive de données personnelles par les plateformes soulève surtout des inquiétudes liées à ______.",
+              "options": [
+                "la vie privée",
+                "la gastronomie",
+                "la francophonie",
+                "la biodiversité marine"
+              ],
+              "correctAnswer": "la vie privée",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quand une entreprise permet à ses employés de travailler depuis chez eux grâce aux outils numériques, on parle de ______.",
+              "options": [
+                "télétravail",
+                "bénévolat",
+                "commerce équitable",
+                "tourisme durable"
+              ],
+              "correctAnswer": "télétravail",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "la télémédecine",
+              "definition": "Pratique des soins à distance au moyen d’outils de communication numériques, utilisée pour consulter, suivre ou orienter des patients sans déplacement physique immédiat."
+            },
+            {
+              "term": "les biotechnologies",
+              "definition": "Applications scientifiques qui utilisent des organismes vivants, des cellules ou des processus biologiques afin de développer des traitements, d’améliorer la production ou de résoudre des problèmes pratiques."
+            },
+            {
+              "term": "les énergies renouvelables",
+              "definition": "Sources de production énergétique qui se reconstituent naturellement à l’échelle humaine et qui servent à réduire la dépendance aux combustibles fossiles."
+            },
+            {
+              "term": "le développement durable",
+              "definition": "Modèle de progrès visant à répondre aux besoins actuels sans compromettre la capacité des générations futures à répondre aux leurs, en conciliant économie, société et environnement."
+            },
+            {
+              "term": "le recyclage électronique",
+              "definition": "Traitement des appareils usagés pour récupérer des matériaux utiles et limiter la pollution provoquée par les déchets technologiques."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Quel avantage de la télémédecine est le plus souvent cité dans les zones rurales ou mal desservies ?",
+              "options": [
+                "L’accès plus rapide à certains professionnels de santé",
+                "La suppression complète du besoin d’examens cliniques",
+                "La baisse automatique du prix de tous les médicaments",
+                "L’élimination totale des inégalités sanitaires"
+              ],
+              "correctAnswer": "L’accès plus rapide à certains professionnels de santé",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Dans le contexte environnemental, pourquoi le recyclage électronique est-il particulièrement important ?",
+              "options": [
+                "Parce qu’il remplace toutes les politiques climatiques",
+                "Parce qu’il réduit les déchets toxiques et récupère des métaux précieux",
+                "Parce qu’il interdit la fabrication de nouveaux appareils",
+                "Parce qu’il garantit une consommation énergétique nulle"
+              ],
+              "correctAnswer": "Parce qu’il réduit les déchets toxiques et récupère des métaux précieux",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Une politique énergétique fondée sur le solaire et l’éolien privilégie ______ plutôt que les combustibles fossiles.",
+              "options": [
+                "les énergies renouvelables",
+                "les réseaux sociaux",
+                "les soins intensifs",
+                "les monnaies numériques"
+              ],
+              "correctAnswer": "les énergies renouvelables",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Quand on cherche à concilier croissance économique, justice sociale et protection de l’environnement, on parle de ______.",
+              "options": [
+                "développement durable",
+                "cybersurveillance",
+                "désinformation",
+                "délocalisation"
+              ],
+              "correctAnswer": "développement durable",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Beauty and Aesthetics",
+      "description": "Art, music, literature, architecture, and the cultural definition of beauty across different societies.",
+      "note": "# Unit 6: Beauty and Aesthetics\n\n## Overview\nThis unit explores how **beauty** is defined, represented, and debated across the **francophone world** through **art, music, literature, architecture, and cultural practices**. For the AP exam, it matters because students must analyze **cultural products, practices, and perspectives**, while also discussing how aesthetic values reflect **identity, history, social change, and power**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Beauty as a cultural construct** | The idea that standards of beauty are shaped by society, history, and values rather than being universal. | Helps you compare **francophone perspectives** and explain how beauty varies by region, class, gender, and era. |\n| **Art as cultural expression** | **Painting, sculpture, film, dance, and design** communicate identity, memory, and social ideals. | Useful for the **Comparative Essay** and **Speaking** tasks when connecting artistic works to broader cultural themes. |\n| **Architecture and public space** | Buildings and urban design reflect historical periods, political values, and aesthetic priorities. | Supports discussion of **heritage**, **modernization**, and how societies preserve or redefine beauty. |\n| **Music and literary aesthetics** | **Songs, poetry, novels, and performance** shape emotional and intellectual understandings of beauty. | Important for interpreting **authentic sources** and discussing tone, style, symbolism, and cultural meaning. |\n| **Beauty and identity** | Beauty is tied to **self-image**, **gender roles**, **race**, and **social belonging**. | Frequently appears in AP themes because it connects aesthetics to **personal and public identity**. |\n| **Tradition vs. modernity** | Tension between preserving classical or local forms and embracing innovation or globalization. | Helps explain debates around **fashion, architecture, art, and media** in francophone societies. |\n| **Commercialization of beauty** | Beauty is often marketed through **advertising, luxury brands, cosmetics, and tourism**. | Useful for analyzing how media and economics influence what societies value aesthetically. |\n| **Aesthetics and social critique** | Artistic works often challenge inequality, colonial legacies, stereotypes, or consumer culture. | Strong AP analysis moves beyond description to explain how beauty can also be **political and critical**. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Society's values and history] --> B[Definition of beauty]\n    B --> C[Creation of cultural products]\n    C --> D[Public reception and interpretation]\n    D --> E[Preservation, critique, or change]\n    E --> B\n    C --> F[Identity expression]\n    C --> G[Social or political commentary]\n    D --> H[Commercialization through media and markets]\n```\n\n### How this process works\n1. A society’s **history, beliefs, and social norms** shape what is considered beautiful.\n2. These ideas appear in **cultural products** such as paintings, songs, monuments, literature, fashion, and film.\n3. The public then **interprets, admires, rejects, or debates** these products.\n4. Over time, aesthetic standards are either **preserved**, **transformed**, or **challenged**.\n5. This cycle shows why beauty is never purely decorative; it is linked to **culture, identity, and change**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Products, Practices, Perspectives** | Use the AP cultural framework: **products** are works or objects, **practices** are patterns of behavior, and **perspectives** are underlying values or beliefs. |\n| **Beauty reflects perspective** | On the AP exam, do not treat beauty as universal; explain **whose standards** are being presented and **why**. |\n| **Context matters** | Always connect an artwork or aesthetic trend to its **historical, social, or geographic context**. |\n| **Compare, don’t just describe** | Strong responses explain similarities and differences between **francophone cultures** and the student’s own culture. |\n| **Interpretation over summary** | For texts, images, and audio sources, focus on **meaning, tone, symbolism, and cultural significance**, not just plot or surface details. |\n| **Aesthetics can reveal power** | Standards of beauty often reflect **social hierarchy, colonial influence, gender expectations, or economic privilege**. |\n| **Use precise cultural evidence** | Support claims with specific examples such as **impressionism, chanson, couture, historical monuments, African francophone sculpture, or Québécois cinema**. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key AP Insight** |\n|---|---|---|---|\n| **Universal vs. cultural beauty** | Beauty as timeless or natural | Beauty as socially constructed | AP responses should acknowledge that some ideals seem widespread, but their meaning is usually **culturally shaped**. |\n| **Tradition vs. innovation** | Classical architecture, heritage arts, canonical literature | Modern design, experimental music, contemporary fashion | Shows how francophone societies negotiate **preservation** and **change**. |\n| **Aesthetic pleasure vs. social critique** | Art appreciated for form, harmony, elegance | Art used to protest injustice or question norms | Many works do both; strong analysis explains how **beauty and critique coexist**. |\n| **Personal identity vs. commercial influence** | Individual style, self-expression, community aesthetics | Media, luxury brands, advertising, beauty industries | Useful when discussing how people define themselves amid **globalized beauty standards**. |\n\n## Common AP Exam Traps\n- Confusing **description** with **analysis**: listing features of a painting, song, or building is not enough; explain what they reveal about **cultural values**.\n- Treating **French culture** as identical to the entire **francophone world**; include perspectives from **Africa, the Caribbean, Canada, or other francophone regions** when appropriate.\n- Assuming beauty is always positive; the exam may highlight how beauty standards can create **exclusion, pressure, or inequality**.\n- Ignoring the AP framework of **products, practices, and perspectives**; this framework helps organize stronger cultural explanations.\n- Overgeneralizing with vague claims like “the French love art”; use **specific examples** and tie them to a clear argument.\n\n## Quick Review Checklist\n- [ ] I can explain how **beauty is culturally defined** rather than purely universal.\n- [ ] I can connect **art, music, literature, or architecture** to broader **francophone values and history**.\n- [ ] I can use the AP framework of **products, practices, and perspectives** to analyze an aesthetic topic.\n- [ ] I can compare **traditional** and **modern** views of beauty in at least one francophone context.\n- [ ] I can discuss how beauty relates to **identity, gender, race, or social class**.\n- [ ] I can explain how **media and commercialization** shape beauty standards.\n- [ ] I can analyze an artistic or literary work as both an **aesthetic object** and a form of **social commentary**.\n- [ ] I can support my ideas with **specific francophone cultural examples** relevant to the AP exam.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "la francophonie artistique",
+              "definition": "Ensemble des espaces culturels où la création en langue française circule, se transforme et reflète des identités diverses au-delà de la France métropolitaine."
+            },
+            {
+              "term": "le patrimoine culturel",
+              "definition": "Biens matériels et immatériels transmis d'une génération à l'autre, considérés comme dignes de protection pour leur valeur historique, esthétique ou symbolique."
+            },
+            {
+              "term": "l'impressionnisme",
+              "definition": "Courant pictural du XIXe siècle qui privilégie les effets fugitifs de la lumière, la perception immédiate et des touches visibles plutôt qu'un rendu académique détaillé."
+            },
+            {
+              "term": "la littérature engagée",
+              "definition": "Production écrite qui cherche à intervenir dans les débats sociaux, politiques ou moraux en utilisant l'expression artistique comme moyen d'action."
+            },
+            {
+              "term": "les canons de beauté",
+              "definition": "Normes esthétiques variables selon les époques et les sociétés, qui influencent la manière dont l'apparence et l'élégance sont perçues et jugées."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Dans le contexte de l'esthétique francophone, quel énoncé illustre le mieux l'idée que la beauté est culturellement construite ?",
+              "options": [
+                "Les critères esthétiques restent identiques dans toutes les sociétés francophones.",
+                "Les normes du beau varient selon l'histoire, les médias et les valeurs sociales.",
+                "La beauté ne concerne que les arts visuels et exclut les pratiques quotidiennes.",
+                "Les jugements esthétiques dépendent uniquement de caractéristiques biologiques universelles."
+              ],
+              "correctAnswer": "Les normes du beau varient selon l'histoire, les médias et les valeurs sociales.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Pourquoi une œuvre de littérature engagée occupe-t-elle une place importante dans l'étude de la beauté et de l'esthétique en AP French ?",
+              "options": [
+                "Parce qu'elle évite toute dimension politique pour privilégier seulement le style.",
+                "Parce qu'elle montre que l'expression artistique peut unir forme esthétique et prise de position sociale.",
+                "Parce qu'elle se limite aux textes médiévaux étudiés pour leur valeur patrimoniale.",
+                "Parce qu'elle cherche avant tout à reproduire fidèlement les règles classiques sans innovation."
+              ],
+              "correctAnswer": "Parce qu'elle montre que l'expression artistique peut unir forme esthétique et prise de position sociale.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Quand une société protège monuments, œuvres et traditions pour leur valeur historique et symbolique, elle met en avant le ______.",
+              "options": [
+                "patrimoine culturel",
+                "consumérisme",
+                "individualisme",
+                "bilinguisme"
+              ],
+              "correctAnswer": "patrimoine culturel",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Un peintre qui cherche à saisir les effets passagers de la lumière et des couleurs appartient souvent à l'______.",
+              "options": [
+                "impressionnisme",
+                "surréalisme",
+                "classicisme",
+                "naturalisme"
+              ],
+              "correctAnswer": "impressionnisme",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "l'architecture haussmannienne",
+              "definition": "Transformation urbaine du XIXe siècle caractérisée par de grands boulevards, des façades harmonisées et une volonté d'ordre, de circulation et de modernité dans la ville."
+            },
+            {
+              "term": "la chanson francophone",
+              "definition": "Forme musicale d'expression culturelle qui transmet des émotions, des critiques sociales ou des récits identitaires à travers des paroles en français."
+            },
+            {
+              "term": "le mécénat",
+              "definition": "Soutien financier ou institutionnel apporté aux artistes ou aux projets culturels afin de favoriser la création, la diffusion et la conservation des œuvres."
+            },
+            {
+              "term": "la mode",
+              "definition": "Système de création et de consommation qui influence l'apparence, exprime l'identité sociale et contribue à la définition changeante de l'élégance."
+            },
+            {
+              "term": "la mondialisation culturelle",
+              "definition": "Circulation accélérée des produits, styles et références artistiques entre pays, entraînant à la fois échanges, hybridations et risques d'uniformisation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Dans l'étude de l'architecture comme expression esthétique, quelle caractéristique est le plus souvent associée aux transformations de Paris au XIXe siècle ?",
+              "options": [
+                "Des ruelles médiévales conservées sans intervention de l'État",
+                "Des boulevards larges et un urbanisme visant l'ordre visuel et la circulation",
+                "Une priorité donnée aux gratte-ciel de verre inspirés du XXIe siècle",
+                "Un rejet complet de toute cohérence dans les façades urbaines"
+              ],
+              "correctAnswer": "Des boulevards larges et un urbanisme visant l'ordre visuel et la circulation",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Quel effet de la mondialisation culturelle est le plus pertinent pour analyser la beauté et l'esthétique dans le monde francophone ?",
+              "options": [
+                "Elle empêche tout échange entre traditions locales et influences extérieures.",
+                "Elle favorise uniquement la disparition des cultures sans aucune adaptation locale.",
+                "Elle permet la diffusion de styles internationaux tout en suscitant des formes de réappropriation culturelle.",
+                "Elle rend les productions artistiques identiques dans tous les contextes francophones."
+              ],
+              "correctAnswer": "Elle permet la diffusion de styles internationaux tout en suscitant des formes de réappropriation culturelle.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Lorsqu'une entreprise ou un particulier finance une exposition ou un artiste, il s'agit du ______.",
+              "options": [
+                "mécénat",
+                "bénévolat",
+                "tourisme",
+                "journalisme"
+              ],
+              "correctAnswer": "mécénat",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Dans de nombreuses sociétés francophones, la ______ sert à exprimer l'identité personnelle tout en reflétant des tendances esthétiques collectives.",
+              "options": [
+                "mode",
+                "censure",
+                "traduction",
+                "diplomatie"
+              ],
+              "correctAnswer": "mode",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

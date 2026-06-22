@@ -1,0 +1,1373 @@
+{
+  "apSubject": "AP European History",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Renaissance and Exploration (c.1450–c.1648)",
+      "description": "Italian Renaissance, humanism, printing press, Age of Exploration, and commercial revolution.",
+      "note": "# Unit 1: Renaissance and Exploration (c.1450–c.1648)\n\n## Overview\nThis unit examines how **Renaissance humanism**, new technologies like the **printing press**, overseas expansion, and changing economic systems transformed Europe between **c.1450 and c.1648**. For the AP exam, this unit matters because it introduces major themes that recur throughout the course: **state building**, **cultural change**, **global interaction**, and the shift from medieval to early modern Europe.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Italian Renaissance** | A cultural rebirth centered first in Italian city-states, emphasizing art, classical learning, and secular achievement. | AP questions often ask how the Renaissance reflected both **continuity with classical antiquity** and a break from medieval traditions. |\n| **Humanism** | An intellectual movement focused on the study of **classical texts**, human potential, rhetoric, and civic life. | Important for explaining shifts in education, politics, and attitudes toward the individual. |\n| **Christian Humanism** | Northern European adaptation of humanism that applied classical learning to church reform and Christian ethics. | Helps distinguish the **Italian Renaissance** from the **Northern Renaissance**; figures like **Erasmus** are frequent AP examples. |\n| **Printing Press** | **Johannes Gutenberg’s** movable-type press enabled rapid, cheaper reproduction of texts. | A key turning point in the spread of ideas, literacy, religious criticism, and standardization of knowledge. |\n| **Age of Exploration** | European maritime expansion into Africa, Asia, and the Americas driven by trade, religion, and state competition. | AP exam questions often connect exploration to **mercantilism**, empire building, and global exchange. |\n| **Commercial Revolution** | Expansion of trade, banking, joint-stock ventures, and market activity in early modern Europe. | Important for long-term changes in class structure, urbanization, and the rise of **capitalist practices**. |\n| **Columbian Exchange** | The transfer of plants, animals, peoples, diseases, and goods between the Eastern and Western Hemispheres. | A major cause-and-effect topic linking exploration to demographic and economic transformation. |\n| **New Monarchies / Centralization** | Rulers in states like France, Spain, and England strengthened royal authority. | Exploration and commercial wealth often supported stronger states, making this concept useful in broader AP comparisons. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Renaissance and Exploration: Major Developments\n    1450 : Italian Renaissance expands\n    1450 : Growth of humanism and patronage\n    1450s : Gutenberg printing press spreads texts\n    1488 : Dias rounds the Cape of Good Hope\n    1492 : Columbus reaches the Americas\n    1498 : da Gama reaches India by sea\n    1500s : Columbian Exchange transforms societies\n    1500s : Commercial Revolution accelerates trade and banking\n    1500s : Spanish and Portuguese overseas empires expand\n    1600s : Joint-stock companies and global trade networks grow\n    1648 : Europe increasingly shaped by state rivalry and global commerce\n```\n\n### Cause-and-Effect Chain\n1. **Italian wealth and urban life** supported patronage of artists and scholars.  \n2. Patronage encouraged **Renaissance culture** and the revival of classical learning.  \n3. **Humanism** reshaped education, politics, and religious criticism.  \n4. The **printing press** spread these ideas more rapidly across Europe.  \n5. Maritime technology and state sponsorship enabled **overseas exploration**.  \n6. Exploration produced new trade routes, colonization, and the **Columbian Exchange**.  \n7. Expanded trade helped fuel the **Commercial Revolution** and stronger monarchies.\n\n## Essential Formulas / Laws / Rules\n\n| **Key Principle / Definition** | **What You Must Know** |\n|---|---|\n| **Humanism** | Emphasized **classical antiquity**, philology, rhetoric, moral philosophy, and the study of humans as active agents in the world. |\n| **Secularism** | Renaissance culture was not anti-religious, but it showed increased interest in **worldly life**, politics, and individual achievement. |\n| **Patronage** | Wealthy families, popes, and rulers financed artists and scholars to gain **prestige**, political legitimacy, and cultural influence. |\n| **Civic Humanism** | The belief that educated citizens should use classical learning in **public service** and republican political life. |\n| **Mercantilism** | The idea that states should increase wealth and power by controlling trade, accumulating bullion, and promoting exports. |\n| **Columbian Exchange** | The **biological and cultural exchange** between the Americas and Afro-Eurasia after 1492, including crops, diseases, animals, and labor systems. |\n| **Commercial Revolution** | A transformation marked by expanded markets, increased banking and credit, overseas trade, and new business organizations such as **joint-stock companies**. |\n| **Primary AP Rule** | Always distinguish between **causes**, **developments**, and **effects**. For example, the printing press was not the cause of humanism, but it greatly expanded its influence. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Italian Renaissance** | **Northern Renaissance** | **AP Significance** |\n|---|---|---|---|\n| **Primary focus** | Classical revival, artistic innovation, civic life | Religious reform, moral criticism, Christian scholarship | Helps identify regional differences within one broader movement |\n| **Major figures** | **Petrarch**, **Machiavelli**, **Leonardo da Vinci**, **Michelangelo** | **Erasmus**, **Thomas More**, **Jan van Eyck** | AP essays often ask for specific evidence from each region |\n| **Social setting** | Wealthy Italian city-states such as Florence and Venice | Urban centers in France, England, the Low Countries, the Holy Roman Empire | Explains how economic geography shaped culture |\n| **Tone** | More secular and civic | More religious and reform-minded | Useful for continuity/change analysis |\n\n| **Cause / Effect** | **Exploration** | **Commercial Revolution** |\n|---|---|---|\n| **Main cause** | Search for direct trade routes, state rivalry, missionary zeal, new maritime technology | Expansion of overseas trade and increased flow of goods and silver |\n| **Main effect** | Colonization, Columbian Exchange, global trade networks | Growth of banking, merchant elites, capitalism, and state finance |\n| **Connection** | Exploration helped create the conditions for the Commercial Revolution | The Commercial Revolution reinforced further exploration and imperial rivalry |\n\n## Common AP Exam Traps\n- Do not treat the **Renaissance** as a complete rejection of Christianity; much Renaissance culture remained deeply religious.\n- Do not confuse **humanism** with modern secular humanism. In AP Euro, it mainly means the study of **classical texts** and human-centered education.\n- Do not say the **printing press caused the Renaissance**. Renaissance ideas emerged first; the press accelerated their spread.\n- Do not describe the **Age of Exploration** as only Spanish. **Portugal** played a major early role in African and Asian trade routes.\n- Do not reduce the **Commercial Revolution** to simple “more trade.” It also involved changes in **finance, credit, labor systems, and state economic policy**.\n\n## Quick Review Checklist\n- [ ] Explain how **Italian city-states** created favorable conditions for the Renaissance.\n- [ ] Define **humanism** and distinguish it from **Christian humanism**.\n- [ ] Identify how the **printing press** changed the spread of ideas in Europe.\n- [ ] Compare the **Italian Renaissance** with the **Northern Renaissance**.\n- [ ] Describe the motives behind European **overseas exploration**.\n- [ ] Explain the major effects of the **Columbian Exchange** on both Europe and the Americas.\n- [ ] Analyze how exploration contributed to the **Commercial Revolution**.\n- [ ] Connect cultural and economic change in this period to the rise of stronger **early modern states**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Humanism",
+              "definition": "An intellectual movement that emphasized the study of classical Greek and Roman texts, focused on human potential and achievement, and encouraged secular subjects alongside traditional religious learning."
+            },
+            {
+              "term": "Civic humanism",
+              "definition": "A strain of Renaissance thought that argued educated people should actively participate in public life and use learning to improve their city or state."
+            },
+            {
+              "term": "Patronage",
+              "definition": "Financial and political support given by wealthy individuals, families, or institutions to artists, writers, and scholars, shaping cultural production and prestige."
+            },
+            {
+              "term": "Johannes Gutenberg’s printing press",
+              "definition": "A mid-fifteenth-century innovation using movable type that greatly increased the speed and volume of book production, helping spread literacy and new ideas across Europe."
+            },
+            {
+              "term": "Italian city-states",
+              "definition": "Politically independent urban centers such as Florence, Venice, and Milan whose wealth from trade and banking fostered intense cultural competition and artistic innovation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly contributed to the rapid diffusion of Renaissance humanist ideas north of the Alps in the late fifteenth and early sixteenth centuries?",
+              "options": [
+                "The spread of movable-type printing",
+                "The consolidation of serfdom in eastern Europe",
+                "The decline of urban banking networks",
+                "The expansion of the Ottoman janissary corps"
+              ],
+              "correctAnswer": "The spread of movable-type printing",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A major political effect of competition among Florence, Milan, Venice, and other urban centers during the Renaissance was that it",
+              "options": [
+                "encouraged rulers and elites to sponsor art and learning to enhance prestige",
+                "produced immediate national unification across the peninsula",
+                "ended foreign involvement in peninsular affairs",
+                "eliminated merchant influence over government"
+              ],
+              "correctAnswer": "encouraged rulers and elites to sponsor art and learning to enhance prestige",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Renaissance thinkers who stressed the importance of classical education for active participation in public affairs were most closely associated with ______.",
+              "options": [
+                "civic humanism",
+                "scholasticism",
+                "mercantilism",
+                "monasticism"
+              ],
+              "correctAnswer": "civic humanism",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The technology that most transformed the reproduction of books in Europe after the mid-fifteenth century was the ______.",
+              "options": [
+                "printing press",
+                "astrolabe",
+                "sternpost rudder",
+                "triangular lateen sail"
+              ],
+              "correctAnswer": "printing press",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Columbian Exchange",
+              "definition": "The extensive transfer of plants, animals, diseases, and peoples between the Eastern and Western Hemispheres after transatlantic contact, producing major demographic and economic change."
+            },
+            {
+              "term": "Treaty of Tordesillas",
+              "definition": "A 1494 agreement brokered by the papacy that divided newly encountered overseas lands between the Iberian crowns along an imaginary line in the Atlantic."
+            },
+            {
+              "term": "Price Revolution",
+              "definition": "A sustained period of inflation in sixteenth-century Europe driven by population growth and the influx of silver, which altered wages, rents, and social relations."
+            },
+            {
+              "term": "Joint-stock company",
+              "definition": "A business organization in which investors pooled capital and shared both risk and profit, facilitating large overseas trading ventures."
+            },
+            {
+              "term": "Mercantilism",
+              "definition": "An economic approach in which states sought to increase power by regulating trade, accumulating bullion, and maintaining a favorable balance of exports over imports."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best explains a major cause of the sixteenth-century Price Revolution in Europe?",
+              "options": [
+                "The influx of American silver increased the money supply",
+                "The decline of Atlantic trade reduced access to imported goods",
+                "The spread of guild restrictions sharply lowered urban demand",
+                "The end of population growth reduced agricultural output"
+              ],
+              "correctAnswer": "The influx of American silver increased the money supply",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "European states chartered joint-stock companies primarily in order to",
+              "options": [
+                "spread the financial risk of expensive commercial ventures",
+                "replace all forms of royal oversight in overseas trade",
+                "eliminate competition among merchants within each state",
+                "end reliance on naval power in long-distance exchange"
+              ],
+              "correctAnswer": "spread the financial risk of expensive commercial ventures",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The broad transatlantic movement of crops, livestock, pathogens, and people after 1492 is known as the ______.",
+              "options": [
+                "Columbian Exchange",
+                "Commercial Revolution",
+                "Peace of Augsburg",
+                "Scientific Revolution"
+              ],
+              "correctAnswer": "Columbian Exchange",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The economic theory that associated national strength with bullion accumulation and state regulation of trade is called ______.",
+              "options": [
+                "mercantilism",
+                "feudalism",
+                "humanism",
+                "conciliarism"
+              ],
+              "correctAnswer": "mercantilism",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Age of Reformation (c.1450–c.1648)",
+      "description": "Protestant Reformation, Counter-Reformation, religious wars, and the Peace of Westphalia.",
+      "note": "# Unit 2: Age of Reformation (c.1450–c.1648)\n\n## Overview\nThis unit examines how criticism of the late medieval **Catholic Church** led to the **Protestant Reformation**, how Catholic leaders responded in the **Counter-Reformation**, and how religious conflict reshaped European politics and society. For the AP exam, this unit matters because it connects **religion**, **state-building**, **social change**, and **political conflict** across the early modern period.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Indulgences and Church Corruption** | Practices such as the sale of indulgences and clerical abuses that sparked criticism of the Church. | AP questions often ask students to explain why reform movements gained support in the early 1500s. |\n| **Martin Luther and Lutheranism** | Luther challenged papal authority and emphasized **justification by faith alone** and **scripture alone**. | A foundational turning point; know both his ideas and why German princes supported him. |\n| **Calvinism** | Protestant theology associated with **John Calvin**, stressing **predestination**, discipline, and a godly community. | Important for comparison with Lutheranism and for explaining spread to France, the Netherlands, Scotland, and beyond. |\n| **English Reformation** | England’s break with Rome under **Henry VIII**, leading to the **Anglican Church**. | The AP exam often distinguishes political motives in England from theological motives elsewhere. |\n| **Catholic Reformation / Counter-Reformation** | The Catholic Church’s reform effort, including the **Council of Trent**, new religious orders, and renewed discipline. | Shows that reform was not only Protestant; also explains Catholic revival and confessional conflict. |\n| **Religious Wars** | Conflicts driven by both religious and political motives, including the **French Wars of Religion** and the **Thirty Years’ War**. | AP questions frequently test causation: religion mattered, but so did dynastic and state interests. |\n| **Peace of Augsburg** | The 1555 settlement in the Holy Roman Empire allowing rulers to choose **Catholicism** or **Lutheranism**. | Key example of limited religious toleration and fragmented political authority in the Empire. |\n| **Peace of Westphalia** | The 1648 settlement ending the Thirty Years’ War and confirming state sovereignty within the Holy Roman Empire. | Often treated as a major milestone in the development of the modern state system. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Reformation and Religious Conflict, c.1450-c.1648\n    1450s : Printing press spreads ideas more rapidly\n    1517 : Luther posts Ninety-Five Theses\n    1520s : Lutheran ideas spread in German states\n    1530s : Henry VIII breaks from Rome\n    1540 : Jesuits approved by papacy\n    1545-1563 : Council of Trent defines Catholic reform\n    1555 : Peace of Augsburg\n    1562-1598 : French Wars of Religion\n    1618-1648 : Thirty Years' War\n    1648 : Peace of Westphalia\n```\n\n### Reformation Cause-and-Effect Chain\n1. **Late medieval Church problems** weakened confidence in Church leadership.  \n2. **Humanism** encouraged critical reading of texts and calls for reform.  \n3. The **printing press** accelerated the spread of reform ideas.  \n4. Reformers such as **Luther**, **Zwingli**, and **Calvin** challenged Catholic doctrine and authority.  \n5. **Princes and monarchs** supported or resisted reform based on political advantage as well as belief.  \n6. Europe became divided into competing **confessional states**.  \n7. Religious division contributed to prolonged **warfare**, ending in settlements that increased the role of the **state** in religious affairs.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Justification by Faith Alone** | **Luther** argued that salvation comes through **faith**, not through good works or Church sacraments alone. |\n| **Sola Scriptura** | For many Protestants, **scripture** was the highest religious authority, above papal tradition. |\n| **Predestination** | In **Calvinism**, God has already determined who will be saved; this fostered disciplined religious communities. |\n| **Cuius regio, eius religio** | From the **Peace of Augsburg**: the religion of the ruler determined the religion of the territory, though it applied only to **Catholicism** and **Lutheranism**. |\n| **Council of Trent** | Reaffirmed Catholic doctrines, corrected abuses, improved clerical training, and strengthened Church discipline. |\n| **Jesuits** | The **Society of Jesus** promoted education, missionary work, and loyalty to the papacy; crucial to Catholic renewal. |\n| **Politique** | A ruler who placed **political stability** above religious uniformity; often used in discussing **Henry IV of France**. |\n| **Westphalian Sovereignty** | The **Peace of Westphalia** reinforced the political independence of many states and limited universal claims of pope or emperor. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Lutheranism** | **Calvinism** | **Catholic Reformation** |\n|---|---|---|---|\n| **Salvation** | **Faith alone** | **Predestination** | Faith plus sacraments and good works within Church teaching |\n| **Authority** | **Scripture** over pope | Scripture; disciplined church community | **Scripture** and **tradition**, interpreted by Church |\n| **Church Structure** | Often supported by princes | More decentralized, disciplined congregations | Hierarchical under papacy |\n| **Political Impact** | Strong in German states and Scandinavia | Influential in Switzerland, France, Scotland, Netherlands | Revitalized Catholic monarchies and institutions |\n\n### Religion and Politics: Linked but Not Identical\n```mermaid\nflowchart LR\n    A[Religious Criticism] --> B[Reform Movements]\n    B --> C[Political Support from Rulers]\n    C --> D[State Consolidation]\n    B --> E[Confessional Division]\n    E --> F[Religious Wars]\n    D --> F\n    F --> G[Peace Settlements]\n    G --> H[Greater State Sovereignty]\n```\n\n## Common AP Exam Traps\n- **Do not reduce the Reformation to religion alone.** Many rulers backed reform to gain **political autonomy**, confiscate Church lands, or weaken rivals.\n- **Do not confuse Lutheranism and Calvinism.** **Luther** stressed **faith alone**; **Calvin** is most associated with **predestination** and stricter moral discipline.\n- **Do not treat the English Reformation as primarily theological at first.** Under **Henry VIII**, the break with Rome was driven mainly by **dynastic and political concerns**.\n- **Do not assume the Peace of Augsburg created broad religious freedom.** It recognized only **Catholicism** and **Lutheranism**, not Calvinism.\n- **Do not describe the Thirty Years’ War as purely religious throughout.** It began with confessional tensions but became increasingly a **political power struggle**.\n\n## Quick Review Checklist\n- [ ] Explain how **Church corruption**, **humanism**, and the **printing press** helped trigger the **Protestant Reformation**.\n- [ ] Identify the main beliefs of **Martin Luther** and explain why they challenged the **Catholic Church**.\n- [ ] Compare **Lutheranism**, **Calvinism**, and the **Anglican Church**.\n- [ ] Describe the goals and outcomes of the **Catholic Reformation**, especially the **Council of Trent** and the **Jesuits**.\n- [ ] Explain why monarchs and princes supported or opposed reform movements.\n- [ ] Analyze the causes and significance of the **French Wars of Religion** and the **Thirty Years’ War**.\n- [ ] Define **cuius regio, eius religio** and explain the limits of the **Peace of Augsburg**.\n- [ ] Explain why the **Peace of Westphalia** is important for understanding **state sovereignty** and the changing political order of Europe.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Indulgences",
+              "definition": "Remissions of temporal punishment for sin granted by the Church, whose late medieval sale became a major source of criticism about clerical abuse and spiritual corruption."
+            },
+            {
+              "term": "Martin Luther",
+              "definition": "German theologian who challenged papal authority and argued that salvation came through faith alone, helping trigger the break in western Christendom in 1517."
+            },
+            {
+              "term": "Ninety-Five Theses",
+              "definition": "Set of propositions criticizing the abuse of pardons for sin and calling for theological debate, widely circulated through print and associated with the start of the German reform movement."
+            },
+            {
+              "term": "Justification by faith alone",
+              "definition": "Doctrine holding that human beings are saved through faith rather than through good works or ecclesiastical rituals, central to early Protestant teaching."
+            },
+            {
+              "term": "The printing press",
+              "definition": "Technology that accelerated the spread of reform ideas by making polemics, vernacular Bibles, and theological arguments cheaper and faster to reproduce."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly helped early Protestant ideas spread rapidly across the Holy Roman Empire in the early sixteenth century?",
+              "options": [
+                "The revival of monastic orders",
+                "The expansion of print culture",
+                "The growth of mercantilist trade policy",
+                "The consolidation of serfdom"
+              ],
+              "correctAnswer": "The expansion of print culture",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Luther's criticism of the late medieval Church was primarily rooted in the belief that",
+              "options": [
+                "salvation depended on priestly mediation through the sacraments",
+                "the Bible should remain accessible only in Latin",
+                "faith rather than purchased spiritual benefits was the basis of salvation",
+                "secular rulers should control all church doctrine"
+              ],
+              "correctAnswer": "faith rather than purchased spiritual benefits was the basis of salvation",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The doctrine of ______ taught that salvation comes through faith rather than good works or Church mediation.",
+              "options": [
+                "predestination",
+                "transubstantiation",
+                "justification by faith alone",
+                "conciliarism"
+              ],
+              "correctAnswer": "justification by faith alone",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The rapid circulation of Luther's criticisms in the 1510s was greatly aided by the ______.",
+              "options": [
+                "manorial system",
+                "printing press",
+                "Treaty of Tordesillas",
+                "Inquisition"
+              ],
+              "correctAnswer": "printing press",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Council of Trent",
+              "definition": "Nineteenth ecumenical assembly of the Roman Church that reaffirmed core doctrines, reformed clerical discipline, and became the foundation of Catholic renewal in the sixteenth century."
+            },
+            {
+              "term": "Jesuits",
+              "definition": "Religious order founded by Ignatius of Loyola that emphasized discipline, education, missionary work, and loyalty to the papacy during Catholic renewal."
+            },
+            {
+              "term": "Thirty Years' War",
+              "definition": "Major seventeenth-century conflict that began in the Holy Roman Empire as a religious struggle but expanded into a broader political contest among European powers."
+            },
+            {
+              "term": "Peace of Westphalia",
+              "definition": "Settlement of 1648 that ended the long continental conflict, recognized the sovereignty of states within the empire, and weakened the universal claims of both pope and emperor."
+            },
+            {
+              "term": "Predestination",
+              "definition": "Belief, especially associated with Reformed theology, that God had eternally determined who would receive salvation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best describes the significance of the Peace of Westphalia?",
+              "options": [
+                "It restored religious unity under the papacy throughout Europe",
+                "It confirmed state sovereignty and limited the political authority of universal institutions",
+                "It ended the English Civil War by establishing a constitutional monarchy",
+                "It created a permanent alliance between the Habsburgs and the Ottoman Empire"
+              ],
+              "correctAnswer": "It confirmed state sovereignty and limited the political authority of universal institutions",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A major goal of the Council of Trent was to",
+              "options": [
+                "endorse Luther's teaching on justification",
+                "abolish the authority of bishops",
+                "reaffirm Catholic doctrine while correcting internal abuses",
+                "transfer control of the Church to secular rulers"
+              ],
+              "correctAnswer": "reaffirm Catholic doctrine while correcting internal abuses",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The ______ sought to strengthen Catholicism through education, missionary work, and strict spiritual discipline.",
+              "options": [
+                "Franciscans",
+                "Jesuits",
+                "Anabaptists",
+                "Huguenots"
+              ],
+              "correctAnswer": "Jesuits",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The ______ ended in 1648 and helped establish a new political order based more clearly on the sovereignty of states.",
+              "options": [
+                "War of the Spanish Succession",
+                "Thirty Years' War",
+                "French Wars of Religion",
+                "Dutch Revolt"
+              ],
+              "correctAnswer": "Thirty Years' War",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Absolutism and Constitutionalism (c.1648–c.1815)",
+      "description": "Louis XIV, absolute monarchies, constitutional governments, and the English Civil War and Glorious Revolution.",
+      "note": "# Unit 3: Absolutism and Constitutionalism (c.1648–c.1815)\n\n## Overview\nThis unit examines how European states responded to the political and religious conflicts of the seventeenth century by developing either **absolutist** or **constitutional** forms of government. You will study **Louis XIV**, **absolute monarchy**, the **English Civil War**, and the **Glorious Revolution**, while also comparing how different rulers built state power.\n\nFor the AP exam, this unit is important because it connects **state-building**, **political authority**, **social hierarchy**, and **Enlightenment-era critiques of power**. It often appears in stimulus-based multiple-choice questions, **SAQs**, and comparative **LEQ/DBQ** prompts.\n\n---\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Absolutism** | A system in which a monarch claims nearly complete authority over the state, often by **divine right**. | AP questions often ask how rulers centralized power and weakened rivals like nobles, parliaments, or regional elites. |\n| **Divine Right of Kings** | The idea that monarchs receive authority from God and are accountable primarily to Him. | Helps explain the political ideology behind rulers such as **Louis XIV** and the Stuarts. |\n| **Louis XIV and Versailles** | The French king who made France the leading example of **absolute monarchy** and used **Versailles** to control the nobility. | A core case study in how culture, court ritual, taxation, and war supported absolutism. |\n| **Constitutionalism** | A system in which political power is limited by laws, representative institutions, and established rights. | Frequently contrasted with absolutism, especially through the English and Dutch examples. |\n| **English Civil War** | Conflict between **Charles I** and Parliament over taxation, religion, and authority, ending in the king’s execution. | AP often uses this event to show challenges to divine-right monarchy and the rise of parliamentary power. |\n| **Glorious Revolution** | The 1688 replacement of **James II** by **William and Mary**, followed by the **English Bill of Rights**. | A major turning point in limiting monarchy and establishing a constitutional state. |\n| **Centralization of State Power** | The process by which rulers expand bureaucracy, taxation, standing armies, and administrative control. | Useful for comparisons among France, Prussia, Austria, and Russia. |\n| **Balance of Power** | The diplomatic principle that no one state should dominate Europe. | Connects domestic state-building to foreign policy and wars under Louis XIV and beyond. |\n\n---\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Political Paths in Europe after 1648\n    1648 : Peace of Westphalia\n         : End of major religious wars\n         : States focus on strengthening political authority\n    1661 : Louis XIV begins personal rule\n         : Expansion of French absolutism\n         : Nobility controlled through court culture and administration\n    1640-1649 : English Civil War\n              : Conflict between monarchy and Parliament\n              : Charles I executed\n    1649-1660 : Commonwealth and Protectorate\n              : Temporary republican experiment under Cromwell\n    1660 : Restoration of monarchy\n         : Charles II returns\n    1688 : Glorious Revolution\n         : James II removed\n         : William and Mary invited to rule\n    1689 : English Bill of Rights\n         : Parliamentary sovereignty strengthened\n         : Constitutional monarchy consolidated\n    1700s : Continued growth of centralized states\n          : Absolutist and constitutional models shape Europe\n```\n\n### Political Development Pattern\n1. **War, religious conflict, and fiscal strain** pushed rulers to strengthen government.\n2. Some states moved toward **absolutism**, concentrating authority in the monarch.\n3. Others, especially **England**, developed **constitutional limits** on rulers.\n4. These political structures shaped later debates about **rights**, **representation**, and **reform**.\n\n---\n\n## Essential Formulas / Laws / Rules\n\nFor AP European History, the “must know” material is made up of **principles, laws, and definitions** rather than equations.\n\n| **Term / Rule** | **What You Must Know** |\n|---|---|\n| **Absolutism** | The monarch exercises extensive control over lawmaking, taxation, military power, and administration. |\n| **Divine Right** | Political authority comes from God, so resistance to the monarch can be framed as resistance to divine order. |\n| **Constitutional Monarchy** | A monarchy in which the ruler’s authority is limited by law and representative institutions. |\n| **Parliamentary Sovereignty** | The principle that **Parliament** holds supreme legal authority over the monarch. |\n| **English Bill of Rights (1689)** | Limited royal power, protected certain rights of Parliament, and barred the monarch from suspending laws or maintaining a standing army without consent. |\n| **Versailles System** | Louis XIV used **court ritual**, patronage, and physical proximity to keep nobles dependent and politically weak. |\n| **Mercantilism** | Economic policy aimed at increasing state wealth and power through regulated trade, colonial exploitation, and accumulation of resources. |\n| **Reason of State** | The idea that rulers may take actions necessary to preserve and strengthen the state. |\n\n---\n\n## Connections & Comparisons\n\n| **Topic** | **Absolutism (France)** | **Constitutionalism (England)** | **AP Comparison Point** |\n|---|---|---|---|\n| **Source of Authority** | **Divine right** and hereditary monarchy | Authority shared with **Parliament** under law | Compare ideological justifications for power |\n| **Nobility** | Controlled through **Versailles**, offices, and dependence on the crown | Landed elite influence politics through Parliament | Shows different methods of elite participation |\n| **Taxation** | Monarch sought direct control over revenue and administration | Taxation required parliamentary approval | Common AP theme: who controls money controls power |\n| **Military** | Large standing army under royal command | Standing army viewed with suspicion unless approved by Parliament | Important distinction in state-building |\n| **Outcome** | Strong centralized monarchy under **Louis XIV** | **Constitutional monarchy** after 1688 | Illustrates divergent paths after seventeenth-century conflict |\n\n```mermaid\nflowchart LR\n    A[\"Religious conflict and war\"] --> B[\"Need for stronger state\"]\n    B --> C[\"Absolutist response\"]\n    B --> D[\"Constitutionalist response\"]\n    C --> E[\"Centralized monarchy, bureaucracy, standing army\"]\n    D --> F[\"Limited monarchy, rights, parliamentary power\"]\n```\n\n---\n\n## Common AP Exam Traps\n\n- **Do not treat all monarchies as absolutist.** Spain, Austria, Prussia, and Russia developed strong monarchies, but each faced different constraints and used different methods.\n- **Do not confuse the English Civil War and the Glorious Revolution.** The Civil War involved armed conflict and the execution of **Charles I**; the Glorious Revolution was a relatively bloodless transfer of power that produced constitutional change.\n- **Do not assume Louis XIV controlled everything directly.** His power depended on cooperation from officials, nobles, tax systems, and local structures.\n- **Do not reduce constitutionalism to “democracy.”** England after 1688 still limited political participation to a narrow elite; it was constitutional, not fully democratic.\n- **Do not forget religion.** Conflicts over **Catholicism**, **Protestantism**, and toleration were central to English politics and the legitimacy of rulers.\n\n---\n\n## Quick Review Checklist\n\n- [ ] Define **absolutism** and explain how it differed from **constitutionalism**.\n- [ ] Explain how **Louis XIV** used **Versailles**, bureaucracy, and war to strengthen royal authority.\n- [ ] Describe the meaning and political role of **divine right monarchy**.\n- [ ] Identify the major causes and results of the **English Civil War**.\n- [ ] Explain why the **Glorious Revolution** was a turning point in English political development.\n- [ ] Describe the significance of the **English Bill of Rights** and **parliamentary sovereignty**.\n- [ ] Compare how **France** and **England** developed different political systems after the mid-seventeenth century.\n- [ ] Connect state-building to broader themes such as **social hierarchy**, **warfare**, **taxation**, and the **balance of power**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Louis XIV",
+              "definition": "French ruler from 1643 to 1715 who centralized authority, weakened the political independence of the nobility, and made the monarchy the dominant force in the state."
+            },
+            {
+              "term": "Versailles",
+              "definition": "Royal palace and court used to display monarchical power, monitor elite behavior, and draw high nobles away from regional bases of influence."
+            },
+            {
+              "term": "Intendants",
+              "definition": "Royal officials sent into the provinces to enforce policies, supervise local administration, and strengthen central control over regional institutions."
+            },
+            {
+              "term": "Fronde",
+              "definition": "Series of mid-seventeenth-century uprisings in France that convinced the monarchy of the need to tighten control over nobles, parlements, and urban disorder."
+            },
+            {
+              "term": "Divine right of kings",
+              "definition": "Political doctrine holding that monarchs derived legitimacy from God rather than from the consent of subjects or representative institutions."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly helped the French crown increase central authority during the reign of Louis XIV?",
+              "options": [
+                "The expansion of provincial Estates General",
+                "The regular summoning of the Parlement of Paris to approve taxes",
+                "The use of royal officials to supervise provincial administration",
+                "The sale of military offices to Huguenot leaders"
+              ],
+              "correctAnswer": "The use of royal officials to supervise provincial administration",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The Fronde influenced later French monarchy primarily by encouraging rulers to",
+              "options": [
+                "grant broad political concessions to representative bodies",
+                "reduce reliance on noble military service and strengthen centralized rule",
+                "abolish indirect taxation in favor of parliamentary consent",
+                "tolerate regional autonomy to prevent urban unrest"
+              ],
+              "correctAnswer": "reduce reliance on noble military service and strengthen centralized rule",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Louis XIV used the palace at ______ to concentrate the nobility around the royal court and reinforce monarchical authority.",
+              "options": [
+                "Versailles",
+                "Nantes",
+                "Fontainebleau",
+                "Avignon"
+              ],
+              "correctAnswer": "Versailles",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The belief that kings ruled by authority granted from God was known as ______.",
+              "options": [
+                "mercantilism",
+                "constitutionalism",
+                "divine right of kings",
+                "conciliarism"
+              ],
+              "correctAnswer": "divine right of kings",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "English Civil War",
+              "definition": "Conflict in the 1640s between supporters of the monarchy and Parliament over taxation, religion, and sovereignty, culminating in the trial and execution of the king."
+            },
+            {
+              "term": "Glorious Revolution",
+              "definition": "The 1688 transfer of the English crown to William and Mary after the removal of James II, establishing parliamentary supremacy without prolonged civil war."
+            },
+            {
+              "term": "English Bill of Rights",
+              "definition": "Document issued in 1689 that limited royal power, protected parliamentary privileges, and prohibited the suspension of laws without parliamentary consent."
+            },
+            {
+              "term": "Constitutional monarchy",
+              "definition": "Political system in which a ruler shares or is limited by law and representative institutions rather than governing with unrestricted authority."
+            },
+            {
+              "term": "Peter the Great",
+              "definition": "Russian ruler who expanded state power, reorganized the military and bureaucracy, and promoted selective westernization while preserving autocratic rule."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best describes the significance of the Glorious Revolution in England?",
+              "options": [
+                "It restored Catholic supremacy and ended parliamentary influence",
+                "It established the principle that the monarch ruled subject to law and Parliament",
+                "It created universal male suffrage for the House of Commons",
+                "It abolished the monarchy and replaced it permanently with a republic"
+              ],
+              "correctAnswer": "It established the principle that the monarch ruled subject to law and Parliament",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Compared with the development of government in England after 1688, the rule of Peter the Great in Russia is best characterized by",
+              "options": [
+                "the expansion of parliamentary sovereignty",
+                "the preservation of strong autocratic authority alongside administrative reform",
+                "the elimination of state involvement in the economy",
+                "the extension of broad political rights to serfs"
+              ],
+              "correctAnswer": "the preservation of strong autocratic authority alongside administrative reform",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The 1689 document that affirmed parliamentary rights and limited the monarch's ability to suspend laws was the ______.",
+              "options": [
+                "Act of Supremacy",
+                "Petition of Right",
+                "English Bill of Rights",
+                "Treaty of Utrecht"
+              ],
+              "correctAnswer": "English Bill of Rights",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "After the deposition of James II, England moved further toward a ______, in which the ruler's authority was limited by law and Parliament.",
+              "options": [
+                "theocracy",
+                "constitutional monarchy",
+                "absolute monarchy",
+                "military dictatorship"
+              ],
+              "correctAnswer": "constitutional monarchy",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Scientific, Philosophical, and Political Developments (c.1648–c.1815)",
+      "description": "Scientific Revolution, Enlightenment thinkers, and social contract theory.",
+      "note": "# Unit 4: Scientific, Philosophical, and Political Developments (c.1648–c.1815)\n\n## Overview\nThis unit examines how the **Scientific Revolution**, the **Enlightenment**, and new **political theories** challenged traditional authority in Europe between **1648** and **1815**. For the AP exam, this unit matters because it connects **intellectual change** to major political transformations, especially debates over **reason**, **rights**, **government**, and the foundations of the modern state.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Scientific Revolution** | A major shift toward observation, experimentation, and mathematical reasoning in understanding nature. | The AP exam often asks how new scientific methods weakened traditional reliance on **classical authorities** and the **Church**. |\n| **Empiricism** | The belief that knowledge comes from **sensory experience**, observation, and experiment. Associated with thinkers like **Francis Bacon**. | Important for explaining the rise of the **scientific method** and the broader Enlightenment faith in **reason** and evidence. |\n| **Rationalism** | The view that reason and deductive logic are the chief sources of knowledge. Associated with **René Descartes**. | Useful in comparing different intellectual approaches within early modern Europe and showing the power of **human reason**. |\n| **Newtonian Synthesis** | **Isaac Newton’s** explanation of motion and universal gravitation, uniting earlier scientific discoveries into a coherent system. | Frequently treated as the high point of the Scientific Revolution and as a model for Enlightenment thinkers seeking “laws” of society. |\n| **Enlightenment** | An intellectual movement applying reason, skepticism, and criticism to society, government, and human institutions. | Central to AP Euro themes of **state-building**, **rights**, **religion**, and the critique of **absolute monarchy**. |\n| **Social Contract Theory** | The idea that government arises from an agreement between rulers and the ruled. Key thinkers include **Hobbes**, **Locke**, and **Rousseau**. | A major AP comparison topic: different views of **human nature**, **sovereignty**, and the right to **resist authority**. |\n| **Enlightened Absolutism** | Rule by monarchs who embraced some Enlightenment reforms while preserving their own power. | Often appears in questions asking whether Enlightenment ideas produced real political change or mainly strengthened states. |\n| **Public Sphere** | Spaces and institutions such as **salons**, **coffeehouses**, and print culture where ideas were debated. | Helps explain how Enlightenment ideas spread beyond elite scholars and influenced broader political culture. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart LR\n    A[\"Scientific Revolution\"] --> B[\"New methods: observation, experiment, mathematics\"]\n    B --> C[\"Challenge to traditional authority\"]\n    C --> D[\"Enlightenment confidence in reason\"]\n    D --> E[\"Critique of religion, society, and government\"]\n    E --> F[\"Social contract and natural rights theories\"]\n    F --> G[\"Political reform and revolution debates\"]\n```\n\n### Intellectual Development Timeline\n```mermaid\ntimeline\n    title From Scientific Change to Political Change\n    1543 : Copernicus challenges geocentric model\n    1600s : Bacon and Descartes promote new methods of inquiry\n    1687 : Newton publishes Principia\n    Late 1600s : Locke develops natural rights and government by consent\n    1700s : Enlightenment spreads through salons and print culture\n    1760s-1780s : Enlightened absolutists pursue selective reforms\n    Late 1700s : Revolutionary movements draw on Enlightenment ideas\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Principle** | **Definition / Rule** | **Why You Must Know It** |\n|---|---|---|\n| **Scientific Method** | Knowledge should be developed through **observation**, **hypothesis**, **testing**, and **verification**. | Core to explaining how early modern science differed from medieval scholasticism. |\n| **Heliocentrism** | The theory that the **sun**, not the earth, is at the center of the planetary system. | Shows how science challenged inherited cosmology and Church-backed views. |\n| **Newton’s Universal Gravitation** | The same natural laws govern both earthly and celestial motion. | Demonstrates the Enlightenment belief that the universe operates according to discoverable rules. |\n| **Natural Rights** | **Locke’s** idea that individuals possess rights such as **life, liberty, and property**. | A foundational concept in AP questions on liberal political thought and revolution. |\n| **Consent of the Governed** | Legitimate government depends on the approval of the people. | Essential in distinguishing **Locke** from defenders of divine-right monarchy. |\n| **Social Contract** | Political authority is created by agreement to secure order or rights. | Critical for comparing **Hobbes**, **Locke**, and **Rousseau**. |\n| **Separation of Powers** | **Montesquieu’s** argument that governmental powers should be divided to prevent tyranny. | Frequently tested as an Enlightenment challenge to absolutism. |\n| **Religious Toleration** | The principle that the state should allow diverse religious beliefs and practices. | Important in Enlightenment critiques of religious persecution and clerical authority. |\n\n## Connections & Comparisons\n\n| **Thinker / Idea** | **View of Human Nature** | **Best Government** | **AP Comparison Point** |\n|---|---|---|---|\n| **Thomas Hobbes** | Humans are selfish and conflict-prone in the state of nature. | Strong sovereign authority. | Supports order over liberty; not an Enlightenment democrat. |\n| **John Locke** | Humans are rational and possess natural rights. | Limited government by consent. | Key source for liberal constitutionalism and resistance to tyranny. |\n| **Jean-Jacques Rousseau** | Society corrupts natural human freedom. | Government expressing the **general will**. | More democratic but also more collective than Locke. |\n| **Montesquieu** | Power tends to corrupt. | Balanced government with separated powers. | Focuses on institutional design rather than a full social contract theory. |\n\n### Comparison: Scientific Revolution vs. Enlightenment\n\n| **Category** | **Scientific Revolution** | **Enlightenment** |\n|---|---|---|\n| **Primary Focus** | Nature and the physical universe | Society, politics, religion, and human behavior |\n| **Main Method** | Observation, experimentation, mathematics | Reason, criticism, comparison, and reform |\n| **Key Figures** | **Copernicus**, **Galileo**, **Newton** | **Voltaire**, **Montesquieu**, **Locke**, **Rousseau** |\n| **Historical Impact** | Undermined old cosmology and authority | Inspired reform, rights discourse, and revolutions |\n\n## Common AP Exam Traps\n\n- **Do not treat all Enlightenment thinkers as democrats.** **Hobbes** supported strong authority, and even many reformers did not support mass democracy.\n- **Do not confuse the Scientific Revolution with the Enlightenment.** The first focused mainly on the natural world; the second applied reason more broadly to society and politics.\n- **Do not assume Enlightened absolutists gave up absolutism.** Rulers like **Frederick II**, **Joseph II**, and **Catherine the Great** adopted reforms selectively while preserving central power.\n- **Do not oversimplify Church-science relations.** Conflict existed, but many scientists were religious, and the relationship was not always purely oppositional.\n- **Do not mix up Locke and Rousseau.** **Locke** emphasized **property** and limited government; **Rousseau** emphasized the **general will** and collective sovereignty.\n\n## Quick Review Checklist\n\n- [ ] Explain how the **Scientific Revolution** changed European ways of producing knowledge.\n- [ ] Describe the difference between **empiricism** and **rationalism**.\n- [ ] Identify why **Newton** was so important to both science and Enlightenment thought.\n- [ ] Compare **Hobbes**, **Locke**, and **Rousseau** on human nature and political authority.\n- [ ] Explain **natural rights**, **consent of the governed**, and the **social contract**.\n- [ ] Describe how the **public sphere** helped spread Enlightenment ideas.\n- [ ] Evaluate the extent to which **enlightened absolutism** reflected genuine Enlightenment reform.\n- [ ] Connect intellectual developments in this unit to later **political revolutions** and constitutional change.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Scientific Revolution",
+              "definition": "A broad transformation in European thought during the sixteenth and seventeenth centuries in which observation, experimentation, and mathematical reasoning increasingly challenged reliance on ancient authorities and traditional explanations of nature."
+            },
+            {
+              "term": "Heliocentrism",
+              "definition": "The theory that the sun, rather than the earth, is at the center of the planetary system, overturning older geocentric astronomy and helping reshape natural philosophy."
+            },
+            {
+              "term": "Empiricism",
+              "definition": "An approach to knowledge that emphasizes observation, sensory evidence, and experiment as the basis for drawing conclusions about the natural world."
+            },
+            {
+              "term": "Isaac Newton",
+              "definition": "English thinker who synthesized earlier scientific work by formulating laws of motion and universal gravitation, showing that the same natural laws governed both celestial and terrestrial bodies."
+            },
+            {
+              "term": "Francis Bacon",
+              "definition": "English writer and statesman who promoted inductive reasoning and systematic experimentation, encouraging investigators to build general conclusions from observed data."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly distinguished the Scientific Revolution from many earlier approaches to studying nature?",
+              "options": [
+                "A reliance on experimental observation to test hypotheses",
+                "A revival of scholastic dependence on Aristotle",
+                "A rejection of mathematics in astronomy and physics",
+                "An insistence that natural philosophy should avoid practical applications"
+              ],
+              "correctAnswer": "A reliance on experimental observation to test hypotheses",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Why was Newton's work especially significant in the context of seventeenth-century European thought?",
+              "options": [
+                "It demonstrated that separate laws governed the heavens and the earth",
+                "It unified celestial and terrestrial physics under universal laws",
+                "It proved that planets moved in perfect circles around the sun",
+                "It rejected the use of mathematics in explaining motion"
+              ],
+              "correctAnswer": "It unified celestial and terrestrial physics under universal laws",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The belief that knowledge should be derived primarily from observation and experience is known as ______.",
+              "options": [
+                "empiricism",
+                "mercantilism",
+                "skepticism",
+                "deism"
+              ],
+              "correctAnswer": "empiricism",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Copernicus is most closely associated with the ______ model of the universe.",
+              "options": [
+                "heliocentric",
+                "geocentric",
+                "Ptolemaic",
+                "scholastic"
+              ],
+              "correctAnswer": "heliocentric",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "John Locke",
+              "definition": "English political thinker who argued that government derives authority from the consent of the governed and exists to protect natural rights such as life, liberty, and property."
+            },
+            {
+              "term": "Social Contract",
+              "definition": "The theory that political authority originates in an agreement among people to form a government that preserves order and protects rights."
+            },
+            {
+              "term": "Montesquieu",
+              "definition": "French writer who argued that liberty is best protected when political power is divided among separate branches that can restrain one another."
+            },
+            {
+              "term": "Voltaire",
+              "definition": "French author who criticized religious intolerance and abuses of power while championing civil liberties, especially freedom of thought and expression."
+            },
+            {
+              "term": "Rousseau",
+              "definition": "Genevan thinker who argued that legitimate sovereignty rests with the people collectively and emphasized the general will as the basis of political authority."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which Enlightenment idea is most clearly reflected in the argument that rulers may be overthrown if they fail to protect natural rights?",
+              "options": [
+                "The divine right of kings",
+                "The social contract",
+                "Mercantilist regulation",
+                "Absolutist sovereignty"
+              ],
+              "correctAnswer": "The social contract",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Montesquieu's political thought most directly influenced which principle in later constitutional governments?",
+              "options": [
+                "Religious uniformity under state authority",
+                "Separation of powers among branches of government",
+                "The restoration of feudal privilege",
+                "Government by hereditary succession alone"
+              ],
+              "correctAnswer": "Separation of powers among branches of government",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In Locke's political theory, the primary purpose of government is to protect individuals' natural rights to life, liberty, and ______.",
+              "options": [
+                "property",
+                "salvation",
+                "nobility",
+                "conquest"
+              ],
+              "correctAnswer": "property",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Rousseau argued that legitimate political authority rests in the collective will of the people, which he called the ______.",
+              "options": [
+                "general will",
+                "divine right",
+                "ancien régime",
+                "balance of power"
+              ],
+              "correctAnswer": "general will",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Conflict, Crisis, and Reaction in the Late 18th Century",
+      "description": "French Revolution causes, phases, and Napoleon Bonaparte's rise and fall.",
+      "note": "# Unit 5: Conflict, Crisis, and Reaction in the Late 18th Century\n\n## Overview\nThis unit examines the **causes, major phases, and consequences of the French Revolution**, along with the **rise and fall of Napoleon Bonaparte**. It matters for the AP exam because it connects **Enlightenment ideas, social inequality, political upheaval, nationalism, and state-building**—themes that often appear in both multiple-choice questions and long-form essays.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Old Regime** | The pre-revolutionary social and political order in France, based on **absolute monarchy**, **privilege**, and the **Three Estates**. | You must explain why the Old Regime created tensions that made revolution possible. |\n| **Enlightenment Influence** | Ideas from thinkers such as **Rousseau**, **Voltaire**, and **Montesquieu** that challenged traditional authority and promoted liberty, reason, and reform. | AP questions often ask how intellectual movements inspired political change. |\n| **Financial Crisis** | France’s severe debt from war, court spending, and a tax system that burdened the **Third Estate** while exempting many elites. | A major cause of the Revolution; useful in causation essays. |\n| **Estates-General and National Assembly** | The 1789 meeting of the Estates-General triggered a political crisis when the **Third Estate** declared itself the **National Assembly**. | Marks the shift from reform effort to revolution. |\n| **Radicalization of the Revolution** | The Revolution moved from moderate constitutional monarchy to republicanism, war, and the **Reign of Terror**. | AP often tests the changing goals and methods of revolution over time. |\n| **Reign of Terror** | Period under the **Committee of Public Safety** and **Robespierre** in which revolutionary leaders used violence to defend the republic. | Important for evaluating whether the Revolution fulfilled or betrayed its ideals. |\n| **Napoleon Bonaparte** | Military leader who seized power in **1799**, stabilized France, and spread revolutionary principles while ruling as an authoritarian emperor. | Central to continuity/change analysis: revolutionary ideals plus dictatorship. |\n| **Congress of Vienna and Reaction** | After Napoleon’s defeat, European powers sought **stability**, **balance of power**, and restoration of conservative rule. | Connects this unit to later nationalism, conservatism, and post-revolutionary Europe. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title French Revolution and Napoleon: Major Developments\n    1789 : Estates-General convenes\n         : Third Estate forms National Assembly\n         : Tennis Court Oath\n         : Storming of the Bastille\n    1791 : Constitutional monarchy established\n    1792 : Monarchy collapses\n         : First French Republic proclaimed\n    1793 : Execution of Louis XVI\n         : Reign of Terror begins\n    1794 : Fall of Robespierre\n    1795 : Directory established\n    1799 : Napoleon's coup of 18 Brumaire\n    1804 : Napoleon crowns himself emperor\n         : Napoleonic Code\n    1812 : Failed invasion of Russia\n    1814 : Napoleon abdicates\n    1815 : Waterloo\n         : Congress of Vienna settlement\n```\n\n### Revolution as a historical process\n1. **Structural tensions** developed under the **Old Regime**:\n   - social inequality\n   - tax burden on the **Third Estate**\n   - monarchy’s financial crisis\n   - spread of **Enlightenment** criticism\n\n2. **Political crisis** opened in **1789**:\n   - king called the **Estates-General**\n   - dispute over voting led the **Third Estate** to form the **National Assembly**\n\n3. **Popular mobilization** pushed events forward:\n   - **Bastille**\n   - peasant unrest\n   - urban radicalism\n\n4. **War and internal division** intensified the Revolution:\n   - foreign monarchies threatened France\n   - suspicion of treason increased\n   - radicals gained influence\n\n5. **Authoritarian stabilization** followed chaos:\n   - **Directory** proved weak\n   - **Napoleon** restored order and centralized power\n\n6. **Reaction and restoration** followed Napoleon’s fall:\n   - conservatives sought to contain revolution\n   - Europe reorganized at the **Congress of Vienna**\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Three Estates Structure** | **First Estate** = clergy; **Second Estate** = nobility; **Third Estate** = everyone else, including bourgeoisie, urban workers, and peasants. |\n| **Voting Crisis in 1789** | Traditional voting was **by estate**, which favored privileged orders; the **Third Estate** demanded voting **by head**, reflecting population size. |\n| **Tennis Court Oath** | Members of the **Third Estate** pledged not to disband until France had a **constitution**. |\n| **Declaration of the Rights of Man and of the Citizen** | Asserted **liberty**, **equality before the law**, **popular sovereignty**, and protection of rights; foundational revolutionary statement. |\n| **Civil Constitution of the Clergy** | Brought the French Church under state control; it deepened division by alienating many Catholics. |\n| **Committee of Public Safety** | Emergency body that directed the war effort and the **Reign of Terror** in the name of defending the Revolution. |\n| **Napoleonic Code** | Legal code that promoted **legal equality**, **property rights**, and state authority, but limited rights for women and reinforced patriarchy. |\n| **Congress of Vienna Principles** | **Legitimacy**, **balance of power**, and **containment of France** guided the post-Napoleonic settlement. |\n\n## Connections & Comparisons\n\n| **Comparison** | **French Revolution (early phase)** | **French Revolution (radical phase)** | **Napoleonic Era** |\n|---|---|---|---|\n| **Political goal** | Constitutional reform, limits on monarchy | Republic defended through emergency measures | Order, centralized rule, empire |\n| **Key supporters** | Bourgeoisie, reform nobles, some urban groups | Jacobins, sans-culottes, radical republicans | Army, bureaucracy, many property owners |\n| **View of liberty** | Civil equality and representative government | Liberty subordinated to survival of the Revolution | Some legal equality, but less political freedom |\n| **Use of violence** | Limited compared to later stages | Extensive, especially during the **Terror** | Military conquest and state coercion |\n| **Historical significance** | Ended feudal privilege | Showed how revolutions can radicalize | Spread revolutionary reforms across Europe |\n\n### Cause-and-effect connection\n\n```mermaid\nflowchart LR\n    A[\"Old Regime inequality\"] --> B[\"Financial crisis\"]\n    B --> C[\"Estates-General called (1789)\"]\n    C --> D[\"National Assembly formed\"]\n    D --> E[\"Revolutionary reforms\"]\n    E --> F[\"War and internal resistance\"]\n    F --> G[\"Radicalization and Terror\"]\n    G --> H[\"Directory weakness\"]\n    H --> I[\"Napoleon seizes power\"]\n    I --> J[\"European wars and empire\"]\n    J --> K[\"Defeat and Congress of Vienna\"]\n```\n\n## Common AP Exam Traps\n- Do not say the French Revolution was caused **only** by the **Enlightenment**; **financial crisis**, **social inequality**, and **political conflict** were also crucial.\n- Do not treat the Revolution as one unified movement. It changed significantly from **moderate reform** in **1789** to **radical republicanism** by **1793**.\n- Do not assume **Napoleon** simply “ended” the Revolution. He preserved some revolutionary gains, especially **legal equality** and **careers open to talent**, while also limiting liberty.\n- Do not confuse the **Declaration of the Rights of Man and of the Citizen** with universal equality in practice; women, slaves, and many colonial subjects were excluded.\n- Do not describe the **Congress of Vienna** as purely reactionary without nuance; it restored conservatism but also created a durable **balance of power**.\n\n## Quick Review Checklist\n- [ ] Explain **multiple causes** of the French Revolution, including **social**, **financial**, **political**, and **intellectual** factors.\n- [ ] Describe the structure of the **Old Regime** and why the **Third Estate** was dissatisfied.\n- [ ] Explain how the **Estates-General** crisis led to the formation of the **National Assembly**.\n- [ ] Trace the major phases of the Revolution from **1789** through the **Reign of Terror**.\n- [ ] Explain why the Revolution became more radical after **1792**.\n- [ ] Evaluate how far the Revolution fulfilled its ideals of **liberty** and **equality**.\n- [ ] Describe how **Napoleon** both preserved and betrayed revolutionary principles.\n- [ ] Explain the goals and significance of the **Congress of Vienna** in reshaping Europe.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Estates-General",
+              "definition": "Representative assembly of the three orders of pre-revolutionary France, summoned in 1789 to address the monarchy’s fiscal crisis after not meeting since 1614."
+            },
+            {
+              "term": "National Assembly",
+              "definition": "Body formed when representatives of the Third Estate, joined by some clergy and nobles, claimed the authority to legislate for France in 1789."
+            },
+            {
+              "term": "Tennis Court Oath",
+              "definition": "Pledge made in June 1789 by deputies who promised not to disband until a constitution had been established for France."
+            },
+            {
+              "term": "Great Fear",
+              "definition": "Wave of rural panic in the summer of 1789 during which peasants attacked seigneurial records and properties amid rumors of aristocratic plots."
+            },
+            {
+              "term": "Declaration of the Rights of Man and of the Citizen",
+              "definition": "Foundational statement of 1789 asserting liberty, legal equality, popular sovereignty, and protection of property as universal political principles."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly transformed the dispute over voting in 1789 into a claim of national sovereignty?",
+              "options": [
+                "The Third Estate proclaimed itself the National Assembly",
+                "Louis XVI endorsed tax reform without conditions",
+                "The First Estate abolished noble privileges on its own initiative",
+                "The Paris Parlement declared itself sovereign"
+              ],
+              "correctAnswer": "The Third Estate proclaimed itself the National Assembly",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The immediate financial crisis that pushed the French monarchy to summon the Estates-General in 1789 resulted primarily from",
+              "options": [
+                "the costs of war and an inequitable tax structure",
+                "the collapse of Atlantic trade after 1763",
+                "massive reparations imposed by Prussia",
+                "the end of feudal dues in the countryside"
+              ],
+              "correctAnswer": "the costs of war and an inequitable tax structure",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In June 1789, deputies of the Third Estate justified creating the ______ by arguing that they represented the majority of the French nation.",
+              "options": [
+                "National Assembly",
+                "Committee of Public Safety",
+                "Directory",
+                "Consulate"
+              ],
+              "correctAnswer": "National Assembly",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The August 1789 statement that articulated natural rights and legal equality was the ______.",
+              "options": [
+                "Civil Constitution of the Clergy",
+                "Declaration of the Rights of Man and of the Citizen",
+                "Napoleonic Code",
+                "Edict of Nantes"
+              ],
+              "correctAnswer": "Declaration of the Rights of Man and of the Citizen",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Reign of Terror",
+              "definition": "Period from 1793 to 1794 in which the revolutionary government used emergency measures, executions, and political repression to defend the republic against internal and external threats."
+            },
+            {
+              "term": "Committee of Public Safety",
+              "definition": "Executive body of the radical republic that centralized authority during the crisis of 1793–1794 and directed war policy and internal security."
+            },
+            {
+              "term": "Directory",
+              "definition": "Five-man executive established by the Constitution of 1795 that ruled France after the fall of the radical republic but suffered from corruption and instability."
+            },
+            {
+              "term": "Napoleonic Code",
+              "definition": "Civil law system introduced in the early nineteenth century that standardized laws, protected property rights, and reinforced patriarchal authority."
+            },
+            {
+              "term": "Congress of Vienna",
+              "definition": "Diplomatic settlement after Napoleon’s defeat that sought to restore political balance, contain France, and preserve conservative order in Europe."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best explains how Napoleon both preserved and limited the legacy of the French Revolution?",
+              "options": [
+                "He maintained legal equality and careers open to talent while restricting political liberty and women's rights",
+                "He restored feudal dues and abolished secular education while expanding parliamentary rule",
+                "He ended conscription and decentralized administration while empowering elected local assemblies",
+                "He transferred sovereignty to the pope while eliminating military promotion by merit"
+              ],
+              "correctAnswer": "He maintained legal equality and careers open to talent while restricting political liberty and women's rights",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The conservative powers at the Congress of Vienna were primarily motivated by the desire to",
+              "options": [
+                "restore a balance of power and prevent future revolutionary upheaval",
+                "promote national self-determination in central Europe",
+                "spread republican constitutions across the continent",
+                "dismantle all dynastic monarchies"
+              ],
+              "correctAnswer": "restore a balance of power and prevent future revolutionary upheaval",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "During 1793–1794, the revolutionary body most responsible for directing war and suppressing internal opposition was the ______.",
+              "options": [
+                "Estates-General",
+                "Committee of Public Safety",
+                "Directory",
+                "Council of Trent"
+              ],
+              "correctAnswer": "Committee of Public Safety",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "After Napoleon’s final defeat, European leaders met at the ______ to reconstruct the political order.",
+              "options": [
+                "Congress of Vienna",
+                "Treaty of Tordesillas",
+                "Peace of Augsburg",
+                "Diet of Worms"
+              ],
+              "correctAnswer": "Congress of Vienna",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Industrialization and Its Effects (c.1815–c.1914)",
+      "description": "Industrial Revolution origins, capitalism, socialism, Marxism, and working-class conditions.",
+      "note": "# Unit 6: Industrialization and Its Effects (c.1815–c.1914)\n\n## Overview\nThis unit examines how **industrialization** transformed Europe economically, socially, and politically from the end of the Napoleonic era to the eve of World War I. For the AP exam, it matters because it connects **economic change** to new ideologies, class tensions, urbanization, state reform, and the rise of modern mass politics.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Industrial Revolution** | The shift from hand production and agrarian economies to machine production, factory labor, and mechanized transportation. | Often tested as a major turning point that reshaped labor, class structure, and European power. |\n| **Second Industrial Revolution** | Later phase of industrialization marked by steel, chemicals, electricity, and large-scale corporate organization. | AP questions often ask students to distinguish early industrialization from later industrial growth after $$c.1870$$. |\n| **Capitalism / Laissez-faire** | Economic system based on private ownership, competition, and limited government interference. | Essential for explaining the ideas of **Adam Smith**, middle-class values, and debates over state intervention. |\n| **Urbanization** | Rapid growth of cities due to migration from rural areas and industrial job opportunities. | Helps explain overcrowding, disease, class segregation, and reform movements. |\n| **Working Class Conditions** | Long hours, low wages, dangerous factories, child labor, and insecure employment faced by laborers. | A common AP theme linking industrial growth to social unrest, labor movements, and reform legislation. |\n| **Socialism** | Broad critique of capitalism favoring social ownership or stronger protection for workers. | Important for comparing **utopian socialism**, **Marxism**, and later reform-oriented socialism. |\n| **Marxism** | Theory developed by **Karl Marx** and **Friedrich Engels** arguing that history is driven by class struggle and that capitalism would collapse. | Frequently appears in stimulus-based questions about ideology, class conflict, and revolutionary politics. |\n| **Labor Unions and Reform** | Organized worker movements seeking higher wages, safer conditions, and political rights; also state reforms such as factory laws. | Shows how workers and governments responded to industrial society without always embracing revolution. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Industrialization and Its Effects in Europe\n    1815 : Post-Napoleonic Europe\n    1820s-1840s : Expansion of factories, coal, iron, and railroads\n    1830s-1850s : Urban growth and worsening working-class conditions\n    1848 : Marx and Engels publish **Communist Manifesto**\n    1850s-1870s : Labor organization expands; states begin limited reforms\n    1870s-1914 : Second Industrial Revolution: steel, chemicals, electricity\n    1880s-1914 : Mass politics, socialist parties, trade unions, welfare measures\n```\n\n### Cause-and-Effect Chain\n1. **Technological innovation** and access to coal and capital increased production.\n2. Increased production encouraged the growth of **factories** and **railroads**.\n3. Factories drew workers into cities, accelerating **urbanization**.\n4. Urban growth produced harsh living and working conditions for the **working class**.\n5. These conditions inspired critiques of industrial capitalism, including **socialism** and **Marxism**.\n6. Governments, unions, and political parties responded with **reform**, regulation, or revolutionary rhetoric.\n7. By the late nineteenth century, industrialization strengthened European states but also intensified class conflict and mass politics.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Laissez-faire** | The principle that the economy functions best with minimal government interference. |\n| **Capitalism** | An economic system based on **private property**, profit motive, and market competition. |\n| **Socialism** | A set of ideas arguing that society or the state should play a greater role in controlling property or production to reduce inequality. |\n| **Marxism** | A form of socialism asserting that **class struggle** drives history and that capitalism contains the seeds of its own collapse. |\n| **Proletariat** | In Marxist language, the industrial **working class** who sell their labor for wages. |\n| **Bourgeoisie** | In Marxist language, the **middle class / capitalist class** who own the means of production. |\n| **Means of Production** | The land, factories, machines, and capital used to produce goods. |\n| **Class Consciousness** | Awareness by workers of their shared social and economic interests. |\n| **Utopian Socialism** | Early socialist thought that promoted cooperative communities and reform without relying on violent revolution. |\n| **Revisionist / Evolutionary Socialism** | The belief, associated with figures like **Eduard Bernstein**, that socialism could be achieved through gradual democratic reform rather than revolution. |\n\n## Connections & Comparisons\n\n| **Topic** | **Capitalism / Laissez-faire** | **Socialism / Marxism** | **AP Significance** |\n|---|---|---|---|\n| **View of property** | Private property is central and desirable. | Property, especially productive property, should be socially controlled or redistributed. | Useful for ideological comparison questions. |\n| **View of competition** | Competition drives progress and efficiency. | Competition produces exploitation and inequality. | Helps explain reform debates and class conflict. |\n| **Role of government** | Limited role in the economy. | Greater intervention or collective control is necessary. | Connects to nineteenth-century reform legislation. |\n| **View of workers** | Wage labor is part of market exchange. | Workers are exploited under capitalism. | Common theme in labor and social history questions. |\n| **Historical outcome expected** | Economic growth and prosperity. | Revolution or major restructuring of society. | Important for comparing liberal and socialist worldviews. |\n\n```mermaid\nflowchart LR\n    A[\"Industrialization\"] --> B[\"Urbanization\"]\n    B --> C[\"Poor housing, disease, overcrowding\"]\n    A --> D[\"Factory labor discipline\"]\n    D --> E[\"Low wages, long hours, child labor\"]\n    C --> F[\"Social criticism and reform\"]\n    E --> F\n    F --> G[\"Trade unions, socialism, state intervention\"]\n```\n\n## Common AP Exam Traps\n\n- **Do not treat industrialization as uniform across Europe.** **Britain** industrialized first; areas of **France**, **Belgium**, and **Germany** followed at different speeds.\n- **Do not equate all socialism with Marxism.** **Utopian socialists**, trade unionists, and revisionists often rejected violent revolution.\n- **Do not assume governments always opposed reform.** By the late nineteenth century, many states passed **factory laws**, public health measures, and social insurance programs.\n- **Do not focus only on economics.** AP questions often connect industrialization to **gender roles**, **family life**, **politics**, and **urban society**.\n- **Do not confuse the First and Second Industrial Revolutions.** Early industrialization centered on **textiles, coal, iron, and steam**; later industrialization emphasized **steel, chemicals, and electricity**.\n\n## Quick Review Checklist\n\n- [ ] Explain why **Britain** industrialized before most of continental Europe.\n- [ ] Describe how **factory production** changed labor and daily life compared with preindustrial systems.\n- [ ] Identify the major social effects of **urbanization** in the nineteenth century.\n- [ ] Compare **capitalism**, **socialism**, and **Marxism** clearly and accurately.\n- [ ] Explain how industrialization created new tensions between the **bourgeoisie** and **proletariat**.\n- [ ] Describe typical **working-class conditions** and why they led to reform movements.\n- [ ] Distinguish the **First Industrial Revolution** from the **Second Industrial Revolution**.\n- [ ] Analyze how states, unions, and political parties responded to industrial society before $$1914$$.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Second Industrial Revolution",
+              "definition": "A later phase of rapid economic development in the late nineteenth century marked by steel, chemicals, electricity, and new forms of large-scale corporate organization."
+            },
+            {
+              "term": "Factory system",
+              "definition": "A method of production that concentrated laborers and machinery in a single site, increasing output through mechanization, supervision, and division of labor."
+            },
+            {
+              "term": "Railroads",
+              "definition": "A transportation network that integrated national markets, lowered shipping costs, stimulated demand for coal and iron, and accelerated economic growth across Europe."
+            },
+            {
+              "term": "Free-market capitalism",
+              "definition": "An economic system in which private individuals and firms control production and exchange with limited state interference, emphasizing competition and profit."
+            },
+            {
+              "term": "Urbanization",
+              "definition": "The large-scale movement of population into towns and cities, often driven by industrial employment and accompanied by major social and environmental change."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly helps explain why continental European industrialization accelerated after 1850?",
+              "options": [
+                "The spread of rail networks and investment banks",
+                "The restoration of serfdom in eastern Europe",
+                "The decline of coal production in Britain",
+                "The abolition of tariffs by the Congress of Vienna"
+              ],
+              "correctAnswer": "The spread of rail networks and investment banks",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Compared with the first phase of industrialization, the Second Industrial Revolution was most clearly characterized by",
+              "options": [
+                "a return to artisanal production and guild regulation",
+                "the growth of steel, chemical, and electrical industries",
+                "the end of urban growth and factory labor",
+                "the disappearance of class conflict in industrial cities"
+              ],
+              "correctAnswer": "the growth of steel, chemical, and electrical industries",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In the nineteenth century, many liberals supported ______ because they believed competition and private property would promote prosperity and limit state power.",
+              "options": [
+                "free-market capitalism",
+                "mercantilism",
+                "seigneurialism",
+                "collectivization"
+              ],
+              "correctAnswer": "free-market capitalism",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The expansion of ______ transformed European economies by linking regions, encouraging heavy industry, and facilitating migration to industrial centers.",
+              "options": [
+                "railroads",
+                "monasteries",
+                "guild courts",
+                "manorial dues"
+              ],
+              "correctAnswer": "railroads",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Socialism",
+              "definition": "A broad body of thought advocating greater economic equality and collective or public responsibility for production, often in response to industrial exploitation."
+            },
+            {
+              "term": "Marxism",
+              "definition": "A theory of history and society arguing that class struggle drives change and that industrial workers would eventually overthrow the bourgeois order."
+            },
+            {
+              "term": "Proletariat",
+              "definition": "The wage-earning industrial working class whose labor was sold for income and whose lack of ownership made them central to critiques of modern capitalism."
+            },
+            {
+              "term": "Trade unions",
+              "definition": "Worker organizations formed to bargain for higher wages, shorter hours, and safer conditions, often using strikes and collective action."
+            },
+            {
+              "term": "Bismarckian social legislation",
+              "definition": "State-sponsored measures in late nineteenth-century Germany that provided insurance and welfare protections in order to reduce social unrest and undercut radical politics."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "How did Marx and Engels most fundamentally differ from many early utopian socialists?",
+              "options": [
+                "They rejected industrialization as inherently illegitimate",
+                "They argued that class conflict was the engine of historical change",
+                "They favored restoring guilds and local privileges",
+                "They insisted that monarchy was necessary to protect workers"
+              ],
+              "correctAnswer": "They argued that class conflict was the engine of historical change",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which policy best illustrates a conservative government's effort to respond to the social effects of industrialization without endorsing socialism?",
+              "options": [
+                "The legalization of peasant serfdom",
+                "The abolition of all tariffs on imported grain",
+                "Bismarck's introduction of health and accident insurance",
+                "The establishment of universal male suffrage across Europe by 1848"
+              ],
+              "correctAnswer": "Bismarck's introduction of health and accident insurance",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to Marxist analysis, the ______ owned the means of production, while industrial workers sold their labor for wages.",
+              "options": [
+                "bourgeoisie",
+                "clergy",
+                "peasantry",
+                "aristocracy"
+              ],
+              "correctAnswer": "bourgeoisie",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Nineteenth-century ______ sought to improve wages and working conditions through collective bargaining, strikes, and political pressure.",
+              "options": [
+                "trade unions",
+                "monastic orders",
+                "noble estates",
+                "dynastic alliances"
+              ],
+              "correctAnswer": "trade unions",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "unitName": "19th-Century Perspectives and Political Developments (c.1815–c.1914)",
+      "description": "Nationalism, German and Italian unification, Revolutions of 1848, and imperialism.",
+      "note": "# Unit 7: 19th-Century Perspectives and Political Developments (c.1815–c.1914)\n\n## Overview\nThis unit examines how **nationalism**, **liberalism**, **conservatism**, and later **mass politics** reshaped Europe after the **Congress of Vienna**. For the AP exam, it is essential because it connects major political upheavals—especially the **Revolutions of 1848**, **Italian and German unification**, and **New Imperialism**—to broader themes of state-building, identity, and power.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Congress of Vienna / Concert of Europe** | Post-Napoleonic settlement led by conservative statesmen such as **Metternich** to restore order and contain revolution. | Helps explain the conservative backlash after 1815 and the political context that later fueled revolutions and nationalism. |\n| **Nationalism** | The belief that people sharing language, culture, or history should form a sovereign political community. | Central to understanding the breakup of old empires, the push for unification, and tensions within **multiethnic empires**. |\n| **Liberalism** | Political ideology favoring constitutional government, civil liberties, and often limited monarchy or representative institutions. | Frequently appears as a cause of revolt and reform; students should distinguish it from socialism and conservatism. |\n| **Revolutions of 1848** | A wave of uprisings across Europe demanding constitutions, representation, nationalism, and social reform. | AP questions often ask why these revolutions spread so widely yet mostly failed in the short term. |\n| **Realpolitik** | Practical, power-centered politics associated especially with **Otto von Bismarck**. | Crucial for explaining how German unification happened through diplomacy and war rather than idealist liberal revolution. |\n| **Italian Unification** | The process by which fragmented Italian states were united through the efforts of **Cavour**, **Garibaldi**, and **Piedmont-Sardinia**. | Illustrates the interaction of nationalism, foreign intervention, and political compromise. |\n| **German Unification** | The creation of a unified German Empire under Prussian leadership in 1871 after wars against Denmark, Austria, and France. | A major turning point in the European balance of power and a common AP comparison with Italian unification. |\n| **New Imperialism** | Late 19th-century expansion of European empires into Africa and Asia for economic, strategic, and ideological reasons. | Often tested through causes, justifications, and consequences, especially connections to nationalism, industrialization, and global rivalry. |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Political Developments in Europe, 1815-1914\n    1815 : Congress of Vienna restores conservative order\n    1820s-1830s : Nationalist and liberal revolts challenge restoration\n    1848 : Revolutions spread across Europe\n    1850s-1860s : Italian unification advances under Cavour and Garibaldi\n    1860s-1871 : Bismarck uses Realpolitik and war to unify Germany\n    1871 : German Empire proclaimed at Versailles\n    1870s-1900s : Mass politics expands; states respond to nationalism and socialism\n    1880s-1914 : New Imperialism intensifies European rivalry overseas\n```\n\n### Main historical pattern\n1. **Conservative restoration** after Napoleon attempted to preserve dynastic legitimacy.\n2. **Liberal and nationalist pressures** steadily weakened that settlement.\n3. The **Revolutions of 1848** exposed the fragility of the old order but did not immediately create stable democratic states.\n4. In the later 19th century, **state leaders co-opted nationalism** to strengthen monarchies and build unified nation-states.\n5. By the late 1800s, nationalism extended outward into **imperial competition**, contributing to international tensions before World War I.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Principle** | **What You Must Know** |\n|---|---|\n| **Conservatism after 1815** | Favored **legitimacy**, **tradition**, monarchy, and social stability; associated with **Metternich** and the suppression of revolution. |\n| **Liberalism** | Supported constitutions, legal equality, representative government, and protection of property; often strongest among the **middle class**. |\n| **Nationalism** | Could be both **liberating** and **destabilizing**: it unified peoples in Italy and Germany but threatened empires like Austria and the Ottoman Empire. |\n| **Realpolitik** | Political success is pursued through practical calculation, alliance-building, and military force rather than ideology alone. |\n| **Balance of Power** | European diplomacy sought to prevent any one state from dominating the continent; this principle shaped both the Vienna settlement and later alliances. |\n| **Self-Determination vs. Empire** | National self-rule was a powerful ideal, but many European states denied it to subject peoples at home and abroad. |\n| **Imperial Justifications** | European powers defended empire through claims of economic necessity, strategic advantage, nationalism, and the so-called **civilizing mission**. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Italian Unification** | **German Unification** | **AP Significance** |\n|---|---|---|---|\n| **Leading state** | **Piedmont-Sardinia** | **Prussia** | Know which state led each movement. |\n| **Key leaders** | **Cavour**, **Garibaldi**, **Victor Emmanuel II** | **Bismarck**, **Wilhelm I** | AP often asks students to match leaders to methods and outcomes. |\n| **Main method** | Diplomacy, war with Austrian influence, popular nationalist movements in the south | Realpolitik, military reform, three calculated wars | Shows that nationalism often succeeded through conservative state power, not purely liberal revolution. |\n| **Role of liberalism** | Present, but compromised by monarchy and elite control | Subordinate to Prussian monarchy and military interests | Important for explaining why unification did not equal democracy. |\n| **Outcome** | Unified kingdom, but with regional divisions and limited suffrage | Powerful German Empire dominated by Prussia | Helps explain later political instability and the new European power balance. |\n\n```mermaid\nflowchart LR\n    A[\"Conservative Order (1815)\"] --> B[\"Liberal & Nationalist Discontent\"]\n    B --> C[\"Revolutions of 1848\"]\n    C --> D[\"Short-Term Failure of Revolts\"]\n    D --> E[\"Nationalism Adopted by States\"]\n    E --> F[\"Italian & German Unification\"]\n    F --> G[\"Stronger Nation-States\"]\n    G --> H[\"Imperial Rivalry and Tensions\"]\n```\n\n## Common AP Exam Traps\n\n- **Do not confuse liberalism with democracy or socialism.** In the 19th century, many liberals favored constitutional government and property rights but not universal male suffrage.\n- **Do not treat the Revolutions of 1848 as total failures.** They failed immediately in many places, but they revealed the enduring strength of nationalism and liberal reform.\n- **Do not assume nationalism was always progressive.** It could support self-rule, but it also strengthened authoritarian states and justified imperial expansion.\n- **Do not over-credit popular revolution for unification.** In both **Italy** and **Germany**, elite diplomacy, monarchy, and war were decisive.\n- **Do not separate imperialism from European politics.** Overseas empire was tied to industrial competition, nationalism, and strategic rivalry within Europe.\n\n## Quick Review Checklist\n\n- [ ] Explain the goals of the **Congress of Vienna** and the **Concert of Europe**.\n- [ ] Define **liberalism**, **conservatism**, **nationalism**, and **Realpolitik**.\n- [ ] Describe the major causes and limited immediate success of the **Revolutions of 1848**.\n- [ ] Compare the processes of **Italian** and **German unification**.\n- [ ] Identify the roles of **Cavour**, **Garibaldi**, **Bismarck**, and **Metternich**.\n- [ ] Explain how **nationalism** both unified states and threatened **multiethnic empires**.\n- [ ] Describe the major causes and justifications of **New Imperialism**.\n- [ ] Connect 19th-century political developments to the changing **balance of power** in Europe.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Concert of Europe",
+              "definition": "A post-Napoleonic diplomatic system in which the great powers met to preserve the balance of power and suppress revolutionary threats to conservative order."
+            },
+            {
+              "term": "Congress of Vienna",
+              "definition": "The 1814–1815 settlement that restored many traditional rulers, redrew boundaries to contain France, and aimed to create long-term continental stability after the Napoleonic Wars."
+            },
+            {
+              "term": "Liberalism",
+              "definition": "A political ideology that emphasized constitutional government, civil liberties, legal equality, and broader political participation, often tied to free-market principles in the 19th century."
+            },
+            {
+              "term": "Nationalism",
+              "definition": "A doctrine holding that people sharing a common language, culture, or history should constitute a politically sovereign community, often challenging multinational empires."
+            },
+            {
+              "term": "Revolutions of 1848",
+              "definition": "A wave of uprisings across Europe driven by demands for constitutions, national self-determination, and social reform; most failed in the short term but weakened conservative confidence."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development best explains why the Revolutions of 1848 ultimately failed in many parts of Europe?",
+              "options": [
+                "Revolutionaries were deeply divided over social and political goals.",
+                "Industrial workers uniformly supported conservative monarchies.",
+                "Peasant populations generally demanded a return to serfdom.",
+                "Great Britain intervened militarily on behalf of all continental rebels."
+              ],
+              "correctAnswer": "Revolutionaries were deeply divided over social and political goals.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The Congress of Vienna most clearly reflected which broader post-1815 objective?",
+              "options": [
+                "Promoting democratic nationalism across Europe",
+                "Restoring a balance of power and conservative legitimacy",
+                "Encouraging immediate Italian and German unification",
+                "Dismantling the influence of Austria and Russia"
+              ],
+              "correctAnswer": "Restoring a balance of power and conservative legitimacy",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Prince Metternich sought to preserve conservative order in Europe through the system known as the ______.",
+              "options": [
+                "Concert of Europe",
+                "Zollverein",
+                "Frankfurt Assembly",
+                "Young Italy"
+              ],
+              "correctAnswer": "Concert of Europe",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The 1848 meeting that attempted to create a unified constitutional German nation-state was the ______.",
+              "options": [
+                "Frankfurt Assembly",
+                "Congress of Vienna",
+                "Dual Monarchy",
+                "Continental System"
+              ],
+              "correctAnswer": "Frankfurt Assembly",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Realpolitik",
+              "definition": "A practical, power-oriented approach to statecraft associated with leaders who pursued national goals through calculation, diplomacy, and war rather than ideology alone."
+            },
+            {
+              "term": "Otto von Bismarck",
+              "definition": "The Prussian statesman who engineered German unification through limited wars, diplomatic isolation of enemies, and the strengthening of Prussian leadership over other German states."
+            },
+            {
+              "term": "Risorgimento",
+              "definition": "The 19th-century movement for political consolidation of the Italian peninsula, achieved through a combination of diplomacy, popular activism, and war."
+            },
+            {
+              "term": "Dual Monarchy",
+              "definition": "The 1867 arrangement that created Austria-Hungary, granting Hungary separate governmental institutions while maintaining a shared monarch and joint foreign and military policy."
+            },
+            {
+              "term": "New Imperialism",
+              "definition": "The late 19th-century expansion by European powers into Africa and Asia, driven by strategic rivalry, economic interests, and ideologies of racial and cultural superiority."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which factor most directly contributed to the success of German unification under Prussian leadership?",
+              "options": [
+                "The Frankfurt Assembly's acceptance by the Austrian emperor",
+                "Bismarck's use of war and diplomacy to isolate rivals",
+                "A continent-wide liberal alliance against monarchy",
+                "Immediate popular support from all ethnic minorities in Central Europe"
+              ],
+              "correctAnswer": "Bismarck's use of war and diplomacy to isolate rivals",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A major difference between the unifications of Italy and Germany was that",
+              "options": [
+                "Italian unification relied entirely on peasant revolution, whereas German unification was fully democratic.",
+                "German unification was led primarily by Prussia's monarchy and ministers, whereas Italian unification combined Piedmont-Sardinian diplomacy with popular nationalist activism.",
+                "Italy unified before the defeat of Napoleon, whereas Germany unified during the Congress of Vienna.",
+                "German unification abolished monarchy, whereas Italian unification strengthened Habsburg control."
+              ],
+              "correctAnswer": "German unification was led primarily by Prussia's monarchy and ministers, whereas Italian unification combined Piedmont-Sardinian diplomacy with popular nationalist activism.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The policy approach associated with Bismarck that emphasized pragmatic power politics over ideology is called ______.",
+              "options": [
+                "Realpolitik",
+                "romanticism",
+                "utopian socialism",
+                "collective security"
+              ],
+              "correctAnswer": "Realpolitik",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The late 19th-century European scramble for overseas colonies is most commonly described as ______.",
+              "options": [
+                "New Imperialism",
+                "mercantilism",
+                "containment",
+                "appeasement"
+              ],
+              "correctAnswer": "New Imperialism",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 8,
+      "unitName": "20th-Century Global Conflicts (c.1914–present)",
+      "description": "World War I causes and outcomes, Russian Revolution, Great Depression, fascism, and World War II.",
+      "note": "# Unit 8: 20th-Century Global Conflicts (c.1914–present)\n\n## Overview\nThis unit examines how **industrialized warfare**, **revolution**, **economic crisis**, and **authoritarian ideologies** transformed Europe and the wider world from **World War I** through **World War II** and beyond. For the AP exam, it is especially important because it connects **causation**, **continuity and change over time**, and **comparison** across major events such as the **Russian Revolution**, the **Great Depression**, **fascism**, and the global consequences of total war.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Causes of World War I** | The interaction of **militarism**, **alliances**, **imperial rivalry**, **nationalism**, and the July Crisis after the assassination of **Archduke Franz Ferdinand** | AP questions often ask students to distinguish **long-term structural causes** from the **immediate trigger** |\n| **Total War** | A form of warfare in which states mobilize **entire societies**, economies, and civilian populations for war | Helps explain why **WWI** and **WWII** had such deep social, political, and economic consequences |\n| **Russian Revolution** | The collapse of **tsarism** in 1917 and the rise of the **Bolsheviks** under **Lenin** | Central for understanding challenges to **liberal democracy**, class conflict, and the emergence of **communism** |\n| **Treaty of Versailles** | The 1919 settlement that imposed territorial losses, reparations, and war guilt on Germany | Frequently tested as a cause of later instability and a factor in the rise of **extremism** |\n| **Great Depression** | A worldwide economic crisis beginning in 1929, marked by unemployment, falling production, and political destabilization | AP emphasis often falls on how economic collapse weakened faith in **liberal capitalism** and strengthened radical movements |\n| **Fascism and Nazism** | Authoritarian, ultranationalist movements rejecting liberalism, socialism, and parliamentary democracy; **Nazism** added racial ideology and antisemitism | Essential for comparing dictatorships and explaining the origins of **World War II** and the **Holocaust** |\n| **Appeasement and Aggression** | European democracies’ efforts to avoid war by conceding to **Hitler**, alongside expansion by Germany, Italy, and Japan | Useful in evaluating why diplomacy failed in the 1930s |\n| **World War II and the Holocaust** | Global war from 1939–1945 involving mass destruction, genocide, resistance, and the defeat of fascist regimes | A major AP theme in state power, ideology, technology, and the consequences of modern conflict |\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Europe from World War I to World War II\n    1914 : Assassination of Franz Ferdinand\n         : Outbreak of World War I\n    1917 : Russian Revolutions\n         : Bolsheviks seize power\n    1918 : Armistice ends fighting\n    1919 : Treaty of Versailles\n         : League of Nations created\n    1922 : Mussolini comes to power in Italy\n    1929 : Great Depression begins\n    1933 : Hitler becomes chancellor\n    1936 : Remilitarization of Rhineland\n         : Spanish Civil War intensifies ideological conflict\n    1938 : Anschluss and Munich Agreement\n    1939 : Germany invades Poland\n         : World War II begins in Europe\n    1941 : German invasion of USSR\n         : Holocaust escalates\n    1945 : Allied victory\n         : Europe devastated and reshaped\n```\n\n### Cause-and-effect chain\n1. **Pre-1914 tensions** in alliances, militarization, imperial rivalry, and nationalism made Europe unstable.  \n2. The **July Crisis** turned a regional conflict into **World War I**.  \n3. The strain of war contributed to **revolution**, especially in **Russia**.  \n4. The war’s settlement, especially the **Treaty of Versailles**, left political resentment and economic weakness.  \n5. The **Great Depression** intensified distrust of parliamentary governments.  \n6. **Fascist** and **Nazi** regimes used nationalism, propaganda, and repression to gain power.  \n7. Failed collective security and **appeasement** encouraged aggression.  \n8. These conditions culminated in **World War II**, genocide, and the postwar restructuring of Europe.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **MAIN as a WWI cause framework** | **Militarism, Alliances, Imperialism, Nationalism** summarize the major long-term causes of **World War I** |\n| **Immediate cause vs. long-term causes** | The assassination of **Franz Ferdinand** was the **trigger**, not the sole cause of the war |\n| **Total war** | Modern states mobilized **economies**, **labor**, **propaganda**, and **civilian life** for military victory |\n| **War communism vs. NEP** | **War Communism** involved central control during the Russian Civil War; the **New Economic Policy** restored limited market activity to stabilize the Soviet economy |\n| **Fascism** | Typically emphasizes **authoritarian leadership**, **ultranationalism**, **militarism**, **mass politics**, and suppression of opposition |\n| **Nazism** | A form of fascism defined by **racial hierarchy**, **antisemitism**, and the goal of territorial expansion for **Lebensraum** |\n| **Appeasement** | A diplomatic strategy of making concessions to aggressive powers to avoid conflict; AP questions often ask why it failed |\n| **Collective security** | The idea that states act together to stop aggression, associated with the **League of Nations**, which proved weak in the interwar period |\n\n## Connections & Comparisons\n\n| **Comparison** | **World War I** | **World War II** | **AP Significance** |\n|---|---|---|---|\n| **Origins** | Triggered by alliance systems and the July Crisis | Driven by revisionism, fascist aggression, and failed appeasement | Shows different immediate causes but overlapping roots in nationalism and power politics |\n| **Warfare** | **Trench warfare**, attrition, stalemate on the Western Front | More mobile warfare early on; strategic bombing and genocide expanded war’s reach | Helps compare changing military tactics and the growth of total war |\n| **Political consequences** | Collapse of empires: **Romanov**, **Habsburg**, **Ottoman**, **Hohenzollern** | Destruction of fascist regimes; rise of **U.S.** and **USSR** as superpowers | Important for continuity and change in European power structures |\n| **Impact on civilians** | Rationing, propaganda, mass casualties, displacement | Even greater civilian targeting, Holocaust, wider destruction | AP often emphasizes how modern war erased the line between front and home front |\n\n### Dictatorship comparison\n\n| **Regime** | **Core Ideology** | **Economic Approach** | **Use of Repression** |\n|---|---|---|---|\n| **Stalinist USSR** | **Communism** in theory; centralized party-state in practice | State-directed planning and collectivization | Purges, censorship, secret police |\n| **Fascist Italy** | National unity, authoritarianism, anti-liberalism | Corporate state rhetoric; cooperation with elites | Violence, censorship, one-party rule |\n| **Nazi Germany** | Fascism plus racial ideology and antisemitism | Rearmament, state direction, private property under regime control | Terror, concentration camps, genocide |\n\n## Common AP Exam Traps\n- Confusing the **assassination of Franz Ferdinand** with the full set of causes of **World War I**; it was the spark, not the entire explanation.\n- Treating **fascism**, **Nazism**, and **communism** as identical. They were all authoritarian in practice, but their ideologies and goals differed sharply.\n- Assuming the **Treaty of Versailles** alone caused **World War II**. It mattered, but so did the **Great Depression**, weak collective security, and fascist expansion.\n- Forgetting that the **Russian Revolution** had **two stages** in 1917: the fall of the tsar in February/March and the **Bolshevik Revolution** in October/November.\n- Describing **appeasement** only as cowardice; on the AP exam, stronger answers note fear of another war, military unpreparedness, and the memory of WWI.\n\n## Quick Review Checklist\n- [ ] Explain the **long-term** and **short-term** causes of **World War I**\n- [ ] Describe how **total war** changed civilian life and state power\n- [ ] Distinguish between the **February/March Revolution** and the **October/November Revolution** in Russia\n- [ ] Explain how the **Treaty of Versailles** contributed to interwar instability\n- [ ] Analyze how the **Great Depression** undermined confidence in liberal democracy\n- [ ] Compare **fascism**, **Nazism**, and **Stalinism**\n- [ ] Explain why **appeasement** and the **League of Nations** failed to stop aggression\n- [ ] Describe the major political and human consequences of **World War II**, including the **Holocaust**",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Militarism",
+              "definition": "A pre-1914 political and cultural emphasis on building armed forces and planning for war, which increased tensions among major powers and made diplomatic crises more likely to escalate."
+            },
+            {
+              "term": "Alliance System",
+              "definition": "A network of formal agreements among European powers that turned a regional dispute in the Balkans into a continent-wide conflict by drawing in multiple states."
+            },
+            {
+              "term": "Schlieffen Plan",
+              "definition": "Germany’s strategy for avoiding a prolonged two-front war by rapidly defeating France through a violation of Belgian neutrality before turning east against Russia."
+            },
+            {
+              "term": "Bolsheviks",
+              "definition": "The revolutionary faction led by Vladimir Lenin that seized power in late 1917 and established a regime based on centralized party rule and socialist transformation."
+            },
+            {
+              "term": "Treaty of Versailles",
+              "definition": "The 1919 peace settlement that imposed territorial losses, military restrictions, and reparations on Germany while redrawing parts of Europe and creating new states."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which factor most directly helped transform the assassination of Archduke Franz Ferdinand into a general European war in 1914?",
+              "options": [
+                "The alliance system that committed major powers to support their partners",
+                "The immediate collapse of the Ottoman Empire",
+                "The success of collective security through the League of Nations",
+                "The refusal of Russia to mobilize its army"
+              ],
+              "correctAnswer": "The alliance system that committed major powers to support their partners",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which development most strongly contributed to the success of the Bolsheviks in Russia in 1917?",
+              "options": [
+                "Russia’s continued military failures and social unrest during World War I",
+                "The rapid success of the Provisional Government’s land reform program",
+                "Strong support from the Russian aristocracy for socialist revolution",
+                "Immediate foreign recognition of Lenin’s government by Britain and France"
+              ],
+              "correctAnswer": "Russia’s continued military failures and social unrest during World War I",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Germany’s decision to implement the ______ contributed to Britain’s entry into World War I because it involved invading Belgium.",
+              "options": [
+                "Schlieffen Plan",
+                "Five-Year Plan",
+                "Dawes Plan",
+                "Marshall Plan"
+              ],
+              "correctAnswer": "Schlieffen Plan",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The peace settlement that many historians argue fostered resentment in Germany after World War I was the ______.",
+              "options": [
+                "Congress of Vienna",
+                "Treaty of Brest-Litovsk",
+                "Treaty of Versailles",
+                "Locarno Pact"
+              ],
+              "correctAnswer": "Treaty of Versailles",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Great Depression",
+              "definition": "A severe worldwide economic downturn beginning in 1929 that brought mass unemployment, weakened democratic governments, and encouraged political extremism."
+            },
+            {
+              "term": "Fascism",
+              "definition": "An authoritarian political ideology characterized by dictatorial leadership, aggressive nationalism, suppression of opposition, and subordination of individual rights to the state."
+            },
+            {
+              "term": "Appeasement",
+              "definition": "A diplomatic policy of conceding to an aggressive power’s demands in hopes of avoiding war, most famously associated with Britain and France in the 1930s."
+            },
+            {
+              "term": "Blitzkrieg",
+              "definition": "A method of rapid warfare using coordinated air power, tanks, and motorized forces to achieve quick breakthroughs and disorient enemy defenses."
+            },
+            {
+              "term": "Holocaust",
+              "definition": "The systematic, state-sponsored persecution and mass murder of Jews by Nazi Germany, alongside the murder of millions of other targeted groups."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which condition most directly aided the rise of extremist movements in interwar Europe?",
+              "options": [
+                "Economic instability and mass unemployment after 1929",
+                "The widespread success of parliamentary coalitions in the 1930s",
+                "The immediate establishment of stable democracies in eastern Europe",
+                "Rapid recovery through unrestricted international trade"
+              ],
+              "correctAnswer": "Economic instability and mass unemployment after 1929",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The Munich Agreement of 1938 is best understood as an example of which policy?",
+              "options": [
+                "Containment",
+                "Appeasement",
+                "Collectivization",
+                "Détente"
+              ],
+              "correctAnswer": "Appeasement",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The Nazi military strategy of rapid, coordinated attacks designed to overwhelm opponents is known as ______.",
+              "options": [
+                "attrition",
+                "blitzkrieg",
+                "deterrence",
+                "guerrilla warfare"
+              ],
+              "correctAnswer": "blitzkrieg",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The mass murder of European Jews by Nazi Germany during World War II is known as the ______.",
+              "options": [
+                "Cultural Revolution",
+                "Final Solution",
+                "Holocaust",
+                "Long March"
+              ],
+              "correctAnswer": "Holocaust",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 9,
+      "unitName": "Cold War and Contemporary Europe (c.1914–present)",
+      "description": "Cold War in Europe, decolonization, European integration (EU), fall of the Berlin Wall, and contemporary challenges.",
+      "note": "# Unit 9: Cold War and Contemporary Europe (c.1914–present)\n\n## Overview\nThis unit examines how **Europe was reshaped after World War II** through the **Cold War**, **decolonization**, **economic recovery**, and the gradual creation of a more integrated Europe through institutions that became the **European Union**. It also covers the collapse of **communist regimes**, the **fall of the Berlin Wall**, and the major political, economic, and social challenges facing contemporary Europe.\n\nFor the AP exam, this unit matters because it connects **ideological conflict**, **state rebuilding**, **nationalism**, and **globalization** across the second half of the twentieth century and into the present.\n\n---\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Cold War division of Europe** | The post-1945 split between the **Soviet-dominated East** and the **U.S.-aligned West** | Helps explain political repression in Eastern Europe, military alliances, and the long-term division of Germany and Europe |\n| **Marshall Plan and postwar recovery** | U.S. economic aid to rebuild Western Europe after World War II | Often used as evidence of how economics shaped political allegiance and strengthened liberal democracy in Western Europe |\n| **NATO and the Warsaw Pact** | Rival military alliances representing Western and Soviet blocs | Important for showing how ideological conflict became institutionalized in Europe |\n| **Decolonization** | The collapse of European overseas empires after 1945 | Demonstrates Europe’s declining global dominance and connects postwar Europe to migration, identity, and economic change |\n| **European integration** | The movement from economic cooperation to political union through institutions such as the **EEC** and **EU** | A frequent AP theme: states sought peace, prosperity, and stability through supranational cooperation |\n| **Détente and renewed tensions** | Periods of reduced Cold War hostility followed by renewed conflict | Useful for explaining that the Cold War was not constant in intensity and evolved over time |\n| **Fall of communism in Eastern Europe** | The weakening and collapse of Soviet-backed regimes, especially from **1989–1991** | Central turning point that explains German reunification, the end of the Cold War, and new European political realities |\n| **Contemporary European challenges** | Immigration, ethnic conflict, economic integration, nationalism, and the expansion of the EU | Shows continuity of older tensions and the complexity of Europe after the Cold War |\n\n---\n\n## Core Processes / Relationships\n\n```mermaid\ntimeline\n    title Europe from Cold War Division to Contemporary Integration\n    1945 : End of World War II\n    1947 : Truman Doctrine and Marshall Plan\n    1949 : NATO formed; Germany divided into East and West\n    1955 : Warsaw Pact formed\n    1950s-1960s : Decolonization accelerates\n    1957 : Treaty of Rome creates EEC\n    1960s-1970s : Economic growth and welfare states expand in Western Europe\n    1970s : Détente\n    1980s : Soviet weakness and reform under Gorbachev\n    1989 : Fall of the Berlin Wall\n    1991 : Collapse of the Soviet Union\n    1992 : Maastricht Treaty creates European Union\n    1990s-present : EU expansion, migration debates, nationalism, and economic challenges\n```\n\n### Major historical relationship to remember\n1. **World War II devastation** created pressure for rebuilding and security.\n2. **Superpower rivalry** split Europe into competing ideological blocs.\n3. In Western Europe, **economic recovery** and **democratic stability** encouraged cooperation.\n4. In Eastern Europe, **Soviet control** produced repression, periodic uprisings, and economic stagnation.\n5. The weakening of the Soviet Union allowed **communist collapse** and **German reunification**.\n6. After the Cold War, Europe faced both **greater integration** and **new tensions** over identity, sovereignty, and globalization.\n\n---\n\n## Essential Formulas / Laws / Rules\n\nFor AP European History, there are no mathematical formulas to memorize here, but students must know these key **principles, definitions, and historical rules**:\n\n| **Term / Rule** | **Must-Know Meaning** |\n|---|---|\n| **Containment** | The U.S. policy of limiting the spread of **communism**, especially in Europe after 1945 |\n| **Marshall Plan** | American financial aid designed to rebuild Western European economies and reduce communist appeal |\n| **Iron Curtain** | A term describing the political and ideological boundary dividing **Eastern** and **Western Europe** |\n| **NATO** | Western military alliance formed in **1949** for collective defense |\n| **Warsaw Pact** | Soviet-led military alliance created in **1955** in response to NATO |\n| **Decolonization** | The process by which European colonies gained independence after World War II |\n| **Supranationalism** | Cooperation in which states give some authority to institutions above the national level, as in the **EU** |\n| **Détente** | A period of eased tension between the United States and the Soviet Union |\n| **Glasnost / Perestroika** | **Gorbachev’s** reforms: greater openness and restructuring, which weakened Soviet control |\n| **Maastricht Treaty** | The **1992** treaty that transformed the **EEC** into the **European Union** |\n\n---\n\n## Connections & Comparisons\n\n| **Topic** | **Western Europe** | **Eastern Europe** | **AP Significance** |\n|---|---|---|---|\n| **Postwar politics** | Liberal democracies became stronger | Communist one-party states were imposed or reinforced | Shows the ideological split of Europe |\n| **Economic development** | Benefited from the **Marshall Plan**, consumer growth, and welfare states | Central planning often led to shortages and stagnation | Explains why standards of living diverged |\n| **Military alignment** | **NATO** | **Warsaw Pact** | Institutionalized Cold War conflict |\n| **Relationship to reform** | Greater political pluralism and protest movements | Uprisings in Hungary, Czechoslovakia, and Poland often faced Soviet pressure | Highlights limits of Soviet control and long-term instability |\n| **After 1989** | Expanded influence through the **EU** | Transitioned away from communism with mixed results | Key turning point in modern European history |\n\n### Decolonization vs. European integration\n\n| **Process** | **Main Direction** | **Effect on Europe** |\n|---|---|---|\n| **Decolonization** | Loss of overseas empires | Reduced direct global political control; increased migration from former colonies |\n| **European integration** | Greater cooperation within Europe | Increased economic interdependence and reduced conflict among European states |\n\n---\n\n## Common AP Exam Traps\n\n- **Do not treat all of Europe as politically uniform after 1945.** The AP exam often expects a clear distinction between **Western democratic states** and **Eastern Soviet-influenced states**.\n- **Do not confuse the Marshall Plan with NATO.** The **Marshall Plan** was primarily **economic aid**; **NATO** was a **military alliance**.\n- **Do not present decolonization as separate from European history.** AP questions often connect it to **migration**, **economic change**, and the decline of European global dominance.\n- **Do not oversimplify the fall of communism as caused only by protest movements.** It also depended on **economic weakness**, **Gorbachev’s reforms**, and the Soviet decision not to intervene as before.\n- **Do not assume European integration eliminated nationalism.** The AP exam frequently highlights the persistence of **national identity**, **ethnic conflict**, and **Euroskepticism**.\n\n---\n\n## Quick Review Checklist\n\n- [ ] Explain how **Europe was divided** politically and militarily during the **Cold War**.\n- [ ] Describe the purpose and impact of the **Marshall Plan** in Western Europe.\n- [ ] Compare **NATO** and the **Warsaw Pact**.\n- [ ] Explain why **decolonization** accelerated after **1945** and how it affected Europe.\n- [ ] Describe the goals and development of **European integration**, from the **EEC** to the **EU**.\n- [ ] Explain the causes and significance of the **fall of the Berlin Wall**.\n- [ ] Identify the role of **Gorbachev**, **glasnost**, and **perestroika** in the collapse of Soviet influence in Eastern Europe.\n- [ ] Evaluate major **contemporary challenges** in Europe, including immigration, nationalism, and economic integration.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Containment",
+              "definition": "A foreign policy strategy aimed at limiting the spread of Soviet influence through diplomatic, economic, and military means rather than direct large-scale war between superpowers."
+            },
+            {
+              "term": "Marshall Plan",
+              "definition": "A U.S. program of large-scale economic aid designed to rebuild war-torn Western Europe, strengthen political stability, and reduce the appeal of communism after World War II."
+            },
+            {
+              "term": "NATO",
+              "definition": "A collective defense alliance formed in 1949 by the United States, Canada, and Western European states, declaring that an attack on one member would be treated as an attack on all."
+            },
+            {
+              "term": "Decolonization",
+              "definition": "The process by which overseas empires gave way to independent states, often accelerated after World War II by nationalist movements, economic strain, and changing international pressures."
+            },
+            {
+              "term": "Warsaw Pact",
+              "definition": "A military alliance created in 1955 by the Soviet Union and its Eastern European satellite states in response to Western rearmament and alliance-building."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which development most directly contributed to the division of Europe into rival political and military blocs after World War II?",
+              "options": [
+                "The ideological conflict and strategic rivalry between the United States and the Soviet Union",
+                "The immediate success of pan-European political union after 1945",
+                "The restoration of prewar monarchies across Central and Eastern Europe",
+                "The complete withdrawal of both superpowers from European affairs by 1950"
+              ],
+              "correctAnswer": "The ideological conflict and strategic rivalry between the United States and the Soviet Union",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A major reason many European empires weakened rapidly after 1945 was that",
+              "options": [
+                "European states emerged from World War II economically exhausted and faced stronger colonial nationalist movements",
+                "the League of Nations successfully enforced immediate colonial independence",
+                "colonial populations uniformly sought continued imperial rule for economic reasons",
+                "the Soviet Union took direct control of all overseas colonies held by Western European powers"
+              ],
+              "correctAnswer": "European states emerged from World War II economically exhausted and faced stronger colonial nationalist movements",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The 1948 U.S. initiative that provided economic assistance to rebuild Western Europe and limit communist influence was the ______.",
+              "options": [
+                "Marshall Plan",
+                "Warsaw Pact",
+                "Schuman Plan",
+                "Treaty of Maastricht"
+              ],
+              "correctAnswer": "Marshall Plan",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The military alliance formed by the Soviet Union and its Eastern European allies in 1955 was the ______.",
+              "options": [
+                "European Economic Community",
+                "North Atlantic Treaty Organization",
+                "Warsaw Pact",
+                "Council of Europe"
+              ],
+              "correctAnswer": "Warsaw Pact",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "European Economic Community",
+              "definition": "An organization established by the 1957 Treaty of Rome to promote economic cooperation, reduce trade barriers, and move Western Europe toward greater integration."
+            },
+            {
+              "term": "Maastricht Treaty",
+              "definition": "The 1992 agreement that transformed earlier economic cooperation into a broader political union and laid the groundwork for a common currency and expanded policy coordination."
+            },
+            {
+              "term": "Fall of the Berlin Wall",
+              "definition": "The 1989 opening of the barrier separating East and West Berlin, symbolizing the collapse of communist control in Eastern Europe and the approaching end of the Cold War."
+            },
+            {
+              "term": "Perestroika",
+              "definition": "A reform program initiated in the Soviet Union to restructure the economy and aspects of governance, contributing to weakened central control over Eastern Europe."
+            },
+            {
+              "term": "Yugoslav Wars",
+              "definition": "A series of violent conflicts in the 1990s following the breakup of a multinational Balkan state, marked by ethnic nationalism, mass displacement, and atrocities."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which factor most directly encouraged the collapse of communist regimes in Eastern Europe in 1989?",
+              "options": [
+                "The Soviet leadership's reduced willingness to use force to maintain satellite governments",
+                "A coordinated military invasion of Eastern Europe by NATO",
+                "The immediate economic success of the Comecon system",
+                "The restoration of the Austro-Hungarian Empire"
+              ],
+              "correctAnswer": "The Soviet leadership's reduced willingness to use force to maintain satellite governments",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "European integration after World War II was initially driven most strongly by the desire to",
+              "options": [
+                "prevent future conflict through economic interdependence, especially between France and West Germany",
+                "restore aristocratic privilege across the continent",
+                "replace national governments with a single monarchy",
+                "expand colonial empires through coordinated policy"
+              ],
+              "correctAnswer": "prevent future conflict through economic interdependence, especially between France and West Germany",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The 1992 agreement that created the European Union and advanced plans for monetary union was the ______.",
+              "options": [
+                "Treaty of Versailles",
+                "Treaty of Rome",
+                "Maastricht Treaty",
+                "Helsinki Accords"
+              ],
+              "correctAnswer": "Maastricht Treaty",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The 1989 event that became a powerful symbol of the end of communist rule in Eastern Europe was the ______.",
+              "options": [
+                "construction of the Iron Curtain",
+                "formation of NATO",
+                "fall of the Berlin Wall",
+                "signing of the Yalta Agreement"
+              ],
+              "correctAnswer": "fall of the Berlin Wall",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

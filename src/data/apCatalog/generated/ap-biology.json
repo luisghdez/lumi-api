@@ -1,0 +1,1221 @@
+{
+  "apSubject": "AP Biology",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Chemistry of Life",
+      "description": "Water properties, macromolecule structure, and how chemical properties of biological molecules support life.",
+      "note": "# Unit 1: Chemistry of Life\n\n## Overview\nThis unit introduces the **chemical foundations of biology**, focusing on **water**, **macromolecules**, and the molecular properties that make life possible. On the AP exam, these ideas are essential because students must explain how **structure determines function**, how **chemical interactions** influence biological systems, and how basic chemistry underlies all later topics in the course.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Polarity of water** | Water is a **polar molecule** because oxygen is more electronegative than hydrogen, creating partial charges. | Explains **hydrogen bonding**, solvent properties, and many emergent properties of water often tested in experimental or reasoning questions. |\n| **Hydrogen bonding** | Weak attraction between a partially positive hydrogen and a partially negative atom in another molecule. | Supports **cohesion**, **adhesion**, **surface tension**, and stabilization of biological structures such as **DNA** and **proteins**. |\n| **Properties of water** | Includes **cohesion**, **adhesion**, **high specific heat**, **high heat of vaporization**, and excellent solvent behavior. | Students must connect each property to survival, transport, temperature regulation, and environmental stability. |\n| **Carbon as a backbone** | Carbon forms **4 covalent bonds**, allowing chains, branches, and rings. | Carbon’s versatility explains the diversity of biological molecules and is a recurring example of **structure-function** relationships. |\n| **Monomers and polymers** | Small subunits join to form larger molecules through **dehydration synthesis**; polymers break by **hydrolysis**. | Frequently tested through diagrams or experimental prompts involving synthesis, digestion, and biomolecule assembly. |\n| **Carbohydrates** | Sugars and polysaccharides used for **energy**, **energy storage**, and **structure**. | Students must compare molecules such as **glucose**, **starch**, **glycogen**, and **cellulose** and relate **bond type** to function. |\n| **Lipids** | Hydrophobic molecules including **fats**, **phospholipids**, and **steroids**. | Important for **membrane structure**, **energy storage**, and understanding why nonpolar molecules behave differently in water. |\n| **Proteins and nucleic acids** | Proteins are polymers of **amino acids**; nucleic acids are polymers of **nucleotides**. | Protein structure levels and nucleic acid roles are foundational for later units on enzymes, genetics, and gene expression. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Water polarity\"] --> B[\"Hydrogen bonding\"]\n    B --> C[\"Cohesion between water molecules\"]\n    B --> D[\"Adhesion to other polar surfaces\"]\n    B --> E[\"High specific heat\"]\n    B --> F[\"High heat of vaporization\"]\n    B --> G[\"Excellent solvent for ionic and polar solutes\"]\n    C --> H[\"Surface tension and water transport\"]\n    D --> H\n    E --> I[\"Temperature stability in organisms and ecosystems\"]\n    F --> J[\"Evaporative cooling\"]\n    G --> K[\"Transport of substances and cellular reactions\"]\n```\n\n```mermaid\nflowchart LR\n    A[\"Monomers\"] --> B[\"Dehydration synthesis\"]\n    B --> C[\"Polymers\"]\n    C --> D[\"Hydrolysis\"]\n    D --> A\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Water is polar** | In $$H_2O$$, electrons are shared unequally, making oxygen partially negative and hydrogens partially positive. |\n| **Hydrogen bond** | A **hydrogen bond** is a weak interaction between a partially positive hydrogen and a partially negative electronegative atom. |\n| **Cohesion vs. adhesion** | **Cohesion** = attraction between like molecules; **adhesion** = attraction between different substances. |\n| **Dehydration synthesis** | Builds polymers by removing water: $$\\text{monomer} + \\text{monomer} \\rightarrow \\text{dimer} + H_2O$$ |\n| **Hydrolysis** | Breaks polymers by adding water: $$\\text{polymer} + H_2O \\rightarrow \\text{smaller units}$$ |\n| **Carbohydrate ratio** | Many simple carbohydrates follow an approximate ratio of $$1:2:1$$ for $$C:H:O$$. Example: $$C_6H_{12}O_6$$ |\n| **Saturated vs. unsaturated fats** | **Saturated fatty acids** have no $$C=C$$ double bonds; **unsaturated fatty acids** have one or more $$C=C$$ double bonds, affecting shape and fluidity. |\n| **Protein structure levels** | **Primary** = amino acid sequence; **secondary** = local folding such as alpha helices and beta sheets; **tertiary** = overall 3D shape; **quaternary** = interaction of multiple polypeptides. |\n| **Nucleotide components** | A **nucleotide** contains a **phosphate group**, a **5-carbon sugar**, and a **nitrogenous base**. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Carbohydrates** | **Lipids** | **Proteins** | **Nucleic Acids** |\n|---|---|---|---|---|\n| **Main subunit** | **Monosaccharide** | Usually **glycerol + fatty acids** | **Amino acid** | **Nucleotide** |\n| **Primary functions** | Quick energy, storage, structure | Long-term energy, membranes, signaling | Enzymes, transport, structure, signaling | Store and transmit genetic information |\n| **Key structural feature** | Many hydroxyl groups; often ring-shaped | Mostly nonpolar hydrocarbon regions | Amino group, carboxyl group, variable $$R$$ group | Sugar-phosphate backbone with bases |\n| **Behavior in water** | Often hydrophilic | Mostly hydrophobic | Variable, depends on side chains | Generally polar due to phosphate groups |\n| **Important AP examples** | **Starch**, **glycogen**, **cellulose** | **Triglycerides**, **phospholipids**, **cholesterol** | **Enzymes**, **hemoglobin** | **DNA**, **RNA** |\n\n### Important structure-function links\n- **Starch** and **glycogen** are used for **energy storage** because their glucose subunits can be readily mobilized.\n- **Cellulose** provides **structural support** in plant cell walls because of its specific glycosidic linkages and linear arrangement.\n- **Phospholipids** form bilayers because they are **amphipathic**, with hydrophilic heads and hydrophobic tails.\n- **Protein function** depends on **3D shape**, which depends on bonding interactions among amino acids.\n- The sequence of bases in **DNA** stores information, while complementary pairing helps preserve and transmit that information.\n\n## Common AP Exam Traps\n- Confusing **hydrogen bonds** with **covalent bonds**. Hydrogen bonds are weaker intermolecular or intramolecular attractions, not the bonds that hold $$H_2O$$ together.\n- Saying water is “sticky” without specifying whether the property is **cohesion** or **adhesion**.\n- Assuming all biological molecules are polymers. **Lipids** are large biological molecules, but they are not true polymers made of repeating monomers in the same way as proteins or nucleic acids.\n- Mixing up **dehydration synthesis** and **hydrolysis**. One **removes** water to build molecules; the other **adds** water to break them.\n- Forgetting that **unsaturated fats** have **double bonds**, which create bends and usually increase membrane fluidity.\n\n## Quick Review Checklist\n- [ ] Explain why **water is polar** and how that leads to **hydrogen bonding**.\n- [ ] Describe how water’s properties support life, including **cohesion**, **adhesion**, **specific heat**, and **evaporative cooling**.\n- [ ] Distinguish between **dehydration synthesis** and **hydrolysis** using biological examples.\n- [ ] Identify the **monomers** and major functions of **carbohydrates**, **proteins**, and **nucleic acids**.\n- [ ] Explain why **lipids** are mostly **hydrophobic** and how **phospholipids** contribute to membrane structure.\n- [ ] Compare **starch**, **glycogen**, and **cellulose** in terms of structure and function.\n- [ ] Describe how **amino acid sequence** affects **protein structure and function**.\n- [ ] Connect the **chemical properties** of biological molecules to organismal survival and cell function.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Cohesion",
+              "definition": "The tendency of molecules of the same substance to stick to one another because of intermolecular attractions, contributing to high surface tension and continuous columns in plant xylem."
+            },
+            {
+              "term": "Adhesion",
+              "definition": "The attraction between molecules of different substances, helping water interact with polar surfaces and move through narrow spaces."
+            },
+            {
+              "term": "Hydrogen bond",
+              "definition": "A weak attraction between a partially positive hydrogen atom and a partially negative electronegative atom, important for the behavior of water and biological macromolecules."
+            },
+            {
+              "term": "High specific heat",
+              "definition": "A property in which a substance requires a large input of energy to raise its temperature, allowing stable environmental and internal conditions."
+            },
+            {
+              "term": "Evaporative cooling",
+              "definition": "A process in which the highest-energy molecules leave a liquid as vapor, decreasing the average kinetic energy of the remaining molecules and lowering temperature."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A researcher compares two liquids of equal volume. Liquid A requires substantially more energy than Liquid B to increase its temperature by $$1^\\circ C$$. Which property of Liquid A best explains this result, and why is it biologically important?",
+              "options": [
+                "High specific heat, which moderates temperature changes in organisms and ecosystems",
+                "High heat of vaporization, which allows capillary action in xylem",
+                "Low polarity, which promotes rapid warming in cells",
+                "Low cohesion, which stabilizes aquatic habitats"
+              ],
+              "correctAnswer": "High specific heat, which moderates temperature changes in organisms and ecosystems",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Water rises in a narrow tube partly because water molecules are attracted to the glass and also to one another. Which pair of properties most directly accounts for this movement?",
+              "options": [
+                "Adhesion and cohesion",
+                "Covalent bonding and ionization",
+                "Hydrophobic exclusion and buffering",
+                "High kinetic energy and low density"
+              ],
+              "correctAnswer": "Adhesion and cohesion",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Because water molecules can form many intermolecular attractions, water has a high heat of vaporization. As a result, ______ can help organisms lose heat when water evaporates from body surfaces.",
+              "options": [
+                "evaporative cooling",
+                "competitive inhibition",
+                "facilitated diffusion",
+                "dehydration synthesis"
+              ],
+              "correctAnswer": "evaporative cooling",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The partial negative charge near oxygen and partial positive charges near hydrogen make water a ______ molecule, allowing it to interact strongly with ions and other polar substances.",
+              "options": [
+                "polar",
+                "nonpolar",
+                "radioactive",
+                "symmetrical"
+              ],
+              "correctAnswer": "polar",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Dehydration synthesis",
+              "definition": "A reaction that joins smaller subunits into larger molecules by removing a molecule of water, commonly forming covalent bonds in polymers."
+            },
+            {
+              "term": "Hydrolysis",
+              "definition": "A reaction that breaks covalent bonds in larger molecules by adding a molecule of water, often releasing smaller subunits."
+            },
+            {
+              "term": "Phospholipid",
+              "definition": "An amphipathic molecule with a hydrophilic phosphate-containing region and hydrophobic fatty acid regions that is a major component of cellular membranes."
+            },
+            {
+              "term": "Denaturation",
+              "definition": "A structural change in a protein caused by altered environmental conditions such as temperature, pH, or salinity, often resulting in loss of function."
+            },
+            {
+              "term": "Nucleotide",
+              "definition": "The monomer of nucleic acids, composed of a five-carbon sugar, a phosphate group, and a nitrogen-containing base."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best explains why phospholipids spontaneously form bilayers in aqueous environments?",
+              "options": [
+                "Their hydrophilic regions interact with water while their hydrophobic regions minimize contact with water",
+                "Their peptide bonds are hydrolyzed, releasing energy that drives membrane formation",
+                "Their monosaccharides polymerize into a flexible sheet around water",
+                "Their amino acid side chains form ionic bonds with dissolved oxygen"
+              ],
+              "correctAnswer": "Their hydrophilic regions interact with water while their hydrophobic regions minimize contact with water",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A mutation changes one amino acid in an enzyme from a nonpolar residue to a charged residue within the protein interior. Which outcome is most likely?",
+              "options": [
+                "The tertiary structure may be disrupted because altered side-chain interactions can change folding",
+                "The primary structure will remain unchanged because amino acids do not determine protein structure",
+                "The enzyme will become a carbohydrate because charged residues attract water",
+                "The phosphodiester bonds in the enzyme will break, preventing catalysis"
+              ],
+              "correctAnswer": "The tertiary structure may be disrupted because altered side-chain interactions can change folding",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When a polymer is broken into monomers by the addition of water, the reaction is called ______.",
+              "options": [
+                "hydrolysis",
+                "dehydration synthesis",
+                "transcription",
+                "evaporation"
+              ],
+              "correctAnswer": "hydrolysis",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In nucleic acids, the sugar-phosphate backbone is linked by ______ bonds between adjacent nucleotides.",
+              "options": [
+                "phosphodiester",
+                "hydrogen",
+                "peptide",
+                "glycosidic"
+              ],
+              "correctAnswer": "phosphodiester",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Cell Structure and Function",
+      "description": "Prokaryotic and eukaryotic cell structures, organelle functions, and membrane transport mechanisms.",
+      "note": "# Unit 2: Cell Structure and Function\n\n## Overview\nThis unit focuses on how **cell structure** determines **cell function**, including the differences between **prokaryotic** and **eukaryotic** cells, the roles of major **organelles**, and how materials move across **cell membranes**. On the AP exam, these ideas are essential for explaining cellular processes, analyzing experiments, and connecting structure at the microscopic level to larger biological functions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Prokaryotic vs. Eukaryotic Cells** | **Prokaryotes** lack membrane-bound organelles and a nucleus; **eukaryotes** contain internal compartments such as the nucleus and mitochondria. | AP questions often ask students to compare how **compartmentalization** affects efficiency and specialization. |\n| **Cell Size and Surface Area-to-Volume Ratio** | As a cell grows, **volume** increases faster than **surface area**, limiting exchange with the environment. | Explains why cells stay small and why structures like **microvilli** or long, thin shapes improve transport efficiency. |\n| **Plasma Membrane Structure** | The membrane is a **phospholipid bilayer** with embedded proteins, cholesterol, and carbohydrates. | Central to the **fluid mosaic model** and to predicting permeability, signaling, and transport. |\n| **Selective Permeability** | Membranes allow some substances to pass more easily than others based on size, polarity, and charge. | Frequently tested in scenarios involving **diffusion**, **osmosis**, and membrane transport proteins. |\n| **Membrane Transport** | Includes **passive transport** (no energy input) and **active transport** (requires energy, often $$\\text{ATP}$$). | Students must distinguish transport types and explain movement relative to a **concentration gradient**. |\n| **Osmosis and Tonicity** | **Osmosis** is diffusion of water across a selectively permeable membrane; **tonicity** predicts water movement and cell response. | AP free-response questions often involve plant/animal cells in **hypertonic**, **hypotonic**, or **isotonic** solutions. |\n| **Organelle Function** | Organelles such as the **nucleus**, **ribosomes**, **ER**, **Golgi**, **mitochondria**, and **chloroplasts** perform specialized tasks. | Important for tracing how cells build, modify, transport, and use biomolecules. |\n| **Endomembrane System** | The **nuclear envelope**, **ER**, **Golgi apparatus**, vesicles, and plasma membrane work together in synthesis and transport. | AP questions often ask students to track protein production and secretion through this system. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart LR\n    A[DNA in nucleus] --> B[Transcription produces mRNA]\n    B --> C[mRNA exits nucleus]\n    C --> D[Ribosome translates mRNA]\n    D --> E[\"Rough ER folds/modifies protein\"]\n    E --> F[Transport vesicle]\n    F --> G[Golgi apparatus modifies/sorts]\n    G --> H[Secretory vesicle]\n    H --> I[Plasma membrane]\n    I --> J[Exocytosis releases protein]\n```\n\n```mermaid\nflowchart TD\n    A[Substance approaches membrane] --> B{Can it cross lipid bilayer directly?}\n    B -->|Yes: small nonpolar| C[Simple diffusion]\n    B -->|No| D{Moving down concentration gradient?}\n    D -->|Yes| E[Facilitated diffusion through channel or carrier]\n    D -->|No| F[Active transport]\n    F --> G[\"Requires energy, often ATP\"]\n    G --> H[Protein pump or cotransport]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Surface Area-to-Volume Ratio** | $$\\text{SA:V} = \\frac{\\text{surface area}}{\\text{volume}}$$; a higher ratio improves exchange of materials. |\n| **Diffusion** | Net movement of molecules from **high concentration** to **low concentration** due to random motion. |\n| **Osmosis** | Diffusion of **water** across a selectively permeable membrane from **higher water potential** to **lower water potential**; practically, from **lower solute concentration** to **higher solute concentration**. |\n| **Passive Transport** | Movement across membranes **without energy input**, down a concentration gradient. Includes **simple diffusion**, **osmosis**, and **facilitated diffusion**. |\n| **Active Transport** | Movement across membranes **against** a concentration gradient, requiring energy, often $$\\text{ATP}$$. |\n| **Tonicity Rules** | **Hypertonic**: water leaves the cell. **Hypotonic**: water enters the cell. **Isotonic**: no net water movement. |\n| **Compartmentalization** | Membrane-bound organelles create specialized internal environments, increasing efficiency of eukaryotic cells. |\n| **Structure-Function Principle** | Biological structures are related to their functions; changes in membrane or organelle structure often alter cellular performance. |\n\n## Connections & Comparisons\n\n| **Comparison** | **Prokaryotic Cells** | **Eukaryotic Cells** | **AP-Level Significance** |\n|---|---|---|---|\n| **Nucleus** | No nucleus; DNA in **nucleoid** region | DNA enclosed in **nucleus** | Helps explain differences in gene regulation and compartmentalization. |\n| **Membrane-Bound Organelles** | Absent | Present | Eukaryotes can separate incompatible processes and specialize functions. |\n| **Size** | Usually smaller | Usually larger | Connects to **SA:V** and transport limits. |\n| **Ribosomes** | Present | Present | Both synthesize proteins, showing some structures are universal. |\n| **Cell Wall** | Usually present in bacteria | Present in plants and fungi, absent in animals | AP questions often compare support, protection, and osmotic effects. |\n\n| **Transport Type** | **Energy Required?** | **Direction Relative to Gradient** | **Example** |\n|---|---|---|---|\n| **Simple Diffusion** | No | Down gradient | $$\\text{O}_2$$ crossing membrane |\n| **Facilitated Diffusion** | No | Down gradient | Ions moving through a channel protein |\n| **Active Transport** | Yes | Against gradient | Proton pump using $$\\text{ATP}$$ |\n| **Endocytosis / Exocytosis** | Yes | Bulk movement, not strictly by gradient | Import/export of large molecules |\n\n## Common AP Exam Traps\n- **Diffusion** and **osmosis** are not the same: **osmosis** refers specifically to the movement of **water**.\n- **Facilitated diffusion** uses membrane proteins but is still **passive**, so it does **not** require $$\\text{ATP}$$.\n- A **hypertonic** solution causes water to leave the cell; students often reverse hypertonic and hypotonic.\n- **Prokaryotes** do have **ribosomes** and plasma membranes; they simply lack **membrane-bound organelles**.\n- The **Golgi apparatus** modifies and sorts proteins, but **ribosomes** are the structures that actually synthesize polypeptides.\n\n## Quick Review Checklist\n- [ ] Explain the major differences between **prokaryotic** and **eukaryotic** cells.\n- [ ] Describe how **surface area-to-volume ratio** limits cell size and affects transport.\n- [ ] Identify the main components of the **plasma membrane** and explain the **fluid mosaic model**.\n- [ ] Predict whether a substance crosses by **simple diffusion**, **facilitated diffusion**, or **active transport**.\n- [ ] Explain **osmosis** and predict cell behavior in **hypertonic**, **hypotonic**, and **isotonic** environments.\n- [ ] Match major **organelles** to their functions, including **nucleus**, **ribosomes**, **ER**, **Golgi**, **mitochondria**, and **chloroplasts**.\n- [ ] Trace the path of a protein through the **endomembrane system** from gene expression to secretion.\n- [ ] Use **structure-function relationships** to explain how a cellular feature supports a specific task.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Prokaryotic cells",
+              "definition": "Cells that lack a membrane-bound nucleus and other membrane-bound internal compartments; their genetic material is located in a nucleoid region."
+            },
+            {
+              "term": "Nucleus",
+              "definition": "A membrane-bound compartment in eukaryotes that houses most genetic material and is the primary site of DNA replication and transcription."
+            },
+            {
+              "term": "Rough endoplasmic reticulum",
+              "definition": "A membranous network studded with ribosomes that synthesizes and begins modification of proteins destined for secretion, membranes, or certain organelles."
+            },
+            {
+              "term": "Golgi apparatus",
+              "definition": "A stack of flattened membranes that modifies, sorts, and packages proteins and lipids into vesicles for transport or release."
+            },
+            {
+              "term": "Mitochondrion",
+              "definition": "A double-membraned organelle that carries out aerobic cellular respiration and generates most ATP through oxidative phosphorylation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A researcher isolates a cell with DNA in a nucleoid region, ribosomes, and a plasma membrane, but no membrane-bound organelles. Which conclusion is best supported by these observations?",
+              "options": [
+                "The cell is prokaryotic because it lacks internal membrane-bound compartments.",
+                "The cell is eukaryotic because it contains ribosomes for protein synthesis.",
+                "The cell is eukaryotic because all cells contain a plasma membrane.",
+                "The cell is prokaryotic because ATP can only be produced in the cytosol."
+              ],
+              "correctAnswer": "The cell is prokaryotic because it lacks internal membrane-bound compartments.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In a eukaryotic secretory cell, a mutation disrupts the function of ribosomes bound to the rough endoplasmic reticulum. Which cellular process would be most directly affected?",
+              "options": [
+                "Synthesis of proteins that will be exported from the cell",
+                "Replication of mitochondrial DNA",
+                "Breakdown of macromolecules in lysosomes",
+                "Production of ATP by chemiosmosis"
+              ],
+              "correctAnswer": "Synthesis of proteins that will be exported from the cell",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In eukaryotic cells, the organelle primarily responsible for modifying and packaging proteins into vesicles is the ______.",
+              "options": [
+                "Golgi apparatus",
+                "lysosome",
+                "central vacuole",
+                "cytoskeleton"
+              ],
+              "correctAnswer": "Golgi apparatus",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The organelle in which most ATP is generated during aerobic respiration is the ______.",
+              "options": [
+                "mitochondrion",
+                "nucleus",
+                "ribosome",
+                "chloroplast"
+              ],
+              "correctAnswer": "mitochondrion",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Plasma membrane",
+              "definition": "A selectively permeable boundary composed mainly of a phospholipid bilayer with embedded proteins that regulates movement of substances into and out of the cell."
+            },
+            {
+              "term": "Diffusion",
+              "definition": "The net movement of particles from an area of higher concentration to an area of lower concentration due to random molecular motion."
+            },
+            {
+              "term": "Osmosis",
+              "definition": "The net movement of water across a selectively permeable membrane from lower solute concentration to higher solute concentration."
+            },
+            {
+              "term": "Facilitated diffusion",
+              "definition": "Passive transport in which substances move down their concentration gradient through specific membrane proteins without an input of cellular energy."
+            },
+            {
+              "term": "Active transport",
+              "definition": "Movement of substances across a membrane against their concentration or electrochemical gradient using energy, often through transport proteins."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A red blood cell is placed in a solution with a lower solute concentration than the cytoplasm. What will most likely occur?",
+              "options": [
+                "Water will enter the cell by osmosis, causing it to swell.",
+                "Water will leave the cell by osmosis, causing it to shrink.",
+                "Solutes will enter the cell by active transport until equilibrium is reached.",
+                "The cell will remain unchanged because the membrane prevents water movement."
+              ],
+              "correctAnswer": "Water will enter the cell by osmosis, causing it to swell.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best distinguishes active transport from facilitated diffusion?",
+              "options": [
+                "Active transport requires energy to move substances against a gradient, whereas facilitated diffusion does not.",
+                "Active transport occurs only in prokaryotes, whereas facilitated diffusion occurs only in eukaryotes.",
+                "Active transport moves water through aquaporins, whereas facilitated diffusion moves ions through pumps.",
+                "Active transport always uses vesicles, whereas facilitated diffusion always uses the phospholipid bilayer alone."
+              ],
+              "correctAnswer": "Active transport requires energy to move substances against a gradient, whereas facilitated diffusion does not.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The net movement of water across a selectively permeable membrane is called ______.",
+              "options": [
+                "osmosis",
+                "endocytosis",
+                "exocytosis",
+                "phagocytosis"
+              ],
+              "correctAnswer": "osmosis",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When molecules move down their concentration gradient through a channel protein without energy input, the process is ______.",
+              "options": [
+                "facilitated diffusion",
+                "active transport",
+                "bulk transport",
+                "cotransport"
+              ],
+              "correctAnswer": "facilitated diffusion",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Cellular Energetics",
+      "description": "Enzyme function, photosynthesis (light and Calvin cycle), and cellular respiration (glycolysis, Krebs cycle, ETC).",
+      "note": "# Unit 3: Cellular Energetics\n\n## Overview\nThis unit explains how cells capture, transform, and use energy through **enzymes**, **photosynthesis**, and **cellular respiration**. On the AP exam, you’ll need to connect **molecular structure to function**, trace **energy flow and matter cycling**, and predict how changes in conditions affect these pathways.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Enzymes** | Biological catalysts that lower **activation energy** and speed up reactions without being consumed. | AP questions often ask how **temperature**, **pH**, **substrate concentration**, or **mutations** affect enzyme activity. |\n| **Activation Energy** | The minimum energy needed to start a reaction. | You must distinguish between enzymes changing **reaction rate** versus changing **free energy** of reactants/products. |\n| **Photosynthesis** | Process that converts light energy into chemical energy stored in sugars. | A major AP theme is how **energy is captured** and how **matter** moves from $$CO_2$$ into carbohydrates. |\n| **Light-Dependent Reactions** | Reactions in the **thylakoid membranes** that use light to produce $$ATP$$ and $$NADPH$$. | Students must track **electron flow**, **proton gradients**, and the role of **water splitting**. |\n| **Calvin Cycle** | Light-independent reactions in the **stroma** that use $$ATP$$ and $$NADPH$$ to fix $$CO_2$$ into sugar precursors. | AP often tests inputs/outputs, regulation, and how this cycle depends indirectly on light reactions. |\n| **Cellular Respiration** | Catabolic pathway that breaks down organic molecules to make $$ATP$$. | Central to FRQs and MCQs involving **energy transfer**, **redox reactions**, and **mitochondrial function**. |\n| **Glycolysis, Krebs Cycle, ETC** | The three major stages of aerobic respiration. | You should compare locations, reactants, products, and ATP yield across stages. |\n| **Chemiosmosis** | Production of $$ATP$$ using a **proton gradient** across a membrane. | This connects **photosynthesis** and **respiration**, making it a favorite AP comparison topic. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Light energy absorbed by chlorophyll\"] --> B[\"Light-dependent reactions in thylakoid membrane\"]\n    B --> C[\"Water split\"]\n    C --> D[\"Electrons replace those lost by chlorophyll\"]\n    C --> E[\"Oxygen released as $$O_2$$\"]\n    B --> F[\"Electron transport chain creates proton gradient\"]\n    F --> G[\"ATP synthase makes $$ATP$$\"]\n    B --> H[\"NADP+ reduced to $$NADPH$$\"]\n    G --> I[\"Calvin cycle in stroma\"]\n    H --> I\n    J[\"$$CO_2$$ enters cycle\"] --> I\n    I --> K[\"G3P produced\"]\n    K --> L[\"Sugars synthesized\"]\n\n    M[\"Glucose enters glycolysis\"] --> N[\"Glycolysis in cytoplasm\"]\n    N --> O[\"Pyruvate formed\"]\n    O --> P[\"Pyruvate oxidation\"]\n    P --> Q[\"Acetyl-CoA enters Krebs cycle\"]\n    Q --> R[\"Krebs cycle in mitochondrial matrix\"]\n    R --> S[\"$$CO_2$$ released\"]\n    R --> T[\"NADH and FADH_2 produced\"]\n    T --> U[\"ETC in inner mitochondrial membrane\"]\n    U --> V[\"Proton gradient established\"]\n    V --> W[\"ATP synthase makes $$ATP$$\"]\n    U --> X[\"$$O_2$$ is final electron acceptor\"]\n    X --> Y[\"Water formed\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Expression** | **What You Must Know** |\n|---|---|\n| $$\\text{Enzyme} + \\text{Substrate} \\rightarrow \\text{Enzyme-Substrate Complex} \\rightarrow \\text{Enzyme} + \\text{Product}$$ | Enzymes bind specific substrates at the **active site** and are unchanged after the reaction. |\n| $$\\Delta G = G_{\\text{products}} - G_{\\text{reactants}}$$ | If $$\\Delta G < 0$$, the reaction is **exergonic**; if $$\\Delta G > 0$$, it is **endergonic**. |\n| $$6CO_2 + 6H_2O + \\text{light} \\rightarrow C_6H_{12}O_6 + 6O_2$$ | Overall equation for **photosynthesis**. Matter from glucose comes mainly from $$CO_2$$. |\n| $$C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + ATP$$ | Overall equation for **aerobic cellular respiration**. Energy in glucose is transferred to $$ATP$$. |\n| **Enzymes lower activation energy, not $$\\Delta G$$** | A key AP distinction: catalysts speed reactions but do not change equilibrium or overall free energy change. |\n| **Oxidation is loss of electrons; reduction is gain of electrons** | Essential for tracking **NADH**, **FADH_2**, and electron movement in both photosynthesis and respiration. |\n| **Chemiosmosis** | A **proton gradient** across a membrane drives **ATP synthase** to phosphorylate $$ADP + P_i \\rightarrow ATP$$. |\n| **Structure determines function** | Membrane folds, enzyme active sites, and organelle compartmentalization are all required for efficient energy transfer. |\n\n## Connections & Comparisons\n\n| **Topic** | **Photosynthesis** | **Cellular Respiration** |\n|---|---|---|\n| **Primary purpose** | Stores energy in organic molecules | Releases energy from organic molecules |\n| **Overall pathway type** | **Anabolic** | **Catabolic** |\n| **Main organelle** | **Chloroplast** | **Mitochondrion** |\n| **Electron source** | Water provides electrons | Glucose-derived molecules provide electrons |\n| **Final electron acceptor** | $$NADP^+$$ forms $$NADPH$$ | $$O_2$$ forms $$H_2O$$ |\n| **Uses ETC and chemiosmosis?** | Yes, in **thylakoid membrane** | Yes, in **inner mitochondrial membrane** |\n| **Carbon movement** | $$CO_2$$ fixed into sugars | Sugars oxidized to $$CO_2$$ |\n| **ATP role** | ATP is produced in light reactions and consumed in Calvin cycle | ATP is produced as the main usable energy output |\n\n## Common AP Exam Traps\n\n- **Enzymes do not add energy to reactions**; they lower **activation energy** and increase reaction rate.\n- The **Calvin cycle is not independent of light** in practice; it does not use light directly, but it requires **ATP** and **NADPH** made by the light reactions.\n- In photosynthesis, the released $$O_2$$ comes from **water**, not from $$CO_2$$.\n- Most $$ATP$$ in aerobic respiration is produced by **oxidative phosphorylation**, not by **glycolysis** or the **Krebs cycle** directly.\n- A proton gradient is built across a **membrane**; if the membrane is disrupted, **chemiosmosis** and **ATP production** decrease sharply.\n\n## Quick Review Checklist\n\n- [ ] Explain how **enzymes** lower **activation energy** and how **active site** shape affects specificity.\n- [ ] Predict how changes in **temperature**, **pH**, and **substrate concentration** affect enzyme function.\n- [ ] Describe the inputs and outputs of the **light-dependent reactions**.\n- [ ] Explain how the **Calvin cycle** uses $$ATP$$ and $$NADPH$$ to fix $$CO_2$$.\n- [ ] Identify where **glycolysis**, **pyruvate oxidation**, the **Krebs cycle**, and the **ETC** occur.\n- [ ] Trace the movement of **electrons** through **NADH**, **FADH_2**, and electron transport chains.\n- [ ] Compare **photosynthesis** and **cellular respiration** in terms of energy transformation and matter flow.\n- [ ] Explain how a **proton gradient** powers **ATP synthase** in both chloroplasts and mitochondria.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Activation energy",
+              "definition": "The minimum input of energy required to bring reactants to a transition state so a chemical reaction can proceed."
+            },
+            {
+              "term": "Competitive inhibition",
+              "definition": "A form of regulation in which a molecule binds at the active site and reduces catalysis by competing with the substrate."
+            },
+            {
+              "term": "Induced fit",
+              "definition": "A change in enzyme shape that occurs when a substrate binds, improving interactions that facilitate catalysis."
+            },
+            {
+              "term": "Photosystem II",
+              "definition": "The pigment-protein complex in the thylakoid membrane that absorbs light, oxidizes water, and supplies high-energy electrons to an electron transport chain."
+            },
+            {
+              "term": "Calvin cycle",
+              "definition": "A series of enzyme-mediated reactions in the stroma that uses ATP and NADPH to incorporate carbon dioxide into organic molecules."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A researcher measures the rate of an enzyme-catalyzed reaction at increasing substrate concentrations. In the presence of a certain inhibitor, the maximum reaction rate is unchanged, but a higher substrate concentration is needed to approach that rate. Which conclusion is best supported?",
+              "options": [
+                "The inhibitor binds to the enzyme's active site and competes with the substrate.",
+                "The inhibitor permanently denatures the enzyme at all substrate concentrations.",
+                "The inhibitor decreases the amount of product formed by removing products from solution.",
+                "The inhibitor increases the activation energy by altering the free energy of the reactants."
+              ],
+              "correctAnswer": "The inhibitor binds to the enzyme's active site and competes with the substrate.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "During the light-dependent reactions of photosynthesis, what is the primary source of the electrons that ultimately reduce NADP$$^+$$ to NADPH?",
+              "options": [
+                "Carbon dioxide fixed in the stroma",
+                "Water split in the thylakoid lumen",
+                "Chlorophyll molecules synthesized in the Calvin cycle",
+                "ATP hydrolyzed by ATP synthase"
+              ],
+              "correctAnswer": "Water split in the thylakoid lumen",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Enzymes speed up reactions by lowering the ______ required for reactants to reach the transition state.",
+              "options": [
+                "activation energy",
+                "enthalpy change",
+                "substrate concentration",
+                "free energy of products"
+              ],
+              "correctAnswer": "activation energy",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In chloroplasts, the enzyme RuBisCO catalyzes the fixation of carbon dioxide by attaching it to ______.",
+              "options": [
+                "ribulose bisphosphate",
+                "glyceraldehyde 3-phosphate",
+                "pyruvate",
+                "acetyl CoA"
+              ],
+              "correctAnswer": "ribulose bisphosphate",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Glycolysis",
+              "definition": "A cytosolic pathway that breaks a six-carbon sugar into two three-carbon molecules, producing ATP and NADH without requiring oxygen directly."
+            },
+            {
+              "term": "Pyruvate oxidation",
+              "definition": "The reaction linking cytosolic sugar breakdown to the citric acid cycle by converting a three-carbon molecule into a two-carbon acetyl group attached to coenzyme A, while releasing carbon dioxide and reducing NAD$$^+$$."
+            },
+            {
+              "term": "Citric acid cycle",
+              "definition": "A cyclic pathway in the mitochondrial matrix that oxidizes acetyl groups to carbon dioxide and transfers energy to NADH, FADH$$_2$$, and ATP or GTP."
+            },
+            {
+              "term": "Oxidative phosphorylation",
+              "definition": "The process in which electrons move through membrane carriers to create a proton gradient that powers ATP synthesis by chemiosmosis."
+            },
+            {
+              "term": "Fermentation",
+              "definition": "An anaerobic pathway that regenerates NAD$$^+$$ from NADH so glycolysis can continue when an electron transport chain cannot operate."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Most of the ATP generated during aerobic cellular respiration is produced as a direct result of which process?",
+              "options": [
+                "Substrate-level phosphorylation during glycolysis",
+                "Chemiosmosis driven by a proton gradient across the inner mitochondrial membrane",
+                "Oxidation of pyruvate to acetyl CoA in the mitochondrial matrix",
+                "Reduction of oxygen to water in the cytosol"
+              ],
+              "correctAnswer": "Chemiosmosis driven by a proton gradient across the inner mitochondrial membrane",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A toxin makes the inner mitochondrial membrane permeable to protons. Which immediate effect would most likely occur in aerobic cells?",
+              "options": [
+                "ATP synthesis by ATP synthase would decrease significantly.",
+                "The citric acid cycle would stop because oxygen is no longer present.",
+                "Glycolysis would produce no pyruvate.",
+                "NADH would be converted directly into glucose."
+              ],
+              "correctAnswer": "ATP synthesis by ATP synthase would decrease significantly.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The final electron acceptor in the mitochondrial electron transport chain is ______.",
+              "options": [
+                "oxygen",
+                "NADH",
+                "pyruvate",
+                "carbon dioxide"
+              ],
+              "correctAnswer": "oxygen",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "During glycolysis, a net yield of ______ ATP molecules is produced per glucose molecule by substrate-level phosphorylation.",
+              "options": [
+                "2",
+                "4",
+                "6",
+                "32"
+              ],
+              "correctAnswer": "2",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Cell Communication and Cell Cycle",
+      "description": "Signal transduction pathways, cell-to-cell communication, mitosis, and cell cycle regulation.",
+      "note": "# Unit 4: Cell Communication and Cell Cycle\n\n## Overview\nThis unit focuses on how cells **receive, process, and respond to signals**, and how they **grow, divide, and regulate the cell cycle**. These topics matter on the AP Biology exam because they connect **structure to function**, explain **homeostasis and development**, and frequently appear in data-analysis questions involving signaling pathways, cancer, and mitosis.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Cell signaling** | The process by which cells communicate using **signals**, **receptors**, and **responses** | AP questions often test how changes in one part of a pathway affect the final cellular response |\n| **Signal reception** | A **ligand** binds to a specific **receptor** protein on the cell surface or inside the cell | Students must distinguish between **membrane receptors** and **intracellular receptors** based on signal type |\n| **Signal transduction** | A cascade of molecular changes that relays and amplifies a signal inside the cell | Important for explaining how one signal can produce a large effect through **protein kinases** and **second messengers** |\n| **Cellular response** | The outcome of signaling, such as altered **gene expression**, enzyme activity, or cell division | AP often asks students to predict responses when signaling is activated or blocked |\n| **Types of cell communication** | **Direct contact**, **local signaling**, and **long-distance signaling** | Helps compare signaling in multicellular organisms and understand coordination across tissues |\n| **Feedback regulation** | Mechanisms that increase or decrease pathway activity, especially **negative feedback** | Common in homeostasis and pathway-control questions |\n| **Mitosis** | Nuclear division producing two genetically identical nuclei | Students must know the phases and connect mitosis to growth, repair, and asexual reproduction |\n| **Cell cycle regulation** | Checkpoints and proteins such as **cyclins** and **cyclin-dependent kinases** control cell division | Central to understanding **cancer**, uncontrolled growth, and experimental data about checkpoints |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Signal molecule released] --> B[Reception at receptor]\n    B --> C[Transduction pathway activated]\n    C --> D[Second messengers or kinase cascade]\n    D --> E[Cellular response]\n    E --> F[Change in gene expression, enzyme activity, or division]\n```\n\n```mermaid\nflowchart LR\n    A[G1 phase] --> B[S phase]\n    B --> C[G2 phase]\n    C --> D[Mitosis]\n    D --> E[Cytokinesis]\n    E --> A\n    A --> F[G0]\n```\n\n### Mitosis sequence\n1. **Prophase**: Chromatin condenses into chromosomes; spindle begins to form.\n2. **Prometaphase**: Nuclear envelope breaks down; spindle fibers attach to kinetochores.\n3. **Metaphase**: Chromosomes align at the metaphase plate.\n4. **Anaphase**: Sister chromatids separate and move to opposite poles.\n5. **Telophase**: Nuclear envelopes reform around separated chromosomes.\n6. **Cytokinesis**: Cytoplasm divides, producing two daughter cells.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Signal transduction pathway** | A sequence in which a **signal** is received, converted, and leads to a **specific cellular response** |\n| **Ligand** | A molecule that binds specifically to a **receptor** |\n| **Membrane receptor rule** | **Large, polar, or charged signals** usually bind to **cell-surface receptors** because they cannot cross the plasma membrane easily |\n| **Intracellular receptor rule** | **Small, nonpolar signals** can pass through the membrane and bind **intracellular receptors** |\n| **Protein phosphorylation** | **Protein kinases** transfer a phosphate group, often changing a protein’s activity; **protein phosphatases** remove phosphate groups |\n| **Signal amplification** | One activated receptor can trigger many downstream molecules, producing a large response |\n| **Checkpoint rule** | The cell cycle proceeds only if internal and external conditions are appropriate at major checkpoints, especially **G1**, **G2**, and **M** |\n| **Mitosis outcome** | Mitosis maintains chromosome number: one parent nucleus produces **two genetically identical daughter nuclei** |\n| **Cancer principle** | Cancer can result when mutations disrupt genes regulating the cell cycle, causing **loss of checkpoint control** and excessive division |\n\n## Connections & Comparisons\n\n| **Comparison** | **Cell-Surface Receptors** | **Intracellular Receptors** |\n|---|---|---|\n| **Signal type** | Usually **hydrophilic** or large molecules | Usually **hydrophobic** or small molecules |\n| **Location** | Embedded in plasma membrane | In cytoplasm or nucleus |\n| **Mechanism** | Activates transduction pathway through membrane | Often directly affects **gene expression** |\n| **Example outcome** | Second messenger cascade | Transcriptional regulation |\n\n| **Comparison** | **Mitosis** | **Meiosis** |\n|---|---|---|\n| **Purpose** | Growth, repair, asexual reproduction | Gamete production |\n| **Number of divisions** | 1 | 2 |\n| **Genetic similarity** | Daughter cells are genetically identical | Daughter cells are genetically diverse |\n| **Chromosome number** | Maintained | Halved |\n\n| **Comparison** | **Positive Feedback** | **Negative Feedback** |\n|---|---|---|\n| **Effect on pathway** | Amplifies change | Reduces change |\n| **Role in biology** | Drives a process forward temporarily | Maintains homeostasis |\n| **AP relevance** | Less common, but important in specific cascades | Frequently tested in regulation questions |\n\n## Common AP Exam Traps\n\n- Confusing **signal reception** with **signal transduction**: binding the receptor is not the same as the internal relay pathway.\n- Assuming all signals bind membrane receptors; some signals cross the membrane and bind **intracellular receptors**.\n- Mixing up **mitosis** and **cytokinesis**: mitosis is **nuclear division**, while cytokinesis divides the cytoplasm.\n- Forgetting that **sister chromatids separate in anaphase of mitosis**, not homologous chromosomes.\n- Thinking cancer is caused simply by “fast division”; the deeper cause is **loss of normal cell cycle regulation** due to mutation.\n\n## Quick Review Checklist\n\n- [ ] Explain the three major stages of cell signaling: **reception**, **transduction**, and **response**\n- [ ] Distinguish between **cell-surface** and **intracellular receptors**\n- [ ] Describe how **second messengers** and **kinase cascades** amplify a signal\n- [ ] Compare **direct contact**, **local signaling**, and **long-distance signaling**\n- [ ] Identify the major phases of the **cell cycle**: **G1**, **S**, **G2**, and **M**\n- [ ] Describe the key events of each stage of **mitosis**\n- [ ] Explain how **cyclins**, **cyclin-dependent kinases**, and **checkpoints** regulate cell division\n- [ ] Connect failures in cell cycle regulation to **cancer** and predict outcomes of disrupted checkpoints",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Signal transduction pathway",
+              "definition": "A series of molecular changes that begins when a signaling molecule binds at the cell surface or inside the cell and results in a specific cellular response, often through relay proteins and phosphorylation events."
+            },
+            {
+              "term": "Ligand-gated ion channel receptor",
+              "definition": "A membrane protein that changes shape when a signaling molecule binds, allowing specific ions to move across the membrane and rapidly altering the cell's internal conditions."
+            },
+            {
+              "term": "G protein-coupled receptor",
+              "definition": "A membrane receptor that activates a nearby relay protein by promoting exchange of GDP for GTP, initiating an intracellular signaling cascade."
+            },
+            {
+              "term": "Second messenger",
+              "definition": "A small, nonprotein intracellular molecule or ion that distributes a signal from an activated receptor to target molecules within the cell, amplifying the response."
+            },
+            {
+              "term": "Protein kinase cascade",
+              "definition": "A sequence in which each enzyme activates the next by adding phosphate groups, allowing one extracellular signal to produce a large and regulated cellular effect."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A researcher adds epinephrine to liver cells and observes rapid activation of glycogen breakdown. The response is abolished when the cells are treated with a drug that prevents $$cAMP$$ production. Which conclusion is best supported?",
+              "options": [
+                "The pathway uses an intracellular receptor that directly binds DNA.",
+                "The pathway depends on a second messenger to relay and amplify the signal.",
+                "The pathway requires ligand diffusion through the plasma membrane before receptor binding.",
+                "The pathway is independent of protein phosphorylation events."
+              ],
+              "correctAnswer": "The pathway depends on a second messenger to relay and amplify the signal.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which experimental result best demonstrates amplification in a signal transduction pathway?",
+              "options": [
+                "One ligand molecule binds one receptor and activates one target enzyme.",
+                "Activation of a receptor causes production of many intracellular messenger molecules, each of which activates additional proteins.",
+                "A receptor remains inactive until the ligand concentration reaches zero.",
+                "A signaling molecule is degraded immediately after binding to the receptor."
+              ],
+              "correctAnswer": "Activation of a receptor causes production of many intracellular messenger molecules, each of which activates additional proteins.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In many pathways, binding of a signal molecule to a receptor activates adenylyl cyclase, which converts ATP into ______.",
+              "options": [
+                "cAMP",
+                "glycogen",
+                "DNA",
+                "NADPH"
+              ],
+              "correctAnswer": "cAMP",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A receptor that spans the membrane and activates a relay protein by causing GDP to be replaced with GTP is a ______.",
+              "options": [
+                "G protein-coupled receptor",
+                "ligand-gated ion channel",
+                "receptor tyrosine phosphatase",
+                "structural glycoprotein"
+              ],
+              "correctAnswer": "G protein-coupled receptor",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Cell cycle checkpoint",
+              "definition": "A control point at which regulatory molecules assess whether key events have been completed correctly before progression to the next stage."
+            },
+            {
+              "term": "Cyclin",
+              "definition": "A regulatory protein whose concentration rises and falls during the division process and that activates specific kinases controlling progression through major stages."
+            },
+            {
+              "term": "Cyclin-dependent kinase",
+              "definition": "An enzyme that becomes active when bound to a regulatory partner and then phosphorylates target proteins to drive transitions in the division process."
+            },
+            {
+              "term": "Mitosis",
+              "definition": "Division of the nucleus that produces two genetically similar nuclei by separating duplicated chromosomes into distinct sets."
+            },
+            {
+              "term": "Apoptosis",
+              "definition": "A programmed sequence of cellular events leading to controlled self-destruction, which helps shape development and remove damaged cells."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A mutation causes a cell to produce a nonfunctional protein required at the $$G_1$$ checkpoint. Which outcome is most likely?",
+              "options": [
+                "Cells with damaged DNA may continue into S phase without proper regulation.",
+                "Chromosomes will separate normally because checkpoint proteins function only in cytokinesis.",
+                "DNA replication will stop only after mitosis is complete.",
+                "The cell will be unable to form a plasma membrane during telophase."
+              ],
+              "correctAnswer": "Cells with damaged DNA may continue into S phase without proper regulation.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains how density-dependent inhibition helps regulate cell division in animal cells?",
+              "options": [
+                "Cells divide more rapidly as neighboring cell contact increases.",
+                "Physical contact with other cells triggers pathways that slow or stop further division.",
+                "Cells enter mitosis only when cyclin concentrations fall to zero.",
+                "Growth factors are produced only when cells detach from the extracellular matrix."
+              ],
+              "correctAnswer": "Physical contact with other cells triggers pathways that slow or stop further division.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "During ______, sister chromatids separate and move toward opposite poles of the cell.",
+              "options": [
+                "anaphase",
+                "prophase",
+                "metaphase",
+                "interphase"
+              ],
+              "correctAnswer": "anaphase",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Proteins that regulate progression through the cell cycle by activating specific kinases are called ______.",
+              "options": [
+                "cyclins",
+                "histones",
+                "ribozymes",
+                "phospholipids"
+              ],
+              "correctAnswer": "cyclins",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Heredity",
+      "description": "Meiosis, Mendelian genetics, non-Mendelian inheritance patterns, and the chromosomal basis of heredity.",
+      "note": "# Unit 5: Heredity\n\n## Overview\nThis unit focuses on how traits are passed from parents to offspring through **meiosis**, **fertilization**, and patterns of **genetic inheritance**. For the AP exam, you must connect chromosome behavior to probability-based inheritance patterns and explain both **Mendelian** and **non-Mendelian** outcomes using evidence and models.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Meiosis** | A two-stage cell division that produces **haploid gametes** from **diploid cells** | AP questions often ask how meiosis generates variation and reduces chromosome number |\n| **Crossing over** | Exchange of DNA between homologous chromosomes during **prophase I** | Explains **genetic recombination** and why linked genes are not always inherited together |\n| **Independent assortment** | Random orientation of homologous chromosome pairs in **metaphase I** | Critical for predicting allele combinations and explaining variation in gametes |\n| **Mendelian inheritance** | Patterns based on segregation of alleles and dominant/recessive relationships | Frequently tested through **Punnett squares**, ratios, and probability reasoning |\n| **Law of segregation** | The two alleles for a gene separate during gamete formation | Connects meiosis directly to inheritance patterns |\n| **Law of independent assortment** | Alleles of different genes assort independently if genes are on different chromosomes or far apart | Students must know when this law applies and when **linkage** limits it |\n| **Non-Mendelian inheritance** | Includes **incomplete dominance**, **codominance**, **multiple alleles**, **polygenic inheritance**, and **sex-linked inheritance** | AP Biology often tests how real inheritance departs from simple dominant/recessive models |\n| **Chromosomal basis of heredity** | The idea that genes are located on chromosomes and chromosome behavior explains inheritance | Helps unify meiosis, linkage, sex determination, and inheritance disorders |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Diploid germ cell] --> B[DNA replication]\n    B --> C[\"Meiosis I: homologous chromosomes pair\"]\n    C --> D[\"Crossing over in prophase I\"]\n    D --> E[\"Metaphase I: independent assortment\"]\n    E --> F[\"Anaphase I: homologs separate\"]\n    F --> G[Two haploid cells]\n    G --> H[\"Meiosis II: sister chromatids separate\"]\n    H --> I[Four genetically distinct haploid gametes]\n    I --> J[Fertilization]\n    J --> K[Diploid zygote with new allele combination]\n```\n\n### How meiosis connects to heredity\n1. A **diploid** cell contains two sets of chromosomes, one from each parent.\n2. During **meiosis I**, **homologous chromosomes** pair and may exchange segments by **crossing over**.\n3. Homologous pairs line up randomly, producing **independent assortment**.\n4. Homologous chromosomes separate in meiosis I; **sister chromatids** separate in meiosis II.\n5. The resulting **haploid gametes** each carry one allele for each gene.\n6. During **fertilization**, two gametes combine, restoring the **diploid** number and creating a unique genotype.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **What You Must Know** |\n|---|---|\n| **Probability multiplication rule** | For independent events occurring together: $$P(A \\text{ and } B) = P(A)\\cdot P(B)$$ |\n| **Probability addition rule** | For mutually exclusive outcomes: $$P(A \\text{ or } B) = P(A) + P(B)$$ |\n| **Monohybrid heterozygous cross** | $$Aa \\times Aa \\rightarrow \\text{genotypic ratio } 1:2:1,\\ \\text{phenotypic ratio } 3:1$$ when complete dominance applies |\n| **Dihybrid heterozygous cross** | $$AaBb \\times AaBb \\rightarrow \\text{phenotypic ratio } 9:3:3:1$$ if genes assort independently and show complete dominance |\n| **Law of segregation** | The two alleles for one gene separate during gamete formation, so each gamete gets one allele |\n| **Law of independent assortment** | Alleles of different genes separate independently **only when genes are unlinked or far apart on the same chromosome** |\n| **Chromosome number rule** | **Diploid** cells are $$2n$$; **haploid** gametes are $$n$$ |\n| **Recombination frequency** | The farther apart two genes are on a chromosome, the greater the chance of crossing over between them; linked genes have recombination frequencies of less than $$50\\%$$ |\n| **Sex-linked inheritance rule** | Recessive alleles on the **X chromosome** are more often expressed in individuals with only one X, because there may be no second allele to mask them |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Similar** | **How They Differ / Why It Matters** |\n|---|---|---|\n| **Mitosis vs. Meiosis** | Both involve chromosome movement after DNA replication | **Mitosis** produces genetically similar **diploid** cells; **meiosis** produces genetically varied **haploid** gametes |\n| **Segregation vs. Independent Assortment** | Both describe allele distribution into gametes | **Segregation** applies to alleles of the same gene; **independent assortment** applies to different genes when not linked |\n| **Complete dominance vs. Incomplete dominance vs. Codominance** | All describe interactions between alleles | In **complete dominance**, one allele masks another; in **incomplete dominance**, heterozygotes are intermediate; in **codominance**, both alleles are fully expressed |\n| **Independent assortment vs. Linkage** | Both affect inheritance patterns across genes | Genes on different chromosomes often assort independently; **linked genes** on the same chromosome tend to be inherited together unless crossing over separates them |\n\n```mermaid\nflowchart LR\n    A[Gene inheritance] --> B[Genes on different chromosomes]\n    A --> C[Genes on same chromosome]\n    B --> D[Usually independent assortment]\n    C --> E[Linkage]\n    E --> F[Crossing over may produce recombinants]\n```\n\n## Common AP Exam Traps\n\n- Confusing **homologous chromosomes** with **sister chromatids**. Homologs separate in **meiosis I**; sister chromatids separate in **meiosis II**.\n- Assuming all traits follow simple **dominant/recessive Mendelian patterns**. Many AP questions involve **codominance**, **incomplete dominance**, **polygenic traits**, or **sex linkage**.\n- Using the **$$9:3:3:1$$** ratio when genes are actually **linked**. That ratio applies only if genes assort independently.\n- Forgetting that **crossing over** occurs between **non-sister chromatids** of homologous chromosomes, not between unrelated chromosomes.\n- Misreading phenotype and genotype ratios. For example, **$$1:2:1$$** is often the **genotypic** ratio in a monohybrid cross, while **$$3:1$$** is the **phenotypic** ratio under complete dominance.\n\n## Quick Review Checklist\n\n- [ ] Explain how **meiosis** reduces chromosome number from $$2n$$ to $$n$$\n- [ ] Distinguish between **homologous chromosomes** and **sister chromatids**\n- [ ] Describe how **crossing over** and **independent assortment** increase genetic variation\n- [ ] Use **Punnett squares** and probability rules to predict inheritance outcomes\n- [ ] Apply the **law of segregation** and **law of independent assortment** correctly\n- [ ] Recognize and interpret **non-Mendelian inheritance** patterns such as **codominance** and **incomplete dominance**\n- [ ] Explain how **linked genes** can deviate from expected Mendelian ratios\n- [ ] Connect chromosome behavior during meiosis to the **chromosomal basis of heredity**",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Synapsis",
+              "definition": "The pairing of homologous chromosomes during prophase I of meiosis, allowing aligned gene loci to interact and preparing chromosomes for exchange of corresponding segments."
+            },
+            {
+              "term": "Crossing over",
+              "definition": "The reciprocal exchange of corresponding DNA segments between nonsister chromatids of homologous chromosomes during prophase I, increasing genetic variation in gametes."
+            },
+            {
+              "term": "Independent assortment",
+              "definition": "The random orientation of homologous chromosome pairs at metaphase I, producing different combinations of maternal and paternal chromosomes in gametes; the number of possible chromosome combinations is $$2^n$$, where $$n$$ is the haploid number."
+            },
+            {
+              "term": "Law of segregation",
+              "definition": "The principle that the two alleles for a heritable characteristic separate during gamete formation, so each gamete receives only one allele for each gene."
+            },
+            {
+              "term": "Testcross",
+              "definition": "A mating between an individual with a dominant phenotype but unknown genotype and an individual homozygous recessive in order to infer the unknown genotype from offspring ratios."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A cell with genotype $$AaBb$$ undergoes meiosis. Assuming the two genes assort independently and no crossing over affects these loci, what proportion of gametes is expected to contain the combination $$AB$$?",
+              "options": [
+                "$$\\frac{1}{4}$$",
+                "$$\\frac{1}{2}$$",
+                "$$\\frac{3}{4}$$",
+                "1"
+              ],
+              "correctAnswer": "$$\\frac{1}{4}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which event in meiosis is most directly responsible for reducing the chromosome number from diploid to haploid?",
+              "options": [
+                "Separation of sister chromatids in anaphase II",
+                "Replication of DNA during S phase",
+                "Separation of homologous chromosomes in anaphase I",
+                "Alignment of chromosomes at metaphase II"
+              ],
+              "correctAnswer": "Separation of homologous chromosomes in anaphase I",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "During meiosis I, homologous chromosomes line up independently at the cell equator. This behavior is the basis of ______.",
+              "options": [
+                "independent assortment",
+                "DNA replication",
+                "linked inheritance",
+                "cytokinesis"
+              ],
+              "correctAnswer": "independent assortment",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When an individual showing a dominant trait is crossed with a homozygous recessive individual to determine the unknown genotype, the cross is called a ______.",
+              "options": [
+                "testcross",
+                "monohybrid cross",
+                "dihybrid cross",
+                "back mutation"
+              ],
+              "correctAnswer": "testcross",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Incomplete dominance",
+              "definition": "An inheritance pattern in which a heterozygous individual has a phenotype intermediate between those of the two homozygotes because neither allele is fully expressed over the other."
+            },
+            {
+              "term": "Codominance",
+              "definition": "An inheritance pattern in which both alleles in a heterozygote are fully and simultaneously expressed, so the phenotype shows both gene products."
+            },
+            {
+              "term": "Sex-linked inheritance",
+              "definition": "Transmission of genes located on a sex chromosome, often producing different phenotypic ratios in males and females because one sex has only a single copy of that chromosome."
+            },
+            {
+              "term": "Linked genes",
+              "definition": "Genes located close together on the same chromosome that tend to be inherited together because they do not assort independently unless recombination occurs between them."
+            },
+            {
+              "term": "Recombination frequency",
+              "definition": "The proportion of offspring with nonparental allele combinations produced by crossing over; it is used to estimate the distance between genes on a chromosome, with $$1\\%$$ equivalent to 1 map unit."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In snapdragons, red flowers crossed with white flowers produce pink offspring. Which inheritance pattern best explains this result?",
+              "options": [
+                "Codominance",
+                "Incomplete dominance",
+                "Sex linkage",
+                "Multiple alleles"
+              ],
+              "correctAnswer": "Incomplete dominance",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Two genes on the same chromosome show a recombination frequency of $$8\\%$$. What is the best interpretation of this result?",
+              "options": [
+                "The genes assort independently because they are on different chromosomes",
+                "The genes are linked and are approximately 8 map units apart",
+                "The genes are codominant and therefore inherited together",
+                "The genes cannot undergo crossing over during meiosis"
+              ],
+              "correctAnswer": "The genes are linked and are approximately 8 map units apart",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When both alleles in a heterozygote are fully expressed, as in the human ABO blood group, the inheritance pattern is called ______.",
+              "options": [
+                "codominance",
+                "incomplete dominance",
+                "polygenic inheritance",
+                "pleiotropy"
+              ],
+              "correctAnswer": "codominance",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Genes that are physically close together on the same chromosome tend to be inherited together and are described as ______.",
+              "options": [
+                "linked",
+                "sex-limited",
+                "epistatic",
+                "segregating independently"
+              ],
+              "correctAnswer": "linked",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Gene Expression and Regulation",
+      "description": "DNA replication, transcription, translation, operons, and epigenetic regulation of gene expression.",
+      "note": "# Unit 6: Gene Expression and Regulation\n\n## Overview\nThis unit focuses on how genetic information is copied, expressed, and controlled: **DNA replication**, **transcription**, **translation**, **operon regulation**, and **epigenetic changes**. For the AP exam, you need to understand both the **mechanisms** of these processes and how changes in regulation affect **cell function, phenotype, and inheritance patterns**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **DNA Replication** | The semiconservative copying of DNA before cell division using enzymes such as **DNA polymerase**, **helicase**, and **ligase**. | AP questions often test enzyme roles, strand directionality, and how replication ensures inheritance of genetic information. |\n| **Transcription** | Synthesis of **RNA** from a DNA template by **RNA polymerase**. | You must distinguish transcription from replication and explain how genes are selectively expressed. |\n| **RNA Processing** | In eukaryotes, **pre-mRNA** is modified by **splicing**, **5' cap** addition, and **poly-A tail** addition. | AP often compares **prokaryotic** and **eukaryotic** gene expression and asks how processing affects the final protein. |\n| **Translation** | Ribosomes read **mRNA codons** and assemble amino acids into a polypeptide using **tRNA**. | Codon reading, mutation effects, and protein synthesis are frequent AP topics. |\n| **Gene Regulation** | Control of when, where, and how much a gene is expressed. | Essential for explaining cell differentiation, responses to the environment, and phenotype differences among cells with the same DNA. |\n| **Operons** | Clusters of genes in prokaryotes regulated together by a single promoter and operator. | AP commonly tests **lac** and **trp operons** as examples of inducible vs. repressible systems. |\n| **Mutations and Expression** | Changes in DNA sequence that may alter transcription, translation, or protein structure/function. | You may need to predict the molecular consequences of **substitution**, **insertion**, or **deletion** mutations. |\n| **Epigenetic Regulation** | Heritable changes in gene expression without altering DNA sequence, such as **DNA methylation** and **histone modification**. | AP emphasizes how environmental signals can influence gene expression and phenotype through epigenetic mechanisms. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[DNA] --> B[DNA Replication]\n    A --> C[Transcription]\n    C --> D[\"pre-mRNA (eukaryotes)\"]\n    D --> E[RNA Processing]\n    E --> F[mRNA]\n    F --> G[Translation at Ribosome]\n    G --> H[Polypeptide]\n    H --> I[Functional Protein]\n    J[Gene Regulation] --> C\n    J --> E\n    J --> G\n    K[Epigenetic Changes] --> J\n    L[Mutations] --> A\n    L --> C\n    L --> G\n```\n\n### Central relationships to remember\n1. **DNA stores information**.\n2. **Replication** copies that information for daughter cells.\n3. **Transcription** converts DNA information into RNA.\n4. **Translation** converts RNA information into protein.\n5. **Regulation** determines which genes are expressed.\n6. **Epigenetic modifications** influence access to genes without changing nucleotide sequence.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Definition** | **What You Must Know** |\n|---|---|\n| **Semiconservative replication** | Each new DNA molecule contains **one parental strand** and **one newly synthesized strand**. |\n| **Base-pairing rules** | In DNA: $$A-T$$ and $$G-C$$. In RNA transcription: DNA $$A$$ pairs with RNA $$U$$, and DNA $$C$$ pairs with RNA $$G$$. |\n| **Direction of synthesis** | Nucleic acids are synthesized in the $$5' \\to 3'$$ direction. DNA polymerase adds nucleotides only to the $$3'$$ end. |\n| **Leading vs. lagging strand** | The **leading strand** is synthesized continuously; the **lagging strand** is synthesized discontinuously as **Okazaki fragments**. |\n| **Codon rule** | A **codon** is a sequence of **3 nucleotides** on mRNA that specifies an amino acid or stop signal. |\n| **Start and stop signals** | Translation usually begins at **start codon** $$AUG$$ and ends at a **stop codon**: $$UAA$$, $$UAG$$, or $$UGA$$. |\n| **Gene expression principle** | **Genotype** influences **phenotype** through the production and regulation of **proteins**. |\n| **Epigenetic rule** | Increased **DNA methylation** generally reduces transcription; some **histone modifications** can either increase or decrease gene accessibility. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Similarities** | **Key Differences** | **AP-Relevant Takeaway** |\n|---|---|---|---|\n| **Replication vs. Transcription** | Both use DNA as a template and rely on complementary base pairing. | Replication copies the **entire DNA molecule**; transcription copies **one gene region** into RNA. Replication uses **DNA polymerase**; transcription uses **RNA polymerase**. | Be able to identify which process is occurring from enzyme use, product type, and scope. |\n| **Transcription vs. Translation** | Both are steps in gene expression. | Transcription occurs from **DNA to RNA**; translation occurs from **RNA to protein**. | AP often asks students to trace how a mutation affects both steps. |\n| **Prokaryotic vs. Eukaryotic Gene Expression** | Both use DNA, RNA, ribosomes, and the genetic code. | Prokaryotes lack a nucleus, often use **operons**, and can couple transcription and translation. Eukaryotes separate these processes and perform **RNA processing**. | Know why eukaryotic regulation is often more complex. |\n| **lac Operon vs. trp Operon** | Both are prokaryotic operons regulated by repressor proteins. | **lac** is **inducible** and usually off until lactose is present; **trp** is **repressible** and usually on until tryptophan is abundant. | A classic AP comparison: one responds to the presence of a substrate, the other to the abundance of an end product. |\n\n## Common AP Exam Traps\n\n- Confusing **DNA replication** with **transcription**: replication produces **DNA**, while transcription produces **RNA**.\n- Forgetting that synthesis proceeds only in the $$5' \\to 3'$$ direction, which explains why the **lagging strand** forms **Okazaki fragments**.\n- Assuming all genes are expressed in all cells. In reality, different cell types express different genes because of **regulation**.\n- Mixing up **codon** and **anticodon**: the **codon** is on **mRNA**, while the **anticodon** is on **tRNA**.\n- Thinking epigenetic changes alter the DNA sequence itself; they usually change **gene accessibility** or **transcriptional activity**, not nucleotide order.\n\n## Quick Review Checklist\n\n- [ ] Explain why **DNA replication** is described as **semiconservative**.\n- [ ] Identify the roles of **helicase**, **DNA polymerase**, **ligase**, **RNA polymerase**, **ribosomes**, and **tRNA**.\n- [ ] Describe the difference between **leading-strand** and **lagging-strand** synthesis.\n- [ ] Transcribe a DNA template strand into **mRNA** using correct base-pairing rules.\n- [ ] Explain how **translation** uses codons to produce a specific amino acid sequence.\n- [ ] Compare **prokaryotic** and **eukaryotic** gene expression, especially **RNA processing** and **operons**.\n- [ ] Distinguish between the **lac operon** and the **trp operon** as examples of inducible and repressible control.\n- [ ] Describe how **mutations** or **epigenetic modifications** can alter gene expression and phenotype.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Semiconservative replication",
+              "definition": "A mechanism of copying genetic material in which each newly formed double helix contains one original strand and one newly synthesized strand."
+            },
+            {
+              "term": "Helicase",
+              "definition": "An enzyme that separates the two strands of a double helix by breaking hydrogen bonds at the replication fork."
+            },
+            {
+              "term": "DNA polymerase",
+              "definition": "An enzyme that adds nucleotides to the $$3'$$ end of a growing nucleic acid strand using a template and synthesizes in the $$5'$$ to $$3'$$ direction."
+            },
+            {
+              "term": "Leading and lagging strands",
+              "definition": "The two daughter strands formed during copying, one synthesized continuously toward the replication fork and the other synthesized discontinuously away from it in short segments."
+            },
+            {
+              "term": "Transcription",
+              "definition": "The process in which information in a nucleic acid sequence is used to synthesize a complementary RNA molecule."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A biologist grows cells for one generation in medium containing heavy nitrogen and then transfers them to medium containing light nitrogen. After one round of DNA replication, what pattern would most strongly support the accepted model of DNA replication?",
+              "options": [
+                "All DNA molecules are light only",
+                "All DNA molecules are hybrid, with one heavy strand and one light strand",
+                "Half of the DNA molecules are heavy only and half are light only",
+                "DNA molecules contain dispersed heavy and light segments on each strand"
+              ],
+              "correctAnswer": "All DNA molecules are hybrid, with one heavy strand and one light strand",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A mutation reduces the activity of primase during DNA replication. Which outcome is most likely?",
+              "options": [
+                "The leading strand will be synthesized normally, but the lagging strand will not require primers",
+                "RNA primers will not be produced efficiently, reducing initiation of synthesis on both strands",
+                "Hydrogen bonds between parental strands will not be broken at the replication fork",
+                "Okazaki fragments will be joined more rapidly by ligase"
+              ],
+              "correctAnswer": "RNA primers will not be produced efficiently, reducing initiation of synthesis on both strands",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "During DNA replication, the enzyme that seals breaks in the sugar-phosphate backbone between adjacent Okazaki fragments is ______.",
+              "options": [
+                "DNA ligase",
+                "Helicase",
+                "RNA polymerase",
+                "Topoisomerase"
+              ],
+              "correctAnswer": "DNA ligase",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In transcription, RNA nucleotides pair with the ______ strand of DNA to produce a complementary RNA transcript.",
+              "options": [
+                "template",
+                "coding",
+                "leading",
+                "newly synthesized"
+              ],
+              "correctAnswer": "template",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Translation",
+              "definition": "The process by which ribosomes use the sequence of a messenger RNA to assemble a polypeptide in the correct amino acid order."
+            },
+            {
+              "term": "Codon",
+              "definition": "A three-nucleotide sequence in messenger RNA that specifies a particular amino acid or a start or stop signal during protein synthesis."
+            },
+            {
+              "term": "Operon",
+              "definition": "A cluster of genes and regulatory sequences in prokaryotes that are transcribed together from a single promoter."
+            },
+            {
+              "term": "Repressor",
+              "definition": "A regulatory protein that decreases transcription by binding to a DNA control site and blocking RNA polymerase action."
+            },
+            {
+              "term": "Epigenetic regulation",
+              "definition": "Heritable changes in gene activity caused by modifications to DNA or chromatin structure rather than changes in nucleotide sequence."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In a bacterial inducible system such as the $$lac$$ operon, which condition most directly leads to increased transcription of the structural genes?",
+              "options": [
+                "The repressor binds the operator more tightly",
+                "An inducer inactivates the repressor so RNA polymerase can transcribe the genes",
+                "Corepressors activate the repressor and block transcription",
+                "The promoter is removed from the DNA sequence"
+              ],
+              "correctAnswer": "An inducer inactivates the repressor so RNA polymerase can transcribe the genes",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains how DNA methylation can influence gene expression in eukaryotic cells?",
+              "options": [
+                "It always increases transcription by exposing promoter regions",
+                "It can reduce transcription by promoting tighter chromatin packing or preventing transcription factor binding",
+                "It changes the amino acid sequence of the encoded protein without affecting transcription",
+                "It allows ribosomes to bind more efficiently to messenger RNA"
+              ],
+              "correctAnswer": "It can reduce transcription by promoting tighter chromatin packing or preventing transcription factor binding",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "During protein synthesis, transfer RNA recognizes a codon on messenger RNA through complementary base pairing with its ______.",
+              "options": [
+                "anticodon",
+                "operator",
+                "promoter",
+                "replication fork"
+              ],
+              "correctAnswer": "anticodon",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A regulatory system in which a small molecule activates a repressor so that transcription is turned off is called a ______ operon.",
+              "options": [
+                "repressible",
+                "inducible",
+                "constitutive",
+                "semiconservative"
+              ],
+              "correctAnswer": "repressible",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "unitName": "Natural Selection",
+      "description": "Mechanisms of evolution, natural selection, genetic drift, gene flow, speciation, and phylogenetics.",
+      "note": "# Unit 7: Natural Selection\n\n## Overview\nThis unit explains how **evolution** changes populations over time through mechanisms such as **natural selection**, **genetic drift**, and **gene flow**. It is heavily tested on the AP Biology exam because students must connect **genetic variation**, **population genetics**, **speciation**, and **phylogenetic evidence** to explain how biodiversity arises.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Natural selection** | Differential survival and reproduction of individuals with heritable traits | AP questions often ask you to explain how an environmental pressure changes **allele frequencies** over generations |\n| **Evolution** | Change in a population’s **allele frequencies** over time | The AP exam emphasizes that **populations evolve**, not individuals |\n| **Genetic drift** | Random changes in allele frequencies, especially in small populations | Frequently compared with natural selection; drift is **non-adaptive** and can reduce variation |\n| **Gene flow** | Movement of alleles between populations through migration and reproduction | Important for explaining how populations become more genetically similar or resist speciation |\n| **Hardy-Weinberg equilibrium** | Null model describing a non-evolving population | Used to test whether evolution is occurring and to calculate genotype or allele frequencies |\n| **Speciation** | Formation of new species due to reproductive isolation and divergence | AP often asks about **prezygotic** vs. **postzygotic** barriers and **allopatric** vs. **sympatric** speciation |\n| **Phylogeny** | Evolutionary relationships among organisms | Students must interpret **cladograms** and identify common ancestry, not “more advanced” species |\n| **Fitness** | Relative reproductive success of an organism | AP questions may present traits and ask which phenotype has higher fitness in a given environment |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Genetic variation in population] --> B[Heritable traits differ]\n    B --> C[Environmental pressure acts]\n    C --> D[Some individuals survive/reproduce more]\n    D --> E[Advantageous alleles become more common]\n    E --> F[Population allele frequencies change]\n    F --> G[Evolution by natural selection]\n\n    H[Mutation] --> A\n    I[Sexual reproduction] --> A\n    J[Gene flow] --> A\n    K[Genetic drift] --> F\n\n    F --> L[Population divergence]\n    L --> M[\"Reproductive isolation develops\"]\n    M --> N[Speciation]\n```\n\n### How the major mechanisms differ\n1. **Mutation** creates new alleles.\n2. **Natural selection** increases alleles that improve reproductive success in a specific environment.\n3. **Genetic drift** changes allele frequencies by chance.\n4. **Gene flow** transfers alleles between populations.\n5. Over time, divergence plus **reproductive isolation** can produce **new species**.\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **What You Must Know** |\n|---|---|\n| **Hardy-Weinberg allele frequencies** | $$p + q = 1$$ where $$p$$ is frequency of one allele and $$q$$ is frequency of the other |\n| **Hardy-Weinberg genotype frequencies** | $$p^2 + 2pq + q^2 = 1$$ where $$p^2$$ = homozygous dominant, $$2pq$$ = heterozygous, $$q^2$$ = homozygous recessive |\n| **Condition for evolution** | If observed genotype frequencies differ from Hardy-Weinberg expectations, one or more evolutionary mechanisms may be acting |\n| **Hardy-Weinberg assumptions** | No **mutation**, no **migration**/**gene flow**, very large population, random mating, no **natural selection** |\n| **Natural selection requirement** | For natural selection to act, variation must be **heritable** and linked to differences in **fitness** |\n| **Genetic drift rule** | Drift has the strongest effect in **small populations** and may lead to loss of alleles |\n| **Founder effect** | A small group establishes a new population with allele frequencies different from the original population |\n| **Bottleneck effect** | A population is drastically reduced in size, causing random shifts in allele frequencies and reduced diversity |\n| **Biological species concept** | A species is a group of populations that can interbreed and produce viable, fertile offspring under natural conditions |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Similarities** | **Key Differences** | **AP Exam Significance** |\n|---|---|---|---|\n| **Natural selection vs. genetic drift** | Both change **allele frequencies** over time | Selection is **non-random** and adaptive; drift is **random** and strongest in small populations | Students often confuse adaptive evolution with chance events |\n| **Gene flow vs. genetic drift** | Both alter population genetics | Gene flow usually increases similarity among populations; drift often increases divergence | Helpful in predicting whether speciation is more or less likely |\n| **Allopatric vs. sympatric speciation** | Both result in reproductive isolation | **Allopatric**: geographic barrier separates populations; **sympatric**: isolation evolves without physical separation | AP may ask which evidence supports each mode |\n| **Prezygotic vs. postzygotic barriers** | Both prevent gene exchange between species | **Prezygotic** barriers prevent mating/fertilization; **postzygotic** barriers act after fertilization | Essential for explaining how species remain distinct |\n\n```mermaid\nflowchart LR\n    A[One population] --> B[Variation accumulates]\n    B --> C{Type of isolation}\n    C --> D[Geographic separation]\n    C --> E[No geographic separation]\n    D --> F[Allopatric speciation]\n    E --> G[Sympatric speciation]\n    F --> H[Reproductive isolation]\n    G --> H[Reproductive isolation]\n    H --> I[Distinct species]\n```\n\n## Common AP Exam Traps\n- **Individuals do not evolve**; **populations** evolve as **allele frequencies** change over generations.\n- **Natural selection** does not create new traits because organisms “need” them; selection acts on existing **heritable variation**.\n- A trait that is favorable in one environment is not automatically favorable in another; **fitness is context-dependent**.\n- **Genetic drift** is not the same as natural selection; drift is due to chance, not increased adaptation.\n- On **phylogenetic trees**, taxa at the tips are not “more evolved.” The key idea is **common ancestry** and relative branching patterns.\n\n## Quick Review Checklist\n- [ ] Define **evolution** as a change in **allele frequencies** in a population over time.\n- [ ] Explain how **natural selection** requires heritable variation and differential reproductive success.\n- [ ] Distinguish **natural selection**, **genetic drift**, and **gene flow** as mechanisms of evolution.\n- [ ] Use $$p + q = 1$$ and $$p^2 + 2pq + q^2 = 1$$ to solve **Hardy-Weinberg** problems.\n- [ ] State the five assumptions required for **Hardy-Weinberg equilibrium**.\n- [ ] Compare **founder effect** and **bottleneck effect** as forms of **genetic drift**.\n- [ ] Differentiate **prezygotic** and **postzygotic** reproductive barriers.\n- [ ] Interpret a **phylogenetic tree** to identify shared ancestry and evolutionary relationships.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Natural selection",
+              "definition": "A mechanism of evolution in which individuals with heritable traits that improve survival or reproductive success in a particular environment leave more offspring, causing allele frequencies to change over generations."
+            },
+            {
+              "term": "Fitness",
+              "definition": "The relative contribution of an individual’s genotype or phenotype to the next generation, measured by reproductive success rather than strength or longevity alone."
+            },
+            {
+              "term": "Directional selection",
+              "definition": "A pattern of differential survival and reproduction that favors one extreme phenotype, often shifting the population mean over time."
+            },
+            {
+              "term": "Stabilizing selection",
+              "definition": "A pattern of differential survival and reproduction that favors intermediate phenotypes and acts against both extremes, reducing variation around the mean."
+            },
+            {
+              "term": "Disruptive selection",
+              "definition": "A pattern of differential survival and reproduction that favors both extreme phenotypes over intermediate forms, which can increase phenotypic variation."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A population of insects contains heritable variation in body color. After several generations on darker tree bark, the frequency of dark-bodied individuals increases because birds more often capture light-bodied insects. Which statement best explains this change?",
+              "options": [
+                "The environment induced individual insects to become darker during their lifetimes.",
+                "Dark coloration increased reproductive success in that environment, so alleles associated with that phenotype became more common.",
+                "Bird predation caused a random change in allele frequency unrelated to phenotype.",
+                "All light-bodied insects mutated into dark-bodied insects in response to predation."
+              ],
+              "correctAnswer": "Dark coloration increased reproductive success in that environment, so alleles associated with that phenotype became more common.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In a population of flowering plants, individuals with very short stems and very tall stems produce fewer seeds than individuals with intermediate stem height. If stem height is heritable, which evolutionary pattern is most likely occurring?",
+              "options": [
+                "Directional selection",
+                "Stabilizing selection",
+                "Disruptive selection",
+                "Genetic drift"
+              ],
+              "correctAnswer": "Stabilizing selection",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When individuals with one extreme phenotype have higher reproductive success than others, the population is experiencing ______.",
+              "options": [
+                "directional selection",
+                "stabilizing selection",
+                "gene flow",
+                "Hardy-Weinberg equilibrium"
+              ],
+              "correctAnswer": "directional selection",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The measure of an organism’s relative reproductive contribution to the next generation is called ______.",
+              "options": [
+                "fitness",
+                "genetic drift",
+                "bottleneck effect",
+                "reproductive isolation"
+              ],
+              "correctAnswer": "fitness",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Genetic drift",
+              "definition": "A change in allele frequencies caused by chance events, especially pronounced in small populations, which can reduce genetic variation independently of adaptive value."
+            },
+            {
+              "term": "Gene flow",
+              "definition": "The transfer of alleles between populations through migration and interbreeding, often reducing genetic differences between those populations."
+            },
+            {
+              "term": "Allopatric speciation",
+              "definition": "The formation of new species after populations become geographically separated and diverge through mutation, selection, and drift."
+            },
+            {
+              "term": "Reproductive isolation",
+              "definition": "A set of barriers that prevent populations from producing viable, fertile offspring with one another, thereby limiting genetic exchange."
+            },
+            {
+              "term": "Phylogeny",
+              "definition": "A representation of evolutionary relationships among organisms based on common ancestry, often inferred from morphological or molecular evidence."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A hurricane drastically reduces a large mainland lizard population to 12 surviving individuals. Several generations later, the population has recovered in size but shows much lower genetic variation than before the storm. Which process best explains this outcome?",
+              "options": [
+                "Gene flow",
+                "Bottleneck effect",
+                "Directional selection",
+                "Adaptive radiation"
+              ],
+              "correctAnswer": "Bottleneck effect",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Two populations of the same bird species become separated by the formation of a canyon. Over many generations, they accumulate genetic differences and eventually can no longer produce fertile offspring. Which process most directly led to the formation of two species?",
+              "options": [
+                "Sympatric speciation caused by polyploidy",
+                "Allopatric speciation following geographic isolation",
+                "Gene flow maintaining homogeneity between populations",
+                "Stabilizing selection within a single interbreeding population"
+              ],
+              "correctAnswer": "Allopatric speciation following geographic isolation",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The movement of alleles from one population to another through migration is called ______.",
+              "options": [
+                "gene flow",
+                "genetic drift",
+                "sexual selection",
+                "convergent evolution"
+              ],
+              "correctAnswer": "gene flow",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When chance events cause allele frequencies to change more dramatically in small populations than in large ones, the mechanism is ______.",
+              "options": [
+                "genetic drift",
+                "natural selection",
+                "artificial selection",
+                "coevolution"
+              ],
+              "correctAnswer": "genetic drift",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 8,
+      "unitName": "Ecology",
+      "description": "Population ecology, community interactions, ecosystem energy flow, biogeochemical cycles, and global change.",
+      "note": "# Unit 8: Ecology\n\n## Overview\n**Ecology** examines how organisms interact with one another and with their environment across multiple scales, from **populations** to **ecosystems** and the **biosphere**. In AP Biology, this unit matters because it connects data interpretation, graph analysis, and cause-and-effect reasoning about **population dynamics**, **energy flow**, **nutrient cycling**, and **human impacts on Earth systems**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Population growth** | Changes in population size over time due to **births, deaths, immigration, and emigration** | AP questions often ask students to interpret **exponential** vs. **logistic growth** and identify factors that limit growth |\n| **Carrying capacity** | The maximum population size an environment can sustain long-term | Essential for explaining why populations level off and how **resource limitation** shapes ecosystems |\n| **Density-dependent vs. density-independent factors** | Population controls that either increase with crowding or act regardless of population density | Frequently tested in scenarios involving **disease**, **competition**, **storms**, **fires**, and **climate events** |\n| **Community interactions** | Relationships among species, such as **competition**, **predation**, **herbivory**, **mutualism**, **commensalism**, and **parasitism** | AP exam items often ask students to predict how one species affects another and how interactions influence **natural selection** |\n| **Trophic structure and energy flow** | Movement of energy through **producers**, **consumers**, and **decomposers** in food chains/webs | Students must explain why energy decreases between trophic levels and why ecosystems support fewer organisms at higher levels |\n| **Primary productivity** | Rate at which producers capture and store energy as organic molecules | Used to connect **photosynthesis**, **biomass**, and ecosystem energy availability |\n| **Biogeochemical cycles** | Cycling of matter such as **water**, **carbon**, **nitrogen**, and **phosphorus** between living and nonliving reservoirs | AP questions emphasize how matter is **recycled**, unlike energy, and how human activity alters these cycles |\n| **Global change** | Large-scale environmental shifts, including **climate change**, **eutrophication**, **habitat loss**, and **invasive species spread** | Important for applying ecological principles to real-world data and evaluating ecosystem responses to disturbance |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Sunlight] --> B[Producers]\n    B --> C[Primary Consumers]\n    C --> D[Secondary Consumers]\n    D --> E[Tertiary Consumers]\n    B --> F[Detritus]\n    C --> F\n    D --> F\n    E --> F\n    F --> G[Decomposers]\n    G --> H[Inorganic Nutrients in Soil/Water]\n    H --> B\n    B --> I[Heat Loss]\n    C --> I\n    D --> I\n    E --> I\n    G --> I\n```\n\n```mermaid\nflowchart LR\n    A[Population Introduced] --> B[Resources Abundant]\n    B --> C[Rapid Growth]\n    C --> D[\"Environmental Resistance (competition, predation, disease)\"]\n    D --> E[Growth Slows]\n    E --> F[Population Fluctuates Around Carrying Capacity]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Meaning / Use** |\n|---|---|\n| $$\\Delta N = \\left(B + I\\right) - \\left(D + E\\right)$$ | Change in population size equals **births + immigration - deaths - emigration** |\n| $$\\frac{dN}{dt} = rN$$ | **Exponential growth**: population grows at a constant per capita rate when resources are effectively unlimited |\n| $$\\frac{dN}{dt} = rN\\left(\\frac{K - N}{K}\\right)$$ | **Logistic growth**: growth slows as population size $$N$$ approaches **carrying capacity** $$K$$ |\n| **Density-dependent regulation** | Limiting factors such as **competition**, **disease**, and **predation** become stronger as population density rises |\n| **Density-independent regulation** | Factors such as **drought**, **storms**, **fires**, and **temperature extremes** affect populations regardless of density |\n| **Ten percent rule** | On average, only about $$10\\%$$ of energy at one trophic level becomes biomass at the next trophic level |\n| $$\\text{NPP} = \\text{GPP} - R$$ | **Net primary productivity** equals **gross primary productivity** minus energy used in **cellular respiration** |\n| **Energy flows; matter cycles** | Energy enters ecosystems, moves through trophic levels, and is lost as heat, while matter is continuously recycled |\n| **Competitive exclusion principle** | Two species occupying the same niche cannot stably coexist if they compete for identical limiting resources |\n| **Keystone species principle** | A species with a disproportionately large effect on community structure relative to its abundance |\n\n## Connections & Comparisons\n\n| **Comparison** | **Concept 1** | **Concept 2** | **Key Distinction / Connection** |\n|---|---|---|---|\n| **Exponential vs. Logistic Growth** | **Exponential** growth occurs when resources are abundant | **Logistic** growth occurs when limiting factors increase | Exponential produces a **J-shaped** pattern; logistic produces an **S-shaped** pattern approaching $$K$$ |\n| **Energy vs. Matter** | **Energy** moves one-way through ecosystems and is lost as heat | **Matter** is recycled through biological and geochemical processes | AP questions often test whether students can distinguish **transfer** from **cycling** |\n| **Food Chain vs. Food Web** | A **food chain** shows one linear feeding path | A **food web** shows multiple interconnected feeding relationships | Food webs better represent ecosystem complexity and indirect effects |\n| **Fundamental vs. Realized Niche** | **Fundamental niche** is the full potential range of conditions/resources a species could use | **Realized niche** is the actual niche used in the presence of competition and biotic limits | Useful for explaining why species distributions are often narrower than their physiological tolerances |\n\n## Common AP Exam Traps\n- Confusing **energy flow** with **matter cycling**: energy is **not recycled**; it is lost as heat at each transfer.\n- Assuming population growth continues exponentially forever; in real ecosystems, **limiting factors** usually produce **logistic growth**.\n- Mixing up **gross primary productivity** and **net primary productivity**; **NPP** is what remains after producers use energy for **respiration**.\n- Treating all species interactions as direct; AP questions often include **indirect effects**, such as predator removal increasing herbivores and reducing plant biomass.\n- Forgetting that **phosphorus** typically lacks a major atmospheric phase, unlike the **carbon** and **nitrogen** cycles.\n\n## Quick Review Checklist\n- [ ] Explain the difference between **exponential** and **logistic** population growth using both words and graphs.\n- [ ] Identify **density-dependent** and **density-independent** factors in ecological scenarios.\n- [ ] Describe major **community interactions** and predict their effects on population sizes.\n- [ ] Interpret a **food web** and explain how changes at one trophic level can affect others.\n- [ ] Use $$\\text{NPP} = \\text{GPP} - R$$ to explain ecosystem productivity.\n- [ ] Explain why only a small fraction of energy passes from one trophic level to the next.\n- [ ] Compare the **carbon**, **nitrogen**, **phosphorus**, and **water** cycles in terms of reservoirs and movement of matter.\n- [ ] Describe how human activities such as **fossil fuel combustion**, **deforestation**, **fertilizer runoff**, and **introduction of invasive species** alter ecosystems and global systems.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Density-dependent factor",
+              "definition": "A limiting influence whose effect on population growth becomes stronger as population size increases, often through competition, disease, or predation."
+            },
+            {
+              "term": "Exponential growth",
+              "definition": "A pattern in which the rate of increase is proportional to the current population size, producing a J-shaped curve when resources are abundant."
+            },
+            {
+              "term": "Logistic growth",
+              "definition": "A population growth pattern that begins rapidly but slows as resource limits are approached, producing an S-shaped curve around a maximum sustainable size."
+            },
+            {
+              "term": "Carrying capacity",
+              "definition": "The largest population size an environment can sustain over time given available resources and other ecological constraints."
+            },
+            {
+              "term": "Competitive exclusion",
+              "definition": "The outcome in which two species using the same limiting resources in the same way cannot stably coexist, leading one to be eliminated locally or forced into a different niche."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A biologist monitors a population of paramecia growing in a closed flask with finite nutrients. The population initially increases rapidly, but growth rate declines as the population nears a stable size. Which explanation best accounts for this pattern?",
+              "options": [
+                "Density-independent mortality has increased because the flask volume expanded.",
+                "The population is exhibiting logistic growth as resource limitation intensifies near carrying capacity.",
+                "The population is experiencing exponential growth because births remain constant over time.",
+                "The population has entered a mutualistic interaction that raises its intrinsic growth rate indefinitely."
+              ],
+              "correctAnswer": "The population is exhibiting logistic growth as resource limitation intensifies near carrying capacity.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Two barnacle species occupy the same rocky intertidal zone. When grown separately, each can survive across a broad vertical range, but when grown together, one species is restricted to the upper zone because of competition. Which principle is best illustrated?",
+              "options": [
+                "Competitive exclusion resulting from niche overlap",
+                "Primary succession following disturbance",
+                "Predator-mediated coexistence through top-down control",
+                "Density-independent regulation by abiotic stress"
+              ],
+              "correctAnswer": "Competitive exclusion resulting from niche overlap",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When resources are effectively unlimited, population growth can be approximated by the model $$\\frac{dN}{dt}=rN$$, which describes ______.",
+              "options": [
+                "logistic growth",
+                "exponential growth",
+                "zero population growth",
+                "density-dependent regulation"
+              ],
+              "correctAnswer": "exponential growth",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "A disease that spreads more rapidly as population density increases is an example of a ______ factor.",
+              "options": [
+                "density-independent",
+                "biotic potential",
+                "density-dependent",
+                "abiotic tolerance"
+              ],
+              "correctAnswer": "density-dependent",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Gross primary productivity",
+              "definition": "The total rate at which producers capture and store chemical energy through photosynthesis in a given area and time."
+            },
+            {
+              "term": "Net primary productivity",
+              "definition": "The rate at which producers accumulate biomass after subtracting the energy used for cellular respiration from total captured energy."
+            },
+            {
+              "term": "Biogeochemical cycle",
+              "definition": "The movement of matter through living organisms, the atmosphere, hydrosphere, and geologic reservoirs."
+            },
+            {
+              "term": "Nitrogen fixation",
+              "definition": "The conversion of atmospheric $$N_2$$ into ammonia or related compounds that can be used to build organic molecules."
+            },
+            {
+              "term": "Eutrophication",
+              "definition": "The nutrient enrichment of aquatic systems that often causes algal blooms, oxygen depletion, and loss of biodiversity."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best explains why only a small fraction of energy at one trophic level is available to the next trophic level?",
+              "options": [
+                "Most energy is converted into biomass that cannot be consumed by higher trophic levels.",
+                "Most energy is lost as heat through metabolic processes and used for maintenance rather than stored as new biomass.",
+                "Energy is destroyed during photosynthesis and cannot be transferred efficiently.",
+                "Consumers transfer all acquired energy upward, but decomposers intercept it before predators can feed."
+              ],
+              "correctAnswer": "Most energy is lost as heat through metabolic processes and used for maintenance rather than stored as new biomass.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A coastal estuary receives increased fertilizer runoff from nearby agriculture. Over time, algal blooms increase, dissolved oxygen drops, and fish mortality rises. Which process is most directly responsible for the low oxygen levels?",
+              "options": [
+                "Increased cellular respiration by decomposers breaking down excess organic matter",
+                "Reduced nitrogen fixation by free-living soil bacteria",
+                "Decreased evaporation causing thermal inversion in the estuary",
+                "Greater light penetration stimulating deeper photosynthesis"
+              ],
+              "correctAnswer": "Increased cellular respiration by decomposers breaking down excess organic matter",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The amount of energy captured by producers minus the energy they use in respiration is called ______.",
+              "options": [
+                "gross primary productivity",
+                "net primary productivity",
+                "secondary productivity",
+                "trophic efficiency"
+              ],
+              "correctAnswer": "net primary productivity",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The conversion of atmospheric $$N_2$$ into biologically usable forms is called ______.",
+              "options": [
+                "denitrification",
+                "ammonification",
+                "nitrogen fixation",
+                "assimilation"
+              ],
+              "correctAnswer": "nitrogen fixation",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

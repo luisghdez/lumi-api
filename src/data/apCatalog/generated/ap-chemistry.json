@@ -1,0 +1,1373 @@
+{
+  "apSubject": "AP Chemistry",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Atomic Structure and Properties",
+      "description": "Moles, mass spectrometry, electron configuration, photoelectron spectroscopy, and periodic trends.",
+      "note": "# Unit 1: Atomic Structure and Properties\n\n## Overview\nThis unit introduces the particle-level structure of atoms and how that structure explains measurable properties such as **mass**, **electron arrangement**, and **periodic trends**. It matters on the AP exam because students must connect representations like **electron configurations**, **mass spectra**, and **photoelectron spectra** to atomic identity, ion formation, and trends across the periodic table.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Mole concept** | The **mole** links particles, mass, and measurable quantities in the lab. | AP questions often require converting between **grams**, **moles**, and **number of particles**. |\n| **Average atomic mass** | The weighted average mass of an element’s naturally occurring isotopes. | You may need to calculate average mass from isotope abundance data or interpret why periodic table masses are not whole numbers. |\n| **Isotopes** | Atoms of the same element with the same number of protons but different numbers of neutrons. | AP items test whether students can distinguish changes in **mass number** from changes in **chemical identity**. |\n| **Mass spectrometry** | A technique that separates ions by **mass-to-charge ratio** and reveals isotopic composition. | Students must interpret spectra to identify isotopes and estimate **relative abundance** and **average atomic mass**. |\n| **Electron configuration** | The arrangement of electrons in orbitals and subshells. | AP questions connect configurations to **valence electrons**, **reactivity**, **ion formation**, and **periodic position**. |\n| **Photoelectron spectroscopy** | A method that measures the energy required to remove electrons from atoms. | AP often asks students to match **PES peaks** to subshells and explain differences in **binding energy**. |\n| **Effective nuclear charge** | The net positive attraction experienced by electrons from the nucleus after shielding is considered. | This explains many periodic trends, especially **atomic radius**, **ionization energy**, and **electron affinity**. |\n| **Periodic trends** | Patterns in properties across periods and down groups. | A major AP skill is justifying trends using **Coulombic attraction**, **distance**, and **shielding**. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Count particles or identify isotopes\"] --> B[\"Convert using the mole concept\"]\n    B --> C[\"Determine mass, moles, or number of atoms\"]\n    C --> D[\"Analyze atomic composition\"]\n    D --> E[\"Write electron configuration\"]\n    E --> F[\"Predict valence electrons and ion formation\"]\n    F --> G[\"Interpret PES or mass spectrum data\"]\n    G --> H[\"Explain periodic trends using structure\"]\n```\n\nA second high-value relationship for this unit is how atomic structure leads to observable data:\n\n```mermaid\nflowchart LR\n    A[\"Number of protons\"] --> B[\"Element identity\"]\n    A --> C[\"Nuclear attraction\"]\n    D[\"Number of neutrons\"] --> E[\"Isotope mass\"]\n    F[\"Number of electrons\"] --> G[\"Electron configuration\"]\n    G --> H[\"Subshell energies\"]\n    H --> I[\"PES peak pattern\"]\n    E --> J[\"Mass spectrum peaks\"]\n    C --> K[\"Periodic trends\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **What You Need to Know** |\n|---|---|\n| $$1\\ \\text{mol} = 6.022 \\times 10^{23}\\ \\text{particles}$$ | **Avogadro’s number** connects moles to atoms, molecules, or formula units. |\n| $$n = \\frac{m}{M}$$ | **Moles** equal mass divided by molar mass. |\n| $$N = n \\times 6.022 \\times 10^{23}$$ | Convert moles to number of particles. |\n| $$\\text{Average atomic mass} = \\sum \\left( \\text{isotope mass} \\times \\text{fractional abundance} \\right)$$ | Use **decimal abundances**, not percentages. |\n| $$A = Z + N$$ | **Mass number** equals protons plus neutrons, where $$Z$$ is atomic number and $$N$$ is neutrons. |\n| **Aufbau principle** | Electrons fill lowest-energy orbitals first. |\n| **Pauli exclusion principle** | An orbital holds at most **2 electrons** with opposite spins. |\n| **Hund’s rule** | Electrons occupy equal-energy orbitals singly before pairing. |\n| **Binding energy in PES** | Electrons with higher binding energy are held more tightly by the nucleus. |\n| **Coulombic attraction** | Stronger attraction occurs when nuclear charge is greater and electron distance is smaller. This helps explain trends without needing a specific equation on the exam. |\n\n### Common electron-filling order\n$$1s \\rightarrow 2s \\rightarrow 2p \\rightarrow 3s \\rightarrow 3p \\rightarrow 4s \\rightarrow 3d \\rightarrow 4p$$\n\n### High-yield ion rule\nFor **main-group elements**, ions usually form to reach a more stable valence arrangement:\n- **Group 1**: tends to form $$+1$$\n- **Group 2**: tends to form $$+2$$\n- **Group 16**: tends to form $$-2$$\n- **Group 17**: tends to form $$-1$$\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Relate** | **Key Difference** |\n|---|---|---|\n| **Mass spectrometry** vs. **photoelectron spectroscopy** | Both produce spectra that reveal information about atoms. | **Mass spectrometry** gives isotope and mass information; **PES** gives electron energy and subshell information. |\n| **Atomic number** vs. **mass number** | Both describe atomic structure. | **Atomic number** is the number of protons and defines the element; **mass number** is protons plus neutrons and can vary among isotopes. |\n| **Atomic radius** vs. **ionization energy** | Both depend on attraction between nucleus and electrons. | Smaller radius usually corresponds to higher ionization energy because electrons are held more tightly. |\n| **Shielding** vs. **effective nuclear charge** | Both affect how strongly valence electrons are attracted to the nucleus. | **Shielding** reduces attraction; higher **effective nuclear charge** increases attraction. |\n\n### Periodic trend summary\n\n```mermaid\nflowchart TD\n    A[\"Across a period\"] --> B[\"Effective nuclear charge increases\"]\n    B --> C[\"Atomic radius decreases\"]\n    B --> D[\"Ionization energy increases\"]\n    B --> E[\"Electron affinity becomes more favorable in many cases\"]\n    F[\"Down a group\"] --> G[\"Distance and shielding increase\"]\n    G --> H[\"Atomic radius increases\"]\n    G --> I[\"Ionization energy decreases\"]\n```\n\n## Common AP Exam Traps\n\n- Confusing **mass number** with **average atomic mass**. Mass number applies to one isotope; average atomic mass is a weighted average of all naturally occurring isotopes.\n- Assuming that more neutrons changes the element. It does not; the number of **protons** determines element identity.\n- Reading **PES** incorrectly: taller peaks mean **more electrons** in a subshell, while peak position reflects **binding energy**.\n- Forgetting that **electrons are removed from the highest principal energy level first** when forming cations. For example, in transition metals, electrons are removed from $$4s$$ before $$3d$$.\n- Explaining periodic trends with memorization only. AP scoring usually expects reasoning using **distance**, **shielding**, and **effective nuclear charge**.\n\n## Quick Review Checklist\n\n- [ ] I can use $$n = \\frac{m}{M}$$ to convert between **mass** and **moles**.\n- [ ] I can convert between **moles** and **number of particles** using $$6.022 \\times 10^{23}$$.\n- [ ] I can distinguish **protons**, **neutrons**, **electrons**, **atomic number**, and **mass number**.\n- [ ] I can calculate **average atomic mass** from isotope abundances.\n- [ ] I can interpret a **mass spectrum** to identify isotopes and estimate relative abundance.\n- [ ] I can write **electron configurations** and apply **Aufbau**, **Pauli**, and **Hund**.\n- [ ] I can interpret **photoelectron spectroscopy** data in terms of subshells and binding energies.\n- [ ] I can justify trends in **atomic radius**, **ionization energy**, and related properties using **Coulombic attraction**, **shielding**, and **effective nuclear charge**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Mole",
+              "definition": "The amount of substance containing $$6.022 \\times 10^{23}$$ specified entities, providing a counting bridge between particles and measurable samples."
+            },
+            {
+              "term": "Molar mass",
+              "definition": "The mass of one mole of a substance, usually expressed in $$\\mathrm{g\\,mol^{-1}}$$, and numerically equal to the sum of average atomic masses for a chemical formula."
+            },
+            {
+              "term": "Average atomic mass",
+              "definition": "The weighted mean of the masses of an element’s naturally occurring isotopes, based on their relative abundances."
+            },
+            {
+              "term": "Isotopes",
+              "definition": "Atoms of the same element that have the same number of protons but different numbers of neutrons, giving them different masses."
+            },
+            {
+              "term": "Mass spectrometry",
+              "definition": "An analytical technique that ionizes particles and separates them by their mass-to-charge ratios to determine isotopic masses and relative abundances."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "An element exists as two naturally occurring isotopes: $$^{10}\\mathrm{X}$$ with abundance $$19.9\\%$$ and $$^{11}\\mathrm{X}$$ with abundance $$80.1\\%$$. What is the average atomic mass of X?",
+              "options": [
+                "$$10.20\\ \\mathrm{amu}$$",
+                "$$10.80\\ \\mathrm{amu}$$",
+                "$$10.50\\ \\mathrm{amu}$$",
+                "$$11.00\\ \\mathrm{amu}$$"
+              ],
+              "correctAnswer": "$$10.80\\ \\mathrm{amu}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A sample contains $$3.01 \\times 10^{23}$$ molecules of $$\\mathrm{CO_2}$$. What amount of substance is present?",
+              "options": [
+                "$$0.250\\ \\mathrm{mol}$$",
+                "$$0.500\\ \\mathrm{mol}$$",
+                "$$1.00\\ \\mathrm{mol}$$",
+                "$$2.00\\ \\mathrm{mol}$$"
+              ],
+              "correctAnswer": "$$0.500\\ \\mathrm{mol}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The atomic mass shown on the periodic table is a weighted average because elements often exist as ______ with different natural abundances.",
+              "options": [
+                "ions",
+                "isotopes",
+                "allotropes",
+                "molecules"
+              ],
+              "correctAnswer": "isotopes",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In a mass spectrum, atoms are separated based primarily on their ______ ratio.",
+              "options": [
+                "charge-to-volume",
+                "mass-to-charge",
+                "neutron-to-proton",
+                "energy-to-frequency"
+              ],
+              "correctAnswer": "mass-to-charge",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Electron configuration",
+              "definition": "A representation showing how electrons are distributed among atomic orbitals and energy levels in an atom or ion."
+            },
+            {
+              "term": "Ground-state electron configuration",
+              "definition": "The lowest-energy arrangement of electrons in orbitals for a given atom or ion."
+            },
+            {
+              "term": "Photoelectron spectroscopy",
+              "definition": "A technique in which electromagnetic radiation ejects electrons from atoms, allowing determination of binding energies and inference of occupied energy levels."
+            },
+            {
+              "term": "Effective nuclear charge",
+              "definition": "The net positive attraction experienced by an electron after accounting for shielding by other electrons."
+            },
+            {
+              "term": "Atomic radius",
+              "definition": "A measure of atomic size, commonly inferred from bonding or nonbonding distances, that generally decreases across a period and increases down a group."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which electron configuration represents the ground state of phosphorus, $$Z=15$$?",
+              "options": [
+                "$$1s^2\\ 2s^2\\ 2p^6\\ 3s^2\\ 3p^3$$",
+                "$$1s^2\\ 2s^2\\ 2p^6\\ 3s^1\\ 3p^4$$",
+                "$$1s^2\\ 2s^2\\ 2p^6\\ 3s^2\\ 3d^3$$",
+                "$$1s^2\\ 2s^2\\ 2p^5\\ 3s^2\\ 3p^4$$"
+              ],
+              "correctAnswer": "$$1s^2\\ 2s^2\\ 2p^6\\ 3s^2\\ 3p^3$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which statement best explains why the first ionization energy of magnesium is greater than that of sodium?",
+              "options": [
+                "Magnesium has a lower nuclear charge than sodium.",
+                "Magnesium has more occupied energy levels than sodium.",
+                "Magnesium experiences a greater effective nuclear charge on its valence electrons.",
+                "Magnesium has fewer protons and therefore attracts electrons less strongly."
+              ],
+              "correctAnswer": "Magnesium experiences a greater effective nuclear charge on its valence electrons.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a photoelectron spectrum, a peak at higher binding energy corresponds to electrons that are ______ strongly by the nucleus.",
+              "options": [
+                "less attracted",
+                "more attracted",
+                "completely shielded",
+                "farther removed"
+              ],
+              "correctAnswer": "more attracted",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Across a period from left to right, atomic radius generally decreases because the valence electrons experience increasing ______.",
+              "options": [
+                "shielding only",
+                "principal quantum number",
+                "effective nuclear charge",
+                "electron emission"
+              ],
+              "correctAnswer": "effective nuclear charge",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Compound Structure and Properties",
+      "description": "Lewis structures, VSEPR, hybridization, bond types, and properties of ionic, covalent, and metallic compounds.",
+      "note": "# Unit 2: Compound Structure and Properties\n\n## Overview\nThis unit focuses on how the **arrangement of electrons** determines the **structure, bonding, and properties** of compounds. On the AP Chemistry exam, you must connect **Lewis structures**, **VSEPR geometry**, **hybridization**, and **bonding type** to explain molecular shape, polarity, intermolecular behavior, and material properties.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Lewis structures** | Diagrams showing **valence electrons**, **bonds**, and **lone pairs** in molecules or ions | Used to predict bonding, resonance, formal charge, and molecular geometry |\n| **Octet rule and exceptions** | The tendency of many atoms to achieve $$8$$ valence electrons, with exceptions such as **electron-deficient**, **expanded-octet**, and **odd-electron** species | AP questions often test when the octet rule works and when it does not |\n| **Formal charge** | A bookkeeping tool for evaluating the most plausible Lewis structure | Helps identify the **best structure** and explain resonance contributors |\n| **Resonance** | Multiple valid Lewis structures for the same arrangement of atoms, differing only in electron placement | Explains **delocalized bonding**, equivalent bond lengths, and charge distribution |\n| **VSEPR theory** | A model predicting shape by minimizing repulsions among electron domains | Essential for identifying **molecular geometry**, bond angles, and lone-pair effects |\n| **Hybridization** | Mixing of atomic orbitals to form bonding orbitals such as $$sp$$, $$sp^2$$, and $$sp^3$$ | Connects structure to orbital picture and often appears with geometry questions |\n| **Bond polarity and molecular polarity** | Unequal sharing of electrons due to electronegativity differences; overall polarity depends on both bond dipoles and shape | Needed to explain intermolecular forces, solubility trends, and physical properties |\n| **Types of solids and bonding** | **Ionic**, **molecular covalent**, **network covalent**, and **metallic** substances have different structures and properties | AP questions frequently ask students to justify melting point, conductivity, hardness, and brittleness |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Count total valence electrons] --> B[Choose central atom]\n    B --> C[Draw skeletal structure]\n    C --> D[Place single bonds]\n    D --> E[Distribute remaining electrons to satisfy outer atoms]\n    E --> F[Place leftover electrons on central atom]\n    F --> G[\"Check octets and exceptions (H, B, expanded octet, odd-electron)\"]\n    G --> H[Consider multiple bonds if needed]\n    H --> I[Calculate formal charges]\n    I --> J[Evaluate resonance structures]\n    J --> K[Determine electron-domain geometry]\n    K --> L[Determine molecular geometry]\n    L --> M[Assess bond polarity and overall polarity]\n    M --> N[Relate structure to properties]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **What You Must Know** |\n|---|---|\n| **Valence electron counting** | Count total valence electrons from all atoms, adjusting for ionic charge: add electrons for negative charge, subtract for positive charge |\n| **Formal charge** | $$\\text{Formal charge} = \\text{valence e}^- - \\text{nonbonding e}^- - \\frac{1}{2}(\\text{bonding e}^-)$$ |\n| **Best Lewis structure rule** | Preferred structures usually minimize **formal charges** and place negative formal charge on the **more electronegative atom** |\n| **Electron domains** | Each **single bond**, **double bond**, **triple bond**, or **lone pair** counts as **one electron domain** in VSEPR |\n| **Common electron-domain geometries** | $$2 \\to \\text{linear}$$; $$3 \\to \\text{trigonal planar}$$; $$4 \\to \\text{tetrahedral}$$; $$5 \\to \\text{trigonal bipyramidal}$$; $$6 \\to \\text{octahedral}$$ |\n| **Common hybridizations** | $$2 \\text{ domains} \\to sp$$; $$3 \\text{ domains} \\to sp^2$$; $$4 \\text{ domains} \\to sp^3$$ |\n| **Bond order in resonance** | Average bond order may be fractional when electrons are delocalized across multiple bonds |\n| **Polarity rule** | A molecule is polar if it has **polar bonds** arranged so their dipoles do **not cancel** |\n| **Ionic compound properties** | Strong electrostatic attractions lead to high melting points; conductivity occurs when ions are **mobile** in molten or aqueous states |\n| **Metallic bonding model** | Metal cations in a lattice are attracted to **delocalized valence electrons**, explaining conductivity and malleability |\n\n### Useful Geometry Reminders\n- $$AX_2 \\to \\text{linear},\\ 180^\\circ$$  \n- $$AX_3 \\to \\text{trigonal planar},\\ 120^\\circ$$  \n- $$AX_4 \\to \\text{tetrahedral},\\ 109.5^\\circ$$  \n- $$AX_3E \\to \\text{trigonal pyramidal}$$  \n- $$AX_2E_2 \\to \\text{bent}$$  \n\n## Connections & Comparisons\n\n| **Feature** | **Ionic** | **Covalent Molecular** | **Network Covalent** | **Metallic** |\n|---|---|---|---|---|\n| **Particles present** | Cations and anions | Discrete molecules | Atoms in extended covalent network | Metal cations with delocalized electrons |\n| **Type of attraction** | Electrostatic attraction | Covalent bonds within molecules; intermolecular forces between molecules | Covalent bonds throughout solid | Attraction between metal nuclei and mobile electrons |\n| **Melting point** | Usually high | Usually lower | Very high | Variable, often moderate to high |\n| **Electrical conductivity** | Conducts when molten or aqueous | Usually poor conductor | Usually poor, except forms like graphite | Good conductor as solid or liquid |\n| **Mechanical behavior** | Brittle | Soft or volatile in many cases | Hard, rigid | Malleable, ductile |\n| **Typical AP explanation** | Strong ion-ion attraction | Weaker intermolecular forces | Extensive covalent bonding | Mobile electrons enable conductivity |\n\n```mermaid\nflowchart LR\n    A[Electronegativity difference] --> B[Bond polarity]\n    B --> C[Molecular shape]\n    C --> D[Overall molecular polarity]\n    D --> E[Intermolecular forces]\n    E --> F[Macroscopic properties]\n```\n\n## Common AP Exam Traps\n- **Confusing electron-domain geometry with molecular geometry**. For example, $$NH_3$$ has **tetrahedral electron geometry** but **trigonal pyramidal molecular geometry**.\n- **Forgetting that multiple bonds count as one electron domain** in VSEPR, even though they contain more electrons.\n- **Assuming all molecules with polar bonds are polar molecules**. Symmetry can cancel bond dipoles, as in $$CO_2$$.\n- **Using the octet rule too rigidly**. Species such as $$BF_3$$, $$SF_6$$, and radicals do not always fit a simple octet.\n- **Thinking ionic compounds conduct electricity as solids**. In a solid ionic lattice, ions are not free to move.\n\n## Quick Review Checklist\n- [ ] I can draw a correct **Lewis structure** by counting valence electrons and placing bonds and lone pairs appropriately.\n- [ ] I can calculate **formal charges** and identify the most reasonable structure.\n- [ ] I can recognize and draw **resonance structures** and explain what resonance means physically.\n- [ ] I can determine **electron-domain geometry** and **molecular geometry** using **VSEPR**.\n- [ ] I can identify the hybridization of a central atom as $$sp$$, $$sp^2$$, or $$sp^3$$ from its electron domains.\n- [ ] I can determine whether a bond is **polar** and whether a whole molecule is **polar or nonpolar**.\n- [ ] I can compare **ionic**, **molecular covalent**, **network covalent**, and **metallic** substances by structure and property.\n- [ ] I can justify trends in **melting point**, **conductivity**, **hardness**, and **shape** using bonding and structure.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Lewis structure",
+              "definition": "A representation that shows valence electrons, bonding pairs, and lone pairs around atoms in a molecule or polyatomic ion, used to predict connectivity and electron arrangement."
+            },
+            {
+              "term": "Formal charge",
+              "definition": "The hypothetical charge assigned to an atom by comparing its valence electron count to the number of nonbonding electrons plus half the bonding electrons associated with it; structures with minimized values are generally preferred."
+            },
+            {
+              "term": "Resonance",
+              "definition": "A situation in which more than one valid electron-dot representation can be drawn for the same arrangement of atoms, indicating electron delocalization."
+            },
+            {
+              "term": "VSEPR theory",
+              "definition": "A model that predicts three-dimensional molecular geometry by assuming regions of electron density around a central atom repel one another and arrange to minimize repulsion."
+            },
+            {
+              "term": "Bond angle",
+              "definition": "The angle formed between two adjacent bonds around a central atom, influenced by the number of electron domains and the presence of lone pairs."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which statement best explains why the $$\\mathrm{O-N-O}$$ bond angles in $$\\mathrm{NO_2^-}$$ are smaller than the ideal trigonal planar angle?",
+              "options": [
+                "A lone pair on the central atom increases repulsion more than bonding pairs do, compressing the angle.",
+                "Resonance requires all bond angles to become exactly $$90^\\circ$$.",
+                "The negative charge forces the molecule into a linear geometry.",
+                "The presence of two double bonds eliminates electron-pair repulsion."
+              ],
+              "correctAnswer": "A lone pair on the central atom increases repulsion more than bonding pairs do, compressing the angle.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which Lewis structure for $$\\mathrm{CO_2}$$ gives the most reasonable distribution of formal charges?",
+              "options": [
+                "$$\\mathrm{O=C=O}$$ with two double bonds and zero formal charge on each atom",
+                "$$\\mathrm{O-O-C}$$ with single bonds and a $$+2$$ charge on carbon",
+                "$$\\mathrm{O\\equiv C-O}$$ with a $$+1$$ charge on one oxygen and a $$-1$$ charge on the other",
+                "$$\\mathrm{C=O=O}$$ with the central oxygen carrying the largest positive formal charge"
+              ],
+              "correctAnswer": "$$\\mathrm{O=C=O}$$ with two double bonds and zero formal charge on each atom",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In VSEPR theory, a central atom with four electron domains and no lone pairs has a ______ electron-domain geometry.",
+              "options": [
+                "tetrahedral",
+                "trigonal planar",
+                "bent",
+                "linear"
+              ],
+              "correctAnswer": "tetrahedral",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When multiple valid Lewis structures differ only in electron placement, the actual species is best described as a ______ hybrid.",
+              "options": [
+                "resonance",
+                "tetrahedral",
+                "ionic",
+                "metallic"
+              ],
+              "correctAnswer": "resonance",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Hybridization",
+              "definition": "A model describing the mixing of atomic orbitals on an atom to form equivalent orbitals oriented for bonding and consistent with observed molecular geometry."
+            },
+            {
+              "term": "Sigma bond",
+              "definition": "A covalent bond formed by end-to-end overlap of orbitals along the internuclear axis; it is the first bond formed between two atoms."
+            },
+            {
+              "term": "Pi bond",
+              "definition": "A covalent bond formed by side-to-side overlap of parallel orbitals, typically accompanying a sigma bond in double or triple bonds."
+            },
+            {
+              "term": "Ionic solid",
+              "definition": "A crystalline substance composed of cations and anions held together by electrostatic attractions, usually characterized by high melting point and brittleness."
+            },
+            {
+              "term": "Metallic bonding",
+              "definition": "Attraction between metal cations and mobile valence electrons distributed throughout a solid, accounting for conductivity and malleability."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which species contains a central atom best described as $$\\mathrm{sp^2}$$ hybridized?",
+              "options": [
+                "$$\\mathrm{BF_3}$$",
+                "$$\\mathrm{CH_4}$$",
+                "$$\\mathrm{NH_4^+}$$",
+                "$$\\mathrm{BeCl_2}$$"
+              ],
+              "correctAnswer": "$$\\mathrm{BF_3}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A sample of a crystalline substance has a high melting point, is brittle, and conducts electricity only when molten or dissolved in water. Which type of bonding is most consistent with these properties?",
+              "options": [
+                "Ionic bonding",
+                "Metallic bonding",
+                "Nonpolar covalent bonding",
+                "Network of discrete noble gas atoms"
+              ],
+              "correctAnswer": "Ionic bonding",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a double bond, the second bond formed between the same two atoms is a ______ bond.",
+              "options": [
+                "pi",
+                "sigma",
+                "ionic",
+                "hydrogen"
+              ],
+              "correctAnswer": "pi",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The ability of metals to be shaped without shattering is largely explained by ______ bonding.",
+              "options": [
+                "metallic",
+                "ionic",
+                "polar covalent",
+                "hydrogen"
+              ],
+              "correctAnswer": "metallic",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Properties of Substances and Mixtures",
+      "description": "Intermolecular forces, solids, gases, solutions, spectroscopy, and chromatography.",
+      "note": "# Unit 3: Properties of Substances and Mixtures\n\n## Overview\nThis unit explains how the **structure and interactions of particles** determine observable properties of substances and mixtures, including boiling point, vapor pressure, solubility, conductivity, and phase behavior. It matters for the AP exam because students must connect **microscopic intermolecular forces** to **macroscopic data**, interpret **gas, solution, and spectroscopy relationships**, and justify claims using particle-level reasoning.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Intermolecular forces** | Attractions between molecules or particles, including **London dispersion**, **dipole-dipole**, **hydrogen bonding**, and **ion-dipole** forces | Used to explain trends in **boiling point**, **melting point**, **viscosity**, **surface tension**, and **solubility** |\n| **Coulombic attractions** | Electrostatic attraction between charged particles, with strength depending on charge and distance | Helps compare **ionic compounds**, **lattice energy trends**, and interactions in solutions |\n| **States of matter and solids** | Particle arrangement and motion in **solids**, **liquids**, and **gases**; also differences among **molecular**, **ionic**, **metallic**, and **covalent-network** solids | Frequently tested through property comparisons such as conductivity, hardness, and melting point |\n| **Gas behavior** | Relationships among pressure, volume, temperature, and amount of gas | Essential for solving quantitative questions and explaining deviations from ideal particle behavior |\n| **Kinetic molecular theory** | Model describing gases as particles in constant random motion with negligible volume and attractions in the ideal case | Provides the reasoning behind **gas laws**, **temperature-pressure relationships**, and **effusion** |\n| **Solutions and solubility** | Homogeneous mixtures formed when solute particles disperse in a solvent | AP questions often ask students to predict **solubility**, identify **electrolytes**, and relate concentration to particle interactions |\n| **Spectroscopy** | Interaction of electromagnetic radiation with matter, especially absorption linked to energy transitions | Used to connect **wavelength**, **frequency**, and **energy**, often in photoelectron or absorption contexts |\n| **Chromatography** | Separation technique based on different attractions to a **mobile phase** and **stationary phase** | Tested through reasoning about why substances move different distances and how intermolecular forces affect separation |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Particle structure and polarity\"] --> B[\"Type and strength of intermolecular forces\"]\n    B --> C[\"Physical properties\"]\n    C --> C1[\"Boiling point\"]\n    C --> C2[\"Melting point\"]\n    C --> C3[\"Vapor pressure\"]\n    C --> C4[\"Viscosity and surface tension\"]\n    B --> D[\"Mixing behavior\"]\n    D --> D1[\"Solubility in solvent\"]\n    D --> D2[\"Electrolyte behavior\"]\n    A --> E[\"Phase and bonding type\"]\n    E --> E1[\"Molecular solid\"]\n    E --> E2[\"Ionic solid\"]\n    E --> E3[\"Metallic solid\"]\n    E --> E4[\"Covalent-network solid\"]\n    F[\"Temperature, pressure, moles\"] --> G[\"Gas-law relationships\"]\n    G --> G1[\"Volume changes\"]\n    G --> G2[\"Pressure changes\"]\n    G --> G3[\"Particle-speed interpretation\"]\n    H[\"Radiation interacting with matter\"] --> I[\"Spectroscopy or chromatography data\"]\n    I --> J[\"Identify substance properties and separations\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Rule** | **Expression or Statement** | **Use** |\n|---|---|---|\n| **Coulomb's law trend** | $$F \\propto \\frac{q_1 q_2}{r^2}$$ | Stronger attractions occur with larger charges and smaller distance between particles |\n| **Ideal gas law** | $$PV = nRT$$ | Relates pressure, volume, amount, and temperature of a gas |\n| **Combined gas law** | $$\\frac{P_1 V_1}{T_1} = \\frac{P_2 V_2}{T_2}$$ | Used when the amount of gas is constant |\n| **Partial pressure** | $$P_{\\text{total}} = P_1 + P_2 + P_3 + \\cdots$$ | Total pressure of a gas mixture is the sum of component pressures |\n| **Mole fraction and partial pressure** | $$P_i = X_i P_{\\text{total}}$$ | Connects composition of a mixture to each gas's pressure |\n| **Kinetic energy and temperature** | $$\\text{Average KE} \\propto T$$ | Higher temperature means greater average kinetic energy |\n| **Effusion relationship** | $$\\frac{\\text{rate}_1}{\\text{rate}_2} = \\sqrt{\\frac{M_2}{M_1}}$$ | Lighter gases effuse faster than heavier gases |\n| **Concentration** | $$M = \\frac{\\text{mol solute}}{\\text{L solution}}$$ | Used in solution calculations and particle reasoning |\n| **Beer-Lambert law** | $$A = abc$$ | Connects absorbance to concentration in spectroscopy |\n| **Energy of radiation** | $$E = h\\nu$$ | Relates photon energy to frequency |\n| **Wave relationship** | $$c = \\lambda \\nu$$ | Connects wavelength and frequency of electromagnetic radiation |\n\n### Must-know qualitative rules\n- **Hydrogen bonding** occurs when **H** is bonded to **N**, **O**, or **F** and interacts with a lone pair on **N**, **O**, or **F**.\n- Stronger **intermolecular forces** generally lead to **higher boiling point**, **higher viscosity**, **higher surface tension**, and **lower vapor pressure**.\n- **Like dissolves like**: polar and ionic solutes tend to dissolve in polar solvents; nonpolar solutes tend to dissolve in nonpolar solvents.\n- **Ionic solids** are held by strong electrostatic attractions; **molecular solids** depend on intermolecular forces; **covalent-network solids** have strong covalent bonds throughout the structure.\n\n## Connections & Comparisons\n\n| **Comparison** | **Stronger / Higher / Faster** | **Weaker / Lower / Slower** | **AP takeaway** |\n|---|---|---|---|\n| **Intermolecular force strength** | **Ion-dipole** or strong **hydrogen bonding** | **London dispersion** only | Stronger forces usually increase boiling point and reduce vapor pressure |\n| **Boiling point vs vapor pressure** | Higher boiling point corresponds to lower vapor pressure at the same temperature | Lower boiling point corresponds to higher vapor pressure | These are inverse trends, not direct trends |\n| **Molecular vs ionic solids** | Ionic solids: high melting point, brittle, conduct when molten or dissolved | Molecular solids: lower melting point, poor conductors | Distinguish based on particle type and bonding |\n| **Ideal vs real gas behavior** | Ideal behavior at low pressure and high temperature | Greater deviation at high pressure and low temperature | Real gases deviate when particle volume and attractions matter |\n\n```mermaid\nflowchart LR\n    A[\"Stronger intermolecular forces\"] --> B[\"Higher boiling point\"]\n    A --> C[\"Higher viscosity\"]\n    A --> D[\"Higher surface tension\"]\n    A --> E[\"Lower vapor pressure\"]\n    F[\"Greater polarity or larger electron cloud\"] --> A\n```\n\n## Common AP Exam Traps\n- Confusing **intramolecular bonds** with **intermolecular forces**. Breaking a covalent bond is not the same as overcoming attractions between molecules.\n- Assuming all molecules with **H** can hydrogen bond. It only applies when **H** is bonded to **N**, **O**, or **F**.\n- Reversing the relationship between **vapor pressure** and **boiling point**. Stronger intermolecular forces lower vapor pressure but raise boiling point.\n- Using **Celsius** instead of **Kelvin** in gas-law calculations. Gas equations require absolute temperature.\n- Assuming a substance with larger molar mass always has a higher boiling point. Shape, polarity, and specific intermolecular forces also matter.\n\n## Quick Review Checklist\n- [ ] I can identify the dominant **intermolecular force** in a substance and justify it.\n- [ ] I can rank substances by **boiling point**, **vapor pressure**, **viscosity**, or **surface tension** using particle interactions.\n- [ ] I can distinguish among **molecular**, **ionic**, **metallic**, and **covalent-network** solids based on structure and properties.\n- [ ] I can apply $$PV = nRT$$ and related gas relationships using **Kelvin** temperature.\n- [ ] I can explain gas behavior using **kinetic molecular theory** rather than memorization alone.\n- [ ] I can predict whether a solute will dissolve in a given solvent using polarity and intermolecular forces.\n- [ ] I can use $$A = abc$$, $$E = h\\nu$$, and $$c = \\lambda \\nu$$ in spectroscopy contexts.\n- [ ] I can explain how **chromatography** separates substances based on different attractions to the stationary and mobile phases.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "London dispersion forces",
+              "definition": "Attractive forces arising from temporary, instantaneous shifts in electron density that induce dipoles in neighboring particles; present in all atoms and molecules and generally increase with molar mass and polarizability."
+            },
+            {
+              "term": "Dipole-dipole interactions",
+              "definition": "Attractive forces between neighboring polar molecules caused by the alignment of partial positive and partial negative regions."
+            },
+            {
+              "term": "Hydrogen bonding",
+              "definition": "A particularly strong intermolecular attraction that occurs when hydrogen is covalently bonded to $$N$$, $$O$$, or $$F$$ and is attracted to a lone pair on one of those atoms in a nearby particle."
+            },
+            {
+              "term": "Lattice energy",
+              "definition": "The energy change associated with separating one mole of an ionic solid into gaseous ions; its magnitude generally increases with greater ionic charge and smaller ionic radius."
+            },
+            {
+              "term": "Coulomb's law",
+              "definition": "A relationship showing that electrostatic attraction or repulsion depends directly on the product of charges and inversely on the distance between them, often used to explain trends in ionic bonding strength."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which substance is expected to have the highest boiling point based primarily on intermolecular forces?",
+              "options": [
+                "$$CH_4$$",
+                "$$HCl$$",
+                "$$HF$$",
+                "$$F_2$$"
+              ],
+              "correctAnswer": "$$HF$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Which ionic compound is expected to have the greatest lattice energy?",
+              "options": [
+                "$$NaF$$",
+                "$$MgO$$",
+                "$$KBr$$",
+                "$$CaS$$"
+              ],
+              "correctAnswer": "$$MgO$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "As the strength of intermolecular attractions increases, the vapor pressure of a liquid at a given temperature generally ______.",
+              "options": [
+                "increases",
+                "decreases",
+                "remains constant",
+                "becomes equal to $$1\\ \\text{atm}$$"
+              ],
+              "correctAnswer": "decreases",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "According to Coulombic reasoning, the attraction between ions becomes stronger as the distance between their nuclei ______.",
+              "options": [
+                "increases",
+                "decreases",
+                "becomes zero",
+                "equals the molar mass"
+              ],
+              "correctAnswer": "decreases",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Ideal gas behavior",
+              "definition": "A model in which particles are assumed to occupy negligible volume, experience no intermolecular attractions, and undergo elastic collisions, allowing pressure, volume, temperature, and amount to be related by $$PV=nRT$$."
+            },
+            {
+              "term": "Beer-Lambert law",
+              "definition": "A relationship in which absorbance is directly proportional to concentration and path length, commonly written as $$A=abc$$ or $$A=\\varepsilon bc$$."
+            },
+            {
+              "term": "Chromatography",
+              "definition": "A separation technique in which components of a mixture move at different rates because they differ in attraction to a stationary phase and a mobile phase."
+            },
+            {
+              "term": "Molarity",
+              "definition": "A concentration measure defined as moles of solute per liter of solution, commonly expressed as $$M=\\frac{\\text{mol solute}}{\\text{L solution}}$$."
+            },
+            {
+              "term": "Solubility",
+              "definition": "The maximum amount of a substance that can dissolve in a given amount of solvent under specified conditions, determined by the balance of solute-solute, solvent-solvent, and solute-solvent interactions."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A sample of gas deviates most from ideal behavior under which conditions?",
+              "options": [
+                "low pressure and high temperature",
+                "high pressure and low temperature",
+                "low pressure and low temperature",
+                "high temperature and low molar mass"
+              ],
+              "correctAnswer": "high pressure and low temperature",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In paper chromatography, a component that travels the farthest from the origin typically has which property?",
+              "options": [
+                "Stronger attraction to the stationary phase than to the mobile phase",
+                "Weaker attraction to the stationary phase than to the mobile phase",
+                "Greater molar mass than all other components",
+                "The highest boiling point in the mixture"
+              ],
+              "correctAnswer": "Weaker attraction to the stationary phase than to the mobile phase",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to the Beer-Lambert law, if path length is constant, absorbance is directly proportional to ______.",
+              "options": [
+                "temperature",
+                "concentration",
+                "pressure",
+                "wavelength"
+              ],
+              "correctAnswer": "concentration",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When $$0.250\\ \\text{mol}$$ of solute is dissolved to make $$0.500\\ \\text{L}$$ of solution, the solution concentration is ______.",
+              "options": [
+                "$$0.125\\ \\text{M}$$",
+                "$$0.250\\ \\text{M}$$",
+                "$$0.500\\ \\text{M}$$",
+                "$$2.00\\ \\text{M}$$"
+              ],
+              "correctAnswer": "$$0.500\\ \\text{M}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Chemical Reactions",
+      "description": "Types of chemical reactions, net ionic equations, stoichiometry, titrations, and electrochemical cells.",
+      "note": "# Unit 4: Chemical Reactions\n\n## Overview\nThis unit focuses on how chemists represent, classify, and quantify **chemical reactions**. You’ll learn to write **balanced equations**, identify reaction types, determine **net ionic equations**, solve **stoichiometry** and **titration** problems, and analyze **electrochemical cells**.\n\nThis material is heavily tested on the AP Chemistry exam because it connects symbolic chemistry to measurable lab outcomes: predicting products, tracking matter and charge, and linking reaction spontaneity to electron transfer.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Reaction Types** | Categories such as **synthesis**, **decomposition**, **combustion**, **single replacement**, **double replacement**, **acid-base**, and **redox** | AP questions often ask you to predict products, identify the driving force, or classify a reaction from evidence |\n| **Balancing Chemical Equations** | Ensuring conservation of atoms and charge in a reaction equation | Essential for all stoichiometry, net ionic equations, titrations, and electrochemistry calculations |\n| **Net Ionic Equations** | Equations showing only the species that actually undergo chemical change in aqueous solution | Frequently tested in FRQs and MCQs involving precipitation, acid-base, and redox reactions |\n| **Stoichiometry** | Quantitative relationships among reactants and products using mole ratios | Core AP skill for converting between mass, moles, particles, gas volume, and solution concentration |\n| **Limiting Reactant** | The reactant consumed first, which determines the maximum amount of product formed | Common AP trap: students use the wrong reactant to calculate yield |\n| **Titrations** | Experimental method using a solution of known concentration to determine an unknown concentration | AP problems often assess equivalence point relationships and mole ratios from balanced equations |\n| **Oxidation-Reduction \"Redox\" Reactions** | Reactions involving transfer of electrons and changes in oxidation number | Foundation for balancing redox reactions and understanding electrochemical cells |\n| **Electrochemical Cells** | Systems where redox reactions produce electrical energy or use electrical energy to drive change | Important for cell notation, identifying **anode/cathode**, electron flow, and interpreting cell potential |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\nA[\"Identify reaction context\"] --> B[\"Write correct formulas for reactants and products\"]\nB --> C[\"Balance molecular equation\"]\nC --> D[\"Decide if aqueous strong electrolytes dissociate\"]\nD --> E[\"Write complete ionic equation\"]\nE --> F[\"Cancel spectator ions\"]\nF --> G[\"Net ionic equation\"]\n\nC --> H[\"Use mole ratios for stoichiometry\"]\nH --> I[\"Find limiting reactant if needed\"]\nI --> J[\"Calculate theoretical yield or remaining excess\"]\n\nC --> K[\"If titration: use balanced ratio\"]\nK --> L[\"Relate moles of titrant to analyte\"]\n\nC --> M[\"If redox: assign oxidation numbers\"]\nM --> N[\"Identify oxidation and reduction\"]\nN --> O[\"Determine electron transfer / cell behavior\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Use** |\n|---|---|\n| $$n = \\frac{m}{M}$$ | Convert **mass** to **moles** using molar mass |\n| $$M = \\frac{n}{V}$$ | Relate **molarity**, moles, and solution volume in liters |\n| $$n = M V$$ | Find moles dissolved in a solution |\n| $$\\frac{n_{\\text{wanted}}}{n_{\\text{given}}} = \\frac{\\text{coefficient of wanted}}{\\text{coefficient of given}}$$ | Apply **mole ratios** from a balanced equation |\n| $$\\%\\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \\times 100$$ | Compare experimental and calculated product amounts |\n| $$q = m c \\Delta T$$ | Sometimes used when reaction data are linked to heat changes in solution |\n| $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$$ | Calculate standard cell potential |\n| $$\\Delta G^\\circ = -n F E^\\circ_{\\text{cell}}$$ | Connect cell potential to spontaneity |\n| **Oxidation** = loss of electrons | Must identify what species is oxidized |\n| **Reduction** = gain of electrons | Must identify what species is reduced |\n| **Anode** = oxidation | In a galvanic cell, electrons leave the anode |\n| **Cathode** = reduction | In a galvanic cell, electrons enter the cathode |\n\n### Must-Know Rules for Net Ionic Equations\n- **Strong electrolytes** dissociate completely into ions.\n- **Weak acids**, **weak bases**, **gases**, **liquids**, and **solids** stay undissociated in net ionic equations.\n- Spectator ions appear on both sides of the complete ionic equation and must be canceled.\n- Net ionic equations must be balanced for both **atoms** and **charge**.\n\n### Common Reaction Drivers\n- Formation of a **precipitate**\n- Formation of **water** in acid-base neutralization\n- Formation of a **gas**\n- Transfer of **electrons** in redox reactions\n\n## Connections & Comparisons\n\n| **Topic** | **Precipitation Reaction** | **Acid-Base Reaction** | **Redox Reaction** | **Electrochemical Cell** |\n|---|---|---|---|---|\n| **Driving force** | Insoluble solid forms | Water or weak electrolyte forms | Electrons transferred | Spontaneous redox generates voltage |\n| **Key evidence** | Cloudiness or solid appears | pH change, neutralization | Oxidation numbers change | Current flows through external circuit |\n| **Net ionic focus** | Remove spectator ions; show precipitate formation | Often $$\\mathrm{H^+ + OH^- \\rightarrow H_2O}$$ | Show electron bookkeeping | Track half-reactions and electrode roles |\n| **Typical AP skill** | Predict soluble vs insoluble products | Use stoichiometric mole ratios in titrations | Identify oxidized/reduced species | Determine **anode**, **cathode**, and $$E^\\circ_{\\text{cell}}$$ |\n\n```mermaid\nflowchart LR\nA[\"Balanced equation\"] --> B[\"Stoichiometry\"]\nA --> C[\"Net ionic equation\"]\nA --> D[\"Titration ratios\"]\nA --> E[\"Redox analysis\"]\n\nE --> F[\"Half-reactions\"]\nF --> G[\"Electrochemical cells\"]\n```\n\n## Common AP Exam Traps\n- Confusing the **complete ionic equation** with the **net ionic equation** by failing to cancel spectator ions.\n- Splitting **weak acids** or **weak bases** into ions when writing net ionic equations; on the AP exam, they usually remain intact.\n- Using the amount of a reactant present instead of identifying the **limiting reactant** first.\n- Forgetting that titration calculations depend on the **balanced chemical equation**, not always a simple $$1:1$$ mole ratio.\n- Reversing **anode** and **cathode** in electrochemical cells. Remember: **oxidation at the anode**, **reduction at the cathode**.\n\n## Quick Review Checklist\n- [ ] I can **classify** common reaction types and predict likely products.\n- [ ] I can **balance** molecular equations for chemical reactions.\n- [ ] I can write **complete ionic** and **net ionic equations** for aqueous reactions.\n- [ ] I can identify **spectator ions** and explain why they are omitted.\n- [ ] I can solve **stoichiometry** problems using mole ratios from a balanced equation.\n- [ ] I can determine the **limiting reactant**, **theoretical yield**, and **percent yield**.\n- [ ] I can solve **titration** problems using $$n = M V$$ and the balanced reaction stoichiometry.\n- [ ] I can identify **oxidation**, **reduction**, **anode**, **cathode**, and calculate $$E^\\circ_{\\text{cell}}$$ for an electrochemical cell.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Net ionic equation",
+              "definition": "A chemical equation that shows only the species that undergo chemical change in aqueous solution, with spectator ions omitted."
+            },
+            {
+              "term": "Spectator ion",
+              "definition": "An ion present in solution that appears unchanged on both sides of a complete ionic equation and does not participate in the reaction."
+            },
+            {
+              "term": "Precipitation reaction",
+              "definition": "A process in which dissolved ions combine in aqueous solution to form an insoluble solid according to solubility rules."
+            },
+            {
+              "term": "Limiting reactant",
+              "definition": "The reactant consumed first in a chemical process, which determines the maximum amount of product that can form."
+            },
+            {
+              "term": "Percent yield",
+              "definition": "The ratio of actual product obtained to theoretical product predicted, multiplied by $$100\\%$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Aqueous solutions of $$\\mathrm{BaCl_2}$$ and $$\\mathrm{Na_2SO_4}$$ are mixed. Which equation is the correct net ionic equation for the reaction?",
+              "options": [
+                "$$\\mathrm{Ba^{2+}(aq) + SO_4^{2-}(aq) \\rightarrow BaSO_4(s)}$$",
+                "$$\\mathrm{BaCl_2(aq) + Na_2SO_4(aq) \\rightarrow BaSO_4(s) + 2NaCl(aq)}$$",
+                "$$\\mathrm{Na^+(aq) + Cl^-(aq) \\rightarrow NaCl(s)}$$",
+                "$$\\mathrm{Ba^{2+}(aq) + 2Cl^-(aq) + 2Na^+(aq) + SO_4^{2-}(aq) \\rightarrow BaSO_4(s) + 2Na^+(aq) + 2Cl^-(aq)}$$"
+              ],
+              "correctAnswer": "$$\\mathrm{Ba^{2+}(aq) + SO_4^{2-}(aq) \\rightarrow BaSO_4(s)}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A student reacts $$25.0\\,\\mathrm{mL}$$ of $$0.200\\,\\mathrm{M}$$ $$\\mathrm{AgNO_3}$$ with excess $$\\mathrm{NaCl}$$. Assuming complete precipitation of $$\\mathrm{AgCl}$$, what mass of solid forms? $$(M_{\\mathrm{AgCl}} = 143.32\\,\\mathrm{g\\,mol^{-1}})$$",
+              "options": [
+                "$$0.287\\,\\mathrm{g}$$",
+                "$$0.717\\,\\mathrm{g}$$",
+                "$$1.43\\,\\mathrm{g}$$",
+                "$$3.58\\,\\mathrm{g}$$"
+              ],
+              "correctAnswer": "$$0.717\\,\\mathrm{g}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "When writing a net ionic equation, ions that remain unchanged on both sides are called ______.",
+              "options": [
+                "catalyst ions",
+                "spectator ions",
+                "complex ions",
+                "polyatomic ions"
+              ],
+              "correctAnswer": "spectator ions",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If a reaction has a theoretical yield of $$12.0\\,\\mathrm{g}$$ and an actual yield of $$9.0\\,\\mathrm{g}$$, the percent yield is ______.",
+              "options": [
+                "$$25\\%$$",
+                "$$60\\%$$",
+                "$$75\\%$$",
+                "$$133\\%$$"
+              ],
+              "correctAnswer": "$$75\\%$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Titration equivalence point",
+              "definition": "The stage in an acid-base analysis at which the amount of titrant added is stoichiometrically equal to the amount of analyte originally present."
+            },
+            {
+              "term": "Oxidation-reduction reaction",
+              "definition": "A chemical process involving transfer of electrons, in which one species loses electrons and another gains them."
+            },
+            {
+              "term": "Oxidation number",
+              "definition": "A bookkeeping value assigned to an atom in a substance to track electron distribution and identify which species is oxidized or reduced."
+            },
+            {
+              "term": "Galvanic cell",
+              "definition": "An electrochemical device in which a spontaneous redox process generates electrical energy through separated half-reactions."
+            },
+            {
+              "term": "Salt bridge",
+              "definition": "A connection between half-cells that permits ion migration to maintain electrical neutrality while limiting direct mixing of reactants."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "In the titration of $$25.00\\,\\mathrm{mL}$$ of $$0.1500\\,\\mathrm{M}$$ $$\\mathrm{HCl}$$ with $$0.1000\\,\\mathrm{M}$$ $$\\mathrm{NaOH}$$, what volume of base is required to reach the equivalence point?",
+              "options": [
+                "$$18.75\\,\\mathrm{mL}$$",
+                "$$25.00\\,\\mathrm{mL}$$",
+                "$$37.50\\,\\mathrm{mL}$$",
+                "$$56.25\\,\\mathrm{mL}$$"
+              ],
+              "correctAnswer": "$$37.50\\,\\mathrm{mL}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Consider the galvanic cell $$\\mathrm{Zn(s)|Zn^{2+}(aq)||Cu^{2+}(aq)|Cu(s)}$$. Which statement is correct?",
+              "options": [
+                "Zinc is reduced at the cathode.",
+                "Copper is oxidized at the anode.",
+                "Electrons flow from the copper electrode to the zinc electrode through the wire.",
+                "The zinc electrode is the anode, where oxidation occurs."
+              ],
+              "correctAnswer": "The zinc electrode is the anode, where oxidation occurs.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In an electrochemical cell, the electrode at which reduction occurs is the ______.",
+              "options": [
+                "anode",
+                "cathode",
+                "salt bridge",
+                "voltmeter"
+              ],
+              "correctAnswer": "cathode",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In the reaction $$\\mathrm{2Fe^{2+} + Cl_2 \\rightarrow 2Fe^{3+} + 2Cl^-}$$, the species that is reduced is ______.",
+              "options": [
+                "$$\\mathrm{Fe^{2+}}$$",
+                "$$\\mathrm{Fe^{3+}}$$",
+                "$$\\mathrm{Cl_2}$$",
+                "$$\\mathrm{Cl^-}$$"
+              ],
+              "correctAnswer": "$$\\mathrm{Cl_2}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Kinetics",
+      "description": "Reaction rates, rate laws, integrated rate laws, reaction mechanisms, and the effect of temperature on rate.",
+      "note": "# Unit 5: Kinetics\n\n## Overview\n**Kinetics** studies how fast chemical reactions occur and what factors control those rates. In AP Chemistry, this unit matters because you must connect **experimental data**, **rate laws**, **mechanisms**, and **temperature effects** to explain reaction behavior both qualitatively and quantitatively.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Reaction rate** | The change in concentration of a reactant or product over time. | You may need to calculate or interpret rate from data, graphs, or balanced equations. |\n| **Rate law** | An equation relating rate to reactant concentrations, such as $$\\text{rate} = k[A]^m[B]^n$$. | AP questions often ask you to determine the law from initial-rate data and interpret reaction orders. |\n| **Reaction order** | The exponent of a concentration term in the rate law; overall order is the sum of exponents. | Used to predict how changing concentration affects rate and to identify integrated rate-law behavior. |\n| **Rate constant** | The proportionality constant $$k$$ in a rate law. | Its value depends on **temperature** and reflects how quickly a reaction proceeds under given conditions. |\n| **Integrated rate laws** | Equations relating concentration and time for **zero-, first-,** and **second-order** reactions. | Frequently tested through graph interpretation, half-life relationships, and order identification. |\n| **Half-life** | The time required for a reactant concentration to decrease to half its value. | AP often compares how half-life behaves for different reaction orders, especially first order. |\n| **Reaction mechanism** | A sequence of **elementary steps** that describes how a reaction occurs. | You may need to identify intermediates, determine the **rate-determining step**, or connect a mechanism to a rate law. |\n| **Activation energy and temperature** | The minimum energy needed for effective collisions; temperature affects the fraction of particles above this threshold. | Essential for explaining why higher temperature increases rate and for using the **Arrhenius equation** conceptually or mathematically. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Measure concentration or pressure data over time] --> B[Determine reaction rate]\n    B --> C[Compare trials with different initial concentrations]\n    C --> D[Determine rate law and reaction orders]\n    D --> E[Calculate rate constant $$k$$]\n    E --> F[Use integrated rate laws to relate concentration and time]\n    F --> G[Evaluate half-life behavior]\n    D --> H[Propose or test reaction mechanism]\n    H --> I[Identify rate-determining step and intermediates]\n    I --> J[Check whether mechanism is consistent with observed rate law]\n    E --> K[Change temperature]\n    K --> L[Analyze effect on $$k$$ and reaction rate]\n    L --> M[Explain using activation energy and collision theory]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Idea** | **Must-Know Expression / Rule** |\n|---|---|\n| **Average rate** | For a reactant: $$\\text{rate} = -\\frac{\\Delta [A]}{\\Delta t}$$ |\n|  | For a product: $$\\text{rate} = \\frac{\\Delta [P]}{\\Delta t}$$ |\n| **Stoichiometric rate relationship** | For $$aA \\rightarrow pP$$: $$-\\frac{1}{a}\\frac{\\Delta [A]}{\\Delta t} = \\frac{1}{p}\\frac{\\Delta [P]}{\\Delta t}$$ |\n| **General rate law** | $$\\text{rate} = k[A]^m[B]^n$$ |\n| **Overall reaction order** | $$\\text{overall order} = m+n$$ |\n| **Zero-order integrated law** | $$[A]_t = -kt + [A]_0$$ |\n| **First-order integrated law** | $$\\ln [A]_t = -kt + \\ln [A]_0$$ |\n| **Second-order integrated law** | $$\\frac{1}{[A]_t} = kt + \\frac{1}{[A]_0}$$ |\n| **Zero-order half-life** | $$t_{1/2} = \\frac{[A]_0}{2k}$$ |\n| **First-order half-life** | $$t_{1/2} = \\frac{\\ln 2}{k}$$ |\n| **Second-order half-life** | $$t_{1/2} = \\frac{1}{k[A]_0}$$ |\n| **Arrhenius equation** | $$k = Ae^{-E_a/(RT)}$$ |\n| **Two-point Arrhenius form** | $$\\ln\\!\\left(\\frac{k_2}{k_1}\\right) = -\\frac{E_a}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)$$ |\n\n**Graph-order matches:**\n- **Zero order**: plot of $$[A]$$ vs. $$t$$ is linear\n- **First order**: plot of $$\\ln[A]$$ vs. $$t$$ is linear\n- **Second order**: plot of $$\\frac{1}{[A]}$$ vs. $$t$$ is linear\n\n**Mechanism rules:**\n- The sum of **elementary steps** must equal the overall reaction.\n- **Intermediates** are produced in one step and consumed in a later step.\n- The **rate-determining step** is the slow step that controls the observed rate.\n- A proposed mechanism is valid only if its predicted rate law matches experiment.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Are Connected** | **Key Difference / Exam Focus** |\n|---|---|---|\n| **Rate law vs. balanced equation** | Both involve the same reacting species. | Stoichiometric coefficients in the overall equation **do not usually determine** exponents in the rate law unless the reaction is an **elementary step**. |\n| **Rate constant $$k$$ vs. reaction rate** | A larger $$k$$ usually means a faster reaction under the same conditions. | **Rate** depends on both $$k$$ and concentrations; $$k$$ depends mainly on **temperature**. |\n| **Mechanism vs. overall reaction** | The mechanism explains how the overall reaction occurs through steps. | The overall equation gives net change only; it does **not** reveal intermediates or the rate-determining step. |\n| **Activation energy vs. temperature** | Both influence how many collisions are successful. | **Activation energy** is a barrier of the reaction; **temperature** changes particle kinetic energy distribution. |\n\n## Common AP Exam Traps\n- Confusing the **coefficients** in a balanced overall equation with the **orders** in the rate law. For most reactions, you must use **experimental data**, not stoichiometry.\n- Forgetting the negative sign for reactant disappearance: $$-\\frac{\\Delta [A]}{\\Delta t}$$.\n- Misidentifying graph type: a reaction is first order only if $$\\ln[A]$$ vs. $$t$$ is linear, not necessarily $$[A]$$ vs. $$t$$.\n- Assuming a catalyst changes the **equilibrium constant** or overall thermodynamics. A catalyst lowers **activation energy** and changes rate, not equilibrium position.\n- Treating intermediates as reactants in the final rate law. A valid rate law should generally be written in terms of **reactants**, unless an intermediate is eliminated using a prior equilibrium or other mechanism relationship.\n\n## Quick Review Checklist\n- [ ] I can define **reaction rate** and calculate it from concentration-versus-time data.\n- [ ] I can determine a **rate law** using the **method of initial rates**.\n- [ ] I can identify **zero-, first-,** and **second-order** reactions from graphs or equations.\n- [ ] I can use **integrated rate laws** to solve for concentration, time, or $$k$$.\n- [ ] I can compare **half-life** behavior for different reaction orders.\n- [ ] I can explain how a **mechanism** relates to the overall reaction and identify **intermediates**.\n- [ ] I can determine whether a proposed mechanism is consistent with an observed **rate law**.\n- [ ] I can explain why increasing **temperature** increases reaction rate using **collision theory**, **activation energy**, and the **Arrhenius equation**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Rate of reaction",
+              "definition": "The change in concentration of a reactant or product per unit time, often expressed as $$-\\frac{1}{a}\\frac{\\Delta [A]}{\\Delta t}$$ or $$\\frac{1}{p}\\frac{\\Delta [P]}{\\Delta t}$$ for a balanced equation."
+            },
+            {
+              "term": "Rate law",
+              "definition": "An experimentally determined equation that relates reaction rate to reactant concentrations, typically in the form $$\\text{rate}=k[A]^m[B]^n$$, where the exponents are not generally taken from stoichiometric coefficients."
+            },
+            {
+              "term": "Method of initial rates",
+              "definition": "A procedure for determining reaction orders by comparing how the initial speed changes when starting concentrations are varied while other conditions are held constant."
+            },
+            {
+              "term": "Reaction order",
+              "definition": "The exponent on a reactant concentration term in the experimentally determined rate equation; the sum of these exponents gives the overall dependence on concentration."
+            },
+            {
+              "term": "Rate constant",
+              "definition": "The proportionality factor in the rate equation that depends on temperature and incorporates the effect of the reaction pathway; its units vary with overall order."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "For the reaction $$2NO(g)+Cl_2(g)\\rightarrow 2NOCl(g)$$, a student finds that doubling $$[NO]$$ at constant $$[Cl_2]$$ quadruples the initial rate, while doubling $$[Cl_2]$$ at constant $$[NO]$$ doubles the rate. Which rate law is consistent with the data?",
+              "options": [
+                "$$\\text{rate}=k[NO][Cl_2]$$",
+                "$$\\text{rate}=k[NO]^2[Cl_2]$$",
+                "$$\\text{rate}=k[NO][Cl_2]^2$$",
+                "$$\\text{rate}=k[NO]^2[Cl_2]^2$$"
+              ],
+              "correctAnswer": "$$\\text{rate}=k[NO]^2[Cl_2]$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A reaction has the rate law $$\\text{rate}=k[A]^2[B]$$. If $$[A]$$ is tripled and $$[B]$$ is halved, by what factor does the rate change?",
+              "options": [
+                "It becomes $$\\frac{1}{2}$$ of the original rate.",
+                "It becomes $$\\frac{9}{2}$$ times the original rate.",
+                "It becomes $$6$$ times the original rate.",
+                "It becomes $$9$$ times the original rate."
+              ],
+              "correctAnswer": "It becomes $$\\frac{9}{2}$$ times the original rate.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If a reaction is zero order in reactant $$A$$, doubling $$[A]$$ causes the rate to change by a factor of ______.",
+              "options": [
+                "$$0$$",
+                "$$\\frac{1}{2}$$",
+                "$$1$$",
+                "$$2$$"
+              ],
+              "correctAnswer": "$$1$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For the experimentally determined rate law $$\\text{rate}=k[X][Y]^2$$, the overall order of the reaction is ______.",
+              "options": [
+                "$$1$$",
+                "$$2$$",
+                "$$3$$",
+                "$$4$$"
+              ],
+              "correctAnswer": "$$3$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Integrated rate law",
+              "definition": "An equation that relates concentration and time for a specific reaction order, such as $$[A]_t=[A]_0-kt$$, $$\\ln[A]_t=\\ln[A]_0-kt$$, or $$\\frac{1}{[A]_t}=\\frac{1}{[A]_0}+kt$$."
+            },
+            {
+              "term": "Half-life",
+              "definition": "The time required for the concentration of a reactant to decrease to one-half of its initial value; for a first-order process, it is constant and equals $$\\frac{\\ln 2}{k}$$."
+            },
+            {
+              "term": "Reaction mechanism",
+              "definition": "A sequence of elementary steps that describes how reactants are converted into products and must be consistent with the experimentally observed rate equation and overall stoichiometry."
+            },
+            {
+              "term": "Rate-determining step",
+              "definition": "The slowest elementary step in a multistep pathway, which limits the overall speed and often controls the observed dependence of rate on concentration."
+            },
+            {
+              "term": "Activation energy",
+              "definition": "The minimum energy barrier that must be overcome for effective collisions to lead to product formation; it appears in the Arrhenius relationship $$k=Ae^{-E_a/(RT)}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A reaction is first order in $$A$$. If a plot of $$\\ln[A]$$ versus time is linear, what does the slope of the line equal?",
+              "options": [
+                "$$k$$",
+                "$$-k$$",
+                "$$\\frac{1}{k}$$",
+                "$$-\\frac{1}{k}$$"
+              ],
+              "correctAnswer": "$$-k$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "For a reaction mechanism, the experimentally observed rate law is $$\\text{rate}=k[A][B]$$. Which proposed slow elementary step is most consistent with that rate law?",
+              "options": [
+                "$$A\\rightarrow \\text{products}$$",
+                "$$2A+B\\rightarrow \\text{products}$$",
+                "$$A+B\\rightarrow \\text{products}$$",
+                "$$B\\rightarrow \\text{products}$$"
+              ],
+              "correctAnswer": "$$A+B\\rightarrow \\text{products}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to collision theory, increasing temperature generally increases reaction rate because a larger fraction of collisions have energy greater than ______.",
+              "options": [
+                "the equilibrium constant",
+                "the activation energy",
+                "the enthalpy change",
+                "the catalyst concentration"
+              ],
+              "correctAnswer": "the activation energy",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For a first-order reaction, the half-life is ______ as the reaction proceeds.",
+              "options": [
+                "increasing",
+                "decreasing",
+                "constant",
+                "equal to $$\\frac{1}{[A]}$$"
+              ],
+              "correctAnswer": "constant",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 6,
+      "unitName": "Thermochemistry",
+      "description": "Endothermic and exothermic reactions, Hess's law, bond enthalpies, calorimetry, and Gibbs free energy basics.",
+      "note": "# Unit 6: Thermochemistry\n\n## Overview\n**Thermochemistry** studies the energy changes that accompany physical and chemical processes, especially the transfer of heat and the energetic favorability of reactions. In AP Chemistry, this unit is essential because students must interpret **endothermic** and **exothermic** processes, apply **Hess’s law**, use **calorimetry** data, estimate **enthalpy changes** from **bond enthalpies**, and connect **enthalpy**, **entropy**, and **Gibbs free energy**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **System and surroundings** | The **system** is the part of the universe being studied; the **surroundings** are everything else. | AP questions often test whether heat is gained or lost by the system versus the surroundings. |\n| **Endothermic vs. exothermic** | **Endothermic** processes absorb heat; **exothermic** processes release heat. | You must connect the sign of $$\\Delta H$$ to energy flow and interpret reaction diagrams. |\n| **Enthalpy change** | $$\\Delta H$$ is the heat transferred at constant pressure. | Central to reaction energetics; used throughout calorimetry, Hess’s law, and bond enthalpy problems. |\n| **Calorimetry** | Experimental measurement of heat transfer using temperature change. | Frequently tested with calculations using $$q = mc\\Delta T$$ and conservation of energy. |\n| **Hess’s law** | If a reaction occurs in steps, the total enthalpy change is the sum of the enthalpy changes of the steps. | AP free-response often asks students to manipulate equations and add enthalpies correctly. |\n| **Bond enthalpy** | Energy required to break one mole of a specific bond in the gas phase. | Used to estimate $$\\Delta H_{\\text{rxn}}$$ when direct enthalpy data are unavailable. |\n| **Potential energy diagrams** | Graphs showing energy changes during a reaction pathway. | Students must identify **activation energy**, compare reactants/products, and determine if a reaction is exothermic or endothermic. |\n| **Gibbs free energy basics** | $$\\Delta G$$ predicts whether a process is thermodynamically favorable based on enthalpy and entropy. | AP Chemistry expects basic interpretation of spontaneity using $$\\Delta G = \\Delta H - T\\Delta S$$. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Chemical or physical process begins\"] --> B[\"Identify the system and surroundings\"]\n    B --> C[\"Determine heat flow\"]\n    C --> D[\"Assign sign of enthalpy change\"]\n    D --> E[\"Exothermic: $$\\Delta H < 0$$\"]\n    D --> F[\"Endothermic: $$\\Delta H > 0$$\"]\n    C --> G[\"If experimental data are given, use calorimetry\"]\n    G --> H[\"Calculate $$q = mc\\Delta T$$ or related heat transfer\"]\n    H --> I[\"Relate heat of surroundings to heat of system\"]\n    I --> J[\"Find $$\\Delta H_{\\text{rxn}}$$\"]\n    J --> K[\"If multiple reactions are combined, apply Hess's law\"]\n    J --> L[\"If bonds are broken and formed, use bond enthalpies\"]\n    J --> M[\"Compare with entropy to evaluate $$\\Delta G$$\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Formula / Rule** | **Meaning / Use** |\n|---|---|\n| $$q = mc\\Delta T$$ | Heat absorbed or released by a substance, where $$m$$ is mass, $$c$$ is specific heat, and $$\\Delta T = T_{\\text{final}} - T_{\\text{initial}}$$. |\n| $$q_{\\text{system}} = -q_{\\text{surroundings}}$$ | Energy is conserved; heat lost by one part is gained by the other. |\n| $$\\Delta H_{\\text{rxn}} = \\sum \\Delta H_{\\text{products}} - \\sum \\Delta H_{\\text{reactants}}$$ | General way to think about reaction enthalpy using tabulated enthalpy data. |\n| **Hess’s law**: when equations are added, their enthalpies add | Reverse a reaction: change the sign of $$\\Delta H$$. Multiply coefficients: multiply $$\\Delta H$$ by the same factor. |\n| $$\\Delta H_{\\text{rxn}} \\approx \\sum D_{\\text{bonds broken}} - \\sum D_{\\text{bonds formed}}$$ | Estimate reaction enthalpy from average bond enthalpies. Breaking bonds requires energy; forming bonds releases energy. |\n| $$\\Delta G = \\Delta H - T\\Delta S$$ | Connects enthalpy, entropy, and temperature to predict thermodynamic favorability. |\n| $$\\Delta G < 0$$ | Process is **thermodynamically favorable** at the given temperature. |\n| $$\\Delta G > 0$$ | Process is **not thermodynamically favorable** at the given temperature. |\n| $$\\Delta G = 0$$ | System is at equilibrium. |\n\n### Must-know sign conventions\n- **Exothermic reaction**: $$\\Delta H < 0$$\n- **Endothermic reaction**: $$\\Delta H > 0$$\n- If the temperature of the surroundings increases, then the surroundings gained heat and the **system released heat**.\n- **Bond breaking** is always **endothermic**.\n- **Bond forming** is always **exothermic**.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They Relate** | **Key Distinction** |\n|---|---|---|\n| **Exothermic vs. endothermic** | Both describe heat transfer between system and surroundings. | Exothermic releases heat: $$\\Delta H < 0$$; endothermic absorbs heat: $$\\Delta H > 0$$. |\n| **Calorimetry vs. Hess’s law** | Both can be used to determine $$\\Delta H_{\\text{rxn}}$$. | Calorimetry uses experimental temperature data; Hess’s law uses known reaction enthalpies and equation manipulation. |\n| **Bond enthalpy vs. standard enthalpy data** | Both estimate or calculate reaction enthalpy. | Bond enthalpies are averages and approximate; tabulated enthalpy changes are usually more accurate for the specific reaction. |\n| **Enthalpy vs. Gibbs free energy** | Both involve energy changes in reactions. | $$\\Delta H$$ tracks heat transfer; $$\\Delta G$$ predicts thermodynamic favorability by including entropy and temperature. |\n\n```mermaid\nflowchart LR\n    A[\"$$\\Delta H$$\"] --> C[\"Energy change perspective\"]\n    B[\"$$\\Delta S$$\"] --> C\n    C --> D[\"$$\\Delta G = \\Delta H - T\\Delta S$$\"]\n    D --> E[\"Predicts thermodynamic favorability\"]\n```\n\n## Common AP Exam Traps\n- Confusing **heat flow** with **temperature change**: a rising temperature in the surroundings means the **system** released heat.\n- Forgetting sign changes in **Hess’s law**: when a reaction is reversed, $$\\Delta H$$ must also reverse sign.\n- Using **bond enthalpies** backward: you must subtract **bonds formed** from **bonds broken**, not the other way around.\n- Assuming $$\\Delta H < 0$$ always means a reaction is spontaneous: spontaneity depends on **$$\\Delta G$$**, not enthalpy alone.\n- Mixing up **activation energy** with **enthalpy change**: **activation energy** is the energy barrier, while $$\\Delta H$$ compares products and reactants.\n\n## Quick Review Checklist\n- [ ] Define **system**, **surroundings**, **endothermic**, and **exothermic** correctly.\n- [ ] Determine the sign of $$\\Delta H$$ from a description of heat flow.\n- [ ] Calculate heat transfer using $$q = mc\\Delta T$$.\n- [ ] Use conservation of energy to relate $$q_{\\text{system}}$$ and $$q_{\\text{surroundings}}$$.\n- [ ] Apply **Hess’s law**, including reversing reactions and scaling coefficients.\n- [ ] Estimate $$\\Delta H_{\\text{rxn}}$$ from **bond enthalpies**.\n- [ ] Interpret a **potential energy diagram**, including **activation energy** and overall enthalpy change.\n- [ ] Explain the basic meaning of $$\\Delta G = \\Delta H - T\\Delta S$$ and predict whether a process is thermodynamically favorable.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "System and surroundings",
+              "definition": "The part of the universe being studied and everything external that can exchange energy with it."
+            },
+            {
+              "term": "Endothermic process",
+              "definition": "A change in which energy is absorbed from the surroundings as heat, giving a positive value of $$\\Delta H$$ at constant pressure."
+            },
+            {
+              "term": "Exothermic process",
+              "definition": "A change in which energy is released to the surroundings as heat, giving a negative value of $$\\Delta H$$ at constant pressure."
+            },
+            {
+              "term": "Calorimetry",
+              "definition": "An experimental method used to determine heat transferred during a physical or chemical change by measuring temperature change in a known mass of material."
+            },
+            {
+              "term": "Specific heat capacity",
+              "definition": "The quantity of energy required to raise the temperature of $$1.00\\ \\text{g}$$ of a substance by $$1.00^\\circ\\text{C}$$ or $$1.00\\ \\text{K}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student dissolves solid $$\\text{NH}_4\\text{NO}_3$$ in water and observes that the beaker becomes colder. Which statement best describes the process at constant pressure?",
+              "options": [
+                "The dissolving process is endothermic and $$\\Delta H>0$$.",
+                "The dissolving process is exothermic and $$\\Delta H<0$$.",
+                "The dissolving process is spontaneous only if $$\\Delta H<0$$.",
+                "The dissolving process has $$\\Delta H=0$$ because no bonds are broken."
+              ],
+              "correctAnswer": "The dissolving process is endothermic and $$\\Delta H>0$$.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A $$50.0\\ \\text{g}$$ sample of water absorbs $$4180\\ \\text{J}$$ of heat, and its temperature increases by $$20.0^\\circ\\text{C}$$. What is the specific heat capacity of the water sample?",
+              "options": [
+                "$$0.239\\ \\text{J g}^{-1}\\ ^\\circ\\text{C}^{-1}$$",
+                "$$4.18\\ \\text{J g}^{-1}\\ ^\\circ\\text{C}^{-1}$$",
+                "$$41.8\\ \\text{J g}^{-1}\\ ^\\circ\\text{C}^{-1}$$",
+                "$$209\\ \\text{J g}^{-1}\\ ^\\circ\\text{C}^{-1}$$"
+              ],
+              "correctAnswer": "$$4.18\\ \\text{J g}^{-1}\\ ^\\circ\\text{C}^{-1}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a process carried out at constant pressure, the heat transferred is equal to ______.",
+              "options": [
+                "$$\\Delta G$$",
+                "$$\\Delta H$$",
+                "$$\\Delta S$$",
+                "$$E_a$$"
+              ],
+              "correctAnswer": "$$\\Delta H$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In a coffee-cup calorimeter, if the temperature of the solution increases during a reaction, then the reaction itself is ______.",
+              "options": [
+                "endothermic",
+                "adiabatic",
+                "exothermic",
+                "isothermal"
+              ],
+              "correctAnswer": "exothermic",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Hess's law",
+              "definition": "The enthalpy change for an overall reaction equals the sum of the enthalpy changes for individual steps that add to that reaction because this quantity is path independent."
+            },
+            {
+              "term": "Standard enthalpy of reaction",
+              "definition": "The heat change when a reaction occurs as written under standard conditions, typically calculated from tabulated formation values using products minus reactants."
+            },
+            {
+              "term": "Bond enthalpy",
+              "definition": "The average energy required to break one mole of a specified covalent bond in the gas phase; it can be used to estimate reaction enthalpy from bonds broken and formed."
+            },
+            {
+              "term": "Entropy",
+              "definition": "A measure of the dispersal of matter and energy in a system, often increasing when the number of accessible microstates increases."
+            },
+            {
+              "term": "Gibbs free energy",
+              "definition": "A thermodynamic quantity given by $$\\Delta G=\\Delta H-T\\Delta S$$ that predicts whether a process is thermodynamically favorable at constant temperature and pressure."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Using average bond enthalpies, which expression correctly estimates $$\\Delta H_{\\text{rxn}}$$ for a reaction?",
+              "options": [
+                "Sum of bond enthalpies of bonds formed minus sum of bond enthalpies of bonds broken",
+                "Sum of bond enthalpies of bonds broken minus sum of bond enthalpies of bonds formed",
+                "Sum of all bond enthalpies in products minus sum of all bond enthalpies in reactants, regardless of which bonds change",
+                "Negative of the activation energy for the forward reaction"
+              ],
+              "correctAnswer": "Sum of bond enthalpies of bonds broken minus sum of bond enthalpies of bonds formed",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "For a reaction with $$\\Delta H>0$$ and $$\\Delta S>0$$, which statement is correct?",
+              "options": [
+                "The reaction is nonspontaneous at all temperatures.",
+                "The reaction is spontaneous at low temperatures only.",
+                "The reaction is spontaneous at high temperatures only.",
+                "The reaction is spontaneous only when $$\\Delta H=0$$."
+              ],
+              "correctAnswer": "The reaction is spontaneous at high temperatures only.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to Hess's law, when reaction equations are added to obtain an overall equation, the overall enthalpy change is ______ the enthalpy changes of the individual steps.",
+              "options": [
+                "the product of",
+                "the difference between",
+                "the sum of",
+                "independent from"
+              ],
+              "correctAnswer": "the sum of",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If $$\\Delta G<0$$ for a process at constant temperature and pressure, the process is thermodynamically ______.",
+              "options": [
+                "favorable",
+                "impossible",
+                "at equilibrium",
+                "endothermic"
+              ],
+              "correctAnswer": "favorable",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 7,
+      "unitName": "Equilibrium",
+      "description": "Dynamic equilibrium, equilibrium constant expressions (Kc, Kp), ICE tables, Le Châtelier's principle, and solubility equilibria.",
+      "note": "# Unit 7: Equilibrium\n\n## Overview\n**Chemical equilibrium** describes what happens when a reversible reaction reaches a dynamic state in which forward and reverse reaction rates are equal. In this unit, you’ll learn how to write and interpret **equilibrium constant expressions**, solve equilibrium problems with **ICE tables**, predict shifts using **Le Châtelier’s principle**, and analyze **solubility equilibria**—all high-frequency AP Chemistry topics.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Dynamic equilibrium** | A state where the forward and reverse reactions continue, but at equal rates, so macroscopic concentrations remain constant. | AP questions often test whether students understand that equilibrium is **dynamic**, not “stopped.” |\n| **Equilibrium constant, $$K_c$$** | A ratio of equilibrium concentrations of products to reactants, each raised to their stoichiometric coefficients. | You must write correct expressions and interpret whether equilibrium favors products or reactants. |\n| **Equilibrium constant, $$K_p$$** | The equilibrium constant written in terms of partial pressures for gases. | AP exam items often ask you to switch between $$K_c$$ and $$K_p$$ or evaluate gas-phase equilibria. |\n| **Reaction quotient, $$Q$$** | Calculated like $$K$$, but using current concentrations or pressures rather than equilibrium values. | Comparing $$Q$$ to $$K$$ tells the direction the reaction will shift to reach equilibrium. |\n| **ICE tables** | A structured way to track **Initial**, **Change**, and **Equilibrium** amounts in equilibrium problems. | Essential for solving for unknown concentrations or pressures on free-response and multiple-choice questions. |\n| **Le Châtelier’s principle** | A system at equilibrium shifts to oppose an imposed change in concentration, pressure, or temperature. | AP commonly tests prediction of equilibrium shifts and resulting effects on concentrations and yield. |\n| **Heterogeneous equilibrium** | Equilibria involving multiple phases, where pure solids and pure liquids are omitted from $$K$$ expressions. | A classic AP trap is incorrectly including solids or liquids in the equilibrium expression. |\n| **Solubility equilibrium and $$K_{sp}$$** | Equilibrium between a slightly soluble ionic solid and its dissolved ions. | Important for predicting precipitation, calculating molar solubility, and comparing ion effects. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Write balanced reversible reaction] --> B[Write equilibrium expression]\n    B --> C[Identify given initial values]\n    C --> D[Set up ICE table]\n    D --> E[Substitute equilibrium values into expression]\n    E --> F{Solve for unknown}\n    F --> G[Check reasonableness of result]\n    G --> H[Interpret chemistry]\n    H --> I[\"Compare $$Q$$ and $$K$$ if needed\"]\n    I --> J[Predict shift or confirm equilibrium]\n```\n\n### Typical equilibrium-solving workflow\n1. **Balance** the chemical equation.\n2. Write the correct **equilibrium expression**:\n   - Omit **pure solids** and **pure liquids**.\n3. Use known data to build an **ICE table**.\n4. Express equilibrium quantities algebraically.\n5. Substitute into $$K_c$$ or $$K_p$$.\n6. Solve for the unknown and check whether approximations are justified.\n7. Interpret the result chemically:\n   - Does equilibrium favor products or reactants?\n   - Which direction would the system shift?\n\n## Essential Formulas / Laws / Rules\n\n| **Rule / Formula** | **Meaning / Use** |\n|---|---|\n| $$aA + bB \\rightleftharpoons cC + dD$$ | General reversible reaction form |\n| $$K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$$ | Equilibrium constant using molar concentrations |\n| $$K_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$$ | Equilibrium constant using partial pressures |\n| $$K_p = K_c(RT)^{\\Delta n}$$ | Converts between $$K_p$$ and $$K_c$$ for gas reactions |\n| $$\\Delta n = \\text{moles gaseous products} - \\text{moles gaseous reactants}$$ | Exponent used in the conversion formula |\n| $$Q_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$$ | Reaction quotient using current concentrations |\n| $$Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$$ | Reaction quotient using current pressures |\n| If $$Q < K$$, reaction shifts right | More products must form to reach equilibrium |\n| If $$Q > K$$, reaction shifts left | More reactants must form to reach equilibrium |\n| If $$Q = K$$, system is at equilibrium | No net shift occurs |\n| $$K > 1$$ | Products are favored at equilibrium |\n| $$K < 1$$ | Reactants are favored at equilibrium |\n| $$AB_{(s)} \\rightleftharpoons A^+_{(aq)} + B^-_{(aq)}$$ | Generic dissolution equilibrium |\n| $$K_{sp} = [A^+][B^-]$$ | Solubility product expression for a $$1:1$$ salt |\n| For $$A_mB_n$$: $$K_{sp} = [A^{n+}]^m[B^{m-}]^n$$ | Stoichiometric exponents matter in solubility expressions |\n\n### Key rules to remember\n- **Pure solids** and **pure liquids** are **not included** in equilibrium expressions.\n- Only **temperature** changes the value of **$$K$$**.\n- Changes in concentration, pressure, or volume may shift equilibrium, but they do **not** change **$$K$$**.\n- A **catalyst** speeds up both forward and reverse reactions equally, so it does **not** change the equilibrium position.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **How They’re Similar** | **How They Differ** | **AP Importance** |\n|---|---|---|---|\n| **$$Q$$ vs. $$K$$** | Both use the same mathematical form. | $$Q$$ uses current values; $$K$$ uses equilibrium values. | Determines direction of shift before equilibrium is established. |\n| **$$K_c$$ vs. $$K_p$$** | Both describe equilibrium position. | $$K_c$$ uses concentration; $$K_p$$ uses gas partial pressure. | AP may ask you to convert using $$K_p = K_c(RT)^{\\Delta n}$$. |\n| **Homogeneous vs. heterogeneous equilibrium** | Both involve reversible reactions reaching equilibrium. | Heterogeneous systems involve multiple phases; solids/liquids are omitted from $$K$$. | Frequent source of expression-writing errors. |\n| **Solubility equilibrium vs. general equilibrium** | Both are governed by equilibrium constants and shifting behavior. | Solubility focuses on dissolution/precipitation and uses $$K_{sp}$$. | Useful for precipitation prediction and ion-effect reasoning. |\n\n```mermaid\nflowchart LR\n    A[\"Compare $$Q$$ to $$K$$\"] --> B{Relationship?}\n    B -->|\"$$Q < K$$\"| C[Shift right]\n    B -->|\"$$Q > K$$\"| D[Shift left]\n    B -->|\"$$Q = K$$\"| E[At equilibrium]\n```\n\n## Common AP Exam Traps\n\n- Confusing **equal rates** with **equal concentrations**: at equilibrium, forward and reverse rates are equal, but reactant and product concentrations are usually **not** equal.\n- Including **solids** or **liquids** in a **$$K$$** or **$$K_{sp}$$** expression when they should be omitted.\n- Forgetting that changing **temperature** is the only stress that changes the numerical value of **$$K$$**.\n- Using stoichiometric coefficients incorrectly in equilibrium expressions or **ICE tables**; coefficients become **exponents** in $$K$$.\n- Assuming a catalyst shifts equilibrium; it does **not** change equilibrium position, only how quickly equilibrium is reached.\n\n## Quick Review Checklist\n\n- [ ] I can explain why equilibrium is **dynamic** rather than static.\n- [ ] I can write correct **$$K_c$$** and **$$K_p$$** expressions from a balanced reaction.\n- [ ] I can determine whether **solids** or **liquids** should be omitted from an equilibrium expression.\n- [ ] I can compare **$$Q$$** and **$$K$$** to predict the direction of shift.\n- [ ] I can set up and solve an **ICE table** for an equilibrium problem.\n- [ ] I can use **Le Châtelier’s principle** to predict how concentration, pressure, volume, and temperature changes affect equilibrium.\n- [ ] I can explain the difference between **$$K_c$$** and **$$K_p$$** and use $$K_p = K_c(RT)^{\\Delta n}$$ when needed.\n- [ ] I can write a **$$K_{sp}$$** expression and relate it to **molar solubility** or precipitation behavior.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Dynamic equilibrium",
+              "definition": "The state in a reversible reaction where the forward and reverse processes occur at equal rates, so macroscopic concentrations remain constant over time."
+            },
+            {
+              "term": "Equilibrium constant, $$K_c$$",
+              "definition": "A ratio formed from equilibrium molar concentrations of products and reactants, each raised to their stoichiometric coefficients, for a reaction at a given temperature."
+            },
+            {
+              "term": "Reaction quotient, $$Q$$",
+              "definition": "A ratio with the same form as the equilibrium-constant expression, but calculated using current rather than equilibrium amounts to predict the direction of shift."
+            },
+            {
+              "term": "ICE table",
+              "definition": "An organized method that tracks initial amounts, changes during approach to equilibrium, and final equilibrium amounts in order to solve for unknown concentrations."
+            },
+            {
+              "term": "Heterogeneous equilibrium",
+              "definition": "A reversible system involving more than one phase in which pure solids and pure liquids are omitted from the constant expression because their activities are effectively constant."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "For the reaction $$2NO_2(g) \\rightleftharpoons N_2O_4(g)$$, the equilibrium constant expression in terms of concentration is ______.",
+              "options": [
+                "$$K_c = \\dfrac{[N_2O_4]}{[NO_2]^2}$$",
+                "$$K_c = \\dfrac{[NO_2]^2}{[N_2O_4]}$$",
+                "$$K_c = \\dfrac{2[N_2O_4]}{[NO_2]^2}$$",
+                "$$K_c = \\dfrac{[N_2O_4]^2}{[NO_2]}$$"
+              ],
+              "correctAnswer": "$$K_c = \\dfrac{[N_2O_4]}{[NO_2]^2}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A reaction has $$K_c = 4.0 \\times 10^{-3}$$ at a certain temperature. A mixture is prepared so that $$Q_c = 2.0 \\times 10^{-1}$$. Which statement is correct?",
+              "options": [
+                "The system will shift toward products because $$Q_c < K_c$$.",
+                "The system will shift toward reactants because $$Q_c > K_c$$.",
+                "The system is already at equilibrium because $$Q_c = K_c$$.",
+                "No prediction can be made without the rate constants."
+              ],
+              "correctAnswer": "The system will shift toward reactants because $$Q_c > K_c$$.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For $$CaCO_3(s) \\rightleftharpoons CaO(s) + CO_2(g)$$, the equilibrium constant expression is $$K_c =$$ ______.",
+              "options": [
+                "$$[CaCO_3][CaO][CO_2]$$",
+                "$$\\dfrac{[CaO][CO_2]}{[CaCO_3]}$$",
+                "$$[CO_2]$$",
+                "$$\\dfrac{1}{[CO_2]}$$"
+              ],
+              "correctAnswer": "$$[CO_2]$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "In an ICE-table setup for $$H_2(g) + I_2(g) \\rightleftharpoons 2HI(g)$$, if no $$HI$$ is initially present and the reaction proceeds forward by $$x$$, the equilibrium concentration of $$HI$$ is ______.",
+              "options": [
+                "$$x$$",
+                "$$2x$$",
+                "$$-x$$",
+                "$$[HI]_0 - x$$"
+              ],
+              "correctAnswer": "$$2x$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Equilibrium constant, $$K_p$$",
+              "definition": "A ratio for gaseous systems written using equilibrium partial pressures of products and reactants, each raised to the appropriate stoichiometric coefficients."
+            },
+            {
+              "term": "Relationship between $$K_p$$ and $$K_c$$",
+              "definition": "For a gaseous reaction, the pressure-based constant equals the concentration-based constant multiplied by $$\\left(RT\\right)^{\\Delta n}$$, where $$\\Delta n$$ is moles of gaseous products minus moles of gaseous reactants."
+            },
+            {
+              "term": "Le Châtelier's principle",
+              "definition": "When a system at equilibrium is disturbed by a change in concentration, pressure, or temperature, it responds in the direction that partially opposes the disturbance."
+            },
+            {
+              "term": "Solubility product, $$K_{sp}$$",
+              "definition": "The equilibrium constant for the dissolution of a sparingly soluble ionic compound, expressed as the product of ion concentrations raised to their stoichiometric coefficients."
+            },
+            {
+              "term": "Common ion effect",
+              "definition": "The reduction in dissolution of a sparingly soluble substance caused by the presence of an ion already produced by that dissolution equilibrium."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "For the gas-phase reaction $$N_2O_4(g) \\rightleftharpoons 2NO_2(g)$$, which expression correctly relates $$K_p$$ and $$K_c$$?",
+              "options": [
+                "$$K_p = K_c(RT)^{-1}$$",
+                "$$K_p = K_c$$",
+                "$$K_p = K_c(RT)$$",
+                "$$K_p = K_c(RT)^2$$"
+              ],
+              "correctAnswer": "$$K_p = K_c(RT)$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "The equilibrium $$2SO_2(g) + O_2(g) \\rightleftharpoons 2SO_3(g) + \\text{heat}$$ is established in a sealed container. Which change will shift the equilibrium toward reactants?",
+              "options": [
+                "Adding more $$SO_2(g)$$",
+                "Decreasing the temperature",
+                "Decreasing the volume",
+                "Adding a catalyst"
+              ],
+              "correctAnswer": "Decreasing the temperature",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For the dissolution $$AgCl(s) \\rightleftharpoons Ag^+(aq) + Cl^-(aq)$$, the solubility-product expression is ______.",
+              "options": [
+                "$$K_{sp} = [AgCl]$$",
+                "$$K_{sp} = [Ag^+][Cl^-]$$",
+                "$$K_{sp} = \\dfrac{[Ag^+]}{[Cl^-]}$$",
+                "$$K_{sp} = [Ag^+] + [Cl^-]$$"
+              ],
+              "correctAnswer": "$$K_{sp} = [Ag^+][Cl^-]$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "If adding $$NaF(aq)$$ to a saturated solution of $$CaF_2(s)$$ causes precipitation, the ion responsible for the common ion effect is ______.",
+              "options": [
+                "$$Na^+$$",
+                "$$Ca^{2+}$$",
+                "$$F^-$$",
+                "$$OH^-$$"
+              ],
+              "correctAnswer": "$$F^-$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 8,
+      "unitName": "Acids and Bases",
+      "description": "Brønsted–Lowry acids/bases, pH, Ka and Kb, buffers, acid–base titrations, and indicators.",
+      "note": "# Unit 8: Acids and Bases\n\n## Overview\nThis unit develops the **Brønsted–Lowry** view of acids and bases, the mathematics of **pH**, and the equilibrium ideas behind **$$K_a$$**, **$$K_b$$**, **buffers**, and **acid–base titrations**. It matters on the AP exam because students must connect **particle-level proton transfer** with **quantitative equilibrium calculations**, graph interpretation, and experimental reasoning.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Brønsted–Lowry acid/base** | An **acid** donates a proton, and a **base** accepts a proton. | AP questions often ask you to identify acid/base behavior in reactions and justify it with proton transfer. |\n| **Conjugate acid–base pairs** | Two species that differ by one proton. | You must track how acids form conjugate bases and how bases form conjugate acids in equilibrium reactions. |\n| **Strong vs. weak acids/bases** | **Strong** species ionize essentially completely; **weak** species establish equilibrium. | This distinction determines whether to use stoichiometry only or equilibrium expressions like **$$K_a$$** and **$$K_b$$**. |\n| **$$\\mathrm{pH}$$ and $$\\mathrm{pOH}$$** | Logarithmic measures of hydronium and hydroxide concentration. | AP often tests quick conversion among **$$[\\mathrm{H_3O^+}]$$**, **$$[\\mathrm{OH^-}]$$**, **$$\\mathrm{pH}$$**, and **$$\\mathrm{pOH}$$**. |\n| **Acid/base equilibrium constants** | **$$K_a$$** and **$$K_b$$** measure the extent of ionization of weak acids and bases. | You need these for equilibrium setups, ranking acid/base strength, and connecting conjugate pairs. |\n| **Buffers** | Mixtures of a weak acid/base and its conjugate partner that resist pH change. | AP free-response questions frequently ask how buffers respond to added acid/base and how to calculate buffer pH. |\n| **Titrations** | Controlled reaction of acid and base to determine concentration or analyze pH change. | You may analyze titration curves, equivalence points, half-equivalence points, and indicator choice. |\n| **Indicators** | Weak acids/bases whose color depends on pH. | AP may ask which indicator is appropriate based on the pH range near the equivalence point. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Identify acid-base situation\"] --> B[\"Is the acid/base strong or weak?\"]\n    B --> C[\"Strong: use stoichiometry first\"]\n    B --> D[\"Weak: set up equilibrium\"]\n    D --> E[\"Write $$K_a$$ or $$K_b$$ expression\"]\n    E --> F[\"Solve for $$[\\mathrm{H_3O^+}]$$ or $$[\\mathrm{OH^-}]$$\"]\n    C --> G[\"Convert remaining amounts to concentrations\"]\n    F --> H[\"Convert to $$\\mathrm{pH}$$ or $$\\mathrm{pOH}$$\"]\n    G --> H\n    H --> I[\"If buffer: use conjugate pair relationship\"]\n    H --> J[\"If titration: locate region on titration curve\"]\n    I --> K[\"Interpret pH change after added acid/base\"]\n    J --> L[\"Determine equivalence point, half-equivalence point, and indicator suitability\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Idea** | **Expression / Rule** |\n|---|---|\n| **Brønsted–Lowry definitions** | **Acid** donates $$\\mathrm{H^+}$$; **base** accepts $$\\mathrm{H^+}$$ |\n| **Autoionization of water** | $$2\\mathrm{H_2O}(l) \\rightleftharpoons \\mathrm{H_3O^+}(aq) + \\mathrm{OH^-}(aq)$$ |\n| **Ion-product constant for water** | $$K_w = [\\mathrm{H_3O^+}][\\mathrm{OH^-}] = 1.0 \\times 10^{-14} \\text{ at } 25^\\circ \\mathrm{C}$$ |\n| **pH** | $$\\mathrm{pH} = -\\log[\\mathrm{H_3O^+}]$$ |\n| **pOH** | $$\\mathrm{pOH} = -\\log[\\mathrm{OH^-}]$$ |\n| **Relationship between pH and pOH** | $$\\mathrm{pH} + \\mathrm{pOH} = 14.00 \\text{ at } 25^\\circ \\mathrm{C}$$ |\n| **Weak acid equilibrium** | $$\\mathrm{HA} + \\mathrm{H_2O} \\rightleftharpoons \\mathrm{H_3O^+} + \\mathrm{A^-}$$ |\n| **Acid dissociation constant** | $$K_a = \\frac{[\\mathrm{H_3O^+}][\\mathrm{A^-}]}{[\\mathrm{HA}]}$$ |\n| **Weak base equilibrium** | $$\\mathrm{B} + \\mathrm{H_2O} \\rightleftharpoons \\mathrm{BH^+} + \\mathrm{OH^-}$$ |\n| **Base dissociation constant** | $$K_b = \\frac{[\\mathrm{BH^+}][\\mathrm{OH^-}]}{[\\mathrm{B}]}$$ |\n| **Conjugate pair relationship** | $$K_a K_b = K_w$$ |\n| **Strength ranking** | Larger **$$K_a$$** means stronger acid; larger **$$K_b$$** means stronger base |\n| **Half-equivalence point in weak acid titration** | $$\\mathrm{pH} = \\mathrm{p}K_a$$ |\n| **Henderson–Hasselbalch equation** | $$\\mathrm{pH} = \\mathrm{p}K_a + \\log\\frac{[\\mathrm{A^-}]}{[\\mathrm{HA}]}$$ |\n| **Neutralization stoichiometry** | At equivalence, moles of added acid and base react according to the balanced equation |\n\n**Rules to remember**\n- **Strong acids** and **strong bases** dissociate essentially completely.\n- For a **weak acid**, the stronger the acid, the **weaker its conjugate base**.\n- In titration problems, do **stoichiometry before equilibrium** whenever a strong acid/base is added.\n\n## Connections & Comparisons\n\n| **Comparison** | **Strong Acid / Strong Base** | **Weak Acid / Weak Base** | **AP Significance** |\n|---|---|---|---|\n| **Ionization in water** | Nearly complete | Partial, equilibrium established | Determines whether to use direct concentration or solve via **$$K_a$$**/**$$K_b$$** |\n| **Equilibrium constant** | Very large effective dissociation | Finite **$$K_a$$** or **$$K_b$$** | Required for weak species calculations |\n| **Conjugate strength** | Conjugate is extremely weak | Conjugate has measurable basicity/acidity | Important in buffer and hydrolysis questions |\n| **Titration equivalence-point pH** | About $$7$$ for strong acid–strong base | Not necessarily $$7$$ | AP often tests why equivalence pH depends on the conjugate species |\n| **Buffer formation** | Does not typically form effective buffer pair | Commonly forms with conjugate partner | Key for pH resistance and Henderson–Hasselbalch use |\n\n## Common AP Exam Traps\n- Confusing **strength** with **concentration**: a **strong** acid ionizes completely, but it is not necessarily more concentrated than a **weak** acid.\n- Assuming every equivalence point has $$\\mathrm{pH} = 7$$. That is only true for **strong acid–strong base** titrations at $$25^\\circ \\mathrm{C}$$.\n- Forgetting that **large** **$$K_a$$** means a **stronger acid**, but a **smaller** **$$\\mathrm{p}K_a$$** also means a stronger acid.\n- Using the **Henderson–Hasselbalch equation** before doing the neutralization stoichiometry when strong acid or base is added to a buffer.\n- Treating **indicators** as exact equivalence-point markers; they only change color over a **range** of pH values.\n\n## Quick Review Checklist\n- [ ] I can define **Brønsted–Lowry acids and bases** and identify **conjugate acid–base pairs**.\n- [ ] I can distinguish **strong** versus **weak** acids and bases in terms of ionization and equilibrium.\n- [ ] I can calculate **$$\\mathrm{pH}$$**, **$$\\mathrm{pOH}$$**, **$$[\\mathrm{H_3O^+}]$$**, and **$$[\\mathrm{OH^-}]$$** using **$$K_w$$**.\n- [ ] I can write and use **$$K_a$$** and **$$K_b$$** expressions for weak acids and bases.\n- [ ] I can relate conjugate acid–base strength using **$$K_a K_b = K_w$$**.\n- [ ] I can explain how a **buffer** works and calculate its pH with the conjugate acid/base ratio.\n- [ ] I can analyze an **acid–base titration curve**, including initial region, half-equivalence point, equivalence point, and post-equivalence region.\n- [ ] I can choose an appropriate **indicator** based on the expected pH range near the equivalence point.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Brønsted–Lowry acid",
+              "definition": "A species that donates a proton in a chemical reaction."
+            },
+            {
+              "term": "Conjugate base",
+              "definition": "The species formed when a proton donor loses $$H^+$$."
+            },
+            {
+              "term": "Amphoteric species",
+              "definition": "A substance capable of acting as either a proton donor or a proton acceptor depending on the reaction conditions."
+            },
+            {
+              "term": "$$K_a$$",
+              "definition": "The equilibrium constant for the ionization of an acid in water, written from the products over reactants expression for the proton-transfer reaction."
+            },
+            {
+              "term": "$$pH$$",
+              "definition": "The negative logarithm of the hydronium ion concentration, expressed as $$-\\log[H_3O^+]$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A student compares $$0.10\\,M$$ solutions of $$HF$$ and $$HCl$$ at $$25^\\circ C$$. Which statement best explains why the $$HCl$$ solution has the lower $$pH$$?",
+              "options": [
+                "$$HCl$$ completely ionizes in water, while $$HF$$ only partially ionizes.",
+                "$$HF$$ has a larger molar mass, so it produces fewer ions per mole.",
+                "$$HCl$$ is molecular, whereas $$HF$$ is ionic.",
+                "$$HF$$ donates two protons per molecule, while $$HCl$$ donates one."
+              ],
+              "correctAnswer": "$$HCl$$ completely ionizes in water, while $$HF$$ only partially ionizes.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "For the reaction $$NH_3 + H_2O \\rightleftharpoons NH_4^+ + OH^-$$, which conjugate acid-base pair is correctly identified?",
+              "options": [
+                "$$NH_3$$ and $$NH_4^+$$",
+                "$$NH_3$$ and $$OH^-$$",
+                "$$H_2O$$ and $$NH_4^+$$",
+                "$$OH^-$$ and $$NH_4^+$$"
+              ],
+              "correctAnswer": "$$NH_3$$ and $$NH_4^+$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a weak acid in water, the acid dissociation constant is written as $$K_a = \\dfrac{\\text{______}}{[HA]}$$ when water is omitted from the equilibrium expression.",
+              "options": [
+                "[H_3O^+][A^-]",
+                "[OH^-][A^-]",
+                "[H_3O^+][HA]",
+                "[A^-]"
+              ],
+              "correctAnswer": "[H_3O^+][A^-]",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "At $$25^\\circ C$$, if $$[H_3O^+] = 1.0 \\times 10^{-3}\\,M$$, then the $$pH$$ of the solution is ______.",
+              "options": [
+                "1",
+                "3",
+                "11",
+                "13"
+              ],
+              "correctAnswer": "3",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Buffer",
+              "definition": "A solution that resists significant changes in $$pH$$ when small amounts of strong acid or strong base are added, typically because it contains a weak acid and its corresponding base or a weak base and its corresponding acid."
+            },
+            {
+              "term": "$$K_b$$",
+              "definition": "The equilibrium constant for the reaction of a base with water to form its protonated form and hydroxide ion."
+            },
+            {
+              "term": "Half-equivalence point",
+              "definition": "The stage in a weak acid-strong base or weak base-strong acid titration at which the amount converted is one-half the initial amount, so the concentrations of the weak species and its conjugate are equal."
+            },
+            {
+              "term": "Equivalence point",
+              "definition": "The point in a titration at which stoichiometrically equal amounts of acid and base have reacted according to the balanced equation."
+            },
+            {
+              "term": "Indicator",
+              "definition": "A substance whose acid and conjugate-base forms have different colors, allowing the endpoint of a titration to be detected over a characteristic transition range."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "Which mixture forms an effective buffer?",
+              "options": [
+                "$$CH_3COOH$$ and $$CH_3COONa$$",
+                "$$HCl$$ and $$NaCl$$",
+                "$$NaOH$$ and $$KOH$$",
+                "$$HNO_3$$ and $$NaNO_3$$"
+              ],
+              "correctAnswer": "$$CH_3COOH$$ and $$CH_3COONa$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In the titration of a weak acid with a strong base, which statement is correct at the half-equivalence point?",
+              "options": [
+                "$$pH = pK_a$$ because the concentrations of the weak acid and its conjugate base are equal.",
+                "$$pOH = pK_b$$ because the strong base determines the $$pH$$.",
+                "The solution is neutral because equal moles of acid and base have reacted.",
+                "The indicator changes color because the equivalence point has been reached."
+              ],
+              "correctAnswer": "$$pH = pK_a$$ because the concentrations of the weak acid and its conjugate base are equal.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a conjugate acid-base pair at $$25^\\circ C$$, the relationship between equilibrium constants is $$K_aK_b = \\text{______}$$.",
+              "options": [
+                "$$1.0 \\times 10^{-14}$$",
+                "$$1.0 \\times 10^{-7}$$",
+                "$$14$$",
+                "$$0$$"
+              ],
+              "correctAnswer": "$$1.0 \\times 10^{-14}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a strong base is added to a buffer containing $$HA$$ and $$A^-$$, the added base reacts primarily with ______.",
+              "options": [
+                "$$HA$$",
+                "$$A^-$$",
+                "$$H_2O$$",
+                "$$H_3O^+$$"
+              ],
+              "correctAnswer": "$$HA$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 9,
+      "unitName": "Thermodynamics and Electrochemistry",
+      "description": "Entropy, Gibbs free energy, standard reduction potentials, Nernst equation, and electrolytic cells.",
+      "note": "# Unit 9: Thermodynamics and Electrochemistry\n\n## Overview\nThis unit connects **thermodynamics** and **electrochemistry** to explain whether chemical processes are **spontaneous**, how much useful work they can do, and how cell potential changes under nonstandard conditions. On the AP exam, students must interpret **entropy**, **Gibbs free energy**, **standard reduction potentials**, the **Nernst equation**, and the differences between **galvanic** and **electrolytic** cells in both conceptual and calculation-based questions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Entropy** | A measure of the dispersal of matter and energy; often linked to the number of possible microstates. | AP questions often ask you to predict the sign of $$\\Delta S$$ from phase changes, moles of gas, or molecular complexity. |\n| **Second Law of Thermodynamics** | A process is spontaneous if the total entropy of the universe increases. | Helps explain why some reactions occur without outside work, even when enthalpy alone is not favorable. |\n| **Gibbs Free Energy** | A thermodynamic quantity that predicts spontaneity at constant temperature and pressure. | You must use $$\\Delta G = \\Delta H - T\\Delta S$$ and connect the sign of $$\\Delta G$$ to spontaneity and equilibrium. |\n| **Standard Free Energy Change** | The free energy change under standard-state conditions. | AP problems link $$\\Delta G^\\circ$$ to equilibrium and cell potential through formula relationships. |\n| **Standard Reduction Potential** | The tendency of a species to gain electrons under standard conditions. | You need to identify **cathode**, **anode**, and calculate $$E^\\circ_{\\text{cell}}$$ from reduction tables. |\n| **Galvanic Voltaic Cell** | A spontaneous electrochemical cell that converts chemical energy into electrical energy. | Common AP topic: determine electron flow, signs of electrodes, salt bridge function, and overall reaction. |\n| **Electrolytic Cell** | A nonspontaneous cell driven by an external power source. | AP often tests how electrolytic cells reverse the direction of electron flow and require energy input. |\n| **Nernst Equation** | An equation relating cell potential to concentration and reaction quotient. | Essential for predicting how nonstandard conditions affect $$E_{\\text{cell}}$$ and spontaneity. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Identify reaction or cell\"] --> B[\"Determine thermodynamic or electrochemical quantities\"]\n    B --> C[\"Predict sign of $$\\Delta H$$ and $$\\Delta S$$ or identify half-reactions\"]\n    C --> D[\"Use $$\\Delta G = \\Delta H - T\\Delta S$$ to assess spontaneity\"]\n    D --> E[\"For electrochemical cells, calculate $$E^\\circ_{\\text{cell}}$$\"]\n    E --> F[\"Relate free energy and voltage: $$\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$$\"]\n    F --> G[\"If conditions are nonstandard, apply Nernst equation\"]\n    G --> H[\"Conclude spontaneity, equilibrium direction, and cell behavior\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Relationship** | **Meaning / Use** |\n|---|---|\n| $$\\Delta G = \\Delta H - T\\Delta S$$ | Predicts spontaneity at constant temperature and pressure. If $$\\Delta G < 0$$, the process is **spontaneous**. |\n| $$\\Delta G^\\circ = -RT\\ln K$$ | Connects standard free energy to the **equilibrium constant**. If $$K > 1$$, then usually $$\\Delta G^\\circ < 0$$. |\n| $$\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$$ | Connects thermodynamics and electrochemistry. A positive $$E^\\circ_{\\text{cell}}$$ means negative $$\\Delta G^\\circ$$. |\n| $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{red,cathode}} - E^\\circ_{\\text{red,anode}}$$ | Used to calculate standard cell potential from a reduction potential table. |\n| $$E_{\\text{cell}} = E^\\circ_{\\text{cell}} - \\frac{RT}{nF}\\ln Q$$ | The **Nernst equation** in general form for nonstandard conditions. |\n| $$E_{\\text{cell}} = E^\\circ_{\\text{cell}} - \\frac{0.0592}{n}\\log Q$$ | Nernst equation at $$25^\\circ\\text{C}$$. |\n| $$\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$$ | A process is spontaneous when $$\\Delta S_{\\text{univ}} > 0$$. |\n| $$\\Delta G = 0$$ at equilibrium | At equilibrium, there is no net driving force for change. |\n| **Anode = oxidation; cathode = reduction** | True for both **galvanic** and **electrolytic** cells. |\n| **Electrons flow from anode to cathode** | Always true in the external circuit. |\n| **Galvanic cell:** $$E_{\\text{cell}} > 0$$ | The reaction is spontaneous and produces electrical energy. |\n| **Electrolytic cell:** $$E_{\\text{cell}} < 0$$ for the reaction as written | The reaction is nonspontaneous and requires external energy. |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection / Contrast** | **AP Takeaway** |\n|---|---|---|\n| **Entropy vs. Enthalpy** | $$\\Delta H$$ tracks heat flow; $$\\Delta S$$ tracks dispersal of matter and energy. Both determine $$\\Delta G$$. | A reaction can be spontaneous even if $$\\Delta H > 0$$, provided $$T\\Delta S$$ is favorable enough. |\n| **Spontaneity vs. Rate** | Thermodynamics predicts whether a process is favorable, not how fast it occurs. | A spontaneous reaction can still be very slow if it has a large activation energy. |\n| **Galvanic vs. Electrolytic Cells** | Galvanic cells use spontaneous redox reactions; electrolytic cells force nonspontaneous redox reactions. | Know electrode signs and energy flow differences. |\n| **$$\\Delta G^\\circ$$ vs. $$E^\\circ_{\\text{cell}}$$** | They are directly related by $$\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$$. | If one is favorable, the other must reflect that: negative $$\\Delta G^\\circ$$ corresponds to positive $$E^\\circ_{\\text{cell}}$$. |\n\n```mermaid\nflowchart LR\n    A[\"$$\\Delta G < 0$$\"] --> B[\"Spontaneous\"]\n    B --> C[\"For a cell: $$E_{\\text{cell}} > 0$$\"]\n    C --> D[\"Electrical work produced\"]\n\n    E[\"$$\\Delta G = 0$$\"] --> F[\"Equilibrium\"]\n    F --> G[\"For a cell: $$E_{\\text{cell}} = 0$$\"]\n\n    H[\"$$\\Delta G > 0$$\"] --> I[\"Nonspontaneous\"]\n    I --> J[\"For a cell: $$E_{\\text{cell}} < 0$$\"]\n    J --> K[\"External energy required\"]\n```\n\n## Common AP Exam Traps\n\n- Confusing **spontaneous** with **fast**. A negative $$\\Delta G$$ does **not** mean the reaction occurs quickly.\n- Reversing the sign of electrode potentials incorrectly. Use tabulated **reduction** potentials and calculate $$E^\\circ_{\\text{cell}}$$ with  \n  $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{red,cathode}} - E^\\circ_{\\text{red,anode}}$$ rather than multiplying signs by coefficients.\n- Forgetting that **coefficients do not change electrode potentials**. Doubling a half-reaction doubles electrons, not $$E^\\circ$$.\n- Assuming entropy always increases when a reaction produces more particles. AP often emphasizes **moles of gas** and **phase changes** more than total stoichiometric particles in solution.\n- Mixing up **galvanic** and **electrolytic** cell signs. In a galvanic cell, the **anode is negative** and the **cathode is positive**; in an electrolytic cell, the external power source reverses those signs.\n\n## Quick Review Checklist\n\n- [ ] I can explain what **entropy** means and predict the sign of $$\\Delta S$$ from a chemical or physical change.\n- [ ] I can use $$\\Delta G = \\Delta H - T\\Delta S$$ to determine whether a process is spontaneous at a given temperature.\n- [ ] I can relate the sign of $$\\Delta G$$ to **spontaneity** and **equilibrium**.\n- [ ] I can identify the **anode**, **cathode**, oxidation half-reaction, and reduction half-reaction in an electrochemical cell.\n- [ ] I can calculate $$E^\\circ_{\\text{cell}}$$ from standard reduction potentials.\n- [ ] I can connect electrochemistry and thermodynamics using $$\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$$.\n- [ ] I can use the **Nernst equation** to determine how concentration changes affect $$E_{\\text{cell}}$$.\n- [ ] I can distinguish clearly between **galvanic** and **electrolytic** cells in terms of spontaneity, energy flow, and electrode signs.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Entropy",
+              "definition": "A state function that measures the dispersal of matter and energy in a system; it generally increases when particles become more spread out or when energy is distributed among more microstates."
+            },
+            {
+              "term": "Second Law of Thermodynamics",
+              "definition": "The principle stating that for any spontaneous process, the total disorder of the universe increases, so $$\\Delta S_{\\text{univ}} > 0$$."
+            },
+            {
+              "term": "Gibbs Free Energy",
+              "definition": "A thermodynamic quantity defined by $$\\Delta G = \\Delta H - T\\Delta S$$ that predicts whether a process is thermodynamically favored at constant temperature and pressure."
+            },
+            {
+              "term": "Standard Free Energy Change",
+              "definition": "The change in the thermodynamic driving force when reactants and products are in their standard states, related to equilibrium by $$\\Delta G^\\circ = -RT\\ln K$$."
+            },
+            {
+              "term": "Thermodynamic vs. Kinetic Control",
+              "definition": "The distinction between whether a process is favored based on energy change and particle dispersal versus whether it occurs rapidly enough to be observed."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A reaction has $$\\Delta H < 0$$ and $$\\Delta S < 0$$. Under which condition is the reaction most likely spontaneous?",
+              "options": [
+                "At low temperature, because the negative enthalpy term can outweigh the unfavorable entropy term",
+                "At high temperature, because the $$-T\\Delta S$$ term becomes more negative",
+                "At all temperatures, because both terms favor spontaneity",
+                "At no temperature, because a negative entropy change always prevents spontaneity"
+              ],
+              "correctAnswer": "At low temperature, because the negative enthalpy term can outweigh the unfavorable entropy term",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "For a reaction at equilibrium under constant temperature and pressure, which statement is correct?",
+              "options": [
+                "$$\\Delta G = 0$$ and $$Q = K$$",
+                "$$\\Delta G^\\circ = 0$$ and $$Q = 1$$",
+                "$$\\Delta G > 0$$ and $$Q < K$$",
+                "$$\\Delta G < 0$$ and $$Q > K$$"
+              ],
+              "correctAnswer": "$$\\Delta G = 0$$ and $$Q = K$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For any process to be spontaneous, the entropy change of the universe must satisfy ______.",
+              "options": [
+                "$$\\Delta S_{\\text{univ}} > 0$$",
+                "$$\\Delta S_{\\text{univ}} < 0$$",
+                "$$\\Delta G > 0$$",
+                "$$\\Delta H = 0$$"
+              ],
+              "correctAnswer": "$$\\Delta S_{\\text{univ}} > 0$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The relationship between standard free energy change and the equilibrium constant is ______.",
+              "options": [
+                "$$\\Delta G^\\circ = -RT\\ln K$$",
+                "$$\\Delta G^\\circ = RT\\ln K$$",
+                "$$\\Delta G = -RT\\ln K$$",
+                "$$K = -RT\\ln \\Delta G^\\circ$$"
+              ],
+              "correctAnswer": "$$\\Delta G^\\circ = -RT\\ln K$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Standard Reduction Potential",
+              "definition": "The measured tendency of a species to gain electrons under standard conditions, tabulated relative to the hydrogen electrode assigned a value of $$0.00\\ \\text{V}$$."
+            },
+            {
+              "term": "Galvanic Cell",
+              "definition": "An electrochemical device in which a spontaneous redox reaction produces electrical work, with oxidation at the anode and reduction at the cathode."
+            },
+            {
+              "term": "Electrolytic Cell",
+              "definition": "An electrochemical device that uses external electrical energy to force a nonspontaneous redox process to occur."
+            },
+            {
+              "term": "Nernst Equation",
+              "definition": "An equation that relates cell potential to standard cell potential, temperature, number of electrons transferred, and reaction quotient: $$E = E^\\circ - \\frac{RT}{nF}\\ln Q$$."
+            },
+            {
+              "term": "Faraday's Law of Electrolysis",
+              "definition": "The principle that the amount of substance produced at an electrode is proportional to the total charge passed, where charge is calculated using $$q = It$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A voltaic cell is constructed from two half-reactions. Which procedure correctly determines $$E^\\circ_{\\text{cell}}$$?",
+              "options": [
+                "Add the reduction potential for the cathode to the oxidation potential for the anode",
+                "Add the reduction potentials for both half-reactions without changing signs",
+                "Multiply each half-cell potential by its stoichiometric coefficient and then add",
+                "Subtract the oxidation potential of the cathode from the reduction potential of the anode"
+              ],
+              "correctAnswer": "Add the reduction potential for the cathode to the oxidation potential for the anode",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "For the reaction $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$, the concentration of $$\\text{Zn}^{2+}$$ is increased while all other conditions are constant. What happens to the cell potential?",
+              "options": [
+                "It decreases because $$Q$$ increases, making the subtraction term in the Nernst equation larger",
+                "It increases because $$Q$$ decreases, making the subtraction term smaller",
+                "It remains unchanged because solids do not affect cell potential",
+                "It becomes zero because the reaction is no longer spontaneous"
+              ],
+              "correctAnswer": "It decreases because $$Q$$ increases, making the subtraction term in the Nernst equation larger",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In an electrolytic cell, oxidation occurs at the ______.",
+              "options": [
+                "anode",
+                "cathode",
+                "salt bridge",
+                "external wire"
+              ],
+              "correctAnswer": "anode",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "At $$25^\\circ\\text{C}$$, the Nernst equation can be written as ______ for a cell reaction.",
+              "options": [
+                "$$E = E^\\circ - \\frac{0.0592}{n}\\log Q$$",
+                "$$E = E^\\circ + \\frac{0.0592}{n}\\log Q$$",
+                "$$E = \\frac{0.0592}{n}\\log K$$",
+                "$$E^\\circ = E - \\frac{0.0592}{n}\\log Q$$"
+              ],
+              "correctAnswer": "$$E = E^\\circ - \\frac{0.0592}{n}\\log Q$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,765 @@
+{
+  "apSubject": "AP Physics C: Electricity and Magnetism",
+  "units": [
+    {
+      "unitNumber": 1,
+      "unitName": "Electrostatics",
+      "description": "Coulomb's law, electric field using calculus and Gauss's law, electric potential, and energy in electric fields.",
+      "note": "# Unit 1: Electrostatics\n\n## Overview\nThis unit introduces how **electric charges** interact through **forces**, **fields**, **potential**, and **energy**. You will use **Coulomb’s law**, **integration**, and **Gauss’s law** to analyze charge distributions—core skills that frequently appear in both AP Physics C: E&M multiple-choice and free-response questions.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Electric charge** | A fundamental property of matter that can be positive or negative and is conserved. | Many AP problems begin by identifying charge signs, conservation, and interactions between charges. |\n| **Coulomb’s law** | The force between two point charges varies as the product of the charges and inversely as the square of the distance. | You must calculate forces, compare magnitudes, and determine directions in particle-based setups. |\n| **Electric field** | The force per unit charge at a point in space. | AP questions often ask you to move from force ideas to field reasoning, especially with superposition. |\n| **Superposition** | The total field or force is the vector sum of contributions from all charges. | Essential for multi-charge systems and for building fields from continuous charge distributions. |\n| **Continuous charge distributions** | Charge spread along a line, over a surface, or throughout a volume. | You are expected to use **calculus** to compute fields and potentials from non-point charges. |\n| **Gauss’s law** | The net electric flux through a closed surface depends on enclosed charge. | One of the most important AP tools for symmetric charge distributions such as spheres, cylinders, and planes. |\n| **Electric potential** | Electric potential energy per unit charge; a scalar field related to work done by electric forces. | Often easier than field methods for energy/work questions and central to equipotential reasoning. |\n| **Electric potential energy** | Energy stored due to the arrangement of charges in an electric field. | AP free-response problems frequently connect field, potential, and energy in one setup. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify charge configuration] --> B{Enough symmetry for Gauss's law?}\n    B -->|Yes| C[Choose Gaussian surface]\n    C --> D[Apply Gauss's law to find **E**]\n    B -->|No| E[Use Coulomb's law]\n    E --> F[Break charge into **dq**]\n    F --> G[Integrate to find field or potential]\n    D --> H[Use **E** to find force, motion, or flux]\n    G --> H\n    H --> I{Need energy or voltage?}\n    I -->|Yes| J[Use potential or potential energy relations]\n    I -->|No| K[Interpret direction and magnitude physically]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Quantity** | **Expression** | **Use** |\n|---|---|---|\n| **Coulomb’s law (magnitude)** | $$F = k\\frac{|q_1 q_2|}{r^2}$$ | Finds the electric force between two point charges. |\n| **Coulomb constant** | $$k = \\frac{1}{4\\pi \\varepsilon_0}$$ | Connects electrostatics equations in vacuum. |\n| **Electric field definition** | $$\\vec{E} = \\frac{\\vec{F}}{q_{\\text{test}}}$$ | Defines field as force per unit positive test charge. |\n| **Field of a point charge** | $$\\vec{E} = k\\frac{q}{r^2}\\hat{r}$$ | Gives the magnitude and direction of field from a point charge. |\n| **Superposition** | $$\\vec{E}_{\\text{net}} = \\sum \\vec{E}_i,\\qquad \\vec{F}_{\\text{net}} = \\sum \\vec{F}_i$$ | Add contributions vectorially from multiple charges. |\n| **Field from continuous charge** | $$\\vec{E} = \\int k\\frac{dq}{r^2}\\hat{r}$$ | Used for rods, arcs, disks, and other extended objects. |\n| **Electric flux** | $$\\Phi_E = \\int \\vec{E}\\cdot d\\vec{A}$$ | Measures how much field passes through a surface. |\n| **Gauss’s law** | $$\\oint \\vec{E}\\cdot d\\vec{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}$$ | Best for highly symmetric charge distributions. |\n| **Potential difference** | $$\\Delta V = -\\int \\vec{E}\\cdot d\\vec{\\ell}$$ | Relates field to electric potential. |\n| **Potential of a point charge** | $$V = k\\frac{q}{r}$$ | Scalar quantity; easier to sum than fields. |\n| **Potential from continuous charge** | $$V = \\int k\\frac{dq}{r}$$ | Used when potential is easier than field integration. |\n| **Electric potential energy** | $$U = qV$$ | Gives energy of a charge in an electric potential. |\n| **Potential energy of two point charges** | $$U = k\\frac{q_1 q_2}{r}$$ | Important for system energy and work questions. |\n| **Work done by electric force** | $$W_{\\text{electric}} = -\\Delta U$$ | Connects field motion to energy changes. |\n| **Uniform field and potential** | $$\\Delta V = -\\vec{E}\\cdot \\Delta \\vec{r}$$ | Common in parallel-plate style problems. |\n\n### High-value definitions\n- **Electric field lines** point in the direction a **positive** test charge would accelerate.\n- **Equipotential surfaces** are always **perpendicular** to electric field lines.\n- Inside a conductor in **electrostatic equilibrium**, $$\\vec{E} = 0$$.\n- Excess charge on a conductor resides on the **outer surface** in electrostatic equilibrium.\n\n## Connections & Comparisons\n\n| **Pair** | **Electric Field** | **Electric Potential** | **AP Significance** |\n|---|---|---|---|\n| **Vector vs. scalar** | **Vector** quantity with direction | **Scalar** quantity with no direction | Students often correctly add potentials algebraically but must add fields vectorially. |\n| **Dependence on distance from a point charge** | $$E = k\\frac{q}{r^2}$$ | $$V = k\\frac{q}{r}$$ | AP questions often test recognizing that field drops faster with distance than potential. |\n| **How to combine multiple sources** | Use vector superposition | Use algebraic superposition | Potential is often mathematically simpler for symmetric systems. |\n| **Relation to energy/work** | Determines force: $$\\vec{F} = q\\vec{E}$$ | Determines energy: $$U = qV$$ | Free-response questions often require switching between force and energy viewpoints. |\n\n```mermaid\nflowchart LR\n    A[Charge distribution] --> B[Electric field **E**]\n    A --> C[Electric potential **V**]\n    B --> D[Force on charge: **F = qE**]\n    C --> E[Potential energy: **U = qV**]\n    B --> C[\"$$\\Delta V = -\\int \\vec{E}\\cdot d\\vec{\\ell}$$\"]\n```\n\n## Common AP Exam Traps\n- Confusing **field** and **potential**: **electric field** is a **vector**, while **electric potential** is a **scalar**.\n- Forgetting that **Gauss’s law is always true**, but only **useful for solving for** $$\\vec{E}$$ when there is sufficient **symmetry**.\n- Using $$Q_{\\text{total}}$$ instead of **enclosed charge** $$Q_{\\text{enc}}$$ in a Gaussian surface problem.\n- Missing sign conventions in energy and potential questions, especially when applying $$\\Delta V = -\\int \\vec{E}\\cdot d\\vec{\\ell}$$ or $$W_{\\text{electric}} = -\\Delta U$$.\n- Treating contributions in a continuous distribution as ordinary sums instead of writing **differential charge elements** such as $$dq = \\lambda\\,dx$$, $$dq = \\sigma\\,dA$$, or $$dq = \\rho\\,dV$$.\n\n## Quick Review Checklist\n- [ ] I can apply **Coulomb’s law** to find the magnitude and direction of force between point charges.\n- [ ] I can calculate **net electric field** using **vector superposition**.\n- [ ] I can set up and evaluate an **integral** for the field or potential of a continuous charge distribution.\n- [ ] I can identify when **Gauss’s law** is the best method and choose an appropriate **Gaussian surface**.\n- [ ] I can distinguish clearly between **electric field**, **electric potential**, and **electric potential energy**.\n- [ ] I can relate **electric field** to **potential difference** using $$\\Delta V = -\\int \\vec{E}\\cdot d\\vec{\\ell}$$.\n- [ ] I can solve problems involving **work**, **potential energy**, and motion in an electric field.\n- [ ] I can explain why **equipotential surfaces** are perpendicular to electric field lines and why conductors in electrostatic equilibrium have $$\\vec{E} = 0$$ inside.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Coulomb's law",
+              "definition": "The interaction between two point charges acts along the line joining them and has magnitude $$F = k\\dfrac{|q_1 q_2|}{r^2} = \\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{|q_1 q_2|}{r^2}$$, with direction determined by the signs of the charges."
+            },
+            {
+              "term": "Electric field",
+              "definition": "A vector quantity defined as force per unit positive test charge, given by $$\\vec{E} = \\dfrac{\\vec{F}}{q}$$; for a point charge, $$\\vec{E} = \\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{q}{r^2}\\hat{r}$$."
+            },
+            {
+              "term": "Superposition principle",
+              "definition": "For multiple sources, the net effect is found by adding the individual vector contributions, so $$\\vec{E}_{\\text{net}} = \\sum \\vec{E}_i$$ and $$\\vec{F}_{\\text{net}} = \\sum \\vec{F}_i$$."
+            },
+            {
+              "term": "Electric flux",
+              "definition": "A scalar measure of how much of a vector field passes through a surface, computed by $$\\Phi_E = \\int \\vec{E}\\cdot d\\vec{A}$$ and simplified to $$EA\\cos\\theta$$ for a uniform field through a flat surface."
+            },
+            {
+              "term": "Gauss's law",
+              "definition": "The net outward flux through any closed surface equals the enclosed charge divided by permittivity, written $$\\oint \\vec{E}\\cdot d\\vec{A} = \\dfrac{Q_{\\text{enc}}}{\\varepsilon_0}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A uniformly charged thin spherical shell of radius $$R$$ carries total charge $$Q$$. Which expression gives the electric field magnitude at a point located a distance $$r<R$$ from the center?",
+              "options": [
+                "$$0$$",
+                "$$\\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{Q}{r^2}$$",
+                "$$\\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{Q}{R^2}$$",
+                "$$\\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{Qr}{R^3}$$"
+              ],
+              "correctAnswer": "$$0$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "An infinite line of charge has uniform linear charge density $$\\lambda$$. Using a cylindrical Gaussian surface of radius $$r$$ and length $$L$$ coaxial with the line, what is the electric field magnitude?",
+              "options": [
+                "$$\\dfrac{\\lambda}{2\\pi\\varepsilon_0 r}$$",
+                "$$\\dfrac{\\lambda}{4\\pi\\varepsilon_0 r^2}$$",
+                "$$\\dfrac{\\lambda r}{2\\varepsilon_0}$$",
+                "$$\\dfrac{\\lambda}{\\varepsilon_0 r}$$"
+              ],
+              "correctAnswer": "$$\\dfrac{\\lambda}{2\\pi\\varepsilon_0 r}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a uniformly charged solid sphere of radius $$R$$ and total charge $$Q$$, the electric field magnitude at a point inside the sphere at distance $$r<R$$ from the center is $$E =$$ ______.",
+              "options": [
+                "$$\\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{Qr}{R^3}$$",
+                "$$\\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{Q}{r^2}$$",
+                "$$0$$",
+                "$$\\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{Q}{R^2}$$"
+              ],
+              "correctAnswer": "$$\\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{Qr}{R^3}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The net electric flux through a closed surface is ______.",
+              "options": [
+                "$$\\oint \\vec{E}\\cdot d\\vec{A} = \\dfrac{Q_{\\text{enc}}}{\\varepsilon_0}$$",
+                "$$\\int \\vec{E}\\cdot d\\vec{\\ell} = 0$$",
+                "$$\\vec{E} = -\\nabla V$$",
+                "$$\\Phi_E = EA\\sin\\theta$$"
+              ],
+              "correctAnswer": "$$\\oint \\vec{E}\\cdot d\\vec{A} = \\dfrac{Q_{\\text{enc}}}{\\varepsilon_0}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Electric potential",
+              "definition": "A scalar quantity equal to potential energy per unit charge, related to work done by the field through $$\\Delta V = -\\int \\vec{E}\\cdot d\\vec{\\ell}$$; for a point charge, $$V = \\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{q}{r}$$ with zero at infinity."
+            },
+            {
+              "term": "Potential energy of a charge in an electric field",
+              "definition": "The stored energy associated with position in the field, given by $$U = qV$$ for a charge at a location of potential $$V$$, and for two point charges $$U = \\dfrac{1}{4\\pi\\varepsilon_0}\\dfrac{q_1 q_2}{r}$$."
+            },
+            {
+              "term": "Equipotential surface",
+              "definition": "A set of points where the scalar potential has the same value everywhere, so moving a charge along it requires no work by the electric field; the field is perpendicular to it."
+            },
+            {
+              "term": "Relation between field and potential",
+              "definition": "The vector field points in the direction of most rapid decrease of the scalar quantity and has magnitude equal to its spatial rate of change, expressed in one dimension as $$E_x = -\\dfrac{dV}{dx}$$ and generally as $$\\vec{E} = -\\nabla V$$."
+            },
+            {
+              "term": "Capacitance of a parallel-plate capacitor",
+              "definition": "The ratio of stored charge magnitude on one conductor to the potential difference between conductors, with ideal value $$C = \\dfrac{Q}{\\Delta V} = \\dfrac{\\varepsilon_0 A}{d}$$ for vacuum between large closely spaced plates."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A positive point charge $$q$$ is released from rest in a region where the electric potential decreases in the $$+x$$ direction. What is the direction of its initial acceleration?",
+              "options": [
+                "In the $$+x$$ direction",
+                "In the $$-x$$ direction",
+                "Perpendicular to the $$x$$-axis",
+                "It remains at rest because potential is a scalar"
+              ],
+              "correctAnswer": "In the $$+x$$ direction",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Two point charges, $$+Q$$ and $$-2Q$$, are fixed a distance $$d$$ apart. What is the total electric potential at the midpoint?",
+              "options": [
+                "$$-\\dfrac{2kQ}{d}$$",
+                "$$0$$",
+                "$$\\dfrac{2kQ}{d}$$",
+                "$$-\\dfrac{kQ}{d}$$"
+              ],
+              "correctAnswer": "$$-\\dfrac{2kQ}{d}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "If the electric potential in a region is given by $$V(x) = ax^2 + b$$, then the $$x$$-component of the electric field is ______.",
+              "options": [
+                "$$-2ax$$",
+                "$$2ax$$",
+                "$$-ax^2-b$$",
+                "$$a$$"
+              ],
+              "correctAnswer": "$$-2ax$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The energy stored in an ideal capacitor is ______.",
+              "options": [
+                "$$\\dfrac{1}{2}C(\\Delta V)^2$$",
+                "$$C\\Delta V$$",
+                "$$\\dfrac{Q}{\\Delta V}$$",
+                "$$\\varepsilon_0 A d$$"
+              ],
+              "correctAnswer": "$$\\dfrac{1}{2}C(\\Delta V)^2$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "unitName": "Conductors, Capacitors, and Dielectrics",
+      "description": "Properties of conductors, capacitance, energy stored in capacitors, and effect of dielectric materials.",
+      "note": "# Unit 2: Conductors, Capacitors, and Dielectrics\n\n## Overview\nThis unit focuses on how **conductors** behave in electrostatic equilibrium, how **capacitors** store charge and energy, and how **dielectric materials** change electric fields and capacitance. These ideas are central on the AP exam because they connect **electric field**, **potential**, **Gauss’s law**, and **energy methods** in both conceptual and calculation-based problems.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Electrostatic equilibrium in conductors** | The state in which charges in a conductor have stopped moving. | You must know that inside a conductor, $$E = 0$$, excess charge resides on the surface, and the conductor is an equipotential. |\n| **Electric field at conductor surfaces** | The field just outside a charged conductor is perpendicular to the surface. | AP questions often test why tangential electric fields cannot exist at the surface in equilibrium. |\n| **Capacitance** | A measure of how much charge a system stores per potential difference. | You must apply $$C = \\frac{Q}{\\Delta V}$$ and recognize what changes capacitance based on geometry or materials. |\n| **Parallel-plate capacitor** | Two conducting plates separated by distance, storing equal and opposite charge. | A core model for deriving field, voltage, capacitance, and energy relationships. |\n| **Capacitors in series and parallel** | Rules for equivalent capacitance in multi-capacitor circuits. | A frequent AP skill: reducing circuits and determining how $$Q$$, $$\\Delta V$$, and energy distribute. |\n| **Energy stored in capacitors** | Electrical potential energy stored in the electric field between conductors. | Appears in derivations, energy-density reasoning, and conceptual comparisons. |\n| **Dielectrics** | Insulating materials placed between capacitor plates that polarize in an electric field. | AP problems ask how inserting a dielectric changes $$C$$, $$E$$, $$\\Delta V$$, $$Q$$, and stored energy under different conditions. |\n| **Dielectric constant** | A factor $$\\kappa$$ describing how much a dielectric increases capacitance. | Essential for comparing isolated versus battery-connected capacitors after dielectric insertion. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Charge placed on conductor] --> B[Charges redistribute]\n    B --> C[\"Electrostatic equilibrium reached\"]\n    C --> D[\"Inside conductor: $$E = 0$$\"]\n    C --> E[Surface is equipotential]\n    C --> F[Excess charge on surface]\n    F --> G[External field is perpendicular to surface]\n\n    H[Two conductors separated by insulator] --> I[Potential difference applied]\n    I --> J[Equal and opposite charges accumulate]\n    J --> K[Electric field forms between conductors]\n    K --> L[Capacitor stores energy in field]\n\n    L --> M[\"Insert dielectric\"]\n    M --> N[Material polarizes]\n    N --> O[Effective internal field decreases]\n    O --> P[Capacitance increases]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Idea** | **Formula / Rule** | **When to Use It** |\n|---|---|---|\n| **Capacitance definition** | $$C = \\frac{Q}{\\Delta V}$$ | Fundamental definition for any capacitor. |\n| **Parallel-plate capacitance** | $$C = \\frac{\\varepsilon_0 A}{d}$$ | For vacuum or air between large parallel plates. |\n| **With dielectric** | $$C = \\kappa \\frac{\\varepsilon_0 A}{d} = \\kappa C_0$$ | When a dielectric completely fills the space. |\n| **Electric field between parallel plates** | $$E = \\frac{\\sigma}{\\varepsilon_0}$$ | For ideal plates in vacuum, neglecting edge effects. |\n| **Potential difference across parallel plates** | $$\\Delta V = Ed$$ | When the field is approximately uniform. |\n| **Energy stored in capacitor** | $$U = \\frac{1}{2}C(\\Delta V)^2$$ | Most useful when capacitance and voltage are known. |\n|  | $$U = \\frac{1}{2}Q\\Delta V$$ | Useful from the charging process or when both are known. |\n|  | $$U = \\frac{Q^2}{2C}$$ | Useful when charge is fixed. |\n| **Energy density of electric field** | $$u = \\frac{1}{2}\\varepsilon_0 E^2$$ | Connects capacitor energy to field energy. |\n| **Series capacitors** | $$\\frac{1}{C_{\\text{eq}}} = \\frac{1}{C_1} + \\frac{1}{C_2} + \\cdots$$ | Same charge on each capacitor in series. |\n| **Parallel capacitors** | $$C_{\\text{eq}} = C_1 + C_2 + \\cdots$$ | Same potential difference across each branch. |\n| **Conductors in electrostatic equilibrium** | $$E_{\\text{inside}} = 0$$ | Always true for ideal conductors in static conditions. |\n| **Conductor surface property** | Electric field at the surface is perpendicular to the surface. | If there were a tangential component, charges would move. |\n| **Dielectric constant effects** | If isolated: $$Q = \\text{constant}$$; if battery-connected: $$\\Delta V = \\text{constant}$$ | This distinction is heavily tested. |\n\n### High-yield dielectric result summary\n- **Isolated capacitor** with dielectric inserted:\n  - $$Q = \\text{constant}$$\n  - $$C \\uparrow$$\n  - $$\\Delta V \\downarrow$$\n  - $$E \\downarrow$$\n  - $$U = \\frac{Q^2}{2C} \\downarrow$$\n\n- **Battery-connected capacitor** with dielectric inserted:\n  - $$\\Delta V = \\text{constant}$$\n  - $$C \\uparrow$$\n  - $$Q \\uparrow$$\n  - $$E = \\frac{\\Delta V}{d} \\approx \\text{constant}$$\n  - $$U = \\frac{1}{2}C(\\Delta V)^2 \\uparrow$$\n\n## Connections & Comparisons\n\n| **Comparison** | **Conductor in Equilibrium** | **Capacitor** | **Dielectric Effect** |\n|---|---|---|---|\n| **Electric field inside material** | $$E = 0$$ inside conductor | Nonzero field between plates | Reduces effective field due to polarization |\n| **Charge behavior** | Free charges move until equilibrium | Charges accumulate on facing plates | Bound charges appear in dielectric |\n| **Potential** | Entire conductor is one potential | Potential difference exists between plates | May reduce $$\\Delta V$$ if isolated |\n| **Energy role** | No electrostatic work inside conductor at equilibrium | Stores energy in electric field | Changes stored energy depending on constraints |\n\n```mermaid\nflowchart LR\n    A[Geometry: larger plate area $$A$$] --> B[Capacitance increases]\n    C[Geometry: larger separation $$d$$] --> D[Capacitance decreases]\n    E[Material: larger $$\\kappa$$] --> F[Capacitance increases]\n    B --> G[For fixed $$\\Delta V$$: more charge stored]\n    D --> H[For fixed $$Q$$: larger potential difference]\n    F --> I[Field behavior depends on whether $$Q$$ or $$\\Delta V$$ is fixed]\n```\n\n## Common AP Exam Traps\n- Confusing **series** and **parallel** capacitor rules. In **series**, charge is the same on each capacitor; in **parallel**, potential difference is the same across each.\n- Forgetting the condition when a **dielectric** is inserted: whether the capacitor is **isolated** or **connected to a battery** changes which quantity stays constant.\n- Assuming the electric field inside a **conductor** can be nonzero in electrostatic equilibrium. If $$E \\neq 0$$ inside, charges would continue to move.\n- Mixing up **capacitance** with **charge**. A larger capacitance does not automatically mean a larger charge unless the voltage condition is specified.\n- Using $$U = Q\\Delta V$$ for stored capacitor energy. The correct expression is $$U = \\frac{1}{2}Q\\Delta V$$.\n\n## Quick Review Checklist\n- [ ] Explain why **free charges** in a conductor move until the conductor reaches **electrostatic equilibrium**.\n- [ ] State and apply the facts that for a conductor in equilibrium, $$E_{\\text{inside}} = 0$$ and the conductor is an **equipotential**.\n- [ ] Use $$C = \\frac{Q}{\\Delta V}$$ to solve for capacitance, charge, or potential difference.\n- [ ] Derive or apply the parallel-plate result $$C = \\frac{\\varepsilon_0 A}{d}$$.\n- [ ] Determine equivalent capacitance for capacitors in **series** and **parallel**.\n- [ ] Calculate stored energy using $$U = \\frac{1}{2}C(\\Delta V)^2$$, $$U = \\frac{1}{2}Q\\Delta V$$, or $$U = \\frac{Q^2}{2C}$$.\n- [ ] Predict how inserting a **dielectric** changes $$C$$, $$Q$$, $$\\Delta V$$, $$E$$, and $$U$$ for both isolated and battery-connected capacitors.\n- [ ] Connect capacitor behavior to the underlying **electric field** and **energy density** in space.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Electrostatic equilibrium",
+              "definition": "The condition in which free charges in a material have redistributed so that there is no net electric field within the bulk, and no further motion of charge occurs."
+            },
+            {
+              "term": "Surface charge density",
+              "definition": "Charge per unit area on a boundary, commonly written as $$\\sigma=\\frac{Q}{A}$$ for a uniform distribution."
+            },
+            {
+              "term": "Electric field just outside a conductor",
+              "definition": "For a conductor in static equilibrium, the field immediately outside the surface is perpendicular to the surface and has magnitude $$E=\\frac{\\sigma}{\\varepsilon_0}$$."
+            },
+            {
+              "term": "Capacitance",
+              "definition": "The ratio of the magnitude of charge stored on either conductor to the potential difference between them, given by $$C=\\frac{Q}{\\Delta V}$$."
+            },
+            {
+              "term": "Parallel-plate capacitor",
+              "definition": "A two-conductor system consisting of large closely spaced plates for which, neglecting edge effects, the capacitance is $$C=\\frac{\\varepsilon_0 A}{d}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A hollow conducting shell is in electrostatic equilibrium and contains no charge inside its cavity. Which statement must be true?",
+              "options": [
+                "The electric field is zero everywhere inside the conducting material.",
+                "The electric potential is zero everywhere on the shell.",
+                "The surface charge density is uniform over the entire shell.",
+                "The electric field just outside the shell is always zero."
+              ],
+              "correctAnswer": "The electric field is zero everywhere inside the conducting material.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A parallel-plate capacitor has plate area $$A$$ and separation $$d$$. If the area is doubled and the separation is halved while the capacitor remains in vacuum, the new capacitance is",
+              "options": [
+                "$$\\frac{1}{4}C$$",
+                "$$C$$",
+                "$$2C$$",
+                "$$4C$$"
+              ],
+              "correctAnswer": "$$4C$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For any isolated conductor in electrostatic equilibrium, the electric potential is ______ throughout the conducting material.",
+              "options": [
+                "zero",
+                "uniform",
+                "inversely proportional to charge density",
+                "greatest at the center"
+              ],
+              "correctAnswer": "uniform",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "Neglecting edge effects, the magnitude of the electric field between oppositely charged parallel plates is ______.",
+              "options": [
+                "$$\\frac{Qd}{\\varepsilon_0 A}$$",
+                "$$\\frac{Q}{\\varepsilon_0 A}$$",
+                "$$\\frac{\\varepsilon_0 A}{Q}$$",
+                "$$\\frac{Q}{Ad^2}$$"
+              ],
+              "correctAnswer": "$$\\frac{Q}{\\varepsilon_0 A}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Energy stored in a capacitor",
+              "definition": "The electrical potential energy associated with separated charge, expressible as $$U=\\frac{1}{2}CV^2=\\frac{Q^2}{2C}=\\frac{1}{2}QV$$."
+            },
+            {
+              "term": "Energy density of an electric field",
+              "definition": "The energy per unit volume contained in a region of space with electric field, given in vacuum by $$u=\\frac{1}{2}\\varepsilon_0 E^2$$."
+            },
+            {
+              "term": "Dielectric",
+              "definition": "An insulating material that becomes polarized in an applied field, reducing the internal field and increasing the charge storage ability of a capacitor."
+            },
+            {
+              "term": "Dielectric constant",
+              "definition": "The factor $$\\kappa$$ by which the capacitance of a capacitor increases when a material completely fills the region between conductors, so that $$C=\\kappa C_0$$."
+            },
+            {
+              "term": "Breakdown",
+              "definition": "The failure of an insulating material when the applied electric field becomes large enough to free charges and allow significant conduction."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A capacitor of capacitance $$C$$ is connected to a battery of fixed voltage $$V$$ and then completely filled with a dielectric of constant $$\\kappa>1$$. Which quantity increases?",
+              "options": [
+                "The potential difference across the capacitor only",
+                "The stored charge and the stored energy",
+                "The electric field between the plates only",
+                "The plate separation"
+              ],
+              "correctAnswer": "The stored charge and the stored energy",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A parallel-plate capacitor is isolated after being charged. A dielectric completely fills the space between the plates. Compared with the initial state, the electric field between the plates becomes",
+              "options": [
+                "$$\\kappa E_0$$",
+                "$$E_0$$",
+                "$$\\frac{E_0}{\\kappa}$$",
+                "zero"
+              ],
+              "correctAnswer": "$$\\frac{E_0}{\\kappa}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "The energy stored in a capacitor can be written as ______.",
+              "options": [
+                "$$CV^2$$",
+                "$$\\frac{1}{2}CV^2$$",
+                "$$QV^2$$",
+                "$$\\frac{Q}{2V}$$"
+              ],
+              "correctAnswer": "$$\\frac{1}{2}CV^2$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a dielectric completely fills a capacitor that remains connected to a battery, the capacitance becomes ______.",
+              "options": [
+                "$$\\frac{C_0}{\\kappa}$$",
+                "$$C_0$$",
+                "$$\\kappa C_0$$",
+                "$$\\kappa^2 C_0$$"
+              ],
+              "correctAnswer": "$$\\kappa C_0$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "unitName": "Electric Circuits",
+      "description": "Current, resistance, EMF, Kirchhoff's laws, RC circuits, and transient analysis.",
+      "note": "# Unit 3: Electric Circuits\n\n## Overview\nThis unit develops the core tools for analyzing **electric circuits**: **current**, **resistance**, **electromotive force**, **Kirchhoff’s laws**, and **RC circuit transients**. These ideas matter on the AP exam because they connect conceptual reasoning with multi-step quantitative problem solving, especially in loop analysis, circuit simplification, and time-dependent charging or discharging behavior.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Current** | Rate of flow of charge through a conductor. | Frequently used with charge conservation and circuit relationships such as $$I=\\frac{dQ}{dt}$$ and $$I=\\frac{\\Delta Q}{\\Delta t}$$ for steady current. |\n| **Resistance** | Measure of how strongly a material opposes current. | Essential for using **Ohm’s law** and understanding how geometry and material affect circuit behavior. |\n| **Ohm’s Law** | Relationship between voltage, current, and resistance for ohmic devices. | A foundational AP equation used constantly in circuit analysis: $$\\Delta V=IR$$. |\n| **EMF and Internal Resistance** | Energy supplied per unit charge by a source; real batteries may include internal resistance. | AP questions often distinguish **terminal voltage** from ideal emf and test how current changes under load. |\n| **Series and Parallel Circuits** | Two basic ways components are connected. | Students must rapidly determine equivalent resistance, current distribution, and voltage distribution. |\n| **Kirchhoff’s Junction Rule** | Conservation of charge at a node. | Critical for analyzing branching circuits and setting up systems of equations. |\n| **Kirchhoff’s Loop Rule** | Net potential change around a closed loop is zero. | The main tool for multi-loop circuit problems with batteries and resistors. |\n| **RC Circuits** | Circuits with resistors and capacitors that show time-dependent behavior. | A major AP topic involving exponential charging/discharging and interpretation of transient graphs. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[Identify circuit structure] --> B[Reduce simple series and parallel sections if possible]\n    B --> C[Assign current directions]\n    C --> D[Apply junction rule at nodes]\n    D --> E[Apply loop rule around independent loops]\n    E --> F[Solve for unknown currents and voltages]\n    F --> G[Check signs and physical reasonableness]\n    G --> H[\"For RC circuits, use time relations for charging/discharging\"]\n```\n\n### RC Transient Logic\n```mermaid\nflowchart LR\n    A[Battery connected] --> B[Capacitor begins charging]\n    B --> C[Current starts maximum]\n    C --> D[Charge on capacitor increases]\n    D --> E[Capacitor voltage rises]\n    E --> F[Current decreases exponentially]\n    F --> G[Long time: current approaches zero]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Relationship** | **Expression** | **Meaning / Use** |\n|---|---|---|\n| **Current** | $$I=\\frac{dQ}{dt}$$ | Instantaneous rate of charge flow. |\n| **Ohm’s Law** | $$\\Delta V=IR$$ | Relates voltage drop, current, and resistance for an ohmic resistor. |\n| **Resistance from geometry** | $$R=\\rho \\frac{L}{A}$$ | Resistance depends on resistivity, length, and cross-sectional area. |\n| **Electric power** | $$P=I\\Delta V$$ | Rate of electrical energy transfer. |\n| **Resistor power forms** | $$P=I^2R=\\frac{(\\Delta V)^2}{R}$$ | Useful depending on known quantities. |\n| **Equivalent resistance, series** | $$R_{\\text{eq}}=R_1+R_2+\\cdots$$ | Same current through each resistor. |\n| **Equivalent resistance, parallel** | $$\\frac{1}{R_{\\text{eq}}}=\\frac{1}{R_1}+\\frac{1}{R_2}+\\cdots$$ | Same voltage across each branch. |\n| **Kirchhoff’s Junction Rule** | $$\\sum I_{\\text{in}}=\\sum I_{\\text{out}}$$ | Charge is conserved at a junction. |\n| **Kirchhoff’s Loop Rule** | $$\\sum \\Delta V=0$$ | Energy is conserved around any closed loop. |\n| **Capacitor charge-voltage relation** | $$Q=C\\Delta V$$ | Links capacitor charge and voltage. |\n| **Time constant** | $$\\tau=RC$$ | Characteristic time scale of an RC circuit. |\n| **Charging capacitor** | $$Q(t)=C\\mathcal{E}\\left(1-e^{-t/RC}\\right)$$ | Charge rises exponentially toward maximum. |\n| **Charging current** | $$I(t)=\\frac{\\mathcal{E}}{R}e^{-t/RC}$$ | Current decreases exponentially while charging. |\n| **Capacitor voltage while charging** | $$V_C(t)=\\mathcal{E}\\left(1-e^{-t/RC}\\right)$$ | Voltage across capacitor rises over time. |\n| **Discharging charge** | $$Q(t)=Q_0 e^{-t/RC}$$ | Charge decays exponentially when disconnected from source. |\n| **Discharging current magnitude** | $$I(t)=\\frac{Q_0}{RC}e^{-t/RC}$$ | Current decreases exponentially during discharge. |\n| **Terminal voltage of real battery** | $$V_{\\text{terminal}}=\\mathcal{E}-Ir$$ | Useful when a battery has internal resistance $$r$$. |\n\n## Connections & Comparisons\n\n| **Related Ideas** | **Series** | **Parallel** | **Why the Difference Matters** |\n|---|---|---|---|\n| **Current** | Same through each element | Splits among branches | Often the first clue in solving circuit problems. |\n| **Voltage** | Divided across elements | Same across each branch | Helps determine unknown drops and equivalent behavior. |\n| **Equivalent resistance** | Increases as resistors are added | Decreases as branches are added | AP questions often ask which arrangement draws more current from a source. |\n| **Failure of one resistor** | Can break the entire path | Other branches may still conduct | Tests conceptual understanding of connectivity. |\n\n### Battery vs Capacitor in a Circuit\n\n| **Component** | **Role** | **Key AP Interpretation** |\n|---|---|---|\n| **Battery / EMF source** | Supplies energy per unit charge | Drives current and sets the maximum capacitor voltage in many RC problems. |\n| **Resistor** | Dissipates energy as thermal power | Controls current and sets the time constant together with capacitance. |\n| **Capacitor** | Stores electric energy and charge | Causes current and voltage to become time-dependent rather than immediately steady. |\n\n## Common AP Exam Traps\n\n- Confusing **current** with **charge**: current is the **rate** of charge flow, so a larger capacitor charge does not necessarily mean larger current at that moment.\n- Forgetting sign conventions in **Kirchhoff’s loop rule**. Traversing a resistor in the direction of current gives a drop of $$-IR$$; across an ideal battery from negative to positive terminal gives $$+\\mathcal{E}$$.\n- Assuming the capacitor behaves the same at all times. In a DC **RC charging** circuit, at $$t=0$$ the capacitor can act like a wire, but after a long time it acts like an open circuit.\n- Mixing up **series** and **parallel** rules: same current in series, same voltage in parallel.\n- Using steady-state resistor ideas on transient circuits without checking time. In RC problems, quantities usually change exponentially with time constant $$\\tau=RC$$.\n\n## Quick Review Checklist\n\n- [ ] Define **current**, **resistance**, and **emf** in precise physical terms.\n- [ ] Use $$\\Delta V=IR$$ and $$R=\\rho \\frac{L}{A}$$ correctly.\n- [ ] Find **equivalent resistance** for resistors in **series** and **parallel**.\n- [ ] Apply **Kirchhoff’s junction rule** and **loop rule** to solve multi-loop circuits.\n- [ ] Distinguish between **ideal emf** and **terminal voltage** when internal resistance is present.\n- [ ] Determine how **current** and **voltage** are distributed in different circuit configurations.\n- [ ] Write and interpret the charging and discharging equations for an **RC circuit**.\n- [ ] Explain the physical meaning of the **time constant** $$\\tau=RC$$ and estimate what happens at short time and long time limits.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Electric current",
+              "definition": "The rate at which charge passes through a cross section of a conductor, given by $$I=\\frac{dQ}{dt}$$."
+            },
+            {
+              "term": "Resistance",
+              "definition": "A quantity that relates potential difference across a material to the current through it, with $$R=\\frac{V}{I}$$ for ohmic behavior."
+            },
+            {
+              "term": "Electromotive force",
+              "definition": "The energy supplied per unit charge by a source, equal to the terminal potential difference of an ideal source under no internal loss."
+            },
+            {
+              "term": "Resistivity",
+              "definition": "An intrinsic material property that determines how strongly a material opposes charge flow, related by $$R=\\rho \\frac{L}{A}$$."
+            },
+            {
+              "term": "Internal resistance",
+              "definition": "The opposition to charge flow inside a source that causes terminal voltage to decrease as current is delivered, with $$V_{\\text{terminal}}=\\mathcal{E}-Ir$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A battery with emf $$\\mathcal{E}$$ and internal resistance $$r$$ is connected to an external resistor $$R$$. Which expression gives the current in the circuit?",
+              "options": [
+                "$$I=\\frac{\\mathcal{E}}{R+r}$$",
+                "$$I=\\frac{\\mathcal{E}}{R-r}$$",
+                "$$I=\\frac{R+r}{\\mathcal{E}}$$",
+                "$$I=\\frac{\\mathcal{E}-Ir}{R}$$"
+              ],
+              "correctAnswer": "$$I=\\frac{\\mathcal{E}}{R+r}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Two cylindrical wires are made of the same material. Wire 1 has length $$L$$ and radius $$a$$. Wire 2 has length $$2L$$ and radius $$2a$$. What is the ratio $$\\frac{R_2}{R_1}$$?",
+              "options": [
+                "$$\\frac{1}{2}$$",
+                "$$1$$",
+                "$$2$$",
+                "$$4$$"
+              ],
+              "correctAnswer": "$$\\frac{1}{2}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a conductor obeying Ohm's law, if the potential difference across it doubles while its temperature remains constant, the current becomes ______.",
+              "options": [
+                "half as large",
+                "twice as large",
+                "four times as large",
+                "unchanged"
+              ],
+              "correctAnswer": "twice as large",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The terminal voltage of a battery delivering current $$I$$ to an external circuit is ______.",
+              "options": [
+                "$$\\mathcal{E}+Ir$$",
+                "$$\\mathcal{E}-Ir$$",
+                "$$Ir-\\mathcal{E}$$",
+                "$$\\frac{\\mathcal{E}}{Ir}$$"
+              ],
+              "correctAnswer": "$$\\mathcal{E}-Ir$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Kirchhoff's junction rule",
+              "definition": "A statement of charge conservation requiring that the algebraic sum of currents entering and leaving a node be zero."
+            },
+            {
+              "term": "Kirchhoff's loop rule",
+              "definition": "A statement of energy conservation requiring that the algebraic sum of potential changes around any closed path be zero."
+            },
+            {
+              "term": "Capacitive time constant",
+              "definition": "The characteristic time for the exponential response of a first-order resistor-capacitor circuit, equal to $$\\tau=RC$$."
+            },
+            {
+              "term": "Charging equation for a capacitor",
+              "definition": "In a series resistor-capacitor circuit connected to an ideal source, the stored charge varies as $$q(t)=C\\mathcal{E}\\left(1-e^{-t/RC}\\right)$$."
+            },
+            {
+              "term": "Discharging current in an RC circuit",
+              "definition": "The current in a resistor-capacitor circuit with no source decreases exponentially in magnitude according to $$I(t)=I_0 e^{-t/RC}$$, with sign set by the chosen direction."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A capacitor of capacitance $$C$$ initially uncharged is connected in series with a resistor $$R$$ and an ideal battery of emf $$\\mathcal{E}$$. Which expression gives the current as a function of time after the switch is closed?",
+              "options": [
+                "$$I(t)=\\frac{\\mathcal{E}}{R}e^{-t/RC}$$",
+                "$$I(t)=\\frac{\\mathcal{E}}{R}\\left(1-e^{-t/RC}\\right)$$",
+                "$$I(t)=C\\mathcal{E}e^{-t/RC}$$",
+                "$$I(t)=\\frac{\\mathcal{E}}{R}e^{-RC/t}$$"
+              ],
+              "correctAnswer": "$$I(t)=\\frac{\\mathcal{E}}{R}e^{-t/RC}$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "In the circuit shown conceptually as a single loop containing a battery $$\\mathcal{E}$$ and two resistors $$R_1$$ and $$R_2$$ in series, Kirchhoff's loop rule leads directly to which equation for the loop current $$I$$?",
+              "options": [
+                "$$\\mathcal{E}-IR_1-IR_2=0$$",
+                "$$I=I_1+I_2$$",
+                "$$\\mathcal{E}=IR_1-IR_2$$",
+                "$$IR_1+IR_2=0$$"
+              ],
+              "correctAnswer": "$$\\mathcal{E}-IR_1-IR_2=0$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "In a charging resistor-capacitor circuit, after a time equal to one time constant, the capacitor's charge is ______ of its final value.",
+              "options": [
+                "$$e^{-1}$$",
+                "$$1-e^{-1}$$",
+                "$$\\frac{1}{2}$$",
+                "$$1-2e^{-1}$$"
+              ],
+              "correctAnswer": "$$1-e^{-1}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "According to Kirchhoff's junction rule, the algebraic sum of currents at a node is ______.",
+              "options": [
+                "equal to the emf",
+                "equal to the resistance",
+                "zero",
+                "positive"
+              ],
+              "correctAnswer": "zero",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "unitName": "Magnetic Fields",
+      "description": "Magnetic force on charges and currents, Biot–Savart law, Ampere's law, and magnetic fields of common geometries.",
+      "note": "# Unit 4: Magnetic Fields\n\n## Overview\nThis unit develops the core ideas of **magnetic fields** produced by moving charges and currents, and the **magnetic forces** those fields exert on other charges and current-carrying wires. For the AP exam, you must be able to connect field geometry, symmetry, and vector direction rules to quantitative laws such as **Biot–Savart** and **Ampère’s law**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Magnetic force on a moving charge** | The force on a charge moving through a magnetic field depends on its velocity and the field direction. | Frequently tested with vector reasoning, circular motion, and direction using the **right-hand rule**. |\n| **Magnetic force on a current-carrying wire** | A wire with current in a magnetic field experiences a force due to the motion of charges in the wire. | Important for free-response problems involving wire segments, loops, and net force. |\n| **Right-hand rule** | A directional tool for determining the direction of **magnetic field**, **magnetic force**, or current-field relationships. | Essential for almost every magnetic field problem; AP questions often hinge on direction. |\n| **Biot–Savart law** | A law giving the magnetic field produced by a small current element. | Used to derive or justify fields from loops, arcs, and other current distributions. |\n| **Ampère’s law** | Relates the circulation of the magnetic field around a closed path to the enclosed current. | Powerful for highly symmetric situations such as long straight wires, solenoids, and toroids. |\n| **Magnetic fields of common geometries** | Standard results for straight wires, loops, solenoids, and toroids. | These are high-frequency AP results that students must know and apply quickly. |\n| **Circular motion in magnetic fields** | A charged particle moving perpendicular to a uniform magnetic field follows circular motion. | Combines mechanics and electromagnetism, especially radius and period relationships. |\n| **Field superposition** | The net magnetic field is the vector sum of contributions from all currents. | AP problems often involve multiple wires or regions with fields in opposite directions. |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Identify source of magnetic field\"] --> B[\"Choose law to use\"]\n    B --> C[\"Use Biot–Savart if geometry is not highly symmetric\"]\n    B --> D[\"Use Ampère's law if symmetry is strong\"]\n    C --> E[\"Find direction with right-hand rule\"]\n    D --> E\n    E --> F[\"Determine magnetic field magnitude\"]\n    F --> G[\"Apply superposition if multiple sources exist\"]\n    G --> H[\"If charge is moving, use magnetic force law\"]\n    G --> I[\"If wire carries current, use force on current law\"]\n    H --> J[\"Analyze path: straight, circular, or helical\"]\n    I --> K[\"Analyze net force or torque on wire/loop\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Quantity** | **Expression** | **Use** |\n|---|---|---|\n| **Magnetic force on a charge** | $$\\vec{F}_B = q\\vec{v}\\times\\vec{B}$$ | Gives direction and magnitude of magnetic force on a moving charge. |\n| **Magnitude of magnetic force on a charge** | $$F_B = qvB\\sin\\theta$$ | Use when angle $$\\theta$$ between $$\\vec{v}$$ and $$\\vec{B}$$ is known. |\n| **Magnetic force on a wire** | $$\\vec{F}_B = I\\vec{L}\\times\\vec{B}$$ | Force on a straight current segment in a uniform magnetic field. |\n| **Magnitude of magnetic force on a wire** | $$F_B = ILB\\sin\\theta$$ | Common in wire and loop problems. |\n| **Biot–Savart law** | $$d\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec{\\ell}\\times\\hat{r}}{r^2}$$ | Fundamental law for magnetic field from a current element. |\n| **Ampère’s law** | $$\\oint \\vec{B}\\cdot d\\vec{\\ell} = \\mu_0 I_{\\text{enc}}$$ | Best for highly symmetric current distributions. |\n| **Field of long straight wire** | $$B = \\frac{\\mu_0 I}{2\\pi r}$$ | Must-know result from Ampère’s law. |\n| **Field at center of circular loop** | $$B = \\frac{\\mu_0 I}{2R}$$ | Standard result for a single circular loop. |\n| **Field inside ideal solenoid** | $$B = \\mu_0 n I$$ | Where $$n$$ is turns per unit length. |\n| **Field inside ideal toroid** | $$B = \\frac{\\mu_0 N I}{2\\pi r}$$ | Valid within the toroidal windings. |\n| **Radius of circular path** | $$r = \\frac{mv}{qB}$$ | For a charge moving perpendicular to a uniform magnetic field. |\n| **Magnetic force does no work** | $$W_B = 0$$ | Magnetic force changes direction of motion, not speed, by itself. |\n\n### Key directional rules\n- Use the **right-hand rule** for $$\\vec{v}\\times\\vec{B}$$ or $$I\\vec{L}\\times\\vec{B}$$:\n  - Point fingers along the first vector.\n  - Curl toward the second vector.\n  - Thumb gives the direction of the cross product for a **positive** charge or conventional current.\n- For a **negative charge**, reverse the direction found from the right-hand rule.\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** | **AP Use** |\n|---|---|---|---|\n| **Electric field vs. magnetic field** | Both exert forces and can be represented as vector fields. | Electric field acts on charges whether moving or not; magnetic field acts on moving charges or currents. | AP often asks why a stationary charge feels no magnetic force. |\n| **Biot–Savart vs. Ampère’s law** | Both are used to find magnetic fields due to currents. | **Biot–Savart** is more general; **Ampère’s law** is efficient only with strong symmetry. | Students must choose the most efficient method. |\n| **Force on a charge vs. force on a wire** | Both are magnetic forces derived from moving charge interactions. | One applies to a single particle; the other to a macroscopic current segment. | AP questions may move between microscopic and macroscopic descriptions. |\n| **Uniform field vs. nonuniform field** | Both can affect charges and currents. | Uniform fields simplify force calculations; nonuniform fields require more careful geometry or integration. | Important in distinguishing simple force problems from derivation-based questions. |\n\n## Common AP Exam Traps\n- Confusing **magnetic field direction** with **magnetic force direction**. The field points one way, but $$\\vec{F}_B$$ depends on a cross product with velocity or current.\n- Forgetting that a **magnetic force is zero** when velocity is parallel or antiparallel to the field, since $$\\sin 0 = 0$$ and $$\\sin \\pi = 0$$.\n- Using **Ampère’s law** in situations without sufficient symmetry. The law is always true, but it is not always useful for solving for $$B$$.\n- Forgetting that the magnetic force does **no work**, so it changes direction of motion but not kinetic energy by itself.\n- Neglecting **superposition** when multiple currents produce fields at the same point.\n\n## Quick Review Checklist\n- [ ] I can use the **right-hand rule** to determine the direction of **magnetic field** or **magnetic force**.\n- [ ] I can calculate the magnetic force on a moving charge using $$\\vec{F}_B = q\\vec{v}\\times\\vec{B}$$.\n- [ ] I can calculate the magnetic force on a straight current-carrying wire using $$\\vec{F}_B = I\\vec{L}\\times\\vec{B}$$.\n- [ ] I can explain why a magnetic field does no work on a charged particle.\n- [ ] I can apply **Biot–Savart law** to determine the magnetic field from a current element or loop geometry.\n- [ ] I can apply **Ampère’s law** to find $$B$$ for a long straight wire, solenoid, or toroid.\n- [ ] I can recall the standard magnetic field results for **straight wires**, **circular loops**, **solenoids**, and **toroids**.\n- [ ] I can analyze the circular motion of a charged particle in a uniform magnetic field using $$r = \\frac{mv}{qB}$$.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Magnetic force on a moving charge",
+              "definition": "The force on a particle with charge $$q$$ moving with velocity $$\\vec{v}$$ in a magnetic field $$\\vec{B}$$ is given by $$\\vec{F}=q\\vec{v}\\times\\vec{B}$$. Its magnitude is $$F=qvB\\sin\\theta$$, and it is perpendicular to both the velocity and the field."
+            },
+            {
+              "term": "Right-hand rule for magnetic force",
+              "definition": "A directional method used with a cross product: point fingers along $$\\vec{v}$$, curl toward $$\\vec{B}$$, and the thumb gives the direction of the force for a positive charge; for a negative charge, the direction is opposite."
+            },
+            {
+              "term": "Motion of a charged particle in a uniform magnetic field",
+              "definition": "If velocity is perpendicular to the field, the particle undergoes uniform circular motion with radius $$r=\\dfrac{mv}{|q|B}$$. If there is also a component parallel to the field, the path becomes helical."
+            },
+            {
+              "term": "Magnetic force on a current-carrying wire",
+              "definition": "For a straight segment of length vector $$\\vec{L}$$ carrying current $$I$$ in a magnetic field $$\\vec{B}$$, the force is $$\\vec{F}=I\\vec{L}\\times\\vec{B}$$. The magnitude is $$F=ILB\\sin\\theta$$."
+            },
+            {
+              "term": "Torque on a current loop",
+              "definition": "A loop carrying current in a uniform field experiences a turning effect with magnitude $$\\tau=N I A B\\sin\\theta$$, where $$N$$ is the number of turns and $$A$$ is the area vector magnitude. The associated dipole moment is $$\\vec{\\mu}=NIA\\hat{n}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A proton enters a region of uniform magnetic field $$\\vec{B}$$ with speed $$v$$ such that its velocity is perpendicular to the field. If the field magnitude is doubled while all else remains constant, which change occurs in the proton's motion?",
+              "options": [
+                "The radius and period both double.",
+                "The radius halves and the period halves.",
+                "The radius halves and the period stays the same.",
+                "The radius stays the same and the period halves."
+              ],
+              "correctAnswer": "The radius halves and the period halves.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A long straight wire carries current upward. At a point directly east of the wire, what is the direction of the magnetic field produced by the wire?",
+              "options": [
+                "North",
+                "South",
+                "Into the page",
+                "Out of the page"
+              ],
+              "correctAnswer": "Into the page",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For a charged particle moving perpendicular to a uniform magnetic field, the magnetic force provides the centripetal force, so the radius is $$r=\\dfrac{______}{|q|B}$$.",
+              "options": [
+                "mv",
+                "mB",
+                "qv",
+                "vB"
+              ],
+              "correctAnswer": "mv",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The magnitude of the force on a straight wire of length $$L$$ carrying current $$I$$ in a uniform field $$B$$ at angle $$\\theta$$ is $$F=ILB\\,______$$.",
+              "options": [
+                "\\sin\\theta",
+                "\\cos\\theta",
+                "\\tan\\theta",
+                "\\sec\\theta"
+              ],
+              "correctAnswer": "\\sin\\theta",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Biot–Savart law",
+              "definition": "A relation that gives the differential magnetic field produced by a small current element: $$d\\vec{B}=\\dfrac{\\mu_0}{4\\pi}\\dfrac{I\\,d\\vec{\\ell}\\times \\hat{r}}{r^2}$$. It is used to determine fields from currents with known geometry."
+            },
+            {
+              "term": "Ampere's law",
+              "definition": "For steady currents, the circulation of the magnetic field around a closed path equals $$\\mu_0$$ times the net current enclosed: $$\\oint \\vec{B}\\cdot d\\vec{\\ell}=\\mu_0 I_{\\text{enc}}$$. It is most useful when symmetry makes the field constant along parts of the path."
+            },
+            {
+              "term": "Magnetic field of a long straight wire",
+              "definition": "At distance $$r$$ from a very long wire carrying current $$I$$, the field magnitude is $$B=\\dfrac{\\mu_0 I}{2\\pi r}$$, with direction determined by the right-hand grip rule around the wire."
+            },
+            {
+              "term": "Magnetic field inside a solenoid",
+              "definition": "For an ideal long coil with turn density $$n$$ and current $$I$$, the interior field is approximately uniform with magnitude $$B=\\mu_0 n I$$, while the exterior field is comparatively small."
+            },
+            {
+              "term": "Magnetic field inside a toroid",
+              "definition": "For a circular coil wound into a ring with $$N$$ turns carrying current $$I$$, the field within the core region at radius $$r$$ is $$B=\\dfrac{\\mu_0 N I}{2\\pi r}$$ and is approximately zero outside the windings."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A very long straight wire carries current $$I$$. At a point a distance $$r$$ from the wire, the current is doubled and the observation point is moved to distance $$2r$$. What happens to the magnetic field magnitude at that point?",
+              "options": [
+                "It is unchanged.",
+                "It doubles.",
+                "It is halved.",
+                "It becomes four times as large."
+              ],
+              "correctAnswer": "It is unchanged.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Ampere's law is most directly useful for calculating magnetic fields in which situation?",
+              "options": [
+                "A single short current segment at an arbitrary point",
+                "A current distribution with high symmetry, such as an infinite wire or ideal solenoid",
+                "A nonuniform current loop evaluated off-axis",
+                "Two isolated moving point charges"
+              ],
+              "correctAnswer": "A current distribution with high symmetry, such as an infinite wire or ideal solenoid",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "Using Ampere's law for an ideal long solenoid, the magnetic field inside is $$B=\\mu_0 ______ I$$, where the blank represents turns per unit length.",
+              "options": [
+                "n",
+                "N",
+                "r",
+                "A"
+              ],
+              "correctAnswer": "n",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "For a toroid with $$N$$ turns carrying current $$I$$, the magnetic field at radius $$r$$ within the core region is $$B=\\dfrac{\\mu_0 N I}{2\\pi ______}$$.",
+              "options": [
+                "r",
+                "R^2",
+                "N",
+                "I"
+              ],
+              "correctAnswer": "r",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "unitName": "Electromagnetism",
+      "description": "Faraday's law, Lenz's law, mutual and self-inductance, RL circuits, and Maxwell's equations overview.",
+      "note": "# Unit 5: Electromagnetism\n\n## Overview\nThis unit focuses on how **changing magnetic fields** produce electric effects and how **changing currents** produce magnetic effects. For the AP exam, this unit is essential because it connects field ideas, circuit behavior, and core laws like **Faraday’s law**, **Lenz’s law**, and **inductance**, while also introducing the big-picture framework of **Maxwell’s equations**.\n\n## Key Concepts at a Glance\n\n| **Concept** | **What It Is** | **Why It Matters (AP angle)** |\n|---|---|---|\n| **Magnetic flux** | A measure of how much magnetic field passes through an area | Central quantity in **Faraday’s law**; students must compute how flux changes with time |\n| **Faraday’s law** | Relates changing magnetic flux to induced emf | Frequently tested in conceptual and calculation problems involving loops and coils |\n| **Lenz’s law** | Gives the direction of induced current by opposing the change in flux | A major source of AP mistakes; needed for direction and sign reasoning |\n| **Induced electric field** | A changing magnetic field can create a nonconservative electric field | Connects electromagnetic induction to field ideas beyond simple circuits |\n| **Self-inductance** | A changing current in a circuit induces an emf in the same circuit | Explains inductor behavior and appears in **RL circuit** equations |\n| **Mutual inductance** | A changing current in one coil induces an emf in another coil | Important for coil-to-coil interaction and transformer-style reasoning |\n| **RL circuits** | Circuits with resistance and inductance that show exponential current growth/decay | AP problems often ask for time dependence, energy storage, and limiting behavior |\n| **Maxwell’s equations overview** | Four equations summarizing electric and magnetic field behavior | Usually conceptual on AP; helps unify Gauss’s law, induction, and Ampère-Maxwell law |\n\n## Core Processes / Relationships\n\n```mermaid\nflowchart TD\n    A[\"Magnetic flux through loop changes\"] --> B[\"Induced emf appears\"]\n    B --> C[\"Induced current may flow if circuit is closed\"]\n    C --> D[\"Current creates its own magnetic field\"]\n    D --> E[\"Direction chosen to oppose the change in flux\"]\n    E --> F[\"This is Lenz's law\"]\n\n    G[\"Current in inductor changes\"] --> H[\"Magnetic field around inductor changes\"]\n    H --> I[\"Flux through same coil changes\"]\n    I --> J[\"Back emf induced in the coil\"]\n    J --> K[\"Current resists changing instantly\"]\n\n    L[\"Battery connected to RL circuit\"] --> M[\"Current starts changing\"]\n    M --> N[\"Inductor opposes change at first\"]\n    N --> O[\"Current rises toward steady-state value\"]\n```\n\n## Essential Formulas / Laws / Rules\n\n| **Law / Quantity** | **Expression** | **What to Know** |\n|---|---|---|\n| **Magnetic flux** | $$\\Phi_B=\\int \\mathbf{B}\\cdot d\\mathbf{A}$$ | For uniform field over a flat surface: $$\\Phi_B=BA\\cos\\theta$$ |\n| **Faraday’s law** | $$\\mathcal{E}=-\\frac{d\\Phi_B}{dt}$$ | For $$N$$ turns: $$\\mathcal{E}=-N\\frac{d\\Phi_B}{dt}$$ |\n| **Lenz’s law** | Negative sign in $$\\mathcal{E}=-\\frac{d\\Phi_B}{dt}$$ | Induced emf/current **opposes the change** in flux, not necessarily the original field |\n| **Motional emf** | $$\\mathcal{E}=B\\ell v$$ | Valid for a rod of length $$\\ell$$ moving perpendicular to $$\\mathbf{B}$$ and its own length |\n| **Self-inductance definition** | $$\\mathcal{E}_L=-L\\frac{dI}{dt}$$ | The inductor resists changes in current |\n| **Inductance from flux linkage** | $$L=\\frac{N\\Phi_B}{I}$$ | Often used conceptually for coils |\n| **Mutual inductance** | $$\\mathcal{E}_2=-M\\frac{dI_1}{dt}$$ | Changing current in one circuit induces emf in another |\n| **Energy stored in an inductor** | $$U_L=\\frac{1}{2}LI^2$$ | Compare with capacitor energy storage; common AP connection |\n| **RL loop equation** | $$\\mathcal{E}-IR-L\\frac{dI}{dt}=0$$ | Apply **Kirchhoff’s loop rule** with inductors |\n| **Current growth in RL circuit** | $$I(t)=\\frac{\\mathcal{E}}{R}\\left(1-e^{-t/\\tau}\\right)$$ | For a battery-resistor-inductor series circuit after switch closes |\n| **Current decay in RL circuit** | $$I(t)=I_0 e^{-t/\\tau}$$ | For discharge after source is removed |\n| **RL time constant** | $$\\tau=\\frac{L}{R}$$ | Sets how quickly current changes |\n| **Gauss’s law for electricity** | $$\\oint \\mathbf{E}\\cdot d\\mathbf{A}=\\frac{Q_{\\text{enc}}}{\\varepsilon_0}$$ | Electric charges are sources of electric field |\n| **Gauss’s law for magnetism** | $$\\oint \\mathbf{B}\\cdot d\\mathbf{A}=0$$ | No magnetic monopoles |\n| **Faraday-Maxwell law** | $$\\oint \\mathbf{E}\\cdot d\\mathbf{\\ell}=-\\frac{d\\Phi_B}{dt}$$ | Circulating electric fields arise from changing magnetic flux |\n| **Ampère-Maxwell law** | $$\\oint \\mathbf{B}\\cdot d\\mathbf{\\ell}=\\mu_0 I_{\\text{enc}}+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}$$ | Magnetic fields come from currents and changing electric flux |\n\n## Connections & Comparisons\n\n| **Concept Pair** | **Connection** | **Key Difference** |\n|---|---|---|\n| **Faraday’s law vs. Lenz’s law** | Both describe electromagnetic induction | **Faraday’s law** gives magnitude of induced emf; **Lenz’s law** gives direction/sign |\n| **Self-inductance vs. mutual inductance** | Both involve emf caused by changing current | **Self-inductance** occurs in the same circuit; **mutual inductance** occurs between different circuits |\n| **RC circuits vs. RL circuits** | Both show exponential behavior with a time constant | In **RC**, capacitor voltage/current changes; in **RL**, inductor current cannot change instantly |\n| **Electric fields from charges vs. induced electric fields** | Both can exert force on charges | Charge-produced electrostatic fields are conservative; induction-produced fields are nonconservative |\n\n```mermaid\nflowchart LR\n    A[\"Changing magnetic flux\"] --> B[\"Induced emf\"]\n    B --> C[\"If closed loop: induced current\"]\n\n    D[\"Changing current\"] --> E[\"Changing magnetic field\"]\n    E --> A\n\n    F[\"Inductor\"] --> G[\"Self-induction\"]\n    H[\"Second coil\"] --> I[\"Mutual induction\"]\n```\n\n## Common AP Exam Traps\n- Confusing **opposes the change in flux** with **opposes the magnetic field itself**. Lenz’s law depends on how the flux is changing.\n- Forgetting that magnetic flux depends on angle: use $$\\Phi_B=BA\\cos\\theta$$, not just $$BA$$.\n- Missing the negative sign in **Faraday’s law** and then choosing the wrong current direction.\n- Assuming current in an **RL circuit** jumps instantly to its final value. The inductor prevents abrupt current change.\n- Mixing up the time constants: for **RL circuits**, $$\\tau=\\frac{L}{R}$$, not $$RC$$.\n\n## Quick Review Checklist\n- [ ] I can calculate **magnetic flux** using $$\\Phi_B=\\int \\mathbf{B}\\cdot d\\mathbf{A}$$ or $$\\Phi_B=BA\\cos\\theta$$ for a uniform field.\n- [ ] I can use **Faraday’s law** to find induced emf from a changing flux.\n- [ ] I can apply **Lenz’s law** to determine the direction of induced current or induced magnetic field.\n- [ ] I can explain the difference between **self-inductance** and **mutual inductance**.\n- [ ] I can write and solve the loop equation for a simple **RL circuit**.\n- [ ] I can describe how current changes with time in an **RL charging** or **decaying** situation.\n- [ ] I can calculate energy stored in an inductor using $$U_L=\\frac{1}{2}LI^2$$.\n- [ ] I can identify the role of **Faraday-Maxwell law** and **Ampère-Maxwell law** within the broader set of **Maxwell’s equations**.",
+      "lessons": [
+        {
+          "flashcards": [
+            {
+              "term": "Magnetic flux",
+              "definition": "A scalar measure of how much magnetic field passes through a surface, calculated by $$\\Phi_B=\\int \\mathbf{B}\\cdot d\\mathbf{A}$$ and, for a uniform field over a flat area, $$\\Phi_B=BA\\cos\\theta$$."
+            },
+            {
+              "term": "Faraday's law",
+              "definition": "The induced emf around a closed loop equals the negative time rate of change of magnetic flux through the loop: $$\\mathcal{E}=-\\frac{d\\Phi_B}{dt}$$. For $$N$$ turns, $$\\mathcal{E}=-N\\frac{d\\Phi_B}{dt}$$."
+            },
+            {
+              "term": "Lenz's law",
+              "definition": "The direction of an induced current is such that the magnetic field it creates opposes the change in flux that produced it."
+            },
+            {
+              "term": "Motional emf",
+              "definition": "The potential difference generated when charges in a conductor moving through a magnetic field experience magnetic force; for a rod of length $$\\ell$$ moving perpendicular to the field with speed $$v$$, $$\\mathcal{E}=B\\ell v$$."
+            },
+            {
+              "term": "Induced electric field",
+              "definition": "A nonconservative field produced by a changing magnetic field, described by the integral form $$\\oint \\mathbf{E}\\cdot d\\mathbf{\\ell}=-\\frac{d\\Phi_B}{dt}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A circular loop in a uniform magnetic field has area held constant while the field magnitude increases into the page. Which statement correctly describes the induced current as viewed from above the loop?",
+              "options": [
+                "It is clockwise because the loop produces a field out of the page.",
+                "It is counterclockwise because the loop produces a field out of the page.",
+                "It is clockwise because the loop produces a field into the page.",
+                "There is no induced current because the area is constant."
+              ],
+              "correctAnswer": "It is counterclockwise because the loop produces a field out of the page.",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "A conducting rod of length $$\\ell$$ slides to the right at constant speed $$v$$ on frictionless rails in a uniform magnetic field directed into the page. The rails and rod form a complete circuit of resistance $$R$$. What is the current in the circuit?",
+              "options": [
+                "$$\\frac{B\\ell v}{R}$$",
+                "$$\\frac{BR}{\\ell v}$$",
+                "$$B\\ell vR$$",
+                "$$\\frac{\\ell v}{BR}$$"
+              ],
+              "correctAnswer": "$$\\frac{B\\ell v}{R}$$",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "According to Faraday's law, the magnitude of the induced emf in a coil of $$N$$ turns is $$\\left|\\mathcal{E}\\right|=\\left|\\,______\\,\\right|$$.",
+              "options": [
+                "$$N\\frac{d\\Phi_B}{dt}$$",
+                "$$\\frac{\\Phi_B}{Ndt}$$",
+                "$$N\\Phi_B t$$",
+                "$$\\frac{dB}{Ndt}$$"
+              ],
+              "correctAnswer": "$$N\\frac{d\\Phi_B}{dt}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "When a loop moves so that the magnetic flux through it decreases, the induced current produces a magnetic effect that ______ the change in flux.",
+              "options": [
+                "opposes",
+                "eliminates instantly",
+                "reverses the loop area",
+                "ignores"
+              ],
+              "correctAnswer": "opposes",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        },
+        {
+          "flashcards": [
+            {
+              "term": "Self-inductance",
+              "definition": "The proportionality between current in a circuit element and the magnetic flux linkage it produces in itself, giving $$\\mathcal{E}=-L\\frac{dI}{dt}$$ for the induced emf across that element."
+            },
+            {
+              "term": "Mutual inductance",
+              "definition": "The proportionality constant relating the current in one circuit to the magnetic flux linkage through a second circuit, so the induced emf in the second is $$\\mathcal{E}_2=-M\\frac{dI_1}{dt}$$."
+            },
+            {
+              "term": "Energy stored in an inductor",
+              "definition": "The magnetic potential energy associated with current in a circuit element, given by $$U=\\frac{1}{2}LI^2$$."
+            },
+            {
+              "term": "RL time constant",
+              "definition": "The characteristic time scale for current growth or decay in a resistor-inductor circuit, equal to $$\\tau=\\frac{L}{R}$$."
+            },
+            {
+              "term": "Maxwell-Ampere law",
+              "definition": "The relation stating that circulation of the magnetic field around a closed path depends on both conduction current and changing electric flux: $$\\oint \\mathbf{B}\\cdot d\\mathbf{\\ell}=\\mu_0 I_{\\text{enc}}+\\mu_0\\epsilon_0\\frac{d\\Phi_E}{dt}$$."
+            }
+          ],
+          "multipleChoice": [
+            {
+              "questionText": "A series $$RL$$ circuit is connected to an ideal battery at $$t=0$$. Which expression gives the current as a function of time after the switch is closed?",
+              "options": [
+                "$$I(t)=\\frac{\\mathcal{E}}{R}\\left(1-e^{-tR/L}\\right)$$",
+                "$$I(t)=\\frac{\\mathcal{E}}{R}e^{-tR/L}$$",
+                "$$I(t)=\\frac{\\mathcal{E}}{L}\\left(1-e^{-tL/R}\\right)$$",
+                "$$I(t)=\\mathcal{E}R\\left(1-e^{-tR/L}\\right)$$"
+              ],
+              "correctAnswer": "$$I(t)=\\frac{\\mathcal{E}}{R}\\left(1-e^{-tR/L}\\right)$$",
+              "lessonType": "multipleChoice"
+            },
+            {
+              "questionText": "Why did Maxwell introduce the displacement current term into Ampere's law?",
+              "options": [
+                "To account for changing electric flux in situations where conduction current alone is insufficient, such as between capacitor plates.",
+                "To explain why magnetic fields are always conservative.",
+                "To show that electric fields cannot exist in vacuum.",
+                "To replace Faraday's law for time-varying fields."
+              ],
+              "correctAnswer": "To account for changing electric flux in situations where conduction current alone is insufficient, such as between capacitor plates.",
+              "lessonType": "multipleChoice"
+            }
+          ],
+          "fillInTheBlank": [
+            {
+              "questionText": "For an inductor, the magnitude of the induced emf due to a changing current is $$\\left|\\mathcal{E}\\right|=\\left|\\,______\\,\\right|$$.",
+              "options": [
+                "$$L\\frac{dI}{dt}$$",
+                "$$\\frac{I}{Ldt}$$",
+                "$$LI t$$",
+                "$$\\frac{1}{2}LI^2$$"
+              ],
+              "correctAnswer": "$$L\\frac{dI}{dt}$$",
+              "lessonType": "fillInTheBlank"
+            },
+            {
+              "questionText": "The time constant of a series $$RL$$ circuit is ______.",
+              "options": [
+                "$$\\frac{L}{R}$$",
+                "$$\\frac{R}{L}$$",
+                "$$LR$$",
+                "$$\\frac{1}{RL}$$"
+              ],
+              "correctAnswer": "$$\\frac{L}{R}$$",
+              "lessonType": "fillInTheBlank"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
