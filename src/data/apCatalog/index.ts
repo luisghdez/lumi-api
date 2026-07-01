@@ -1,7 +1,8 @@
 import { APExam } from "./types";
-import apBiology from "./ap-biology";
 
-/** All AP catalog exams to be seeded into Firestore. Add new exam files here. */
-export const AP_EXAMS: APExam[] = [apBiology];
+/** All AP catalog exams to be seeded into Firestore.
+ *  Hand-crafted TS entries here take precedence over generated JSON in /generated.
+ *  AP Biology is fully generated, so it is intentionally excluded here. */
+export const AP_EXAMS: APExam[] = [];
 
 export * from "./types";
