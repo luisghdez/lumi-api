@@ -268,8 +268,12 @@ async function writeCourse(exam: APExam, existingId: string | null): Promise<voi
 
 // ─── Seed ─────────────────────────────────────────────────────────────────────
 
-async function seed(updateExisting: boolean): Promise<void> {
-  const exams = getAllExams();
+async function seed(updateExisting: boolean, subjectFilter?: string): Promise<void> {
+  let exams = getAllExams();
+  if (subjectFilter) {
+    exams = exams.filter(e => e.apSubject.toLowerCase().includes(subjectFilter.toLowerCase()));
+    console.log(`🎯 Filtered to ${exams.length} subject(s) matching "${subjectFilter}"\n`);
+  }
   console.log(
     updateExisting
       ? `🔄 Seeding AP catalog (update mode)... [${exams.length} subjects]\n`
@@ -332,7 +336,9 @@ async function main(): Promise<void> {
   if (args.includes("--delete")) {
     await deleteAll();
   } else {
-    await seed(args.includes("--update"));
+    const subjectArg = args.find(a => a.startsWith("--subject="));
+    const subjectFilter = subjectArg ? subjectArg.replace("--subject=", "") : undefined;
+    await seed(args.includes("--update"), subjectFilter);
   }
 
   process.exit(0);
