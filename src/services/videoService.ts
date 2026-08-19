@@ -322,12 +322,15 @@ function playbackFormatFromStoragePath(path: string): PlaybackFormat {
 
 async function serializeVideo(
   doc: FirebaseFirestore.DocumentSnapshot,
-  viewerId: string
+  viewerId: string,
+  options: { includePlayback?: boolean; includeViewerLike?: boolean } = {}
 ): Promise<VideoResponse> {
   const data = doc.data() as VideoDocument;
-  const likedByMe = (
-    await doc.ref.collection("likes").doc(viewerId).get()
-  ).exists;
+  const includePlayback = options.includePlayback !== false;
+  const includeViewerLike = options.includeViewerLike !== false;
+  const likedByMe = includeViewerLike
+    ? (await doc.ref.collection("likes").doc(viewerId).get()).exists
+    : false;
 
   const slideshow = isSlideshowDoc(data);
   const contentKind: ContentKind = data.contentKind || "video";
@@ -339,8 +342,9 @@ async function serializeVideo(
       ? data.playbackStoragePath || data.storagePath
       : null;
 
-  const playbackUrl =
-    pathForPlayback ? await createSignedVideoPlaybackUrl(pathForPlayback) : null;
+  const playbackUrl = includePlayback && pathForPlayback
+    ? await createSignedVideoPlaybackUrl(pathForPlayback)
+    : null;
 
   const playbackFormat: PlaybackFormat = pathForPlayback
     ? playbackFormatFromStoragePath(pathForPlayback)
@@ -912,7 +916,7 @@ export async function recordVideoView(videoId: string, viewerId: string): Promis
 export async function getUserVideos(
   profileUserId: string,
   viewerId: string,
-  options: { cursor?: string; limit?: number }
+  options: { cursor?: string; limit?: number; includePlayback?: boolean }
 ): Promise<{ videos: VideoResponse[]; nextCursor: string | null }> {
   const limit = normalizeLimit(options.limit);
   const cursor = decodeCursor(options.cursor);
@@ -945,7 +949,14 @@ export async function getUserVideos(
 
   const snapshot = await query.get();
   const docs = snapshot.docs.slice(0, limit);
-  const videos = await Promise.all(docs.map((doc) => serializeVideo(doc, viewerId)));
+  const includePlayback = options.includePlayback !== false;
+  const videos = await Promise.all(
+    docs.map((doc) => serializeVideo(doc, viewerId, {
+      includePlayback,
+      // Grid tiles show aggregate counts, not a personalized heart state.
+      includeViewerLike: includePlayback,
+    }))
+  );
   const hasNextPage = snapshot.docs.length > limit;
   const lastDoc = docs[docs.length - 1];
 
