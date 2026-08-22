@@ -254,7 +254,13 @@ export const markLessonAsCompleted = async (
         [`progress.lessons.${lessonId}.completed`]: true,
         lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
       };
-      if (!wasCompleted && allLessonsCompleted && !savedCourse.completedAt) updates.completedAt = admin.firestore.FieldValue.serverTimestamp();
+      if (!wasCompleted) {
+        transaction.set(db.collection("analyticsEvents").doc(), { type: "lesson_completed", userId, courseId, occurredAt: admin.firestore.FieldValue.serverTimestamp() });
+      }
+      if (!wasCompleted && allLessonsCompleted && !savedCourse.completedAt) {
+        updates.completedAt = admin.firestore.FieldValue.serverTimestamp();
+        transaction.set(db.collection("analyticsEvents").doc(), { type: "course_completed", userId, courseId, occurredAt: admin.firestore.FieldValue.serverTimestamp() });
+      }
       transaction.update(savedCourseRef, updates);
     });
 
