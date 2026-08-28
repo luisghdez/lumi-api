@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { gradeReview, generateFeedback } from "../services/reviewService";
+import { assessReview } from "../services/reviewService";
 import { generateElevenLabsTtsAudioBuffer, generateTtsAudioBuffer } from "../services/textToSpeechService";
 import { v4 as uuidv4 } from "uuid";
 import { storeAudio } from "../services/audioCacheService";
@@ -23,9 +23,6 @@ export const reviewController = async (
       conversationHistory?: Array<{ role: "user" | "tutor"; message: string }>;
     };
 
-    console.log("Received request body:", request.body);
-    
-
     if (!transcript || !Array.isArray(terms) || typeof attemptNumber !== "number") {
       return reply.status(400).send({
         error: "Missing required fields: transcript, terms, or attemptNumber.",
@@ -36,38 +33,28 @@ export const reviewController = async (
     const currentTerm = terms.find(t => t.term === focusTerm);
     const currentScore = currentTerm?.score || 0;
 
-    // Step 1: Grade the user's response
-    const gradingResult = await gradeReview({
+    // Score and learner-facing feedback are one atomic assessment so a second
+    // model request cannot leave the client waiting after progress has changed.
+    const assessmentResult = await assessReview({
+      transcript,
       focusTerm,
       focusDefinition,
       conversationHistory: conversationHistory || [],
       currentScore,
+      attemptNumber,
+      terms,
     });
 
-    if (!gradingResult) {
+    if (!assessmentResult) {
       return reply.status(500).send({ error: "Failed to grade review" });
     }
 
-    // Step 2: Update the terms array with the new score
+    // Update the terms array with the new score.
     const updatedTerms = terms.map(t => 
-      t.term === focusTerm ? { ...t, score: gradingResult.score } : t
+      t.term === focusTerm ? { ...t, score: assessmentResult.score } : t
     );
 
-    // Step 3: Generate feedback based on score and attempt number
-    const feedbackResult = await generateFeedback({
-      score: gradingResult.score,
-      attemptNumber,
-      focusTerm,
-      focusDefinition,
-      terms: updatedTerms,
-      conversationHistory: conversationHistory || [],
-    });
-
-    if (!feedbackResult) {
-      return reply.status(500).send({ error: "Failed to generate feedback" });
-    }
-
-    const feedbackMessage = feedbackResult.feedbackMessage;
+    const feedbackMessage = assessmentResult.feedbackMessage;
 
     // Generate a unique session ID for this review session
     const sessionId = uuidv4();
@@ -81,12 +68,12 @@ export const reviewController = async (
 
     // Fire-and-forget TTS generation in the background (don’t await)
     generateTtsAudioBuffer(feedbackMessage)
-      .then((audioBuffer) => storeAudio(sessionId, audioBuffer))
+      .then((audioBuffer) => storeAudio(sessionId, user.uid, audioBuffer))
       .catch((err) => {
         console.error("Error generating TTS audio with OpenAI:", err);
         // Fallback to ElevenLabs TTS
         generateElevenLabsTtsAudioBuffer(feedbackMessage)
-          .then((audioBuffer) => storeAudio(sessionId, audioBuffer))
+          .then((audioBuffer) => storeAudio(sessionId, user.uid, audioBuffer))
           .catch((err) => {
             console.error("Error generating TTS audio with ElevenLabs:", err);
           });

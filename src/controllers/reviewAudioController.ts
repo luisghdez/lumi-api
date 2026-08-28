@@ -6,6 +6,11 @@ export const reviewAudioController = async (
   reply: FastifyReply
 ) => {
   try {
+    const user = (request as any).user;
+    if (!user?.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
     // Expect sessionId to be passed as a query parameter
     const { sessionId } = request.query as { sessionId: string };
 
@@ -13,7 +18,7 @@ export const reviewAudioController = async (
       return reply.status(400).send({ error: "Missing sessionId parameter." });
     }
 
-    const audioBuffer = await retrieveAudio(sessionId);
+    const audioBuffer = await retrieveAudio(sessionId, user.uid);
     if (!audioBuffer) {
       return reply.status(404).send({ error: "Audio not found or expired." });
     }

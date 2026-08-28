@@ -3,182 +3,129 @@ import { zodResponseFormat } from "openai/helpers/zod";
 import { ChatCompletionMessageParam } from "openai/resources";
 import { z } from "zod/v3";
 
-// Schema for grading only
-const gradingResponseSchema = z.object({
-  score: z.number(),
-  reasoning: z.string(),
+// One response is the source of both progress and learner-facing feedback.
+// Keeping them together prevents a partial backend failure from updating a
+// score without explaining the result (or vice versa).
+const assessmentResponseSchema = z.object({
+  score: z.number().finite(),
+  feedbackMessage: z.string().min(1).max(700),
 });
 
-// Schema for feedback generation
-const feedbackResponseSchema = z.object({
-  feedbackMessage: z.string(),
-});
+const reviewModel = process.env.REVIEW_ASSESSMENT_MODEL || "gpt-4.1-nano";
 
-// Keep each grading step bounded so a provider stall cannot leave the client
-// waiting forever. Both callers return a safe fallback when this times out.
-const openai = new OpenAI({
-  timeout: 8000,
-  maxRetries: 0,
-});
-
-// TypeScript interface for grading params
-interface GradeReviewParams {
+interface AssessmentParams {
+  transcript: string;
   focusTerm: string;
   focusDefinition: string;
   conversationHistory: Array<{ role: "user" | "tutor"; message: string }>;
   currentScore: number;
-}
-
-// TypeScript interface for feedback generation params
-interface GenerateFeedbackParams {
-  score: number;
   attemptNumber: number;
-  focusTerm: string;
-  focusDefinition: string;
   terms: Array<{ term: string; definition?: string; score: number }>;
-  conversationHistory: Array<{ role: "user" | "tutor"; message: string }>;
 }
 
 /**
- * GRADING ONLY: This function evaluates the user's understanding 
- * of the focusTerm based on the conversation history.
- * Returns a score (0-100) and reasoning.
+ * Assess a single learner turn and write the corresponding coaching response in
+ * one model call. `REVIEW_ASSESSMENT_MODEL` is deliberately configurable so the
+ * evaluation harness can compare a candidate model before it becomes default.
  */
-export async function gradeReview({
+export async function assessReview({
+  transcript,
   focusTerm,
   focusDefinition,
   conversationHistory,
   currentScore,
-}: GradeReviewParams) {
-  try {
-    const gradingSystemPrompt = `
-Grade the user's understanding of "${focusTerm}" based on this definition: "${focusDefinition}"
-
-Scoring:
-- 100: Captures core meaning (exact wording not required)
-- 75-95: Good understanding, minor gaps
-- 50-70: Partial understanding, missing key concepts
-- 25-45: Minimal understanding
-- 0-20: Incorrect or unrelated
-
-Current score: ${currentScore}. Only increase, never decrease. Be generous if they capture the core idea.
-`;
-
-    const messages = [
-      { role: "system", content: gradingSystemPrompt },
-      ...conversationHistory.map((item) => ({
-        role: item.role === "tutor" ? "assistant" : "user",
-        content: item.message,
-      })),
-    ] as ChatCompletionMessageParam[];
-
-    const response = await openai.chat.completions.parse({
-      model: "gpt-4.1-nano",
-      messages,
-      max_tokens: 150,
-      temperature: 0.3, // Lower temperature for more consistent grading
-      response_format: zodResponseFormat(gradingResponseSchema, "gradingResponse"),
-    });
-
-    const parsed = response.choices[0].message.parsed;
-    console.log("Grading response:", parsed);
-
-    return parsed;
-  } catch (error) {
-    console.error("Error in gradeReview:", error);
-    return {
-      score: currentScore, // Keep current score on error
-      reasoning: "Error occurred during grading",
-    };
-  }
-}
-
-/**
- * FEEDBACK & TRANSITION: This function generates feedback messages
- * and handles transitions to the next term based on score and attempt number.
- */
-export async function generateFeedback({
-  score,
   attemptNumber,
-  focusTerm,
-  focusDefinition,
   terms,
-  conversationHistory,
-}: GenerateFeedbackParams) {
+}: AssessmentParams) {
   try {
-    // Find the next term in the list
-    const currentTermIndex = terms.findIndex(t => t.term === focusTerm);
-    const nextTermObj = currentTermIndex !== -1 && currentTermIndex < terms.length - 1 
-      ? terms[currentTermIndex + 1] 
-      : null;
-    const nextTerm = nextTermObj?.term;
-    const nextTermDefinition = nextTermObj?.definition;
-
-    let feedbackSystemPrompt = "";
-
-    // Scenario 1: Score is 100 - Celebrate and move to next term
-    if (score === 100) {
-      feedbackSystemPrompt = `
-You're a supportive study buddy. Be spontaneous, cheerful, humorous. Use filler words (ummm, uh, like, you know) and reactions [laughs softly].
-
-User nailed "${focusTerm}"! 
-
-Task: Celebrate (1 sentence), then ask a guiding question about "${nextTerm || "the next term"}".
-${nextTermDefinition ? `\nNext term definition: "${nextTermDefinition}"` : ""}
-
-Keep it 2-3 sentences, conversational and fun.
-`;
-    } 
-    // Scenario 2: Score is not 100 but attempt is 3 - Give definition and move to next term
-    else if (attemptNumber === 3) {
-      feedbackSystemPrompt = `
-You're a supportive study buddy. Be spontaneous, cheerful, humorous. Use filler words (ummm, uh, like, you know) and reactions [laughs softly].
-
-User struggled with "${focusTerm}" - time to move forward.
-
-Task: Say "Let's come back to ${focusTerm} later", provide its definition ("${focusDefinition}"), then ask a guiding question about "${nextTerm || "the next term"}".
-${nextTermDefinition ? `\nNext term definition: "${nextTermDefinition}"` : ""}
-
-Keep it 3-4 sentences, encouraging and conversational.
-`;
-    } 
-    // Scenario 3: Score is not 100 and attempt is under 3 - Guide towards the answer
-    else {
-      feedbackSystemPrompt = `
-You're a supportive study buddy. Be spontaneous, cheerful, humorous. Use filler words (ummm, uh, like, you know) and reactions [laughs softly].
-
-User is working on "${focusTerm}" (Attempt #${attemptNumber}). Definition: "${focusDefinition}"
-
-Task: Guide them toward the answer without giving it away. Point out what's right, give a hint/example, then ask a follow-up question about ${focusTerm}.
-
-Stay focused ONLY on ${focusTerm}. Keep it 2-3 sentences, encouraging and specific.
-`;
+    // The current Flutter client includes the transcript in its history before
+    // submitting. Keep only a short context and avoid presenting the latest
+    // explanation twice to the model.
+    const boundedHistory = conversationHistory.slice(-8);
+    const lastHistoryItem = boundedHistory[boundedHistory.length - 1];
+    if (
+      lastHistoryItem?.role === "user" &&
+      lastHistoryItem.message.trim() === transcript.trim()
+    ) {
+      boundedHistory.pop();
     }
 
+    const currentTermIndex = terms.findIndex((term) => term.term === focusTerm);
+    const nextTerm =
+      currentTermIndex !== -1 && currentTermIndex < terms.length - 1
+        ? terms[currentTermIndex + 1]
+        : undefined;
+
+    const systemPrompt = `
+You are Lumi, a precise and encouraging study coach.
+
+Assess the learner's latest explanation of "${focusTerm}" against this canonical
+definition: "${focusDefinition}".
+
+Current stored score: ${currentScore}. A score must be an integer from 0 to 100
+and must never be lower than the stored score. Use 100 only when the learner
+captures the core meaning. Give 75–95 for a mostly correct explanation with a
+minor gap, 50–70 for a partial explanation, 25–45 for minimal understanding,
+and 0–20 for an incorrect or unrelated explanation.
+
+Write feedback in 1–3 short, specific sentences. If the score is 100, celebrate
+briefly and ask about the next term${nextTerm ? `, "${nextTerm.term}"` : " or invite the learner to finish"}.
+If this is attempt ${attemptNumber} and it is the third or later attempt without
+mastery, say that Lumi will revisit "${focusTerm}" later, state its definition
+plainly, then move to the next term when one exists. Otherwise name what was
+right or missing and give one focused hint. Do not use filler words, stage
+directions, or bracketed reactions.
+`;
+
     const messages = [
-      { role: "system", content: feedbackSystemPrompt },
-      ...conversationHistory.map((item) => ({
+      { role: "system", content: systemPrompt },
+      ...boundedHistory.map((item) => ({
         role: item.role === "tutor" ? "assistant" : "user",
         content: item.message,
       })),
+      {
+        role: "user",
+        content: `Latest explanation to assess: ${transcript}`,
+      },
     ] as ChatCompletionMessageParam[];
 
-    const response = await openai.chat.completions.parse({
-      model: "gpt-4.1-nano",
+    const request = {
+      model: reviewModel,
       messages,
-      max_tokens: 200,
-      temperature: 0.7,
-      response_format: zodResponseFormat(feedbackResponseSchema, "feedbackResponse"),
-    });
+      max_completion_tokens: 250,
+      response_format: zodResponseFormat(
+        assessmentResponseSchema,
+        "reviewAssessment",
+      ),
+    };
+    // GPT-5-family models require their default temperature. The legacy model
+    // retains its more deterministic setting until the eval selects a default.
+    if (!reviewModel.startsWith("gpt-5")) {
+      (request as OpenAI.Chat.ChatCompletionCreateParamsNonStreaming).temperature = 0.4;
+    }
+
+    const response = await openai.chat.completions.parse(request);
 
     const parsed = response.choices[0].message.parsed;
-    console.log("Feedback response:", parsed);
+    if (!parsed) throw new Error("Missing parsed review assessment");
 
-    return parsed;
-  } catch (error) {
-    console.error("Error in generateFeedback:", error);
     return {
-      feedbackMessage: "Great effort! Let's keep moving forward.",
+      // Never round an almost-mastered decimal response up to a perfect score.
+      score: Math.max(currentScore, Math.min(100, Math.trunc(parsed.score))),
+      feedbackMessage: parsed.feedbackMessage.trim(),
+    };
+  } catch (error) {
+    console.error("Error assessing review:", error);
+    return {
+      score: currentScore,
+      feedbackMessage: "I couldn't review that just now. Please try explaining it once more.",
     };
   }
 }
+
+// Keep each assessment bounded so a provider stall cannot leave the client
+// waiting forever. The caller returns a safe fallback when this times out.
+const openai = new OpenAI({
+  timeout: 8000,
+  maxRetries: 0,
+});
