@@ -139,6 +139,19 @@ each assessment configuration against it and report rubric agreement,
 false-mastery, false-rejection, feedback specificity, p50/p95 latency, and
 per-turn usage. No model advances without a reviewed report.
 
+The initial harness lives in `src/scripts/evaluateReviewAssessments.ts` with 80
+labelled cases. It requires explicit confirmation before it makes any paid model
+calls:
+
+```bash
+npm run evaluate:review -- --models gpt-4.1-nano,gpt-5.6-luna --confirm-live-run
+```
+
+It writes a JSON trace and Markdown comparison to the ignored
+`src/scripts/output/review-evaluations/` directory. The report checks score
+ranges and feedback constraints automatically; a human reviews the saved
+feedback for educational quality before selecting `REVIEW_ASSESSMENT_MODEL`.
+
 ### Phase 2 — one-lesson realtime prototype
 
 1. Add owned session/assessment API endpoints and the remote feature flag.

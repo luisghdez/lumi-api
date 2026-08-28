@@ -49,6 +49,9 @@ export const reviewController = async (
       return reply.status(500).send({ error: "Failed to grade review" });
     }
 
+    // Safe for operational metrics: no transcript, course content, or user ID.
+    console.info("Review assessment completed", assessmentResult.telemetry);
+
     // Update the terms array with the new score.
     const updatedTerms = terms.map(t => 
       t.term === focusTerm ? { ...t, score: assessmentResult.score } : t

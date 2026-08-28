@@ -21,6 +21,19 @@ interface AssessmentParams {
   currentScore: number;
   attemptNumber: number;
   terms: Array<{ term: string; definition?: string; score: number }>;
+  model?: string;
+}
+
+export interface ReviewAssessmentResult {
+  score: number;
+  feedbackMessage: string;
+  telemetry: {
+    model: string;
+    durationMs: number;
+    inputTokens: number;
+    outputTokens: number;
+    usedFallback: boolean;
+  };
 }
 
 /**
@@ -36,7 +49,10 @@ export async function assessReview({
   currentScore,
   attemptNumber,
   terms,
+  model,
 }: AssessmentParams) {
+  const selectedModel = model || reviewModel;
+  const startedAt = Date.now();
   try {
     // The current Flutter client includes the transcript in its history before
     // submitting. Keep only a short context and avoid presenting the latest
@@ -90,7 +106,7 @@ directions, or bracketed reactions.
     ] as ChatCompletionMessageParam[];
 
     const request = {
-      model: reviewModel,
+      model: selectedModel,
       messages,
       max_completion_tokens: 250,
       response_format: zodResponseFormat(
@@ -100,7 +116,7 @@ directions, or bracketed reactions.
     };
     // GPT-5-family models require their default temperature. The legacy model
     // retains its more deterministic setting until the eval selects a default.
-    if (!reviewModel.startsWith("gpt-5")) {
+    if (!selectedModel.startsWith("gpt-5")) {
       (request as OpenAI.Chat.ChatCompletionCreateParamsNonStreaming).temperature = 0.4;
     }
 
@@ -113,12 +129,26 @@ directions, or bracketed reactions.
       // Never round an almost-mastered decimal response up to a perfect score.
       score: Math.max(currentScore, Math.min(100, Math.trunc(parsed.score))),
       feedbackMessage: parsed.feedbackMessage.trim(),
+      telemetry: {
+        model: selectedModel,
+        durationMs: Date.now() - startedAt,
+        inputTokens: response.usage?.prompt_tokens ?? 0,
+        outputTokens: response.usage?.completion_tokens ?? 0,
+        usedFallback: false,
+      },
     };
   } catch (error) {
     console.error("Error assessing review:", error);
     return {
       score: currentScore,
       feedbackMessage: "I couldn't review that just now. Please try explaining it once more.",
+      telemetry: {
+        model: selectedModel,
+        durationMs: Date.now() - startedAt,
+        inputTokens: 0,
+        outputTokens: 0,
+        usedFallback: true,
+      },
     };
   }
 }
