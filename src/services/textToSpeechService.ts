@@ -12,14 +12,14 @@ const elevenLabsClient = new ElevenLabsClient({ apiKey: process.env.ELEVENLABS_A
  * Generate a TTS mp3 buffer from OpenAI.
  * This function returns a raw Buffer so we can embed it in Base64.
  */
-export async function generateTtsAudioBuffer(text: string): Promise<any> {
+export async function generateTtsAudioBuffer(text: string): Promise<Buffer> {
   const startTime = Date.now(); // Record start time
 
   const instructions = "Delivery: Naturally conversational and relaxed, like a cool friend sharing a funny story that just happened. Pacing is lively but not rushed, with smooth pauses for effect and the occasional amused chuckle or subtle sarcasm to keep it engaging.\n\nVoice: Witty, warm, and laid-back — like someone who’s quick with a clever line but never tries too hard. The kind of person you’d love to grab coffee with because they always have something funny or surprising to say.\n\nTone: Casual and playful with a “you won’t believe this” vibe. More smirking than shouting — it feels like they’re letting you in on something funny rather than performing for a crowd.\n\nPronunciation: Clear and expressive, with natural flow. Words might run together slightly when they get excited, but it’s never sloppy — just part of the charm. Emphasis lands where it matters most, especially for jokes or punchlines, but always feels chill and effortless.";
 
   try {
     // Call the OpenAI TTS endpoint
-    const mp3 = await openai.audio.speech.create({
+    const mp3Response = await openai.audio.speech.create({
       model: "gpt-4o-mini-tts", 
       voice: "echo",
       input: text,
@@ -31,8 +31,7 @@ export async function generateTtsAudioBuffer(text: string): Promise<any> {
 
     console.log(`TTS generation with OpenAI took ${duration}ms`); // Log the time taken
 
-    // You could return mp3 or stream it directly here
-    return mp3;
+    return Buffer.from(await mp3Response.arrayBuffer());
 
   } catch (err) {
     console.error("Error generating TTS audio with OpenAI:", err);

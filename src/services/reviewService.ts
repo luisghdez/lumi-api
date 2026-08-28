@@ -14,8 +14,12 @@ const feedbackResponseSchema = z.object({
   feedbackMessage: z.string(),
 });
 
-// Create OpenAI client
-const openai = new OpenAI();
+// Keep each grading step bounded so a provider stall cannot leave the client
+// waiting forever. Both callers return a safe fallback when this times out.
+const openai = new OpenAI({
+  timeout: 8000,
+  maxRetries: 0,
+});
 
 // TypeScript interface for grading params
 interface GradeReviewParams {

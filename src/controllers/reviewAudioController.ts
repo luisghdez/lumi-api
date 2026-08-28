@@ -13,13 +13,13 @@ export const reviewAudioController = async (
       return reply.status(400).send({ error: "Missing sessionId parameter." });
     }
 
-    const audioBuffer = retrieveAudio(sessionId);
+    const audioBuffer = await retrieveAudio(sessionId);
     if (!audioBuffer) {
       return reply.status(404).send({ error: "Audio not found or expired." });
     }
 
     // Optionally remove the audio after retrieval (if ephemeral)
-    deleteAudio(sessionId);
+    await deleteAudio(sessionId);
 
     // Set header and send raw audio buffer
     reply.header("Content-Type", "audio/mpeg");

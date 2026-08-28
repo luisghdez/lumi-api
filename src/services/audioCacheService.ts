@@ -1,18 +1,36 @@
-// A simple in-memory store for TTS audio buffers.
-// In production, consider using Redis or another cache with TTL support.
-const audioCache: { [key: string]: Buffer } = {};
+import { storage } from "../config/firebaseConfig";
 
-// Store an audio buffer under a sessionId.
-export function storeAudio(sessionId: string, audioBuffer: Buffer) {
-  audioCache[sessionId] = audioBuffer;
+const reviewAudioFolder = "review-audio";
+
+function getReviewAudioFile(sessionId: string) {
+  // Session IDs are generated server-side. Keep this guard in place so a
+  // malformed query value can never create an arbitrary storage path.
+  const safeSessionId = sessionId.replace(/[^\w.-]/g, "_");
+  return storage.bucket().file(`${reviewAudioFolder}/${safeSessionId}.mp3`);
 }
 
-// Retrieve an audio buffer by sessionId.
-export function retrieveAudio(sessionId: string): Buffer | undefined {
-  return audioCache[sessionId];
+// Store review audio in shared, private storage so any API instance can serve
+// the subsequent polling request. The client deletes it after first download.
+export async function storeAudio(sessionId: string, audioBuffer: Buffer) {
+  await getReviewAudioFile(sessionId).save(audioBuffer, {
+    metadata: { contentType: "audio/mpeg" },
+    resumable: false,
+  });
 }
 
-// Delete an audio buffer from the cache.
-export function deleteAudio(sessionId: string) {
-  delete audioCache[sessionId];
+export async function retrieveAudio(
+  sessionId: string
+): Promise<Buffer | undefined> {
+  const file = getReviewAudioFile(sessionId);
+  const [exists] = await file.exists();
+  if (!exists) return undefined;
+
+  const [audioBuffer] = await file.download();
+  return audioBuffer;
+}
+
+export async function deleteAudio(sessionId: string) {
+  const file = getReviewAudioFile(sessionId);
+  const [exists] = await file.exists();
+  if (exists) await file.delete();
 }

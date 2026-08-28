@@ -81,16 +81,12 @@ export const reviewController = async (
 
     // Fire-and-forget TTS generation in the background (don’t await)
     generateTtsAudioBuffer(feedbackMessage)
-      .then((audioBuffer) => {
-        storeAudio(sessionId, audioBuffer);
-      })
+      .then((audioBuffer) => storeAudio(sessionId, audioBuffer))
       .catch((err) => {
         console.error("Error generating TTS audio with OpenAI:", err);
         // Fallback to ElevenLabs TTS
         generateElevenLabsTtsAudioBuffer(feedbackMessage)
-          .then((audioBuffer) => {
-            storeAudio(sessionId, audioBuffer);
-          })
+          .then((audioBuffer) => storeAudio(sessionId, audioBuffer))
           .catch((err) => {
             console.error("Error generating TTS audio with ElevenLabs:", err);
           });
