@@ -19,6 +19,7 @@ import AASARoutes from './routes/AASARoutes';
 import videoRoutes from './routes/videoRoutes';
 import videoShareWebRoutes from './routes/videoShareWebRoutes';
 import podcastRoutes from './routes/podcastRoutes';
+import talkRoutes from './routes/talkRoutes';
 
 
 const fastify = Fastify({ logger: true });
@@ -71,6 +72,7 @@ fastify.register(AASARoutes);
 fastify.register(videoShareWebRoutes);
 fastify.register(videoRoutes);
 fastify.register(podcastRoutes);
+fastify.register(talkRoutes);
 
 // Health check route
 fastify.get("/", async () => {

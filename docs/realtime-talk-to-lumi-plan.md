@@ -161,6 +161,22 @@ feedback for educational quality before selecting `REVIEW_ASSESSMENT_MODEL`.
 4. Use the final transcript for the server assessment and display text first.
 5. Fall back to legacy Speak or Type on connection/audio-route failure.
 
+The prototype implementation uses authenticated SDP signaling through Lumi API:
+
+- `POST /talk/sessions` creates an owner-bound, 15-minute attempt from canonical
+  Firestore lesson cards.
+- `POST /talk/attempts/:attemptId/offer` exchanges a WebRTC SDP offer with the
+  Realtime API while keeping the project OpenAI key server-side.
+- `POST /talk/attempts/:attemptId/assess` assesses an editable final transcript,
+  handles idempotency, and commits score/next-term state transactionally.
+
+It has two independent feature gates. The iOS build needs
+`--dart-define=talk_to_lumi_realtime=true`; the backend additionally requires
+`TALK_TO_LUMI_REALTIME_ENABLED=true` and an exact comma-separated
+`TALK_TO_LUMI_REALTIME_LESSON_IDS` allow-list. Use one known test lesson ID—do
+not use `*` outside internal development. `TALK_TO_LUMI_REALTIME_MODEL` defaults
+to `gpt-realtime-2.1-mini` and is configurable for controlled comparisons.
+
 ### Phase 3 — controlled release
 
 Start internal-only, then a small percentage of one lesson. The flag needs a
