@@ -1,6 +1,7 @@
 import crypto from "crypto";
 import { admin, db } from "../config/firebaseConfig";
 import { assessReview } from "./reviewService";
+import { isTalkRealtimeEnabledForLesson } from "./talkConfig";
 
 const realtimeModel = process.env.TALK_TO_LUMI_REALTIME_MODEL || "gpt-realtime-2.1-mini";
 const attemptLifetimeMs = 15 * 60 * 1000;
@@ -31,21 +32,6 @@ function stableDocumentId(value: string): string {
   return crypto.createHash("sha256").update(value).digest("hex");
 }
 
-function getFlaggedLessonIds(): Set<string> {
-  return new Set(
-    (process.env.TALK_TO_LUMI_REALTIME_LESSON_IDS || "")
-      .split(",")
-      .map((id) => id.trim())
-      .filter(Boolean),
-  );
-}
-
-export function isTalkRealtimeEnabledForLesson(lessonId: string): boolean {
-  if (process.env.TALK_TO_LUMI_REALTIME_ENABLED !== "true") return false;
-  const lessonIds = getFlaggedLessonIds();
-  return lessonIds.has("*") || lessonIds.has(lessonId);
-}
-
 function validClientAttemptId(clientAttemptId: string): boolean {
   return /^[A-Za-z0-9_-]{8,128}$/.test(clientAttemptId);
 }
@@ -74,12 +60,16 @@ async function loadLessonCards(courseId: string, lessonId: string): Promise<Flas
   if (!Array.isArray(flashcards) || flashcards.length === 0) {
     throw new TalkSessionError(422, "This lesson has no terms to review yet.");
   }
-  const cards = flashcards.filter(
+  const cards = flashcards
+      .filter(
     (card: unknown): card is Flashcard =>
       !!card &&
       typeof (card as Flashcard).term === "string" &&
       typeof (card as Flashcard).definition === "string",
-  );
+  )
+      // The existing Speak screen intentionally reviews the first three lesson
+      // cards. Match that contract until Talk gets its own full-lesson UI.
+      .slice(0, 3);
   if (cards.length === 0) throw new TalkSessionError(422, "This lesson has no valid terms to review.");
   return cards;
 }

@@ -7,7 +7,8 @@
     "dev": "nodemon --exec ts-node src/server.ts",
     "build": "npm install && tsc",
     "start": "node dist/server.js",
-    "evaluate:review": "ts-node src/scripts/evaluateReviewAssessments.ts"
+    "evaluate:review": "ts-node src/scripts/evaluateReviewAssessments.ts",
+    "verify:talk-config": "ts-node src/scripts/verifyTalkConfig.ts"
   },
   "keywords": [],
   "author": "",
