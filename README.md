@@ -3,6 +3,21 @@ This API allows users to create courses, retrieve their created courses, fetch l
 
 ---
 
+## Local development
+
+From this directory, install dependencies once and start the local API:
+
+```bash
+npm install
+npm run dev
+```
+
+The Fastify server listens on `http://localhost:3000` (and binds to the local
+network for device testing). Stop it with `Ctrl-C` in the terminal running
+`npm run dev`; this also stops `nodemon`.
+
+---
+
 ## 🔐 Authentication
 All routes require authentication via a Firebase ID token in the **Authorization** header.
 
@@ -448,3 +463,29 @@ Retrieve the TTS audio for the AI feedback associated with a previous review ses
 | DELETE | `/videos/:videoId/comments/:commentId` | Delete a video comment | ✅ Yes |
 | POST   | `/review`                            | Submit transcript for review + feedback     | ✅ Yes |
 | GET    | `/review/audio?sessionId=...`        | Retrieve audio feedback (MP3)               | ✅ Yes |
+
+# Video share links (iOS/web V1)
+
+Public, ready video posts can be shared as `https://www.lumilearnapp.com/video/:videoId`.
+The Flutter app opens that URL through iOS Universal Links and then loads the
+post using the recipient's authenticated session. The API also serves an HTML
+page with safe Open Graph metadata for unfurling when the app is not opened.
+
+Production deployment requirements:
+
+- Route `/video/:videoId`, `/apple-app-site-association`, and
+  `/.well-known/apple-app-site-association` to this API without rewriting them
+  to an unrelated web app.
+- Set `PUBLIC_WEB_ORIGIN=https://www.lumilearnapp.com` when the public origin
+  differs from the API request origin.
+- Keep the iOS App ID in `src/routes/AASARoutes.ts` synchronized with the
+  Apple Developer account and the app's Associated Domains entitlement.
+
+Friends-only, private, uploading, failed, and deleted videos intentionally
+return 404 from the public preview routes. Android App Links are not part of
+this initial release.
+
+Before releasing, test a public video link from Messages on an iPhone with the
+app installed (opens the target post), then in Safari without the app (renders
+a preview and App Store fallback). Verify that private, friends-only, and
+deleted links return the unavailable page and never expose a playback URL.

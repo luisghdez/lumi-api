@@ -102,6 +102,8 @@ export interface VideoResponse {
   status: VideoStatus;
   visibility: VideoVisibility;
   likeCount: number;
+  /** Distinct authenticated viewers that made this post active in the feed. */
+  viewCount: number;
   commentCount: number;
   likedByMe: boolean;
   createdAt: string | null;
@@ -137,6 +139,7 @@ interface VideoDocument {
   status: VideoStatus;
   visibility: VideoVisibility;
   likeCount: number;
+  viewCount?: number;
   commentCount: number;
   createdAt: FirebaseFirestore.FieldValue | FirebaseFirestore.Timestamp;
   updatedAt: FirebaseFirestore.FieldValue | FirebaseFirestore.Timestamp;
@@ -153,6 +156,8 @@ class ServiceError extends Error {
 }
 
 const VIDEOS_COLLECTION = "videos";
+const VIDEO_VIEWS_SUBCOLLECTION = "views";
+const FEED_SESSIONS_SUBCOLLECTION = "feedSessions";
 const MAX_CAPTION_LENGTH = 2200;
 const MAX_SUBJECT_LENGTH = 120;
 const MAX_COMMENT_LENGTH = 500;
@@ -160,6 +165,8 @@ const DEFAULT_PAGE_LIMIT = 20;
 const MAX_PAGE_LIMIT = 50;
 const MIN_SLIDESHOW_SLIDES = 2;
 const MAX_SLIDESHOW_SLIDES = 20;
+const FEED_CANDIDATES_PER_SOURCE = 250;
+const FEED_SESSION_TTL_MS = 24 * 60 * 60 * 1000;
 
 function assertVideoMimeType(mimeType: string): void {
   if (!mimeType || !mimeType.toLowerCase().startsWith("video/")) {
@@ -315,12 +322,15 @@ function playbackFormatFromStoragePath(path: string): PlaybackFormat {
 
 async function serializeVideo(
   doc: FirebaseFirestore.DocumentSnapshot,
-  viewerId: string
+  viewerId: string,
+  options: { includePlayback?: boolean; includeViewerLike?: boolean } = {}
 ): Promise<VideoResponse> {
   const data = doc.data() as VideoDocument;
-  const likedByMe = (
-    await doc.ref.collection("likes").doc(viewerId).get()
-  ).exists;
+  const includePlayback = options.includePlayback !== false;
+  const includeViewerLike = options.includeViewerLike !== false;
+  const likedByMe = includeViewerLike
+    ? (await doc.ref.collection("likes").doc(viewerId).get()).exists
+    : false;
 
   const slideshow = isSlideshowDoc(data);
   const contentKind: ContentKind = data.contentKind || "video";
@@ -332,8 +342,9 @@ async function serializeVideo(
       ? data.playbackStoragePath || data.storagePath
       : null;
 
-  const playbackUrl =
-    pathForPlayback ? await createSignedVideoPlaybackUrl(pathForPlayback) : null;
+  const playbackUrl = includePlayback && pathForPlayback
+    ? await createSignedVideoPlaybackUrl(pathForPlayback)
+    : null;
 
   const playbackFormat: PlaybackFormat = pathForPlayback
     ? playbackFormatFromStoragePath(pathForPlayback)
@@ -384,6 +395,7 @@ async function serializeVideo(
     status: data.status,
     visibility: data.visibility,
     likeCount: data.likeCount || 0,
+    viewCount: Math.max(0, data.viewCount || 0),
     commentCount: data.commentCount || 0,
     likedByMe,
     createdAt: serializeTimestamp(data.createdAt),
@@ -466,6 +478,7 @@ export async function createVideoUpload(ownerId: string, input: CreateVideoInput
       status: "uploading",
       visibility: normalizeVisibility(input.visibility),
       likeCount: 0,
+      viewCount: 0,
       commentCount: 0,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
@@ -512,6 +525,7 @@ export async function createVideoUpload(ownerId: string, input: CreateVideoInput
     status: "uploading",
     visibility: normalizeVisibility(input.visibility),
     likeCount: 0,
+    viewCount: 0,
     commentCount: 0,
     createdAt: admin.firestore.FieldValue.serverTimestamp(),
     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
@@ -725,40 +739,184 @@ export async function getVideoById(videoId: string, viewerId: string): Promise<V
 
 export async function getVideoFeed(
   viewerId: string,
-  options: { cursor?: string; limit?: number }
+  options: { cursor?: string; limit?: number; subject?: string; friendsOnly?: boolean }
 ): Promise<{ videos: VideoResponse[]; nextCursor: string | null }> {
   const limit = normalizeLimit(options.limit);
-  const cursor = decodeCursor(options.cursor);
-  const documentId = admin.firestore.FieldPath.documentId();
+  const sessionCursor = decodeFeedCursor(options.cursor);
 
-  let query: FirebaseFirestore.Query = db
-    .collection(VIDEOS_COLLECTION)
-    .where("status", "==", "ready")
-    .where("visibility", "==", "public")
-    .orderBy("createdAt", "desc")
-    .orderBy(documentId, "desc")
-    .limit(limit + 1);
-
-  if (cursor) {
-    query = query.startAfter(cursor.createdAt, cursor.id);
+  if (sessionCursor) {
+    return loadFeedSession(viewerId, sessionCursor.sessionId, sessionCursor.offset, limit);
   }
 
-  const snapshot = await query.get();
-  const docs = snapshot.docs.slice(0, limit);
-  const videos = await Promise.all(docs.map((doc) => serializeVideo(doc, viewerId)));
-  const hasNextPage = snapshot.docs.length > limit;
-  const lastDoc = docs[docs.length - 1];
+  return createFeedSession(viewerId, options, limit);
+}
 
-  return {
-    videos,
-    nextCursor: hasNextPage && lastDoc ? encodeCursor(lastDoc.get("createdAt"), lastDoc.id) : null,
+type FeedSessionDocument = {
+  videoIds: string[];
+  expiresAt: FirebaseFirestore.Timestamp;
+};
+
+function encodeFeedCursor(sessionId: string, offset: number): string {
+  return Buffer.from(JSON.stringify({ sessionId, offset })).toString("base64url");
+}
+
+function decodeFeedCursor(cursor?: string): { sessionId: string; offset: number } | null {
+  if (!cursor) return null;
+  try {
+    const value = JSON.parse(Buffer.from(cursor, "base64url").toString("utf8")) as {
+      sessionId?: string;
+      offset?: number;
+    };
+    const { sessionId, offset } = value;
+    if (!sessionId || !Number.isInteger(offset) || offset === undefined || offset < 0) throw new Error();
+    return { sessionId, offset };
+  } catch {
+    throw new ServiceError(400, "Invalid cursor");
+  }
+}
+
+function rankFeedCandidates(docs: FirebaseFirestore.QueryDocumentSnapshot[]): string[] {
+  const maxViews = Math.max(1, ...docs.map((doc) => Math.max(0, (doc.data() as VideoDocument).viewCount || 0)));
+  const now = Date.now();
+  const ranked = docs.map((doc) => {
+    const video = doc.data() as VideoDocument;
+    const views = Math.max(0, video.viewCount || 0);
+    const likes = Math.max(0, video.likeCount || 0);
+    // Wilson lower bound avoids a single early like outranking established quality.
+    const z = 1.96;
+    const rate = views ? likes / views : 0;
+    const confidence = views
+      ? (rate + z * z / (2 * views) - z * Math.sqrt((rate * (1 - rate) + z * z / (4 * views)) / views)) /
+          (1 + z * z / views)
+      : 0;
+    const popularity = Math.log1p(views) / Math.log1p(maxViews);
+    const ageDays = Math.max(0, (now - timestampToMillis(video.createdAt)) / 86_400_000);
+    const recency = Math.exp(-ageDays / 21);
+    return { doc, score: 0.55 * confidence + 0.25 * popularity + 0.20 * recency };
+  }).sort((a, b) => b.score - a.score || b.doc.id.localeCompare(a.doc.id));
+
+  // Prefer variety, but never discard a result when the pool lacks alternatives.
+  const output: string[] = [];
+  let remaining = ranked;
+  let previousOwner = "";
+  let previousSubject = "";
+  while (remaining.length) {
+    const index = remaining.findIndex(({ doc }) => {
+      const video = doc.data() as VideoDocument;
+      return video.ownerId !== previousOwner && (video.subject || "") !== previousSubject;
+    });
+    const next = remaining.splice(index === -1 ? 0 : index, 1)[0];
+    const video = next.doc.data() as VideoDocument;
+    output.push(next.doc.id);
+    previousOwner = video.ownerId;
+    previousSubject = video.subject || "";
+  }
+  return output;
+}
+
+async function createFeedSession(
+  viewerId: string,
+  options: { subject?: string; friendsOnly?: boolean },
+  limit: number
+): Promise<{ videos: VideoResponse[]; nextCursor: string | null }> {
+  const subject = normalizeSubject(options.subject);
+  const queryBase = db.collection(VIDEOS_COLLECTION)
+    .where("status", "==", "ready")
+    .where("visibility", "==", "public");
+  const withSubject = subject ? queryBase.where("subject", "==", subject) : queryBase;
+  const [recent, friends] = await Promise.all([
+    withSubject.orderBy("createdAt", "desc").limit(FEED_CANDIDATES_PER_SOURCE).get(),
+    options.friendsOnly ? getFriends(viewerId) : Promise.resolve([]),
+  ]);
+  // The recent source remains available while newly declared composite indexes
+  // are building; ranking then still uses likes/views within that safe pool.
+  const optionalSource = async (field: "likeCount" | "viewCount") => {
+    try {
+      return await withSubject.orderBy(field, "desc").limit(FEED_CANDIDATES_PER_SOURCE).get();
+    } catch {
+      console.warn(`Feed ${field} index is unavailable; using the recent candidate pool until it is ready.`);
+      return null;
+    }
   };
+  const [liked, viewed] = await Promise.all([optionalSource("likeCount"), optionalSource("viewCount")]);
+  const friendIds = new Set(friends.map((friend) => friend.id));
+  const candidates = new Map<string, FirebaseFirestore.QueryDocumentSnapshot>();
+  for (const doc of [...recent.docs, ...(liked?.docs || []), ...(viewed?.docs || [])]) {
+    const video = doc.data() as VideoDocument;
+    if (video.ownerId === viewerId) continue;
+    if (options.friendsOnly && !friendIds.has(video.ownerId)) continue;
+    candidates.set(doc.id, doc);
+  }
+  const docs = [...candidates.values()];
+  const viewRefs = docs.map((doc) => doc.ref.collection(VIDEO_VIEWS_SUBCOLLECTION).doc(viewerId));
+  const viewDocs = viewRefs.length ? await db.getAll(...viewRefs) : [];
+  const unseen = docs.filter((_, index) => !viewDocs[index].exists);
+  const videoIds = rankFeedCandidates(unseen);
+  if (!videoIds.length) return { videos: [], nextCursor: null };
+
+  const sessionRef = db.collection("users").doc(viewerId).collection(FEED_SESSIONS_SUBCOLLECTION).doc();
+  await sessionRef.set({
+    videoIds,
+    expiresAt: admin.firestore.Timestamp.fromMillis(Date.now() + FEED_SESSION_TTL_MS),
+  } satisfies FeedSessionDocument);
+  return loadFeedSession(viewerId, sessionRef.id, 0, limit);
+}
+
+async function loadFeedSession(
+  viewerId: string,
+  sessionId: string,
+  offset: number,
+  limit: number
+): Promise<{ videos: VideoResponse[]; nextCursor: string | null }> {
+  const sessionRef = db.collection("users").doc(viewerId).collection(FEED_SESSIONS_SUBCOLLECTION).doc(sessionId);
+  const sessionSnap = await sessionRef.get();
+  const session = sessionSnap.data() as FeedSessionDocument | undefined;
+  if (!session || timestampToMillis(session.expiresAt) <= Date.now()) {
+    if (sessionSnap.exists) await sessionRef.delete();
+    throw new ServiceError(400, "Feed session expired; refresh the feed");
+  }
+  const ids = Array.isArray(session.videoIds) ? session.videoIds : [];
+  const result: FirebaseFirestore.DocumentSnapshot[] = [];
+  let position = Math.min(offset, ids.length);
+  while (position < ids.length && result.length < limit) {
+    const batchIds = ids.slice(position, position + 50);
+    position += batchIds.length;
+    const refs = batchIds.map((id) => db.collection(VIDEOS_COLLECTION).doc(id));
+    const docs = await db.getAll(...refs);
+    const viewDocs = await db.getAll(...refs.map((ref) => ref.collection(VIDEO_VIEWS_SUBCOLLECTION).doc(viewerId)));
+    docs.forEach((doc, index) => {
+      const video = doc.data() as VideoDocument | undefined;
+      if (doc.exists && video && video.status === "ready" && video.visibility === "public" && !viewDocs[index].exists) {
+        result.push(doc);
+      }
+    });
+  }
+  const videos = await Promise.all(result.map((doc) => serializeVideo(doc, viewerId)));
+  return { videos, nextCursor: position < ids.length ? encodeFeedCursor(sessionId, position) : null };
+}
+
+export async function recordVideoView(videoId: string, viewerId: string): Promise<{ viewed: boolean; viewCount: number }> {
+  const videoRef = db.collection(VIDEOS_COLLECTION).doc(videoId);
+  const viewRef = videoRef.collection(VIDEO_VIEWS_SUBCOLLECTION).doc(viewerId);
+  return db.runTransaction(async (transaction) => {
+    const [videoDoc, viewDoc] = await Promise.all([transaction.get(videoRef), transaction.get(viewRef)]);
+    if (!videoDoc.exists) throw new ServiceError(404, "Video not found");
+    const video = videoDoc.data() as VideoDocument;
+    if (!(await canReadVideo(video, viewerId)) || video.status !== "ready") {
+      throw new ServiceError(403, "You do not have access to this video");
+    }
+    const viewCount = Math.max(0, video.viewCount || 0);
+    if (viewDoc.exists) return { viewed: false, viewCount };
+    transaction.set(viewRef, { userId: viewerId, createdAt: admin.firestore.FieldValue.serverTimestamp() });
+    transaction.update(videoRef, { viewCount: admin.firestore.FieldValue.increment(1) });
+    return { viewed: true, viewCount: viewCount + 1 };
+  });
 }
 
 export async function getUserVideos(
   profileUserId: string,
   viewerId: string,
-  options: { cursor?: string; limit?: number }
+  options: { cursor?: string; limit?: number; includePlayback?: boolean }
 ): Promise<{ videos: VideoResponse[]; nextCursor: string | null }> {
   const limit = normalizeLimit(options.limit);
   const cursor = decodeCursor(options.cursor);
@@ -791,7 +949,14 @@ export async function getUserVideos(
 
   const snapshot = await query.get();
   const docs = snapshot.docs.slice(0, limit);
-  const videos = await Promise.all(docs.map((doc) => serializeVideo(doc, viewerId)));
+  const includePlayback = options.includePlayback !== false;
+  const videos = await Promise.all(
+    docs.map((doc) => serializeVideo(doc, viewerId, {
+      includePlayback,
+      // Grid tiles show aggregate counts, not a personalized heart state.
+      includeViewerLike: includePlayback,
+    }))
+  );
   const hasNextPage = snapshot.docs.length > limit;
   const lastDoc = docs[docs.length - 1];
 
@@ -1208,7 +1373,10 @@ export async function getPublicVideoShareMeta(videoId: string): Promise<PublicVi
   if (!doc.exists) return null;
 
   const data = doc.data() as VideoDocument;
-  if (data.status === "deleted" || data.status !== "ready" || data.visibility !== "public") {
+  // Video uploads have always defaulted to public. Keep pre-visibility records
+  // shareable instead of turning their existing links into 404s after rollout.
+  const visibility = data.visibility ?? "public";
+  if (data.status === "deleted" || data.status !== "ready" || visibility !== "public") {
     return null;
   }
 

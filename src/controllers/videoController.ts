@@ -10,6 +10,7 @@ import {
   getVideoById,
   getVideoComments,
   getVideoFeed,
+  recordVideoView,
   likeVideo,
   likeVideoComment,
   unlikeVideo,
@@ -123,8 +124,24 @@ export async function getVideoFeedController(request: FastifyRequest, reply: Fas
       return reply.status(401).send({ error: "Unauthorized" });
     }
 
-    const result = await getVideoFeed(userId, parsePagination(request.query as { cursor?: string; limit?: string }));
+    const query = request.query as { cursor?: string; limit?: string; subject?: string; friendsOnly?: string };
+    const result = await getVideoFeed(userId, {
+      ...parsePagination(query),
+      subject: query.subject,
+      friendsOnly: query.friendsOnly === "true",
+    });
     return reply.status(200).send(result);
+  } catch (error) {
+    return handleVideoError(reply, error);
+  }
+}
+
+export async function recordVideoViewController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const userId = getAuthenticatedUserId(request);
+    if (!userId) return reply.status(401).send({ error: "Unauthorized" });
+    const { videoId } = request.params as { videoId: string };
+    return reply.status(200).send(await recordVideoView(videoId, userId));
   } catch (error) {
     return handleVideoError(reply, error);
   }

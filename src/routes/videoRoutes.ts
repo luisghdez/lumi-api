@@ -11,6 +11,7 @@ import {
   getVideoFeedController,
   likeVideoCommentController,
   likeVideoController,
+  recordVideoViewController,
   unlikeVideoCommentController,
   unlikeVideoController,
 } from "../controllers/videoController";
@@ -29,6 +30,13 @@ async function videoRoutes(fastify: FastifyInstance) {
     url: "/videos/feed",
     preHandler: authenticateUser,
     handler: getVideoFeedController,
+  });
+
+  fastify.route({
+    method: "POST",
+    url: "/videos/:videoId/view",
+    preHandler: authenticateUser,
+    handler: recordVideoViewController,
   });
 
   fastify.route({

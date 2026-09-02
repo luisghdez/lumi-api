@@ -1,4 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
+import { performance } from "node:perf_hooks";
 import { createFireStoreUser, deleteFireStoreUser, getUserProfile, updateFireStoreUser } from "../services/userService";
 import { checkStreakOnLogin } from "../services/streakService";
 import { updateFcmTokenForUser } from "../services/userService";
@@ -144,10 +145,11 @@ export async function updateFcmTokenController(request: FastifyRequest, reply: F
 export async function getUserVideosController(
   request: FastifyRequest<{
     Params: { userId: string };
-    Querystring: { cursor?: string; limit?: string };
+    Querystring: { cursor?: string; limit?: string; includePlayback?: string };
   }>,
   reply: FastifyReply
 ) {
+  const startedAt = performance.now();
   try {
     const viewer = (request as any).user;
     if (!viewer?.uid) {
@@ -159,13 +161,21 @@ export async function getUserVideosController(
       return reply.status(400).send({ error: "Missing userId parameter" });
     }
 
-    const { cursor, limit } = request.query;
+    const { cursor, limit, includePlayback } = request.query;
 
     const result = await getUserVideos(userId, viewer.uid, {
       cursor,
       limit: limit ? Number(limit) : undefined,
+      includePlayback: includePlayback !== "false",
     });
 
+    // Exposes an end-to-end application timing without changing the response
+    // contract. Compare `includePlayback=true` and `false` in production to
+    // quantify the savings from lazy playback hydration.
+    reply.header(
+      "Server-Timing",
+      `profile-video-list;dur=${(performance.now() - startedAt).toFixed(1)}`
+    );
     return reply.status(200).send(result);
   } catch (error) {
     console.error("Error fetching user videos:", error);

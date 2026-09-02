@@ -242,11 +242,26 @@ export const markLessonAsCompleted = async (
 
     console.log(`Marking lesson ${savedCourseRef}`);
 
-    // Update the specific lesson's completed flag to true.
-    // Also update lastAttempt to record the timestamp of this update.
-    await savedCourseRef.update({
-      [`progress.lessons.${lessonId}.completed`]: true,
-      lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
+    await db.runTransaction(async (transaction) => {
+      const snapshot = await transaction.get(savedCourseRef);
+      if (!snapshot.exists) throw new Error("Saved course does not exist");
+      const savedCourse = snapshot.data() as any;
+      const lessons = savedCourse?.progress?.lessons || {};
+      const wasCompleted = lessons[lessonId]?.completed === true;
+      const allLessonsCompleted = Object.entries(lessons).length > 0 && Object.entries(lessons)
+        .every(([id, lesson]: [string, any]) => id === lessonId || lesson?.completed === true);
+      const updates: Record<string, any> = {
+        [`progress.lessons.${lessonId}.completed`]: true,
+        lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
+      };
+      if (!wasCompleted) {
+        transaction.set(db.collection("analyticsEvents").doc(), { type: "lesson_completed", userId, courseId, occurredAt: admin.firestore.FieldValue.serverTimestamp() });
+      }
+      if (!wasCompleted && allLessonsCompleted && !savedCourse.completedAt) {
+        updates.completedAt = admin.firestore.FieldValue.serverTimestamp();
+        transaction.set(db.collection("analyticsEvents").doc(), { type: "course_completed", userId, courseId, occurredAt: admin.firestore.FieldValue.serverTimestamp() });
+      }
+      transaction.update(savedCourseRef, updates);
     });
 
     // Now update the user's document by incrementing the xpCount field.
