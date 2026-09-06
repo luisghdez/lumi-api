@@ -150,7 +150,7 @@ export async function createTalkSession(input: {
     return newAttempt;
   });
 
-  console.info("Talk session created", {
+  console.info("Talk attempt created; WebRTC signaling pending", {
     model: realtimeModel,
     lessonId: input.lessonId,
   });
@@ -166,7 +166,9 @@ function realtimeSessionConfig(attempt: TalkAttempt) {
     type: "realtime",
     model: realtimeModel,
     instructions: talkInstructions({ term: attempt.focusTerm, definition: attempt.focusDefinition }),
-    max_output_tokens: 180,
+    // Audio and transcript share this budget. 180 tokens truncated speech
+    // after a few seconds; keep replies short through instructions instead.
+    max_output_tokens: 1024,
     output_modalities: ["audio"],
     tracing: null,
     truncation: "auto",
@@ -208,17 +210,42 @@ export async function createTalkWebRtcOffer(input: {
 
   // Keep the project API key on Lumi's server. The iOS app only receives the
   // SDP answer, while media still flows directly between iOS and OpenAI.
+  // The Realtime WebRTC endpoint expects a multipart body with *fields*, not
+  // file uploads. Node's FormData turns Blob values into file parts (with a
+  // filename), which the endpoint does not accept for `sdp`.
+  const boundary = `----LumiRealtime${crypto.randomUUID()}`;
+  const multipartField = (name: string, contentType: string, value: string) =>
+    `--${boundary}\r\n` +
+    `Content-Disposition: form-data; name="${name}"\r\n` +
+    `Content-Type: ${contentType}\r\n\r\n` +
+    `${value}\r\n`;
+  const multipartBody =
+    multipartField("sdp", "application/sdp", input.sdp) +
+    multipartField(
+      "session",
+      "application/json",
+      JSON.stringify(realtimeSessionConfig(attempt)),
+    ) +
+    `--${boundary}--\r\n`;
+
   const response = await fetch("https://api.openai.com/v1/realtime/calls", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-      "Content-Type": "application/json",
+      "Content-Type": `multipart/form-data; boundary=${boundary}`,
     },
-    body: JSON.stringify({ sdp: input.sdp, session: realtimeSessionConfig(attempt) }),
+    body: multipartBody,
     signal: AbortSignal.timeout(8000),
   });
   if (!response.ok) {
-    console.error("Realtime offer failed", { status: response.status, attemptId: input.attemptId });
+    // OpenAI errors explain invalid model/session configuration, but never log
+    // the offer itself because SDP can contain device/network identifiers.
+    const errorBody = (await response.text()).slice(0, 1000);
+    console.error("Realtime offer failed", {
+      status: response.status,
+      attemptId: input.attemptId,
+      errorBody,
+    });
     throw new TalkSessionError(503, "Couldn't connect Talk to Lumi. Please try again.");
   }
   const answerSdp = await response.text();
@@ -226,6 +253,7 @@ export async function createTalkWebRtcOffer(input: {
     console.error("Realtime offer returned an invalid SDP answer", { attemptId: input.attemptId });
     throw new TalkSessionError(503, "Couldn't connect Talk to Lumi. Please try again.");
   }
+  console.info("Talk WebRTC SDP accepted", { model: realtimeModel });
   await attemptRef.update({
     realtimeConnectedAt: admin.firestore.FieldValue.serverTimestamp(),
     realtimeModel,
@@ -297,8 +325,8 @@ export async function assessTalkAttempt(input: {
     });
     transaction.set(stateRef, {
       currentTermIndex: nextTermIndex,
-      [`termScores.${focusTermKey}`]: assessment.score,
-      [`attempts.${focusTermKey}`]: shouldAdvance ? 1 : attempt.attemptNumber + 1,
+      termScores: { [focusTermKey]: assessment.score },
+      attempts: { [focusTermKey]: shouldAdvance ? 1 : attempt.attemptNumber + 1 },
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     }, { merge: true });
     return result;
