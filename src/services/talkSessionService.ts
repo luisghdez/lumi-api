@@ -1,6 +1,8 @@
 import crypto from "crypto";
 import { admin, db } from "../config/firebaseConfig";
 import { assessReview } from "./reviewService";
+import { advanceTalkLesson, talkLessonInstructions, talkLessonReply, TalkLessonProgress } from "./talkLessonProgress";
+import { assessTalkLessonTurn } from "./talkTurnAssessment";
 import { isTalkRealtimeEnabledForLesson } from "./talkConfig";
 
 const realtimeModel = process.env.TALK_TO_LUMI_REALTIME_MODEL || "gpt-realtime-2.1-mini";
@@ -26,6 +28,7 @@ type TalkAttempt = {
   expiresAt: FirebaseFirestore.Timestamp;
   assessment?: Record<string, unknown>;
   assessedTurnId?: string;
+  lessonProgress?: TalkLessonProgress;
 };
 
 function stableDocumentId(value: string): string {
@@ -86,6 +89,7 @@ export async function createTalkSession(input: {
   courseId: string;
   lessonId: string;
   clientAttemptId: string;
+  continuous?: boolean;
 }) {
   if (!isTalkRealtimeEnabledForLesson(input.lessonId)) {
     throw new TalkSessionError(403, "Talk to Lumi is not enabled for this lesson.");
@@ -113,12 +117,20 @@ export async function createTalkSession(input: {
       const existingAttempt = existing.data() as TalkAttempt;
       if (existingAttempt.ownerUid !== input.ownerUid) throw new TalkSessionError(404, "Talk attempt not found.");
       if (existingAttempt.expiresAt.toMillis() <= Date.now()) throw new TalkSessionError(410, "Talk attempt expired. Start again.");
+      if (Boolean(existingAttempt.lessonProgress) !== Boolean(input.continuous)) {
+        throw new TalkSessionError(409, "Session mode does not match.");
+      }
       return existingAttempt;
     }
 
     const stateSnapshot = await transaction.get(stateRef);
-    const state = stateSnapshot.data() as { currentTermIndex?: number; termScores?: Record<string, number>; attempts?: Record<string, number> } | undefined;
-    const requestedIndex = state?.currentTermIndex ?? 0;
+    const state = stateSnapshot.data() as { currentTermIndex?: number; termScores?: Record<string, number>; attempts?: Record<string, number>; lessonProgress?: TalkLessonProgress } | undefined;
+    const lessonProgress: TalkLessonProgress | undefined = input.continuous
+      ? state?.lessonProgress ?? {
+        revision: 0, currentTermIndex: 0, complete: false,
+        topics: cards.map((card, index) => ({ ...card, score: 0, attempts: 0, status: index === 0 ? "active" : "pending" })),
+      } : undefined;
+    const requestedIndex = lessonProgress?.currentTermIndex ?? state?.currentTermIndex ?? 0;
     const currentTermIndex = Math.max(0, Math.min(cards.length - 1, requestedIndex));
     const focus = cards[currentTermIndex];
     const focusTermKey = stableDocumentId(focus.term);
@@ -135,6 +147,7 @@ export async function createTalkSession(input: {
       currentScore,
       attemptNumber,
       expiresAt,
+      ...(lessonProgress ? { lessonProgress } : {}),
     };
     transaction.set(attemptRef, {
       ...newAttempt,
@@ -145,6 +158,7 @@ export async function createTalkSession(input: {
       courseId: input.courseId,
       lessonId: input.lessonId,
       currentTermIndex,
+      ...(lessonProgress ? { lessonProgress } : {}),
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     }, { merge: true });
     return newAttempt;
@@ -158,6 +172,7 @@ export async function createTalkSession(input: {
     attemptId,
     focusTerm: attempt.focusTerm,
     focusDefinition: attempt.focusDefinition,
+    ...(attempt.lessonProgress ? { progress: attempt.lessonProgress, instructions: talkLessonInstructions(attempt.lessonProgress) } : {}),
   };
 }
 
@@ -165,7 +180,7 @@ function realtimeSessionConfig(attempt: TalkAttempt) {
   return {
     type: "realtime",
     model: realtimeModel,
-    instructions: talkInstructions({ term: attempt.focusTerm, definition: attempt.focusDefinition }),
+    instructions: attempt.lessonProgress ? talkLessonInstructions(attempt.lessonProgress) : talkInstructions({ term: attempt.focusTerm, definition: attempt.focusDefinition }),
     // Audio and transcript share this budget. 180 tokens truncated speech
     // after a few seconds; keep replies short through instructions instead.
     max_output_tokens: 1024,
@@ -181,7 +196,8 @@ function realtimeSessionConfig(attempt: TalkAttempt) {
           threshold: 0.5,
           prefix_padding_ms: 300,
           silence_duration_ms: 650,
-          create_response: true,
+          // Continuous lessons wait for the server assessment before speaking.
+          create_response: !attempt.lessonProgress,
           interrupt_response: true,
         },
       },
@@ -277,6 +293,7 @@ export async function assessTalkAttempt(input: {
   const attempt = initialSnapshot.data() as TalkAttempt;
   if (attempt.ownerUid !== input.ownerUid) throw new TalkSessionError(404, "Talk attempt not found.");
   if (attempt.expiresAt.toMillis() <= Date.now()) throw new TalkSessionError(410, "Talk attempt expired. Start again.");
+  if (attempt.lessonProgress) throw new TalkSessionError(409, "Use the lesson turn endpoint for this session.");
   if (attempt.assessedTurnId === input.turnId && attempt.assessment) return attempt.assessment;
   if (attempt.assessedTurnId) throw new TalkSessionError(409, "This Talk attempt already has an assessment.");
 
@@ -329,6 +346,64 @@ export async function assessTalkAttempt(input: {
       attempts: { [focusTermKey]: shouldAdvance ? 1 : attempt.attemptNumber + 1 },
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     }, { merge: true });
+    return result;
+  });
+}
+
+
+export async function assessContinuousTalkTurn(input: {
+  ownerUid: string; attemptId: string; turnId: string; transcript: string; expectedRevision: number;
+}) {
+  if (!/^[a-f0-9]{64}$/.test(input.attemptId) || !/^[A-Za-z0-9_-]{8,128}$/.test(input.turnId)) {
+    throw new TalkSessionError(400, "Invalid session or turn ID.");
+  }
+  if (typeof input.transcript !== "string" || !input.transcript.trim() || input.transcript.length > 12000 ||
+      !Number.isInteger(input.expectedRevision) || input.expectedRevision < 0) {
+    throw new TalkSessionError(400, "Invalid transcript or revision.");
+  }
+  const attemptRef = db.collection("users").doc(input.ownerUid).collection("talkAttempts").doc(input.attemptId);
+  const turnRef = attemptRef.collection("turns").doc(input.turnId);
+  const transcriptHash = stableDocumentId(input.transcript.trim());
+  const attemptSnapshot = await attemptRef.get();
+  if (!attemptSnapshot.exists) throw new TalkSessionError(404, "Session not found.");
+  const attempt = attemptSnapshot.data() as TalkAttempt;
+  if (attempt.ownerUid !== input.ownerUid) throw new TalkSessionError(404, "Session not found.");
+  if (attempt.expiresAt.toMillis() <= Date.now()) throw new TalkSessionError(410, "Session expired. Reconnect to resume.");
+  const cached = await turnRef.get();
+  if (cached.exists) {
+    if (cached.get("transcriptHash") !== transcriptHash) throw new TalkSessionError(409, "Turn was already submitted with different words.");
+    return cached.get("result");
+  }
+  const before = attempt.lessonProgress;
+  if (!before) throw new TalkSessionError(409, "This is not a continuous lesson session.");
+  if (before.complete || before.revision !== input.expectedRevision) throw new TalkSessionError(409, "Lesson progress changed. Reconnect to resume.");
+  const assessment = await assessTalkLessonTurn(before.topics[before.currentTermIndex], input.transcript.trim());
+  const progress = advanceTalkLesson(before, assessment);
+  const result = {
+    turnId: input.turnId,
+    progress,
+    kind: assessment.kind,
+    replyText: talkLessonReply(before, progress, assessment),
+    instructions: talkLessonInstructions(progress),
+  };
+  const stateRef = db.collection("users").doc(input.ownerUid).collection("talkState")
+    .doc(stableDocumentId(`${attempt.courseId}:${attempt.lessonId}`));
+  return db.runTransaction(async transaction => {
+    const [latestTurn, latestAttempt, latestState] = await Promise.all([
+      transaction.get(turnRef), transaction.get(attemptRef), transaction.get(stateRef),
+    ]);
+    if (latestTurn.exists) {
+      if (latestTurn.get("transcriptHash") !== transcriptHash) throw new TalkSessionError(409, "Turn was already submitted with different words.");
+      return latestTurn.get("result");
+    }
+    if (latestAttempt.get("lessonProgress.revision") !== input.expectedRevision ||
+        latestState.get("lessonProgress.revision") !== input.expectedRevision) {
+      throw new TalkSessionError(409, "Lesson progress changed. Reconnect to resume.");
+    }
+    transaction.set(turnRef, { result, transcriptHash, createdAt: admin.firestore.FieldValue.serverTimestamp() });
+    transaction.update(attemptRef, { lessonProgress: progress });
+    transaction.set(stateRef, { lessonProgress: progress, updatedAt: admin.firestore.FieldValue.serverTimestamp() }, { merge: true });
+    console.info("Talk lesson turn assessed", { revision: progress.revision, currentTermIndex: progress.currentTermIndex, complete: progress.complete });
     return result;
   });
 }

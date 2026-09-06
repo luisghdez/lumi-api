@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { assessTalkAttempt, createTalkSession, createTalkWebRtcOffer, TalkSessionError } from "../services/talkSessionService";
+import { assessContinuousTalkTurn, assessTalkAttempt, createTalkSession, createTalkWebRtcOffer, TalkSessionError } from "../services/talkSessionService";
 
 function sendTalkError(reply: FastifyReply, error: unknown) {
   if (error instanceof TalkSessionError) return reply.status(error.statusCode).send({ error: error.message });
@@ -10,12 +10,12 @@ function sendTalkError(reply: FastifyReply, error: unknown) {
 export async function createTalkSessionController(request: FastifyRequest, reply: FastifyReply) {
   const user = (request as any).user;
   if (!user?.uid) return reply.status(401).send({ error: "Unauthorized" });
-  const { courseId, lessonId, clientAttemptId } = request.body as Record<string, string>;
+  const { courseId, lessonId, clientAttemptId, continuous } = request.body as { courseId: string; lessonId: string; clientAttemptId: string; continuous?: boolean };
   if (!courseId || !lessonId || !clientAttemptId) {
     return reply.status(400).send({ error: "courseId, lessonId, and clientAttemptId are required." });
   }
   try {
-    return reply.send(await createTalkSession({ ownerUid: user.uid, courseId, lessonId, clientAttemptId }));
+    return reply.send(await createTalkSession({ ownerUid: user.uid, courseId, lessonId, clientAttemptId, continuous: continuous === true }));
   } catch (error) {
     return sendTalkError(reply, error);
   }
@@ -47,4 +47,15 @@ export async function createTalkWebRtcOfferController(request: FastifyRequest, r
   } catch (error) {
     return sendTalkError(reply, error);
   }
+}
+
+
+export async function assessContinuousTalkTurnController(request: FastifyRequest, reply: FastifyReply) {
+  const user = (request as any).user;
+  if (!user?.uid) return reply.status(401).send({ error: "Unauthorized" });
+  const { attemptId } = request.params as { attemptId: string };
+  const body = request.body as { turnId: string; transcript: string; expectedRevision: number };
+  try {
+    return reply.send(await assessContinuousTalkTurn({ ownerUid: user.uid, attemptId, turnId: body.turnId, transcript: body.transcript, expectedRevision: body.expectedRevision }));
+  } catch (error) { return sendTalkError(reply, error); }
 }
