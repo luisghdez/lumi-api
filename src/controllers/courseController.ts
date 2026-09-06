@@ -10,6 +10,7 @@ import { uploadFileToFirebaseStorage, UploadedFile } from "../services/firebaseS
 import { db, admin } from "../config/firebaseConfig";
 import { processConcurrently, processInBatches } from "../utils/concurrency";
 import { nanoid } from "nanoid";
+import { COURSE_GENERATION_LIMITS, CourseGenerationLimitError } from "../config/courseGenerationLimits";
 
 /**
  * 🚀 LEVEL 1 OPTIMIZATION: Batched database writes for maximum performance
@@ -191,6 +192,8 @@ export const createCourseController = async (
     }> = [];
     let classId: string | undefined;
     let dueDate: string | undefined;
+    let combinedUploadBytes = 0;
+    let plainTextBytes = 0;
 
     // 1️⃣ Process all parts and collect files (optimized for parallel processing)
     const filesToUpload: Array<{ buffer: Buffer; filename: string; mimeType: string; fileId: string }> = [];
@@ -210,6 +213,12 @@ export const createCourseController = async (
         }
         
         const fileBuffer = await part.toBuffer();
+        combinedUploadBytes += fileBuffer.length;
+        if (combinedUploadBytes > COURSE_GENERATION_LIMITS.maxCombinedUploadBytes) {
+          throw new CourseGenerationLimitError(
+            "Combined course upload must be 15 MB or less"
+          );
+        }
 
         // Generate the nanoid that will be used for upload
         const fileId = nanoid();
@@ -233,14 +242,33 @@ export const createCourseController = async (
         });
 
       } else {
-        const { fieldname, value } = part as any;
+        const { fieldname, value, valueTruncated } = part as any;
         switch (fieldname) {
           case "content":
             // Handle plain text content as a file - store as .txt in Firebase Storage
-            if (value.trim()) {
+            if (valueTruncated) {
+              throw new CourseGenerationLimitError(
+                "Plain-text course content must be 1 MB or less"
+              );
+            }
+            const textValue = String(value ?? "");
+            const textBytes = Buffer.byteLength(textValue, "utf8");
+            plainTextBytes += textBytes;
+            combinedUploadBytes += textBytes;
+            if (plainTextBytes > COURSE_GENERATION_LIMITS.maxPlainTextBytes) {
+              throw new CourseGenerationLimitError(
+                "Plain-text course content must be 1 MB or less"
+              );
+            }
+            if (combinedUploadBytes > COURSE_GENERATION_LIMITS.maxCombinedUploadBytes) {
+              throw new CourseGenerationLimitError(
+                "Combined course upload must be 15 MB or less"
+              );
+            }
+            if (textValue.trim()) {
               const fileId = nanoid();
               const expectedFileName = `courses/${fileId}.txt`;
-              const textBuffer = Buffer.from(value, 'utf8');
+              const textBuffer = Buffer.from(textValue, 'utf8');
               
               // Add to upload queue
               filesToUpload.push({
@@ -434,8 +462,14 @@ export const createCourseController = async (
 
   } catch (error) {
     console.error("❌ Error creating course:", error);
-    return reply.status(500).send({ 
-      error: "Internal Server Error",
+    const statusCode =
+      typeof (error as { statusCode?: unknown })?.statusCode === "number"
+        ? (error as { statusCode: number }).statusCode
+        : 500;
+    return reply.status(statusCode).send({
+      error: statusCode === 413
+        ? (error as Error).message
+        : "Internal Server Error",
       details: process.env.NODE_ENV === 'development' ? (error as Error).message : undefined
     });
   }
@@ -752,7 +786,5 @@ export const getCourseByIdController = async (
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
-
-
 
 

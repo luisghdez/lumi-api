@@ -20,6 +20,7 @@ import videoRoutes from './routes/videoRoutes';
 import videoShareWebRoutes from './routes/videoShareWebRoutes';
 import podcastRoutes from './routes/podcastRoutes';
 import talkRoutes from './routes/talkRoutes';
+import { COURSE_GENERATION_LIMITS } from './config/courseGenerationLimits';
 
 
 const fastify = Fastify({ logger: true });
@@ -55,7 +56,9 @@ fastify.addContentTypeParser(
 fastify.register(cors);
 fastify.register(multipart, {
     limits: {
-      fileSize: 20 * 1024 * 1024, // 20 MB
+      files: COURSE_GENERATION_LIMITS.maxFiles,
+      fileSize: COURSE_GENERATION_LIMITS.maxFileBytes,
+      fieldSize: COURSE_GENERATION_LIMITS.maxPlainTextBytes,
     },
   });
 fastify.register(courseRoutes);
