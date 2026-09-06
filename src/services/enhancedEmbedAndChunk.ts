@@ -6,6 +6,7 @@ import JSZip from "jszip";
 import { XMLParser } from "fast-xml-parser";
 import pdfParse from 'pdf-parse';
 import { extractTextFromImage } from "./visionService";
+import { COURSE_GENERATION_LIMITS, CourseGenerationLimitError } from "../config/courseGenerationLimits";
 
 
 const openai = new OpenAI();
@@ -427,6 +428,19 @@ export async function embedAndStoreWithMetadataStreaming(
       processedFiles.push(result.processedFile);
     }
   });
+
+  const extractedCharacters = allChunks.reduce(
+    (total, chunk) => total + chunk.text.length,
+    0
+  );
+  if (
+    extractedCharacters > COURSE_GENERATION_LIMITS.maxExtractedCharacters ||
+    allChunks.length > COURSE_GENERATION_LIMITS.maxExtractedChunks
+  ) {
+    throw new CourseGenerationLimitError(
+      "Extracted course content must be 1,000,000 characters and 1,000 chunks or less"
+    );
+  }
   
   if (allChunks.length === 0) {
     return { coarseChunks: [], processedFiles, embeddingPromise: Promise.resolve() };
@@ -560,6 +574,19 @@ export async function embedAndStoreWithMetadata(
       processedFiles.push(result.processedFile);
     }
   });
+
+  const extractedCharacters = allChunks.reduce(
+    (total, chunk) => total + chunk.text.length,
+    0
+  );
+  if (
+    extractedCharacters > COURSE_GENERATION_LIMITS.maxExtractedCharacters ||
+    allChunks.length > COURSE_GENERATION_LIMITS.maxExtractedChunks
+  ) {
+    throw new CourseGenerationLimitError(
+      "Extracted course content must be 1,000,000 characters and 1,000 chunks or less"
+    );
+  }
   
   if (allChunks.length === 0) {
     return { coarseChunks: [], processedFiles };
