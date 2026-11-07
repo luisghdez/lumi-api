@@ -79,20 +79,26 @@ export async function ensureUserExistsController(request: FastifyRequest, reply:
   
       // Extract the fields from the request body.
       // name, profilePicture, timezone, and hasCompletedOnboarding are allowed for updates.
-      const { name, profilePicture, timezone, hasCompletedOnboarding } = request.body as {
+      const { name, profilePicture, timezone, hasCompletedOnboarding, onboardingCourseIds } = request.body as {
         name?: string;
         profilePicture?: string;
         timezone?: string;
         hasCompletedOnboarding?: boolean;
+        onboardingCourseIds?: string[];
       };
+      if (onboardingCourseIds !== undefined &&
+          (!Array.isArray(onboardingCourseIds) || onboardingCourseIds.length > 20 ||
+           onboardingCourseIds.some(id => typeof id !== "string" || !/^[a-zA-Z0-9_-]{1,100}$/.test(id)))) {
+        return reply.status(400).send({ error: "Invalid onboardingCourseIds" });
+      }
   
       // Validate that at least one field is provided.
-      if (!name && !profilePicture && !timezone && hasCompletedOnboarding === undefined) {
+      if (!name && !profilePicture && !timezone && hasCompletedOnboarding === undefined && onboardingCourseIds === undefined) {
         return reply.status(400).send({ error: "No update fields provided." });
       }
   
       // Update the Firestore user document using the service.
-      await updateFireStoreUser(user.uid, { name, profilePicture, timezone, hasCompletedOnboarding });
+      await updateFireStoreUser(user.uid, { name, profilePicture, timezone, hasCompletedOnboarding, onboardingCourseIds });
   
       reply.code(200).send({ message: "User profile updated successfully." });
     } catch (error) {

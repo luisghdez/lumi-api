@@ -14,6 +14,8 @@ interface UserProfileData {
     profilePicture?: string;
     timezone?: string;
     hasCompletedOnboarding?: boolean;
+    onboardingCourseIds?: string[];
+    onboardingCompletedAt?: Date;
   }
 
 export async function createFireStoreUser(uid: string, data: UserProfileData) {
@@ -31,7 +33,8 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
           profilePicture: data.profilePicture || "default",
           timezone: data.timezone || "UTC",
           hasCompletedOnboarding: data.hasCompletedOnboarding ?? false,
-  
+          onboardingCourseIds: [],
+
           // New fields for freemium control
           isPremium: false,
           courseSlotsUsed: 0,
@@ -87,6 +90,10 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       }
       if (data.hasCompletedOnboarding !== undefined) {
         updateData.hasCompletedOnboarding = data.hasCompletedOnboarding;
+        if (data.hasCompletedOnboarding) updateData.onboardingCompletedAt = new Date();
+      }
+      if (data.onboardingCourseIds !== undefined) {
+        updateData.onboardingCourseIds = data.onboardingCourseIds;
       }
   
       await userRef.update(updateData);
@@ -96,7 +103,7 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       throw error;
     }
   }
-  
+
 
   export async function deleteFireStoreUser(uid: string): Promise<void> {
     try {
@@ -155,4 +162,3 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
       throw error;
     }
   }
-  

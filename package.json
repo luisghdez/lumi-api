@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "node -r ts-node/register --test test/*.test.js",
+    "verify:activation": "ts-node src/scripts/verifyActivationFlow.ts",
     "dev": "nodemon --exec ts-node src/server.ts",
     "build": "npm install && tsc",
     "start": "node dist/server.js",
