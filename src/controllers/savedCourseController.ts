@@ -43,20 +43,36 @@ export const markLessonCompletedController = async (
     }
 
     // Extract xp from the request body (allowing frontend to decide the XP count)
-    const { xp } = request.body as { xp: number };
-    if (xp === undefined) {
-      return reply.status(400).send({ error: "Missing XP value in request body" });
+    const { xp, lessonAttemptId, durationMs } = request.body as {
+      xp: number; lessonAttemptId?: string; durationMs?: number;
+    };
+    if (!Number.isInteger(xp) || xp < 0 || xp > 1000) {
+      return reply.status(400).send({ error: "Invalid XP value" });
+    }
+    if (lessonAttemptId !== undefined && !/^[a-zA-Z0-9_-]{8,128}$/.test(lessonAttemptId)) {
+      return reply.status(400).send({ error: "Invalid lessonAttemptId" });
+    }
+    if (durationMs !== undefined && (!Number.isInteger(durationMs) || durationMs < 0 || durationMs > 86_400_000)) {
+      return reply.status(400).send({ error: "Invalid durationMs" });
     }
 
     // Call the service to mark the lesson as completed and update user XP
-    await markLessonAsCompleted(user.uid, courseId, lessonId, xp);
-    // 2) Update the user streak and capture the result
-    const streakResult = await updateUserStreak(user.uid);
+    const completion = await markLessonAsCompleted(user.uid, courseId, lessonId, xp, lessonAttemptId, durationMs);
+    let streakResult = null;
+    if (!completion.wasPreviouslyCompleted) {
+      try {
+        streakResult = await updateUserStreak(user.uid);
+      } catch (streakError) {
+        // A failed secondary streak update must not turn a committed lesson into a retryable 500.
+        console.error("Lesson completed, but streak update failed:", streakError);
+      }
+    }
 
     // 3) Return response, including whether the streak was extended
     return reply.status(200).send({
       message: "Lesson marked as completed, XP updated, and streak checked.",
       streakInfo: streakResult,
+      ...completion,
     });
   } catch (error) {
     console.error("Error marking lesson as completed:", error);

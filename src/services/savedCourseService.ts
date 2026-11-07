@@ -8,6 +8,7 @@ interface SavedCourseInput {
 
 interface SavedCourseOptimizedInput {
   courseId: string;
+  generationId?: string;
   lessonCount: number;
   title: string;
   description: string;
@@ -66,13 +67,14 @@ export async function createSavedCourse(userId: string, data: SavedCourseInput):
       if (courseData?.apSubject !== undefined) savedDoc.apSubject = courseData.apSubject;
     }
 
-    await savedCourseRef.set(savedDoc);
-
-    // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {
-      const courseRef = db.collection("courses").doc(data.courseId);
-      transaction.update(courseRef, {
-        savedCount: admin.firestore.FieldValue.increment(1),
+      const existing = await transaction.get(savedCourseRef);
+      if (existing.exists) return;
+      transaction.set(savedCourseRef, savedDoc);
+      transaction.update(courseRef, { savedCount: admin.firestore.FieldValue.increment(1) });
+      transaction.set(db.collection("analyticsEvents").doc(), {
+        type: "course_saved", userId, courseId: data.courseId,
+        source: "direct", occurredAt: admin.firestore.FieldValue.serverTimestamp(),
       });
     });
 
@@ -107,8 +109,8 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
     const lessonCount = lessonsSnapshot.size;
 
     const lessonsProgress: { [lessonId: string]: { completed: boolean } } = {};
-    for (let i = 1; i <= lessonCount; i++) {
-      lessonsProgress[`lesson${i}`] = { completed: false };
+    for (const lesson of lessonsSnapshot.docs) {
+      lessonsProgress[lesson.id] = { completed: false };
     }
 
     const savedCourseRef = db
@@ -137,13 +139,14 @@ export async function createSharedSavedCourse(userId: string, courseId: string):
       if (courseData?.apSubject !== undefined) savedDoc.apSubject = courseData.apSubject;
     }
 
-    await savedCourseRef.set(savedDoc);
-
-    // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {
-      const courseRef = db.collection("courses").doc(courseId);
-      transaction.update(courseRef, {
-        savedCount: admin.firestore.FieldValue.increment(1),
+      const existing = await transaction.get(savedCourseRef);
+      if (existing.exists) return;
+      transaction.set(savedCourseRef, savedDoc);
+      transaction.update(courseRef, { savedCount: admin.firestore.FieldValue.increment(1) });
+      transaction.set(db.collection("analyticsEvents").doc(), {
+        type: "course_saved", userId, courseId,
+        source: "shared", occurredAt: admin.firestore.FieldValue.serverTimestamp(),
       });
     });
 
@@ -200,15 +203,16 @@ export async function createSavedCourseOptimized(userId: string, data: SavedCour
       if (data.apSubject !== undefined) savedDoc.apSubject = data.apSubject;
     }
 
-    // Create saved course document with provided data (no DB read required)
-    await savedCourseRef.set(savedDoc);
-
-    // Increment savedCount on the course document (do NOT increment courseSlotsUsed - that's only for original courses)
     await db.runTransaction(async (transaction) => {
-      // Increment savedCount on the course document
+      const existing = await transaction.get(savedCourseRef);
+      if (existing.exists) return;
       const courseRef = db.collection("courses").doc(data.courseId);
-      transaction.update(courseRef, {
-        savedCount: admin.firestore.FieldValue.increment(1),
+      transaction.set(savedCourseRef, savedDoc);
+      transaction.update(courseRef, { savedCount: admin.firestore.FieldValue.increment(1) });
+      transaction.set(db.collection("analyticsEvents").doc(), {
+        type: "course_saved", userId, courseId: data.courseId,
+        source: "generated", generationId: data.generationId || null,
+        occurredAt: admin.firestore.FieldValue.serverTimestamp(),
       });
     });
 
@@ -230,8 +234,10 @@ export const markLessonAsCompleted = async (
   userId: string,
   courseId: string,
   lessonId: string,
-  xp: number
-): Promise<void> => {
+  xp: number,
+  lessonAttemptId?: string,
+  durationMs?: number,
+): Promise<{ xpAwarded: number; wasPreviouslyCompleted: boolean }> => {
   try {
     // Reference the saved course document under the user's subcollection
     const savedCourseRef = db
@@ -240,38 +246,66 @@ export const markLessonAsCompleted = async (
       .collection("savedCourses")
       .doc(courseId);
 
-    console.log(`Marking lesson ${savedCourseRef}`);
-
-    await db.runTransaction(async (transaction) => {
-      const snapshot = await transaction.get(savedCourseRef);
+    return await db.runTransaction(async (transaction) => {
+      const userRef = db.collection("users").doc(userId);
+      const [snapshot, userSnapshot] = await Promise.all([
+        transaction.get(savedCourseRef), transaction.get(userRef),
+      ]);
       if (!snapshot.exists) throw new Error("Saved course does not exist");
+      if (!userSnapshot.exists) throw new Error("User does not exist");
       const savedCourse = snapshot.data() as any;
       const lessons = savedCourse?.progress?.lessons || {};
+      if (!(lessonId in lessons)) throw new Error("Lesson does not exist in saved course");
       const wasCompleted = lessons[lessonId]?.completed === true;
+      if (wasCompleted) return { xpAwarded: 0, wasPreviouslyCompleted: true };
+      // Older users may have progress or events without the user-level marker.
+      // Resolve that history inside the transaction before any writes. Reading
+      // the user document also serializes concurrent completions across courses.
+      let hasCompletedLesson = userSnapshot.get("hasCompletedLesson") === true ||
+        Boolean(userSnapshot.get("firstLessonCompletedAt"));
+      if (!hasCompletedLesson) {
+        const [savedCourses, history] = await Promise.all([
+          transaction.get(userRef.collection("savedCourses")),
+          transaction.get(db.collection("analyticsEvents").where("userId", "==", userId)),
+        ]);
+        hasCompletedLesson = history.docs.some(event => event.get("type") === "lesson_completed") ||
+          savedCourses.docs.some(course => Object.values(course.get("progress.lessons") || {})
+            .some((lesson: any) => lesson?.completed === true));
+      }
+      const isFirstLesson = !hasCompletedLesson;
       const allLessonsCompleted = Object.entries(lessons).length > 0 && Object.entries(lessons)
         .every(([id, lesson]: [string, any]) => id === lessonId || lesson?.completed === true);
       const updates: Record<string, any> = {
         [`progress.lessons.${lessonId}.completed`]: true,
+        [`progress.lessons.${lessonId}.completedAt`]: admin.firestore.FieldValue.serverTimestamp(),
         lastAttempt: admin.firestore.FieldValue.serverTimestamp(),
       };
-      if (!wasCompleted) {
-        transaction.set(db.collection("analyticsEvents").doc(), { type: "lesson_completed", userId, courseId, occurredAt: admin.firestore.FieldValue.serverTimestamp() });
-      }
-      if (!wasCompleted && allLessonsCompleted && !savedCourse.completedAt) {
+      transaction.set(db.collection("analyticsEvents").doc(), {
+        type: "lesson_completed", userId, courseId, lessonId,
+        lessonOrdinal: /^lesson\d+$/.test(lessonId) ? Number(lessonId.slice(6)) : null,
+        isFirstLesson,
+        courseType: savedCourse.courseType || "standard",
+        lessonAttemptId: lessonAttemptId || null,
+        durationMs: typeof durationMs === "number" ? durationMs : null,
+        xpAwarded: xp,
+        occurredAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+      if (allLessonsCompleted && !savedCourse.completedAt) {
         updates.completedAt = admin.firestore.FieldValue.serverTimestamp();
         transaction.set(db.collection("analyticsEvents").doc(), { type: "course_completed", userId, courseId, occurredAt: admin.firestore.FieldValue.serverTimestamp() });
       }
       transaction.update(savedCourseRef, updates);
+      transaction.update(userRef, {
+        xpCount: admin.firestore.FieldValue.increment(xp),
+        hasCompletedLesson: true,
+        ...(isFirstLesson ? {
+          firstLessonCompletedAt: admin.firestore.FieldValue.serverTimestamp(),
+          firstLessonCourseId: courseId,
+          firstLessonId: lessonId,
+        } : {}),
+      });
+      return { xpAwarded: xp, wasPreviouslyCompleted: false };
     });
-
-    // Now update the user's document by incrementing the xpCount field.
-    // Make sure that your Firebase admin SDK is initialized and supports FieldValue.increment.
-    const userRef = db.collection("users").doc(userId);
-    await userRef.update({
-      xpCount: admin.firestore.FieldValue.increment(xp),
-    });
-
-    console.log(`Lesson ${lessonId} in course ${courseId} marked as completed for user ${userId}. Added ${xp} XP.`);
   } catch (error) {
     console.error("Error updating lesson progress and user XP:", error);
     throw new Error("Failed to mark lesson as completed and update XP.");

@@ -20,10 +20,30 @@ import videoRoutes from './routes/videoRoutes';
 import videoShareWebRoutes from './routes/videoShareWebRoutes';
 import podcastRoutes from './routes/podcastRoutes';
 import talkRoutes from './routes/talkRoutes';
+import revenueCatWebhookRoutes from './routes/revenueCatWebhookRoutes';
 import { COURSE_GENERATION_LIMITS } from './config/courseGenerationLimits';
+import { db } from './config/firebaseConfig';
+import admin from 'firebase-admin';
 
 
 const fastify = Fastify({ logger: true });
+
+fastify.addHook('onResponse', async (request, reply) => {
+  if (reply.statusCode < 400 || request.url.startsWith('/webhooks/')) return;
+  try {
+    await db.collection('analyticsEvents').add({
+      type: 'api_request_failed',
+      requestId: request.id,
+      method: request.method,
+      route: request.routeOptions.url || 'unmatched',
+      statusCode: reply.statusCode,
+      userId: (request as any).user?.uid || null,
+      occurredAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
+  } catch (error) {
+    request.log.error({ error }, 'Could not record failed request');
+  }
+});
 
 // Flutter (and others) send Content-Type: application/json with an empty body on DELETE;
 // Fastify's default parser rejects that — treat empty body as {}.
@@ -70,12 +90,14 @@ fastify.register(classRoutes);
 fastify.register(studentRoutes);
 fastify.register(ragRoutes);
 fastify.register(notiRoutes)
-fastify.register(cronRoutes);
+// Local verification can use real Firebase credentials without running outreach jobs.
+if (process.env.DISABLE_BACKGROUND_JOBS !== '1') fastify.register(cronRoutes);
 fastify.register(AASARoutes);
 fastify.register(videoShareWebRoutes);
 fastify.register(videoRoutes);
 fastify.register(podcastRoutes);
 fastify.register(talkRoutes);
+fastify.register(revenueCatWebhookRoutes);
 
 // Health check route
 fastify.get("/", async () => {

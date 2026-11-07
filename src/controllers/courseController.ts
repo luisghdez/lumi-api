@@ -174,8 +174,11 @@ export const createCourseController = async (
   request: FastifyRequest,
   reply: FastifyReply
 ) => {
+  const generationId = nanoid();
+  let reservedCourseId: string | undefined;
+  let failureStage = "validation";
+  const overallStartTime = Date.now();
   try {
-    const overallStartTime = Date.now();
     const user = (request as any).user;
     if (!user?.uid) {
       return reply.status(401).send({ error: "Unauthorized" });
@@ -317,6 +320,16 @@ export const createCourseController = async (
         hasEmbeddings: false,
         visibility: "Private"
       });
+      reservedCourseId = courseId;
+      failureStage = "upload_and_extraction";
+      await db.collection("courses").doc(courseId).update({
+        generationId, generationStatus: "uploading",
+        generationStartedAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+      await db.collection("analyticsEvents").add({
+        type: "course_generation_started", userId: user.uid, courseId,
+        generationId, occurredAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
       
       // 3️⃣ Start parallel operations: Firebase upload AND document processing
       const parallelStartTime = Date.now();
@@ -329,6 +342,12 @@ export const createCourseController = async (
       ]);
       
       const parallelDuration = Date.now() - parallelStartTime;
+      await db.collection("courses").doc(courseId).update({ generationStatus: "generating" });
+      await db.collection("analyticsEvents").add({
+        type: "course_generation_stage_completed", userId: user.uid, courseId,
+        generationId, stage: "upload_and_extraction", durationMs: parallelDuration,
+        occurredAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
       console.log(`✅ Parallel operations completed in ${parallelDuration}ms`);
       
       // Assign upload results to uploadedFiles
@@ -338,7 +357,9 @@ export const createCourseController = async (
       
       // 🚀 LEVEL 1 OPTIMIZATION: Start content generation immediately while embeddings continue
       console.log("🚀 PARALLEL PROCESSING: Starting content generation while embeddings run in background");
-      const [chunkedResponses] = await Promise.all([
+    failureStage = "content_generation";
+    const contentStartTime = Date.now();
+    const [chunkedResponses] = await Promise.all([
         // 5️⃣ Process OpenAI content generation with controlled concurrency (immediate start)
         processOpenAIContentConcurrently(chunkTexts),
         // 6️⃣ Wait for embeddings to complete and mark as complete (background)
@@ -346,6 +367,11 @@ export const createCourseController = async (
           console.error("❌ Failed to complete embeddings:", error);
         })
       ]);    
+    await db.collection("analyticsEvents").add({
+      type: "course_generation_stage_completed", userId: user.uid, courseId,
+      generationId, stage: "content_generation", durationMs: Date.now() - contentStartTime,
+      occurredAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
 
     // 7️⃣ Merge all question arrays
     const mergedFlashcards = chunkedResponses.flatMap((r: any) => r?.flashcards || []);
@@ -383,6 +409,7 @@ export const createCourseController = async (
     const { title, subject, summary } = summaryData || { title: "Course", subject: "Other", summary: "" };
 
     // 🔟 🚀 LEVEL 1 OPTIMIZATION: Batched database writes for better performance
+    failureStage = "course_write";
     await batchedCourseUpdate(courseId, {
       lessons,
       mergedFlashcards,
@@ -394,45 +421,46 @@ export const createCourseController = async (
       uploadedFiles
     });
 
-    // Increment courseSlotsUsed for the user who created this original course
-    const userRef = db.collection("users").doc(user.uid);
-    await userRef.update({
-      courseSlotsUsed: admin.firestore.FieldValue.increment(1),
-    });
-    console.log(`✅ Incremented courseSlotsUsed for user ${user.uid}`);
-
-    // 1️⃣1️⃣ Final parallel operations: class assignment and saved course creation
-    const finalOperations = [];
-    
-    if (classId) {
-      finalOperations.push(
-        assignCourseToClass(classId, courseId, title, dueDate).catch(error => {
-          console.error("❌ Failed to assign course to class:", error);
-        })
-      );
-    }
-    
-    finalOperations.push(
-      // 🚀 LEVEL 1 OPTIMIZATION: Create saved course with data we already have (no redundant DB reads)
-      createSavedCourseOptimized(user.uid, {
+    failureStage = "course_save";
+    await db.collection("courses").doc(courseId).update({ generationStatus: "saving" });
+    await createSavedCourseOptimized(user.uid, {
         courseId,
+        generationId,
         lessonCount,
         title,
         description: `A ${subject} course covering key concepts and skills.`,
         subject,
         hasEmbeddings: true
-      }).catch(error => {
-        console.error("❌ Failed to create saved course:", error);
-      })
-    );
-
-    // Execute final operations in parallel
-    if (finalOperations.length > 0) {
-      await Promise.all(finalOperations);
+      });
+    if (classId) {
+      try {
+        await assignCourseToClass(classId, courseId, title, dueDate);
+      } catch (error) {
+        console.error("Failed to assign course to class:", error);
+      }
     }
+    await db.runTransaction(async (tx) => {
+      tx.update(db.collection("users").doc(user.uid), {
+        courseSlotsUsed: admin.firestore.FieldValue.increment(1),
+      });
+      tx.update(db.collection("courses").doc(courseId), {
+        generationStatus: "ready", readyAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+    });
 
     // 1️⃣2️⃣ Success response with performance info
     const totalDuration = Date.now() - overallStartTime;
+    try {
+      await db.collection("analyticsEvents").add({
+        type: "course_generation_completed", userId: user.uid, courseId,
+        generationId, durationMs: totalDuration, inputCount: filesForEmbedding.length,
+        lessonCount, flashcardCount: mergedFlashcards.length,
+        occurredAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+    } catch (telemetryError) {
+      // The course is already saved and ready; telemetry must not reverse its outcome.
+      console.error("Could not record course-generation completion:", telemetryError);
+    }
     console.log(`🎉 Course creation completed successfully! CourseID: ${courseId}`);
     console.log(`📊 Performance Summary:
       - Total Duration: ${totalDuration}ms (${Math.round(totalDuration/1000)}s)
@@ -446,6 +474,8 @@ export const createCourseController = async (
     return reply.status(201).send({
       message: "Course created successfully with AI-generated title and content",
       courseId,
+      generationId,
+      durationMs: totalDuration,
       title,
       subject,
       lessonCount,
@@ -462,6 +492,23 @@ export const createCourseController = async (
 
   } catch (error) {
     console.error("❌ Error creating course:", error);
+    if (reservedCourseId) {
+      try {
+        await db.collection("courses").doc(reservedCourseId).update({
+          generationStatus: "failed", failureStage,
+          failureCode: error instanceof CourseGenerationLimitError ? "input_limit" : "generation_failed",
+          failedAt: admin.firestore.FieldValue.serverTimestamp(),
+        });
+        await db.collection("analyticsEvents").add({
+          type: "course_generation_failed", userId: (request as any).user?.uid || null,
+          courseId: reservedCourseId, generationId, failureStage,
+          durationMs: Date.now() - overallStartTime,
+          occurredAt: admin.firestore.FieldValue.serverTimestamp(),
+        });
+      } catch (recordError) {
+        console.error("Could not record course-generation failure:", recordError);
+      }
+    }
     const statusCode =
       typeof (error as { statusCode?: unknown })?.statusCode === "number"
         ? (error as { statusCode: number }).statusCode
@@ -786,5 +833,3 @@ export const getCourseByIdController = async (
     return reply.status(500).send({ error: "Internal Server Error" });
   }
 };
-
-
