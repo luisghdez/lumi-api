@@ -2,7 +2,7 @@ import { FastifyRequest, FastifyReply } from "fastify";
 import { performance } from "node:perf_hooks";
 import { createFireStoreUser, deleteFireStoreUser, getUserProfile, updateFireStoreUser } from "../services/userService";
 import { checkStreakOnLogin } from "../services/streakService";
-import { updateFcmTokenForUser } from "../services/userService";
+import { removeFcmTokenForUser, updateFcmTokenForUser } from "../services/userService";
 import { getUserVideos } from "../services/videoService";
 import { getUsersSavedCoursesFromFirebase } from "../services/courseService";
 import { getFriends } from "../services/friendService";
@@ -138,6 +138,26 @@ export async function updateFcmTokenController(request: FastifyRequest, reply: F
   } catch (error) {
     console.error("Error updating FCM token:", error);
     reply.code(500).send({ error: "Failed to update FCM token" });
+  }
+}
+
+export async function removeFcmTokenController(request: FastifyRequest, reply: FastifyReply) {
+  try {
+    const user = (request as any).user;
+    if (!user || !user.uid) {
+      return reply.status(401).send({ error: "Unauthorized" });
+    }
+
+    const { fcmToken } = (request.body ?? {}) as { fcmToken?: string };
+    if (!fcmToken) {
+      return reply.status(400).send({ error: "Missing FCM token" });
+    }
+
+    await removeFcmTokenForUser(user.uid, fcmToken);
+    reply.code(200).send({ message: "FCM token removed." });
+  } catch (error) {
+    console.error("Error removing FCM token:", error);
+    reply.code(500).send({ error: "Failed to remove FCM token" });
   }
 }
 

@@ -140,6 +140,22 @@ interface FriendRequestInput {
 
 export async function createFriendRequest(senderId: string, recipientId: string): Promise<any> {
   try {
+    // Double taps / retries must not create duplicate requests (and duplicate pushes).
+    const existingSnap = await db
+      .collection("friendRequests")
+      .where("userIds", "in", [
+        [senderId, recipientId],
+        [recipientId, senderId],
+      ])
+      .get();
+    const existing = existingSnap.docs.find((doc) => {
+      const status = doc.get("status");
+      return status === "pending" || status === "accepted";
+    });
+    if (existing) {
+      return { id: existing.id, ...existing.data() };
+    }
+
     const friendRequest = {
       userIds: [senderId, recipientId],
       senderId,

@@ -1,5 +1,5 @@
 import { admin, db } from "../config/firebaseConfig";
-import { sendPushToUser } from "../services/notification_service";
+import { claimNotificationOnce, DAY_MS, sendPushBatch } from "../services/notification_service";
 
 interface UpdateStreakResult {
   previousStreak: number;
@@ -42,21 +42,32 @@ export const updateUserStreak = async (
 
     const streakExtended = newStreakCount > currentStreak;
 
-    // 🎉 Send milestone push (with route for Flutter navigation)
-    if ([5, 10, 20, 30].includes(newStreakCount)) {
-      const title = `${newStreakCount}-Day Streak!`;
-      const body = "You're on fire! Keep it going.";
-      await sendPushToUser(userId, title, body, {
-        route: "/",
-        streakCount: newStreakCount.toString(),
-      });
-    }
-
     // ✅ Always update Firestore with the new streak + timestamp
     await userRef.update({
       streakCount: newStreakCount,
       lastCheckIn: admin.firestore.FieldValue.serverTimestamp(),
     });
+
+    // 🎉 Milestone push only on the lesson that reaches the milestone, not on every
+    // later lesson completed the same day (route for Flutter navigation).
+    if (streakExtended && userData.fcmToken && [5, 10, 20, 30].includes(newStreakCount)) {
+      try {
+        const today = now.toISOString().slice(0, 10);
+        if (await claimNotificationOnce(`streak_milestone:${userId}:${newStreakCount}:${today}`, DAY_MS)) {
+          await sendPushBatch([
+            {
+              userId,
+              token: userData.fcmToken,
+              title: `${newStreakCount}-Day Streak!`,
+              body: "You're on fire! Keep it going.",
+              data: { route: "/", streakCount: newStreakCount.toString() },
+            },
+          ]);
+        }
+      } catch (err) {
+        console.error("Streak milestone push failed:", err);
+      }
+    }
 
     return {
       previousStreak: currentStreak,
