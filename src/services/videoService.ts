@@ -1,6 +1,6 @@
 import { admin, db } from "../config/firebaseConfig";
 import { areUsersFriends, getFriends } from "./friendService";
-import { pushFriendVideoPosted, pushVideoLiked } from "./notification_service";
+import { pushFriendsVideoPosted, pushVideoLiked } from "./notification_service";
 import {
   buildSlideStoragePath,
   buildVideoThumbnailStoragePath,
@@ -609,17 +609,12 @@ async function notifyFriendsOfNewVideoPost(
   if (vis === "private") return;
   try {
     const friends = await getFriends(ownerId, false);
-    const actorName = ownerName || "Someone";
-    await Promise.allSettled(
-      friends.map((friend) =>
-        pushFriendVideoPosted({
-          recipientUserId: friend.id,
-          actorId: ownerId,
-          actorName,
-          videoId,
-        })
-      )
-    );
+    await pushFriendsVideoPosted({
+      friends,
+      actorId: ownerId,
+      actorName: ownerName || "Someone",
+      videoId,
+    });
   } catch (err) {
     console.error("notifyFriendsOfNewVideoPost:", err);
   }

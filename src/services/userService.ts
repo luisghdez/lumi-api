@@ -1,4 +1,4 @@
-import { db } from "../config/firebaseConfig";
+import { admin, db } from "../config/firebaseConfig";
 import { checkStreakOnLogin } from "./streakService";
 
 interface UserData {
@@ -145,14 +145,28 @@ export async function createFireStoreUser(uid: string, data: UserProfileData) {
 
   export async function updateFcmTokenForUser(uid: string, fcmToken: string): Promise<void> {
     try {
-      const userRef = db.collection("users").doc(uid);
-      await userRef.update({
-        fcmToken,
-      });
+      // A device token belongs to whoever is signed in on that device now. Unlink it from
+      // previous accounts so the device doesn't receive every account's pushes.
+      const holders = await db.collection("users").where("fcmToken", "==", fcmToken).get();
+      const batch = db.batch();
+      holders.docs
+        .filter((doc) => doc.id !== uid)
+        .forEach((doc) => batch.update(doc.ref, { fcmToken: admin.firestore.FieldValue.delete() }));
+      batch.update(db.collection("users").doc(uid), { fcmToken });
+      await batch.commit();
       console.log(`✅ FCM token updated for user ${uid}`);
     } catch (error) {
       console.error("❌ Error updating FCM token:", error);
       throw error;
+    }
+  }
+
+  /** Called on sign-out. Only clears the token if it is still this device's token. */
+  export async function removeFcmTokenForUser(uid: string, fcmToken: string): Promise<void> {
+    const userRef = db.collection("users").doc(uid);
+    const snap = await userRef.get();
+    if (snap.exists && snap.get("fcmToken") === fcmToken) {
+      await userRef.update({ fcmToken: admin.firestore.FieldValue.delete() });
     }
   }
   

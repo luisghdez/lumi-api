@@ -1,229 +1,310 @@
 /**
  * 🧭 Lumi Re-Engagement & Motivation Notification Logic
  *
- * The job runs once per day (recommended), and sends time-sensitive notifications
- * based on the user's local timezone and their recent activity.
+ * Runs hourly and sends time-sensitive notifications based on the user's local
+ * timezone and their recent activity. Hours below are the user's local hour.
  *
  * ──────────────────────────────────────────────────────────────
  * 🗓️ DAILY BEHAVIOR SUMMARY
  *
  *  MONDAY (max 3 notifications)
- *   • Morning Lock-In (06:30–09:30) → motivational kickoff
- *   • Re-engage / Momentum (17:00–21:00)
- *        - "Momentum" push → if user studied yesterday
- *          (lastCheckIn within 12–36h OR previous calendar day)
- *        - "Re-engagement" push → if user inactive ≥ 3 days
- *   • Evening Reflection (20:30–22:00) → soft close of day
+ *   • Morning Lock-In (07–09h) → motivational kickoff (replaces Morning Motivation)
+ *   • Re-engage / Momentum (17–21h)
+ *   • Evening Reflection (21–22h) → soft close of day
  *
  *  TUE–THU (max 3 notifications)
- *   • Morning Motivation (06:30–08:30)
- *   • Re-engage / Momentum (17:00–21:00) → same logic as Monday
- *   • Evening Reflection (20:30–22:00)
+ *   • Morning Motivation (07–08h)
+ *   • Re-engage / Momentum (17–21h)
+ *   • Evening Reflection (21–22h)
  *
  *  FRIDAY (max 2 notifications)
- *   • Morning Motivation (06:30–08:30)
- *   • Friday Congrats (11:00–13:00) → end-of-week encouragement
+ *   • Morning Motivation (07–08h)
+ *   • Friday Congrats (11–13h) → end-of-week encouragement
  *   (No evening notifications)
  *
  *  SATURDAY / SUNDAY
- *   • No notifications (weekends are skipped)
+ *   • No notifications
  *
  * ──────────────────────────────────────────────────────────────
- * 🔁 STREAK LOGIC
- *  • Streak Expiring (17:00–21:00)
- *      Triggers if last check-in was 22–36 hours ago.
- *      Reminder to maintain streak before expiration.
+ * ⚡ RE-ENGAGEMENT LOGIC (17–21h)
+ *  • "Momentum" → user last studied yesterday (local calendar day). Once per day.
+ *  • "Re-engagement" → user inactive ≥ 3 days. Once per inactivity stretch
+ *    (allowed again only after the user studies since the last one).
  *
  * ──────────────────────────────────────────────────────────────
- * ⚡ RE-ENGAGEMENT LOGIC
+ * 🔒 DELIVERY GUARANTEES
+ *  • Only one run per UTC hour across all API instances (lock doc in `notificationLog`).
+ *  • Per user: each type at most once per local day, at most `maxPerDay` per local day,
+ *    at most one per local hour. Users are marked before sending, so a crash mid-run
+ *    can drop a notification but never duplicate one.
  *
- *  const studiedYesterday =
- *    lastDay !== today && diffHours < 36 && diffHours >= 12;
- *
- *  → If TRUE → user gets “Momentum” message:
- *        "Keep the streak alive 🔥"
- *        "You killed it yesterday! Come back in today..."
- *
- *  → Else if inactive ≥ 3 days → user gets “Re-engagement” message:
- *        "Lumi misses you"
- *        "It’s been a few days since your last study session..."
- *
- *  Each type (momentum/inactive) only sends once per calendar day.
+ * ⚙️ COST PER RUN
+ *  Users with an FCM token are read in pages of 500 (selected fields only). Per page:
+ *  one batched Firestore write for the users being notified + one FCM `sendEach` call.
  */
-
 
 // src/jobs/reengagement.ts
 import { db } from "../config/firebaseConfig";
-import { sendPushToUser } from "../services/notification_service";
+import { claimNotificationOnce, DAY_MS, PushItem, sendPushBatch } from "../services/notification_service";
 import { DateTime } from "luxon";
 
-export async function runReengagementJob() {
-  const now = new Date();
+const PAGE_SIZE = 500; // also the Firestore batch-write and FCM sendEach limits
+
+const USER_FIELDS = [
+  "fcmToken",
+  "timezone",
+  "lastCheckIn",
+  "lastMondayLockInAt",
+  "lastDailyMotivationAt",
+  "lastFridayCongratsAt",
+  "lastReengageAt",
+  "lastReengageType",
+  "lastEveningReflectAt",
+  "scheduledPushDate",
+  "scheduledPushCount",
+  "lastScheduledPushHour",
+];
+
+type ResultKey = "dailyMotivation" | "fridayCongrats" | "mondayLockIn" | "reengaged" | "eveningReflect";
+
+export interface Candidate {
+  result: ResultKey;
+  /** User-doc field holding the local date (yyyy-LL-dd) this type was last sent. */
+  sentField: string;
+  title: string;
+  body: string;
+  extraUpdates?: FirebaseFirestore.DocumentData;
+}
+
+const MORNING_MESSAGES = [
+  "New day, new reps. Lock in and study a little right now.",
+  "Small wins add up. Open Lumi and get 10 focused minutes.",
+  "Let’s build the streak today. You’ve got this.",
+  "Consistency beats intensity. Just show up today.",
+  "Your future self will thank you for studying now.",
+  "Start your morning with focus. Lumi time.",
+  "Momentum starts with one small action. Open Lumi and begin.",
+  "No perfect time, just this moment. Make it count.",
+  "Build the habit, not the pressure. One short session is enough.",
+  "Today’s effort equals tomorrow’s confidence. Let’s go.",
+  "Tiny progress today keeps the big goals alive.",
+  "Begin the day with purpose. A few minutes of focus is all it takes.",
+  "A clear mind starts with a small study session.",
+  "The hardest part is starting. Open Lumi and begin now.",
+  "Every session counts. Stay consistent and keep growing.",
+  "One page today is better than none. Progress is progress.",
+  "You don’t need motivation, just a quick start. Open Lumi.",
+  "Win the morning by studying for a few focused minutes.",
+  "A little effort now keeps your momentum alive.",
+  "Show up for yourself today. The rest will follow.",
+  "Discipline feels better than regret. Start your session.",
+  "A calm focus now sets the tone for your whole day.",
+  "Keep your streak alive with a short, focused session.",
+  "Start small, finish strong. Begin your Lumi session now.",
+  "Growth happens quietly. Take a few minutes to study.",
+  "Focus today makes tomorrow easier. You’re in control.",
+];
+
+let runningInThisProcess = false;
+
+export async function runReengagementJob(now: Date = new Date()) {
+  if (runningInThisProcess) {
+    console.log("⏭️ Reengagement job already running in this process, skipping.");
+    return { skipped: "already running" };
+  }
+
+  const hourKey = DateTime.fromJSDate(now).toUTC().toFormat("yyyy-LL-dd'T'HH");
+  if (!(await claimNotificationOnce(`job:reengagement:${hourKey}`, 2 * DAY_MS))) {
+    console.log(`⏭️ Reengagement job for ${hourKey} UTC already ran on another instance, skipping.`);
+    return { skipped: "already ran this hour" };
+  }
+
+  runningInThisProcess = true;
   const results = {
-    streakExpiring: 0,
+    scanned: 0,
     dailyMotivation: 0,
     fridayCongrats: 0,
     mondayLockIn: 0,
-    reengaged3Days: 0,
+    reengaged: 0,
     eveningReflect: 0,
-    skippedWeekend: 0,
+    sent: 0,
+    failed: 0,
+    pageErrors: 0,
   };
 
-  const usersSnap = await db.collection("users").get();
-  const tasks: Promise<void>[] = [];
+  try {
+    let cursor: FirebaseFirestore.QueryDocumentSnapshot | undefined;
+    while (true) {
+      let query = db
+        .collection("users")
+        .where("fcmToken", ">", "")
+        .orderBy("fcmToken")
+        .select(...USER_FIELDS)
+        .limit(PAGE_SIZE);
+      if (cursor) query = query.startAfter(cursor);
 
-  usersSnap.forEach((doc) => tasks.push(handleUser(doc, results, now)));
+      const page = await query.get();
+      if (page.empty) break;
+      results.scanned += page.size;
 
-  await Promise.allSettled(tasks);
+      try {
+        await processPage(page.docs, now, results);
+      } catch (err) {
+        results.pageErrors++;
+        console.error("Reengagement page failed:", err);
+      }
+
+      if (page.size < PAGE_SIZE) break;
+      cursor = page.docs[page.docs.length - 1];
+    }
+  } finally {
+    runningInThisProcess = false;
+  }
+
   console.log("✅ Engagement job finished:", results);
   return results;
 }
 
-async function handleUser(
-  doc: FirebaseFirestore.QueryDocumentSnapshot,
-  results: any,
-  now: Date
+async function processPage(
+  docs: FirebaseFirestore.QueryDocumentSnapshot[],
+  now: Date,
+  results: Record<string, number>
 ) {
-  const data = doc.data() as any;
-  const tz = data.timezone || "UTC";
-  const nowLocal = DateTime.fromJSDate(now).setZone(tz);
-  const hour = nowLocal.hour;
-  const weekday = nowLocal.weekday; // 1 = Mon, 7 = Sun
-  const today = nowLocal.toFormat("yyyy-LL-dd");
-  const lastCheckIn = data.lastCheckIn?.toDate?.() ?? null;
+  const batch = db.batch();
+  const pushes: PushItem[] = [];
+  const planned: ResultKey[] = [];
 
-  // 🚫 Skip weekends entirely
-  if (weekday === 6 || weekday === 7) {
-    results.skippedWeekend++;
-    return;
+  for (const doc of docs) {
+    const data = doc.data();
+    const plan = planForUser(data, now);
+    if (!plan) continue;
+    batch.update(doc.ref, plan.updates);
+    pushes.push({ userId: doc.id, token: data.fcmToken, title: plan.candidate.title, body: plan.candidate.body });
+    planned.push(plan.candidate.result);
   }
+  if (!pushes.length) return;
 
+  await batch.commit();
+  planned.forEach((key) => results[key]++);
+
+  const { sent, failed } = await sendPushBatch(pushes);
+  results.sent += sent;
+  results.failed += failed;
+}
+
+/** What to send this user right now (if anything) and the user-doc updates that record it. */
+export function planForUser(
+  data: FirebaseFirestore.DocumentData,
+  now: Date
+): { candidate: Candidate; updates: FirebaseFirestore.DocumentData } | null {
+  let nowLocal = DateTime.fromJSDate(now).setZone(data.timezone || "UTC");
+  if (!nowLocal.isValid) nowLocal = DateTime.fromJSDate(now).setZone("UTC");
+
+  const weekday = nowLocal.weekday; // 1 = Mon, 7 = Sun
+  if (weekday === 6 || weekday === 7) return null;
+
+  const today = nowLocal.toFormat("yyyy-LL-dd");
+  const localHourKey = nowLocal.toFormat("yyyy-LL-dd HH");
+  if (data.lastScheduledPushHour === localHourKey) return null;
+
+  const sentToday = data.scheduledPushDate === today ? Number(data.scheduledPushCount || 0) : 0;
+  const maxPerDay = weekday === 5 ? 2 : 3;
+  if (sentToday >= maxPerDay) return null;
+
+  const candidate = pickCandidate(data, nowLocal);
+  if (!candidate) return null;
+
+  return {
+    candidate,
+    updates: {
+      [candidate.sentField]: today,
+      lastScheduledPushHour: localHourKey,
+      scheduledPushDate: today,
+      scheduledPushCount: sentToday + 1,
+      ...candidate.extraUpdates,
+    },
+  };
+}
+
+/** Highest-priority notification the user is due for in this local hour, if any. */
+export function pickCandidate(data: FirebaseFirestore.DocumentData, nowLocal: DateTime): Candidate | null {
+  const hour = nowLocal.hour;
+  const weekday = nowLocal.weekday;
+  const today = nowLocal.toFormat("yyyy-LL-dd");
   const isMonday = weekday === 1;
   const isFriday = weekday === 5;
+  const notSentToday = (field: string) => String(data[field] || "") !== today;
 
-  // 🆕 Notification limits
-  const maxSendsPerDay = isFriday ? 2 : 3;
-  let sendsToday = 0;
-
-  // 1️⃣ Monday lock-in (6:30–9:30 AM)
-  if (isMonday && hour >= 6.5 && hour <= 9.5 && data.lastMondayLockInAt !== today) {
-    await sendPushToUser(
-      doc.id,
-      "New week, fresh start 💫",
-      "Let’s lock in for the week — a short session today sets the tone. You’ve got this!"
-    );
-    await doc.ref.update({ lastMondayLockInAt: today });
-    results.mondayLockIn++;
-    sendsToday++;
+  // 1️⃣ Monday lock-in (07–09h)
+  if (isMonday && hour >= 7 && hour <= 9 && notSentToday("lastMondayLockInAt")) {
+    return {
+      result: "mondayLockIn",
+      sentField: "lastMondayLockInAt",
+      title: "New week, fresh start 💫",
+      body: "Let’s lock in for the week — a short session today sets the tone. You’ve got this!",
+    };
   }
 
-  // 2️⃣ Morning motivation (6:30–8:30 AM)
-  const inMorningWindow = hour >= 6.5 && hour <= 8.5;
-  const lastDailyMotivationAt = String(data.lastDailyMotivationAt || "");
-  if (sendsToday < maxSendsPerDay && inMorningWindow && lastDailyMotivationAt !== today) {
-    const messages = [
-      "New day, new reps. Lock in and study a little right now.",
-      "Small wins add up. Open Lumi and get 10 focused minutes.",
-      "Let’s build the streak today. You’ve got this.",
-      "Consistency beats intensity. Just show up today.",
-      "Your future self will thank you for studying now.",
-      "Start your morning with focus. Lumi time.",
-      "Momentum starts with one small action. Open Lumi and begin.",
-      "No perfect time, just this moment. Make it count.",
-      "Build the habit, not the pressure. One short session is enough.",
-      "Today’s effort equals tomorrow’s confidence. Let’s go.",
-      "Tiny progress today keeps the big goals alive.",
-      "Begin the day with purpose. A few minutes of focus is all it takes.",
-      "A clear mind starts with a small study session.",
-      "The hardest part is starting. Open Lumi and begin now.",
-      "Every session counts. Stay consistent and keep growing.",
-      "One page today is better than none. Progress is progress.",
-      "You don’t need motivation, just a quick start. Open Lumi.",
-      "Win the morning by studying for a few focused minutes.",
-      "A little effort now keeps your momentum alive.",
-      "Show up for yourself today. The rest will follow.",
-      "Discipline feels better than regret. Start your session.",
-      "A calm focus now sets the tone for your whole day.",
-      "Keep your streak alive with a short, focused session.",
-      "Start small, finish strong. Begin your Lumi session now.",
-      "Growth happens quietly. Take a few minutes to study.",
-      "Focus today makes tomorrow easier. You’re in control.",
-    ];
-    const msg = messages[Math.floor(Math.random() * messages.length)];
-    await sendPushToUser(doc.id, "Good morning", msg);
-    await doc.ref.update({ lastDailyMotivationAt: today });
-    results.dailyMotivation++;
-    sendsToday++;
+  // 2️⃣ Morning motivation (07–08h), Tue–Fri
+  if (!isMonday && hour >= 7 && hour <= 8 && notSentToday("lastDailyMotivationAt")) {
+    return {
+      result: "dailyMotivation",
+      sentField: "lastDailyMotivationAt",
+      title: "Good morning",
+      body: MORNING_MESSAGES[Math.floor(Math.random() * MORNING_MESSAGES.length)],
+    };
   }
 
   // 3️⃣ Friday congrats (11–13h)
-  if (isFriday && sendsToday < maxSendsPerDay && hour >= 11 && hour <= 13 && data.lastFridayCongratsAt !== today) {
-    await sendPushToUser(
-      doc.id,
-      "Happy Friday",
-      "You made it! Have an awesome weekend. A quick study session now keeps your momentum strong."
-    );
-    await doc.ref.update({ lastFridayCongratsAt: today });
-    results.fridayCongrats++;
-    sendsToday++;
+  if (isFriday && hour >= 11 && hour <= 13 && notSentToday("lastFridayCongratsAt")) {
+    return {
+      result: "fridayCongrats",
+      sentField: "lastFridayCongratsAt",
+      title: "Happy Friday",
+      body: "You made it! Have an awesome weekend. A quick study session now keeps your momentum strong.",
+    };
   }
 
-  // 🧠 Skip evening-related notifications on Friday
-  if (isFriday) return;
+  if (isFriday) return null;
 
-// 5️⃣ Re-engagement or streak momentum (17–21h)
-if (sendsToday < maxSendsPerDay && lastCheckIn && hour >= 17 && hour <= 21) {
-  const lastCheck = DateTime.fromJSDate(lastCheckIn).setZone(tz);
-  const diffHours = nowLocal.diff(lastCheck, "hours").hours;
-  const diffDays = nowLocal.diff(lastCheck, "days").days;
+  // 4️⃣ Momentum or re-engagement (17–21h)
+  const lastCheckInDate: Date | null = data.lastCheckIn?.toDate?.() ?? null;
+  if (lastCheckInDate && hour >= 17 && hour <= 21 && notSentToday("lastReengageAt")) {
+    const lastCheck = DateTime.fromJSDate(lastCheckInDate).setZone(nowLocal.zone);
+    const lastDay = lastCheck.toFormat("yyyy-LL-dd");
+    const yesterday = nowLocal.minus({ days: 1 }).toFormat("yyyy-LL-dd");
+    const inactiveDays = nowLocal.diff(lastCheck, "days").days;
 
-  const lastReengageAt = String(data.lastReengageAt || "");
-  const lastReengageType = data.lastReengageType || ""; // 🆕 track which type we sent last
-
-  // 🆕 Case 1: user studied yesterday (12–36h or previous calendar day)
-  const lastDay = lastCheck.toFormat("yyyy-LL-dd");
-  const studiedYesterday =
-  lastDay !== today && diffHours < 36 && diffHours >= 12;
-
-  if (studiedYesterday && lastReengageAt !== today && lastReengageType !== "momentum") {
-    await sendPushToUser(
-      doc.id,
-      "Keep the streak alive 🔥",
-      "You killed it yesterday! Come back in today to level up your streak again."
-    );
-    await doc.ref.update({
-      lastReengageAt: today,
-      lastReengageType: "momentum",
-    });
-    results.reengaged3Days++;
-    sendsToday++;
+    if (lastDay === yesterday) {
+      return {
+        result: "reengaged",
+        sentField: "lastReengageAt",
+        title: "Keep the streak alive 🔥",
+        body: "You killed it yesterday! Come back in today to level up your streak again.",
+        extraUpdates: { lastReengageType: "momentum" },
+      };
+    }
+    const studiedSinceLastReengage = String(data.lastReengageAt || "") < lastDay;
+    if (inactiveDays >= 3 && (data.lastReengageType !== "inactive" || studiedSinceLastReengage)) {
+      return {
+        result: "reengaged",
+        sentField: "lastReengageAt",
+        title: "Lumi misses you",
+        body: "It’s been a few days since your last study session. Jump back in and keep growing!",
+        extraUpdates: { lastReengageType: "inactive" },
+      };
+    }
   }
-  // 🆕 Case 2: user inactive ≥ 3 days
-  else if (diffDays >= 3 && lastReengageAt !== today && lastReengageType !== "inactive") {
-    await sendPushToUser(
-      doc.id,
-      "Lumi misses you",
-      "It’s been a few days since your last study session. Jump back in and keep growing!"
-    );
-    await doc.ref.update({
-      lastReengageAt: today,
-      lastReengageType: "inactive",
-    });
-    results.reengaged3Days++;
-    sendsToday++;
-  }
-}
 
-  // 6️⃣ Evening reflection (20:30–22h)
-  const inEveningWindow = hour >= 20.5 && hour <= 22;
-  if (sendsToday < maxSendsPerDay && inEveningWindow && data.lastEveningReflectAt !== today) {
-    await sendPushToUser(
-      doc.id,
-      "Day’s almost done",
-      "Take a moment to reflect or squeeze in one last quick study session before the day ends."
-    );
-    await doc.ref.update({ lastEveningReflectAt: today });
-    results.eveningReflect++;
-    sendsToday++;
+  // 5️⃣ Evening reflection (21–22h)
+  if (hour >= 21 && hour <= 22 && notSentToday("lastEveningReflectAt")) {
+    return {
+      result: "eveningReflect",
+      sentField: "lastEveningReflectAt",
+      title: "Day’s almost done",
+      body: "Take a moment to reflect or squeeze in one last quick study session before the day ends.",
+    };
   }
+
+  return null;
 }
